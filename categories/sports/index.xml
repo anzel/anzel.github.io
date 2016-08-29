@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Anzel Sports</title>
-    <link>//anzel.net/post/</link>
-    <description>Recent content in Posts on Anzel Sports</description>
+    <title>Sports on Anzel Sports</title>
+    <link>//anzel.net/categories/sports/</link>
+    <description>Recent content in Sports on Anzel Sports</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Anzel Sports Network. All Rights Reserved.</copyright>
     <lastBuildDate>Sun, 28 Aug 2016 17:40:02 +0000</lastBuildDate>
-    <atom:link href="//anzel.net/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//anzel.net/categories/sports/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Oakland A&#39;s Down St. Louis Cardinals 7-4</title>
