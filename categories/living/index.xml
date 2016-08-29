@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Living on Anzel Sports</title>
+    <link>//anzel.net/categories/living/</link>
+    <description>Recent content in Living on Anzel Sports</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Anzel Sports Network. All Rights Reserved.</copyright>
+    <lastBuildDate>Sat, 13 Aug 2016 01:30:02 +0000</lastBuildDate>
+    <atom:link href="//anzel.net/categories/living/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>This is a test</title>
+      <link>//anzel.net/post/this-is-a-test/</link>
+      <pubDate>Sat, 13 Aug 2016 01:30:02 +0000</pubDate>
+      
+      <guid>//anzel.net/post/this-is-a-test/</guid>
+      <description>&lt;p&gt;test post&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
