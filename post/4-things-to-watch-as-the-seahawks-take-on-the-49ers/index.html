@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>24</b></p>
 					<h3>4 things to watch as the Seahawks take on the 49ers</h3>
-					<p><p>SEATTLE &ndash; The Seahawks return to Centurylink Field on Sunday for their third game of the season against their NFC West Rival, the San Francisco &hellip;  <a href="http://komonews.com/sports/seahawks/4-things-to-watch-as-the-seahawks-take-on-the-49ers">more</a>.</p>
+					<p><p>SEATTLE &ndash; The Seahawks return to Centurylink Field on Sunday for their third game of the season against their NFC West Rival, the San Francisco &hellip;  <a href="http://komonews.com/sports/seahawks/4-things-to-watch-as-the-seahawks-take-on-the-49ers" onclick="trackOutboundLink('http://komonews.com/sports/seahawks/4-things-to-watch-as-the-seahawks-take-on-the-49ers'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

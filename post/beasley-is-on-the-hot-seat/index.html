@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>17</b></p>
 					<h3>Beasley is on the hot seat</h3>
-					<p><p>Things might break just right for Falcons pass rusher Vic Beasley, who&rsquo;s on the hot seat and needs a big game. The Oakland Raiders suffered four &hellip;  <a href="http://www.myajc.com/news/sports/football/beasley-is-on-the-hot-seat/nsYw3/">more</a>.</p>
+					<p><p>Things might break just right for Falcons pass rusher Vic Beasley, who&rsquo;s on the hot seat and needs a big game. The Oakland Raiders suffered four &hellip;  <a href="http://www.myajc.com/news/sports/football/beasley-is-on-the-hot-seat/nsYw3/" onclick="trackOutboundLink('http://www.myajc.com/news/sports/football/beasley-is-on-the-hot-seat/nsYw3/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

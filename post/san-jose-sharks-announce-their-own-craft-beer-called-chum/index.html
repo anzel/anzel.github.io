@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>San Jose Sharks Announce Their Own Craft Beer Called Chum</h3>
-					<p><p>Hockey and beer have long been a heavenly match for San Jose Sharks fans. So it seems only natural the Sharks would dive fins first into the craft &hellip;  <a href="http://www.nbcbayarea.com/news/local/San-Jose-Sharks-Announce-Their-Own-Craft-Beer-Called-Chum-392813441.html">more</a>.</p>
+					<p><p>Hockey and beer have long been a heavenly match for San Jose Sharks fans. So it seems only natural the Sharks would dive fins first into the craft &hellip;  <a href="http://www.nbcbayarea.com/news/local/San-Jose-Sharks-Announce-Their-Own-Craft-Beer-Called-Chum-392813441.html" onclick="trackOutboundLink('http://www.nbcbayarea.com/news/local/San-Jose-Sharks-Announce-Their-Own-Craft-Beer-Called-Chum-392813441.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>Draft order at stake for A&#39;s, Angels this month</h3>
-					<p><p>DETROIT - OCTOBER 13: General Manager Billy Beane of the Oakland Athletics looks on during batting practice before Game Three of the American &hellip;  <a href="http://www.sfchronicle.com/athletics/article/Draft-order-at-stake-for-A-s-Angels-this-month-9208865.php">more</a>.</p>
+					<p><p>DETROIT - OCTOBER 13: General Manager Billy Beane of the Oakland Athletics looks on during batting practice before Game Three of the American &hellip;  <a href="http://www.sfchronicle.com/athletics/article/Draft-order-at-stake-for-A-s-Angels-this-month-9208865.php" onclick="trackOutboundLink('http://www.sfchronicle.com/athletics/article/Draft-order-at-stake-for-A-s-Angels-this-month-9208865.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

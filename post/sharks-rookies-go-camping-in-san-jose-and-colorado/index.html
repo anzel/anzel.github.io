@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>19</b></p>
 					<h3>Sharks Rookies Go Camping in San Jose and Colorado</h3>
-					<p><p>Thursday, September 15, 2016, brought an end to the summer for San Jose Sharks rookies and prospects with the start of Sharks Rookie Camp.  <a href="http://thehockeywriters.com/san-jose-sharks-rookies-go-camping-in-san-jose-and-colorado/">more</a>.</p>
+					<p><p>Thursday, September 15, 2016, brought an end to the summer for San Jose Sharks rookies and prospects with the start of Sharks Rookie Camp.  <a href="http://thehockeywriters.com/san-jose-sharks-rookies-go-camping-in-san-jose-and-colorado/" onclick="trackOutboundLink('http://thehockeywriters.com/san-jose-sharks-rookies-go-camping-in-san-jose-and-colorado/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

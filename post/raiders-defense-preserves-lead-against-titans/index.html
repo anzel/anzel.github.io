@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>Raiders&#39; defense preserves lead against Titans</h3>
-					<p><p>Tennessee Titans linebacker Avery Williamson (54) intercepts a pass intended for Oakland Raiders wide receiver Michael Crabtree (15) in the second &hellip;  <a href="http://www.parispi.net/sports/state_national_world/state/article_bc486308-83f1-11e6-9d15-d3500292c00b.html">more</a>.</p>
+					<p><p>Tennessee Titans linebacker Avery Williamson (54) intercepts a pass intended for Oakland Raiders wide receiver Michael Crabtree (15) in the second &hellip;  <a href="http://www.parispi.net/sports/state_national_world/state/article_bc486308-83f1-11e6-9d15-d3500292c00b.html" onclick="trackOutboundLink('http://www.parispi.net/sports/state_national_world/state/article_bc486308-83f1-11e6-9d15-d3500292c00b.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

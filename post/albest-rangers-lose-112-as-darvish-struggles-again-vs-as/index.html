@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>17</b></p>
 					<h3>AL-best Rangers lose 11-2 as Darvish struggles again vs A&#39;s</h3>
-					<p><p>&hellip; Japan, wipes his face as he walks to the dugout after the bottom of the fifth inning of a baseball game against the Oakland Athletics, Saturday, Sept.  <a href="http://www.mysanantonio.com/sports/article/AL-best-Rangers-lose-11-2-as-Darvish-struggles-9229849.php">more</a>.</p>
+					<p><p>&hellip; Japan, wipes his face as he walks to the dugout after the bottom of the fifth inning of a baseball game against the Oakland Athletics, Saturday, Sept.  <a href="http://www.mysanantonio.com/sports/article/AL-best-Rangers-lose-11-2-as-Darvish-struggles-9229849.php" onclick="trackOutboundLink('http://www.mysanantonio.com/sports/article/AL-best-Rangers-lose-11-2-as-Darvish-struggles-9229849.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

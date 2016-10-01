@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>Fact Check: Was the Raiders&#39; two-point conversion really a lucky gamble?</h3>
-					<p><p>At the time it was the epitome of a gutsy call. Trailing by one point away from home against the New Orleans Saints with 47 seconds left in the game, &hellip;  <a href="http://ftw.usatoday.com/2016/09/fact-check-oakland-raiders-two-point-conversion-saints-derek-carr-crabtree-video-odds-stats">more</a>.</p>
+					<p><p>At the time it was the epitome of a gutsy call. Trailing by one point away from home against the New Orleans Saints with 47 seconds left in the game, &hellip;  <a href="http://ftw.usatoday.com/2016/09/fact-check-oakland-raiders-two-point-conversion-saints-derek-carr-crabtree-video-odds-stats" onclick="trackOutboundLink('http://ftw.usatoday.com/2016/09/fact-check-oakland-raiders-two-point-conversion-saints-derek-carr-crabtree-video-odds-stats'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

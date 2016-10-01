@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>How I Think Oakland Raiders Move To Las Vegas Would Impact NFL Relocation</h3>
-					<p><p>Forbes The Oakland Raiders got a lot closer to moving to Las Vegas the other day, something my colleague Maury Brown predicted this a while ago. When it &hellip;  <a href="http://www.forbes.com/sites/mikeozanian/2016/09/18/how-i-think-oakland-raiders-move-to-las-vegas-impacts-nfl-relocation-and-expansion/">more</a>.</p>
+					<p><p>Forbes The Oakland Raiders got a lot closer to moving to Las Vegas the other day, something my colleague Maury Brown predicted this a while ago. When it &hellip;  <a href="http://www.forbes.com/sites/mikeozanian/2016/09/18/how-i-think-oakland-raiders-move-to-las-vegas-impacts-nfl-relocation-and-expansion/" onclick="trackOutboundLink('http://www.forbes.com/sites/mikeozanian/2016/09/18/how-i-think-oakland-raiders-move-to-las-vegas-impacts-nfl-relocation-and-expansion/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

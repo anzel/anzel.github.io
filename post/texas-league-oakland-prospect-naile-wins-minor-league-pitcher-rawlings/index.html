@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>26</b></p>
 					<h3>TEXAS LEAGUE: Oakland prospect Naile wins minor league pitcher Rawlings</h3>
-					<p><p>Odessa American MIDLAND James Naile claimed the minor league pitcher Rawlings Gold Glove Award after he spent the 2016 season with Oakland Athletics affiliates &hellip;  <a href="http://www.oaoa.com/sports/local/franchise/article_54f6308c-8463-11e6-8db0-0b41f49c672c.html">more</a>.</p>
+					<p><p>Odessa American MIDLAND James Naile claimed the minor league pitcher Rawlings Gold Glove Award after he spent the 2016 season with Oakland Athletics affiliates &hellip;  <a href="http://www.oaoa.com/sports/local/franchise/article_54f6308c-8463-11e6-8db0-0b41f49c672c.html" onclick="trackOutboundLink('http://www.oaoa.com/sports/local/franchise/article_54f6308c-8463-11e6-8db0-0b41f49c672c.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

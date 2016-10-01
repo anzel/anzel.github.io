@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Aug<b>31</b></p>
 					<h3>Oakland Raiders likely to place Mario Edwards on PUP list</h3>
-					<p><p>The Oakland Raiders are expected to put defensive end Mario Edwards Jr. on the PUP list. Forcing Edwards out of action for the first six weeks of the &hellip;  <a href="http://justblogbaby.com/2016/08/31/oakland-raiders-likely-place-mario-edwards-pup-list/">more</a>.</p>
+					<p><p>The Oakland Raiders are expected to put defensive end Mario Edwards Jr. on the PUP list. Forcing Edwards out of action for the first six weeks of the &hellip;  <a href="http://justblogbaby.com/2016/08/31/oakland-raiders-likely-place-mario-edwards-pup-list/" onclick="trackOutboundLink('http://justblogbaby.com/2016/08/31/oakland-raiders-likely-place-mario-edwards-pup-list/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

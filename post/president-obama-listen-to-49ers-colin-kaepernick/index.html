@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>29</b></p>
 					<h3>President Obama: Listen to 49ers&#39; Colin Kaepernick</h3>
-					<p><p>When it comes to handling questions about San Francisco 49ers quarterback Colin Kaepernick, every politician is in an awkward spot.  <a href="http://www.nj.com/sports/nfl/2016/09/president_obama_listen_to_49er.html">more</a>.</p>
+					<p><p>When it comes to handling questions about San Francisco 49ers quarterback Colin Kaepernick, every politician is in an awkward spot.  <a href="http://www.nj.com/sports/nfl/2016/09/president_obama_listen_to_49er.html" onclick="trackOutboundLink('http://www.nj.com/sports/nfl/2016/09/president_obama_listen_to_49er.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

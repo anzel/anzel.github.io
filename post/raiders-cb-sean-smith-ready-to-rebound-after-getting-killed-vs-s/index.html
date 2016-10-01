@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>Raiders CB Sean Smith ready to rebound after &#39;getting killed&#39; vs. S..</h3>
-					<p><p>ALAMEDA, Calif. &ndash;Oakland Raiders cornerback Sean Smith, who signed a $40 million free-agent contract with Oakland this offseason, owned up to &hellip;  <a href="http://abc7news.com/sports/raiders-cb-sean-smith-ready-to-rebound-after-getting-killed-vs-saints/1510530/">more</a>.</p>
+					<p><p>ALAMEDA, Calif. &ndash;Oakland Raiders cornerback Sean Smith, who signed a $40 million free-agent contract with Oakland this offseason, owned up to &hellip;  <a href="http://abc7news.com/sports/raiders-cb-sean-smith-ready-to-rebound-after-getting-killed-vs-saints/1510530/" onclick="trackOutboundLink('http://abc7news.com/sports/raiders-cb-sean-smith-ready-to-rebound-after-getting-killed-vs-saints/1510530/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

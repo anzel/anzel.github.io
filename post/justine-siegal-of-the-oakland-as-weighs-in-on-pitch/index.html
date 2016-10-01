@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>23</b></p>
 					<h3>Justine Siegal of the Oakland A&#39;s weighs in on Pitch</h3>
-					<p><p>PHOENIX, United States  The Oakland Athletics&rsquo; Hideki Matsui (L) shakes hands with Justine Siegal, who became the first woman to throw batting &hellip;  <a href="http://www.excellesports.com/news/justine-siegal-of-the-oakland-as-weighs-in-on-pitch/">more</a>.</p>
+					<p><p>PHOENIX, United States  The Oakland Athletics&rsquo; Hideki Matsui (L) shakes hands with Justine Siegal, who became the first woman to throw batting &hellip;  <a href="http://www.excellesports.com/news/justine-siegal-of-the-oakland-as-weighs-in-on-pitch/" onclick="trackOutboundLink('http://www.excellesports.com/news/justine-siegal-of-the-oakland-as-weighs-in-on-pitch/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>Chip Kelly Reiterates Blaine Gabbert is 49ers Starting QB, Colin Kaepernick</h3>
-					<p><p>49ers.com The San Francisco 49ers head coach&rsquo;s Wednesday press conference shed more light on where things stand with both passers. Kelly explained why &hellip;  <a href="http://www.49ers.com/news/article-2/Chip-Kelly-Reiterates-Blaine-Gabbert-is-49ers-Starting-QB-Colin-Kaepernick-No-2/c3c10f07-1c69-4474-b31b-5aa9127b03fb">more</a>.</p>
+					<p><p>49ers.com The San Francisco 49ers head coach&rsquo;s Wednesday press conference shed more light on where things stand with both passers. Kelly explained why &hellip;  <a href="http://www.49ers.com/news/article-2/Chip-Kelly-Reiterates-Blaine-Gabbert-is-49ers-Starting-QB-Colin-Kaepernick-No-2/c3c10f07-1c69-4474-b31b-5aa9127b03fb" onclick="trackOutboundLink('http://www.49ers.com/news/article-2/Chip-Kelly-Reiterates-Blaine-Gabbert-is-49ers-Starting-QB-Colin-Kaepernick-No-2/c3c10f07-1c69-4474-b31b-5aa9127b03fb'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

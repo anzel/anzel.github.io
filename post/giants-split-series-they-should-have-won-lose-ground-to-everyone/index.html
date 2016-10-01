@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>Giants split series they should have won, lose ground to everyone</h3>
-					<p><p>This is assuming that the Diamondbacks don&rsquo;t justify their sorry existence against the Dodgers. Which they won&rsquo;t. By Grant Brisbee @mccoveychron &hellip;  <a href="http://www.mccoveychronicles.com/2016/9/18/12962948/sf-giants-recap-cardinals">more</a>.</p>
+					<p><p>This is assuming that the Diamondbacks don&rsquo;t justify their sorry existence against the Dodgers. Which they won&rsquo;t. By Grant Brisbee @mccoveychron &hellip;  <a href="http://www.mccoveychronicles.com/2016/9/18/12962948/sf-giants-recap-cardinals" onclick="trackOutboundLink('http://www.mccoveychronicles.com/2016/9/18/12962948/sf-giants-recap-cardinals'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

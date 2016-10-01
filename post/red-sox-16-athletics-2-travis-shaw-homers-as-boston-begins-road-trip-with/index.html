@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>03</b></p>
 					<h3>Red Sox 16, Athletics 2: Travis Shaw homers as Boston begins road trip with</h3>
-					<p><p>Worcester Telegram &hellip; home run and a pair of run-scoring doubles as the Red Sox pummeled the hapless Oakland Athletics by a 16-2 score to start a nine-game road trip.  <a href="http://www.telegram.com/news/20160902/red-sox-16-athletics-2-travis-shaw-homers-as-boston-begins-road-trip-with-rout">more</a>.</p>
+					<p><p>Worcester Telegram &hellip; home run and a pair of run-scoring doubles as the Red Sox pummeled the hapless Oakland Athletics by a 16-2 score to start a nine-game road trip.  <a href="http://www.telegram.com/news/20160902/red-sox-16-athletics-2-travis-shaw-homers-as-boston-begins-road-trip-with-rout" onclick="trackOutboundLink('http://www.telegram.com/news/20160902/red-sox-16-athletics-2-travis-shaw-homers-as-boston-begins-road-trip-with-rout'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

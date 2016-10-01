@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>boys oakland athletics zip up sweat jacket with hoodie size 4t</h3>
-					<p><p>CA.  <a href="https://offerupnow.com/item/detail/161598237/boys-oakland-athletics-zip-up-sweat-jacket-with-hoodie-size-4t">more</a>.</p>
+					<p><p>CA.  <a href="https://offerupnow.com/item/detail/161598237/boys-oakland-athletics-zip-up-sweat-jacket-with-hoodie-size-4t" onclick="trackOutboundLink('https://offerupnow.com/item/detail/161598237/boys-oakland-athletics-zip-up-sweat-jacket-with-hoodie-size-4t'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

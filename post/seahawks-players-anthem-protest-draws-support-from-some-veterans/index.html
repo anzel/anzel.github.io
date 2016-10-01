@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>03</b></p>
 					<h3>Seahawks player&#39;s anthem protest draws support from some veterans</h3>
-					<p><p>Seattle Seahawks cornerback Jeremy Lane sits as the national anthem plays before a preseason NFL football game against the Oakland Raiders, &hellip;  <a href="http://komonews.com/news/local/criticism-support-for-seahawks-jeremy-lane-protest">more</a>.</p>
+					<p><p>Seattle Seahawks cornerback Jeremy Lane sits as the national anthem plays before a preseason NFL football game against the Oakland Raiders, &hellip;  <a href="http://komonews.com/news/local/criticism-support-for-seahawks-jeremy-lane-protest" onclick="trackOutboundLink('http://komonews.com/news/local/criticism-support-for-seahawks-jeremy-lane-protest'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

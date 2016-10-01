@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>29</b></p>
 					<h3>Raiders-Ravens preview: Baltimore must slow down Oakland QB to win</h3>
-					<p><p>in Week 4 against the Oakland Raiders and their high-powered offense &hellip;  <a href="http://talk921.com/raiders-ravens-preview-baltimore-must-slow-down-oakland-qb-to-win/">more</a>.</p>
+					<p><p>in Week 4 against the Oakland Raiders and their high-powered offense &hellip;  <a href="http://talk921.com/raiders-ravens-preview-baltimore-must-slow-down-oakland-qb-to-win/" onclick="trackOutboundLink('http://talk921.com/raiders-ravens-preview-baltimore-must-slow-down-oakland-qb-to-win/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

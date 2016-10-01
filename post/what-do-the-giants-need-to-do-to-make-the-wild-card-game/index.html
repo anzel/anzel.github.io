@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>What do the Giants need to do to make the Wild Card Game?</h3>
-					<p><p>The Giants open up their final homestand of the regular season tonight, and somehow, I didn&rsquo;t have to say &ldquo;final homestand of the year&rdquo; there.  <a href="http://www.mccoveychronicles.com/2016/9/27/13070898/mlb-sf-giants-playoffs-jim-mora-quote-here">more</a>.</p>
+					<p><p>The Giants open up their final homestand of the regular season tonight, and somehow, I didn&rsquo;t have to say &ldquo;final homestand of the year&rdquo; there.  <a href="http://www.mccoveychronicles.com/2016/9/27/13070898/mlb-sf-giants-playoffs-jim-mora-quote-here" onclick="trackOutboundLink('http://www.mccoveychronicles.com/2016/9/27/13070898/mlb-sf-giants-playoffs-jim-mora-quote-here'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

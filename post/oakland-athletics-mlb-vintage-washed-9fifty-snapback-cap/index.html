@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>10</b></p>
 					<h3>Oakland Athletics MLB Vintage Washed 9FIFTY Snapback Cap</h3>
-					<p><p>today! With our huge selection of Oakland Athletics gear, you&rsquo;ll find &hellip;  <a href="https://www.lids.com/oakland-athletics-mlb-vintage-washed-9fifty-snapback-cap/20867435">more</a>.</p>
+					<p><p>today! With our huge selection of Oakland Athletics gear, you&rsquo;ll find &hellip;  <a href="https://www.lids.com/oakland-athletics-mlb-vintage-washed-9fifty-snapback-cap/20867435" onclick="trackOutboundLink('https://www.lids.com/oakland-athletics-mlb-vintage-washed-9fifty-snapback-cap/20867435'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

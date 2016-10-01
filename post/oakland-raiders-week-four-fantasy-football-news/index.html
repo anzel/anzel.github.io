@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>29</b></p>
 					<h3>Oakland Raiders: Week Four Fantasy Football news</h3>
-					<p><p>The Oakland Raiders will try and tack on another win on Sunday as they go to Baltimore to face John Harbaugh&rsquo;s 3-0 Ravens. Let&rsquo;s breakdown who to &hellip;  <a href="http://isportsweb.com/2016/09/29/oakland-raiders-fantasy-football-news-2/">more</a>.</p>
+					<p><p>The Oakland Raiders will try and tack on another win on Sunday as they go to Baltimore to face John Harbaugh&rsquo;s 3-0 Ravens. Let&rsquo;s breakdown who to &hellip;  <a href="http://isportsweb.com/2016/09/29/oakland-raiders-fantasy-football-news-2/" onclick="trackOutboundLink('http://isportsweb.com/2016/09/29/oakland-raiders-fantasy-football-news-2/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

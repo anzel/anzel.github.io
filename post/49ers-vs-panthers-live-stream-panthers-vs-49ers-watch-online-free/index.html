@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>49ers vs Panthers Live St-ream [Panthers vs 49ers] Wa.tch Online Free</h3>
-					<p><p>49ers., vs., Panthers., Li.ve., S-tre.am(NFL)., Week-2., Predictions., 18., Sep., 2016  <a href="http://www.bamelabour.org.uk/nflday/49ers_v_s_panthers_l_i_v_e_s_t_r_e_a_m_panthers_v_s_49ers_w_a_t_c_h_o_n_l_i_n_e_f_r_e_e">more</a>.</p>
+					<p><p>49ers., vs., Panthers., Li.ve., S-tre.am(NFL)., Week-2., Predictions., 18., Sep., 2016  <a href="http://www.bamelabour.org.uk/nflday/49ers_v_s_panthers_l_i_v_e_s_t_r_e_a_m_panthers_v_s_49ers_w_a_t_c_h_o_n_l_i_n_e_f_r_e_e" onclick="trackOutboundLink('http://www.bamelabour.org.uk/nflday/49ers_v_s_panthers_l_i_v_e_s_t_r_e_a_m_panthers_v_s_49ers_w_a_t_c_h_o_n_l_i_n_e_f_r_e_e'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

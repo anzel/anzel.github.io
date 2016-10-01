@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>16</b></p>
 					<h3>Ken Norton, Jr., Opens Up About Facing Former Colleague Dan Quinn</h3>
-					<p><p>This was the situation for Oakland Raiders defensive coordinator Ken Norton, Jr. The second-year defensive coordinator previously served as the &hellip;  <a href="http://www.raiders.com/news/article-1/Ken-Norton-Jr-Opens-Up-About-Facing-Former-Colleague-Dan-Quinn/44a20099-8c85-48bc-97ba-ce2e24ba762c">more</a>.</p>
+					<p><p>This was the situation for Oakland Raiders defensive coordinator Ken Norton, Jr. The second-year defensive coordinator previously served as the &hellip;  <a href="http://www.raiders.com/news/article-1/Ken-Norton-Jr-Opens-Up-About-Facing-Former-Colleague-Dan-Quinn/44a20099-8c85-48bc-97ba-ce2e24ba762c" onclick="trackOutboundLink('http://www.raiders.com/news/article-1/Ken-Norton-Jr-Opens-Up-About-Facing-Former-Colleague-Dan-Quinn/44a20099-8c85-48bc-97ba-ce2e24ba762c'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

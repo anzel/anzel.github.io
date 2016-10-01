@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>19</b></p>
 					<h3>Chip Kelly says 49ers are &#39;not thinking&#39; about making a QB change</h3>
-					<p><p>The 49ers may be 1-1 after Sunday&rsquo;s blowout loss at the hands of the Panthers, but their starting quarterback hasn&rsquo;t been anything close to good.  <a href="http://www.foxsports.com/nfl/story/chip-kelly-says-49ers-are-not-thinking-about-making-a-qb-change-091916">more</a>.</p>
+					<p><p>The 49ers may be 1-1 after Sunday&rsquo;s blowout loss at the hands of the Panthers, but their starting quarterback hasn&rsquo;t been anything close to good.  <a href="http://www.foxsports.com/nfl/story/chip-kelly-says-49ers-are-not-thinking-about-making-a-qb-change-091916" onclick="trackOutboundLink('http://www.foxsports.com/nfl/story/chip-kelly-says-49ers-are-not-thinking-about-making-a-qb-change-091916'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

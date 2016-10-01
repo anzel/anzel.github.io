@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>Oakland Raiders -vs- Tennessee Titans NFL L&#39;ive- S&#39;ream</h3>
-					<p><p>Week 3 For Free- Decider - 3 mins - More news for Raiders vs Titans &hellip;  <a href="https://vimeo.com/184221222">more</a>.</p>
+					<p><p>Week 3 For Free- Decider - 3 mins - More news for Raiders vs Titans &hellip;  <a href="https://vimeo.com/184221222" onclick="trackOutboundLink('https://vimeo.com/184221222'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

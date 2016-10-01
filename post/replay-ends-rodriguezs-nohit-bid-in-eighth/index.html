@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>05</b></p>
 					<h3>Replay ends Rodriguez&#39;s no-hit bid in eighth</h3>
-					<p><p>Oakland Athletics&rsquo; Danny Valencia (26) slides to score the game winning run behind Boston Red Sox catcher Sandy Leon in the ninth inning of a &hellip;  <a href="http://registerguard.com/rg/sports/34766127-81/replay-ends-rodriguezs-no-hit-bid-in-eighth.html.csp">more</a>.</p>
+					<p><p>Oakland Athletics&rsquo; Danny Valencia (26) slides to score the game winning run behind Boston Red Sox catcher Sandy Leon in the ninth inning of a &hellip;  <a href="http://registerguard.com/rg/sports/34766127-81/replay-ends-rodriguezs-no-hit-bid-in-eighth.html.csp" onclick="trackOutboundLink('http://registerguard.com/rg/sports/34766127-81/replay-ends-rodriguezs-no-hit-bid-in-eighth.html.csp'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

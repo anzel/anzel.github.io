@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>29</b></p>
 					<h3>X-Factors: Oakland Raiders at Baltimore Ravens</h3>
-					<p><p>X-Factors for both the Oakland Raiders and the Baltimore Ravens, looking ahead to their Week 4 matchup. In a rematch from Week 2 of the 2015 &hellip;  <a href="http://justblogbaby.com/2016/09/29/x-factors-oakland-raiders-at-baltimore-ravens/">more</a>.</p>
+					<p><p>X-Factors for both the Oakland Raiders and the Baltimore Ravens, looking ahead to their Week 4 matchup. In a rematch from Week 2 of the 2015 &hellip;  <a href="http://justblogbaby.com/2016/09/29/x-factors-oakland-raiders-at-baltimore-ravens/" onclick="trackOutboundLink('http://justblogbaby.com/2016/09/29/x-factors-oakland-raiders-at-baltimore-ravens/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

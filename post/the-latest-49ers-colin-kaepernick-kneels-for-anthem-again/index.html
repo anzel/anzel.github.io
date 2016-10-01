@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>The Latest: 49ers&#39; Colin Kaepernick kneels for anthem again</h3>
-					<p><p>The Latest on Week 2 of the NFL season (all times local): ___. 1:05 p.m.. San Francisco 49ers quarterback Colin Kaepernick continued his protest &hellip;  <a href="http://www.sfgate.com/news/article/The-Latest-49ers-Colin-Kaepernick-kneels-for-9230362.php">more</a>.</p>
+					<p><p>The Latest on Week 2 of the NFL season (all times local): ___. 1:05 p.m.. San Francisco 49ers quarterback Colin Kaepernick continued his protest &hellip;  <a href="http://www.sfgate.com/news/article/The-Latest-49ers-Colin-Kaepernick-kneels-for-9230362.php" onclick="trackOutboundLink('http://www.sfgate.com/news/article/The-Latest-49ers-Colin-Kaepernick-kneels-for-9230362.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

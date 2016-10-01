@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>19</b></p>
 					<h3>Seahawks opponent outlook: 49ers QB Blaine Gabbert off to rough start</h3>
-					<p><p>Seattle Times staff reporter Bob Condotta breaks down this week&rsquo;s Seahawks opponent, the San Francisco 49ers.  <a href="http://www.seattletimes.com/sports/seahawks/seahawks-opponent-outlook-49ers-qb-blaine-gabbert-off-to-rough-start/">more</a>.</p>
+					<p><p>Seattle Times staff reporter Bob Condotta breaks down this week&rsquo;s Seahawks opponent, the San Francisco 49ers.  <a href="http://www.seattletimes.com/sports/seahawks/seahawks-opponent-outlook-49ers-qb-blaine-gabbert-off-to-rough-start/" onclick="trackOutboundLink('http://www.seattletimes.com/sports/seahawks/seahawks-opponent-outlook-49ers-qb-blaine-gabbert-off-to-rough-start/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>11</b></p>
 					<h3>Rams vs. 49ers: 5 Reasons San Francisco Wins in Week 1</h3>
-					<p><p>The San Francisco 49ers open up their 2016 NFL season with a prime-time matchup against the Los Angeles Rams on Monday night. Niner Noise &hellip;  <a href="http://ninernoise.com/2016/09/11/rams-vs-49ers-5-reasons-san-francisco-wins-week-1/">more</a>.</p>
+					<p><p>The San Francisco 49ers open up their 2016 NFL season with a prime-time matchup against the Los Angeles Rams on Monday night. Niner Noise &hellip;  <a href="http://ninernoise.com/2016/09/11/rams-vs-49ers-5-reasons-san-francisco-wins-week-1/" onclick="trackOutboundLink('http://ninernoise.com/2016/09/11/rams-vs-49ers-5-reasons-san-francisco-wins-week-1/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

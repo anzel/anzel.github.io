@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Oct<b>01</b></p>
 					<h3>Davis thanks 49ers for giving him &#39;head start&#39; on life</h3>
-					<p><p>&ldquo;I love this game,&rdquo; Davis told reporters who cover the 49ers in April 2010 on a conference call. &ldquo;We&rsquo;ll see. Everybody with negative things to say, &hellip;  <a href="http://www.csnbayarea.com/49ers/davis-thanks-49ers-giving-him-head-start-life">more</a>.</p>
+					<p><p>&ldquo;I love this game,&rdquo; Davis told reporters who cover the 49ers in April 2010 on a conference call. &ldquo;We&rsquo;ll see. Everybody with negative things to say, &hellip;  <a href="http://www.csnbayarea.com/49ers/davis-thanks-49ers-giving-him-head-start-life" onclick="trackOutboundLink('http://www.csnbayarea.com/49ers/davis-thanks-49ers-giving-him-head-start-life'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

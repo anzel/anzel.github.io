@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>23</b></p>
 					<h3>NaVorro Bowman Breaks Down New-look 49ers-Seahawks Rivalry</h3>
-					<p><p>The 2015 version saw the San Francisco 49ers linebacker kneel at the very spot his career changed due to the gruesome injury that he suffered in the &hellip;  <a href="http://www.49ers.com/news/article-2/NaVorro-Bowman-Breaks-Down-New-look-49ers-Seahawks-Rivalry/26a7692b-35ab-4c59-83dc-ee19156cfb29">more</a>.</p>
+					<p><p>The 2015 version saw the San Francisco 49ers linebacker kneel at the very spot his career changed due to the gruesome injury that he suffered in the &hellip;  <a href="http://www.49ers.com/news/article-2/NaVorro-Bowman-Breaks-Down-New-look-49ers-Seahawks-Rivalry/26a7692b-35ab-4c59-83dc-ee19156cfb29" onclick="trackOutboundLink('http://www.49ers.com/news/article-2/NaVorro-Bowman-Breaks-Down-New-look-49ers-Seahawks-Rivalry/26a7692b-35ab-4c59-83dc-ee19156cfb29'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

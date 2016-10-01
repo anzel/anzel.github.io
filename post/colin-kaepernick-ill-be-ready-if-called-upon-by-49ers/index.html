@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>Colin Kaepernick: I&#39;ll be ready if called upon by 49ers</h3>
-					<p><p>In an explanation that seems hazy to some, 49ers coach Chip Kelly said this week that backup quarterback Colin Kaepernick is merely healthy &hellip;  <a href="http://www.nfl.com/news/story/0ap3000000711310/article/colin-kaepernick-ill-be-ready-if-called-upon-by-49ers">more</a>.</p>
+					<p><p>In an explanation that seems hazy to some, 49ers coach Chip Kelly said this week that backup quarterback Colin Kaepernick is merely healthy &hellip;  <a href="http://www.nfl.com/news/story/0ap3000000711310/article/colin-kaepernick-ill-be-ready-if-called-upon-by-49ers" onclick="trackOutboundLink('http://www.nfl.com/news/story/0ap3000000711310/article/colin-kaepernick-ill-be-ready-if-called-upon-by-49ers'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

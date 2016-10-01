@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>Oakland Raiders: Pros and Cons to Losing Marcel Reece</h3>
-					<p><p>Did the Oakland Raiders make the right move in releasing Marcel Reece? &hellip; The Oakland Raiders released Marcel Reece, a respected pillar in the &hellip;  <a href="https://nflspinzone.com/2016/09/28/oakland-raiders-pros-cons-losing-marcel-reece/">more</a>.</p>
+					<p><p>Did the Oakland Raiders make the right move in releasing Marcel Reece? &hellip; The Oakland Raiders released Marcel Reece, a respected pillar in the &hellip;  <a href="https://nflspinzone.com/2016/09/28/oakland-raiders-pros-cons-losing-marcel-reece/" onclick="trackOutboundLink('https://nflspinzone.com/2016/09/28/oakland-raiders-pros-cons-losing-marcel-reece/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

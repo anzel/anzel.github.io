@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>20</b></p>
 					<h3>San Jose Sharks release training camp roster</h3>
-					<p><p>San Jose Sharks release training camp roster &hellip; Carolina Hurricanes&rsquo; Jeff Skinner (53) has his shot blocked by San Jose Sharks. AP Photo/Karl B &hellip;  <a href="http://www.mercurynews.com/2016/09/20/san-jose-sharks-release-training-camp-roster/">more</a>.</p>
+					<p><p>San Jose Sharks release training camp roster &hellip; Carolina Hurricanes&rsquo; Jeff Skinner (53) has his shot blocked by San Jose Sharks. AP Photo/Karl B &hellip;  <a href="http://www.mercurynews.com/2016/09/20/san-jose-sharks-release-training-camp-roster/" onclick="trackOutboundLink('http://www.mercurynews.com/2016/09/20/san-jose-sharks-release-training-camp-roster/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

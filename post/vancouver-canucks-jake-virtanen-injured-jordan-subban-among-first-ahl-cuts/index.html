@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>Vancouver Canucks Jake Virtanen Injured, Jordan Subban Among First AHL Cuts</h3>
-					<p><p>&hellip; outplayed, but were 22 seconds away from stealing a win at the Shark Tank in their preseason opener against the San Jose Sharks on Tuesday.  <a href="http://www.hockeybuzz.com/blog/Carol-Schram/Vancouver-Canucks-Jake-Virtanen-Injured-Jordan-Subban-Among-First-AHL-Cuts/194/79521">more</a>.</p>
+					<p><p>&hellip; outplayed, but were 22 seconds away from stealing a win at the Shark Tank in their preseason opener against the San Jose Sharks on Tuesday.  <a href="http://www.hockeybuzz.com/blog/Carol-Schram/Vancouver-Canucks-Jake-Virtanen-Injured-Jordan-Subban-Among-First-AHL-Cuts/194/79521" onclick="trackOutboundLink('http://www.hockeybuzz.com/blog/Carol-Schram/Vancouver-Canucks-Jake-Virtanen-Injured-Jordan-Subban-Among-First-AHL-Cuts/194/79521'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

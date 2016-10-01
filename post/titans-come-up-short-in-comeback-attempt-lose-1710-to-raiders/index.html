@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>26</b></p>
 					<h3>Titans Come up Short in Comeback Attempt, Lose 17-10 to Raiders.</h3>
-					<p><p>NASHVILLE, Tenn.  The Titans provided more drama, more defense, and another last-minute drive on Sunday against the Oakland Raiders.  <a href="http://www.titansonline.com/news/article-4/Titans-Come-up-Short-in-Comeback-Attempt-Lose-17-10-to-Raiders/9ae5dd20-e349-4c27-be32-1d5fa9231f46">more</a>.</p>
+					<p><p>NASHVILLE, Tenn.  The Titans provided more drama, more defense, and another last-minute drive on Sunday against the Oakland Raiders.  <a href="http://www.titansonline.com/news/article-4/Titans-Come-up-Short-in-Comeback-Attempt-Lose-17-10-to-Raiders/9ae5dd20-e349-4c27-be32-1d5fa9231f46" onclick="trackOutboundLink('http://www.titansonline.com/news/article-4/Titans-Come-up-Short-in-Comeback-Attempt-Lose-17-10-to-Raiders/9ae5dd20-e349-4c27-be32-1d5fa9231f46'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

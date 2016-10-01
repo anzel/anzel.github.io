@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>06</b></p>
 					<h3>Raiders putting pressure on Las Vegas to get stadium deal done</h3>
-					<p><p>The Oakland Raiders are putting pressure on the city of Las Vegas to come up with funding to construct an NFL stadium. If a deal is not reached soon, &hellip;  <a href="http://oak.247sports.com/Bolt/Raiders-putting-pressure-on-Las-Vegas-to-get-stadium-deal-done-47260069">more</a>.</p>
+					<p><p>The Oakland Raiders are putting pressure on the city of Las Vegas to come up with funding to construct an NFL stadium. If a deal is not reached soon, &hellip;  <a href="http://oak.247sports.com/Bolt/Raiders-putting-pressure-on-Las-Vegas-to-get-stadium-deal-done-47260069" onclick="trackOutboundLink('http://oak.247sports.com/Bolt/Raiders-putting-pressure-on-Las-Vegas-to-get-stadium-deal-done-47260069'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

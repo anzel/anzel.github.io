@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>49ers no longer worst team in the NFC West</h3>
-					<p><p>The Rams&rsquo; coaching staff returned from that 28-0 loss to the San Francisco 49ers and worked through a sleepless night to begin preparations for &hellip;  <a href="http://westhawaiitoday.com/sports/nation-and-world-sports/49ers-no-longer-worst-team-nfc-west">more</a>.</p>
+					<p><p>The Rams&rsquo; coaching staff returned from that 28-0 loss to the San Francisco 49ers and worked through a sleepless night to begin preparations for &hellip;  <a href="http://westhawaiitoday.com/sports/nation-and-world-sports/49ers-no-longer-worst-team-nfc-west" onclick="trackOutboundLink('http://westhawaiitoday.com/sports/nation-and-world-sports/49ers-no-longer-worst-team-nfc-west'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

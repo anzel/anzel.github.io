@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>09</b></p>
 					<h3>Rams Ready To Renew NorCal-SoCal Rivalry with 49ers</h3>
-					<p><p>THOUSAND OAKS, Ca - &ldquo;Well, this is my 16th NFL start, so I have done it before, just in case you guys were wondering,&rdquo; Los Angeles Rams starting &hellip;  <a href="http://www.nbclosangeles.com/news/local/Rams-Renewing-NorCal-SoCal-Rivalry-with-49ers-392828951.html">more</a>.</p>
+					<p><p>THOUSAND OAKS, Ca - &ldquo;Well, this is my 16th NFL start, so I have done it before, just in case you guys were wondering,&rdquo; Los Angeles Rams starting &hellip;  <a href="http://www.nbclosangeles.com/news/local/Rams-Renewing-NorCal-SoCal-Rivalry-with-49ers-392828951.html" onclick="trackOutboundLink('http://www.nbclosangeles.com/news/local/Rams-Renewing-NorCal-SoCal-Rivalry-with-49ers-392828951.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

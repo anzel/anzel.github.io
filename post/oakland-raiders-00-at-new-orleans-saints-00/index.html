@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>Oakland Raiders (0-0) at New Orleans Saints (0-0)</h3>
-					<p><p>SERIES HISTORY: 13th regular-season meeting. Saints lead series 6-5-1. The Saints own a three-game winning streak in the series and have won &hellip;  <a href="http://www.lindyssports.com/nfl/pick/oakland-raiders-0-0-at-new-orleans-saints-0-0/410701/">more</a>.</p>
+					<p><p>SERIES HISTORY: 13th regular-season meeting. Saints lead series 6-5-1. The Saints own a three-game winning streak in the series and have won &hellip;  <a href="http://www.lindyssports.com/nfl/pick/oakland-raiders-0-0-at-new-orleans-saints-0-0/410701/" onclick="trackOutboundLink('http://www.lindyssports.com/nfl/pick/oakland-raiders-0-0-at-new-orleans-saints-0-0/410701/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

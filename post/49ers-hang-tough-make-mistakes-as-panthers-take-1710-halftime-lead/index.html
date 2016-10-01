@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>49ers hang tough, make mistakes as Panthers take 17-10 halftime lead</h3>
-					<p><p>The 49ers didn&rsquo;t come out flat against the NFC champions, although they did look impacted by the heat and humidity in Charlotte. They forced two &hellip;  <a href="http://ninerswire.usatoday.com/2016/09/18/49ers-hang-tough-make-mistakes-as-panthers-take-17-10-halftime-lead/">more</a>.</p>
+					<p><p>The 49ers didn&rsquo;t come out flat against the NFC champions, although they did look impacted by the heat and humidity in Charlotte. They forced two &hellip;  <a href="http://ninerswire.usatoday.com/2016/09/18/49ers-hang-tough-make-mistakes-as-panthers-take-17-10-halftime-lead/" onclick="trackOutboundLink('http://ninerswire.usatoday.com/2016/09/18/49ers-hang-tough-make-mistakes-as-panthers-take-17-10-halftime-lead/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

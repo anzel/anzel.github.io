@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Aug<b>31</b></p>
 					<h3>49ers player to watch in preseason Game 4 - QB Colin Kaepernick</h3>
-					<p><p>It&rsquo;s been quite a week in the world of Colin Kaepernick, to say the least. Kaepernick was our selection as the 49ers player to watch in preseason game &hellip;  <a href="http://sfo.247sports.com/Bolt/49ers-player-to-watch-in-preseason-Game-4-QB-Colin-Kaepernick-47090252">more</a>.</p>
+					<p><p>It&rsquo;s been quite a week in the world of Colin Kaepernick, to say the least. Kaepernick was our selection as the 49ers player to watch in preseason game &hellip;  <a href="http://sfo.247sports.com/Bolt/49ers-player-to-watch-in-preseason-Game-4-QB-Colin-Kaepernick-47090252" onclick="trackOutboundLink('http://sfo.247sports.com/Bolt/49ers-player-to-watch-in-preseason-Game-4-QB-Colin-Kaepernick-47090252'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

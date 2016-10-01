@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>(!kickoff&lt;)W!a!T@C!h..Live..&#39;49ers&#39;..Online..Football</h3>
-					<p><p>Free Online Live Where To Watch 49ers American Online Watch 49ers &hellip;  <a href="https://www.ramseycounty.us/sites/default/files/webform/%28%21kickoff%29W%21a%21T%40C%21h..Live_..%2749ers%27..Online..Football.pdf">more</a>.</p>
+					<p><p>Free Online Live Where To Watch 49ers American Online Watch 49ers &hellip;  <a href="https://www.ramseycounty.us/sites/default/files/webform/%28%21kickoff%29W%21a%21T%40C%21h..Live_..%2749ers%27..Online..Football.pdf" onclick="trackOutboundLink('https://www.ramseycounty.us/sites/default/files/webform/%28%21kickoff%29W%21a%21T%40C%21h..Live_..%2749ers%27..Online..Football.pdf'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

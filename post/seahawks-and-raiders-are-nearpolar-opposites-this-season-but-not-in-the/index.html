@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>20</b></p>
 					<h3>Seahawks and Raiders are near-polar opposites this season but not in the</h3>
-					<p><p>Field Gulls The Seattle Seahawks and Oakland Raiders wrapped up their preseason schedule against one another with the Seahawks winning 23-21 in the &hellip;  <a href="http://www.fieldgulls.com/2016/9/20/12987764/raiders-offense-seahawks-defense-russell-wilson-derek-carr-khalil-mack-pete-carroll">more</a>.</p>
+					<p><p>Field Gulls The Seattle Seahawks and Oakland Raiders wrapped up their preseason schedule against one another with the Seahawks winning 23-21 in the &hellip;  <a href="http://www.fieldgulls.com/2016/9/20/12987764/raiders-offense-seahawks-defense-russell-wilson-derek-carr-khalil-mack-pete-carroll" onclick="trackOutboundLink('http://www.fieldgulls.com/2016/9/20/12987764/raiders-offense-seahawks-defense-russell-wilson-derek-carr-khalil-mack-pete-carroll'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

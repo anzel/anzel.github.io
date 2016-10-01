@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>21</b></p>
 					<h3>Anatomy of a Play: Vance McDonald&#39;s 75-yard Touchdown Catch</h3>
-					<p><p>Down by 21 points late in the third quarter, the Carolina Panthers appeared to on their way to a comfortable win over the San Francisco 49ers. Midway &hellip;  <a href="http://www.49ers.com/news/article-2/Anatomy-of-a-Play-Vance-McDonalds-75-yard-Touchdown-Catch/9df78c5a-f36e-4617-86f6-ba4d94a1f486">more</a>.</p>
+					<p><p>Down by 21 points late in the third quarter, the Carolina Panthers appeared to on their way to a comfortable win over the San Francisco 49ers. Midway &hellip;  <a href="http://www.49ers.com/news/article-2/Anatomy-of-a-Play-Vance-McDonalds-75-yard-Touchdown-Catch/9df78c5a-f36e-4617-86f6-ba4d94a1f486" onclick="trackOutboundLink('http://www.49ers.com/news/article-2/Anatomy-of-a-Play-Vance-McDonalds-75-yard-Touchdown-Catch/9df78c5a-f36e-4617-86f6-ba4d94a1f486'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

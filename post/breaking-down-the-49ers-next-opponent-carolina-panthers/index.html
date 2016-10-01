@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>Breaking down the 49ers&#39; next opponent: Carolina Panthers</h3>
-					<p><p>The Carolina Panthers lie waiting for the 49ers in Week 2 and should provide a formidable challenge. Here&rsquo;s a quick glance at what the defending &hellip;  <a href="http://sfo.247sports.com/Bolt/Breaking-down-the-49ers-next-opponent-Carolina-Panthers-47458728">more</a>.</p>
+					<p><p>The Carolina Panthers lie waiting for the 49ers in Week 2 and should provide a formidable challenge. Here&rsquo;s a quick glance at what the defending &hellip;  <a href="http://sfo.247sports.com/Bolt/Breaking-down-the-49ers-next-opponent-Carolina-Panthers-47458728" onclick="trackOutboundLink('http://sfo.247sports.com/Bolt/Breaking-down-the-49ers-next-opponent-Carolina-Panthers-47458728'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

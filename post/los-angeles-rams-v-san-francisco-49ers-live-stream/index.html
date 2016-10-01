@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>Los Angeles Rams v San Francisco 49ers L-ive S-tream</h3>
-					<p><p>Watch Rams-49ers NFL Monday Night Football Game Live &hellip;  <a href="https://vimeo.com/182480087">more</a>.</p>
+					<p><p>Watch Rams-49ers NFL Monday Night Football Game Live &hellip;  <a href="https://vimeo.com/182480087" onclick="trackOutboundLink('https://vimeo.com/182480087'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

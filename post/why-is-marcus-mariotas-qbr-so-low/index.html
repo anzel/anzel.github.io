@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>29</b></p>
 					<h3>Why is Marcus Mariota&#39;s QBR so low?</h3>
-					<p><p>For our first foray, let&rsquo;s look at Tennessee Titans quarterback Marcus Mariota&rsquo;s 3.6 QBR against the Oakland Raiders. At first glance it doesn&rsquo;t look like &hellip;  <a href="http://www.espn.com/nfl/story/_/id/17663362/why-marcus-mariota-qbr-low">more</a>.</p>
+					<p><p>For our first foray, let&rsquo;s look at Tennessee Titans quarterback Marcus Mariota&rsquo;s 3.6 QBR against the Oakland Raiders. At first glance it doesn&rsquo;t look like &hellip;  <a href="http://www.espn.com/nfl/story/_/id/17663362/why-marcus-mariota-qbr-low" onclick="trackOutboundLink('http://www.espn.com/nfl/story/_/id/17663362/why-marcus-mariota-qbr-low'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>13</b></p>
 					<h3>Marte, Mariners beat Athletics for 5th win in row</h3>
-					<p><p>With a 3-2 loss at the hands of the Seattle Mariners on Sunday afternoon, the Oakland Athletics have clinched a losing record for a &hellip;  <a href="http://crcconnection.com/2016/09/12/marte-mariners-beat-athletics-for-5th-win-in-row.html">more</a>.</p>
+					<p><p>With a 3-2 loss at the hands of the Seattle Mariners on Sunday afternoon, the Oakland Athletics have clinched a losing record for a &hellip;  <a href="http://crcconnection.com/2016/09/12/marte-mariners-beat-athletics-for-5th-win-in-row.html" onclick="trackOutboundLink('http://crcconnection.com/2016/09/12/marte-mariners-beat-athletics-for-5th-win-in-row.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

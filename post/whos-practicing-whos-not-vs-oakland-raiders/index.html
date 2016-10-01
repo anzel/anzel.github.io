@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>Who&#39;s Practicing, Who&#39;s Not vs. Oakland Raiders</h3>
-					<p><p>Running back Kenneth Dixon returns to action. Rookies Ronnie Stanley and Alex Lewis both sidelines. Elvis Dumervil expected to turn.  <a href="http://www.baltimoreravens.com/news/article-1/Whos-Practicing-Whos-Not-vs-Oakland-Raiders/6d172e92-eb09-4582-8907-8d507e88a538">more</a>.</p>
+					<p><p>Running back Kenneth Dixon returns to action. Rookies Ronnie Stanley and Alex Lewis both sidelines. Elvis Dumervil expected to turn.  <a href="http://www.baltimoreravens.com/news/article-1/Whos-Practicing-Whos-Not-vs-Oakland-Raiders/6d172e92-eb09-4582-8907-8d507e88a538" onclick="trackOutboundLink('http://www.baltimoreravens.com/news/article-1/Whos-Practicing-Whos-Not-vs-Oakland-Raiders/6d172e92-eb09-4582-8907-8d507e88a538'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

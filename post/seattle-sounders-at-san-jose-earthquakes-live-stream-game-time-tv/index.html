@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>10</b></p>
 					<h3>Seattle Sounders at San Jose Earthquakes live stream: Game time, TV</h3>
-					<p><p>Sounder At Heart Sounders getting a win will strengthen their grip on the playoff destiny. It&rsquo;s time to get back on a winning streak against a club still searching for &hellip;  <a href="http://www.sounderatheart.com/2016/9/10/12873632/seattle-sounders-at-san-jose-earthquakes-game-time-tv-schedule-and-live-stream-for-mls-match-27">more</a>.</p>
+					<p><p>Sounder At Heart Sounders getting a win will strengthen their grip on the playoff destiny. It&rsquo;s time to get back on a winning streak against a club still searching for &hellip;  <a href="http://www.sounderatheart.com/2016/9/10/12873632/seattle-sounders-at-san-jose-earthquakes-game-time-tv-schedule-and-live-stream-for-mls-match-27" onclick="trackOutboundLink('http://www.sounderatheart.com/2016/9/10/12873632/seattle-sounders-at-san-jose-earthquakes-game-time-tv-schedule-and-live-stream-for-mls-match-27'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

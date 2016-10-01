@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>49ers offensive line not dwelling on Anthony</h3>
-					<p><p>Left tackle Joe Staley said Anthony Davis&rsquo; retirement Monday  his second since June 2015  didn&rsquo;t come as a surprise. He wanted to retire, so he &hellip;  <a href="http://www.mercurynews.com/2016/09/27/49ers-offensive-line-not-dwelling-on-anthony-davis-re-retirement/">more</a>.</p>
+					<p><p>Left tackle Joe Staley said Anthony Davis&rsquo; retirement Monday  his second since June 2015  didn&rsquo;t come as a surprise. He wanted to retire, so he &hellip;  <a href="http://www.mercurynews.com/2016/09/27/49ers-offensive-line-not-dwelling-on-anthony-davis-re-retirement/" onclick="trackOutboundLink('http://www.mercurynews.com/2016/09/27/49ers-offensive-line-not-dwelling-on-anthony-davis-re-retirement/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

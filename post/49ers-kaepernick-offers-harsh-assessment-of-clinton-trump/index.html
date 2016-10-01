@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>49ers&#39; Kaepernick offers harsh assessment of Clinton, Trump</h3>
-					<p><p>SANTA CLARA, Calif. (AP)  San Francisco 49ers backup quarterback Colin Kaepernick, who has become a key figure in a growing protest against &hellip;  <a href="http://www.usatoday.com/story/sports/nfl/2016/09/27/49ers-kaepernick-offers-harsh-assessment-of-clinton-trump/91195428/">more</a>.</p>
+					<p><p>SANTA CLARA, Calif. (AP)  San Francisco 49ers backup quarterback Colin Kaepernick, who has become a key figure in a growing protest against &hellip;  <a href="http://www.usatoday.com/story/sports/nfl/2016/09/27/49ers-kaepernick-offers-harsh-assessment-of-clinton-trump/91195428/" onclick="trackOutboundLink('http://www.usatoday.com/story/sports/nfl/2016/09/27/49ers-kaepernick-offers-harsh-assessment-of-clinton-trump/91195428/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

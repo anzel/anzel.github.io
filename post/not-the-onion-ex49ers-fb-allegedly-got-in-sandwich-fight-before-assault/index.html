@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>07</b></p>
 					<h3>Not The Onion: Ex-49ers FB allegedly got in sandwich fight before assault</h3>
-					<p><p>Yahoo Sports Former San Francisco 49ers fullback Bruce Miller, who was cut on Tuesday after his arrest for an alleged assault against two men, one of whom was &hellip;  <a href="http://sports.yahoo.com/news/not-the-onion-ex-49ers-fb-allegedly-got-in-sandwich-fight-before-assault-arrest-155735595.html">more</a>.</p>
+					<p><p>Yahoo Sports Former San Francisco 49ers fullback Bruce Miller, who was cut on Tuesday after his arrest for an alleged assault against two men, one of whom was &hellip;  <a href="http://sports.yahoo.com/news/not-the-onion-ex-49ers-fb-allegedly-got-in-sandwich-fight-before-assault-arrest-155735595.html" onclick="trackOutboundLink('http://sports.yahoo.com/news/not-the-onion-ex-49ers-fb-allegedly-got-in-sandwich-fight-before-assault-arrest-155735595.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

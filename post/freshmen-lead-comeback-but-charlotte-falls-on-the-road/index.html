@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>13</b></p>
 					<h3>Freshmen lead comeback but Charlotte falls on the road</h3>
-					<p><p>scores but it was not enough to overcome a first-half deficit, as the 49ers &hellip;  <a href="http://www.charlotte49ers.com/news/2016/9/11/womens-soccer-freshmen-lead-comeback-but-charlotte-falls-on-the-road.aspx">more</a>.</p>
+					<p><p>scores but it was not enough to overcome a first-half deficit, as the 49ers &hellip;  <a href="http://www.charlotte49ers.com/news/2016/9/11/womens-soccer-freshmen-lead-comeback-but-charlotte-falls-on-the-road.aspx" onclick="trackOutboundLink('http://www.charlotte49ers.com/news/2016/9/11/womens-soccer-freshmen-lead-comeback-but-charlotte-falls-on-the-road.aspx'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

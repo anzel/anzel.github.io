@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>10</b></p>
 					<h3>Steve Sells, Aragon High School, Awarded Week 1 Coach of the Week</h3>
-					<p><p>The San Francisco 49ers Charlie Wedemeyer Memorial Coach of the Week award for week two goes to Steve Sells from Aragon High School in San &hellip;  <a href="http://www.49ers.com/news/article-2/Steve-Sells-Aragon-High-School-Awarded-Week-1-Coach-of-the-Week/62e4a771-8b67-400f-bf5d-28eb845f3e74">more</a>.</p>
+					<p><p>The San Francisco 49ers Charlie Wedemeyer Memorial Coach of the Week award for week two goes to Steve Sells from Aragon High School in San &hellip;  <a href="http://www.49ers.com/news/article-2/Steve-Sells-Aragon-High-School-Awarded-Week-1-Coach-of-the-Week/62e4a771-8b67-400f-bf5d-28eb845f3e74" onclick="trackOutboundLink('http://www.49ers.com/news/article-2/Steve-Sells-Aragon-High-School-Awarded-Week-1-Coach-of-the-Week/62e4a771-8b67-400f-bf5d-28eb845f3e74'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

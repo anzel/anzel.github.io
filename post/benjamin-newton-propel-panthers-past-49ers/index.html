@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>19</b></p>
 					<h3>Benjamin, Newton propel Panthers past 49ers</h3>
-					<p><p>&ldquo;I felt like there were plays out there where you had to make the play,&rdquo; 49ers linebacker NaVorro Bowman said. &ldquo;They did a good job executing and &hellip;  <a href="http://www.bakersfield.com/sports/benjamin-newton-propel-panthers-past-ers/article_50f433ce-1a3f-5e6d-b508-9fe018fdd23a.html">more</a>.</p>
+					<p><p>&ldquo;I felt like there were plays out there where you had to make the play,&rdquo; 49ers linebacker NaVorro Bowman said. &ldquo;They did a good job executing and &hellip;  <a href="http://www.bakersfield.com/sports/benjamin-newton-propel-panthers-past-ers/article_50f433ce-1a3f-5e6d-b508-9fe018fdd23a.html" onclick="trackOutboundLink('http://www.bakersfield.com/sports/benjamin-newton-propel-panthers-past-ers/article_50f433ce-1a3f-5e6d-b508-9fe018fdd23a.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

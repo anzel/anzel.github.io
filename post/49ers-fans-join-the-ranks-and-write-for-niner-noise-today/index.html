@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>23</b></p>
 					<h3>49ers Fans: Join the Ranks and Write for Niner Noise Today!</h3>
-					<p><p>Niner Noise, part of the FanSided network, is actively seeking writers and bloggers to join our team and cover the San Francisco 49ers in 2016 and &hellip;  <a href="http://ninernoise.com/2016/09/22/49ers-fans-join-ranks-write-niner-noise-today/">more</a>.</p>
+					<p><p>Niner Noise, part of the FanSided network, is actively seeking writers and bloggers to join our team and cover the San Francisco 49ers in 2016 and &hellip;  <a href="http://ninernoise.com/2016/09/22/49ers-fans-join-ranks-write-niner-noise-today/" onclick="trackOutboundLink('http://ninernoise.com/2016/09/22/49ers-fans-join-ranks-write-niner-noise-today/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

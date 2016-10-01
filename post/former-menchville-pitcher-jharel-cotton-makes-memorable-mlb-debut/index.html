@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>07</b></p>
 					<h3>Former Menchville pitcher Jharel Cotton makes memorable MLB debut</h3>
-					<p><p>Oakland Athletics rookie Jharel Cotton made his major league debut Wednesday in memorable fashion, allowing two hits through 6 <sup>1</sup>&frasl;<sub>3</sub> innings in a &hellip;  <a href="http://www.dailypress.com/sports/highschool/dp-spt-menchville-jharel-cotton-mlb-debut-oakland-athletics-20160907-story.html">more</a>.</p>
+					<p><p>Oakland Athletics rookie Jharel Cotton made his major league debut Wednesday in memorable fashion, allowing two hits through 6 <sup>1</sup>&frasl;<sub>3</sub> innings in a &hellip;  <a href="http://www.dailypress.com/sports/highschool/dp-spt-menchville-jharel-cotton-mlb-debut-oakland-athletics-20160907-story.html" onclick="trackOutboundLink('http://www.dailypress.com/sports/highschool/dp-spt-menchville-jharel-cotton-mlb-debut-oakland-athletics-20160907-story.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

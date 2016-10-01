@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>49ers&#39; Colin Kaepernick, Eli Harold respond to Trent Dilfer&#39;s remarks on</h3>
-					<p><p>Niners Wire Judging by the vibe in the 49ers&rsquo; locker room after their season opening win over the Rams, Trent Dilfer doesn&rsquo;t have many fans among San &hellip;  <a href="http://ninerswire.usatoday.com/2016/09/13/49ers-colin-kaepernick-eli-harold-responds-to-trent-dilfers-remarks-on-protest/">more</a>.</p>
+					<p><p>Niners Wire Judging by the vibe in the 49ers&rsquo; locker room after their season opening win over the Rams, Trent Dilfer doesn&rsquo;t have many fans among San &hellip;  <a href="http://ninerswire.usatoday.com/2016/09/13/49ers-colin-kaepernick-eli-harold-responds-to-trent-dilfers-remarks-on-protest/" onclick="trackOutboundLink('http://ninerswire.usatoday.com/2016/09/13/49ers-colin-kaepernick-eli-harold-responds-to-trent-dilfers-remarks-on-protest/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

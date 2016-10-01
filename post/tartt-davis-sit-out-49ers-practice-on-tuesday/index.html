@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>21</b></p>
 					<h3>Tartt, Davis Sit Out 49ers&#39; Practice on Tuesday</h3>
-					<p><p>SANTA CLARA  Safety Jaquiski Tartt did not participate in practice on Tuesday due to an unknown condition. NFL teams are not required to submit &hellip;  <a href="http://www.nbcbayarea.com/news/sports/csn/49ers/Tartt__Davis_sit_out_49ers__practice_on_Tuesday-394168361.html">more</a>.</p>
+					<p><p>SANTA CLARA  Safety Jaquiski Tartt did not participate in practice on Tuesday due to an unknown condition. NFL teams are not required to submit &hellip;  <a href="http://www.nbcbayarea.com/news/sports/csn/49ers/Tartt__Davis_sit_out_49ers__practice_on_Tuesday-394168361.html" onclick="trackOutboundLink('http://www.nbcbayarea.com/news/sports/csn/49ers/Tartt__Davis_sit_out_49ers__practice_on_Tuesday-394168361.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

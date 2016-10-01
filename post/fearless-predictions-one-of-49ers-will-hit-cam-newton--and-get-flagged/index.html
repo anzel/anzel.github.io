@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>16</b></p>
 					<h3>Fearless predictions: One of 49ers will hit Cam Newton ... and get flagged</h3>
-					<p><p>Charlotte Observer reporter Joseph Person previews the Week 2 matchup, San Francisco 49ers at Carolina Panthers, with some bold predictions.  <a href="http://www.charlotteobserver.com/sports/nfl/carolina-panthers/article102241592.html">more</a>.</p>
+					<p><p>Charlotte Observer reporter Joseph Person previews the Week 2 matchup, San Francisco 49ers at Carolina Panthers, with some bold predictions.  <a href="http://www.charlotteobserver.com/sports/nfl/carolina-panthers/article102241592.html" onclick="trackOutboundLink('http://www.charlotteobserver.com/sports/nfl/carolina-panthers/article102241592.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

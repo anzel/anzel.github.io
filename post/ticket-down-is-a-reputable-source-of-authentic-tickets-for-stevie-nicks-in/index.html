@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>Ticket Down is a reputable source of authentic tickets for Stevie Nicks in</h3>
-					<p><p>Press Release Rocket This venue is the home arena of the San Jose Sharks and the San Jose Barracudas. This arena has hosted many great events since it first opened, &hellip;  <a href="http://www.pressreleaserocket.net/stevie-nicks-tickets-golden-1-center-in-sacramento-ca-and-sap-center-in-san-jose-ca-ticket-down-slashes-stevie-nicks-tickets-in-sacramento-at-golden-1-center-and-sap-center-in-san-jose/">more</a>.</p>
+					<p><p>Press Release Rocket This venue is the home arena of the San Jose Sharks and the San Jose Barracudas. This arena has hosted many great events since it first opened, &hellip;  <a href="http://www.pressreleaserocket.net/stevie-nicks-tickets-golden-1-center-in-sacramento-ca-and-sap-center-in-san-jose-ca-ticket-down-slashes-stevie-nicks-tickets-in-sacramento-at-golden-1-center-and-sap-center-in-san-jose/" onclick="trackOutboundLink('http://www.pressreleaserocket.net/stevie-nicks-tickets-golden-1-center-in-sacramento-ca-and-sap-center-in-san-jose-ca-ticket-down-slashes-stevie-nicks-tickets-in-sacramento-at-golden-1-center-and-sap-center-in-san-jose/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

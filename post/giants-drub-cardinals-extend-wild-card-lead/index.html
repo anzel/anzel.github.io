@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>17</b></p>
 					<h3>Giants drub Cardinals, extend wild card lead</h3>
-					<p><p>It seems so simple on the surface. The Giants hit the ball. Their starting pitcher got out of jams. The bullpen didn&rsquo;t allow a hit. This is what postseason &hellip;  <a href="http://www.mccoveychronicles.com/2016/9/16/12950824/sf-giants-recap-cardinals">more</a>.</p>
+					<p><p>It seems so simple on the surface. The Giants hit the ball. Their starting pitcher got out of jams. The bullpen didn&rsquo;t allow a hit. This is what postseason &hellip;  <a href="http://www.mccoveychronicles.com/2016/9/16/12950824/sf-giants-recap-cardinals" onclick="trackOutboundLink('http://www.mccoveychronicles.com/2016/9/16/12950824/sf-giants-recap-cardinals'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

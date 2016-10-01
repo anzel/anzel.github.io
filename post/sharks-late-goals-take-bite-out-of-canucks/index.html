@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>29</b></p>
 					<h3>Sharks late goals take bite out of canucks</h3>
-					<p><p>Kevin Labanc&rsquo;s goal 1:05 into overtime lifted the San Jose Sharks to a 3-2, come-from-behind win over the Vancouver Canucks. Tommy Wingels set &hellip;  <a href="http://www.mantecabulletin.com/section/154/article/138064/">more</a>.</p>
+					<p><p>Kevin Labanc&rsquo;s goal 1:05 into overtime lifted the San Jose Sharks to a 3-2, come-from-behind win over the Vancouver Canucks. Tommy Wingels set &hellip;  <a href="http://www.mantecabulletin.com/section/154/article/138064/" onclick="trackOutboundLink('http://www.mantecabulletin.com/section/154/article/138064/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

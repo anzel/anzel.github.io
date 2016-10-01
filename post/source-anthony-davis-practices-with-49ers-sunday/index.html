@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>11</b></p>
 					<h3>Source: Anthony Davis practices with 49ers Sunday</h3>
-					<p><p>Davis, 26, had been lining up as the 49ers&rsquo; starting right guard in recent practices but, according to a source, had misgivings about playing that &hellip;  <a href="http://www.sacbee.com/sports/nfl/san-francisco-49ers/article101225397.html">more</a>.</p>
+					<p><p>Davis, 26, had been lining up as the 49ers&rsquo; starting right guard in recent practices but, according to a source, had misgivings about playing that &hellip;  <a href="http://www.sacbee.com/sports/nfl/san-francisco-49ers/article101225397.html" onclick="trackOutboundLink('http://www.sacbee.com/sports/nfl/san-francisco-49ers/article101225397.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

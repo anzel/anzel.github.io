@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>06</b></p>
 					<h3>Oakland Raiders Power Rankings: Week 1</h3>
-					<p><p>The NFL 2016 preseason is officially in the books, with the Oakland Raiders finishing with a 1-3 record, and now less than a week away from the &hellip;  <a href="http://www.raiders.com/news/article-1/Oakland-Raiders-Power-Rankings-Week-1/1848e013-c734-4729-877a-01b9ef011f2c">more</a>.</p>
+					<p><p>The NFL 2016 preseason is officially in the books, with the Oakland Raiders finishing with a 1-3 record, and now less than a week away from the &hellip;  <a href="http://www.raiders.com/news/article-1/Oakland-Raiders-Power-Rankings-Week-1/1848e013-c734-4729-877a-01b9ef011f2c" onclick="trackOutboundLink('http://www.raiders.com/news/article-1/Oakland-Raiders-Power-Rankings-Week-1/1848e013-c734-4729-877a-01b9ef011f2c'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

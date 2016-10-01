@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>13</b></p>
 					<h3>Rams set football back 100 years, 49ers pitch 28-0 shutout: 6 things to</h3>
-					<p><p>CBSSports.com Burn it all. Take all the tape and set it on top of a tire fire. Or just throw it back on the field with the 49ers-Rams game. What a disaster that game on &hellip;  <a href="http://www.cbssports.com/nfl/news/rams-set-football-back-100-years-49ers-pitch-28-0-shutout-6-things-to-know/">more</a>.</p>
+					<p><p>CBSSports.com Burn it all. Take all the tape and set it on top of a tire fire. Or just throw it back on the field with the 49ers-Rams game. What a disaster that game on &hellip;  <a href="http://www.cbssports.com/nfl/news/rams-set-football-back-100-years-49ers-pitch-28-0-shutout-6-things-to-know/" onclick="trackOutboundLink('http://www.cbssports.com/nfl/news/rams-set-football-back-100-years-49ers-pitch-28-0-shutout-6-things-to-know/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

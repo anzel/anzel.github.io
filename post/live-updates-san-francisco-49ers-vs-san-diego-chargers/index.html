@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>01</b></p>
 					<h3>Live Updates: San Francisco 49ers vs. San Diego Chargers</h3>
-					<p><p>The San Francisco 49ers wrap up the 2016 preseason on the road &hellip; Several veterans on the 49ers, including quarterback Blaine Gabbert , will not &hellip;  <a href="http://www.49ers.com/news/article-2/Live-Updates-San-Francisco-49ers-vs-San-Diego-Chargers/f027ac14-decb-4a01-a743-9c037a4b7cad">more</a>.</p>
+					<p><p>The San Francisco 49ers wrap up the 2016 preseason on the road &hellip; Several veterans on the 49ers, including quarterback Blaine Gabbert , will not &hellip;  <a href="http://www.49ers.com/news/article-2/Live-Updates-San-Francisco-49ers-vs-San-Diego-Chargers/f027ac14-decb-4a01-a743-9c037a4b7cad" onclick="trackOutboundLink('http://www.49ers.com/news/article-2/Live-Updates-San-Francisco-49ers-vs-San-Diego-Chargers/f027ac14-decb-4a01-a743-9c037a4b7cad'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

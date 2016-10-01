@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>Fantasy Football start/sit advice, projections, Week 3: 49ers-Seahawks</h3>
-					<p><p>The 49ers and Seahawks kick off at 1:05 p.m. PT. Niners Nation breaks down the fantasy implications, and provides statistical projections courtesy of &hellip;  <a href="http://www.ninersnation.com/2016/9/25/13011902/fantasy-football-sit-start-advice-projections-week-3-49ers-seahawks-carlos-hyde">more</a>.</p>
+					<p><p>The 49ers and Seahawks kick off at 1:05 p.m. PT. Niners Nation breaks down the fantasy implications, and provides statistical projections courtesy of &hellip;  <a href="http://www.ninersnation.com/2016/9/25/13011902/fantasy-football-sit-start-advice-projections-week-3-49ers-seahawks-carlos-hyde" onclick="trackOutboundLink('http://www.ninersnation.com/2016/9/25/13011902/fantasy-football-sit-start-advice-projections-week-3-49ers-seahawks-carlos-hyde'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

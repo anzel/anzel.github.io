@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>10</b></p>
 					<h3>SF Giants Playoff Minor Lines, 9/10</h3>
-					<p><p>They added a run in the 8th with a Kyle Petty RBI single, and that would be it for San Jose, as they struggled in a fashion that SF Giants fans are far too &hellip;  <a href="http://www.mccoveychronicles.com/2016/9/10/12871856/sf-giants-playoff-minor-lines-9-10">more</a>.</p>
+					<p><p>They added a run in the 8th with a Kyle Petty RBI single, and that would be it for San Jose, as they struggled in a fashion that SF Giants fans are far too &hellip;  <a href="http://www.mccoveychronicles.com/2016/9/10/12871856/sf-giants-playoff-minor-lines-9-10" onclick="trackOutboundLink('http://www.mccoveychronicles.com/2016/9/10/12871856/sf-giants-playoff-minor-lines-9-10'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

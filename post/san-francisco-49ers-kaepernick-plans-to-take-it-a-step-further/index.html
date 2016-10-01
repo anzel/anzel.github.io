@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>03</b></p>
 					<h3>San Francisco 49ers&#39; Kaepernick &#39;plans to take it a step further,&#39;</h3>
-					<p><p>the National Anthem to protest racial inequality in America, vowing &hellip;  <a href="http://www.profootballweekly.com/2016/09/02/san-francisco-49ers-kaepernick-plans-to-take-it-a-step-further-pledge-1-million-to-charity-supporting-his-push-against-inequality/atxfazk/">more</a>.</p>
+					<p><p>the National Anthem to protest racial inequality in America, vowing &hellip;  <a href="http://www.profootballweekly.com/2016/09/02/san-francisco-49ers-kaepernick-plans-to-take-it-a-step-further-pledge-1-million-to-charity-supporting-his-push-against-inequality/atxfazk/" onclick="trackOutboundLink('http://www.profootballweekly.com/2016/09/02/san-francisco-49ers-kaepernick-plans-to-take-it-a-step-further-pledge-1-million-to-charity-supporting-his-push-against-inequality/atxfazk/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

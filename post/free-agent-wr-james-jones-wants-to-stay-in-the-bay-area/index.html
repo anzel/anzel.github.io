@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Aug<b>31</b></p>
 					<h3>Free agent WR James Jones wants to stay in the Bay Area</h3>
-					<p><p>Back in early June, he told the radio station that he would be interested in playing for the 49ers. Three months later, he was a bit more general, but &hellip;  <a href="http://www.ninersnation.com/2016/8/31/12732308/free-agent-wr-james-jones-49ers-bay-area">more</a>.</p>
+					<p><p>Back in early June, he told the radio station that he would be interested in playing for the 49ers. Three months later, he was a bit more general, but &hellip;  <a href="http://www.ninersnation.com/2016/8/31/12732308/free-agent-wr-james-jones-49ers-bay-area" onclick="trackOutboundLink('http://www.ninersnation.com/2016/8/31/12732308/free-agent-wr-james-jones-49ers-bay-area'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Oct<b>01</b></p>
 					<h3>5 Questions With Ebony Bird: Oakland Raiders at Baltimore Ravens</h3>
-					<p><p>Ahead of the Week 4 matchup between the Oakland Raiders and Baltimore Ravens, we reached out to FanSided&rsquo;s Baltimore blog, Ebony Bird, with &hellip;  <a href="http://justblogbaby.com/2016/09/30/5-questions-with-ebony-bird-raiders-at-ravens/">more</a>.</p>
+					<p><p>Ahead of the Week 4 matchup between the Oakland Raiders and Baltimore Ravens, we reached out to FanSided&rsquo;s Baltimore blog, Ebony Bird, with &hellip;  <a href="http://justblogbaby.com/2016/09/30/5-questions-with-ebony-bird-raiders-at-ravens/" onclick="trackOutboundLink('http://justblogbaby.com/2016/09/30/5-questions-with-ebony-bird-raiders-at-ravens/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

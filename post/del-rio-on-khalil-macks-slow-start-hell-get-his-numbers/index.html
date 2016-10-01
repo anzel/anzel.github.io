@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>Del Rio on Khalil Mack&#39;s slow start: &#39;He&#39;ll get his numbers&#39;</h3>
-					<p><p>Khalil Mack is off to a slow start. The Oakland Raiders have played three games, and the All-Pro pass-rusher is still searching for his first sack of the &hellip;  <a href="http://oak.247sports.com/Bolt/Del-Rio-on-Khalil-Macks-slow-start-Hell-get-his-numbers-47826713">more</a>.</p>
+					<p><p>Khalil Mack is off to a slow start. The Oakland Raiders have played three games, and the All-Pro pass-rusher is still searching for his first sack of the &hellip;  <a href="http://oak.247sports.com/Bolt/Del-Rio-on-Khalil-Macks-slow-start-Hell-get-his-numbers-47826713" onclick="trackOutboundLink('http://oak.247sports.com/Bolt/Del-Rio-on-Khalil-Macks-slow-start-Hell-get-his-numbers-47826713'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>Panthers brace for confident 49ers defense</h3>
-					<p><p>Very physical, Oher said of the 49ers&rsquo; front. They play the run fairly well. They just had a shutout game, so they&rsquo;re going to come in here ready to go..  <a href="http://www.panthers.com/news/article-2/Panthers-brace-for-confident-49ers-defense/9c63452d-9414-4e74-8431-ec19e44e6572">more</a>.</p>
+					<p><p>Very physical, Oher said of the 49ers&rsquo; front. They play the run fairly well. They just had a shutout game, so they&rsquo;re going to come in here ready to go..  <a href="http://www.panthers.com/news/article-2/Panthers-brace-for-confident-49ers-defense/9c63452d-9414-4e74-8431-ec19e44e6572" onclick="trackOutboundLink('http://www.panthers.com/news/article-2/Panthers-brace-for-confident-49ers-defense/9c63452d-9414-4e74-8431-ec19e44e6572'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

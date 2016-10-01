@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>06</b></p>
 					<h3>(T. Anderson) - SF Giants (J. Samardzija)</h3>
-					<p><p>match on Expekt. See our best odds, statistics and live results!  <a href="https://en.expekt.com/col-rockies-t-anderson-sf-giants-j-samardzija-m1232963">more</a>.</p>
+					<p><p>match on Expekt. See our best odds, statistics and live results!  <a href="https://en.expekt.com/col-rockies-t-anderson-sf-giants-j-samardzija-m1232963" onclick="trackOutboundLink('https://en.expekt.com/col-rockies-t-anderson-sf-giants-j-samardzija-m1232963'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

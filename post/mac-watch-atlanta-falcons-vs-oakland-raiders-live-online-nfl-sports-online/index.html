@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>&#43;Mac Watch Atlanta Falcons Vs Oakland Raiders Live Online NFL Sports Online</h3>
-					<p><p>Oakland Raiders Online Streaming Free|*&amp;[ Watch Atlanta Falcons Vs. Oakland Raiders Online Free Live Stream NFL Football Games|^&gt;).  <a href="ftp://www.orfeus-eu.org/pub/incoming/%23&amp;Ipad_Stream_Atlanta_Falcons_Vs_Oakland_Raiders_Live_Online_Free_NFL_Football_Online_Radio.pdf">more</a>.</p>
+					<p><p>Oakland Raiders Online Streaming Free|*&amp;[ Watch Atlanta Falcons Vs. Oakland Raiders Online Free Live Stream NFL Football Games|^&gt;).  <a href="ftp://www.orfeus-eu.org/pub/incoming/%23&Ipad_Stream_Atlanta_Falcons_Vs_Oakland_Raiders_Live_Online_Free_NFL_Football_Online_Radio.pdf" onclick="trackOutboundLink('ftp://www.orfeus-eu.org/pub/incoming/%23&Ipad_Stream_Atlanta_Falcons_Vs_Oakland_Raiders_Live_Online_Free_NFL_Football_Online_Radio.pdf'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

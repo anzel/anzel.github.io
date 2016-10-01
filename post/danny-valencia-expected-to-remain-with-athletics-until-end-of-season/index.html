@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>13</b></p>
 					<h3>Danny Valencia expected to remain with Athletics until end of season</h3>
-					<p><p>Valencia, 31, has had a productive season, batting .291/.347/.461 with 16 home runs and 48 RBI in 450 plate appearances. He will, however, be &hellip;  <a href="http://mlb.nbcsports.com/2016/09/13/danny-valencia-expected-to-remain-with-athletics-until-end-of-season/">more</a>.</p>
+					<p><p>Valencia, 31, has had a productive season, batting .291/.347/.461 with 16 home runs and 48 RBI in 450 plate appearances. He will, however, be &hellip;  <a href="http://mlb.nbcsports.com/2016/09/13/danny-valencia-expected-to-remain-with-athletics-until-end-of-season/" onclick="trackOutboundLink('http://mlb.nbcsports.com/2016/09/13/danny-valencia-expected-to-remain-with-athletics-until-end-of-season/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>21</b></p>
 					<h3>Torrey Smith: 49ers Won&#39;t Shy Away from Seattle Secondary</h3>
-					<p><p>Smith is fully aware that Seahawks cornerback Richard Sherman will be following him throughout the game. The 49ers wideout is ready for the &hellip;  <a href="http://www.49ers.com/news/article-2/Torrey-Smith-49ers-Wont-Shy-Away-from-Seattle-Secondary/e9f774a8-d7a5-49ab-9fba-c80a5f89c0a9">more</a>.</p>
+					<p><p>Smith is fully aware that Seahawks cornerback Richard Sherman will be following him throughout the game. The 49ers wideout is ready for the &hellip;  <a href="http://www.49ers.com/news/article-2/Torrey-Smith-49ers-Wont-Shy-Away-from-Seattle-Secondary/e9f774a8-d7a5-49ab-9fba-c80a5f89c0a9" onclick="trackOutboundLink('http://www.49ers.com/news/article-2/Torrey-Smith-49ers-Wont-Shy-Away-from-Seattle-Secondary/e9f774a8-d7a5-49ab-9fba-c80a5f89c0a9'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

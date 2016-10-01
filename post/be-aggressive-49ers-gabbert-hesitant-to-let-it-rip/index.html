@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>13</b></p>
 					<h3>Be aggressive: 49ers&#39; Gabbert hesitant to let it rip</h3>
-					<p><p>Blaine Gabbert didn&rsquo;t have to do much Monday night, but he certainly could have done more. In a season-opening 28-0 win over the Rams, the 49ers &hellip;  <a href="http://www.sfgate.com/49ers/article/Be-aggressive-49ers-Gabbert-hesitant-to-let-9220748.php">more</a>.</p>
+					<p><p>Blaine Gabbert didn&rsquo;t have to do much Monday night, but he certainly could have done more. In a season-opening 28-0 win over the Rams, the 49ers &hellip;  <a href="http://www.sfgate.com/49ers/article/Be-aggressive-49ers-Gabbert-hesitant-to-let-9220748.php" onclick="trackOutboundLink('http://www.sfgate.com/49ers/article/Be-aggressive-49ers-Gabbert-hesitant-to-let-9220748.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

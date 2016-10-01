@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>11</b></p>
 					<h3>Raiders v Saints livestream NFL Football : watch Oakland Raiders vs New</h3>
-					<p><p>Another Sunday, welcome back to NFL football Week 1 tv schedule september 11 2016 score.Raiders vs Saints live stream Watch Oakland Raiders vs &hellip;  <a href="http://www.brownpapertickets.com/profile/2187844">more</a>.</p>
+					<p><p>Another Sunday, welcome back to NFL football Week 1 tv schedule september 11 2016 score.Raiders vs Saints live stream Watch Oakland Raiders vs &hellip;  <a href="http://www.brownpapertickets.com/profile/2187844" onclick="trackOutboundLink('http://www.brownpapertickets.com/profile/2187844'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

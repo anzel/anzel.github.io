@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>17</b></p>
 					<h3>SF Giants Farm System Lacks Top Prospects, Christian Arroyo Lone Top 100</h3>
-					<p><p>How many top 100 prospects would you guess the San Francisco Giants have? All of these years winning championships surely means they aren&rsquo;t &hellip;  <a href="http://inningseaters.sportsblog.com/posts/25827261/sf-giants-farm-system-lacks-top-prospects--christian-arroyo-lone-top-100.html">more</a>.</p>
+					<p><p>How many top 100 prospects would you guess the San Francisco Giants have? All of these years winning championships surely means they aren&rsquo;t &hellip;  <a href="http://inningseaters.sportsblog.com/posts/25827261/sf-giants-farm-system-lacks-top-prospects--christian-arroyo-lone-top-100.html" onclick="trackOutboundLink('http://inningseaters.sportsblog.com/posts/25827261/sf-giants-farm-system-lacks-top-prospects--christian-arroyo-lone-top-100.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

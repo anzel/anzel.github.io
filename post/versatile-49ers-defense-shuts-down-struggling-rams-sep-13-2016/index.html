@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>13</b></p>
 					<h3>Versatile 49ers defense shuts down struggling Rams (Sep 13, 2016)</h3>
-					<p><p>Los Angeles Rams quarterback Case Keenum (17) is tackled by San Francisco 49ers linebacker NaVorro Bowman (53) during the second half of an &hellip;  <a href="http://www.foxsports.com/nfl/story/versatile-49ers-defense-shuts-down-struggling-rams-091316">more</a>.</p>
+					<p><p>Los Angeles Rams quarterback Case Keenum (17) is tackled by San Francisco 49ers linebacker NaVorro Bowman (53) during the second half of an &hellip;  <a href="http://www.foxsports.com/nfl/story/versatile-49ers-defense-shuts-down-struggling-rams-091316" onclick="trackOutboundLink('http://www.foxsports.com/nfl/story/versatile-49ers-defense-shuts-down-struggling-rams-091316'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

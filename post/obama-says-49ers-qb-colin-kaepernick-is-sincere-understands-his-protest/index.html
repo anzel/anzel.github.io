@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>06</b></p>
 					<h3>Obama says 49ers QB Colin Kaepernick is sincere, understands his protest</h3>
-					<p><p>Obama said he has no doubt that the San Francisco 49ers player is sincere and cares about some real, legitimate issues. Kaepernick has been &hellip;  <a href="http://www.reviewjournal.com/sports/football/obama-says-49ers-qb-colin-kaepernick-sincere-understands-his-protest">more</a>.</p>
+					<p><p>Obama said he has no doubt that the San Francisco 49ers player is sincere and cares about some real, legitimate issues. Kaepernick has been &hellip;  <a href="http://www.reviewjournal.com/sports/football/obama-says-49ers-qb-colin-kaepernick-sincere-understands-his-protest" onclick="trackOutboundLink('http://www.reviewjournal.com/sports/football/obama-says-49ers-qb-colin-kaepernick-sincere-understands-his-protest'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

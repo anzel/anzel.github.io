@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>15</b></p>
 					<h3>Oakland mayor committed to keeping Raiders in town</h3>
-					<p><p>The Oakland Raiders took a major step toward moving to Las Vegas on Thursday, with the Southern Nevada Tourism Infrastructure Committee&rsquo;s &hellip;  <a href="http://oak.247sports.com/Bolt/Oakland-mayor-committed-to-keeping-Raiders-in-town-47491710">more</a>.</p>
+					<p><p>The Oakland Raiders took a major step toward moving to Las Vegas on Thursday, with the Southern Nevada Tourism Infrastructure Committee&rsquo;s &hellip;  <a href="http://oak.247sports.com/Bolt/Oakland-mayor-committed-to-keeping-Raiders-in-town-47491710" onclick="trackOutboundLink('http://oak.247sports.com/Bolt/Oakland-mayor-committed-to-keeping-Raiders-in-town-47491710'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

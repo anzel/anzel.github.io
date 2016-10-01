@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>24</b></p>
 					<h3>Pete Carroll and Chip Kelly reunite as Seahawks host 49ers</h3>
-					<p><p>18, 2016, file photo shows San Francisco 49ers head coach Chip Kelly on the sidelines during the first half of an NFL football game in Charlotte, N.C. &hellip;  <a href="http://www.stltoday.com/sports/football/pete-carroll-and-chip-kelly-reunite-as-seahawks-host-ers/article_cea5691b-cfa0-5f45-a88c-d9f3b4a9529b.html">more</a>.</p>
+					<p><p>18, 2016, file photo shows San Francisco 49ers head coach Chip Kelly on the sidelines during the first half of an NFL football game in Charlotte, N.C. &hellip;  <a href="http://www.stltoday.com/sports/football/pete-carroll-and-chip-kelly-reunite-as-seahawks-host-ers/article_cea5691b-cfa0-5f45-a88c-d9f3b4a9529b.html" onclick="trackOutboundLink('http://www.stltoday.com/sports/football/pete-carroll-and-chip-kelly-reunite-as-seahawks-host-ers/article_cea5691b-cfa0-5f45-a88c-d9f3b4a9529b.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

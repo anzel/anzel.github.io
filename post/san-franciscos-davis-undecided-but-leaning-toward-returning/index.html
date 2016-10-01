@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>11</b></p>
 					<h3>San Francisco&#39;s Davis Undecided But &#39;Leaning&#39; Toward Returning</h3>
-					<p><p>San Francisco 49ers offensive lineman Anthony Davis&rsquo; future remains up in the air as he considers retirement, multiple sources told CSNBayArea.com &hellip;  <a href="http://www.nbcbayarea.com/news/local/San-Franciscos-Davis-Undecided-But-Leaning-Toward-Returning-393006111.html">more</a>.</p>
+					<p><p>San Francisco 49ers offensive lineman Anthony Davis&rsquo; future remains up in the air as he considers retirement, multiple sources told CSNBayArea.com &hellip;  <a href="http://www.nbcbayarea.com/news/local/San-Franciscos-Davis-Undecided-But-Leaning-Toward-Returning-393006111.html" onclick="trackOutboundLink('http://www.nbcbayarea.com/news/local/San-Franciscos-Davis-Undecided-But-Leaning-Toward-Returning-393006111.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

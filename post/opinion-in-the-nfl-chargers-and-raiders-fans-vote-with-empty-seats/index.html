@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>Opinion: In the NFL, Chargers and Raiders fans vote with empty seats</h3>
-					<p><p>&hellip; leaving for Carson, Calif., and a shared stadium with the Oakland Raiders, are having a particularly awkward 2016 where attendance is concerned.  <a href="http://www.marketwatch.com/story/in-the-nfl-chargers-and-raiders-fans-vote-with-empty-seats-2016-09-27">more</a>.</p>
+					<p><p>&hellip; leaving for Carson, Calif., and a shared stadium with the Oakland Raiders, are having a particularly awkward 2016 where attendance is concerned.  <a href="http://www.marketwatch.com/story/in-the-nfl-chargers-and-raiders-fans-vote-with-empty-seats-2016-09-27" onclick="trackOutboundLink('http://www.marketwatch.com/story/in-the-nfl-chargers-and-raiders-fans-vote-with-empty-seats-2016-09-27'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

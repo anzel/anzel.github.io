@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>02</b></p>
 					<h3>MLB Picks St. Louis Cardinals vs. Cincinnati Reds 9/2/16</h3>
-					<p><p>Thumbnail Red Sox vs. Athletics Pick With David Price on the mound, can the Boston Red Sox pick up a sizable win over the Oakland Athletics tonight &hellip;  <a href="http://www.thespread.com/mlb-articles/090216-mlb-picks-st-louis-cardinals-vs-cincinnati-reds-9-2-16">more</a>.</p>
+					<p><p>Thumbnail Red Sox vs. Athletics Pick With David Price on the mound, can the Boston Red Sox pick up a sizable win over the Oakland Athletics tonight &hellip;  <a href="http://www.thespread.com/mlb-articles/090216-mlb-picks-st-louis-cardinals-vs-cincinnati-reds-9-2-16" onclick="trackOutboundLink('http://www.thespread.com/mlb-articles/090216-mlb-picks-st-louis-cardinals-vs-cincinnati-reds-9-2-16'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

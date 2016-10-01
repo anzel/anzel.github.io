@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>HD Watch Atlanta Falcons Vs Oakland Raiders Live Online Espn3 Football</h3>
-					<p><p>Click Here To Watch Atlanta Falcons Vs Oakland Raiders Live. &amp;^[ Stream Atlanta Falcons Vs Oakland Raiders Online NFL Football. Live Espn &hellip;  <a href="ftp://ftp.cob.org/incoming/WCC/Cbs_Watch_Atlanta_Falcons_Vs_Oakland_Raiders_Live_Online_Free_NFL_Football_Streaming_Live.pdf">more</a>.</p>
+					<p><p>Click Here To Watch Atlanta Falcons Vs Oakland Raiders Live. &amp;^[ Stream Atlanta Falcons Vs Oakland Raiders Online NFL Football. Live Espn &hellip;  <a href="ftp://ftp.cob.org/incoming/WCC/Cbs_Watch_Atlanta_Falcons_Vs_Oakland_Raiders_Live_Online_Free_NFL_Football_Streaming_Live.pdf" onclick="trackOutboundLink('ftp://ftp.cob.org/incoming/WCC/Cbs_Watch_Atlanta_Falcons_Vs_Oakland_Raiders_Live_Online_Free_NFL_Football_Streaming_Live.pdf'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

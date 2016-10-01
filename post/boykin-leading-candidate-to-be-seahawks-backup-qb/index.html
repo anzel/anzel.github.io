@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>05</b></p>
 					<h3>Boykin leading candidate to be Seahawks&#39; backup QB</h3>
-					<p><p>Boykin  an undrafted free agent signing out of TCU  concluded the preseason with a lackluster performance against the Oakland Raiders on &hellip;  <a href="http://www.lindyssports.com/nfl/seattle-seahawks/article/headline/boykin-leading-candidate-to-be-seahawks-backup-qb/410123/">more</a>.</p>
+					<p><p>Boykin  an undrafted free agent signing out of TCU  concluded the preseason with a lackluster performance against the Oakland Raiders on &hellip;  <a href="http://www.lindyssports.com/nfl/seattle-seahawks/article/headline/boykin-leading-candidate-to-be-seahawks-backup-qb/410123/" onclick="trackOutboundLink('http://www.lindyssports.com/nfl/seattle-seahawks/article/headline/boykin-leading-candidate-to-be-seahawks-backup-qb/410123/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

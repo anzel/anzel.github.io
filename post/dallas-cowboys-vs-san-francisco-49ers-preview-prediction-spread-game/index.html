@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>29</b></p>
 					<h3>Dallas Cowboys vs. San Francisco 49ers Preview, Prediction, Spread, Game</h3>
-					<p><p>The Spun (press release) (blog) Looking for a Dallas Cowboys vs. San Francisco 49ers preview? Stick around. We&rsquo;ve got all of the pre-game analysis before the conference tilt.  <a href="http://thespun.com/nfl/dallas-cowboys-vs-san-francisco-49ers-preview">more</a>.</p>
+					<p><p>The Spun (press release) (blog) Looking for a Dallas Cowboys vs. San Francisco 49ers preview? Stick around. We&rsquo;ve got all of the pre-game analysis before the conference tilt.  <a href="http://thespun.com/nfl/dallas-cowboys-vs-san-francisco-49ers-preview" onclick="trackOutboundLink('http://thespun.com/nfl/dallas-cowboys-vs-san-francisco-49ers-preview'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

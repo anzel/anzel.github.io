@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>MSN^Watch .&#39;49ers vs Panthers&#39; .Best .Pro .Football .Teams</h3>
-					<p><p>,,;,,Streaming ,,;,,- ,,;,,espnfoxsports.website. Watch ,,;,,San ,,;,,Francisco ,,;,,49ers ,, &hellip;  <a href="https://www.brugman.eu/sites/default/files/webform/msnwatch_.49ers_vs_panthers_.best_.pro_.football_.teams_.pdf">more</a>.</p>
+					<p><p>,,;,,Streaming ,,;,,- ,,;,,espnfoxsports.website. Watch ,,;,,San ,,;,,Francisco ,,;,,49ers ,, &hellip;  <a href="https://www.brugman.eu/sites/default/files/webform/msnwatch_.49ers_vs_panthers_.best_.pro_.football_.teams_.pdf" onclick="trackOutboundLink('https://www.brugman.eu/sites/default/files/webform/msnwatch_.49ers_vs_panthers_.best_.pro_.football_.teams_.pdf'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

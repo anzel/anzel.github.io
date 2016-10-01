@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>11</b></p>
 					<h3>Brees, Saints brace for rising Raiders</h3>
-					<p><p>&hellip; a preseason game against the Baltimore Ravens in New Orleans on Sept. 1. The Saints host the Oakland Raiders in the first game of season today.  <a href="http://www.dailycomet.com/article/20160910/WIRE/160919979/-1/sports12?Title=Brees-Saints-brace-for-rising-Raiders">more</a>.</p>
+					<p><p>&hellip; a preseason game against the Baltimore Ravens in New Orleans on Sept. 1. The Saints host the Oakland Raiders in the first game of season today.  <a href="http://www.dailycomet.com/article/20160910/WIRE/160919979/-1/sports12?Title=Brees-Saints-brace-for-rising-Raiders" onclick="trackOutboundLink('http://www.dailycomet.com/article/20160910/WIRE/160919979/-1/sports12?Title=Brees-Saints-brace-for-rising-Raiders'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

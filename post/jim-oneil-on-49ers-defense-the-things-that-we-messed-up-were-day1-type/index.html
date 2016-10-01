@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>Jim O&#39;Neil on 49ers defense: The things that we messed up were Day-1 type</h3>
-					<p><p>49ers.pressdemocrat.com (blog) SANTA CLARA  This is the transcript Jim O&rsquo;Neil&rsquo;s Tuesday press conference, courtesy of the 49ers&rsquo; P.R. department. Opening comments: Obviously &hellip;  <a href="http://49ers.pressdemocrat.com/jim-oneil-49ers-defense-things-messed-day-one-type-stuff/">more</a>.</p>
+					<p><p>49ers.pressdemocrat.com (blog) SANTA CLARA  This is the transcript Jim O&rsquo;Neil&rsquo;s Tuesday press conference, courtesy of the 49ers&rsquo; P.R. department. Opening comments: Obviously &hellip;  <a href="http://49ers.pressdemocrat.com/jim-oneil-49ers-defense-things-messed-day-one-type-stuff/" onclick="trackOutboundLink('http://49ers.pressdemocrat.com/jim-oneil-49ers-defense-things-messed-day-one-type-stuff/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

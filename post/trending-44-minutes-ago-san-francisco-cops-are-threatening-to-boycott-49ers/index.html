@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>04</b></p>
 					<h3>Trending 44 minutes ago San Francisco cops are threatening to boycott 49ers</h3>
-					<p><p>San Francisco cops are threatening to boycott 49ers games because of Colin Kaepernickby Michael Denison. Trending. September 4, 2016.  <a href="http://circa.com/circa-now/trending/colin-kaepernick-protest-led-copes-to-threaten-49ers-boycott">more</a>.</p>
+					<p><p>San Francisco cops are threatening to boycott 49ers games because of Colin Kaepernickby Michael Denison. Trending. September 4, 2016.  <a href="http://circa.com/circa-now/trending/colin-kaepernick-protest-led-copes-to-threaten-49ers-boycott" onclick="trackOutboundLink('http://circa.com/circa-now/trending/colin-kaepernick-protest-led-copes-to-threaten-49ers-boycott'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

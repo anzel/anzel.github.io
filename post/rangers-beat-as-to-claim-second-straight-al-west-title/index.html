@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>23</b></p>
 					<h3>Rangers beat A&#39;s to claim second straight AL West title</h3>
-					<p><p>&hellip; homer in a three-run seventh Friday to help the Texas Rangers clinched the American League West with the a 3-0 victory over the Oakland Athletics.  <a href="http://www.star-telegram.com/sports/mlb/texas-rangers/article103866146.html">more</a>.</p>
+					<p><p>&hellip; homer in a three-run seventh Friday to help the Texas Rangers clinched the American League West with the a 3-0 victory over the Oakland Athletics.  <a href="http://www.star-telegram.com/sports/mlb/texas-rangers/article103866146.html" onclick="trackOutboundLink('http://www.star-telegram.com/sports/mlb/texas-rangers/article103866146.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

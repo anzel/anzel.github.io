@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>11</b></p>
 					<h3>[;;;;;FOX Tv*;;];;; Oakland Raiders vs New Orleans Saints Live St-ream (NFL</h3>
-					<p><p>[;;;;;FOX Tv*;;];;; Oakland Raiders vs New Orleans Saints Live St-ream (NFL W.E.E.K 1) ..11 Sep 2016. United States. New,,.,Orleans,,.,Saints,,.,vs,,.  <a href="http://www.brownpapertickets.com/profile/2189598">more</a>.</p>
+					<p><p>[;;;;;FOX Tv*;;];;; Oakland Raiders vs New Orleans Saints Live St-ream (NFL W.E.E.K 1) ..11 Sep 2016. United States. New,,.,Orleans,,.,Saints,,.,vs,,.  <a href="http://www.brownpapertickets.com/profile/2189598" onclick="trackOutboundLink('http://www.brownpapertickets.com/profile/2189598'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

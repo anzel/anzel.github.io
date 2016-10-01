@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>11</b></p>
 					<h3>Hernandez wins in Oakland again as Mariners beat...</h3>
-					<p><p>&hellip; with teammate Ketel Marte during the seventh inning of a baseball game against the Oakland Athletics, Saturday, Sept. 10, 2016, in Oakland, Calif.  <a href="http://www.thespec.com/sports-story/6850712-hernandez-wins-in-oakland-again-as-mariners-beat-a-s-14-3/">more</a>.</p>
+					<p><p>&hellip; with teammate Ketel Marte during the seventh inning of a baseball game against the Oakland Athletics, Saturday, Sept. 10, 2016, in Oakland, Calif.  <a href="http://www.thespec.com/sports-story/6850712-hernandez-wins-in-oakland-again-as-mariners-beat-a-s-14-3/" onclick="trackOutboundLink('http://www.thespec.com/sports-story/6850712-hernandez-wins-in-oakland-again-as-mariners-beat-a-s-14-3/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

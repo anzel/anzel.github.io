@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>01</b></p>
 					<h3>Rangers&#39; X-Factors for the postseason; September call ups</h3>
-					<p><p>Texas Rangers relief pitcher Matt Bush (51) pitches during a Major League Baseball game between the Oakland Athletics and the Texas Rangers at &hellip;  <a href="http://sportsday.dallasnews.com/texas-rangers/rangers/2016/09/01/rangers-x-factors-postseason-september-call-ups">more</a>.</p>
+					<p><p>Texas Rangers relief pitcher Matt Bush (51) pitches during a Major League Baseball game between the Oakland Athletics and the Texas Rangers at &hellip;  <a href="http://sportsday.dallasnews.com/texas-rangers/rangers/2016/09/01/rangers-x-factors-postseason-september-call-ups" onclick="trackOutboundLink('http://sportsday.dallasnews.com/texas-rangers/rangers/2016/09/01/rangers-x-factors-postseason-september-call-ups'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

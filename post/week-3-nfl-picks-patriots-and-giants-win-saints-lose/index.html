@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>22</b></p>
 					<h3>Week 3 NFL picks: Patriots and Giants win, Saints lose</h3>
-					<p><p>Winner: Oakland Raiders, 55.3 percent. Pick: Oakland Raiders +1.5. Arizona Cardinals (-4) @ Buffalo Bills. Winner: Arizona Cardinals, 70.3 percent.  <a href="https://www.washingtonpost.com/news/fancy-stats/wp/2016/09/22/week-3-nfl-picks-patriots-and-giants-win-saints-lose/">more</a>.</p>
+					<p><p>Winner: Oakland Raiders, 55.3 percent. Pick: Oakland Raiders +1.5. Arizona Cardinals (-4) @ Buffalo Bills. Winner: Arizona Cardinals, 70.3 percent.  <a href="https://www.washingtonpost.com/news/fancy-stats/wp/2016/09/22/week-3-nfl-picks-patriots-and-giants-win-saints-lose/" onclick="trackOutboundLink('https://www.washingtonpost.com/news/fancy-stats/wp/2016/09/22/week-3-nfl-picks-patriots-and-giants-win-saints-lose/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>Oakland Raiders vs. Tennessee Titans Live Stream: How To Watch NFL Week 3</h3>
-					<p><p>Decider Two intriguing 1-1 teams meet as the Oakland Raiders travel to Nashville to take on the Tennessee Titans! The Oakland offense has been on fire thus &hellip;  <a href="http://decider.com/2016/09/25/oakland-raiders-tennessee-titans-live-stream-nfl-watch-free/">more</a>.</p>
+					<p><p>Decider Two intriguing 1-1 teams meet as the Oakland Raiders travel to Nashville to take on the Tennessee Titans! The Oakland offense has been on fire thus &hellip;  <a href="http://decider.com/2016/09/25/oakland-raiders-tennessee-titans-live-stream-nfl-watch-free/" onclick="trackOutboundLink('http://decider.com/2016/09/25/oakland-raiders-tennessee-titans-live-stream-nfl-watch-free/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

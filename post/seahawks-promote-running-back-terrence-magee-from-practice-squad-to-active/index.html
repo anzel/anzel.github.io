@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>24</b></p>
 					<h3>Seahawks Promote Running Back Terrence Magee From Practice Squad To Active</h3>
-					<p><p>Seahawks.com &hellip; Magee from the practice squad to the 53-man active roster one day before their Week 3 game against the San Francisco 49ers at CenturyLink Field.  <a href="http://www.seahawks.com/news/2016/09/24/seahawks-promote-running-back-terrence-magee-practice-squad-active-roster">more</a>.</p>
+					<p><p>Seahawks.com &hellip; Magee from the practice squad to the 53-man active roster one day before their Week 3 game against the San Francisco 49ers at CenturyLink Field.  <a href="http://www.seahawks.com/news/2016/09/24/seahawks-promote-running-back-terrence-magee-practice-squad-active-roster" onclick="trackOutboundLink('http://www.seahawks.com/news/2016/09/24/seahawks-promote-running-back-terrence-magee-practice-squad-active-roster'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>20</b></p>
 					<h3>Losing Ray Ray Armstrong hurts 49ers</h3>
-					<p><p>The San Francisco 49ers suffered a major setback to its impressive front seven on Tuesday when Ray-Ray Armstrong was placed on the injured &hellip;  <a href="http://www.sfexaminer.com/losing-ray-ray-armstrong-hurts-49ers/">more</a>.</p>
+					<p><p>The San Francisco 49ers suffered a major setback to its impressive front seven on Tuesday when Ray-Ray Armstrong was placed on the injured &hellip;  <a href="http://www.sfexaminer.com/losing-ray-ray-armstrong-hurts-49ers/" onclick="trackOutboundLink('http://www.sfexaminer.com/losing-ray-ray-armstrong-hurts-49ers/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

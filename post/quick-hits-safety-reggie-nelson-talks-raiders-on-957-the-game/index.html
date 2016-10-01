@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>20</b></p>
 					<h3>Quick Hits: Safety Reggie Nelson Talks Raiders On 95.7 The GAME</h3>
-					<p><p>The Oakland Raiders suffered their first loss of the 2016 campaign on Sunday to the Atlanta Falcons. Overall, it was an offensive shootout between &hellip;  <a href="http://www.raiders.com/news/article-1/Quick-Hits-Safety-Reggie-Nelson-Talks-Raiders-On-957-The-GAME/6093445d-7480-4c04-9071-7d6617690f93">more</a>.</p>
+					<p><p>The Oakland Raiders suffered their first loss of the 2016 campaign on Sunday to the Atlanta Falcons. Overall, it was an offensive shootout between &hellip;  <a href="http://www.raiders.com/news/article-1/Quick-Hits-Safety-Reggie-Nelson-Talks-Raiders-On-957-The-GAME/6093445d-7480-4c04-9071-7d6617690f93" onclick="trackOutboundLink('http://www.raiders.com/news/article-1/Quick-Hits-Safety-Reggie-Nelson-Talks-Raiders-On-957-The-GAME/6093445d-7480-4c04-9071-7d6617690f93'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

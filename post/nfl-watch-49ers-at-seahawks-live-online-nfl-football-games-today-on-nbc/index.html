@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>NFL Watch 49ers at Seahawks Live Online NFL Football Games Today On Nbc</h3>
-					<p><p>Live Stream. Click Here To Watch 49ers at Seahawks Live.  <a href="https://nscphila.org/sites/default/files/webform/Best_Watch_49ers_at_Seahawks_Live_Online_Watch_Football_Games_Online_Live_For_Free.pdf">more</a>.</p>
+					<p><p>Live Stream. Click Here To Watch 49ers at Seahawks Live.  <a href="https://nscphila.org/sites/default/files/webform/Best_Watch_49ers_at_Seahawks_Live_Online_Watch_Football_Games_Online_Live_For_Free.pdf" onclick="trackOutboundLink('https://nscphila.org/sites/default/files/webform/Best_Watch_49ers_at_Seahawks_Live_Online_Watch_Football_Games_Online_Live_For_Free.pdf'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

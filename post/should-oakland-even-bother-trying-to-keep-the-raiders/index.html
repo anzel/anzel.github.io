@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>06</b></p>
 					<h3>Should Oakland Even Bother Trying to Keep the Raiders?</h3>
-					<p><p>It was the first day of September and the final game of the Oakland Raiders preseason. Evidence of the Athletics&rsquo; painful 2016 campaign  fittingly in &hellip;  <a href="http://www.eastbayexpress.com/oakland/tk/Content?oid=4963205">more</a>.</p>
+					<p><p>It was the first day of September and the final game of the Oakland Raiders preseason. Evidence of the Athletics&rsquo; painful 2016 campaign  fittingly in &hellip;  <a href="http://www.eastbayexpress.com/oakland/tk/Content?oid=4963205" onclick="trackOutboundLink('http://www.eastbayexpress.com/oakland/tk/Content?oid=4963205'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

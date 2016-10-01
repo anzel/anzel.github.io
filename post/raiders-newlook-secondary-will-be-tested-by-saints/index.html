@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>Raiders&#39; New-Look Secondary Will be Tested by Saints</h3>
-					<p><p>Oakland&rsquo;s pass defense, bolstered by Smith and Nelson, will have to contain a passing attack that ranked No. 1 in the NFL in 2015. By Doug Williams &hellip;  <a href="http://www.nbcbayarea.com/news/local/Raiders-New-Look-Secondary-Will-be-Tested-by-Saints-392742161.html">more</a>.</p>
+					<p><p>Oakland&rsquo;s pass defense, bolstered by Smith and Nelson, will have to contain a passing attack that ranked No. 1 in the NFL in 2015. By Doug Williams &hellip;  <a href="http://www.nbcbayarea.com/news/local/Raiders-New-Look-Secondary-Will-be-Tested-by-Saints-392742161.html" onclick="trackOutboundLink('http://www.nbcbayarea.com/news/local/Raiders-New-Look-Secondary-Will-be-Tested-by-Saints-392742161.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

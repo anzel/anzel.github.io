@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>13</b></p>
 					<h3>49ers unveil Color Rush uniform for 2016</h3>
-					<p><p>For 2016, the San Francisco 49ers go with all black with dark red letters and numbers plus a little red trim. See NaVorro Bowman show off the new &hellip;  <a href="http://www.espn.com/nfl/story/_/id/17538238/san-francisco-49ers-unveil-color-rush-uniform-2016">more</a>.</p>
+					<p><p>For 2016, the San Francisco 49ers go with all black with dark red letters and numbers plus a little red trim. See NaVorro Bowman show off the new &hellip;  <a href="http://www.espn.com/nfl/story/_/id/17538238/san-francisco-49ers-unveil-color-rush-uniform-2016" onclick="trackOutboundLink('http://www.espn.com/nfl/story/_/id/17538238/san-francisco-49ers-unveil-color-rush-uniform-2016'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>29</b></p>
 					<h3>5 Cowboys of intrigue vs. 49ers in Week 4</h3>
-					<p><p>The Dallas Cowboys will meet the San Franscisco 49ers for the 34th time, and there&rsquo;s a ton of history and disdain in every battle. Week 4 will see two &hellip;  <a href="http://dal.247sports.com/Gallery/5-Cowboys-of-intrigue-vs-49ers-in-Week-4-47847918">more</a>.</p>
+					<p><p>The Dallas Cowboys will meet the San Franscisco 49ers for the 34th time, and there&rsquo;s a ton of history and disdain in every battle. Week 4 will see two &hellip;  <a href="http://dal.247sports.com/Gallery/5-Cowboys-of-intrigue-vs-49ers-in-Week-4-47847918" onclick="trackOutboundLink('http://dal.247sports.com/Gallery/5-Cowboys-of-intrigue-vs-49ers-in-Week-4-47847918'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

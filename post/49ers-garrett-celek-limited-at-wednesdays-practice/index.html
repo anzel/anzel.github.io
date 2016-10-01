@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>29</b></p>
 					<h3>49ers&#39; Garrett Celek: Limited at Wednesday&#39;s practice</h3>
-					<p><p>49ers&rsquo; Garrett Celek: Limited at Wednesday&rsquo;s practice. by RotoWire Staff; 7m ago. Celek was limited in Wednesday&rsquo;s practice due to a back injury.  <a href="http://www.cbssports.com/fantasy/football/news/49ers-garrett-celek-limited-at-wednesdays-practice/">more</a>.</p>
+					<p><p>49ers&rsquo; Garrett Celek: Limited at Wednesday&rsquo;s practice. by RotoWire Staff; 7m ago. Celek was limited in Wednesday&rsquo;s practice due to a back injury.  <a href="http://www.cbssports.com/fantasy/football/news/49ers-garrett-celek-limited-at-wednesdays-practice/" onclick="trackOutboundLink('http://www.cbssports.com/fantasy/football/news/49ers-garrett-celek-limited-at-wednesdays-practice/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>24</b></p>
 					<h3>Seahawks seek to rediscover their running game Sunday against San Francisco</h3>
-					<p><p>The Seattle Times On that day, against a 49ers team at the time regarded as one of the best in the NFL, the Seahawks became the first team that season to score a &hellip;  <a href="http://www.seattletimes.com/sports/seahawks/seahawks-seek-to-rediscover-their-running-game-sunday-against-san-francisco-49ers/">more</a>.</p>
+					<p><p>The Seattle Times On that day, against a 49ers team at the time regarded as one of the best in the NFL, the Seahawks became the first team that season to score a &hellip;  <a href="http://www.seattletimes.com/sports/seahawks/seahawks-seek-to-rediscover-their-running-game-sunday-against-san-francisco-49ers/" onclick="trackOutboundLink('http://www.seattletimes.com/sports/seahawks/seahawks-seek-to-rediscover-their-running-game-sunday-against-san-francisco-49ers/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

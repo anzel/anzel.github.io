@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>30</b></p>
 					<h3>Improved Ravens defense finally faces a challenge against high-powered</h3>
-					<p><p>Baltimore Sun On Sunday, the Ravens will finally play against a top offensive team when they host the Oakland Raiders at M&amp;T Bank Stadium. That in itself is a game &hellip;  <a href="http://www.baltimoresun.com/sports/bs-sp-preston-column-0930-20160929-column.html">more</a>.</p>
+					<p><p>Baltimore Sun On Sunday, the Ravens will finally play against a top offensive team when they host the Oakland Raiders at M&amp;T Bank Stadium. That in itself is a game &hellip;  <a href="http://www.baltimoresun.com/sports/bs-sp-preston-column-0930-20160929-column.html" onclick="trackOutboundLink('http://www.baltimoresun.com/sports/bs-sp-preston-column-0930-20160929-column.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

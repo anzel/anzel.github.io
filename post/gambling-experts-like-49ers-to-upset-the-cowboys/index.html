@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>Gambling experts like 49ers to upset the Cowboys</h3>
-					<p><p>SANTA CLARA  The Cowboys (2-1) are off to a hot September start, and well, the 49ers (1-2) are not. Rookie quarterback Dak Prescott is doing &hellip;  <a href="http://www.knbr.com/2016/09/28/gambling-experts-like-the-49ers-over-the-cowboys/">more</a>.</p>
+					<p><p>SANTA CLARA  The Cowboys (2-1) are off to a hot September start, and well, the 49ers (1-2) are not. Rookie quarterback Dak Prescott is doing &hellip;  <a href="http://www.knbr.com/2016/09/28/gambling-experts-like-the-49ers-over-the-cowboys/" onclick="trackOutboundLink('http://www.knbr.com/2016/09/28/gambling-experts-like-the-49ers-over-the-cowboys/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>13</b></p>
 					<h3>Following blueprint: Blaine Gabbert, Carlos Hyde spark 49ers run game</h3>
-					<p><p>As the San Francisco 49ers offense looked to find its footing early in Monday&rsquo;s regular-season opening win against the Los Angeles Rams, the spark it &hellip;  <a href="http://www.espn.com/blog/nflnation/post/_/id/214144/following-blueprint-blaine-gabbert-carlos-hyde-spark-49ers-run-game">more</a>.</p>
+					<p><p>As the San Francisco 49ers offense looked to find its footing early in Monday&rsquo;s regular-season opening win against the Los Angeles Rams, the spark it &hellip;  <a href="http://www.espn.com/blog/nflnation/post/_/id/214144/following-blueprint-blaine-gabbert-carlos-hyde-spark-49ers-run-game" onclick="trackOutboundLink('http://www.espn.com/blog/nflnation/post/_/id/214144/following-blueprint-blaine-gabbert-carlos-hyde-spark-49ers-run-game'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

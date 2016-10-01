@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Aug<b>31</b></p>
 					<h3>Baseball | Indians trade to get Coco Crisp from Athletics, source says</h3>
-					<p><p>The E-Edition includes all of the news, comics, classifieds and advertisements of the newspaper. And it&rsquo;s available to subscribers before 6 a.m. every &hellip;  <a href="http://www.dispatch.com/content/stories/sports/2016/08/31/crisp-trade.html">more</a>.</p>
+					<p><p>The E-Edition includes all of the news, comics, classifieds and advertisements of the newspaper. And it&rsquo;s available to subscribers before 6 a.m. every &hellip;  <a href="http://www.dispatch.com/content/stories/sports/2016/08/31/crisp-trade.html" onclick="trackOutboundLink('http://www.dispatch.com/content/stories/sports/2016/08/31/crisp-trade.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

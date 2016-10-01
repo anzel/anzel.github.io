@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>Raiders stadium talk drives team value higher as NFL numbers soar</h3>
-					<p><p>There&rsquo;s no place like a new home  or the prospect of one  to drive up the value of a National Football League franchise. Just ask the Raiders, &hellip;  <a href="http://www.bizjournals.com/sanfrancisco/news/2016/09/14/oakland-raiders-san-francisco-49ers-nfl-valuations.html">more</a>.</p>
+					<p><p>There&rsquo;s no place like a new home  or the prospect of one  to drive up the value of a National Football League franchise. Just ask the Raiders, &hellip;  <a href="http://www.bizjournals.com/sanfrancisco/news/2016/09/14/oakland-raiders-san-francisco-49ers-nfl-valuations.html" onclick="trackOutboundLink('http://www.bizjournals.com/sanfrancisco/news/2016/09/14/oakland-raiders-san-francisco-49ers-nfl-valuations.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

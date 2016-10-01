@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>21</b></p>
 					<h3>Raiders week two Ballers &amp; Busters vs Falcons</h3>
-					<p><p>We wrap up out coverage of the Raiders week two loss to the Falcons with the Ballers &amp; Busters from the game. By Levi Damien @LeviDamien Sep 20 &hellip;  <a href="http://www.silverandblackpride.com/2016/9/20/12994552/oakland-raiders-week-two-ballers-busters-vs-atlanta-falcons">more</a>.</p>
+					<p><p>We wrap up out coverage of the Raiders week two loss to the Falcons with the Ballers &amp; Busters from the game. By Levi Damien @LeviDamien Sep 20 &hellip;  <a href="http://www.silverandblackpride.com/2016/9/20/12994552/oakland-raiders-week-two-ballers-busters-vs-atlanta-falcons" onclick="trackOutboundLink('http://www.silverandblackpride.com/2016/9/20/12994552/oakland-raiders-week-two-ballers-busters-vs-atlanta-falcons'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

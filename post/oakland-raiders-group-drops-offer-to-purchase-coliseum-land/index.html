@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>23</b></p>
 					<h3>Oakland Raiders: Group drops offer to purchase Coliseum land</h3>
-					<p><p>An investment group has dropped its offer to purchase the Coliseum land from the city and county, according to the group&rsquo;s attorney. By David DeBolt &hellip;  <a href="http://www.eastbaytimes.com/2016/09/23/oakland-raiders-group-drops-offer-to-purchase-coliseum-land/">more</a>.</p>
+					<p><p>An investment group has dropped its offer to purchase the Coliseum land from the city and county, according to the group&rsquo;s attorney. By David DeBolt &hellip;  <a href="http://www.eastbaytimes.com/2016/09/23/oakland-raiders-group-drops-offer-to-purchase-coliseum-land/" onclick="trackOutboundLink('http://www.eastbaytimes.com/2016/09/23/oakland-raiders-group-drops-offer-to-purchase-coliseum-land/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

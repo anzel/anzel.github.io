@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>49ers will have to handle Dallas rookies Dak Prescott, Ezekiel Elliott</h3>
-					<p><p>Two of the NFL&rsquo;s crown-jewel franchises will meet Sunday when the Dallas Cowboys come to Levi&rsquo;s Stadium to meet the San Francisco 49ers.  <a href="http://www.espn.com/blog/san-francisco-49ers/post/_/id/19918/49ers-will-have-to-handle-dallas-rookies-dak-prescott-ezekiel-elliott">more</a>.</p>
+					<p><p>Two of the NFL&rsquo;s crown-jewel franchises will meet Sunday when the Dallas Cowboys come to Levi&rsquo;s Stadium to meet the San Francisco 49ers.  <a href="http://www.espn.com/blog/san-francisco-49ers/post/_/id/19918/49ers-will-have-to-handle-dallas-rookies-dak-prescott-ezekiel-elliott" onclick="trackOutboundLink('http://www.espn.com/blog/san-francisco-49ers/post/_/id/19918/49ers-will-have-to-handle-dallas-rookies-dak-prescott-ezekiel-elliott'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

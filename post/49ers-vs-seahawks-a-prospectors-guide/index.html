@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>21</b></p>
 					<h3>49ers vs. Seahawks: A prospector&#39;s guide</h3>
-					<p><p>The 49ers opened as ten point underdogs to the Seahawks, but the line has come down in most sportsbooks to 9.5. As of Tuesday night, <sup>2</sup>&frasl;<sub>3</sub> of public &hellip;  <a href="http://www.ninersnation.com/2016/9/21/12995550/49ers-vs-seahawks-preview-prospectors-guide">more</a>.</p>
+					<p><p>The 49ers opened as ten point underdogs to the Seahawks, but the line has come down in most sportsbooks to 9.5. As of Tuesday night, <sup>2</sup>&frasl;<sub>3</sub> of public &hellip;  <a href="http://www.ninersnation.com/2016/9/21/12995550/49ers-vs-seahawks-preview-prospectors-guide" onclick="trackOutboundLink('http://www.ninersnation.com/2016/9/21/12995550/49ers-vs-seahawks-preview-prospectors-guide'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

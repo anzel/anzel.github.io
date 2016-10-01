@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>FumblE%Where..&#39;Atlanta Falcons vs Oakland</h3>
-					<p><p>Click Here to w.at.ch Atlanta Falcons vs Oakland Raiders Online! NFL,;,Live,;,Stream,;,Football,;,Online,;,Game,;,HD &hellip;,;,live,;,stream,;,Atlanta,;,Falcons, &hellip;  <a href="https://flpath.org/sites/default/files/webform/FumblE%25Where..%27Atlanta%20Falcons%20vs%20Oakland%20Raiders%27..To_..w.at_.ch_..li_.ve_..Football..Online.pdf">more</a>.</p>
+					<p><p>Click Here to w.at.ch Atlanta Falcons vs Oakland Raiders Online! NFL,;,Live,;,Stream,;,Football,;,Online,;,Game,;,HD &hellip;,;,live,;,stream,;,Atlanta,;,Falcons, &hellip;  <a href="https://flpath.org/sites/default/files/webform/FumblE%25Where..%27Atlanta%20Falcons%20vs%20Oakland%20Raiders%27..To_..w.at_.ch_..li_.ve_..Football..Online.pdf" onclick="trackOutboundLink('https://flpath.org/sites/default/files/webform/FumblE%25Where..%27Atlanta%20Falcons%20vs%20Oakland%20Raiders%27..To_..w.at_.ch_..li_.ve_..Football..Online.pdf'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

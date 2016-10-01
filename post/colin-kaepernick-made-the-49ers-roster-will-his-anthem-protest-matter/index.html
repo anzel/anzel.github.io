@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>04</b></p>
 					<h3>Colin Kaepernick Made The 49ers Roster, Will His Anthem Protest Matter?</h3>
-					<p><p>Colin Kaepernick, perhaps you&rsquo;ve heard of him in the last week or so? Now, he&rsquo;s officially the backup quarterback on the San Francisco 49ers&rsquo; 53-man &hellip;  <a href="http://www.forbes.com/sites/jerrybarca/2016/09/04/colin-kaepernicks-anthem-protest-will-it-matter/">more</a>.</p>
+					<p><p>Colin Kaepernick, perhaps you&rsquo;ve heard of him in the last week or so? Now, he&rsquo;s officially the backup quarterback on the San Francisco 49ers&rsquo; 53-man &hellip;  <a href="http://www.forbes.com/sites/jerrybarca/2016/09/04/colin-kaepernicks-anthem-protest-will-it-matter/" onclick="trackOutboundLink('http://www.forbes.com/sites/jerrybarca/2016/09/04/colin-kaepernicks-anthem-protest-will-it-matter/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

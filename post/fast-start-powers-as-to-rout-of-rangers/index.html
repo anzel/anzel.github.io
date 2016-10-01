@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>Fast start powers A&#39;s to rout of Rangers</h3>
-					<p><p>ARLINGTON, Texas &ndash; It was a big night of firsts for the Oakland Athletics on Saturday night. Second baseman Joey Wendle opened the game against &hellip;  <a href="http://www.reuters.com/article/bbo-athletics-rangers-recap-idUSMTZEC9IOK60LJ">more</a>.</p>
+					<p><p>ARLINGTON, Texas &ndash; It was a big night of firsts for the Oakland Athletics on Saturday night. Second baseman Joey Wendle opened the game against &hellip;  <a href="http://www.reuters.com/article/bbo-athletics-rangers-recap-idUSMTZEC9IOK60LJ" onclick="trackOutboundLink('http://www.reuters.com/article/bbo-athletics-rangers-recap-idUSMTZEC9IOK60LJ'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

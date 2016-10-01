@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>15</b></p>
 					<h3>49ers&#39; Roster Far More Talented Than National Perception Indicates</h3>
-					<p><p>&ldquo;I know the 49ers are bad.&rdquo; Dan LeBatard, star of Highly Questionable on ESPN spoke those words on Tuesday when the question was posed as to &hellip;  <a href="http://www.49erswebzone.com/commentary/1607-49ers-roster-far-more-talented-national-perception-indicates/">more</a>.</p>
+					<p><p>&ldquo;I know the 49ers are bad.&rdquo; Dan LeBatard, star of Highly Questionable on ESPN spoke those words on Tuesday when the question was posed as to &hellip;  <a href="http://www.49erswebzone.com/commentary/1607-49ers-roster-far-more-talented-national-perception-indicates/" onclick="trackOutboundLink('http://www.49erswebzone.com/commentary/1607-49ers-roster-far-more-talented-national-perception-indicates/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

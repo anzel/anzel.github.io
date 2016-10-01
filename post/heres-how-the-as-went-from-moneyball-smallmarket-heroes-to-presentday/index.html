@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>16</b></p>
 					<h3>Here&#39;s how the A&#39;s went from Moneyball small-market heroes to present-day</h3>
-					<p><p>CBSSports.com It was inevitable, the way most any outcome is when it&rsquo;s given ample time and opportunity: The Athletics have, at last, zigged and zagged their way to &hellip;  <a href="http://www.cbssports.com/mlb/news/heres-how-the-as-went-from-small-market-heroes-to-present-day-zeroes/">more</a>.</p>
+					<p><p>CBSSports.com It was inevitable, the way most any outcome is when it&rsquo;s given ample time and opportunity: The Athletics have, at last, zigged and zagged their way to &hellip;  <a href="http://www.cbssports.com/mlb/news/heres-how-the-as-went-from-small-market-heroes-to-present-day-zeroes/" onclick="trackOutboundLink('http://www.cbssports.com/mlb/news/heres-how-the-as-went-from-small-market-heroes-to-present-day-zeroes/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

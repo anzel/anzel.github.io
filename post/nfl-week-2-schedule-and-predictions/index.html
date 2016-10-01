@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>NFL Week 2: Schedule and Predictions</h3>
-					<p><p>Holding space for Goff is Case Keenum, who was atrocious in a Week 1 loss to the San Francisco 49ers. Keenum managed 130 passing yards &hellip;  <a href="http://www.nytimes.com/2016/09/18/sports/football/nfl-week-2-schedule-predictions-spread.html">more</a>.</p>
+					<p><p>Holding space for Goff is Case Keenum, who was atrocious in a Week 1 loss to the San Francisco 49ers. Keenum managed 130 passing yards &hellip;  <a href="http://www.nytimes.com/2016/09/18/sports/football/nfl-week-2-schedule-predictions-spread.html" onclick="trackOutboundLink('http://www.nytimes.com/2016/09/18/sports/football/nfl-week-2-schedule-predictions-spread.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

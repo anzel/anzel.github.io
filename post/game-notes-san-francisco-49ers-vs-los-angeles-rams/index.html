@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>13</b></p>
 					<h3>Game Notes: San Francisco 49ers vs. Los Angeles Rams</h3>
-					<p><p>The 49ers won their 48th career game on Monday Night Football, the most in NFL history. Head coach Chip Kelly earned his third victory to open a &hellip;  <a href="http://www.49ers.com/news/article-2/Game-Notes-San-Francisco-49ers-vs-Los-Angeles-Rams/111c6aa6-10fc-489a-931a-ccee47b2900c">more</a>.</p>
+					<p><p>The 49ers won their 48th career game on Monday Night Football, the most in NFL history. Head coach Chip Kelly earned his third victory to open a &hellip;  <a href="http://www.49ers.com/news/article-2/Game-Notes-San-Francisco-49ers-vs-Los-Angeles-Rams/111c6aa6-10fc-489a-931a-ccee47b2900c" onclick="trackOutboundLink('http://www.49ers.com/news/article-2/Game-Notes-San-Francisco-49ers-vs-Los-Angeles-Rams/111c6aa6-10fc-489a-931a-ccee47b2900c'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

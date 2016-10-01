@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>19</b></p>
 					<h3>MNT Weekend Rewind: Good Form and Goals at Home and Abroad</h3>
-					<p><p>David Bingham (San Jose Earthquakes)  90 minutes in 0-0 draw vs. &hellip; Rapids) - Quad injury; Not in 18 for 0-0 draw at San Jose Earthquakes (Sept.  <a href="http://www.ussoccer.com/stories/2016/09/19/14/24/160919-mnt-weekend-rewind-players-find-good-form-and-goals-at-home-and-abroad">more</a>.</p>
+					<p><p>David Bingham (San Jose Earthquakes)  90 minutes in 0-0 draw vs. &hellip; Rapids) - Quad injury; Not in 18 for 0-0 draw at San Jose Earthquakes (Sept.  <a href="http://www.ussoccer.com/stories/2016/09/19/14/24/160919-mnt-weekend-rewind-players-find-good-form-and-goals-at-home-and-abroad" onclick="trackOutboundLink('http://www.ussoccer.com/stories/2016/09/19/14/24/160919-mnt-weekend-rewind-players-find-good-form-and-goals-at-home-and-abroad'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

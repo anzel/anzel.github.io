@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>Ronnie Lott optimistic about chances to keep Raiders in Oakland</h3>
-					<p><p>Pro Football Hall of Famer Ronnie Lott continues to talk to Oakland government and Raiders officials about a way to keep the team where it is, and &hellip;  <a href="http://profootballtalk.nbcsports.com/2016/09/28/ronnie-lott-optimistic-about-chances-to-keep-raiders-in-oakland/">more</a>.</p>
+					<p><p>Pro Football Hall of Famer Ronnie Lott continues to talk to Oakland government and Raiders officials about a way to keep the team where it is, and &hellip;  <a href="http://profootballtalk.nbcsports.com/2016/09/28/ronnie-lott-optimistic-about-chances-to-keep-raiders-in-oakland/" onclick="trackOutboundLink('http://profootballtalk.nbcsports.com/2016/09/28/ronnie-lott-optimistic-about-chances-to-keep-raiders-in-oakland/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

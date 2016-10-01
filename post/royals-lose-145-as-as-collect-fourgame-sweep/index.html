@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>15</b></p>
 					<h3>Royals lose 14-5 as A&#39;s collect four-game sweep</h3>
-					<p><p>Stephen Vogt drove in five runs, Ryon Healy hit a mammoth three-run homer and the Oakland Athletics routed the Kansas City Royals 14-5 on &hellip;  <a href="http://www.foxsports.com/kansas-city/story/kansas-city-royals-lose-14-5-as-oakland-athletics-collect-four-game-sweep-091516">more</a>.</p>
+					<p><p>Stephen Vogt drove in five runs, Ryon Healy hit a mammoth three-run homer and the Oakland Athletics routed the Kansas City Royals 14-5 on &hellip;  <a href="http://www.foxsports.com/kansas-city/story/kansas-city-royals-lose-14-5-as-oakland-athletics-collect-four-game-sweep-091516" onclick="trackOutboundLink('http://www.foxsports.com/kansas-city/story/kansas-city-royals-lose-14-5-as-oakland-athletics-collect-four-game-sweep-091516'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

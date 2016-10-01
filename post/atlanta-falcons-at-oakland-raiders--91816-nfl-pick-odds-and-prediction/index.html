@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>16</b></p>
 					<h3>Atlanta Falcons at Oakland Raiders - 9/18/16 NFL Pick, Odds, and Prediction</h3>
-					<p><p>The Atlanta Falcons venture to the Black Hole to take on the Oakland Raiders in week 2 NFL action. The Atlanta Falcons dropped a 31-24 home &hellip;  <a href="http://sportschatplace.com/nfl-picks/2016/09/18/atlanta-falcons-at-oakland-raiders-9/18/16-nfl-pick-odds-and-prediction">more</a>.</p>
+					<p><p>The Atlanta Falcons venture to the Black Hole to take on the Oakland Raiders in week 2 NFL action. The Atlanta Falcons dropped a 31-24 home &hellip;  <a href="http://sportschatplace.com/nfl-picks/2016/09/18/atlanta-falcons-at-oakland-raiders-9/18/16-nfl-pick-odds-and-prediction" onclick="trackOutboundLink('http://sportschatplace.com/nfl-picks/2016/09/18/atlanta-falcons-at-oakland-raiders-9/18/16-nfl-pick-odds-and-prediction'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

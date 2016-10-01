@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>Rookie Cotton pitches A&#39;s past Angels</h3>
-					<p><p>OAKLAND  Oakland Athletics rookie right-hander Jharel Cotton didn&rsquo;t have to wait long to get his first victory and first standing ovation in the major &hellip;  <a href="http://www.bakersfield.com/sports/2016/09/07/rookie-cotton-pitches-a-s-past-angels.html">more</a>.</p>
+					<p><p>OAKLAND  Oakland Athletics rookie right-hander Jharel Cotton didn&rsquo;t have to wait long to get his first victory and first standing ovation in the major &hellip;  <a href="http://www.bakersfield.com/sports/2016/09/07/rookie-cotton-pitches-a-s-past-angels.html" onclick="trackOutboundLink('http://www.bakersfield.com/sports/2016/09/07/rookie-cotton-pitches-a-s-past-angels.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

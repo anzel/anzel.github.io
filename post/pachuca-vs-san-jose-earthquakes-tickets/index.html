@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>03</b></p>
 					<h3>Pachuca vs san jose earthquakes tickets</h3>
-					<p><p>juego de hoy entre Pachuca vs san jose earthquakes en san jose a las 7:30 pm  <a href="https://offerupnow.com/item/detail/157283725/pachuca-vs-san-jose-earthquakes-tickets">more</a>.</p>
+					<p><p>juego de hoy entre Pachuca vs san jose earthquakes en san jose a las 7:30 pm  <a href="https://offerupnow.com/item/detail/157283725/pachuca-vs-san-jose-earthquakes-tickets" onclick="trackOutboundLink('https://offerupnow.com/item/detail/157283725/pachuca-vs-san-jose-earthquakes-tickets'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

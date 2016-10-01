@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>02</b></p>
 					<h3>Robby Scott, Boston Red Sox September call-up, should receive Jose Canseco</h3>
-					<p><p>MassLive.com Oakland Athletics slugger Jose Canseco, center, walks onto the field at the Oakland Coliseum, to take batting practice and is followed by the media &hellip;  <a href="http://www.masslive.com/redsox/index.ssf/2016/09/robby_scott_boston_red_sox_sep.html">more</a>.</p>
+					<p><p>MassLive.com Oakland Athletics slugger Jose Canseco, center, walks onto the field at the Oakland Coliseum, to take batting practice and is followed by the media &hellip;  <a href="http://www.masslive.com/redsox/index.ssf/2016/09/robby_scott_boston_red_sox_sep.html" onclick="trackOutboundLink('http://www.masslive.com/redsox/index.ssf/2016/09/robby_scott_boston_red_sox_sep.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

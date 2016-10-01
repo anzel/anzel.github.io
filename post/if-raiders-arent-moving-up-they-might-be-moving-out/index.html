@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>06</b></p>
 					<h3>If Raiders aren&#39;t moving up, they might be moving out</h3>
-					<p><p>24, 2015 file photo, fans hold up a sign for the Oakland Raiders to stay in Oakland before an NFL football game between the Oakland Raiders and the &hellip;  <a href="http://www.sfchronicle.com/raiders/ostler/article/If-Raiders-aren-t-moving-up-they-might-be-9206330.php">more</a>.</p>
+					<p><p>24, 2015 file photo, fans hold up a sign for the Oakland Raiders to stay in Oakland before an NFL football game between the Oakland Raiders and the &hellip;  <a href="http://www.sfchronicle.com/raiders/ostler/article/If-Raiders-aren-t-moving-up-they-might-be-9206330.php" onclick="trackOutboundLink('http://www.sfchronicle.com/raiders/ostler/article/If-Raiders-aren-t-moving-up-they-might-be-9206330.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>49ers STEAM Education Program Launches Online Learning Content Available on</h3>
-					<p><p>49ers.com The San Francisco 49ers today unveiled online supplemental learning resources for students and teachers available free on Khan Academy to &hellip;  <a href="http://www.49ers.com/news/article-2/49ers-STEAM-Education-Program-Launches-Online-Learning-Content-Available-on-Khan-Academy/4e91f9d5-e0bc-4752-9b09-f8c9fe2c5041">more</a>.</p>
+					<p><p>49ers.com The San Francisco 49ers today unveiled online supplemental learning resources for students and teachers available free on Khan Academy to &hellip;  <a href="http://www.49ers.com/news/article-2/49ers-STEAM-Education-Program-Launches-Online-Learning-Content-Available-on-Khan-Academy/4e91f9d5-e0bc-4752-9b09-f8c9fe2c5041" onclick="trackOutboundLink('http://www.49ers.com/news/article-2/49ers-STEAM-Education-Program-Launches-Online-Learning-Content-Available-on-Khan-Academy/4e91f9d5-e0bc-4752-9b09-f8c9fe2c5041'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

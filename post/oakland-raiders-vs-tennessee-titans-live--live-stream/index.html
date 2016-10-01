@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>Oakland Raiders vs Tennessee Titans Live - Live Stream</h3>
-					<p><p>vs Titans Online Free Live Streaming CBS Sports NFL Football Game.  <a href="http://www.unitedwaynsv.org/sites/unitedwayshenandoah.oneeach.org/files/webform/Oakland%20Raiders%20vs%20Tennessee%20Titans%20Live%20Stream_4.pdf">more</a>.</p>
+					<p><p>vs Titans Online Free Live Streaming CBS Sports NFL Football Game.  <a href="http://www.unitedwaynsv.org/sites/unitedwayshenandoah.oneeach.org/files/webform/Oakland%20Raiders%20vs%20Tennessee%20Titans%20Live%20Stream_4.pdf" onclick="trackOutboundLink('http://www.unitedwaynsv.org/sites/unitedwayshenandoah.oneeach.org/files/webform/Oakland%20Raiders%20vs%20Tennessee%20Titans%20Live%20Stream_4.pdf'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

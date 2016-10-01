@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>13</b></p>
 					<h3>Two 49ers among PFF&#39;s Top 10 rookies during Week 1</h3>
-					<p><p>The San Francisco 49ers defense had a good night last night. The pitched a shutout against the visiting Los Angeles Rams with their 28-0 victory.  <a href="http://www.49erswebzone.com/news/97831-two-49ers-among-pffs-top-rookies-during-week/">more</a>.</p>
+					<p><p>The San Francisco 49ers defense had a good night last night. The pitched a shutout against the visiting Los Angeles Rams with their 28-0 victory.  <a href="http://www.49erswebzone.com/news/97831-two-49ers-among-pffs-top-rookies-during-week/" onclick="trackOutboundLink('http://www.49erswebzone.com/news/97831-two-49ers-among-pffs-top-rookies-during-week/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

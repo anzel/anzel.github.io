@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>San Jose Sharks vs. Nashville Predators</h3>
-					<p><p>San Jose in San Jose, CA for Oct 29, 2016 07:30 PM at Ticketmaster.  <a href="http://www.ticketmaster.com/san-jose-sharks-vs-nashville-predators-san-jose-california-10-29-2016/event/1C005119A242384D">more</a>.</p>
+					<p><p>San Jose in San Jose, CA for Oct 29, 2016 07:30 PM at Ticketmaster.  <a href="http://www.ticketmaster.com/san-jose-sharks-vs-nashville-predators-san-jose-california-10-29-2016/event/1C005119A242384D" onclick="trackOutboundLink('http://www.ticketmaster.com/san-jose-sharks-vs-nashville-predators-san-jose-california-10-29-2016/event/1C005119A242384D'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

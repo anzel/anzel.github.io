@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>01</b></p>
 					<h3>Colin Kaepernick wears anti-cop &#39;pig&#39; socks to 49ers practice</h3>
-					<p><p>San Francisco 49ers quarterback Colin Kaepernick  who has come under fire for his silent protest at a recent game of the U.S. national anthem &hellip;  <a href="https://www.rawstory.com/2016/09/colin-kaepernick-wears-anti-cop-pig-socks-to-49ers-practice/">more</a>.</p>
+					<p><p>San Francisco 49ers quarterback Colin Kaepernick  who has come under fire for his silent protest at a recent game of the U.S. national anthem &hellip;  <a href="https://www.rawstory.com/2016/09/colin-kaepernick-wears-anti-cop-pig-socks-to-49ers-practice/" onclick="trackOutboundLink('https://www.rawstory.com/2016/09/colin-kaepernick-wears-anti-cop-pig-socks-to-49ers-practice/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

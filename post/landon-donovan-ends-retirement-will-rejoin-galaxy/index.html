@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>Landon Donovan ends retirement, will rejoin Galaxy</h3>
-					<p><p>Donovan began his MLS career in 2001 with the San Jose Earthquakes and joined the Galaxy in 2005. He stepped away in 2014, citing a loss of &hellip;  <a href="http://www.ocregister.com/articles/donovan-728340-galaxy-mls.html">more</a>.</p>
+					<p><p>Donovan began his MLS career in 2001 with the San Jose Earthquakes and joined the Galaxy in 2005. He stepped away in 2014, citing a loss of &hellip;  <a href="http://www.ocregister.com/articles/donovan-728340-galaxy-mls.html" onclick="trackOutboundLink('http://www.ocregister.com/articles/donovan-728340-galaxy-mls.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

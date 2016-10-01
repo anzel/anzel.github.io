@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>15</b></p>
 					<h3>Las Vegas stadium funding OK&#39;d, opening way for Oakland Raiders&#39; move</h3>
-					<p><p>The Oakland Raiders, the odd team out in the NFL&rsquo;s Los Angeles sweepstakes earlier this year, inched closer to leaving the Bay Area for Las Vegas &hellip;  <a href="http://www.marketwatch.com/story/las-vegas-stadium-funding-okd-opening-way-for-oakland-raiders-move-2016-09-15">more</a>.</p>
+					<p><p>The Oakland Raiders, the odd team out in the NFL&rsquo;s Los Angeles sweepstakes earlier this year, inched closer to leaving the Bay Area for Las Vegas &hellip;  <a href="http://www.marketwatch.com/story/las-vegas-stadium-funding-okd-opening-way-for-oakland-raiders-move-2016-09-15" onclick="trackOutboundLink('http://www.marketwatch.com/story/las-vegas-stadium-funding-okd-opening-way-for-oakland-raiders-move-2016-09-15'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

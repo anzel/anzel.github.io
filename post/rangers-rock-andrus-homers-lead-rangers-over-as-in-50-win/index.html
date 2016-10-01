@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>RANGERS ROCK: Andrus&#39; homers lead Rangers over A&#39;s in 5-0 win</h3>
-					<p><p>&hellip; another division title, Andrus showed it by hitting a pair of two-run homers in the Rangers&rsquo; 5-0 victory against the Oakland Athletics on Saturday.  <a href="http://www.texarkanagazette.com/news/sports/pro/story/2016/sep/25/rangers-rock-andrus-homers-lead-rangers-over-5-0-win/641869/">more</a>.</p>
+					<p><p>&hellip; another division title, Andrus showed it by hitting a pair of two-run homers in the Rangers&rsquo; 5-0 victory against the Oakland Athletics on Saturday.  <a href="http://www.texarkanagazette.com/news/sports/pro/story/2016/sep/25/rangers-rock-andrus-homers-lead-rangers-over-5-0-win/641869/" onclick="trackOutboundLink('http://www.texarkanagazette.com/news/sports/pro/story/2016/sep/25/rangers-rock-andrus-homers-lead-rangers-over-5-0-win/641869/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

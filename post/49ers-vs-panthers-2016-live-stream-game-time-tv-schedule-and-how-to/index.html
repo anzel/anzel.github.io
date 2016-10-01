@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>49ers vs. Panthers 2016 live stream: Game time, TV schedule and how to</h3>
-					<p><p>Fairfield Ledger I think, you are surfing internet for get your favorite teams match 49ers vs Panthers live streaming NFL Season 2016 TV link directly on your desktop, &hellip;  <a href="http://fairfield-ia.villagesoup.com/p/49ers-vs-panthers-2016-live-stream-game-time-tv-schedule-and-how-to-watch-online/1574353">more</a>.</p>
+					<p><p>Fairfield Ledger I think, you are surfing internet for get your favorite teams match 49ers vs Panthers live streaming NFL Season 2016 TV link directly on your desktop, &hellip;  <a href="http://fairfield-ia.villagesoup.com/p/49ers-vs-panthers-2016-live-stream-game-time-tv-schedule-and-how-to-watch-online/1574353" onclick="trackOutboundLink('http://fairfield-ia.villagesoup.com/p/49ers-vs-panthers-2016-live-stream-game-time-tv-schedule-and-how-to-watch-online/1574353'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

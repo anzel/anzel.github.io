@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>19</b></p>
 					<h3>Ryan Dull records a save in Oakland&#39;s Sunday victory</h3>
-					<p><p>Oakland Athletics pitcher Ryan Dull notched his third save of the season as the A&rsquo;s topped the Texas Rangers 5-2 on Sunday. What It Means: Dull has &hellip;  <a href="https://www.numberfire.com/mlb/player-news/28860/ryan-dull-records-a-save-in-oakland-s-sunday-victory">more</a>.</p>
+					<p><p>Oakland Athletics pitcher Ryan Dull notched his third save of the season as the A&rsquo;s topped the Texas Rangers 5-2 on Sunday. What It Means: Dull has &hellip;  <a href="https://www.numberfire.com/mlb/player-news/28860/ryan-dull-records-a-save-in-oakland-s-sunday-victory" onclick="trackOutboundLink('https://www.numberfire.com/mlb/player-news/28860/ryan-dull-records-a-save-in-oakland-s-sunday-victory'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

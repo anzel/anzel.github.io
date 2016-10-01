@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>Heyman: Yankees agree to deal with Billy Butler</h3>
-					<p><p>Days after being released by the Oakland Athletics, Billy Butler has agreed to a major-league deal with the New York Yankees, sources tell Today&rsquo;s &hellip;  <a href="http://www.todaysknuckleball.com/al/new-york-yankees/heyman-yankees-agree-deal-billy-butler/">more</a>.</p>
+					<p><p>Days after being released by the Oakland Athletics, Billy Butler has agreed to a major-league deal with the New York Yankees, sources tell Today&rsquo;s &hellip;  <a href="http://www.todaysknuckleball.com/al/new-york-yankees/heyman-yankees-agree-deal-billy-butler/" onclick="trackOutboundLink('http://www.todaysknuckleball.com/al/new-york-yankees/heyman-yankees-agree-deal-billy-butler/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

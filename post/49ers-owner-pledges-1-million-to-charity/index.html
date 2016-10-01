@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>49ers owner pledges $1 million to charity</h3>
-					<p><p>racial and economic inequality and building a stronger relationship &hellip;  <a href="http://bigstory.ap.org/article/0d9158de774146e7b7ac3804954fa393/49ers-owner-pledges-1-million-charity">more</a>.</p>
+					<p><p>racial and economic inequality and building a stronger relationship &hellip;  <a href="http://bigstory.ap.org/article/0d9158de774146e7b7ac3804954fa393/49ers-owner-pledges-1-million-charity" onclick="trackOutboundLink('http://bigstory.ap.org/article/0d9158de774146e7b7ac3804954fa393/49ers-owner-pledges-1-million-charity'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

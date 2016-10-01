@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>17</b></p>
 					<h3>Purdy: Raiders and 49ers&#39; seasons hinge on</h3>
-					<p><p>San Francisco 49ers starting quarterback Blaine Gabbert (2) congratulates San Francisco 49ers head coach Chip Kelly in the final minutes of the &hellip;  <a href="http://www.mercurynews.com/2016/09/17/purdy-raiders-and-49ers-seasons-hinge-on-executing-their-triangle-offense/">more</a>.</p>
+					<p><p>San Francisco 49ers starting quarterback Blaine Gabbert (2) congratulates San Francisco 49ers head coach Chip Kelly in the final minutes of the &hellip;  <a href="http://www.mercurynews.com/2016/09/17/purdy-raiders-and-49ers-seasons-hinge-on-executing-their-triangle-offense/" onclick="trackOutboundLink('http://www.mercurynews.com/2016/09/17/purdy-raiders-and-49ers-seasons-hinge-on-executing-their-triangle-offense/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>01</b></p>
 					<h3>Raiders Should Steer Well Clear Of The Pot Roast</h3>
-					<p><p>The Oakland Raiders and Terrance Knighton had a flirtation for a while last year, but no deal was ever consummated  now that he&rsquo;s a free agent &hellip;  <a href="http://goldengatesports.com/2016/09/01/oakland-raiders-steer-well-clear-pot-roast/">more</a>.</p>
+					<p><p>The Oakland Raiders and Terrance Knighton had a flirtation for a while last year, but no deal was ever consummated  now that he&rsquo;s a free agent &hellip;  <a href="http://goldengatesports.com/2016/09/01/oakland-raiders-steer-well-clear-pot-roast/" onclick="trackOutboundLink('http://goldengatesports.com/2016/09/01/oakland-raiders-steer-well-clear-pot-roast/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

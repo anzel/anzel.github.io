@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>15</b></p>
 					<h3>49ers prepare for Newton with Ponder on scout team</h3>
-					<p><p>The 49ers would appear to have just about the perfect player to mimic Newton in practices to get the team&rsquo;s defense prepared for its stiff challenge on &hellip;  <a href="http://www.csnbayarea.com/49ers/49ers-prepare-newton-ponder-scout-team">more</a>.</p>
+					<p><p>The 49ers would appear to have just about the perfect player to mimic Newton in practices to get the team&rsquo;s defense prepared for its stiff challenge on &hellip;  <a href="http://www.csnbayarea.com/49ers/49ers-prepare-newton-ponder-scout-team" onclick="trackOutboundLink('http://www.csnbayarea.com/49ers/49ers-prepare-newton-ponder-scout-team'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

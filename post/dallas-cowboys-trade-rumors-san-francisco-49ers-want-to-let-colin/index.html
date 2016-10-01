@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Aug<b>31</b></p>
 					<h3>Dallas Cowboys trade rumors: San Francisco 49ers want to let Colin</h3>
-					<p><p>ChristianToday San Francisco 49ers quarterback Colin Kaepernick extends his hands after the Denver Broncos defeated the 49ers in their NFL pre-season football &hellip;  <a href="http://www.christiantoday.com/article/dallas.cowboys.roster.rumors.2016.colin.kaepernick.headed.to.texas.san.francisco.49ers.keen.on.letting.him.go/94257.htm">more</a>.</p>
+					<p><p>ChristianToday San Francisco 49ers quarterback Colin Kaepernick extends his hands after the Denver Broncos defeated the 49ers in their NFL pre-season football &hellip;  <a href="http://www.christiantoday.com/article/dallas.cowboys.roster.rumors.2016.colin.kaepernick.headed.to.texas.san.francisco.49ers.keen.on.letting.him.go/94257.htm" onclick="trackOutboundLink('http://www.christiantoday.com/article/dallas.cowboys.roster.rumors.2016.colin.kaepernick.headed.to.texas.san.francisco.49ers.keen.on.letting.him.go/94257.htm'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

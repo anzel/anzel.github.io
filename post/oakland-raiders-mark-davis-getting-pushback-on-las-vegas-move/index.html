@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>Oakland Raiders Mark Davis getting pushback on Las Vegas move</h3>
-					<p><p>A few weeks ago, the Oakland Raiders proposed relocation to Las Vegas seemed inevitable. However, as the season progresses, NFL Commissioner &hellip;  <a href="https://movietvtechgeeks.com/oakland-raiders-mark-davis-getting-pushback-las-vegas-move/">more</a>.</p>
+					<p><p>A few weeks ago, the Oakland Raiders proposed relocation to Las Vegas seemed inevitable. However, as the season progresses, NFL Commissioner &hellip;  <a href="https://movietvtechgeeks.com/oakland-raiders-mark-davis-getting-pushback-las-vegas-move/" onclick="trackOutboundLink('https://movietvtechgeeks.com/oakland-raiders-mark-davis-getting-pushback-las-vegas-move/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

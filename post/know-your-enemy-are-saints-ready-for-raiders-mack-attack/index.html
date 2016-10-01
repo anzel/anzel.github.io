@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>Know Your Enemy: Are Saints ready for Raiders&#39; Mack attack?</h3>
-					<p><p>Like New Orleans, the Oakland Raiders had a record of 7-9 last year and finished 3rd in the AFC West. They reside in a division with the defending &hellip;  <a href="http://www.wwl.com/Know-Your-Enemy-Are-Saints-ready-for-Raiders-Mack-/10773664?pid=527114">more</a>.</p>
+					<p><p>Like New Orleans, the Oakland Raiders had a record of 7-9 last year and finished 3rd in the AFC West. They reside in a division with the defending &hellip;  <a href="http://www.wwl.com/Know-Your-Enemy-Are-Saints-ready-for-Raiders-Mack-/10773664?pid=527114" onclick="trackOutboundLink('http://www.wwl.com/Know-Your-Enemy-Are-Saints-ready-for-Raiders-Mack-/10773664?pid=527114'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

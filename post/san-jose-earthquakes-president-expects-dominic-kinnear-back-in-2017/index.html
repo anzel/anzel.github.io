@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Oct<b>01</b></p>
 					<h3>San Jose Earthquakes president expects Dominic Kinnear back in 2017</h3>
-					<p><p>San Jose Earthquakes president Dave Kaval said that he &ldquo;absolutely&rdquo; expects Dominic Kinnear to be the team&rsquo;s head coach next season. The Quakes &hellip;  <a href="http://www.espnfc.com/san-jose-earthquakes/story/2962992/san-jose-earthquakes-expect-dominic-kinnear-back-in-2017-dave-kaval">more</a>.</p>
+					<p><p>San Jose Earthquakes president Dave Kaval said that he &ldquo;absolutely&rdquo; expects Dominic Kinnear to be the team&rsquo;s head coach next season. The Quakes &hellip;  <a href="http://www.espnfc.com/san-jose-earthquakes/story/2962992/san-jose-earthquakes-expect-dominic-kinnear-back-in-2017-dave-kaval" onclick="trackOutboundLink('http://www.espnfc.com/san-jose-earthquakes/story/2962992/san-jose-earthquakes-expect-dominic-kinnear-back-in-2017-dave-kaval'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

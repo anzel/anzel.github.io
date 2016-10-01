@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>Who&#39;s got Dez? 49ers CB Jimmie Ward suffers quad strain, week-to-week ahead</h3>
-					<p><p>Dallas News (blog) (AP) &ndash; San Francisco 49ers cornerback Jimmie Ward is week-to-week with a quad strain, the team announced Tuesday. He left Sunday&rsquo;s loss to the &hellip;  <a href="http://sportsday.dallasnews.com/dallas-cowboys/cowboys/2016/09/27/got-dez-49ers-cb-jimmie-ward-suffers-quad-strain-week-week-ahead-cowboys-game">more</a>.</p>
+					<p><p>Dallas News (blog) (AP) &ndash; San Francisco 49ers cornerback Jimmie Ward is week-to-week with a quad strain, the team announced Tuesday. He left Sunday&rsquo;s loss to the &hellip;  <a href="http://sportsday.dallasnews.com/dallas-cowboys/cowboys/2016/09/27/got-dez-49ers-cb-jimmie-ward-suffers-quad-strain-week-week-ahead-cowboys-game" onclick="trackOutboundLink('http://sportsday.dallasnews.com/dallas-cowboys/cowboys/2016/09/27/got-dez-49ers-cb-jimmie-ward-suffers-quad-strain-week-week-ahead-cowboys-game'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

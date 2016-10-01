@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>49ers showed little draft interest in Cowboys&#39; QB Dak Prescott</h3>
-					<p><p>But rookie quarterback Dak Prescott, whom the Cowboys selected late in the fourth round in April, either wasn&rsquo;t high on 49ers&rsquo; radar before the draft or &hellip;  <a href="http://www.sacbee.com/sports/nfl/san-francisco-49ers/article104760586.html">more</a>.</p>
+					<p><p>But rookie quarterback Dak Prescott, whom the Cowboys selected late in the fourth round in April, either wasn&rsquo;t high on 49ers&rsquo; radar before the draft or &hellip;  <a href="http://www.sacbee.com/sports/nfl/san-francisco-49ers/article104760586.html" onclick="trackOutboundLink('http://www.sacbee.com/sports/nfl/san-francisco-49ers/article104760586.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>29</b></p>
 					<h3>Elliot and Hyde, former Buckeyes, to face off Sunday</h3>
-					<p><p>&ldquo;He&rsquo;s not a guy that you have to take off the field,&rdquo; 49ers coach Chip Kelly said of Elliott. &ldquo;He&rsquo;s got speed. He&rsquo;s got power. You know, he&rsquo;s kind of the &hellip;  <a href="http://www.dailyherald.com/article/20160929/sports/309299728/">more</a>.</p>
+					<p><p>&ldquo;He&rsquo;s not a guy that you have to take off the field,&rdquo; 49ers coach Chip Kelly said of Elliott. &ldquo;He&rsquo;s got speed. He&rsquo;s got power. You know, he&rsquo;s kind of the &hellip;  <a href="http://www.dailyherald.com/article/20160929/sports/309299728/" onclick="trackOutboundLink('http://www.dailyherald.com/article/20160929/sports/309299728/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

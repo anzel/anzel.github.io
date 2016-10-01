@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>01</b></p>
 					<h3>Northwest MLB SF Giants Hello Kitty Throw</h3>
-					<p><p>Westfield . Browse the latest styles online and buy from a Westfield store.  <a href="https://www.westfield.com/products/us-boscovs/northwest-mlb-sf-giants-hello-kitty-throw/125019f4-5a7e-468c-95a0-b5c0e3bfba5e">more</a>.</p>
+					<p><p>Westfield . Browse the latest styles online and buy from a Westfield store.  <a href="https://www.westfield.com/products/us-boscovs/northwest-mlb-sf-giants-hello-kitty-throw/125019f4-5a7e-468c-95a0-b5c0e3bfba5e" onclick="trackOutboundLink('https://www.westfield.com/products/us-boscovs/northwest-mlb-sf-giants-hello-kitty-throw/125019f4-5a7e-468c-95a0-b5c0e3bfba5e'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

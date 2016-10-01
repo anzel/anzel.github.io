@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>15</b></p>
 					<h3>49ers defense could tell passing play route trees vs. Rams</h3>
-					<p><p>The San Francisco 49ers defense had little trouble with the Los Angeles Rams in their season-opening win, thanks in part to Case Keenum&rsquo;s &hellip;  <a href="http://www.ninersnation.com/2016/9/15/12924884/49ers-defense-knew-rams-passing-play-route-trees">more</a>.</p>
+					<p><p>The San Francisco 49ers defense had little trouble with the Los Angeles Rams in their season-opening win, thanks in part to Case Keenum&rsquo;s &hellip;  <a href="http://www.ninersnation.com/2016/9/15/12924884/49ers-defense-knew-rams-passing-play-route-trees" onclick="trackOutboundLink('http://www.ninersnation.com/2016/9/15/12924884/49ers-defense-knew-rams-passing-play-route-trees'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

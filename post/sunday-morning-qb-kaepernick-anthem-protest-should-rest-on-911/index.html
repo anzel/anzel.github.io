@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>10</b></p>
 					<h3>Sunday Morning QB: Kaepernick anthem protest should rest on 9/11</h3>
-					<p><p>Colin Kaepernick and the 49ers don&rsquo;t play in New York on Sunday or in New York this season. - The Jets game against the Niners on Dec. 11 is in &hellip;  <a href="http://www.nydailynews.com/sports/football/sunday-morning-qb-kaepernick-anthem-protest-rest-9-11-article-1.2786776">more</a>.</p>
+					<p><p>Colin Kaepernick and the 49ers don&rsquo;t play in New York on Sunday or in New York this season. - The Jets game against the Niners on Dec. 11 is in &hellip;  <a href="http://www.nydailynews.com/sports/football/sunday-morning-qb-kaepernick-anthem-protest-rest-9-11-article-1.2786776" onclick="trackOutboundLink('http://www.nydailynews.com/sports/football/sunday-morning-qb-kaepernick-anthem-protest-rest-9-11-article-1.2786776'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

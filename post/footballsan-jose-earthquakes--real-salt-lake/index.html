@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Oct<b>01</b></p>
 					<h3>Football:San Jose Earthquakes - Real Salt Lake</h3>
-					<p><p>Earthquakes 1 goal: yes 3.55; no 1.25; Winning margin Real Salt Lake 1 &hellip;  <a href="http://www.parimatch.by/en/sport/futbol/san-khose-ehrskvejjks-real-solt-lejjk-6906928O">more</a>.</p>
+					<p><p>Earthquakes 1 goal: yes 3.55; no 1.25; Winning margin Real Salt Lake 1 &hellip;  <a href="http://www.parimatch.by/en/sport/futbol/san-khose-ehrskvejjks-real-solt-lejjk-6906928O" onclick="trackOutboundLink('http://www.parimatch.by/en/sport/futbol/san-khose-ehrskvejjks-real-solt-lejjk-6906928O'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

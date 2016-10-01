@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>CBSTennessee Titans vs Oakland Raiders L.iv.e S.tr.e.am On/l/in.e NFL</h3>
-					<p><p>watch.Tennessee Titans vs Oakland Raiders.Live Streaming NFL game 2016.Titans vs Raiders.American football NFC football.enjoy online tv on &hellip;  <a href="http://gamejolt.com/games/c-b-s-tennessee-titans-v-s-oakland-raiders-l-iv-e-s-tr-e-am-o-n-l-in-e-nfl-f-oo-tball/192762">more</a>.</p>
+					<p><p>watch.Tennessee Titans vs Oakland Raiders.Live Streaming NFL game 2016.Titans vs Raiders.American football NFC football.enjoy online tv on &hellip;  <a href="http://gamejolt.com/games/c-b-s-tennessee-titans-v-s-oakland-raiders-l-iv-e-s-tr-e-am-o-n-l-in-e-nfl-f-oo-tball/192762" onclick="trackOutboundLink('http://gamejolt.com/games/c-b-s-tennessee-titans-v-s-oakland-raiders-l-iv-e-s-tr-e-am-o-n-l-in-e-nfl-f-oo-tball/192762'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

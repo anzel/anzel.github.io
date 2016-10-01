@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>22</b></p>
 					<h3>Cam Newton, Colin Kaepernick address odd post-game picture</h3>
-					<p><p>Earlier this week, a picture emerged of Colin Kaepernick and Cam Newton meeting on the field following the 49ers-Panthers Week 2 matchup.  <a href="http://www.ninersnation.com/2016/9/21/13005780/cam-newton-colin-kaepernick-post-game-picture-49ers-vs-panthers">more</a>.</p>
+					<p><p>Earlier this week, a picture emerged of Colin Kaepernick and Cam Newton meeting on the field following the 49ers-Panthers Week 2 matchup.  <a href="http://www.ninersnation.com/2016/9/21/13005780/cam-newton-colin-kaepernick-post-game-picture-49ers-vs-panthers" onclick="trackOutboundLink('http://www.ninersnation.com/2016/9/21/13005780/cam-newton-colin-kaepernick-post-game-picture-49ers-vs-panthers'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

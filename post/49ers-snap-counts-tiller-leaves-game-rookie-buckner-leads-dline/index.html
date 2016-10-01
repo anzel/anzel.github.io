@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>19</b></p>
 					<h3>49ers snap counts: Tiller leaves game; Rookie Buckner leads d-line</h3>
-					<p><p>After missing seven snaps in Week 1, right guard Andrew Tiller sat out another four in Sunday&rsquo;s loss to Carolina. Marcus Martin filled in, allowing a &hellip;  <a href="http://www.sacbee.com/sports/nfl/san-francisco-49ers/article102692447.html">more</a>.</p>
+					<p><p>After missing seven snaps in Week 1, right guard Andrew Tiller sat out another four in Sunday&rsquo;s loss to Carolina. Marcus Martin filled in, allowing a &hellip;  <a href="http://www.sacbee.com/sports/nfl/san-francisco-49ers/article102692447.html" onclick="trackOutboundLink('http://www.sacbee.com/sports/nfl/san-francisco-49ers/article102692447.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>16</b></p>
 					<h3>Blaine Gabbert?s game management improves for 49ers</h3>
-					<p><p>San Francisco quarterback Blaine Gabbert is tackled by Los Angeles&rsquo; Mark Barron, left, and Robert Quinn on Monday night in Santa Clara, California.  <a href="http://www.bendbulletin.com/sports/4664028-151/blaine-gabberts-game-management-improves-for-49ers">more</a>.</p>
+					<p><p>San Francisco quarterback Blaine Gabbert is tackled by Los Angeles&rsquo; Mark Barron, left, and Robert Quinn on Monday night in Santa Clara, California.  <a href="http://www.bendbulletin.com/sports/4664028-151/blaine-gabberts-game-management-improves-for-49ers" onclick="trackOutboundLink('http://www.bendbulletin.com/sports/4664028-151/blaine-gabberts-game-management-improves-for-49ers'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

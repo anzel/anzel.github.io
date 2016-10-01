@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>20</b></p>
 					<h3>Del Rio promises changes for Raiders struggling...</h3>
-					<p><p>Atlanta Falcons tight end Jacob Tamme (83) runs against Oakland Raiders middle linebacker Ben Heeney (50) and free safety Reggie Nelson during &hellip;  <a href="http://www.simcoe.com/sports-story/6866860-del-rio-promises-changes-for-raiders-struggling-defence/">more</a>.</p>
+					<p><p>Atlanta Falcons tight end Jacob Tamme (83) runs against Oakland Raiders middle linebacker Ben Heeney (50) and free safety Reggie Nelson during &hellip;  <a href="http://www.simcoe.com/sports-story/6866860-del-rio-promises-changes-for-raiders-struggling-defence/" onclick="trackOutboundLink('http://www.simcoe.com/sports-story/6866860-del-rio-promises-changes-for-raiders-struggling-defence/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>17</b></p>
 					<h3>Oakland Athletics I Will UA Tech Boys&#39; Short Sleeve</h3>
-					<p><p>our Boys&rsquo; Short Sleeve department. Free shipping is available in NP.  <a href="https://www.underarmour.com/en-np/boys-oakland-athletics-i-will-ua-tech-t-shirt/pid1284702">more</a>.</p>
+					<p><p>our Boys&rsquo; Short Sleeve department. Free shipping is available in NP.  <a href="https://www.underarmour.com/en-np/boys-oakland-athletics-i-will-ua-tech-t-shirt/pid1284702" onclick="trackOutboundLink('https://www.underarmour.com/en-np/boys-oakland-athletics-i-will-ua-tech-t-shirt/pid1284702'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

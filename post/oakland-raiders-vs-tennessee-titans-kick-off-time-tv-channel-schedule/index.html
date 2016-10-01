@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>Oakland Raiders vs Tennessee Titans Kick Off Time: TV Channel schedule,</h3>
-					<p><p>Pabaon News The Tennessee Titans host the Oakland Raiders in Week 3 of the NFL schedule on Sunday, kick off time at 1:00 PM ET, at LP Field. The Oakland &hellip;  <a href="http://www.pabaon.com/2016/09/oakland-raiders-vs-tennessee-titans-kick-off-time-tv-channel-schedule-preview-line-odds-spread-scores-and-results-a-rivalry-match.html">more</a>.</p>
+					<p><p>Pabaon News The Tennessee Titans host the Oakland Raiders in Week 3 of the NFL schedule on Sunday, kick off time at 1:00 PM ET, at LP Field. The Oakland &hellip;  <a href="http://www.pabaon.com/2016/09/oakland-raiders-vs-tennessee-titans-kick-off-time-tv-channel-schedule-preview-line-odds-spread-scores-and-results-a-rivalry-match.html" onclick="trackOutboundLink('http://www.pabaon.com/2016/09/oakland-raiders-vs-tennessee-titans-kick-off-time-tv-channel-schedule-preview-line-odds-spread-scores-and-results-a-rivalry-match.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

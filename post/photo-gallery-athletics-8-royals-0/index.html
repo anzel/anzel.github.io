@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>Photo gallery: Athletics 8, Royals 0</h3>
-					<p><p>City Royals catcher Salvador Perez on a two run double by Khris Davis &hellip;  <a href="http://www.kansascity.com/sports/mlb/kansas-city-royals/royals-photos-videos/article101929777.html">more</a>.</p>
+					<p><p>City Royals catcher Salvador Perez on a two run double by Khris Davis &hellip;  <a href="http://www.kansascity.com/sports/mlb/kansas-city-royals/royals-photos-videos/article101929777.html" onclick="trackOutboundLink('http://www.kansascity.com/sports/mlb/kansas-city-royals/royals-photos-videos/article101929777.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

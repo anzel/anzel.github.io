@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>24</b></p>
 					<h3>Quarterback&gt;Watch Temple Owls vs Charlotte 49ers NCAA Football Games On Tv</h3>
-					<p><p>Can Temple Owls vs Charlotte 49ers You Watch College Football &hellip;  <a href="https://libraries.ou.edu/sites/default/files/webform/%25QuarterbackWatch%20Temple%20Owls%20vs%20Charlotte%2049ers%20NCAA%20Football%20Games%20On%20Tv.pdf">more</a>.</p>
+					<p><p>Can Temple Owls vs Charlotte 49ers You Watch College Football &hellip;  <a href="https://libraries.ou.edu/sites/default/files/webform/%25QuarterbackWatch%20Temple%20Owls%20vs%20Charlotte%2049ers%20NCAA%20Football%20Games%20On%20Tv.pdf" onclick="trackOutboundLink('https://libraries.ou.edu/sites/default/files/webform/%25QuarterbackWatch%20Temple%20Owls%20vs%20Charlotte%2049ers%20NCAA%20Football%20Games%20On%20Tv.pdf'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

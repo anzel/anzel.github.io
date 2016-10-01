@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>16</b></p>
 					<h3>Rangers rally for ninth inning comeback against A&#39;s</h3>
-					<p><p>Rougned Odor, greets Jonathan Lucroy at the dugout after Lucroy scored on an RBI double by Elvis Andrus in the 5th inning Friday night. Lucroy&rsquo;s &hellip;  <a href="http://www.star-telegram.com/sports/mlb/texas-rangers/article102404522.html">more</a>.</p>
+					<p><p>Rougned Odor, greets Jonathan Lucroy at the dugout after Lucroy scored on an RBI double by Elvis Andrus in the 5th inning Friday night. Lucroy&rsquo;s &hellip;  <a href="http://www.star-telegram.com/sports/mlb/texas-rangers/article102404522.html" onclick="trackOutboundLink('http://www.star-telegram.com/sports/mlb/texas-rangers/article102404522.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

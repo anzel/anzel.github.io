@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>07</b></p>
 					<h3>Cohesion necessary for Seattle Sounders ahead of pivotal matchup with San</h3>
-					<p><p>SoundersFC.com The Seattle Sounders had six players competing internationally this past week as part of 2018 FIFA World Cup Qualifying, while the rest of the squad &hellip;  <a href="http://www.soundersfc.com/post/2016/09/07/seattle-sounders-san-jose-earthquakes-cohesion">more</a>.</p>
+					<p><p>SoundersFC.com The Seattle Sounders had six players competing internationally this past week as part of 2018 FIFA World Cup Qualifying, while the rest of the squad &hellip;  <a href="http://www.soundersfc.com/post/2016/09/07/seattle-sounders-san-jose-earthquakes-cohesion" onclick="trackOutboundLink('http://www.soundersfc.com/post/2016/09/07/seattle-sounders-san-jose-earthquakes-cohesion'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

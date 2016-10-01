@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>17</b></p>
 					<h3>Steelers too good for Redskins, 49ers win</h3>
-					<p><p>As Gruden explained his thinking, the hope was that punter Tress Way would pin the Steelers deep in their own end for their opening drive of the &hellip;  <a href="http://stocknewsweek.com/2016/09/18/steelers-too-good-for-redskins-49ers-win/">more</a>.</p>
+					<p><p>As Gruden explained his thinking, the hope was that punter Tress Way would pin the Steelers deep in their own end for their opening drive of the &hellip;  <a href="http://stocknewsweek.com/2016/09/18/steelers-too-good-for-redskins-49ers-win/" onclick="trackOutboundLink('http://stocknewsweek.com/2016/09/18/steelers-too-good-for-redskins-49ers-win/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

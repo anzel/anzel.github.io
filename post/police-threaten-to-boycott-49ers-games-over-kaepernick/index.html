@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>07</b></p>
 					<h3>Police Threaten To Boycott 49ers Games Over Kaepernick</h3>
-					<p><p>San Francisco quarterback Colin Kaepernick&rsquo;s refusal to stand at attention during the national anthem has now drawn the ire of Bay Area police.  <a href="http://www.opposingviews.com/i/society/police-threaten-boycott-niners-games-over-kaepernicks-national-anthem-protest">more</a>.</p>
+					<p><p>San Francisco quarterback Colin Kaepernick&rsquo;s refusal to stand at attention during the national anthem has now drawn the ire of Bay Area police.  <a href="http://www.opposingviews.com/i/society/police-threaten-boycott-niners-games-over-kaepernicks-national-anthem-protest" onclick="trackOutboundLink('http://www.opposingviews.com/i/society/police-threaten-boycott-niners-games-over-kaepernicks-national-anthem-protest'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

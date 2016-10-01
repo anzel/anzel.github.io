@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>Los Angeles Angels&#39; Jefry Marte gets first career grand slam with mom in</h3>
-					<p><p>UPI.com Los Angeles Angels&rsquo; Jefry Marte nailed his first career grand slam against the Oakland Athletics while his mom was watching. UPI composite via MLB &hellip;  <a href="http://www.upi.com/Sports_News/2016/09/28/Los-Angeles-Angels-Jefry-Marte-gets-first-career-grand-slam-with-mom-in-stands/7451475072558/">more</a>.</p>
+					<p><p>UPI.com Los Angeles Angels&rsquo; Jefry Marte nailed his first career grand slam against the Oakland Athletics while his mom was watching. UPI composite via MLB &hellip;  <a href="http://www.upi.com/Sports_News/2016/09/28/Los-Angeles-Angels-Jefry-Marte-gets-first-career-grand-slam-with-mom-in-stands/7451475072558/" onclick="trackOutboundLink('http://www.upi.com/Sports_News/2016/09/28/Los-Angeles-Angels-Jefry-Marte-gets-first-career-grand-slam-with-mom-in-stands/7451475072558/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

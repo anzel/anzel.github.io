@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>22</b></p>
 					<h3>49ers coach Chip Kelly: Colin Kaepernick shedding light on &#39;heinous&#39;</h3>
-					<p><p>USA TODAY SANTA CLARA, Calif. (AP)  San Francisco 49ers coach Chip Kelly said Thursday that Colin Kaepernick&rsquo;s protest during the national anthem is &hellip;  <a href="http://www.usatoday.com/story/sports/nfl/2016/09/22/kelly-kaepernick-highlighting-issue-that-needs-addressing/90852408/">more</a>.</p>
+					<p><p>USA TODAY SANTA CLARA, Calif. (AP)  San Francisco 49ers coach Chip Kelly said Thursday that Colin Kaepernick&rsquo;s protest during the national anthem is &hellip;  <a href="http://www.usatoday.com/story/sports/nfl/2016/09/22/kelly-kaepernick-highlighting-issue-that-needs-addressing/90852408/" onclick="trackOutboundLink('http://www.usatoday.com/story/sports/nfl/2016/09/22/kelly-kaepernick-highlighting-issue-that-needs-addressing/90852408/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

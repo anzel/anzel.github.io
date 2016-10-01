@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>01</b></p>
 					<h3>Oakland Raiders Notebook: Preaseason Finale Thoughts</h3>
-					<p><p>Aug 27, 2016; Oakland, CA, USA; Oakland Raiders running back DeAndre Washington (33) celebrates with Raiders guard Gabe Jackson (66) after &hellip;  <a href="http://www.foxnews.com/sports/2016/09/01/oakland-raiders-notebook-preaseason-finale-thoughts.html">more</a>.</p>
+					<p><p>Aug 27, 2016; Oakland, CA, USA; Oakland Raiders running back DeAndre Washington (33) celebrates with Raiders guard Gabe Jackson (66) after &hellip;  <a href="http://www.foxnews.com/sports/2016/09/01/oakland-raiders-notebook-preaseason-finale-thoughts.html" onclick="trackOutboundLink('http://www.foxnews.com/sports/2016/09/01/oakland-raiders-notebook-preaseason-finale-thoughts.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

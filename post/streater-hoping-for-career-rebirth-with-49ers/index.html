@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>10</b></p>
 					<h3>Streater hoping for career rebirth with 49ers</h3>
-					<p><p>He performed well enough with the Chiefs to catch the eye of the 49ers, who traded an undisclosed draft pick for him on Sept. 3 and promptly placed &hellip;  <a href="http://www.oleantimesherald.com/sports/columnists/streater-hoping-for-career-rebirth-with-ers/article_cfde65ae-7701-11e6-a0e4-2ff539f66e00.html">more</a>.</p>
+					<p><p>He performed well enough with the Chiefs to catch the eye of the 49ers, who traded an undisclosed draft pick for him on Sept. 3 and promptly placed &hellip;  <a href="http://www.oleantimesherald.com/sports/columnists/streater-hoping-for-career-rebirth-with-ers/article_cfde65ae-7701-11e6-a0e4-2ff539f66e00.html" onclick="trackOutboundLink('http://www.oleantimesherald.com/sports/columnists/streater-hoping-for-career-rebirth-with-ers/article_cfde65ae-7701-11e6-a0e4-2ff539f66e00.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

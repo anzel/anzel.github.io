@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>22</b></p>
 					<h3>Saints sent in questionable Week 1 call for review</h3>
-					<p><p>One of those plays was a pass-interference call on linebacker Craig Robertson in Week 1 against the Oakland Raiders. The questionable call, which &hellip;  <a href="http://oak.247sports.com/Bolt/Saints-sent-in-questionable-Week-1-call-for-review-47677354">more</a>.</p>
+					<p><p>One of those plays was a pass-interference call on linebacker Craig Robertson in Week 1 against the Oakland Raiders. The questionable call, which &hellip;  <a href="http://oak.247sports.com/Bolt/Saints-sent-in-questionable-Week-1-call-for-review-47677354" onclick="trackOutboundLink('http://oak.247sports.com/Bolt/Saints-sent-in-questionable-Week-1-call-for-review-47677354'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>09</b></p>
 					<h3>Vegas stadium backers don&#39;t want to share profit with public</h3>
-					<p><p>photo - FILE - In this April 28, 2016 file photo, Oakland Raiders owner FILE - In this April 28, 2016 file photo, Oakland Raiders owner Mark Davis, &hellip;  <a href="http://gazette.com/vegas-stadium-backers-dont-want-to-share-profit-with-public/article/feed/395554">more</a>.</p>
+					<p><p>photo - FILE - In this April 28, 2016 file photo, Oakland Raiders owner FILE - In this April 28, 2016 file photo, Oakland Raiders owner Mark Davis, &hellip;  <a href="http://gazette.com/vegas-stadium-backers-dont-want-to-share-profit-with-public/article/feed/395554" onclick="trackOutboundLink('http://gazette.com/vegas-stadium-backers-dont-want-to-share-profit-with-public/article/feed/395554'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

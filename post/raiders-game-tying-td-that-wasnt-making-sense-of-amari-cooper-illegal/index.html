@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>19</b></p>
 					<h3>Raiders game tying TD that wasn&#39;t: Making sense of Amari Cooper illegal</h3>
-					<p><p>Silver and Black Pride Late in the Raiders 35-28 loss to the Falcons, it appeared as if Amari Cooper had made a game-tying touchdown catch only to have it called back.  <a href="http://www.silverandblackpride.com/2016/9/19/12982088/raiders-game-tying-td-that-wasnt-making-sense-of-amari-cooper-illegal-touching-penalty">more</a>.</p>
+					<p><p>Silver and Black Pride Late in the Raiders 35-28 loss to the Falcons, it appeared as if Amari Cooper had made a game-tying touchdown catch only to have it called back.  <a href="http://www.silverandblackpride.com/2016/9/19/12982088/raiders-game-tying-td-that-wasnt-making-sense-of-amari-cooper-illegal-touching-penalty" onclick="trackOutboundLink('http://www.silverandblackpride.com/2016/9/19/12982088/raiders-game-tying-td-that-wasnt-making-sense-of-amari-cooper-illegal-touching-penalty'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

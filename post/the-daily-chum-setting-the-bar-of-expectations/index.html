@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>The Daily Chum: Setting the bar of expectations</h3>
-					<p><p>&hellip; anniversary of The Daily Chum, I hope you&rsquo;ll indulge me while I try to figure out what exactly I want from the San Jose Sharks this season. In years &hellip;  <a href="http://www.fearthefin.com/2016/9/28/13077324/the-daily-chum-san-jose-sharks-expectations">more</a>.</p>
+					<p><p>&hellip; anniversary of The Daily Chum, I hope you&rsquo;ll indulge me while I try to figure out what exactly I want from the San Jose Sharks this season. In years &hellip;  <a href="http://www.fearthefin.com/2016/9/28/13077324/the-daily-chum-san-jose-sharks-expectations" onclick="trackOutboundLink('http://www.fearthefin.com/2016/9/28/13077324/the-daily-chum-san-jose-sharks-expectations'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

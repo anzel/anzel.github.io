@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>15</b></p>
 					<h3>PHOTOS: Relive Week 1 at 49ers</h3>
-					<p><p>photographer Jeff Lewis&rsquo; camera. PHOTOS: Relive Week 1 at 49ers.  <a href="http://www.therams.com/photos/photo-gallery/PHOTOS-Relive-Week-1-at-49ers/e1342029-2a74-4783-a326-60c0bb96027d">more</a>.</p>
+					<p><p>photographer Jeff Lewis&rsquo; camera. PHOTOS: Relive Week 1 at 49ers.  <a href="http://www.therams.com/photos/photo-gallery/PHOTOS-Relive-Week-1-at-49ers/e1342029-2a74-4783-a326-60c0bb96027d" onclick="trackOutboundLink('http://www.therams.com/photos/photo-gallery/PHOTOS-Relive-Week-1-at-49ers/e1342029-2a74-4783-a326-60c0bb96027d'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

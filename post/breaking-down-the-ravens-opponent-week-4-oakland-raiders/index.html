@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>Breaking down the Ravens opponent: Week 4, Oakland Raiders</h3>
-					<p><p>The Baltimore Ravens will host the Oakland Raiders on Sunday with a chance to move to 4-0 for the first time in ten years. by Michael Kaskey-Blomain &hellip;  <a href="http://www.cbssports.com/nfl/news/breaking-down-the-ravens-opponent-week-4-oakland-raiders/">more</a>.</p>
+					<p><p>The Baltimore Ravens will host the Oakland Raiders on Sunday with a chance to move to 4-0 for the first time in ten years. by Michael Kaskey-Blomain &hellip;  <a href="http://www.cbssports.com/nfl/news/breaking-down-the-ravens-opponent-week-4-oakland-raiders/" onclick="trackOutboundLink('http://www.cbssports.com/nfl/news/breaking-down-the-ravens-opponent-week-4-oakland-raiders/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

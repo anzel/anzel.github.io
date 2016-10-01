@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>Royals playoff hopes take a hit with second loss to Oakland</h3>
-					<p><p>(AP)  Pinch hitter Yonder Alonso delivered a two-run double in the eighth inning and the Oakland Athletics rallied past Kansas City 5-4 Tuesday night &hellip;  <a href="http://www.hayspost.com/2016/09/14/royals-playoff-hopes-take-a-hit-with-second-loss-to-oakland/">more</a>.</p>
+					<p><p>(AP)  Pinch hitter Yonder Alonso delivered a two-run double in the eighth inning and the Oakland Athletics rallied past Kansas City 5-4 Tuesday night &hellip;  <a href="http://www.hayspost.com/2016/09/14/royals-playoff-hopes-take-a-hit-with-second-loss-to-oakland/" onclick="trackOutboundLink('http://www.hayspost.com/2016/09/14/royals-playoff-hopes-take-a-hit-with-second-loss-to-oakland/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

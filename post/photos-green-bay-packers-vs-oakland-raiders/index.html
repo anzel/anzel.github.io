@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>03</b></p>
 					<h3>Photos: Green Bay Packers vs. Oakland Raiders</h3>
-					<p><p>The Green Bay Packers faced the Oakland Raiders in the second preseason game of the year. TownNews.com Content Exchange &hellip;  <a href="http://www.hutchnews.com/sports/nfl/photos-green-bay-packers-vs-oakland-raiders/collection_3a27554c-4d3c-5235-ad98-c87614a497e8.html">more</a>.</p>
+					<p><p>The Green Bay Packers faced the Oakland Raiders in the second preseason game of the year. TownNews.com Content Exchange &hellip;  <a href="http://www.hutchnews.com/sports/nfl/photos-green-bay-packers-vs-oakland-raiders/collection_3a27554c-4d3c-5235-ad98-c87614a497e8.html" onclick="trackOutboundLink('http://www.hutchnews.com/sports/nfl/photos-green-bay-packers-vs-oakland-raiders/collection_3a27554c-4d3c-5235-ad98-c87614a497e8.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>15</b></p>
 					<h3>New York Yankees Sign First Baseman Billy Butler (Report)</h3>
-					<p><p>On Sunday, the Oakland Athletics released the 10-year veteran with one year remaining on his contract. He was hitting .276 with just four home runs in &hellip;  <a href="http://elitesportsny.com/2016/09/14/new-york-yankees-sign-billy-butler-report/">more</a>.</p>
+					<p><p>On Sunday, the Oakland Athletics released the 10-year veteran with one year remaining on his contract. He was hitting .276 with just four home runs in &hellip;  <a href="http://elitesportsny.com/2016/09/14/new-york-yankees-sign-billy-butler-report/" onclick="trackOutboundLink('http://elitesportsny.com/2016/09/14/new-york-yankees-sign-billy-butler-report/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

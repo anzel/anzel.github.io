@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>09</b></p>
 					<h3>WATCH: The SF Giants are falling apart and one fan is losing his mind</h3>
-					<p><p>There&rsquo;s no denying that the San Francisco Giants are suffering through one of the toughest collapses in recent memory. They went from having the &hellip;  <a href="http://www.yardbarker.com/mlb/articles/the_sf_giants_are_falling_apart_and_one_fan_is_losing_his_mind/s1_14326_21780634">more</a>.</p>
+					<p><p>There&rsquo;s no denying that the San Francisco Giants are suffering through one of the toughest collapses in recent memory. They went from having the &hellip;  <a href="http://www.yardbarker.com/mlb/articles/the_sf_giants_are_falling_apart_and_one_fan_is_losing_his_mind/s1_14326_21780634" onclick="trackOutboundLink('http://www.yardbarker.com/mlb/articles/the_sf_giants_are_falling_apart_and_one_fan_is_losing_his_mind/s1_14326_21780634'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

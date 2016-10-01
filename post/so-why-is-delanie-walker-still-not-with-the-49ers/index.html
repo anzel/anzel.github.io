@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>22</b></p>
 					<h3>So why is Delanie Walker still not with the 49ers?</h3>
-					<p><p>Raiders coach Jack Del Rio wondered aloud Wednesday how the 49ers could have allowed tight end Delanie Walker to get away. Del Rio is correct.  <a href="http://www.csnbayarea.com/49ers/so-why-delanie-walker-still-not-49ers">more</a>.</p>
+					<p><p>Raiders coach Jack Del Rio wondered aloud Wednesday how the 49ers could have allowed tight end Delanie Walker to get away. Del Rio is correct.  <a href="http://www.csnbayarea.com/49ers/so-why-delanie-walker-still-not-49ers" onclick="trackOutboundLink('http://www.csnbayarea.com/49ers/so-why-delanie-walker-still-not-49ers'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>11</b></p>
 					<h3>Game Details: Oakland Raiders @ New Orleans Saints</h3>
-					<p><p>Everything to know for the Oakland Raiders regular season opener against the New Orleans Saints. With hopes high following a banner offseason that &hellip;  <a href="http://justblogbaby.com/2016/09/11/oakland-raiders-vs-new-orleans-saints-start-time-live-stream-team-history/">more</a>.</p>
+					<p><p>Everything to know for the Oakland Raiders regular season opener against the New Orleans Saints. With hopes high following a banner offseason that &hellip;  <a href="http://justblogbaby.com/2016/09/11/oakland-raiders-vs-new-orleans-saints-start-time-live-stream-team-history/" onclick="trackOutboundLink('http://justblogbaby.com/2016/09/11/oakland-raiders-vs-new-orleans-saints-start-time-live-stream-team-history/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

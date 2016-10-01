@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>30</b></p>
 					<h3>Kaepernick: &#39;Let&#39;s make America great again for the first time&#39;</h3>
-					<p><p>Colin Kaepernick during 49ers game against Seahawks SEATTLE, WA - SEPTEMBER 25: Quarterback Colin Kaepernick #7 of the San Francisco &hellip;  <a href="http://www.myajc.com/news/news/national-govt-politics/kaepernick-lets-make-america-great-again-first-tim/nshPK/">more</a>.</p>
+					<p><p>Colin Kaepernick during 49ers game against Seahawks SEATTLE, WA - SEPTEMBER 25: Quarterback Colin Kaepernick #7 of the San Francisco &hellip;  <a href="http://www.myajc.com/news/news/national-govt-politics/kaepernick-lets-make-america-great-again-first-tim/nshPK/" onclick="trackOutboundLink('http://www.myajc.com/news/news/national-govt-politics/kaepernick-lets-make-america-great-again-first-tim/nshPK/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

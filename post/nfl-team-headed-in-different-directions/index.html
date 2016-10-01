@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>10</b></p>
 					<h3>NFL team headed in different directions</h3>
-					<p><p>Sunday&rsquo;s regular season opener between the New Orleans Saints and the Oakland Raiders will not be a significant moment for each team this year.  <a href="http://www.dailycomet.com/article/20160910/opinion01/160919980">more</a>.</p>
+					<p><p>Sunday&rsquo;s regular season opener between the New Orleans Saints and the Oakland Raiders will not be a significant moment for each team this year.  <a href="http://www.dailycomet.com/article/20160910/opinion01/160919980" onclick="trackOutboundLink('http://www.dailycomet.com/article/20160910/opinion01/160919980'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>03</b></p>
 					<h3>Yoan Moncada Makes MLB Debut In Blowout Red Sox Win</h3>
-					<p><p>Yoan Moncada scores on an RBI double from Travis Shaw against the Oakland Athletics in the top of the eighth inning at Oakland-Alameda County &hellip;  <a href="http://boston.cbslocal.com/2016/09/03/yoan-moncada-boston-red-sox-oakland-athletics/">more</a>.</p>
+					<p><p>Yoan Moncada scores on an RBI double from Travis Shaw against the Oakland Athletics in the top of the eighth inning at Oakland-Alameda County &hellip;  <a href="http://boston.cbslocal.com/2016/09/03/yoan-moncada-boston-red-sox-oakland-athletics/" onclick="trackOutboundLink('http://boston.cbslocal.com/2016/09/03/yoan-moncada-boston-red-sox-oakland-athletics/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

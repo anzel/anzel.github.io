@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>Panthers, 49ers focus on game, not sideshows</h3>
-					<p><p>Panthers, 49ers focus on game, not sideshows. CHARLOTTE, N.C. &ndash; The Carolina Panthers would like to be talking about what Cam Newton can do &hellip;  <a href="http://www.foxsports.com/nfl/story/panthers-49ers-focus-on-game-not-sideshows-091416">more</a>.</p>
+					<p><p>Panthers, 49ers focus on game, not sideshows. CHARLOTTE, N.C. &ndash; The Carolina Panthers would like to be talking about what Cam Newton can do &hellip;  <a href="http://www.foxsports.com/nfl/story/panthers-49ers-focus-on-game-not-sideshows-091416" onclick="trackOutboundLink('http://www.foxsports.com/nfl/story/panthers-49ers-focus-on-game-not-sideshows-091416'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

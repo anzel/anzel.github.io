@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>John Harbaugh: David Amerson has become one of NFL&#39;s best CBs</h3>
-					<p><p>People around the NFL are taking note of Oakland Raiders cornerback David Amerson and the transformation he has undergone since the &hellip;  <a href="http://oak.247sports.com/Bolt/John-Harbaugh-David-Amerson-has-become-one-of-NFLs-best-CBs-47843363">more</a>.</p>
+					<p><p>People around the NFL are taking note of Oakland Raiders cornerback David Amerson and the transformation he has undergone since the &hellip;  <a href="http://oak.247sports.com/Bolt/John-Harbaugh-David-Amerson-has-become-one-of-NFLs-best-CBs-47843363" onclick="trackOutboundLink('http://oak.247sports.com/Bolt/John-Harbaugh-David-Amerson-has-become-one-of-NFLs-best-CBs-47843363'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>29</b></p>
 					<h3>Oakland Raiders (2-1) at Baltimore Ravens (3-0)</h3>
-					<p><p>Oakland Raiders (2-1) at Baltimore Ravens (3-0). Sports Xchange. September 28, 2016 at 11:58 pm. Kickoff. Sunday, 1 p.m. ET, M&amp;T Bank Stadium, &hellip;  <a href="http://www.lindyssports.com/nfl/pick/oakland-raiders-2-1-at-baltimore-ravens-3-0-2/414464/">more</a>.</p>
+					<p><p>Oakland Raiders (2-1) at Baltimore Ravens (3-0). Sports Xchange. September 28, 2016 at 11:58 pm. Kickoff. Sunday, 1 p.m. ET, M&amp;T Bank Stadium, &hellip;  <a href="http://www.lindyssports.com/nfl/pick/oakland-raiders-2-1-at-baltimore-ravens-3-0-2/414464/" onclick="trackOutboundLink('http://www.lindyssports.com/nfl/pick/oakland-raiders-2-1-at-baltimore-ravens-3-0-2/414464/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

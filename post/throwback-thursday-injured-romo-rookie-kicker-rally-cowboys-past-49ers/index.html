@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>29</b></p>
 					<h3>Throwback Thursday: Injured Romo, Rookie Kicker Rally Cowboys Past 49ers</h3>
-					<p><p>From there, Romo hooked up with Jesse Holley on a 77-yard pass play to the 49ers&rsquo; 1, which set up Dan Bailey&rsquo;s game-winning field goal for a 27-24 &hellip;  <a href="http://www.dallascowboys.com/news/2016/09/29/throwback-thursday-injured-romo-rookie-kicker-rally-cowboys-past-49ers">more</a>.</p>
+					<p><p>From there, Romo hooked up with Jesse Holley on a 77-yard pass play to the 49ers&rsquo; 1, which set up Dan Bailey&rsquo;s game-winning field goal for a 27-24 &hellip;  <a href="http://www.dallascowboys.com/news/2016/09/29/throwback-thursday-injured-romo-rookie-kicker-rally-cowboys-past-49ers" onclick="trackOutboundLink('http://www.dallascowboys.com/news/2016/09/29/throwback-thursday-injured-romo-rookie-kicker-rally-cowboys-past-49ers'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>San Francisco 49ers to donate $1 million to social justice groups</h3>
-					<p><p>Kaepernick, the San Francisco 49ers will contribute a hefty sum to two &hellip;  <a href="http://kmel.iheart.com/onair/shay-diddy-48395/san-francisco-49ers-to-donate-1-15090054/">more</a>.</p>
+					<p><p>Kaepernick, the San Francisco 49ers will contribute a hefty sum to two &hellip;  <a href="http://kmel.iheart.com/onair/shay-diddy-48395/san-francisco-49ers-to-donate-1-15090054/" onclick="trackOutboundLink('http://kmel.iheart.com/onair/shay-diddy-48395/san-francisco-49ers-to-donate-1-15090054/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

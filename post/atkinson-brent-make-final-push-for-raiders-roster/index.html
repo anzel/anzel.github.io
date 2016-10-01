@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>02</b></p>
 					<h3>Atkinson, Brent Make Final Push for Raiders Roster</h3>
-					<p><p>It was an ugly exhibition game Thursday night, even by exhibition standards, as the Seahawks beat the host Oakland Raiders by a 23-21 score.  <a href="http://www.nbcbayarea.com/news/local/Atkinson-Brent-Make-Final-Push-for-Raiders-Roster-392113531.html">more</a>.</p>
+					<p><p>It was an ugly exhibition game Thursday night, even by exhibition standards, as the Seahawks beat the host Oakland Raiders by a 23-21 score.  <a href="http://www.nbcbayarea.com/news/local/Atkinson-Brent-Make-Final-Push-for-Raiders-Roster-392113531.html" onclick="trackOutboundLink('http://www.nbcbayarea.com/news/local/Atkinson-Brent-Make-Final-Push-for-Raiders-Roster-392113531.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>Real Salt Lake: Another Wondolowski test awaits this weekend at San Jose</h3>
-					<p><p>(Scott Sommerdorf | The Salt Lake Tribune) San Jose Earthquakes forward Chris Wondolowski (8), left watches as his first half goal gets past Real Salt &hellip;  <a href="http://www.sltrib.com/home/4404109-155/real-salt-lake-another-wondolowski-test">more</a>.</p>
+					<p><p>(Scott Sommerdorf | The Salt Lake Tribune) San Jose Earthquakes forward Chris Wondolowski (8), left watches as his first half goal gets past Real Salt &hellip;  <a href="http://www.sltrib.com/home/4404109-155/real-salt-lake-another-wondolowski-test" onclick="trackOutboundLink('http://www.sltrib.com/home/4404109-155/real-salt-lake-another-wondolowski-test'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

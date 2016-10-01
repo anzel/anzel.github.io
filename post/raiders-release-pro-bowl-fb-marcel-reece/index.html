@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>Raiders release Pro Bowl FB Marcel Reece</h3>
-					<p><p>Oakland Raiders head coach Jack Del Rio congratulates center Rodney Hudson (61) after the Raiders scored a touchdown against the Tennessee &hellip;  <a href="http://napavalleyregister.com/sports/college-and-pro/raiders-release-pro-bowl-fb-marcel-reece/article_8b544a23-f10f-5cd1-877d-b6c0145c2107.html">more</a>.</p>
+					<p><p>Oakland Raiders head coach Jack Del Rio congratulates center Rodney Hudson (61) after the Raiders scored a touchdown against the Tennessee &hellip;  <a href="http://napavalleyregister.com/sports/college-and-pro/raiders-release-pro-bowl-fb-marcel-reece/article_8b544a23-f10f-5cd1-877d-b6c0145c2107.html" onclick="trackOutboundLink('http://napavalleyregister.com/sports/college-and-pro/raiders-release-pro-bowl-fb-marcel-reece/article_8b544a23-f10f-5cd1-877d-b6c0145c2107.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

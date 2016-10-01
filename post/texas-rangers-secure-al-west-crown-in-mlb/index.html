@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>24</b></p>
 					<h3>Texas Rangers secure AL West crown in MLB</h3>
-					<p><p>The Texas Rangers have beaten Oakland Athletics 3-0 to claim their second successive Major League Baseball American League West crown.  <a href="http://www.sbs.com.au/news/article/2016/09/24/texas-rangers-secure-al-west-crown-mlb">more</a>.</p>
+					<p><p>The Texas Rangers have beaten Oakland Athletics 3-0 to claim their second successive Major League Baseball American League West crown.  <a href="http://www.sbs.com.au/news/article/2016/09/24/texas-rangers-secure-al-west-crown-mlb" onclick="trackOutboundLink('http://www.sbs.com.au/news/article/2016/09/24/texas-rangers-secure-al-west-crown-mlb'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

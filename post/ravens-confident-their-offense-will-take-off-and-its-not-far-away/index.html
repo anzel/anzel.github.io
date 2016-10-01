@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>Ravens Confident Their Offense Will Take Off, And It&#39;s Not Far Away</h3>
-					<p><p>This week&rsquo;s opponent, the Oakland Raiders, have the worst-ranked defense in the league. They&rsquo;ve allowed 476 yards per game (32nd) and 26.3 &hellip;  <a href="http://www.baltimoreravens.com/news/article-1/Ravens-Confident-Their-Offense-Will-Take-Off-And-Its-Not-Far-Away/2b57d09b-5495-4a2b-b9e4-6cc3bddd21fe">more</a>.</p>
+					<p><p>This week&rsquo;s opponent, the Oakland Raiders, have the worst-ranked defense in the league. They&rsquo;ve allowed 476 yards per game (32nd) and 26.3 &hellip;  <a href="http://www.baltimoreravens.com/news/article-1/Ravens-Confident-Their-Offense-Will-Take-Off-And-Its-Not-Far-Away/2b57d09b-5495-4a2b-b9e4-6cc3bddd21fe" onclick="trackOutboundLink('http://www.baltimoreravens.com/news/article-1/Ravens-Confident-Their-Offense-Will-Take-Off-And-Its-Not-Far-Away/2b57d09b-5495-4a2b-b9e4-6cc3bddd21fe'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

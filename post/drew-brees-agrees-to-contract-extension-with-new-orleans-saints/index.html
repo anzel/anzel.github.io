@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>07</b></p>
 					<h3>Drew Brees agrees to contract extension with New Orleans Saints</h3>
-					<p><p>&hellip; and had presviously stated he wanted to get a deal done before the season started Sunday vs. the Oakland Raiders. Brees signed with the Saints in &hellip;  <a href="http://www.neworleanssaints.com/news-and-events/article-1/Drew-Brees-agrees-to-contract-extension-with-New-Orleans-Saints/eb99ee91-de18-43db-b5ce-6ff765604701">more</a>.</p>
+					<p><p>&hellip; and had presviously stated he wanted to get a deal done before the season started Sunday vs. the Oakland Raiders. Brees signed with the Saints in &hellip;  <a href="http://www.neworleanssaints.com/news-and-events/article-1/Drew-Brees-agrees-to-contract-extension-with-New-Orleans-Saints/eb99ee91-de18-43db-b5ce-6ff765604701" onclick="trackOutboundLink('http://www.neworleanssaints.com/news-and-events/article-1/Drew-Brees-agrees-to-contract-extension-with-New-Orleans-Saints/eb99ee91-de18-43db-b5ce-6ff765604701'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

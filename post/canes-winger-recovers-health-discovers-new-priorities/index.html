@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>06</b></p>
 					<h3>Canes winger recovers health, discovers new priorities</h3>
-					<p><p>&hellip; Andrej Nestrasil (15) moves the puck against the San Jose Sharks&rsquo; Joe Thornton (19) during game against the San Jose Sharks at PNC in February.  <a href="http://www.newsobserver.com/sports/nhl/carolina-hurricanes/article100193382.html">more</a>.</p>
+					<p><p>&hellip; Andrej Nestrasil (15) moves the puck against the San Jose Sharks&rsquo; Joe Thornton (19) during game against the San Jose Sharks at PNC in February.  <a href="http://www.newsobserver.com/sports/nhl/carolina-hurricanes/article100193382.html" onclick="trackOutboundLink('http://www.newsobserver.com/sports/nhl/carolina-hurricanes/article100193382.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

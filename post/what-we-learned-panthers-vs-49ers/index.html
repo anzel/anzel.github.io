@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>What We Learned: Panthers vs. 49ers</h3>
-					<p><p>Home streak continues: With the 46-27 win over the 49ers, Carolina has now won 14 consecutive games at home, extending the longest active streak &hellip;  <a href="http://www.panthers.com/news/article-2/What-We-Learned-Panthers-vs-49ers/5647b995-ac04-478c-bc1d-3c02321cabfb">more</a>.</p>
+					<p><p>Home streak continues: With the 46-27 win over the 49ers, Carolina has now won 14 consecutive games at home, extending the longest active streak &hellip;  <a href="http://www.panthers.com/news/article-2/What-We-Learned-Panthers-vs-49ers/5647b995-ac04-478c-bc1d-3c02321cabfb" onclick="trackOutboundLink('http://www.panthers.com/news/article-2/What-We-Learned-Panthers-vs-49ers/5647b995-ac04-478c-bc1d-3c02321cabfb'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

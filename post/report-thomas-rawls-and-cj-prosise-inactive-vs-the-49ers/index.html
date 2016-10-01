@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>Report: Thomas Rawls and CJ Prosise inactive vs the 49ers</h3>
-					<p><p>Per the report, Rawls will sit versus the San Francisco 49ers on Sunday due to his injured shin. The injury, which was described as a contusion of sorts &hellip;  <a href="http://sea.247sports.com/Bolt/Report-Thomas-Rawls-and-CJ-Prosise-inactive-vs-the-49ers-47766561">more</a>.</p>
+					<p><p>Per the report, Rawls will sit versus the San Francisco 49ers on Sunday due to his injured shin. The injury, which was described as a contusion of sorts &hellip;  <a href="http://sea.247sports.com/Bolt/Report-Thomas-Rawls-and-CJ-Prosise-inactive-vs-the-49ers-47766561" onclick="trackOutboundLink('http://sea.247sports.com/Bolt/Report-Thomas-Rawls-and-CJ-Prosise-inactive-vs-the-49ers-47766561'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

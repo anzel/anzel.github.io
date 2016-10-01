@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>01</b></p>
 					<h3>Watch Seattle Seahawks Vs. Oakland Raiders Live Stream: Start Time, Preview</h3>
-					<p><p>The Inquisitr The National Football League preseason wraps up Thursday night as the Seattle Seahawks travel down the west coast to Oakland to take on the &hellip;  <a href="http://www.inquisitr.com/3474735/seattle-seahawks-vs-oakland-raiders-live-stream/">more</a>.</p>
+					<p><p>The Inquisitr The National Football League preseason wraps up Thursday night as the Seattle Seahawks travel down the west coast to Oakland to take on the &hellip;  <a href="http://www.inquisitr.com/3474735/seattle-seahawks-vs-oakland-raiders-live-stream/" onclick="trackOutboundLink('http://www.inquisitr.com/3474735/seattle-seahawks-vs-oakland-raiders-live-stream/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

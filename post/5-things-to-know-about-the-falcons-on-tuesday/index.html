@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>20</b></p>
 					<h3>5 things to know about the Falcons on Tuesday</h3>
-					<p><p>FLOWERY BRANCH  After posting a thrilling 35-28 victory over the Oakland Raiders, the Falcons (1-1) are set to face the rival New Orleans Saints &hellip;  <a href="http://atlantafalcons.blog.ajc.com/2016/09/20/5-things-to-know-about-the-falcons-on-tuesday-10/">more</a>.</p>
+					<p><p>FLOWERY BRANCH  After posting a thrilling 35-28 victory over the Oakland Raiders, the Falcons (1-1) are set to face the rival New Orleans Saints &hellip;  <a href="http://atlantafalcons.blog.ajc.com/2016/09/20/5-things-to-know-about-the-falcons-on-tuesday-10/" onclick="trackOutboundLink('http://atlantafalcons.blog.ajc.com/2016/09/20/5-things-to-know-about-the-falcons-on-tuesday-10/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

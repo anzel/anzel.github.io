@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>16</b></p>
 					<h3>5 Falcons to note vs. Raiders</h3>
-					<p><p>Before the Oakland Raiders take the field for Week 2, fans must be aware of these five (technically six) Atlanta Falcons. Some of them are &hellip;  <a href="http://oak.247sports.com/Gallery/5-Atlanta-Falcons-to-note-vs-Oakland-Raiders-47509131">more</a>.</p>
+					<p><p>Before the Oakland Raiders take the field for Week 2, fans must be aware of these five (technically six) Atlanta Falcons. Some of them are &hellip;  <a href="http://oak.247sports.com/Gallery/5-Atlanta-Falcons-to-note-vs-Oakland-Raiders-47509131" onclick="trackOutboundLink('http://oak.247sports.com/Gallery/5-Atlanta-Falcons-to-note-vs-Oakland-Raiders-47509131'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>04</b></p>
 					<h3>San Jose Earthquakes drop 4-3 result to Pachuca in international friendly</h3>
-					<p><p>A late comeback by the San Jose Earthquakes fell just short in a 4-3 loss at the hands of reigning Liga MX champions Pachuca in a friendly match &hellip;  <a href="http://www.mlssoccer.com/post/2016/09/04/san-jose-earthquakes-drop-4-3-result-pachuca-international-friendly">more</a>.</p>
+					<p><p>A late comeback by the San Jose Earthquakes fell just short in a 4-3 loss at the hands of reigning Liga MX champions Pachuca in a friendly match &hellip;  <a href="http://www.mlssoccer.com/post/2016/09/04/san-jose-earthquakes-drop-4-3-result-pachuca-international-friendly" onclick="trackOutboundLink('http://www.mlssoccer.com/post/2016/09/04/san-jose-earthquakes-drop-4-3-result-pachuca-international-friendly'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

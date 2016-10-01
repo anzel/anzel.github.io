@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>49ers Kick Off Season With Annual Pasta Bowl Charity Dinner</h3>
-					<p><p>There are many football bowl games. But there&rsquo;s one bowl where everyone&rsquo;s a winner. It&rsquo;s the San Francisco 49ers Foundation&rsquo;s annual Pasta Bowl &hellip;  <a href="http://www.santaclaraweekly.com/2016/Issue-37/49ers-kick-off-season-with-annual-pasta-bowl-charity-dinner.html">more</a>.</p>
+					<p><p>There are many football bowl games. But there&rsquo;s one bowl where everyone&rsquo;s a winner. It&rsquo;s the San Francisco 49ers Foundation&rsquo;s annual Pasta Bowl &hellip;  <a href="http://www.santaclaraweekly.com/2016/Issue-37/49ers-kick-off-season-with-annual-pasta-bowl-charity-dinner.html" onclick="trackOutboundLink('http://www.santaclaraweekly.com/2016/Issue-37/49ers-kick-off-season-with-annual-pasta-bowl-charity-dinner.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

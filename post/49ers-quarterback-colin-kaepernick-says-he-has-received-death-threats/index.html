@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>20</b></p>
 					<h3>49ers Quarterback Colin Kaepernick Says He Has Received Death Threats</h3>
-					<p><p>NBC Bay Area San Francisco 49ers players Colin Kaepernick (center) and Eric Reid (left) kneel during the national anthem before their game against the Carolina &hellip;  <a href="http://www.nbcbayarea.com/news/local/49ers-Quarterback-Colin-Kaepernick-Says-He-Has-Received-Death-Threats-During-Protest-Movement-394187271.html">more</a>.</p>
+					<p><p>NBC Bay Area San Francisco 49ers players Colin Kaepernick (center) and Eric Reid (left) kneel during the national anthem before their game against the Carolina &hellip;  <a href="http://www.nbcbayarea.com/news/local/49ers-Quarterback-Colin-Kaepernick-Says-He-Has-Received-Death-Threats-During-Protest-Movement-394187271.html" onclick="trackOutboundLink('http://www.nbcbayarea.com/news/local/49ers-Quarterback-Colin-Kaepernick-Says-He-Has-Received-Death-Threats-During-Protest-Movement-394187271.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

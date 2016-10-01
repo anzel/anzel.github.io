@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>11</b></p>
 					<h3>In-Game Feed: Oakland Raiders Take On New Orleans Saints</h3>
-					<p><p>The Oakland Raiders open up the 2016 regular season on the road Sunday afternoon at the Mercedes-Benz Superdome in New Orleans, squaring off &hellip;  <a href="http://www.raiders.com/news/article-1/In-Game-Feed-Oakland-Raiders-Take-On-New-Orleans-Saints/1f310f6a-11e7-4223-ba13-fa27badac7c1">more</a>.</p>
+					<p><p>The Oakland Raiders open up the 2016 regular season on the road Sunday afternoon at the Mercedes-Benz Superdome in New Orleans, squaring off &hellip;  <a href="http://www.raiders.com/news/article-1/In-Game-Feed-Oakland-Raiders-Take-On-New-Orleans-Saints/1f310f6a-11e7-4223-ba13-fa27badac7c1" onclick="trackOutboundLink('http://www.raiders.com/news/article-1/In-Game-Feed-Oakland-Raiders-Take-On-New-Orleans-Saints/1f310f6a-11e7-4223-ba13-fa27badac7c1'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

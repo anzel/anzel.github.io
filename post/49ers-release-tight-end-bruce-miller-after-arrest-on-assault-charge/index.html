@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>05</b></p>
 					<h3>49ers release tight end Bruce Miller after arrest on assault charge</h3>
-					<p><p>SANTA CLARA, Calif. &ndash; The? San Francisco 49ers?released tight end Bruce Miller?on Monday afternoon after he was arrested on suspicion of &hellip;  <a href="http://abcnews.go.com/Sports/49ers-release-tight-end-bruce-miller-arrest-assault/story?id=41877641">more</a>.</p>
+					<p><p>SANTA CLARA, Calif. &ndash; The? San Francisco 49ers?released tight end Bruce Miller?on Monday afternoon after he was arrested on suspicion of &hellip;  <a href="http://abcnews.go.com/Sports/49ers-release-tight-end-bruce-miller-arrest-assault/story?id=41877641" onclick="trackOutboundLink('http://abcnews.go.com/Sports/49ers-release-tight-end-bruce-miller-arrest-assault/story?id=41877641'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>Fantasy football rankings, 2016: Defense/special teams for Week 4</h3>
-					<p><p>&hellip; and New England (away), respectively. Also, don&rsquo;t underestimate Baltimore, who are welcoming a West Coast Oakland Raiders team for a 1 p.m. ET &hellip;  <a href="http://www.sbnation.com/2016/9/28/13088598/fantasy-football-rankings-week-4-defense-special-teams">more</a>.</p>
+					<p><p>&hellip; and New England (away), respectively. Also, don&rsquo;t underestimate Baltimore, who are welcoming a West Coast Oakland Raiders team for a 1 p.m. ET &hellip;  <a href="http://www.sbnation.com/2016/9/28/13088598/fantasy-football-rankings-week-4-defense-special-teams" onclick="trackOutboundLink('http://www.sbnation.com/2016/9/28/13088598/fantasy-football-rankings-week-4-defense-special-teams'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

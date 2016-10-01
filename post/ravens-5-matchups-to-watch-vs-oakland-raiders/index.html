@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>29</b></p>
 					<h3>Ravens: 5 Matchups to Watch vs. Oakland Raiders</h3>
-					<p><p>The Oakland Raiders are off to a 2-1 start and many fell they have a real chance to win the AFC West this season. The Ravens want to ruin those &hellip;  <a href="http://thebaltimorewire.com/2016/09/29/baltimore-ravens-5-matchups-to-watch-vs-oakland-raiders/">more</a>.</p>
+					<p><p>The Oakland Raiders are off to a 2-1 start and many fell they have a real chance to win the AFC West this season. The Ravens want to ruin those &hellip;  <a href="http://thebaltimorewire.com/2016/09/29/baltimore-ravens-5-matchups-to-watch-vs-oakland-raiders/" onclick="trackOutboundLink('http://thebaltimorewire.com/2016/09/29/baltimore-ravens-5-matchups-to-watch-vs-oakland-raiders/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

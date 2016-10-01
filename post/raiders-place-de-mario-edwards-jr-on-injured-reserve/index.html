@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>05</b></p>
 					<h3>Raiders place DE Mario Edwards Jr. on injured reserve</h3>
-					<p><p>Oakland Raiders defensive tackle Mario Jr. Edwards (97) looks on from the bench during the third quarter against the San Diego Chargers at &hellip;  <a href="http://www.abc10.com/sports/nfl/oakland-raiders/raiders-place-de-mario-edwards-jr-on-injured-reserve/313969612">more</a>.</p>
+					<p><p>Oakland Raiders defensive tackle Mario Jr. Edwards (97) looks on from the bench during the third quarter against the San Diego Chargers at &hellip;  <a href="http://www.abc10.com/sports/nfl/oakland-raiders/raiders-place-de-mario-edwards-jr-on-injured-reserve/313969612" onclick="trackOutboundLink('http://www.abc10.com/sports/nfl/oakland-raiders/raiders-place-de-mario-edwards-jr-on-injured-reserve/313969612'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

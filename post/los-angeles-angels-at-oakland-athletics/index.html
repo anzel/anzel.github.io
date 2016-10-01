@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>02</b></p>
 					<h3>Los Angeles Angels at Oakland Athletics</h3>
-					<p><p>tickets on SeatGeek and ride BART to the show. Use two fingers to move &hellip;  <a href="http://bartable.bart.gov/events/los-angeles-angels-oakland-athletics-0">more</a>.</p>
+					<p><p>tickets on SeatGeek and ride BART to the show. Use two fingers to move &hellip;  <a href="http://bartable.bart.gov/events/los-angeles-angels-oakland-athletics-0" onclick="trackOutboundLink('http://bartable.bart.gov/events/los-angeles-angels-oakland-athletics-0'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

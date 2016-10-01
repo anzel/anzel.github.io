@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>22</b></p>
 					<h3>Five questions for the San Jose Sharks during camp, regular season</h3>
-					<p><p>Sharks forward Tomas Hertl, middle, appears ready to have a breakout season. But whether to play him at center or on the wing is a question the team &hellip;  <a href="http://www.mercurynews.com/2016/09/22/five-questions-for-the-san-jose-sharks-during-camp-regular-season/">more</a>.</p>
+					<p><p>Sharks forward Tomas Hertl, middle, appears ready to have a breakout season. But whether to play him at center or on the wing is a question the team &hellip;  <a href="http://www.mercurynews.com/2016/09/22/five-questions-for-the-san-jose-sharks-during-camp-regular-season/" onclick="trackOutboundLink('http://www.mercurynews.com/2016/09/22/five-questions-for-the-san-jose-sharks-during-camp-regular-season/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

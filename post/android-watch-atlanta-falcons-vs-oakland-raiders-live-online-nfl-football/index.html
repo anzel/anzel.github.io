@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>Android Watch Atlanta Falcons Vs Oakland Raiders Live Online NFL Football</h3>
-					<p><p>Oakland Raiders Online NFL Football Streaming Ipad|&gt;*[ Watch Atlanta. Falcons Vs Oakland Raiders Online Watch NFL Football Live Mobile|&gt;&amp;).  <a href="ftp://ftp.cob.org/incoming/WCC/HD_Stream_Atlanta_Falcons_Vs_Oakland_Raiders_Live_Online_Espn_Live_Stream_NFL_Football.pdf">more</a>.</p>
+					<p><p>Oakland Raiders Online NFL Football Streaming Ipad|&gt;*[ Watch Atlanta. Falcons Vs Oakland Raiders Online Watch NFL Football Live Mobile|&gt;&amp;).  <a href="ftp://ftp.cob.org/incoming/WCC/HD_Stream_Atlanta_Falcons_Vs_Oakland_Raiders_Live_Online_Espn_Live_Stream_NFL_Football.pdf" onclick="trackOutboundLink('ftp://ftp.cob.org/incoming/WCC/HD_Stream_Atlanta_Falcons_Vs_Oakland_Raiders_Live_Online_Espn_Live_Stream_NFL_Football.pdf'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

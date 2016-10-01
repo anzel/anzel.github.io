@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>05</b></p>
 					<h3>49ers Bruce Miller Arrested: 5 Fast Facts You Need to Know</h3>
-					<p><p>San Francisco 49ers fullback Bruce Miller was arrested Monday for assault, according to KTVU Fox2. This is the second time in two years Miller has &hellip;  <a href="http://heavy.com/sports/2016/09/49ers-fullback-bruce-miller-arrested-assault-70-year-old-man-fishermans-wharf-marriott-nfl-policy/">more</a>.</p>
+					<p><p>San Francisco 49ers fullback Bruce Miller was arrested Monday for assault, according to KTVU Fox2. This is the second time in two years Miller has &hellip;  <a href="http://heavy.com/sports/2016/09/49ers-fullback-bruce-miller-arrested-assault-70-year-old-man-fishermans-wharf-marriott-nfl-policy/" onclick="trackOutboundLink('http://heavy.com/sports/2016/09/49ers-fullback-bruce-miller-arrested-assault-70-year-old-man-fishermans-wharf-marriott-nfl-policy/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

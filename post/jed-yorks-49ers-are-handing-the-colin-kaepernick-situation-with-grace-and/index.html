@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>09</b></p>
 					<h3>Jed York&#39;s 49ers are handing the Colin Kaepernick situation with grace, and</h3>
-					<p><p>The Mercury News (blog) I criticize Jed York a lot, probably more than anybody does, but I&rsquo;m not surprised he has led the 49ers deftly through the Colin Kaepernick national &hellip;  <a href="http://blogs.mercurynews.com/kawakami/2016/09/08/jed-yorks-49ers-handing-colin-kaepernick-situation-grace-repairing-bumpy-relationship-along-way/">more</a>.</p>
+					<p><p>The Mercury News (blog) I criticize Jed York a lot, probably more than anybody does, but I&rsquo;m not surprised he has led the 49ers deftly through the Colin Kaepernick national &hellip;  <a href="http://blogs.mercurynews.com/kawakami/2016/09/08/jed-yorks-49ers-handing-colin-kaepernick-situation-grace-repairing-bumpy-relationship-along-way/" onclick="trackOutboundLink('http://blogs.mercurynews.com/kawakami/2016/09/08/jed-yorks-49ers-handing-colin-kaepernick-situation-grace-repairing-bumpy-relationship-along-way/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

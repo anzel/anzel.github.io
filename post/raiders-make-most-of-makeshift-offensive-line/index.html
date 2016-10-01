@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>13</b></p>
 					<h3>Raiders make most of makeshift offensive line</h3>
-					<p><p>ALAMEDA, Calif. &ndash; The Oakland Raiders were already without backup right tackle Austin Howard, who was inactive for Sunday&rsquo;s season opener at the &hellip;  <a href="http://www.espn.com/blog/afcwest/post/_/id/75876/raiders-make-most-of-makeshift-offensive-line">more</a>.</p>
+					<p><p>ALAMEDA, Calif. &ndash; The Oakland Raiders were already without backup right tackle Austin Howard, who was inactive for Sunday&rsquo;s season opener at the &hellip;  <a href="http://www.espn.com/blog/afcwest/post/_/id/75876/raiders-make-most-of-makeshift-offensive-line" onclick="trackOutboundLink('http://www.espn.com/blog/afcwest/post/_/id/75876/raiders-make-most-of-makeshift-offensive-line'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

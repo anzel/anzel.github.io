@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>26</b></p>
 					<h3>Russell Wilson injured in Seattle Seahawks 37-18 rout of San Francisco</h3>
-					<p><p>KGO-TV Seattle Seahawks quarterback Trevone Boykin in action against the San Francisco 49ers in the second half of an NFL football game, Sunday, Sept.  <a href="http://abc7news.com/sports/russell-wilson-injured-in-seattles-37-18-rout-of-49ers/1526328/">more</a>.</p>
+					<p><p>KGO-TV Seattle Seahawks quarterback Trevone Boykin in action against the San Francisco 49ers in the second half of an NFL football game, Sunday, Sept.  <a href="http://abc7news.com/sports/russell-wilson-injured-in-seattles-37-18-rout-of-49ers/1526328/" onclick="trackOutboundLink('http://abc7news.com/sports/russell-wilson-injured-in-seattles-37-18-rout-of-49ers/1526328/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

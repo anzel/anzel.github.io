@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>06</b></p>
 					<h3>Colin Kaepernick San Francisco 49ers jersey becomes NFL bestseller after</h3>
-					<p><p>The Sydney Morning Herald Kaepernick, the San Francisco 49ers quarterback, declined to stand during the playing of the national anthem ahead of a pre-season game on August &hellip;  <a href="http://www.smh.com.au/sport/us-sports/colin-kaepernick-san-francisco-49ers-jersey-becomes-nfl-bestseller-after-anthem-protest-20160906-gradfw.html">more</a>.</p>
+					<p><p>The Sydney Morning Herald Kaepernick, the San Francisco 49ers quarterback, declined to stand during the playing of the national anthem ahead of a pre-season game on August &hellip;  <a href="http://www.smh.com.au/sport/us-sports/colin-kaepernick-san-francisco-49ers-jersey-becomes-nfl-bestseller-after-anthem-protest-20160906-gradfw.html" onclick="trackOutboundLink('http://www.smh.com.au/sport/us-sports/colin-kaepernick-san-francisco-49ers-jersey-becomes-nfl-bestseller-after-anthem-protest-20160906-gradfw.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

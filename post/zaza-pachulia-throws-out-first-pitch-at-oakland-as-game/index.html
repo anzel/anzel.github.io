@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>23</b></p>
 					<h3>Zaza Pachulia throws out first pitch at Oakland A&#39;s game</h3>
-					<p><p>The Warriors&rsquo; new center joined the Oakland Athletics ahead of their matchup with the Texas Rangers. He got a personalized jersey with his no.  <a href="http://bluemanhoop.com/2016/09/23/zaza-pachulia-throws-first-pitch-oakland-game/">more</a>.</p>
+					<p><p>The Warriors&rsquo; new center joined the Oakland Athletics ahead of their matchup with the Texas Rangers. He got a personalized jersey with his no.  <a href="http://bluemanhoop.com/2016/09/23/zaza-pachulia-throws-first-pitch-oakland-game/" onclick="trackOutboundLink('http://bluemanhoop.com/2016/09/23/zaza-pachulia-throws-first-pitch-oakland-game/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

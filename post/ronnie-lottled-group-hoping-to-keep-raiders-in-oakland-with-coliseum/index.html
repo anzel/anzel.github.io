@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>21</b></p>
 					<h3>Ronnie Lott-led group hoping to keep Raiders in Oakland with Coliseum</h3>
-					<p><p>The Comeback (blog) There simply is something wrong with the NFL&rsquo;s Raiders franchise not being the Oakland Raiders. It didn&rsquo;t feel right when they moved to Los Angeles &hellip;  <a href="http://thecomeback.com/nfl/ronnie-lott-raiders-oakland-coliseum-purchase.html">more</a>.</p>
+					<p><p>The Comeback (blog) There simply is something wrong with the NFL&rsquo;s Raiders franchise not being the Oakland Raiders. It didn&rsquo;t feel right when they moved to Los Angeles &hellip;  <a href="http://thecomeback.com/nfl/ronnie-lott-raiders-oakland-coliseum-purchase.html" onclick="trackOutboundLink('http://thecomeback.com/nfl/ronnie-lott-raiders-oakland-coliseum-purchase.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

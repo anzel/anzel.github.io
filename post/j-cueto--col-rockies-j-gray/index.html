@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>29</b></p>
 					<h3>(J. Cueto) - COL Rockies (J. Gray)</h3>
-					<p><p>BetClic. See our best odds, statistics and live results!  <a href="https://en.betclic.com/sf-giants-j-cueto-col-rockies-j-gray-m1251206">more</a>.</p>
+					<p><p>BetClic. See our best odds, statistics and live results!  <a href="https://en.betclic.com/sf-giants-j-cueto-col-rockies-j-gray-m1251206" onclick="trackOutboundLink('https://en.betclic.com/sf-giants-j-cueto-col-rockies-j-gray-m1251206'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

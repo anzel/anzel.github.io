@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>Fox Stream San Francisco 49ers Vs Seattle Seahawks Live Online Espn3</h3>
-					<p><p>Click Here To Watch San Francisco 49ers Vs Seattle Seahawks Live &hellip; Live Online NFL Football On Internet Radio|Stream San Francisco 49ers Vs &hellip;  <a href="http://pdc.dukemedicine.org/sites/pdc.dukemedicine.org/files/webform/Android_Stream_San_Francisco_49ers_Vs_Seattle_Seahawks_Live_Online_Free_Online_NFL_Fantasy_Football.pdf">more</a>.</p>
+					<p><p>Click Here To Watch San Francisco 49ers Vs Seattle Seahawks Live &hellip; Live Online NFL Football On Internet Radio|Stream San Francisco 49ers Vs &hellip;  <a href="http://pdc.dukemedicine.org/sites/pdc.dukemedicine.org/files/webform/Android_Stream_San_Francisco_49ers_Vs_Seattle_Seahawks_Live_Online_Free_Online_NFL_Fantasy_Football.pdf" onclick="trackOutboundLink('http://pdc.dukemedicine.org/sites/pdc.dukemedicine.org/files/webform/Android_Stream_San_Francisco_49ers_Vs_Seattle_Seahawks_Live_Online_Free_Online_NFL_Fantasy_Football.pdf'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

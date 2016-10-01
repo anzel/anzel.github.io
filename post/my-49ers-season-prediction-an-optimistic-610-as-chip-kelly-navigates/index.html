@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>11</b></p>
 					<h3>My 49ers season prediction: An optimistic 6-10 as Chip Kelly navigates</h3>
-					<p><p>The Mercury News (blog) Something knocked the 49ers off their moorings a few years ago and nothing has been normal or exactly right about this team ever since. Something &hellip;  <a href="http://blogs.mercurynews.com/kawakami/2016/09/11/49ers-2016-season-prediction-6-10/">more</a>.</p>
+					<p><p>The Mercury News (blog) Something knocked the 49ers off their moorings a few years ago and nothing has been normal or exactly right about this team ever since. Something &hellip;  <a href="http://blogs.mercurynews.com/kawakami/2016/09/11/49ers-2016-season-prediction-6-10/" onclick="trackOutboundLink('http://blogs.mercurynews.com/kawakami/2016/09/11/49ers-2016-season-prediction-6-10/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

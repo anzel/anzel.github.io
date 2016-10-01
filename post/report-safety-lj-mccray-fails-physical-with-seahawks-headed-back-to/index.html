@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>05</b></p>
 					<h3>Report: Safety L.J. McCray fails physical with Seahawks, headed back to</h3>
-					<p><p>The Seattle Times Seattle Seahawks general manager John Schneider, left, and head coach Pete Carroll talk after a training camp session at the VMAC on Friday.  <a href="http://www.seattletimes.com/sports/seahawks/report-safety-l-j-mccray-fails-physical-with-seahawks-headed-back-to-49ers/">more</a>.</p>
+					<p><p>The Seattle Times Seattle Seahawks general manager John Schneider, left, and head coach Pete Carroll talk after a training camp session at the VMAC on Friday.  <a href="http://www.seattletimes.com/sports/seahawks/report-safety-l-j-mccray-fails-physical-with-seahawks-headed-back-to-49ers/" onclick="trackOutboundLink('http://www.seattletimes.com/sports/seahawks/report-safety-l-j-mccray-fails-physical-with-seahawks-headed-back-to-49ers/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

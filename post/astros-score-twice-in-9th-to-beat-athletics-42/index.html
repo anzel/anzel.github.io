@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>20</b></p>
 					<h3>Astros score twice in 9th to beat Athletics 4-2</h3>
-					<p><p>&hellip; followed with a two-run single off Ryan Madson in the ninth and the Astros came from behind to beat the Oakland Athletics 4-2 on Monday night.  <a href="http://www.pantagraph.com/sports/baseball/professional/astros-score-twice-in-th-to-beat-athletics/article_2658ad02-a2df-556e-ad03-687b41e584ab.html">more</a>.</p>
+					<p><p>&hellip; followed with a two-run single off Ryan Madson in the ninth and the Astros came from behind to beat the Oakland Athletics 4-2 on Monday night.  <a href="http://www.pantagraph.com/sports/baseball/professional/astros-score-twice-in-th-to-beat-athletics/article_2658ad02-a2df-556e-ad03-687b41e584ab.html" onclick="trackOutboundLink('http://www.pantagraph.com/sports/baseball/professional/astros-score-twice-in-th-to-beat-athletics/article_2658ad02-a2df-556e-ad03-687b41e584ab.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

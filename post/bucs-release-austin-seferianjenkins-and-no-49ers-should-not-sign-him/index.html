@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>23</b></p>
 					<h3>Bucs release Austin Seferian-Jenkins, and no 49ers should not sign him</h3>
-					<p><p>I saw multiple tweets asking if the 49ers should try and claim the third year tight end. The one-time second round pick has significant size and &hellip;  <a href="http://www.ninersnation.com/2016/9/23/13035734/bucs-release-austin-seferian-jenkins-49ers-tight-end">more</a>.</p>
+					<p><p>I saw multiple tweets asking if the 49ers should try and claim the third year tight end. The one-time second round pick has significant size and &hellip;  <a href="http://www.ninersnation.com/2016/9/23/13035734/bucs-release-austin-seferian-jenkins-49ers-tight-end" onclick="trackOutboundLink('http://www.ninersnation.com/2016/9/23/13035734/bucs-release-austin-seferian-jenkins-49ers-tight-end'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

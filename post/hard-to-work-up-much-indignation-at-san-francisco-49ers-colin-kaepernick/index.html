@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>07</b></p>
 					<h3>Hard to work up much indignation at San Francisco 49ers&#39; Colin Kaepernick</h3>
-					<p><p>National Post And this is an even longer way of saying that it has been hard to work up much indignation at San Francisco 49ers quarterback Colin Kaepernick over &hellip;  <a href="http://news.nationalpost.com/sports/nfl/hard-to-work-up-much-indignation-at-san-francisco-49ers-colin-kaepernick-over-refusal-to-stand-for-anthem">more</a>.</p>
+					<p><p>National Post And this is an even longer way of saying that it has been hard to work up much indignation at San Francisco 49ers quarterback Colin Kaepernick over &hellip;  <a href="http://news.nationalpost.com/sports/nfl/hard-to-work-up-much-indignation-at-san-francisco-49ers-colin-kaepernick-over-refusal-to-stand-for-anthem" onclick="trackOutboundLink('http://news.nationalpost.com/sports/nfl/hard-to-work-up-much-indignation-at-san-francisco-49ers-colin-kaepernick-over-refusal-to-stand-for-anthem'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

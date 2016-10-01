@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>17</b></p>
 					<h3>Panthers vs 49ers: Game time, TV schedule, online streaming and more</h3>
-					<p><p>If you don&rsquo;t live in the Panthers television market you can stream all NFL regular season games on demand if you purchase NFL Game Pass. It&rsquo;s a little &hellip;  <a href="http://www.catscratchreader.com/2016/9/17/12919666/carolina-panthers-san-francisco-49ers-game-time-tv-radio-channel-online-streaming-weather-odds">more</a>.</p>
+					<p><p>If you don&rsquo;t live in the Panthers television market you can stream all NFL regular season games on demand if you purchase NFL Game Pass. It&rsquo;s a little &hellip;  <a href="http://www.catscratchreader.com/2016/9/17/12919666/carolina-panthers-san-francisco-49ers-game-time-tv-radio-channel-online-streaming-weather-odds" onclick="trackOutboundLink('http://www.catscratchreader.com/2016/9/17/12919666/carolina-panthers-san-francisco-49ers-game-time-tv-radio-channel-online-streaming-weather-odds'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

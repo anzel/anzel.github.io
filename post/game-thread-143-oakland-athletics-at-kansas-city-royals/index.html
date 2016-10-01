@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>Game Thread #143: Oakland Athletics at Kansas City Royals</h3>
-					<p><p>The A&rsquo;s are trying to bounce back after a sweep at the hands of the Seattle Mariners. Or not, depending on your stance on tanking. But the A&rsquo;s have a &hellip;  <a href="http://www.athleticsnation.com/2016/9/12/12895598/game-thread-143-oakland-athletics-at-kansas-city-royals">more</a>.</p>
+					<p><p>The A&rsquo;s are trying to bounce back after a sweep at the hands of the Seattle Mariners. Or not, depending on your stance on tanking. But the A&rsquo;s have a &hellip;  <a href="http://www.athleticsnation.com/2016/9/12/12895598/game-thread-143-oakland-athletics-at-kansas-city-royals" onclick="trackOutboundLink('http://www.athleticsnation.com/2016/9/12/12895598/game-thread-143-oakland-athletics-at-kansas-city-royals'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

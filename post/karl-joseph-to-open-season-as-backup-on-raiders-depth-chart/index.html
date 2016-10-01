@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>06</b></p>
 					<h3>Karl Joseph to open season as backup on Raiders depth chart</h3>
-					<p><p>The Raiders have just released their depth chart for Week 1 in New Orleans and rookie safety Karl Joseph will begin his career as a backup. Tweet &hellip;  <a href="http://www.silverandblackpride.com/2016/9/6/12821934/karl-joseph-to-open-season-as-backup-on-raiders-depth-chart">more</a>.</p>
+					<p><p>The Raiders have just released their depth chart for Week 1 in New Orleans and rookie safety Karl Joseph will begin his career as a backup. Tweet &hellip;  <a href="http://www.silverandblackpride.com/2016/9/6/12821934/karl-joseph-to-open-season-as-backup-on-raiders-depth-chart" onclick="trackOutboundLink('http://www.silverandblackpride.com/2016/9/6/12821934/karl-joseph-to-open-season-as-backup-on-raiders-depth-chart'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

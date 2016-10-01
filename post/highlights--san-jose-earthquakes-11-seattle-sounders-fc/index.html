@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>11</b></p>
 					<h3>HIGHLIGHTS - San Jose Earthquakes 1-1 Seattle Sounders FC</h3>
-					<p><p>It&rsquo;s a huge match in the Western Conference as two teams battling for the final playoff spot meet at Avaya Stadium. San Jose comes into the game &hellip;  <a href="http://www.mlssoccer.com/post/2016/09/11/highlights-san-jose-earthquakes-1-1-seattle-sounders-fc">more</a>.</p>
+					<p><p>It&rsquo;s a huge match in the Western Conference as two teams battling for the final playoff spot meet at Avaya Stadium. San Jose comes into the game &hellip;  <a href="http://www.mlssoccer.com/post/2016/09/11/highlights-san-jose-earthquakes-1-1-seattle-sounders-fc" onclick="trackOutboundLink('http://www.mlssoccer.com/post/2016/09/11/highlights-san-jose-earthquakes-1-1-seattle-sounders-fc'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

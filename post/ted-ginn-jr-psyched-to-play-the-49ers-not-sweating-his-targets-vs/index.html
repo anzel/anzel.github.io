@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>Ted Ginn Jr. psyched to play the 49ers, not sweating his targets vs.</h3>
-					<p><p>Charlotte Observer Carolina Panthers wide receiver Ted Ginn Jr. played three of his previous nine NFL seasons with the San Francisco 49ers. His contributions there &hellip;  <a href="http://www.charlotteobserver.com/sports/nfl/carolina-panthers/article101864027.html">more</a>.</p>
+					<p><p>Charlotte Observer Carolina Panthers wide receiver Ted Ginn Jr. played three of his previous nine NFL seasons with the San Francisco 49ers. His contributions there &hellip;  <a href="http://www.charlotteobserver.com/sports/nfl/carolina-panthers/article101864027.html" onclick="trackOutboundLink('http://www.charlotteobserver.com/sports/nfl/carolina-panthers/article101864027.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

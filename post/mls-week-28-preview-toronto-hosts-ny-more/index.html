@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>16</b></p>
 					<h3>MLS Week 28 Preview: Toronto hosts NY, more</h3>
-					<p><p>San Jose Earthquakes, Saturday at 9 p.m.. Colorado looks to keep rolling against San Jose. The Rapids, due to their games in hand, have a solid shot &hellip;  <a href="http://www.empireofsoccer.com/mls-week-28-preview-toronto-hosts-ny-more-53677/">more</a>.</p>
+					<p><p>San Jose Earthquakes, Saturday at 9 p.m.. Colorado looks to keep rolling against San Jose. The Rapids, due to their games in hand, have a solid shot &hellip;  <a href="http://www.empireofsoccer.com/mls-week-28-preview-toronto-hosts-ny-more-53677/" onclick="trackOutboundLink('http://www.empireofsoccer.com/mls-week-28-preview-toronto-hosts-ny-more-53677/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

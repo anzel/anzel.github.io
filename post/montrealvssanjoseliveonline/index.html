@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>Montreal....vs....San....Jose....live....online</h3>
-					<p><p>n&hellip;.Jose&hellip;.Sharks&hellip;.? Watch&hellip;.Canucks&hellip;.vs&hellip;.Sharks&hellip;.Live&hellip;.Streaming&hellip;.free.  <a href="https://www.wno.org.uk/sites/wnolive/files/webform/((GamE~TV))%20Montreal%20vs%20San%20Jose%20Live%20St-ream%20On-line.Coverage%20..28%20Sep.%202016.pdf">more</a>.</p>
+					<p><p>n&hellip;.Jose&hellip;.Sharks&hellip;.? Watch&hellip;.Canucks&hellip;.vs&hellip;.Sharks&hellip;.Live&hellip;.Streaming&hellip;.free.  <a href="https://www.wno.org.uk/sites/wnolive/files/webform/((GamE~TV))%20Montreal%20vs%20San%20Jose%20Live%20St-ream%20On-line.Coverage%20..28%20Sep.%202016.pdf" onclick="trackOutboundLink('https://www.wno.org.uk/sites/wnolive/files/webform/((GamE~TV))%20Montreal%20vs%20San%20Jose%20Live%20St-ream%20On-line.Coverage%20..28%20Sep.%202016.pdf'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

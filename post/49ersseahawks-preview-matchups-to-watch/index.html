@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>24</b></p>
 					<h3>49ers-Seahawks preview: Matchups to watch</h3>
-					<p><p>The San Francisco 49ers head into the Pacific Northwest Sunday to face the Seattle Seahawks in a Week 3 matchup. The game kicks off at 1:05 p.m. &hellip;  <a href="http://www.ninersnation.com/2016/9/24/13026450/49ers-seahawks-preview-matchups-to-watch-arik-armstead-deforest-buckner-russell-wilson">more</a>.</p>
+					<p><p>The San Francisco 49ers head into the Pacific Northwest Sunday to face the Seattle Seahawks in a Week 3 matchup. The game kicks off at 1:05 p.m. &hellip;  <a href="http://www.ninersnation.com/2016/9/24/13026450/49ers-seahawks-preview-matchups-to-watch-arik-armstead-deforest-buckner-russell-wilson" onclick="trackOutboundLink('http://www.ninersnation.com/2016/9/24/13026450/49ers-seahawks-preview-matchups-to-watch-arik-armstead-deforest-buckner-russell-wilson'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

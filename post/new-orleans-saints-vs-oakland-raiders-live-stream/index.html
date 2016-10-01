@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>11</b></p>
 					<h3>New Orleans Saints vs Oakland Raiders Live Stream</h3>
-					<p><p>Saints) O.n.l.i.n.e/Cast ..11 Sep 2016. Posted by Hesab Hk 5LP on &hellip;  <a href="http://www.lptexas.org/99480/new_orleans_saints_v_s_oakland_raiders_l_i_v_e_s_t_r_e_a_m_nfl_raiders_v_s_saints_o_n_l_i_n_e_cast_11_sep_2016">more</a>.</p>
+					<p><p>Saints) O.n.l.i.n.e/Cast ..11 Sep 2016. Posted by Hesab Hk 5LP on &hellip;  <a href="http://www.lptexas.org/99480/new_orleans_saints_v_s_oakland_raiders_l_i_v_e_s_t_r_e_a_m_nfl_raiders_v_s_saints_o_n_l_i_n_e_cast_11_sep_2016" onclick="trackOutboundLink('http://www.lptexas.org/99480/new_orleans_saints_v_s_oakland_raiders_l_i_v_e_s_t_r_e_a_m_nfl_raiders_v_s_saints_o_n_l_i_n_e_cast_11_sep_2016'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

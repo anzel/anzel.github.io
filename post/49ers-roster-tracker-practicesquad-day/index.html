@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>04</b></p>
 					<h3>49ers&#39; roster tracker: Practice-squad day</h3>
-					<p><p>The 49ers can begin filling out their 10-man practice squad at 10 a.m. today and it will probably be mostly comprised by those players they released &hellip;  <a href="http://www.sfgate.com/49ers/article/49ers-roster-tracker-Practice-squad-day-9202780.php">more</a>.</p>
+					<p><p>The 49ers can begin filling out their 10-man practice squad at 10 a.m. today and it will probably be mostly comprised by those players they released &hellip;  <a href="http://www.sfgate.com/49ers/article/49ers-roster-tracker-Practice-squad-day-9202780.php" onclick="trackOutboundLink('http://www.sfgate.com/49ers/article/49ers-roster-tracker-Practice-squad-day-9202780.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

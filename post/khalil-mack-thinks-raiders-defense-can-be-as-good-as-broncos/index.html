@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>04</b></p>
 					<h3>Khalil Mack thinks Raiders&#39; defense can be as good as Broncos&#39;</h3>
-					<p><p>After a long day of meetings and practice and more meetings, Lee Smith finally would plop down in his hotel room at training camp and open up a &hellip;  <a href="http://www.sfgate.com/raiders/article/Khalil-Mack-thinks-Raiders-defense-can-be-as-9203112.php">more</a>.</p>
+					<p><p>After a long day of meetings and practice and more meetings, Lee Smith finally would plop down in his hotel room at training camp and open up a &hellip;  <a href="http://www.sfgate.com/raiders/article/Khalil-Mack-thinks-Raiders-defense-can-be-as-9203112.php" onclick="trackOutboundLink('http://www.sfgate.com/raiders/article/Khalil-Mack-thinks-Raiders-defense-can-be-as-9203112.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>07</b></p>
 					<h3>Team USA names Sharks&#39; Joe Pavelski captain</h3>
-					<p><p>There are a lot of emotions that go through it, Pavelski, the captain of the San Jose Sharks, said Wednesday. It&rsquo;s pretty exciting. It&rsquo;s a big honour.  <a href="http://www.torontosun.com/2016/09/07/team-usa-names-sharks-joe-pavelski-captain">more</a>.</p>
+					<p><p>There are a lot of emotions that go through it, Pavelski, the captain of the San Jose Sharks, said Wednesday. It&rsquo;s pretty exciting. It&rsquo;s a big honour.  <a href="http://www.torontosun.com/2016/09/07/team-usa-names-sharks-joe-pavelski-captain" onclick="trackOutboundLink('http://www.torontosun.com/2016/09/07/team-usa-names-sharks-joe-pavelski-captain'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

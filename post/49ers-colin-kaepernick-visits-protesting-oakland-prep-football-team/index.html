@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>24</b></p>
 					<h3>49ers&#39; Colin Kaepernick visits protesting Oakland prep football team</h3>
-					<p><p>On Friday, a week after they joined Colin Kaepernick in kneeling for the national anthem, the Knights were joined by the 49ers quarterback for their &hellip;  <a href="http://www.sfgate.com/49ers/article/49ers-Colin-Kaepernick-visits-protesting-9248031.php">more</a>.</p>
+					<p><p>On Friday, a week after they joined Colin Kaepernick in kneeling for the national anthem, the Knights were joined by the 49ers quarterback for their &hellip;  <a href="http://www.sfgate.com/49ers/article/49ers-Colin-Kaepernick-visits-protesting-9248031.php" onclick="trackOutboundLink('http://www.sfgate.com/49ers/article/49ers-Colin-Kaepernick-visits-protesting-9248031.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

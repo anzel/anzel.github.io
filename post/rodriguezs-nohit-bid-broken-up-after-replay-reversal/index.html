@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Oct<b>01</b></p>
 					<h3>Rodriguez&#39;s no-hit bid broken up after replay reversal</h3>
-					<p><p>Boston Red Sox pitcher Eduardo Rodriguez, center, reacts after Oakland Athletics&rsquo; Marcus Semien hit a single, breaking up a no hitter in the eighth &hellip;  <a href="http://www.whio.com/sports/rodriguez-hit-bid-broken-after-replay-reversal/kGOaUZiaIbxlpo1T3QlhcK/">more</a>.</p>
+					<p><p>Boston Red Sox pitcher Eduardo Rodriguez, center, reacts after Oakland Athletics&rsquo; Marcus Semien hit a single, breaking up a no hitter in the eighth &hellip;  <a href="http://www.whio.com/sports/rodriguez-hit-bid-broken-after-replay-reversal/kGOaUZiaIbxlpo1T3QlhcK/" onclick="trackOutboundLink('http://www.whio.com/sports/rodriguez-hit-bid-broken-after-replay-reversal/kGOaUZiaIbxlpo1T3QlhcK/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

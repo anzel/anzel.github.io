@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>13</b></p>
 					<h3>Saints&#39; fourth-quarter meltdown tackled in this week&#39;s Defensive Film Study</h3>
-					<p><p>The New Orleans Saints surrendered 22 points and 210 yards of offense to the Oakland Raiders in the fourth quarter Sunday. I&rsquo;d say that qualifies as &hellip;  <a href="http://www.nola.com/saints/index.ssf/2016/09/saints_raiders_defensive_film.html">more</a>.</p>
+					<p><p>The New Orleans Saints surrendered 22 points and 210 yards of offense to the Oakland Raiders in the fourth quarter Sunday. I&rsquo;d say that qualifies as &hellip;  <a href="http://www.nola.com/saints/index.ssf/2016/09/saints_raiders_defensive_film.html" onclick="trackOutboundLink('http://www.nola.com/saints/index.ssf/2016/09/saints_raiders_defensive_film.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>21</b></p>
 					<h3>San Francisco 49ers Legend Jerry Rice Reverses his Stance on Kaepernick</h3>
-					<p><p>Mediaite screen-shot-2016-08-30-at-9-59- Legendary San Francisco 49ers wide receiver Jerry Rice, an initial critic of Colin Kaepernick&rsquo;s National Anthem &hellip;  <a href="http://www.mediaite.com/online/san-francisco-49ers-legend-jerry-rice-reverses-his-stance-on-kaepernick-protest-now-supports-it/">more</a>.</p>
+					<p><p>Mediaite screen-shot-2016-08-30-at-9-59- Legendary San Francisco 49ers wide receiver Jerry Rice, an initial critic of Colin Kaepernick&rsquo;s National Anthem &hellip;  <a href="http://www.mediaite.com/online/san-francisco-49ers-legend-jerry-rice-reverses-his-stance-on-kaepernick-protest-now-supports-it/" onclick="trackOutboundLink('http://www.mediaite.com/online/san-francisco-49ers-legend-jerry-rice-reverses-his-stance-on-kaepernick-protest-now-supports-it/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

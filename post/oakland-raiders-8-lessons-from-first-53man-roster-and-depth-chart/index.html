@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>07</b></p>
 					<h3>Oakland Raiders: 8 lessons from first 53-man roster and depth chart</h3>
-					<p><p>Lessons from the Oakland Raiders&rsquo; final roster cuts, first depth chart, and practice squad which were released this week. The Oakland Raiders &hellip;  <a href="http://justblogbaby.com/2016/09/07/59171/">more</a>.</p>
+					<p><p>Lessons from the Oakland Raiders&rsquo; final roster cuts, first depth chart, and practice squad which were released this week. The Oakland Raiders &hellip;  <a href="http://justblogbaby.com/2016/09/07/59171/" onclick="trackOutboundLink('http://justblogbaby.com/2016/09/07/59171/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>01</b></p>
 					<h3>Nicols Lodeiro named Etihad Airways Player of the Month for August</h3>
-					<p><p>After a break this week due to the FIFA window, Lodeiro and Sounders FC are set to visit the San Jose Earthquakes on Saturday, September 10 (7:30 &hellip;  <a href="http://www.soundersfc.com/post/2016/09/01/nicol-s-lodeiro-named-etihad-airways-player-month-august">more</a>.</p>
+					<p><p>After a break this week due to the FIFA window, Lodeiro and Sounders FC are set to visit the San Jose Earthquakes on Saturday, September 10 (7:30 &hellip;  <a href="http://www.soundersfc.com/post/2016/09/01/nicol-s-lodeiro-named-etihad-airways-player-month-august" onclick="trackOutboundLink('http://www.soundersfc.com/post/2016/09/01/nicol-s-lodeiro-named-etihad-airways-player-month-august'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>Stollery To Make New Jersey Preseason Debut Monday Night</h3>
-					<p><p>Stollery, 28, is in his first season with the Devils after playing with the San Jose Sharks the last two seasons. Stollery first inked an NHL deal in 2013, &hellip;  <a href="http://www.themackreport.com/news/stollery-to-make-new-jersey-preseason-debut-monday-night/">more</a>.</p>
+					<p><p>Stollery, 28, is in his first season with the Devils after playing with the San Jose Sharks the last two seasons. Stollery first inked an NHL deal in 2013, &hellip;  <a href="http://www.themackreport.com/news/stollery-to-make-new-jersey-preseason-debut-monday-night/" onclick="trackOutboundLink('http://www.themackreport.com/news/stollery-to-make-new-jersey-preseason-debut-monday-night/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>WATCH: Shaquille O&#39;Neal questions 49ers QB Colin Kaepernick&#39;s national</h3>
-					<p><p>SECcountry.com Shaquille O&rsquo;Neal has joined the conversation on San Francisco 49ers QB Colin Kaepernick, and the former LSU great said he wouldn&rsquo;t do what &hellip;  <a href="https://www.seccountry.com/lsu/shaquille-oneal-questions-49ers-qb-colin-kaepernicks-national-anthem-protest">more</a>.</p>
+					<p><p>SECcountry.com Shaquille O&rsquo;Neal has joined the conversation on San Francisco 49ers QB Colin Kaepernick, and the former LSU great said he wouldn&rsquo;t do what &hellip;  <a href="https://www.seccountry.com/lsu/shaquille-oneal-questions-49ers-qb-colin-kaepernicks-national-anthem-protest" onclick="trackOutboundLink('https://www.seccountry.com/lsu/shaquille-oneal-questions-49ers-qb-colin-kaepernicks-national-anthem-protest'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

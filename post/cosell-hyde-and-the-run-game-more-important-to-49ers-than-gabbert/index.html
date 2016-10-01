@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>Cosell: Hyde and the run game more important to 49ers than Gabbert</h3>
-					<p><p>After three games, the 49ers rank 11th in the NFL in rushing yards per game (116.7). But some of those yards are empty, according to NFL Films &hellip;  <a href="http://www.knbr.com/2016/09/28/cosell-hyde-and-the-run-game-more-important-to-49ers-than-gabbert/">more</a>.</p>
+					<p><p>After three games, the 49ers rank 11th in the NFL in rushing yards per game (116.7). But some of those yards are empty, according to NFL Films &hellip;  <a href="http://www.knbr.com/2016/09/28/cosell-hyde-and-the-run-game-more-important-to-49ers-than-gabbert/" onclick="trackOutboundLink('http://www.knbr.com/2016/09/28/cosell-hyde-and-the-run-game-more-important-to-49ers-than-gabbert/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

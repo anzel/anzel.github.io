@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Aug<b>31</b></p>
 					<h3>Justice 4 Mario Woods Rally for 49ers QB Colin Kaepernick</h3>
-					<p><p>A grassroots group held a small rally Wednesday in support of Colin Kaepernick, two days after the San Francisco Police Officers Association &hellip;  <a href="http://www.nbcbayarea.com/news/local/Justice-4-Mario-Woods-Rally-For-49ers-QB-Colin-Kaepernick-391873791.html">more</a>.</p>
+					<p><p>A grassroots group held a small rally Wednesday in support of Colin Kaepernick, two days after the San Francisco Police Officers Association &hellip;  <a href="http://www.nbcbayarea.com/news/local/Justice-4-Mario-Woods-Rally-For-49ers-QB-Colin-Kaepernick-391873791.html" onclick="trackOutboundLink('http://www.nbcbayarea.com/news/local/Justice-4-Mario-Woods-Rally-For-49ers-QB-Colin-Kaepernick-391873791.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

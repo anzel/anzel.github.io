@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>07</b></p>
 					<h3>Officially Licensed MLB Sweatshirt Throw by Northwest - Oakland Athletics</h3>
-					<p><p>Athletics 7597717, read customer reviews and more at HSN.com.  <a href="http://www.hsn.com/products/officially-licensed-mlb-sweatshirt-throw-by-northwest/7597717">more</a>.</p>
+					<p><p>Athletics 7597717, read customer reviews and more at HSN.com.  <a href="http://www.hsn.com/products/officially-licensed-mlb-sweatshirt-throw-by-northwest/7597717" onclick="trackOutboundLink('http://www.hsn.com/products/officially-licensed-mlb-sweatshirt-throw-by-northwest/7597717'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

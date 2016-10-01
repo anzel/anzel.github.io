@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>03</b></p>
 					<h3>The San Francisco 49ers may have a security problem at their games</h3>
-					<p><p>Things in the City by the Bay continue to get more and more interesting as the 2016 NFL regular season kickoff approaches. Will Colin Kaepernick be &hellip;  <a href="http://hotair.com/archives/2016/09/03/san-francisco-49ers-may-security-problem-games/">more</a>.</p>
+					<p><p>Things in the City by the Bay continue to get more and more interesting as the 2016 NFL regular season kickoff approaches. Will Colin Kaepernick be &hellip;  <a href="http://hotair.com/archives/2016/09/03/san-francisco-49ers-may-security-problem-games/" onclick="trackOutboundLink('http://hotair.com/archives/2016/09/03/san-francisco-49ers-may-security-problem-games/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

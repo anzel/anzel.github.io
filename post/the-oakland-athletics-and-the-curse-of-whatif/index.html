@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>13</b></p>
 					<h3>The Oakland Athletics and the Curse of &#39;What-If?&#39;</h3>
-					<p><p>The Oakland Athletics are 60-82 this season, and 128-176 since the beginning of last season. Those aren&rsquo;t exactly good numbers, even in the slightly &hellip;  <a href="http://www.todaysknuckleball.com/al/oakland-athletics/the-oakland-athletics-and-the-curse-of-what-if/">more</a>.</p>
+					<p><p>The Oakland Athletics are 60-82 this season, and 128-176 since the beginning of last season. Those aren&rsquo;t exactly good numbers, even in the slightly &hellip;  <a href="http://www.todaysknuckleball.com/al/oakland-athletics/the-oakland-athletics-and-the-curse-of-what-if/" onclick="trackOutboundLink('http://www.todaysknuckleball.com/al/oakland-athletics/the-oakland-athletics-and-the-curse-of-what-if/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

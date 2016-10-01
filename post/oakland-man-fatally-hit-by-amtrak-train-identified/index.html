@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>15</b></p>
 					<h3>Oakland: Man fatally hit by Amtrak train identified</h3>
-					<p><p>The Alameda County coroner&rsquo;s bureau identified the victim of an Amtrak train strike in East Oakland Monday, Sept. 12, 2016. By George Kelly &hellip;  <a href="http://www.eastbaytimes.com/2016/09/14/oakland-man-fatally-hit-by-amtrak-train-identified/">more</a>.</p>
+					<p><p>The Alameda County coroner&rsquo;s bureau identified the victim of an Amtrak train strike in East Oakland Monday, Sept. 12, 2016. By George Kelly &hellip;  <a href="http://www.eastbaytimes.com/2016/09/14/oakland-man-fatally-hit-by-amtrak-train-identified/" onclick="trackOutboundLink('http://www.eastbaytimes.com/2016/09/14/oakland-man-fatally-hit-by-amtrak-train-identified/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

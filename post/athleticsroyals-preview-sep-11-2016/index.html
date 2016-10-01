@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>11</b></p>
 					<h3>Athletics-Royals preview (Sep 11, 2016)</h3>
-					<p><p>KANSAS CITY, Mo. &ndash; When the Oakland Athletics open a four-game series on Monday night at Kansas City, they will be sans Billy Butler, who was &hellip;  <a href="http://www.foxsports.com/mlb/story/athletics-royals-preview-091116">more</a>.</p>
+					<p><p>KANSAS CITY, Mo. &ndash; When the Oakland Athletics open a four-game series on Monday night at Kansas City, they will be sans Billy Butler, who was &hellip;  <a href="http://www.foxsports.com/mlb/story/athletics-royals-preview-091116" onclick="trackOutboundLink('http://www.foxsports.com/mlb/story/athletics-royals-preview-091116'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

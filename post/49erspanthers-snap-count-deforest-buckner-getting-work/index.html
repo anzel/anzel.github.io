@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>19</b></p>
 					<h3>49ers-Panthers snap count: DeForest Buckner getting work</h3>
-					<p><p>The San Francisco 49ers lost to the Carolina Panthers 46-27 on Sunday, and we&rsquo;ve got the snap count to break down. It provides us further insight into &hellip;  <a href="http://www.ninersnation.com/2016/9/19/12971264/49ers-panthers-snap-count-deforest-buckner-glenn-dorsey-chris-davis">more</a>.</p>
+					<p><p>The San Francisco 49ers lost to the Carolina Panthers 46-27 on Sunday, and we&rsquo;ve got the snap count to break down. It provides us further insight into &hellip;  <a href="http://www.ninersnation.com/2016/9/19/12971264/49ers-panthers-snap-count-deforest-buckner-glenn-dorsey-chris-davis" onclick="trackOutboundLink('http://www.ninersnation.com/2016/9/19/12971264/49ers-panthers-snap-count-deforest-buckner-glenn-dorsey-chris-davis'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

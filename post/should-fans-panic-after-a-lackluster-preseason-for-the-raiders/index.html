@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>01</b></p>
 					<h3>Should fans panic after a lackluster preseason for the Raiders?</h3>
-					<p><p>The Oakland Raiders filed three patents for the Las Vegas Raiders. That&rsquo;s right, let that settle in your mind. The Raiders seem very intent on moving &hellip;  <a href="http://sports.yahoo.com/news/fans-panic-lackluster-preseason-raiders-073738762.html">more</a>.</p>
+					<p><p>The Oakland Raiders filed three patents for the Las Vegas Raiders. That&rsquo;s right, let that settle in your mind. The Raiders seem very intent on moving &hellip;  <a href="http://sports.yahoo.com/news/fans-panic-lackluster-preseason-raiders-073738762.html" onclick="trackOutboundLink('http://sports.yahoo.com/news/fans-panic-lackluster-preseason-raiders-073738762.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

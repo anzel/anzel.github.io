@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>13</b></p>
 					<h3>Rams fall 28-0 to 49ers in 1st game since move back to LA</h3>
-					<p><p>49ers linebacker NaVorro Bowman (53) during the second half of an &hellip;  <a href="http://pro32.ap.org/article/rams-fall-28-0-49ers-1st-game-move-back-la">more</a>.</p>
+					<p><p>49ers linebacker NaVorro Bowman (53) during the second half of an &hellip;  <a href="http://pro32.ap.org/article/rams-fall-28-0-49ers-1st-game-move-back-la" onclick="trackOutboundLink('http://pro32.ap.org/article/rams-fall-28-0-49ers-1st-game-move-back-la'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

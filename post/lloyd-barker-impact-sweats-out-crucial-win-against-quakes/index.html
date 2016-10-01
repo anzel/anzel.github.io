@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Oct<b>01</b></p>
 					<h3>Lloyd Barker: Impact sweats out crucial win against &#39;Quakes</h3>
-					<p><p>San Jose Earthquakes forward Henok Goitom slips after kicking the ball in front of Montreal Impact midfielder Ignacio Piatti during first half MLS action &hellip;  <a href="http://montrealgazette.com/sports/soccer/mls/montreal-impact/lloyd-barker-impact-sweats-out-crucial-win-against-quakes">more</a>.</p>
+					<p><p>San Jose Earthquakes forward Henok Goitom slips after kicking the ball in front of Montreal Impact midfielder Ignacio Piatti during first half MLS action &hellip;  <a href="http://montrealgazette.com/sports/soccer/mls/montreal-impact/lloyd-barker-impact-sweats-out-crucial-win-against-quakes" onclick="trackOutboundLink('http://montrealgazette.com/sports/soccer/mls/montreal-impact/lloyd-barker-impact-sweats-out-crucial-win-against-quakes'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

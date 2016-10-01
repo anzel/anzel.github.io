@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>23</b></p>
 					<h3>Sean Payton explains why Saints returner Marcus Murphy was inactive in Week</h3>
-					<p><p>NOLA.com New Orleans Saints running back Marcus Murphy (23) returns a kick during the game between the Oakland Raiders and New Orleans Saints at the &hellip;  <a href="http://www.nola.com/saints/index.ssf/2016/09/sean_payton_explains_why_saint.html">more</a>.</p>
+					<p><p>NOLA.com New Orleans Saints running back Marcus Murphy (23) returns a kick during the game between the Oakland Raiders and New Orleans Saints at the &hellip;  <a href="http://www.nola.com/saints/index.ssf/2016/09/sean_payton_explains_why_saint.html" onclick="trackOutboundLink('http://www.nola.com/saints/index.ssf/2016/09/sean_payton_explains_why_saint.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

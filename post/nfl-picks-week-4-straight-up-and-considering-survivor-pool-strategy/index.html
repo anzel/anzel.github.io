@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>30</b></p>
 					<h3>NFL picks, Week 4: Straight up, and considering Survivor pool strategy</h3>
-					<p><p>The San Francisco 49ers host the Dallas Cowboys in Week 4. The 49ers are an underdog, with a lot of early money coming in on the Cowboys.  <a href="http://www.ninersnation.com/2016/9/29/13100138/nfl-picks-week-4-survivor-pool-strategy-straight-up-picks">more</a>.</p>
+					<p><p>The San Francisco 49ers host the Dallas Cowboys in Week 4. The 49ers are an underdog, with a lot of early money coming in on the Cowboys.  <a href="http://www.ninersnation.com/2016/9/29/13100138/nfl-picks-week-4-survivor-pool-strategy-straight-up-picks" onclick="trackOutboundLink('http://www.ninersnation.com/2016/9/29/13100138/nfl-picks-week-4-survivor-pool-strategy-straight-up-picks'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

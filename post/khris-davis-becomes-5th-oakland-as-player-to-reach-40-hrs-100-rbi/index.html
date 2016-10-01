@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>29</b></p>
 					<h3>Khris Davis becomes 5th Oakland A&#39;s player to Reach 40&#43; HRs, 100 RBI</h3>
-					<p><p>Khris Davis joins a short list of Oakland Athletics to hit 40 home runs and reach 100 or more RBI in the same season. Last night Davis hit his 41st &hellip;  <a href="http://casportshistory.sportsblog.com/posts/26556079/khris-davis-becomes-5th-oakland-a-s-player-to-reach-40--hrs--100-rbi.html">more</a>.</p>
+					<p><p>Khris Davis joins a short list of Oakland Athletics to hit 40 home runs and reach 100 or more RBI in the same season. Last night Davis hit his 41st &hellip;  <a href="http://casportshistory.sportsblog.com/posts/26556079/khris-davis-becomes-5th-oakland-a-s-player-to-reach-40--hrs--100-rbi.html" onclick="trackOutboundLink('http://casportshistory.sportsblog.com/posts/26556079/khris-davis-becomes-5th-oakland-a-s-player-to-reach-40--hrs--100-rbi.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

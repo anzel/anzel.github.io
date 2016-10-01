@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>15</b></p>
 					<h3>World Cup Hockey Team Rankings by Position</h3>
-					<p><p>A look at each position for each team projects five of seven San Jose Sharks playing earn medals. Most of their fans will be rooting for their country.  <a href="http://bladesofteal.com/2016/09/15/world-cup-hockey-team-rankings-position/">more</a>.</p>
+					<p><p>A look at each position for each team projects five of seven San Jose Sharks playing earn medals. Most of their fans will be rooting for their country.  <a href="http://bladesofteal.com/2016/09/15/world-cup-hockey-team-rankings-position/" onclick="trackOutboundLink('http://bladesofteal.com/2016/09/15/world-cup-hockey-team-rankings-position/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

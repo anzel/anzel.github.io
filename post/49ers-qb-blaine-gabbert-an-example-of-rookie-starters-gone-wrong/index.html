@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>10</b></p>
 					<h3>49ers QB Blaine Gabbert an example of rookie starters gone wrong</h3>
-					<p><p>Gabbert, meanwhile, flamed out in Jacksonville  only to reemerge as a starter in San Francisco, where he will lead the 49ers against the Rams on &hellip;  <a href="http://www.ocregister.com/articles/gabbert-728595-rookie-quarterback.html">more</a>.</p>
+					<p><p>Gabbert, meanwhile, flamed out in Jacksonville  only to reemerge as a starter in San Francisco, where he will lead the 49ers against the Rams on &hellip;  <a href="http://www.ocregister.com/articles/gabbert-728595-rookie-quarterback.html" onclick="trackOutboundLink('http://www.ocregister.com/articles/gabbert-728595-rookie-quarterback.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

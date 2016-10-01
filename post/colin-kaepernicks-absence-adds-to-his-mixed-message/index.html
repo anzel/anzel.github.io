@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>05</b></p>
 					<h3>Colin Kaepernick&#39;s absence adds to his mixed message</h3>
-					<p><p>1, 2016 file photo, San Francisco 49ers quarterback Colin Kaepernick walks off the field after warm ups before an NFL preseason football game &hellip;  <a href="http://www.sfchronicle.com/49ers/ostler/article/Colin-Kaepernick-s-absence-adds-to-his-mixed-9203153.php">more</a>.</p>
+					<p><p>1, 2016 file photo, San Francisco 49ers quarterback Colin Kaepernick walks off the field after warm ups before an NFL preseason football game &hellip;  <a href="http://www.sfchronicle.com/49ers/ostler/article/Colin-Kaepernick-s-absence-adds-to-his-mixed-9203153.php" onclick="trackOutboundLink('http://www.sfchronicle.com/49ers/ostler/article/Colin-Kaepernick-s-absence-adds-to-his-mixed-9203153.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

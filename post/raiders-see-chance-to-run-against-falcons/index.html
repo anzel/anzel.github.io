@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>17</b></p>
 					<h3>Raiders see chance to run against Falcons</h3>
-					<p><p>Raiders receiver Amari Cooper says there is an aura around the team now, and the home fans can&rsquo;t wait to see it Sunday afternoon. Oakland scored &hellip;  <a href="http://www.sfgate.com/raiders/article/Raiders-see-chance-to-run-against-Falcons-9229696.php">more</a>.</p>
+					<p><p>Raiders receiver Amari Cooper says there is an aura around the team now, and the home fans can&rsquo;t wait to see it Sunday afternoon. Oakland scored &hellip;  <a href="http://www.sfgate.com/raiders/article/Raiders-see-chance-to-run-against-Falcons-9229696.php" onclick="trackOutboundLink('http://www.sfgate.com/raiders/article/Raiders-see-chance-to-run-against-Falcons-9229696.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>03</b></p>
 					<h3>Police union threatens to stop working 49ers games over Kaepernick&#39;s</h3>
-					<p><p>Washington Times San Francisco 49ers quarterback Colin Kaepernick warms up for the team&rsquo;s NFL preseason football game against the San Diego Chargers, Thursday, &hellip;  <a href="http://www.washingtontimes.com/news/2016/sep/3/police-threaten-stop-working-49ers-games-over-kaep/">more</a>.</p>
+					<p><p>Washington Times San Francisco 49ers quarterback Colin Kaepernick warms up for the team&rsquo;s NFL preseason football game against the San Diego Chargers, Thursday, &hellip;  <a href="http://www.washingtontimes.com/news/2016/sep/3/police-threaten-stop-working-49ers-games-over-kaep/" onclick="trackOutboundLink('http://www.washingtontimes.com/news/2016/sep/3/police-threaten-stop-working-49ers-games-over-kaep/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

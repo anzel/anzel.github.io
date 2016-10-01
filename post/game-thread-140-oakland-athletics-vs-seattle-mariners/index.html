@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>09</b></p>
 					<h3>Game Thread #140: Oakland Athletics vs. Seattle Mariners</h3>
-					<p><p>I think I speak for everyone, including Daniel Mengden, when I say that it can&rsquo;t get much worse. Recalled by the A&rsquo;s for his last start, Mengden was &hellip;  <a href="http://www.athleticsnation.com/2016/9/9/12868288/game-thread-140-oakland-athletics-vs-seattle-mariners">more</a>.</p>
+					<p><p>I think I speak for everyone, including Daniel Mengden, when I say that it can&rsquo;t get much worse. Recalled by the A&rsquo;s for his last start, Mengden was &hellip;  <a href="http://www.athleticsnation.com/2016/9/9/12868288/game-thread-140-oakland-athletics-vs-seattle-mariners" onclick="trackOutboundLink('http://www.athleticsnation.com/2016/9/9/12868288/game-thread-140-oakland-athletics-vs-seattle-mariners'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

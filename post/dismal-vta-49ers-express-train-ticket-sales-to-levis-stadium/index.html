@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>Dismal VTA &#39;49ers Express Train&#39; Ticket Sales to Levi&#39;s Stadium</h3>
-					<p><p>The Santa Clara Valley Transportation Authority had hoped to sell 2,500 &ldquo;49ers Express Train&rdquo; tickets as a way to get football fans to Levi&rsquo;s Stadium &hellip;  <a href="http://www.nbcbayarea.com/news/local/Dismal-VTA--49ers-Express-Train-Ticket-Sales-to-Levis-Stadium-393136801.html">more</a>.</p>
+					<p><p>The Santa Clara Valley Transportation Authority had hoped to sell 2,500 &ldquo;49ers Express Train&rdquo; tickets as a way to get football fans to Levi&rsquo;s Stadium &hellip;  <a href="http://www.nbcbayarea.com/news/local/Dismal-VTA--49ers-Express-Train-Ticket-Sales-to-Levis-Stadium-393136801.html" onclick="trackOutboundLink('http://www.nbcbayarea.com/news/local/Dismal-VTA--49ers-Express-Train-Ticket-Sales-to-Levis-Stadium-393136801.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

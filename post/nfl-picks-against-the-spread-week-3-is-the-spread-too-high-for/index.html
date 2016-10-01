@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>24</b></p>
 					<h3>NFL picks against the spread, Week 3: Is the spread too high for</h3>
-					<p><p>Niners Nation The San Francisco 49ers are 9.5-point underdogs on the road against the Seattle Seahawks. Can they spring the upset? Time for my LVH &hellip;  <a href="http://www.ninersnation.com/2016/9/24/13042420/nfl-picks-against-the-spread-week-3-supercontest-49ers-seahawks">more</a>.</p>
+					<p><p>Niners Nation The San Francisco 49ers are 9.5-point underdogs on the road against the Seattle Seahawks. Can they spring the upset? Time for my LVH &hellip;  <a href="http://www.ninersnation.com/2016/9/24/13042420/nfl-picks-against-the-spread-week-3-supercontest-49ers-seahawks" onclick="trackOutboundLink('http://www.ninersnation.com/2016/9/24/13042420/nfl-picks-against-the-spread-week-3-supercontest-49ers-seahawks'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>02</b></p>
 					<h3>Yoan Moncada not in starting lineup for Red Sox; David Price on the mound</h3>
-					<p><p>MassLive.com FILE - In this July 10, 2016, file photo, World team&rsquo;s Yoan Moncada, of the Boston Red Sox, hits against the U.S. team during the All-Star Futures &hellip;  <a href="http://www.masslive.com/redsox/index.ssf/2016/09/david_price_on_the_mound_vs_oa.html">more</a>.</p>
+					<p><p>MassLive.com FILE - In this July 10, 2016, file photo, World team&rsquo;s Yoan Moncada, of the Boston Red Sox, hits against the U.S. team during the All-Star Futures &hellip;  <a href="http://www.masslive.com/redsox/index.ssf/2016/09/david_price_on_the_mound_vs_oa.html" onclick="trackOutboundLink('http://www.masslive.com/redsox/index.ssf/2016/09/david_price_on_the_mound_vs_oa.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>20</b></p>
 					<h3>Titans vs. Raiders: What are the odds?</h3>
-					<p><p>Well the Titans are currently a 1 point favorite at home this week (1.5 in some places) against the Oakland Raiders. This is pretty surprising &hellip;  <a href="http://www.musiccitymiracles.com/2016/9/20/12987114/titans-raiders-what-are-the-odds-over-under">more</a>.</p>
+					<p><p>Well the Titans are currently a 1 point favorite at home this week (1.5 in some places) against the Oakland Raiders. This is pretty surprising &hellip;  <a href="http://www.musiccitymiracles.com/2016/9/20/12987114/titans-raiders-what-are-the-odds-over-under" onclick="trackOutboundLink('http://www.musiccitymiracles.com/2016/9/20/12987114/titans-raiders-what-are-the-odds-over-under'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

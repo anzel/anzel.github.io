@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>24</b></p>
 					<h3>A&#39;s lose fifth straight at home, shut out again by Texas</h3>
-					<p><p>Oakland Athletics starting pitcher Raul Alcantara throws to the Texas Rangers during the fourth inning of a baseball game Saturday, Sept. 24, 2016, in &hellip;  <a href="http://www.thehour.com/sports/article/A-s-lose-fifth-straight-at-home-shut-out-again-9279226.php">more</a>.</p>
+					<p><p>Oakland Athletics starting pitcher Raul Alcantara throws to the Texas Rangers during the fourth inning of a baseball game Saturday, Sept. 24, 2016, in &hellip;  <a href="http://www.thehour.com/sports/article/A-s-lose-fifth-straight-at-home-shut-out-again-9279226.php" onclick="trackOutboundLink('http://www.thehour.com/sports/article/A-s-lose-fifth-straight-at-home-shut-out-again-9279226.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

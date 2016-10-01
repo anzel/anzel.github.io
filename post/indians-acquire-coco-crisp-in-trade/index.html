@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Aug<b>31</b></p>
 					<h3>Indians acquire Coco Crisp in trade</h3>
-					<p><p>CLEVELAND, OH - The Cleveland Indians Wednesday acquired OF Coco Crisp (#4) and cash from the Oakland Athletics in exchange for LHP Colt &hellip;  <a href="http://www.foxsports.com/ohio/story/oakland-as-trade-coco-crisp-to-indians-083016">more</a>.</p>
+					<p><p>CLEVELAND, OH - The Cleveland Indians Wednesday acquired OF Coco Crisp (#4) and cash from the Oakland Athletics in exchange for LHP Colt &hellip;  <a href="http://www.foxsports.com/ohio/story/oakland-as-trade-coco-crisp-to-indians-083016" onclick="trackOutboundLink('http://www.foxsports.com/ohio/story/oakland-as-trade-coco-crisp-to-indians-083016'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

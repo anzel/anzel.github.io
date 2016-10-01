@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>21</b></p>
 					<h3>NFL Power Rankings: 49ers Don&#39;t Move Much in Week 3 Power Rankings</h3>
-					<p><p>The San Francisco 49ers are coming off a 46-27 ugly loss to the Carolina Panthers in Week 2. Surprisingly, the Niners didn&rsquo;t experience too much of a &hellip;  <a href="http://ninernoise.com/2016/09/20/nfl-power-rankings-49ers-crash-back-week-3-power-rankings/">more</a>.</p>
+					<p><p>The San Francisco 49ers are coming off a 46-27 ugly loss to the Carolina Panthers in Week 2. Surprisingly, the Niners didn&rsquo;t experience too much of a &hellip;  <a href="http://ninernoise.com/2016/09/20/nfl-power-rankings-49ers-crash-back-week-3-power-rankings/" onclick="trackOutboundLink('http://ninernoise.com/2016/09/20/nfl-power-rankings-49ers-crash-back-week-3-power-rankings/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

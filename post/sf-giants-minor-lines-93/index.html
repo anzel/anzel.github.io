@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>04</b></p>
 					<h3>SF Giants Minor Lines 9/3</h3>
-					<p><p>You want Grand Slams? You want game-winning Grand Slams? You want walkoff Grand Slams? We got what you need!!! You want playoffs?  <a href="http://www.mccoveychronicles.com/2016/9/4/12793040/sf-giants-minor-lines-9-3">more</a>.</p>
+					<p><p>You want Grand Slams? You want game-winning Grand Slams? You want walkoff Grand Slams? We got what you need!!! You want playoffs?  <a href="http://www.mccoveychronicles.com/2016/9/4/12793040/sf-giants-minor-lines-9-3" onclick="trackOutboundLink('http://www.mccoveychronicles.com/2016/9/4/12793040/sf-giants-minor-lines-9-3'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>16</b></p>
 					<h3>49ers DeForest Buckner ready to pursue Panthers</h3>
-					<p><p>It turns out that helped train him for his first NFL road game, when the 49ers visit the Carolina Panthers on Sunday. Watching the Denver Broncos &hellip;  <a href="http://www.mercurynews.com/2016/09/16/49ers-deforest-buckner-found-tips-on-pressuring-panthers-cam-newton-from-super-bowl-50/">more</a>.</p>
+					<p><p>It turns out that helped train him for his first NFL road game, when the 49ers visit the Carolina Panthers on Sunday. Watching the Denver Broncos &hellip;  <a href="http://www.mercurynews.com/2016/09/16/49ers-deforest-buckner-found-tips-on-pressuring-panthers-cam-newton-from-super-bowl-50/" onclick="trackOutboundLink('http://www.mercurynews.com/2016/09/16/49ers-deforest-buckner-found-tips-on-pressuring-panthers-cam-newton-from-super-bowl-50/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

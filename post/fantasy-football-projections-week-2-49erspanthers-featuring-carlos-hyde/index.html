@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>Fantasy football projections, Week 2: 49ers-Panthers featuring Carlos Hyde,</h3>
-					<p><p>SB Nation The Week 2 matchup between the San Francisco 49ers and the Carolina Panthers features teams that pride themselves on solid defensive play.  <a href="http://www.sbnation.com/2016/9/18/12920698/fantasy-football-projections-week-2-49ers-panthers-carlos-hyde-cam-newton-kelvin-benjamin">more</a>.</p>
+					<p><p>SB Nation The Week 2 matchup between the San Francisco 49ers and the Carolina Panthers features teams that pride themselves on solid defensive play.  <a href="http://www.sbnation.com/2016/9/18/12920698/fantasy-football-projections-week-2-49ers-panthers-carlos-hyde-cam-newton-kelvin-benjamin" onclick="trackOutboundLink('http://www.sbnation.com/2016/9/18/12920698/fantasy-football-projections-week-2-49ers-panthers-carlos-hyde-cam-newton-kelvin-benjamin'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

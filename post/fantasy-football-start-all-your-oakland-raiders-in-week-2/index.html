@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>17</b></p>
 					<h3>Fantasy Football: Start all your Oakland Raiders in Week 2</h3>
-					<p><p>Joe Daraskevich: Demaryius Thomas (hip) is banged up, so Sanders should be the top option, even if Thomas is in the lineup. Trevor Siemian didn&rsquo;t &hellip;  <a href="http://jacksonville.com/sports/football/2016-09-17/story/fantasy-football-start-all-your-oakland-raiders-week-2">more</a>.</p>
+					<p><p>Joe Daraskevich: Demaryius Thomas (hip) is banged up, so Sanders should be the top option, even if Thomas is in the lineup. Trevor Siemian didn&rsquo;t &hellip;  <a href="http://jacksonville.com/sports/football/2016-09-17/story/fantasy-football-start-all-your-oakland-raiders-week-2" onclick="trackOutboundLink('http://jacksonville.com/sports/football/2016-09-17/story/fantasy-football-start-all-your-oakland-raiders-week-2'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

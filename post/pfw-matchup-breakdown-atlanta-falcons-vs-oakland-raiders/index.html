@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>15</b></p>
 					<h3>PFW Matchup Breakdown: Atlanta Falcons vs. Oakland Raiders</h3>
-					<p><p>Matt Ryan had a big day in the Falcons opening weekend loss to the Bucs and Mohamed Sanu was a surprisingly effective sidekick for Julio Jones.  <a href="http://thesouthern.com/sports/football/pfw-matchup-breakdown-atlanta-falcons-vs-oakland-raiders/article_09aecc93-f66e-5740-9b47-7eee99cb1917.html">more</a>.</p>
+					<p><p>Matt Ryan had a big day in the Falcons opening weekend loss to the Bucs and Mohamed Sanu was a surprisingly effective sidekick for Julio Jones.  <a href="http://thesouthern.com/sports/football/pfw-matchup-breakdown-atlanta-falcons-vs-oakland-raiders/article_09aecc93-f66e-5740-9b47-7eee99cb1917.html" onclick="trackOutboundLink('http://thesouthern.com/sports/football/pfw-matchup-breakdown-atlanta-falcons-vs-oakland-raiders/article_09aecc93-f66e-5740-9b47-7eee99cb1917.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>07</b></p>
 					<h3>Nate Allen on safety swap: &#39;I don&#39;t even know what&#39;s going on&#39;</h3>
-					<p><p>The Oakland Raiders&rsquo; decision to make Nate Allen their starting strong safety over first-round rookie Karl Joseph was a largely unexpected move.  <a href="http://oak.247sports.com/Bolt/Nate-Allen-on-safety-swap-I-dont-even-know-whats-going-on-47280368">more</a>.</p>
+					<p><p>The Oakland Raiders&rsquo; decision to make Nate Allen their starting strong safety over first-round rookie Karl Joseph was a largely unexpected move.  <a href="http://oak.247sports.com/Bolt/Nate-Allen-on-safety-swap-I-dont-even-know-whats-going-on-47280368" onclick="trackOutboundLink('http://oak.247sports.com/Bolt/Nate-Allen-on-safety-swap-I-dont-even-know-whats-going-on-47280368'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

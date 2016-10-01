@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>11</b></p>
 					<h3>The Oakland A&#39;s Are Fed to the Lions.</h3>
-					<p><p>I played offensive and defensive line at Garfield High School. I started for all four years because we did not have many other options, and, as you &hellip;  <a href="http://www.lookoutlanding.com/2016/9/10/12874338/the-oakland-a-s-are-fed-to-the-lions">more</a>.</p>
+					<p><p>I played offensive and defensive line at Garfield High School. I started for all four years because we did not have many other options, and, as you &hellip;  <a href="http://www.lookoutlanding.com/2016/9/10/12874338/the-oakland-a-s-are-fed-to-the-lions" onclick="trackOutboundLink('http://www.lookoutlanding.com/2016/9/10/12874338/the-oakland-a-s-are-fed-to-the-lions'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

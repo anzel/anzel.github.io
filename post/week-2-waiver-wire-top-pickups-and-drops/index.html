@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>Week 2 Waiver Wire: Top Pickups and Drops</h3>
-					<p><p>The Saints defense looked incapable of stopping anyone in a 35-34 loss to the Oakland Raiders in Week 1. Saints cornerback Delvin Breaux broke &hellip;  <a href="http://bleacherreport.com/articles/2663102-week-2-waiver-wire-top-pickups-and-drops">more</a>.</p>
+					<p><p>The Saints defense looked incapable of stopping anyone in a 35-34 loss to the Oakland Raiders in Week 1. Saints cornerback Delvin Breaux broke &hellip;  <a href="http://bleacherreport.com/articles/2663102-week-2-waiver-wire-top-pickups-and-drops" onclick="trackOutboundLink('http://bleacherreport.com/articles/2663102-week-2-waiver-wire-top-pickups-and-drops'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>01</b></p>
 					<h3>Seahawks vs. Raiders: LIVE score updates, stats from NFL preseason Week 4</h3>
-					<p><p>NJ.com On Thursday, the Oakland Raiders will host the Seattle Seahawks in the final preseason game for both teams. We&rsquo;ll have up-to-the-minute scoring and &hellip;  <a href="http://www.nj.com/super-bowl/index.ssf/2016/09/seahawks_vs_raiders_live_score_updates_stats_from_nfl_preseason_week_4_9116.html">more</a>.</p>
+					<p><p>NJ.com On Thursday, the Oakland Raiders will host the Seattle Seahawks in the final preseason game for both teams. We&rsquo;ll have up-to-the-minute scoring and &hellip;  <a href="http://www.nj.com/super-bowl/index.ssf/2016/09/seahawks_vs_raiders_live_score_updates_stats_from_nfl_preseason_week_4_9116.html" onclick="trackOutboundLink('http://www.nj.com/super-bowl/index.ssf/2016/09/seahawks_vs_raiders_live_score_updates_stats_from_nfl_preseason_week_4_9116.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

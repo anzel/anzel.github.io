@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>13</b></p>
 					<h3>Top Highlights from 49ers vs. Rams</h3>
-					<p><p>The 49ers defeated the Los Angeles Rams 28-0 in the season opener on &ldquo;Monday Night Football&rdquo; Check out the top highlights from the Week 1 victory &hellip;  <a href="http://www.49ers.com/news/article-2/Top-Highlights-from-49ers-vs-Rams/6becfb2e-49c9-4f02-8464-b8cb82731163">more</a>.</p>
+					<p><p>The 49ers defeated the Los Angeles Rams 28-0 in the season opener on &ldquo;Monday Night Football&rdquo; Check out the top highlights from the Week 1 victory &hellip;  <a href="http://www.49ers.com/news/article-2/Top-Highlights-from-49ers-vs-Rams/6becfb2e-49c9-4f02-8464-b8cb82731163" onclick="trackOutboundLink('http://www.49ers.com/news/article-2/Top-Highlights-from-49ers-vs-Rams/6becfb2e-49c9-4f02-8464-b8cb82731163'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

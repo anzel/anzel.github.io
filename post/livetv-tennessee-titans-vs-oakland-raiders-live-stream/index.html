@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>[LiveTV] Tennessee Titans vs Oakland Raiders [L.ive] [S.tream]</h3>
-					<p><p>[L.i.v.e.TV] Tennessee Titans vs Oakland Raiders [L.ive] [S.tream] &hellip;  <a href="http://ca.gew.co/content/l.i.v.e.tv-tennessee-titans-vs-oakland-raiders-l.ive-s.tream">more</a>.</p>
+					<p><p>[L.i.v.e.TV] Tennessee Titans vs Oakland Raiders [L.ive] [S.tream] &hellip;  <a href="http://ca.gew.co/content/l.i.v.e.tv-tennessee-titans-vs-oakland-raiders-l.ive-s.tream" onclick="trackOutboundLink('http://ca.gew.co/content/l.i.v.e.tv-tennessee-titans-vs-oakland-raiders-l.ive-s.tream'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>21</b></p>
 					<h3>Seahawks still heavily favored to beat 49ers  but not by as much as they</h3>
-					<p><p>The Seattle Times As we get into the heart of the NFL week, the Seahawks remain favored by as many as 10 points to beat the 49ers Sunday at CenturyLink Field.  <a href="http://www.seattletimes.com/sports/seahawks/seahawks-still-heavily-favored-to-beat-49ers-but-not-by-as-much-as-they-were/">more</a>.</p>
+					<p><p>The Seattle Times As we get into the heart of the NFL week, the Seahawks remain favored by as many as 10 points to beat the 49ers Sunday at CenturyLink Field.  <a href="http://www.seattletimes.com/sports/seahawks/seahawks-still-heavily-favored-to-beat-49ers-but-not-by-as-much-as-they-were/" onclick="trackOutboundLink('http://www.seattletimes.com/sports/seahawks/seahawks-still-heavily-favored-to-beat-49ers-but-not-by-as-much-as-they-were/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

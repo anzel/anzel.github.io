@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>29</b></p>
 					<h3>Cowboys vs. 49ers (Week 4): Key matchups to watch</h3>
-					<p><p>This Sunday will be another meeting between the Dallas Cowboys and their longtime foes the San Francisco 49ers. The Cowboys are on a roll &hellip;  <a href="http://dal.247sports.com/Gallery/Cowboys-vs-49ers-Week-4-Key-matchups-to-watch-47859766">more</a>.</p>
+					<p><p>This Sunday will be another meeting between the Dallas Cowboys and their longtime foes the San Francisco 49ers. The Cowboys are on a roll &hellip;  <a href="http://dal.247sports.com/Gallery/Cowboys-vs-49ers-Week-4-Key-matchups-to-watch-47859766" onclick="trackOutboundLink('http://dal.247sports.com/Gallery/Cowboys-vs-49ers-Week-4-Key-matchups-to-watch-47859766'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

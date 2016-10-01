@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>11</b></p>
 					<h3>Raiders vs Saints livestream NFL : Watch Oakland Raiders vs New Orleans</h3>
-					<p><p>WTVB Oakland Raiders vs. New Orleans Saints live stream free NFL week 1 September 11,2016 is here! The new season football has arrived with the watch &hellip;  <a href="http://wtvbam.com/news/articles/2016/sep/11/raiders-vs-saints-live-new/">more</a>.</p>
+					<p><p>WTVB Oakland Raiders vs. New Orleans Saints live stream free NFL week 1 September 11,2016 is here! The new season football has arrived with the watch &hellip;  <a href="http://wtvbam.com/news/articles/2016/sep/11/raiders-vs-saints-live-new/" onclick="trackOutboundLink('http://wtvbam.com/news/articles/2016/sep/11/raiders-vs-saints-live-new/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

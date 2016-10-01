@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>Watch: Inside the Oakland Raiders  New Orleans Saints preview</h3>
-					<p><p>The Oakland Raiders and New Orleans Saints go head to head in Week 1 of &hellip;. The hype surrounding the Oakland Raiders entering the 2016 season &hellip;  <a href="http://www.mercurynews.com/2016/09/08/watch-inside-the-oakland-raiders-new-orleans-saints-preview/">more</a>.</p>
+					<p><p>The Oakland Raiders and New Orleans Saints go head to head in Week 1 of &hellip;. The hype surrounding the Oakland Raiders entering the 2016 season &hellip;  <a href="http://www.mercurynews.com/2016/09/08/watch-inside-the-oakland-raiders-new-orleans-saints-preview/" onclick="trackOutboundLink('http://www.mercurynews.com/2016/09/08/watch-inside-the-oakland-raiders-new-orleans-saints-preview/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

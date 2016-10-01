@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>When and if the 49ers fire Trent Baalke, who comes next? An early</h3>
-					<p><p>The Mercury News (blog) Well, it took the thrashing in Seattle to do it, but I finally called for Trent Baalke&rsquo;s firing on Sunday. Obviously, this is not a unique stance in the universe &hellip;  <a href="http://blogs.mercurynews.com/kawakami/2016/09/27/49ers-fire-trent-baalke-comes-next-early-short-list-names-tom-gamble-louis-riddick-david-shaw/">more</a>.</p>
+					<p><p>The Mercury News (blog) Well, it took the thrashing in Seattle to do it, but I finally called for Trent Baalke&rsquo;s firing on Sunday. Obviously, this is not a unique stance in the universe &hellip;  <a href="http://blogs.mercurynews.com/kawakami/2016/09/27/49ers-fire-trent-baalke-comes-next-early-short-list-names-tom-gamble-louis-riddick-david-shaw/" onclick="trackOutboundLink('http://blogs.mercurynews.com/kawakami/2016/09/27/49ers-fire-trent-baalke-comes-next-early-short-list-names-tom-gamble-louis-riddick-david-shaw/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

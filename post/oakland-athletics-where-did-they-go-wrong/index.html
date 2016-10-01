@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>17</b></p>
 					<h3>Oakland Athletics: Where Did They Go Wrong?</h3>
-					<p><p>The Oakland Athletics made the playoffs three consecutive seasons, from 2012-2014. That&rsquo;s an impressive feat for a small market team, but over the &hellip;  <a href="http://calltothepen.com/2016/09/17/oakland-athletics-go-wrong/">more</a>.</p>
+					<p><p>The Oakland Athletics made the playoffs three consecutive seasons, from 2012-2014. That&rsquo;s an impressive feat for a small market team, but over the &hellip;  <a href="http://calltothepen.com/2016/09/17/oakland-athletics-go-wrong/" onclick="trackOutboundLink('http://calltothepen.com/2016/09/17/oakland-athletics-go-wrong/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

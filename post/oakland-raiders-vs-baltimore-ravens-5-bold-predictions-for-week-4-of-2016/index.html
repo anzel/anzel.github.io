@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>Oakland Raiders vs. Baltimore Ravens: 5 Bold Predictions For Week 4 Of 2016</h3>
-					<p><p>The Inquisitr In Week 4, the 2-1 Oakland Raiders will travel to take on the surprisingly 3-0 Baltimore Ravens in an incredibly important AFC showdown. The Raiders &hellip;  <a href="http://www.inquisitr.com/3547262/oakland-raiders-vs-baltimore-ravens-5-bold-predictions-for-week-4-of-2016-nfl-season/">more</a>.</p>
+					<p><p>The Inquisitr In Week 4, the 2-1 Oakland Raiders will travel to take on the surprisingly 3-0 Baltimore Ravens in an incredibly important AFC showdown. The Raiders &hellip;  <a href="http://www.inquisitr.com/3547262/oakland-raiders-vs-baltimore-ravens-5-bold-predictions-for-week-4-of-2016-nfl-season/" onclick="trackOutboundLink('http://www.inquisitr.com/3547262/oakland-raiders-vs-baltimore-ravens-5-bold-predictions-for-week-4-of-2016-nfl-season/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

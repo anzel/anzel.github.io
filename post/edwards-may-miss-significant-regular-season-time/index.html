@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>01</b></p>
 					<h3>Edwards May Miss Significant Regular Season Time</h3>
-					<p><p>Oakland Raiders defensive end Mario Edwards Jr. suffered an injury in the preseason opener, and now may miss significant time to start the regular &hellip;  <a href="http://goldengatesports.com/2016/08/31/oakland-raiders-edwards-out-at-least-six-weeks/">more</a>.</p>
+					<p><p>Oakland Raiders defensive end Mario Edwards Jr. suffered an injury in the preseason opener, and now may miss significant time to start the regular &hellip;  <a href="http://goldengatesports.com/2016/08/31/oakland-raiders-edwards-out-at-least-six-weeks/" onclick="trackOutboundLink('http://goldengatesports.com/2016/08/31/oakland-raiders-edwards-out-at-least-six-weeks/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

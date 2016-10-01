@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>49ers safety Eric Reid finding success in new defense</h3>
-					<p><p>49ers safety Eric Reid has been one of the top performers on the 49ers defense so far as he seems to be finding first-year defensive coordinator Jim &hellip;  <a href="http://sfo.247sports.com/Bolt/49ers-safety-Eric-Reid-finding-success-in-new-defense-47825632">more</a>.</p>
+					<p><p>49ers safety Eric Reid has been one of the top performers on the 49ers defense so far as he seems to be finding first-year defensive coordinator Jim &hellip;  <a href="http://sfo.247sports.com/Bolt/49ers-safety-Eric-Reid-finding-success-in-new-defense-47825632" onclick="trackOutboundLink('http://sfo.247sports.com/Bolt/49ers-safety-Eric-Reid-finding-success-in-new-defense-47825632'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

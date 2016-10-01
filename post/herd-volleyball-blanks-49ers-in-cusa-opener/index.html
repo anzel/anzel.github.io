@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>24</b></p>
 					<h3>Herd volleyball blanks 49ers in C-USA opener</h3>
-					<p><p>HUNTINGTON - Marshall returned home after playing 11 consecutive matches on the road and won its Conference USA women&rsquo;s volleyball opener, &hellip;  <a href="http://www.herald-dispatch.com/sports/marshall_sports/herd-volleyball-blanks-ers-in-c-usa-opener/article_e616813a-f742-56c6-ae7f-4b3643b0c883.html">more</a>.</p>
+					<p><p>HUNTINGTON - Marshall returned home after playing 11 consecutive matches on the road and won its Conference USA women&rsquo;s volleyball opener, &hellip;  <a href="http://www.herald-dispatch.com/sports/marshall_sports/herd-volleyball-blanks-ers-in-c-usa-opener/article_e616813a-f742-56c6-ae7f-4b3643b0c883.html" onclick="trackOutboundLink('http://www.herald-dispatch.com/sports/marshall_sports/herd-volleyball-blanks-ers-in-c-usa-opener/article_e616813a-f742-56c6-ae7f-4b3643b0c883.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

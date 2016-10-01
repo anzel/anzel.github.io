@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>Oakland Raiders vs Tennessee Titans live stream</h3>
-					<p><p>(((SKY TV))) Oakland Raiders vs Tennessee Titans l.i.v.e s.t.r.e.a.m &hellip;  <a href="http://ca.gew.co/content/sky-tv-oakland-raiders-vs-tennessee-titans-l.i.v.e-s.t.r.e..m">more</a>.</p>
+					<p><p>(((SKY TV))) Oakland Raiders vs Tennessee Titans l.i.v.e s.t.r.e.a.m &hellip;  <a href="http://ca.gew.co/content/sky-tv-oakland-raiders-vs-tennessee-titans-l.i.v.e-s.t.r.e..m" onclick="trackOutboundLink('http://ca.gew.co/content/sky-tv-oakland-raiders-vs-tennessee-titans-l.i.v.e-s.t.r.e..m'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

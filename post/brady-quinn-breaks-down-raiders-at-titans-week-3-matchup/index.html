@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>21</b></p>
 					<h3>Brady Quinn breaks down Raiders at Titans Week 3 matchup</h3>
-					<p><p>In Week 3 of NFL action both the Tennessee Titans and Oakland raiders look to pick up their second win of the season. Brady Quinn and the Pro &hellip;  <a href="http://oak.247sports.com/Bolt/Brady-Quinn-breaks-down-Raiders-at-Titans-Week-3-matchup-47651537">more</a>.</p>
+					<p><p>In Week 3 of NFL action both the Tennessee Titans and Oakland raiders look to pick up their second win of the season. Brady Quinn and the Pro &hellip;  <a href="http://oak.247sports.com/Bolt/Brady-Quinn-breaks-down-Raiders-at-Titans-Week-3-matchup-47651537" onclick="trackOutboundLink('http://oak.247sports.com/Bolt/Brady-Quinn-breaks-down-Raiders-at-Titans-Week-3-matchup-47651537'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>26</b></p>
 					<h3>Oakland Raiders: Defense makes improvements but Titans&#39; mistakes help with</h3>
-					<p><p>SportsBlog.com (blog) The defense for the Oakland Raiders did their job right against the Tennessee Titans on Sunday afternoon. Still, some work needs to be done in the &hellip;  <a href="http://jlherrera.sportsblog.com/posts/26328993/oakland-raiders--defense-makes-improvements-but-titans--mistake-help-with-victory.html">more</a>.</p>
+					<p><p>SportsBlog.com (blog) The defense for the Oakland Raiders did their job right against the Tennessee Titans on Sunday afternoon. Still, some work needs to be done in the &hellip;  <a href="http://jlherrera.sportsblog.com/posts/26328993/oakland-raiders--defense-makes-improvements-but-titans--mistake-help-with-victory.html" onclick="trackOutboundLink('http://jlherrera.sportsblog.com/posts/26328993/oakland-raiders--defense-makes-improvements-but-titans--mistake-help-with-victory.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

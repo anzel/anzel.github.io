@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>15</b></p>
 					<h3>Atlanta Falcons (0-1) at Oakland Raiders (1-0)</h3>
-					<p><p>14th regular-season meeting. Raiders lead series, 7-6. Falcons have won the last three games  23-20 in Atlanta in 2012, 24-0 in Oakland in 2008 &hellip;  <a href="http://www.lindyssports.com/nfl/pick/atlanta-falcons-0-1-at-oakland-raiders-1-0/411902/">more</a>.</p>
+					<p><p>14th regular-season meeting. Raiders lead series, 7-6. Falcons have won the last three games  23-20 in Atlanta in 2012, 24-0 in Oakland in 2008 &hellip;  <a href="http://www.lindyssports.com/nfl/pick/atlanta-falcons-0-1-at-oakland-raiders-1-0/411902/" onclick="trackOutboundLink('http://www.lindyssports.com/nfl/pick/atlanta-falcons-0-1-at-oakland-raiders-1-0/411902/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

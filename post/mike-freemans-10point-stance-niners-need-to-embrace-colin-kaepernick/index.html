@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>Mike Freeman&#39;s 10-Point Stance: Niners Need to Embrace Colin Kaepernick</h3>
-					<p><p>Bleacher Report After all, at his press conference before the 49ers played Seattle, the San Francisco coach said Kaepernick was playing Russell Wilson on the scout &hellip;  <a href="http://bleacherreport.com/articles/2665840-mike-freemans-10-point-stance-niners-need-to-embrace-colin-kaepernick-again">more</a>.</p>
+					<p><p>Bleacher Report After all, at his press conference before the 49ers played Seattle, the San Francisco coach said Kaepernick was playing Russell Wilson on the scout &hellip;  <a href="http://bleacherreport.com/articles/2665840-mike-freemans-10-point-stance-niners-need-to-embrace-colin-kaepernick-again" onclick="trackOutboundLink('http://bleacherreport.com/articles/2665840-mike-freemans-10-point-stance-niners-need-to-embrace-colin-kaepernick-again'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

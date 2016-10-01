@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>15</b></p>
 					<h3>49ers&#39; 1st-round pick Garnett lacks versatility in role</h3>
-					<p><p>The 49ers traded up into the first round of the draft to select Garnett with the No. 28 pick, but Garnett got a late start because he couldn&rsquo;t report for the &hellip;  <a href="http://www.sfgate.com/49ers/article/49ers-1st-round-pick-Garnett-lacks-versatility-9226519.php">more</a>.</p>
+					<p><p>The 49ers traded up into the first round of the draft to select Garnett with the No. 28 pick, but Garnett got a late start because he couldn&rsquo;t report for the &hellip;  <a href="http://www.sfgate.com/49ers/article/49ers-1st-round-pick-Garnett-lacks-versatility-9226519.php" onclick="trackOutboundLink('http://www.sfgate.com/49ers/article/49ers-1st-round-pick-Garnett-lacks-versatility-9226519.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

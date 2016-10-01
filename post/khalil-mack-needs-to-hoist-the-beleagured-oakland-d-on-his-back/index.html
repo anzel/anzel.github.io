@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>23</b></p>
 					<h3>Khalil Mack needs to hoist the beleagured Oakland D on his back</h3>
-					<p><p>The Oakland Raiders&rsquo; defense has been bad through two weeks. Historically bad. Week 1 the Raiders gave up 507 yards to Drew Brees and the &hellip;  <a href="http://panicbutton.sportsblog.com/posts/26208155/khalil-mack-needs-to-hoist-the-beleagured-oakland-d-on-his-back.html">more</a>.</p>
+					<p><p>The Oakland Raiders&rsquo; defense has been bad through two weeks. Historically bad. Week 1 the Raiders gave up 507 yards to Drew Brees and the &hellip;  <a href="http://panicbutton.sportsblog.com/posts/26208155/khalil-mack-needs-to-hoist-the-beleagured-oakland-d-on-his-back.html" onclick="trackOutboundLink('http://panicbutton.sportsblog.com/posts/26208155/khalil-mack-needs-to-hoist-the-beleagured-oakland-d-on-his-back.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>17</b></p>
 					<h3>Sharks fall 4-1 to Colorado Avalanche in Rookie Showcase opener</h3>
-					<p><p>Defenseman Jeremy Roy, the Sharks&rsquo; second round draft pick from 2015, scored for San Jose on Saturday in its 4-1 loss to the Colorado Avalanche at &hellip;  <a href="http://www.mercurynews.com/2016/09/17/sharks-fall-4-1-to-colorado-avalanche-in-rookie-showcase-opener/">more</a>.</p>
+					<p><p>Defenseman Jeremy Roy, the Sharks&rsquo; second round draft pick from 2015, scored for San Jose on Saturday in its 4-1 loss to the Colorado Avalanche at &hellip;  <a href="http://www.mercurynews.com/2016/09/17/sharks-fall-4-1-to-colorado-avalanche-in-rookie-showcase-opener/" onclick="trackOutboundLink('http://www.mercurynews.com/2016/09/17/sharks-fall-4-1-to-colorado-avalanche-in-rookie-showcase-opener/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

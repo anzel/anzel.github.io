@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>22</b></p>
 					<h3>49ers at Seahawks: Odds, trends and more</h3>
-					<p><p>These are the latest betting odds and trends for the San Francisco 49ers and Seattle Seahawks on Sunday. The Seattle Seahawks have been &hellip;  <a href="http://fansided.com/2016/09/22/49ers-seahawks-odds-trends-betting/">more</a>.</p>
+					<p><p>These are the latest betting odds and trends for the San Francisco 49ers and Seattle Seahawks on Sunday. The Seattle Seahawks have been &hellip;  <a href="http://fansided.com/2016/09/22/49ers-seahawks-odds-trends-betting/" onclick="trackOutboundLink('http://fansided.com/2016/09/22/49ers-seahawks-odds-trends-betting/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>Today&lt;Watch &#39;Atlanta Falcons vs Oakland Raiders&#39; Football Streaming Online</h3>
-					<p><p>Watch 2016 Atlanta Falcons vs Oakland Raiders NFL streaming Online Game Watch. Live Atlanta Falcons vs Oakland Raiders Online Football Watch &hellip;  <a href="http://www.skischule-lech.com/sites/default/files/webform/%25TodayWatch%20%27Atlanta%20Falcons%20vs%20Oakland%20Raiders%27%20Football%20Streaming%20Online%20Ipad.pdf">more</a>.</p>
+					<p><p>Watch 2016 Atlanta Falcons vs Oakland Raiders NFL streaming Online Game Watch. Live Atlanta Falcons vs Oakland Raiders Online Football Watch &hellip;  <a href="http://www.skischule-lech.com/sites/default/files/webform/%25TodayWatch%20%27Atlanta%20Falcons%20vs%20Oakland%20Raiders%27%20Football%20Streaming%20Online%20Ipad.pdf" onclick="trackOutboundLink('http://www.skischule-lech.com/sites/default/files/webform/%25TodayWatch%20%27Atlanta%20Falcons%20vs%20Oakland%20Raiders%27%20Football%20Streaming%20Online%20Ipad.pdf'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

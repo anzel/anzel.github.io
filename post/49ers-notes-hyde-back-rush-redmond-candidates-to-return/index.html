@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>07</b></p>
 					<h3>49ers notes: Hyde back; Rush, Redmond candidates to return</h3>
-					<p><p>It&rsquo;s an annual rite of early September in the NFL: Coaches get far more light-tipped when the real games begin. Today, 49ers offensive coordinator &hellip;  <a href="http://www.sfgate.com/49ers/article/49ers-notes-Hyde-back-Rush-Redmond-candidates-9208329.php">more</a>.</p>
+					<p><p>It&rsquo;s an annual rite of early September in the NFL: Coaches get far more light-tipped when the real games begin. Today, 49ers offensive coordinator &hellip;  <a href="http://www.sfgate.com/49ers/article/49ers-notes-Hyde-back-Rush-Redmond-candidates-9208329.php" onclick="trackOutboundLink('http://www.sfgate.com/49ers/article/49ers-notes-Hyde-back-Rush-Redmond-candidates-9208329.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

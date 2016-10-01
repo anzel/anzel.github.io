@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>16</b></p>
 					<h3>Sharon Thorsland: The Panthers Take on the 49ers in Home Opener</h3>
-					<p><p>when the Panthers host the San Francisco 49ers at Bank of America &hellip;  <a href="http://1079thelink.com/2016/09/15/sharon-thorsland-the-panthers-take-on-the-49ers-in-home-opener/">more</a>.</p>
+					<p><p>when the Panthers host the San Francisco 49ers at Bank of America &hellip;  <a href="http://1079thelink.com/2016/09/15/sharon-thorsland-the-panthers-take-on-the-49ers-in-home-opener/" onclick="trackOutboundLink('http://1079thelink.com/2016/09/15/sharon-thorsland-the-panthers-take-on-the-49ers-in-home-opener/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

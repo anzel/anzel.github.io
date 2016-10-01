@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>Earthquakes&#39; Amarikwa injures knee on opening play vs. KC, feared serious</h3>
-					<p><p>The San Jose Earthquakes suffered a costly home loss to Sporting Kansas City on Saturday night, and the result was made more painful by the loss of &hellip;  <a href="http://www.mlssoccer.com/post/2016/09/25/earthquakes-amarikwa-injures-knee-opening-play-vs-kc-feared-serious">more</a>.</p>
+					<p><p>The San Jose Earthquakes suffered a costly home loss to Sporting Kansas City on Saturday night, and the result was made more painful by the loss of &hellip;  <a href="http://www.mlssoccer.com/post/2016/09/25/earthquakes-amarikwa-injures-knee-opening-play-vs-kc-feared-serious" onclick="trackOutboundLink('http://www.mlssoccer.com/post/2016/09/25/earthquakes-amarikwa-injures-knee-opening-play-vs-kc-feared-serious'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

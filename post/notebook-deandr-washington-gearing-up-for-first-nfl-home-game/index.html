@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>16</b></p>
 					<h3>Notebook: DeAndr Washington Gearing Up For First NFL Home Game</h3>
-					<p><p>The Oakland Raiders were back on the field Friday afternoon at their Alameda, Calif., facility. Running Back DeAndr Washington. The last few months &hellip;  <a href="http://www.raiders.com/news/article-1/Notebook-DeAndr%C3%A9-Washington-Gearing-Up-For-First-NFL-Home-Game/637719c7-383d-4bc9-9e04-2212fd12c2d5">more</a>.</p>
+					<p><p>The Oakland Raiders were back on the field Friday afternoon at their Alameda, Calif., facility. Running Back DeAndr Washington. The last few months &hellip;  <a href="http://www.raiders.com/news/article-1/Notebook-DeAndr%C3%A9-Washington-Gearing-Up-For-First-NFL-Home-Game/637719c7-383d-4bc9-9e04-2212fd12c2d5" onclick="trackOutboundLink('http://www.raiders.com/news/article-1/Notebook-DeAndr%C3%A9-Washington-Gearing-Up-For-First-NFL-Home-Game/637719c7-383d-4bc9-9e04-2212fd12c2d5'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

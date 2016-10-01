@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>21</b></p>
 					<h3>Report: Group offers to buy Coliseum to keep Raiders in Oakland</h3>
-					<p><p>ALAMEDA, Calif. &ndash; The Oakland Raiders had no comment on an East Bay Times report Tuesday night that an investment group tied to Pro Football &hellip;  <a href="http://abc7news.com/sports/report-group-offers-to-buy-coliseum-to-keep-raiders-in-oakland/1520127/">more</a>.</p>
+					<p><p>ALAMEDA, Calif. &ndash; The Oakland Raiders had no comment on an East Bay Times report Tuesday night that an investment group tied to Pro Football &hellip;  <a href="http://abc7news.com/sports/report-group-offers-to-buy-coliseum-to-keep-raiders-in-oakland/1520127/" onclick="trackOutboundLink('http://abc7news.com/sports/report-group-offers-to-buy-coliseum-to-keep-raiders-in-oakland/1520127/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

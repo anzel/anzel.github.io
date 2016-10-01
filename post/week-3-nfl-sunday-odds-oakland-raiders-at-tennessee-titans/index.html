@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>24</b></p>
 					<h3>Week 3 NFL Sunday Odds: Oakland Raiders at Tennessee Titans</h3>
-					<p><p>The Oakland Raiders fell 35-28 to the Atlanta Falcons in Week 2 after a Week 1 victory over the New Orleans Saints. This week brings a tightly &hellip;  <a href="http://www.madduxsports.com/blog/week-3-nfl-sunday-odds-oakland-raiders-at-tennessee-titans-40312/">more</a>.</p>
+					<p><p>The Oakland Raiders fell 35-28 to the Atlanta Falcons in Week 2 after a Week 1 victory over the New Orleans Saints. This week brings a tightly &hellip;  <a href="http://www.madduxsports.com/blog/week-3-nfl-sunday-odds-oakland-raiders-at-tennessee-titans-40312/" onclick="trackOutboundLink('http://www.madduxsports.com/blog/week-3-nfl-sunday-odds-oakland-raiders-at-tennessee-titans-40312/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

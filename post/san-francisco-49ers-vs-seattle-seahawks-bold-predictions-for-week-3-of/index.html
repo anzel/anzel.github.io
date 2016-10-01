@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>24</b></p>
 					<h3>San Francisco 49ers Vs. Seattle Seahawks: Bold Predictions For Week 3 Of</h3>
-					<p><p>The Inquisitr The San Francisco 49ers will be facing their division rival on Sunday afternoon. According to ESPN.com, the 49ers will travel to Seattle, Washington to &hellip;  <a href="http://www.inquisitr.com/3538114/san-francisco-49ers-vs-seattle-seahawks-bold-predictions-for-week-3-of-the-2016-nfl-season/">more</a>.</p>
+					<p><p>The Inquisitr The San Francisco 49ers will be facing their division rival on Sunday afternoon. According to ESPN.com, the 49ers will travel to Seattle, Washington to &hellip;  <a href="http://www.inquisitr.com/3538114/san-francisco-49ers-vs-seattle-seahawks-bold-predictions-for-week-3-of-the-2016-nfl-season/" onclick="trackOutboundLink('http://www.inquisitr.com/3538114/san-francisco-49ers-vs-seattle-seahawks-bold-predictions-for-week-3-of-the-2016-nfl-season/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

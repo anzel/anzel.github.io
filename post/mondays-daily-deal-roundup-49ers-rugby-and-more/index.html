@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>19</b></p>
 					<h3>Monday&#39;s Daily Deal Round-Up: 49ers, rugby and more</h3>
-					<p><p>Football: National Football League (NFL) franchise San Francisco 49ers have agreed a partnership with Khan Academy. The deal will see the online &hellip;  <a href="http://www.sportspromedia.com/news/mondays_daily_deal_round_up_49ers_rugby_and_more">more</a>.</p>
+					<p><p>Football: National Football League (NFL) franchise San Francisco 49ers have agreed a partnership with Khan Academy. The deal will see the online &hellip;  <a href="http://www.sportspromedia.com/news/mondays_daily_deal_round_up_49ers_rugby_and_more" onclick="trackOutboundLink('http://www.sportspromedia.com/news/mondays_daily_deal_round_up_49ers_rugby_and_more'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>The Oakland Athletics are Light Years Ahead of Everyone Else</h3>
-					<p><p>A long time ago, in an era far far away, the Oakland Athletics were the premiere franchise in baseball. They won three consecutive World Series titles &hellip;  <a href="http://page2sports.com/58665/oakland-athletics-light-years-ahead-everyone-else">more</a>.</p>
+					<p><p>A long time ago, in an era far far away, the Oakland Athletics were the premiere franchise in baseball. They won three consecutive World Series titles &hellip;  <a href="http://page2sports.com/58665/oakland-athletics-light-years-ahead-everyone-else" onclick="trackOutboundLink('http://page2sports.com/58665/oakland-athletics-light-years-ahead-everyone-else'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

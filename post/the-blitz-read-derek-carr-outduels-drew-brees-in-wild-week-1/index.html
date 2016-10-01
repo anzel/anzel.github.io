@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>The Blitz Read: Derek Carr outduels Drew Brees in wild Week 1</h3>
-					<p><p>&hellip; another superb performance from quarterback Drew Brees, their defense let them down again Sunday in a 35-34 home loss to the Oakland Raiders.  <a href="http://www.sportingnews.com/nfl/news/blitz-read-drew-brees-saints-raiders-patriots-cardinals-vikings-titans-giants-cowboys/1g63sk5ng280i1uyq33o7qogu6">more</a>.</p>
+					<p><p>&hellip; another superb performance from quarterback Drew Brees, their defense let them down again Sunday in a 35-34 home loss to the Oakland Raiders.  <a href="http://www.sportingnews.com/nfl/news/blitz-read-drew-brees-saints-raiders-patriots-cardinals-vikings-titans-giants-cowboys/1g63sk5ng280i1uyq33o7qogu6" onclick="trackOutboundLink('http://www.sportingnews.com/nfl/news/blitz-read-drew-brees-saints-raiders-patriots-cardinals-vikings-titans-giants-cowboys/1g63sk5ng280i1uyq33o7qogu6'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

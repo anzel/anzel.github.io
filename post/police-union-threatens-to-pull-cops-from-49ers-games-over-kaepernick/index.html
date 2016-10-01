@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>02</b></p>
 					<h3>Police union threatens to pull cops from 49ers games over Kaepernick</h3>
-					<p><p>CBSSports.com In a letter that was hand-delivered to 49ers officials on Friday, the Santa Clara Police Officer&rsquo;s Association told the team its officers might stop working &hellip;  <a href="http://www.cbssports.com/nfl/news/police-union-threatens-to-pull-cops-from-49ers-games-over-kaepernick-protest/">more</a>.</p>
+					<p><p>CBSSports.com In a letter that was hand-delivered to 49ers officials on Friday, the Santa Clara Police Officer&rsquo;s Association told the team its officers might stop working &hellip;  <a href="http://www.cbssports.com/nfl/news/police-union-threatens-to-pull-cops-from-49ers-games-over-kaepernick-protest/" onclick="trackOutboundLink('http://www.cbssports.com/nfl/news/police-union-threatens-to-pull-cops-from-49ers-games-over-kaepernick-protest/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

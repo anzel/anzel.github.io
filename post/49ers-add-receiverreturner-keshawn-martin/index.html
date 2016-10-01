@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>49ers add receiver/returner Keshawn Martin</h3>
-					<p><p>Wide receiver and return specialist Keshawn Martin is joining a 49ers team in need of a play-making spark. The 49ers had an open roster spot &hellip;  <a href="http://www.mercurynews.com/2016/09/27/49ers-add-keshawn-martin-to-receiver-and-special-teams-corps/">more</a>.</p>
+					<p><p>Wide receiver and return specialist Keshawn Martin is joining a 49ers team in need of a play-making spark. The 49ers had an open roster spot &hellip;  <a href="http://www.mercurynews.com/2016/09/27/49ers-add-keshawn-martin-to-receiver-and-special-teams-corps/" onclick="trackOutboundLink('http://www.mercurynews.com/2016/09/27/49ers-add-keshawn-martin-to-receiver-and-special-teams-corps/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

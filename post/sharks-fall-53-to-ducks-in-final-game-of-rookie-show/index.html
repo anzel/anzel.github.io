@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>20</b></p>
 					<h3>Sharks Fall 5-3 to Ducks in Final Game of Rookie Show</h3>
-					<p><p>Westminster, CO - An early 3-0 deficit for the San Jose Sharks rookies proved too big of a hill to climb as the Sharks fell to the Anaheim Ducks rookies, &hellip;  <a href="https://www.nhl.com/sharks/news/sharks-fall-5-3-to-ducks-in-final-game-of-rookie-showcase/c-281982428">more</a>.</p>
+					<p><p>Westminster, CO - An early 3-0 deficit for the San Jose Sharks rookies proved too big of a hill to climb as the Sharks fell to the Anaheim Ducks rookies, &hellip;  <a href="https://www.nhl.com/sharks/news/sharks-fall-5-3-to-ducks-in-final-game-of-rookie-showcase/c-281982428" onclick="trackOutboundLink('https://www.nhl.com/sharks/news/sharks-fall-5-3-to-ducks-in-final-game-of-rookie-showcase/c-281982428'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

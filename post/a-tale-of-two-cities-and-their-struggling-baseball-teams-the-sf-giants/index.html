@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>10</b></p>
 					<h3>A Tale of Two Cities (and their struggling baseball teams): The SF Giants</h3>
-					<p><p>SportsBlog.com (blog) &ldquo;It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of &hellip;  <a href="http://jamiesbigleaguesbaseballblog.sportsblog.com/posts/25332004/a-tale-of-two-cities--and-their-struggling-baseball-teams---the-san-francisco-giants-and-toronto-blue-jays.html">more</a>.</p>
+					<p><p>SportsBlog.com (blog) &ldquo;It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of &hellip;  <a href="http://jamiesbigleaguesbaseballblog.sportsblog.com/posts/25332004/a-tale-of-two-cities--and-their-struggling-baseball-teams---the-san-francisco-giants-and-toronto-blue-jays.html" onclick="trackOutboundLink('http://jamiesbigleaguesbaseballblog.sportsblog.com/posts/25332004/a-tale-of-two-cities--and-their-struggling-baseball-teams---the-san-francisco-giants-and-toronto-blue-jays.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

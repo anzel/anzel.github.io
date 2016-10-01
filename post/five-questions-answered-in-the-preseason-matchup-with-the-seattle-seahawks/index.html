@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>03</b></p>
 					<h3>Five Questions Answered In The Preseason Matchup With The Seattle Seahawks</h3>
-					<p><p>Heading into the Oakland Raiders preseason finale against the Seattle Seahawks, we highlighted five questions that we hoping to get answered &hellip;  <a href="http://www.raiders.com/news/article-1/Five-Questions-Answered-In-The-Preseason-Matchup-With-The-Seattle-Seahawks/e2ed84f3-013b-42fd-b162-30b4f1fcf7df">more</a>.</p>
+					<p><p>Heading into the Oakland Raiders preseason finale against the Seattle Seahawks, we highlighted five questions that we hoping to get answered &hellip;  <a href="http://www.raiders.com/news/article-1/Five-Questions-Answered-In-The-Preseason-Matchup-With-The-Seattle-Seahawks/e2ed84f3-013b-42fd-b162-30b4f1fcf7df" onclick="trackOutboundLink('http://www.raiders.com/news/article-1/Five-Questions-Answered-In-The-Preseason-Matchup-With-The-Seattle-Seahawks/e2ed84f3-013b-42fd-b162-30b4f1fcf7df'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

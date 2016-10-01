@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>01</b></p>
 					<h3>NFL preseason TV schedule: What time, channel is Seahawks vs. Raiders?</h3>
-					<p><p>NJ.com On Thursday, the Oakland Raiders will host the Seattle Seahawks in the final preseason game for both teams. Here&rsquo;s what you need to know about the &hellip;  <a href="http://www.nj.com/super-bowl/index.ssf/2016/09/nfl_preseason_tv_schedule_what_time_channel_is_seahawks_vs_raiders_9116_live_stream_how_to_watch_onl.html">more</a>.</p>
+					<p><p>NJ.com On Thursday, the Oakland Raiders will host the Seattle Seahawks in the final preseason game for both teams. Here&rsquo;s what you need to know about the &hellip;  <a href="http://www.nj.com/super-bowl/index.ssf/2016/09/nfl_preseason_tv_schedule_what_time_channel_is_seahawks_vs_raiders_9116_live_stream_how_to_watch_onl.html" onclick="trackOutboundLink('http://www.nj.com/super-bowl/index.ssf/2016/09/nfl_preseason_tv_schedule_what_time_channel_is_seahawks_vs_raiders_9116_live_stream_how_to_watch_onl.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

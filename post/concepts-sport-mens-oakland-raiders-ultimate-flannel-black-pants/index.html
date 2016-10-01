@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Aug<b>31</b></p>
 					<h3>Concepts Sport Men&#39;s Oakland Raiders Ultimate Flannel Black Pants</h3>
-					<p><p>DICK&rsquo;S Sporting Goods. Find more information and get customer ratings &hellip;  <a href="http://www.dickssportinggoods.com/product/index.jsp?productId=108269336">more</a>.</p>
+					<p><p>DICK&rsquo;S Sporting Goods. Find more information and get customer ratings &hellip;  <a href="http://www.dickssportinggoods.com/product/index.jsp?productId=108269336" onclick="trackOutboundLink('http://www.dickssportinggoods.com/product/index.jsp?productId=108269336'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

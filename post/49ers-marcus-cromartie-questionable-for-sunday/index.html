@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>24</b></p>
 					<h3>49ers&#39; Marcus Cromartie: Questionable for Sunday</h3>
-					<p><p>49ers&rsquo; Marcus Cromartie: Questionable for Sunday. by RotoWire Staff; 6m ago. Cromartie (ankle) is considered questionable for Sunday&rsquo;s game &hellip;  <a href="http://www.cbssports.com/fantasy/football/news/49ers-marcus-cromartie-questionable-for-sunday/">more</a>.</p>
+					<p><p>49ers&rsquo; Marcus Cromartie: Questionable for Sunday. by RotoWire Staff; 6m ago. Cromartie (ankle) is considered questionable for Sunday&rsquo;s game &hellip;  <a href="http://www.cbssports.com/fantasy/football/news/49ers-marcus-cromartie-questionable-for-sunday/" onclick="trackOutboundLink('http://www.cbssports.com/fantasy/football/news/49ers-marcus-cromartie-questionable-for-sunday/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

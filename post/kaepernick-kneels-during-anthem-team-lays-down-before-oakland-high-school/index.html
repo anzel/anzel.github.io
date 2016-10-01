@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>24</b></p>
 					<h3>Kaepernick kneels during anthem, team lays down before Oakland high school</h3>
-					<p><p>Daily Mail A picture of the teens&rsquo; die-in protest was captured by former Oakland Raiders linebacker Kirk Morrison and has already been retweeted more than &hellip;  <a href="http://www.dailymail.co.uk/news/article-3805511/Kaepernick-kneels-anthem-team-lays-Oakland-high-school-football-game.html">more</a>.</p>
+					<p><p>Daily Mail A picture of the teens&rsquo; die-in protest was captured by former Oakland Raiders linebacker Kirk Morrison and has already been retweeted more than &hellip;  <a href="http://www.dailymail.co.uk/news/article-3805511/Kaepernick-kneels-anthem-team-lays-Oakland-high-school-football-game.html" onclick="trackOutboundLink('http://www.dailymail.co.uk/news/article-3805511/Kaepernick-kneels-anthem-team-lays-Oakland-high-school-football-game.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

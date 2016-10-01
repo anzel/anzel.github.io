@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>06</b></p>
 					<h3>Moneyline Favors Oakland Athletics in MLB Battle with Los Angeles Angels</h3>
-					<p><p>battle on Tuesday at O.co Coliseum as the Athletics try to pick up a win &hellip;  <a href="http://www.oddsshark.com/mlb/los-angeles-angels-oakland-athletics-betting-september-6-2016-723597">more</a>.</p>
+					<p><p>battle on Tuesday at O.co Coliseum as the Athletics try to pick up a win &hellip;  <a href="http://www.oddsshark.com/mlb/los-angeles-angels-oakland-athletics-betting-september-6-2016-723597" onclick="trackOutboundLink('http://www.oddsshark.com/mlb/los-angeles-angels-oakland-athletics-betting-september-6-2016-723597'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

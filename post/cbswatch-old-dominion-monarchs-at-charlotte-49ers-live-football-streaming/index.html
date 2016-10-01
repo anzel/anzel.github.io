@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Oct<b>01</b></p>
 					<h3>Cbs@WATCH Old Dominion Monarchs at Charlotte 49ers LIVE Football Streaming</h3>
-					<p><p>Dominion Monarchs at Charlotte 49ers To Watch Football Free Online,Watch Old &hellip; Charlotte 49ers vs Old Dominion Monarchs Odds - Saturday .  <a href="https://nadca.com/sites/default/files/webform/cbswatch_old_dominion_monarchs_at_charlotte_49ers_live_football_streaming_for_laptop_endzone.pdf">more</a>.</p>
+					<p><p>Dominion Monarchs at Charlotte 49ers To Watch Football Free Online,Watch Old &hellip; Charlotte 49ers vs Old Dominion Monarchs Odds - Saturday .  <a href="https://nadca.com/sites/default/files/webform/cbswatch_old_dominion_monarchs_at_charlotte_49ers_live_football_streaming_for_laptop_endzone.pdf" onclick="trackOutboundLink('https://nadca.com/sites/default/files/webform/cbswatch_old_dominion_monarchs_at_charlotte_49ers_live_football_streaming_for_laptop_endzone.pdf'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

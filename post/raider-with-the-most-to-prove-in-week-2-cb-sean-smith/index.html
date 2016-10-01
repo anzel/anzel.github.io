@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>17</b></p>
 					<h3>Raider with the most to prove in Week 2: CB Sean Smith</h3>
-					<p><p>All eyes will be on Sean Smith when the Oakland Raiders host the Atlanta Falcons on Sunday. He&rsquo;s out for redemption, after a forgettable performance &hellip;  <a href="http://oak.247sports.com/Bolt/Raider-with-the-most-to-prove-in-Week-2-CB-Sean-Smith-47506207">more</a>.</p>
+					<p><p>All eyes will be on Sean Smith when the Oakland Raiders host the Atlanta Falcons on Sunday. He&rsquo;s out for redemption, after a forgettable performance &hellip;  <a href="http://oak.247sports.com/Bolt/Raider-with-the-most-to-prove-in-Week-2-CB-Sean-Smith-47506207" onclick="trackOutboundLink('http://oak.247sports.com/Bolt/Raider-with-the-most-to-prove-in-Week-2-CB-Sean-Smith-47506207'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

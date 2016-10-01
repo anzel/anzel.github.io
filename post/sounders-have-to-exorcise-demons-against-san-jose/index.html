@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>Sounders Have to Exorcise Demons Against San Jose</h3>
-					<p><p>One of those final eight games is against the Sounders&rsquo; bogeyman, the San Jose Earthquakes. The Sounders faced San Jose three times last year &hellip;  <a href="http://emeraldcityswagger.com/2016/09/08/sounders-exorcise-demons-san-jose/">more</a>.</p>
+					<p><p>One of those final eight games is against the Sounders&rsquo; bogeyman, the San Jose Earthquakes. The Sounders faced San Jose three times last year &hellip;  <a href="http://emeraldcityswagger.com/2016/09/08/sounders-exorcise-demons-san-jose/" onclick="trackOutboundLink('http://emeraldcityswagger.com/2016/09/08/sounders-exorcise-demons-san-jose/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

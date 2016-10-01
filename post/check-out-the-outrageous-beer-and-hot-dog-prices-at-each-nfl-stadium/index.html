@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>17</b></p>
 					<h3>Check Out The Outrageous Beer And Hot Dog Prices At Each NFL Stadium</h3>
-					<p><p>If you&rsquo;re planning on watching the Oakland Raiders at the Oakland Alameda Coliseum, bring a few extra bucks for beer. One regular-sized beer at a &hellip;  <a href="http://www.foodbeast.com/news/check-out-the-outrageous-beer-and-hot-dog-prices-at-each-nfl-stadium/">more</a>.</p>
+					<p><p>If you&rsquo;re planning on watching the Oakland Raiders at the Oakland Alameda Coliseum, bring a few extra bucks for beer. One regular-sized beer at a &hellip;  <a href="http://www.foodbeast.com/news/check-out-the-outrageous-beer-and-hot-dog-prices-at-each-nfl-stadium/" onclick="trackOutboundLink('http://www.foodbeast.com/news/check-out-the-outrageous-beer-and-hot-dog-prices-at-each-nfl-stadium/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>23</b></p>
 					<h3>NFL Trade Rumors: San Francisco 49ers Sending Colin Kaepernick To New</h3>
-					<p><p>Morning News USA The New England Patriots are short-handed in the quarterback position though it has come down to one game (against the Buffalo Bills).  <a href="http://www.morningnewsusa.com/nfl-trade-rumors-san-francisco-49ers-sending-colin-kaepernick-to-new-england-patriots-23107243.html">more</a>.</p>
+					<p><p>Morning News USA The New England Patriots are short-handed in the quarterback position though it has come down to one game (against the Buffalo Bills).  <a href="http://www.morningnewsusa.com/nfl-trade-rumors-san-francisco-49ers-sending-colin-kaepernick-to-new-england-patriots-23107243.html" onclick="trackOutboundLink('http://www.morningnewsusa.com/nfl-trade-rumors-san-francisco-49ers-sending-colin-kaepernick-to-new-england-patriots-23107243.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

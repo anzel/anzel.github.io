@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>05</b></p>
 					<h3>The Oakland Police Department Light The Torch In Honor Of Al Davis</h3>
-					<p><p>Thursday night, prior to the Oakland Raiders final preseason game against the Seattle Seahawks, the Oakland PD lit the torch honoring Al Davis.  <a href="http://www.raiders.com/news/article-1/The-Oakland-Police-Department-Light-The-Torch-In-Honor-Of-Al-Davis/8ef6f43c-1f32-4093-b6e8-8b0888155565">more</a>.</p>
+					<p><p>Thursday night, prior to the Oakland Raiders final preseason game against the Seattle Seahawks, the Oakland PD lit the torch honoring Al Davis.  <a href="http://www.raiders.com/news/article-1/The-Oakland-Police-Department-Light-The-Torch-In-Honor-Of-Al-Davis/8ef6f43c-1f32-4093-b6e8-8b0888155565" onclick="trackOutboundLink('http://www.raiders.com/news/article-1/The-Oakland-Police-Department-Light-The-Torch-In-Honor-Of-Al-Davis/8ef6f43c-1f32-4093-b6e8-8b0888155565'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

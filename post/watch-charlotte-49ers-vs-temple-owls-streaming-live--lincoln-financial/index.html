@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>23</b></p>
 					<h3>WAtcH Charlotte 49ers Vs Temple Owls streaming Live :: Lincoln Financial</h3>
-					<p><p>Charlotte 49ers Vs Temple Owls are going to face 3rd of in this season. This is a week-04 Match. It will be held on Saturday Sep 24, 2016. Hope you &hellip;  <a href="http://ca.gew.co/canada/watch-charlotte-49ers-vs-temple-owls-streaming-live-lincoln-financial-field">more</a>.</p>
+					<p><p>Charlotte 49ers Vs Temple Owls are going to face 3rd of in this season. This is a week-04 Match. It will be held on Saturday Sep 24, 2016. Hope you &hellip;  <a href="http://ca.gew.co/canada/watch-charlotte-49ers-vs-temple-owls-streaming-live-lincoln-financial-field" onclick="trackOutboundLink('http://ca.gew.co/canada/watch-charlotte-49ers-vs-temple-owls-streaming-live-lincoln-financial-field'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

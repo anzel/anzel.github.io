@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>13</b></p>
 					<h3>Falcons vs. Raiders Week 2 Game Coverage</h3>
-					<p><p>When the Atlanta Falcons (0-1) play the Oakland Raiders (1-0), you&rsquo;ll know all about it thanks to our stream of coverage.  <a href="http://www.thefalcoholic.com/2016/9/12/12897220/falcons-vs-raiders-week-2-game-coverage">more</a>.</p>
+					<p><p>When the Atlanta Falcons (0-1) play the Oakland Raiders (1-0), you&rsquo;ll know all about it thanks to our stream of coverage.  <a href="http://www.thefalcoholic.com/2016/9/12/12897220/falcons-vs-raiders-week-2-game-coverage" onclick="trackOutboundLink('http://www.thefalcoholic.com/2016/9/12/12897220/falcons-vs-raiders-week-2-game-coverage'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

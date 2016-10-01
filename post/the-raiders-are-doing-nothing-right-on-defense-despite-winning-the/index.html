@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>23</b></p>
 					<h3>The Raiders are doing nothing right on defense, despite winning the</h3>
-					<p><p>CBSSports.com It was a popular belief in many circles that the Oakland Raiders won the 2016 offseason. While believing in the team that &ldquo;won the offseason&rdquo; is often a &hellip;  <a href="http://www.cbssports.com/nfl/news/the-raiders-are-doing-nothing-right-on-defense-despite-winning-the-offseason/">more</a>.</p>
+					<p><p>CBSSports.com It was a popular belief in many circles that the Oakland Raiders won the 2016 offseason. While believing in the team that &ldquo;won the offseason&rdquo; is often a &hellip;  <a href="http://www.cbssports.com/nfl/news/the-raiders-are-doing-nothing-right-on-defense-despite-winning-the-offseason/" onclick="trackOutboundLink('http://www.cbssports.com/nfl/news/the-raiders-are-doing-nothing-right-on-defense-despite-winning-the-offseason/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

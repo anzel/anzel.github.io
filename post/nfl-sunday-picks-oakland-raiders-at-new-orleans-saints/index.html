@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>11</b></p>
 					<h3>NFL Sunday Picks: Oakland Raiders at New Orleans Saints</h3>
-					<p><p>The Oakland Raiders have not made the postseason in 13 seasons and finished 7-9 last year, but head coach Jack Del Rio sets the bar at winning the &hellip;  <a href="http://www.madduxsports.com/blog/nfl-sunday-picks-oakland-raiders-at-new-orleans-saints-40218/">more</a>.</p>
+					<p><p>The Oakland Raiders have not made the postseason in 13 seasons and finished 7-9 last year, but head coach Jack Del Rio sets the bar at winning the &hellip;  <a href="http://www.madduxsports.com/blog/nfl-sunday-picks-oakland-raiders-at-new-orleans-saints-40218/" onclick="trackOutboundLink('http://www.madduxsports.com/blog/nfl-sunday-picks-oakland-raiders-at-new-orleans-saints-40218/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

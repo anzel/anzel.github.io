@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>Del Rio: Crabtree made &#39;Kenny Powers&#39; gesture</h3>
-					<p><p>ALAMEDA, Calif. &ndash; Oakland Raiders coach Jack Del Rio used the &ldquo;Kenny Powers Got His Pitch Back&rdquo; defense in explaining what receiver Michael &hellip;  <a href="http://www.espn.com/nfl/story/_/id/17533556/jack-del-rio-oakland-raiders-says-michael-crabtree-made-kenny-powers-gesture">more</a>.</p>
+					<p><p>ALAMEDA, Calif. &ndash; Oakland Raiders coach Jack Del Rio used the &ldquo;Kenny Powers Got His Pitch Back&rdquo; defense in explaining what receiver Michael &hellip;  <a href="http://www.espn.com/nfl/story/_/id/17533556/jack-del-rio-oakland-raiders-says-michael-crabtree-made-kenny-powers-gesture" onclick="trackOutboundLink('http://www.espn.com/nfl/story/_/id/17533556/jack-del-rio-oakland-raiders-says-michael-crabtree-made-kenny-powers-gesture'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

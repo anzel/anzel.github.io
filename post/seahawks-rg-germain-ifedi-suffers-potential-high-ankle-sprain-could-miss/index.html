@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>Seahawks RG Germain Ifedi suffers potential high ankle sprain, could miss</h3>
-					<p><p>Niners Nation The San Francisco 49ers travel up to Seattle in three weeks to face the Seahawks, and they might get a chance at a weakened offensive line. Rookie &hellip;  <a href="http://www.ninersnation.com/2016/9/8/12850428/germain-ifedi-injury-high-ankle-sprain-49ers-seahawks">more</a>.</p>
+					<p><p>Niners Nation The San Francisco 49ers travel up to Seattle in three weeks to face the Seahawks, and they might get a chance at a weakened offensive line. Rookie &hellip;  <a href="http://www.ninersnation.com/2016/9/8/12850428/germain-ifedi-injury-high-ankle-sprain-49ers-seahawks" onclick="trackOutboundLink('http://www.ninersnation.com/2016/9/8/12850428/germain-ifedi-injury-high-ankle-sprain-49ers-seahawks'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

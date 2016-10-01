@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>17</b></p>
 					<h3>Matchday Welcome: Colorado Rapids vs. San Jose Earthquakes</h3>
-					<p><p>Family Night&rsquo;s at Dick&rsquo;s Sporting Goods Park. Starting at just $29, fans will &hellip;  <a href="http://www.coloradorapids.com/post/2016/09/17/matchday-welcome-colorado-rapids-vs-san-jose-earthquakes">more</a>.</p>
+					<p><p>Family Night&rsquo;s at Dick&rsquo;s Sporting Goods Park. Starting at just $29, fans will &hellip;  <a href="http://www.coloradorapids.com/post/2016/09/17/matchday-welcome-colorado-rapids-vs-san-jose-earthquakes" onclick="trackOutboundLink('http://www.coloradorapids.com/post/2016/09/17/matchday-welcome-colorado-rapids-vs-san-jose-earthquakes'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

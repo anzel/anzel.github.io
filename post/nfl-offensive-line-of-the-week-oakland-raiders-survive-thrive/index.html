@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>13</b></p>
 					<h3>NFL Offensive Line of the Week: Oakland Raiders survive, thrive</h3>
-					<p><p>In today&rsquo;s fantasy-obsessed football world, it&rsquo;s easy to overlook the contributions of one position group: offensive line. Well, NFL Network analyst and &hellip;  <a href="http://www.nfl.com/news/story/0ap3000000701920/article/nfl-offensive-line-of-the-week-oakland-raiders-survive-thrive">more</a>.</p>
+					<p><p>In today&rsquo;s fantasy-obsessed football world, it&rsquo;s easy to overlook the contributions of one position group: offensive line. Well, NFL Network analyst and &hellip;  <a href="http://www.nfl.com/news/story/0ap3000000701920/article/nfl-offensive-line-of-the-week-oakland-raiders-survive-thrive" onclick="trackOutboundLink('http://www.nfl.com/news/story/0ap3000000701920/article/nfl-offensive-line-of-the-week-oakland-raiders-survive-thrive'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

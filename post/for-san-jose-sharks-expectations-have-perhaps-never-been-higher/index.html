@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>22</b></p>
 					<h3>For San Jose Sharks, expectations have perhaps never been higher</h3>
-					<p><p>The Sharks made franchise history last season by winning the Western Conference title. With a deeper roster, they look to go one step further this &hellip;  <a href="http://www.mercurynews.com/2016/09/22/for-san-jose-sharks-expectations-have-perhaps-never-been-higher/">more</a>.</p>
+					<p><p>The Sharks made franchise history last season by winning the Western Conference title. With a deeper roster, they look to go one step further this &hellip;  <a href="http://www.mercurynews.com/2016/09/22/for-san-jose-sharks-expectations-have-perhaps-never-been-higher/" onclick="trackOutboundLink('http://www.mercurynews.com/2016/09/22/for-san-jose-sharks-expectations-have-perhaps-never-been-higher/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

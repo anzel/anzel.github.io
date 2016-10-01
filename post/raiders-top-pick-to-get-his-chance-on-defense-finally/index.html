@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>24</b></p>
 					<h3>Raiders&#39; top pick to get his chance on defense, finally</h3>
-					<p><p>&hellip; Karl Joseph&rsquo;s debut on defense is coming three weeks later than he had hoped and maybe a few weeks earlier than the Oakland Raiders planned.  <a href="http://www.bendbulletin.com/sports/4685140-151/raiders-top-pick-to-get-his-chance-on">more</a>.</p>
+					<p><p>&hellip; Karl Joseph&rsquo;s debut on defense is coming three weeks later than he had hoped and maybe a few weeks earlier than the Oakland Raiders planned.  <a href="http://www.bendbulletin.com/sports/4685140-151/raiders-top-pick-to-get-his-chance-on" onclick="trackOutboundLink('http://www.bendbulletin.com/sports/4685140-151/raiders-top-pick-to-get-his-chance-on'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

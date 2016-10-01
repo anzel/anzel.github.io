@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>24</b></p>
 					<h3>HOF Coach Ditka Has &#39;No Respect&#39; For 49ers QB Kaepernick; Audio Excerpt</h3>
-					<p><p>on the cover of Time magazine for his recent sting of protests during the &hellip;  <a href="http://www.msn.com/en-us/news/us/hof-coach-ditka-has-%E2%80%98no-respect%E2%80%99-for-49ers-qb-kaepernick-audio-excerpt/vp-BBwyFmn">more</a>.</p>
+					<p><p>on the cover of Time magazine for his recent sting of protests during the &hellip;  <a href="http://www.msn.com/en-us/news/us/hof-coach-ditka-has-%E2%80%98no-respect%E2%80%99-for-49ers-qb-kaepernick-audio-excerpt/vp-BBwyFmn" onclick="trackOutboundLink('http://www.msn.com/en-us/news/us/hof-coach-ditka-has-%E2%80%98no-respect%E2%80%99-for-49ers-qb-kaepernick-audio-excerpt/vp-BBwyFmn'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

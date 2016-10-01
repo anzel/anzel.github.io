@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>16</b></p>
 					<h3>Raiders QB Derek Carr Earns Castrol Edge Clutch Performer of the Week</h3>
-					<p><p>Oakland Raiders quarterback Derek Carr&rsquo;s fourth quarter touchdown pass and two-point conversion in a Raiders win has been voted the CASTROL &hellip;  <a href="http://www.raiders.com/news/article-1/Raiders-QB-Derek-Carr-Earns-Castrol-Edge-Clutch-Performer-of-the-Week/3a83a7ca-2fa7-42a7-a0c7-f97da5076ce3">more</a>.</p>
+					<p><p>Oakland Raiders quarterback Derek Carr&rsquo;s fourth quarter touchdown pass and two-point conversion in a Raiders win has been voted the CASTROL &hellip;  <a href="http://www.raiders.com/news/article-1/Raiders-QB-Derek-Carr-Earns-Castrol-Edge-Clutch-Performer-of-the-Week/3a83a7ca-2fa7-42a7-a0c7-f97da5076ce3" onclick="trackOutboundLink('http://www.raiders.com/news/article-1/Raiders-QB-Derek-Carr-Earns-Castrol-Edge-Clutch-Performer-of-the-Week/3a83a7ca-2fa7-42a7-a0c7-f97da5076ce3'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

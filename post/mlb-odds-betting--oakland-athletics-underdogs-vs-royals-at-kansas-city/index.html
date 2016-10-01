@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>13</b></p>
 					<h3>MLB Odds Betting - Oakland Athletics Underdogs vs Royals at Kansas City</h3>
-					<p><p>they look to pick up a win at Kauffman Stadium against the Kansas City &hellip;  <a href="http://www.oddsshark.com/mlb/oakland-athletics-kansas-city-royals-betting-september-13-2016-723677">more</a>.</p>
+					<p><p>they look to pick up a win at Kauffman Stadium against the Kansas City &hellip;  <a href="http://www.oddsshark.com/mlb/oakland-athletics-kansas-city-royals-betting-september-13-2016-723677" onclick="trackOutboundLink('http://www.oddsshark.com/mlb/oakland-athletics-kansas-city-royals-betting-september-13-2016-723677'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

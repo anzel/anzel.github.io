@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>22</b></p>
 					<h3>Predicting Raiders vs. Titans: Will defense</h3>
-					<p><p>Oakland Raiders&rsquo; Karl Joseph (42) tackles Seattle Seahawks&rsquo; Luke Willson (82 Safety Karl Joseph (42) will get his first playing time on defense &hellip;  <a href="http://www.mercurynews.com/2016/09/22/predicting-raiders-vs-titans/">more</a>.</p>
+					<p><p>Oakland Raiders&rsquo; Karl Joseph (42) tackles Seattle Seahawks&rsquo; Luke Willson (82 Safety Karl Joseph (42) will get his first playing time on defense &hellip;  <a href="http://www.mercurynews.com/2016/09/22/predicting-raiders-vs-titans/" onclick="trackOutboundLink('http://www.mercurynews.com/2016/09/22/predicting-raiders-vs-titans/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

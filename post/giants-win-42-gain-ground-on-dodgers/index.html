@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Aug<b>31</b></p>
 					<h3>Giants win, 4-2, gain ground on Dodgers</h3>
-					<p><p>&hellip; The Giants either have a scout watching Tim Tebow, or they don&rsquo;t  SF Giants Minor Lines, <sup>8</sup>&frasl;<sub>30</sub>  It&rsquo;s the 50th anniversary of The Beatles playing their &hellip;  <a href="http://www.mccoveychronicles.com/2016/8/31/12739260/sf-giants-recap">more</a>.</p>
+					<p><p>&hellip; The Giants either have a scout watching Tim Tebow, or they don&rsquo;t  SF Giants Minor Lines, <sup>8</sup>&frasl;<sub>30</sub>  It&rsquo;s the 50th anniversary of The Beatles playing their &hellip;  <a href="http://www.mccoveychronicles.com/2016/8/31/12739260/sf-giants-recap" onclick="trackOutboundLink('http://www.mccoveychronicles.com/2016/8/31/12739260/sf-giants-recap'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

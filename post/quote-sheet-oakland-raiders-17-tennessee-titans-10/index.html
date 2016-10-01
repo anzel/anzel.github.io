@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>Quote Sheet: Oakland Raiders 17 Tennessee Titans 10</h3>
-					<p><p>Here are the post-game quotes from the Oakland Raiders&rsquo; Week 3 triumph over the Tennessee Titans. Running Back DeAndr Washington. RAIDERS &hellip;  <a href="http://www.raiders.com/news/article-1/Quote-Sheet-Oakland-Raiders-17-Tennessee-Titans-10/db022145-1f8a-4271-ba11-ad2add8024b4">more</a>.</p>
+					<p><p>Here are the post-game quotes from the Oakland Raiders&rsquo; Week 3 triumph over the Tennessee Titans. Running Back DeAndr Washington. RAIDERS &hellip;  <a href="http://www.raiders.com/news/article-1/Quote-Sheet-Oakland-Raiders-17-Tennessee-Titans-10/db022145-1f8a-4271-ba11-ad2add8024b4" onclick="trackOutboundLink('http://www.raiders.com/news/article-1/Quote-Sheet-Oakland-Raiders-17-Tennessee-Titans-10/db022145-1f8a-4271-ba11-ad2add8024b4'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

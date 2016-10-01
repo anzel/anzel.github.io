@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>49ers&#39; Bethea on raising fist: &#39;It&#39;s just to continue the conversation</h3>
-					<p><p>doubts, they went out and proved it with their 28-0 season-opening victory &hellip;  <a href="http://blog.siriusxm.com/2016/09/14/49ers-bethea-on-raising-fist-its-just-to-continue-the-conversation/">more</a>.</p>
+					<p><p>doubts, they went out and proved it with their 28-0 season-opening victory &hellip;  <a href="http://blog.siriusxm.com/2016/09/14/49ers-bethea-on-raising-fist-its-just-to-continue-the-conversation/" onclick="trackOutboundLink('http://blog.siriusxm.com/2016/09/14/49ers-bethea-on-raising-fist-its-just-to-continue-the-conversation/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

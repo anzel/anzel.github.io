@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>Colin Kaepernick continues kneeling protest ahead of 49ers opener</h3>
-					<p><p>Colin Kaepernick #7 and Eric Reid #35 of the San Francisco 49ers kneel in protest during the national anthem prior to playing the Los Angeles Rams &hellip;  <a href="http://fox2now.com/2016/09/13/colin-kaepernick-continues-kneeling-protest-ahead-of-49ers-opener/">more</a>.</p>
+					<p><p>Colin Kaepernick #7 and Eric Reid #35 of the San Francisco 49ers kneel in protest during the national anthem prior to playing the Los Angeles Rams &hellip;  <a href="http://fox2now.com/2016/09/13/colin-kaepernick-continues-kneeling-protest-ahead-of-49ers-opener/" onclick="trackOutboundLink('http://fox2now.com/2016/09/13/colin-kaepernick-continues-kneeling-protest-ahead-of-49ers-opener/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

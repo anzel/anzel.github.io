@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>26</b></p>
 					<h3>49ers&#39; Anthony Davis retires again after returning from year-long hiatus</h3>
-					<p><p>On Monday, the 49ers announced Davis&rsquo; retirement with a very brief statement that did not provide an explanation. If this sounds familiar, it&rsquo;s because &hellip;  <a href="http://www.cbssports.com/nfl/news/49ers-anthony-davis-retires-again-after-returning-from-year-long-hiatus/">more</a>.</p>
+					<p><p>On Monday, the 49ers announced Davis&rsquo; retirement with a very brief statement that did not provide an explanation. If this sounds familiar, it&rsquo;s because &hellip;  <a href="http://www.cbssports.com/nfl/news/49ers-anthony-davis-retires-again-after-returning-from-year-long-hiatus/" onclick="trackOutboundLink('http://www.cbssports.com/nfl/news/49ers-anthony-davis-retires-again-after-returning-from-year-long-hiatus/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

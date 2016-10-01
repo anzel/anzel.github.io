@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>Slumping Impact hope win over Earthquakes will quell comparisons to 2013</h3>
-					<p><p>Another defeat when the Impact (9-10-11) plays host to the lowly San Jose Earthquakes (7-9-13) on Wednesday night will put their playoff position in &hellip;  <a href="http://www.winnipegfreepress.com/sports/soccer/slumping-impact-hope-win-over-earthquakes-will-quell-comparisons-to-2013-394989441.html">more</a>.</p>
+					<p><p>Another defeat when the Impact (9-10-11) plays host to the lowly San Jose Earthquakes (7-9-13) on Wednesday night will put their playoff position in &hellip;  <a href="http://www.winnipegfreepress.com/sports/soccer/slumping-impact-hope-win-over-earthquakes-will-quell-comparisons-to-2013-394989441.html" onclick="trackOutboundLink('http://www.winnipegfreepress.com/sports/soccer/slumping-impact-hope-win-over-earthquakes-will-quell-comparisons-to-2013-394989441.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

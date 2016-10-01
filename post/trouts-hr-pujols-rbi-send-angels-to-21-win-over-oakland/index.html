@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>Trout&#39;s HR, Pujols&#39; RBI send Angels to 2-1 win over Oakland</h3>
-					<p><p>&hellip; Ryan Dull bobbled Albert Pujols&rsquo; weak grounder back to the mound in the eighth inning, and the Los Angeles Angels beat the Oakland Athletics 2-1 &hellip;  <a href="https://ca.sports.yahoo.com/news/trouts-hr-pujols-rbi-send-angels-2-1-045200979--mlb.html">more</a>.</p>
+					<p><p>&hellip; Ryan Dull bobbled Albert Pujols&rsquo; weak grounder back to the mound in the eighth inning, and the Los Angeles Angels beat the Oakland Athletics 2-1 &hellip;  <a href="https://ca.sports.yahoo.com/news/trouts-hr-pujols-rbi-send-angels-2-1-045200979--mlb.html" onclick="trackOutboundLink('https://ca.sports.yahoo.com/news/trouts-hr-pujols-rbi-send-angels-2-1-045200979--mlb.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

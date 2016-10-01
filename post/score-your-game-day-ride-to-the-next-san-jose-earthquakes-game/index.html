@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>Score Your Game Day Ride to The Next San Jose Earthquakes Game</h3>
-					<p><p>Earthquakes! This season, Uber will be your game day ride and make the &hellip;  <a href="https://newsroom.uber.com/us-california/score-your-game-day-ride-to-the-next-san-jose-earthquakes-game/">more</a>.</p>
+					<p><p>Earthquakes! This season, Uber will be your game day ride and make the &hellip;  <a href="https://newsroom.uber.com/us-california/score-your-game-day-ride-to-the-next-san-jose-earthquakes-game/" onclick="trackOutboundLink('https://newsroom.uber.com/us-california/score-your-game-day-ride-to-the-next-san-jose-earthquakes-game/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

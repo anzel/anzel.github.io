@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>Bush comes up big for Impact in crucial win over Earthquakes</h3>
-					<p><p>The Montreal Impact had Evan Bush to thank after his huge penalty kick save helped the side secure three points against the San Jose Earthquakes.  <a href="http://www.goal.com/en-us/news/1110/major-league-soccer/2016/09/29/27995632/bush-comes-up-big-for-impact-in-crucial-win-over-earthquakes">more</a>.</p>
+					<p><p>The Montreal Impact had Evan Bush to thank after his huge penalty kick save helped the side secure three points against the San Jose Earthquakes.  <a href="http://www.goal.com/en-us/news/1110/major-league-soccer/2016/09/29/27995632/bush-comes-up-big-for-impact-in-crucial-win-over-earthquakes" onclick="trackOutboundLink('http://www.goal.com/en-us/news/1110/major-league-soccer/2016/09/29/27995632/bush-comes-up-big-for-impact-in-crucial-win-over-earthquakes'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

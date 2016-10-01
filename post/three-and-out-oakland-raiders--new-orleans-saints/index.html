@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>Three and Out: Oakland Raiders @ New Orleans Saints</h3>
-					<p><p>Three and Out is a new weekly series that will examine three areas where the Oakland Raiders played well, and three areas where they didn&rsquo;t.  <a href="http://justblogbaby.com/2016/09/12/three-and-out-oakland-raiders-new-orleans-saints/">more</a>.</p>
+					<p><p>Three and Out is a new weekly series that will examine three areas where the Oakland Raiders played well, and three areas where they didn&rsquo;t.  <a href="http://justblogbaby.com/2016/09/12/three-and-out-oakland-raiders-new-orleans-saints/" onclick="trackOutboundLink('http://justblogbaby.com/2016/09/12/three-and-out-oakland-raiders-new-orleans-saints/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

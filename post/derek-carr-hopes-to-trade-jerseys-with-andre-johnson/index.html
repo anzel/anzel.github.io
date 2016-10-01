@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>22</b></p>
 					<h3>Derek Carr hopes to trade jerseys with Andre Johnson</h3>
-					<p><p>Heading into a Week 3 matchup with the Tennessee Titans, Oakland Raiders quarterback Derek Carr hopes to find himself in one of these trades with &hellip;  <a href="http://247sports.com/Bolt/Derek-Carr-hopes-to-trade-jerseys-with-Andre-Johnson-47661067">more</a>.</p>
+					<p><p>Heading into a Week 3 matchup with the Tennessee Titans, Oakland Raiders quarterback Derek Carr hopes to find himself in one of these trades with &hellip;  <a href="http://247sports.com/Bolt/Derek-Carr-hopes-to-trade-jerseys-with-Andre-Johnson-47661067" onclick="trackOutboundLink('http://247sports.com/Bolt/Derek-Carr-hopes-to-trade-jerseys-with-Andre-Johnson-47661067'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

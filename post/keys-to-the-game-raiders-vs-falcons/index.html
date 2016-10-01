@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>17</b></p>
 					<h3>Keys to the game: Raiders vs. Falcons</h3>
-					<p><p>In order for the Oakland Raiders to beat the Atlanta Falcons in Week 2, they must capitalize in three key areas of the game. The Raiders are on the &hellip;  <a href="http://oak.247sports.com/Bolt/Keys-to-the-game-Raiders-vs-Falcons-47564067">more</a>.</p>
+					<p><p>In order for the Oakland Raiders to beat the Atlanta Falcons in Week 2, they must capitalize in three key areas of the game. The Raiders are on the &hellip;  <a href="http://oak.247sports.com/Bolt/Keys-to-the-game-Raiders-vs-Falcons-47564067" onclick="trackOutboundLink('http://oak.247sports.com/Bolt/Keys-to-the-game-Raiders-vs-Falcons-47564067'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

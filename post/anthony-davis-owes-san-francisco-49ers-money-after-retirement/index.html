@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Oct<b>01</b></p>
 					<h3>Anthony Davis owes San Francisco 49ers money after retirement</h3>
-					<p><p>Anthony Davis, the former starting right tackle for the San Francisco 49ers, walked away from the team for the second time in as many seasons earlier &hellip;  <a href="http://ninernoise.com/2016/09/30/anthony-davis-owes-san-francisco-49ers-money-retirement/">more</a>.</p>
+					<p><p>Anthony Davis, the former starting right tackle for the San Francisco 49ers, walked away from the team for the second time in as many seasons earlier &hellip;  <a href="http://ninernoise.com/2016/09/30/anthony-davis-owes-san-francisco-49ers-money-retirement/" onclick="trackOutboundLink('http://ninernoise.com/2016/09/30/anthony-davis-owes-san-francisco-49ers-money-retirement/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

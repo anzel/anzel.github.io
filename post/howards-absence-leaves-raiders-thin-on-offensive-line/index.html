@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>11</b></p>
 					<h3>Howard&#39;s absence leaves Raiders thin on offensive line</h3>
-					<p><p>The Oakland Raiders have been tabbed as the team that is ready to take the next step and become a viable playoff contender. Today, the Raiders &hellip;  <a href="http://www.todayspigskin.com/afc/oakland-raiders/howards-absence-leaves-raiders-thin-offensive-line/">more</a>.</p>
+					<p><p>The Oakland Raiders have been tabbed as the team that is ready to take the next step and become a viable playoff contender. Today, the Raiders &hellip;  <a href="http://www.todayspigskin.com/afc/oakland-raiders/howards-absence-leaves-raiders-thin-offensive-line/" onclick="trackOutboundLink('http://www.todayspigskin.com/afc/oakland-raiders/howards-absence-leaves-raiders-thin-offensive-line/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

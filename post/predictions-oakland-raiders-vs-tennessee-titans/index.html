@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>24</b></p>
 					<h3>Predictions: Oakland Raiders vs. Tennessee Titans</h3>
-					<p><p>Oakland Raiders Can the Raiders lean on Murray in the run game? Mandatory Credit: Orlando Ramirez-USA TODAY Sports. The Raiders are looking &hellip;  <a href="http://isportsweb.com/2016/09/24/predictions-oakland-raiders-vs-tennessee-titans/">more</a>.</p>
+					<p><p>Oakland Raiders Can the Raiders lean on Murray in the run game? Mandatory Credit: Orlando Ramirez-USA TODAY Sports. The Raiders are looking &hellip;  <a href="http://isportsweb.com/2016/09/24/predictions-oakland-raiders-vs-tennessee-titans/" onclick="trackOutboundLink('http://isportsweb.com/2016/09/24/predictions-oakland-raiders-vs-tennessee-titans/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

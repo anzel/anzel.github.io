@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>01</b></p>
 					<h3>49ers&#39; QB Colin Kaepernick Wears Socks Depicting Police Officers as Pigs</h3>
-					<p><p>Photos of San Francisco 49ers Colin Kaepernick at an Aug. 10 training session at Cezar Stadium show him wearing black socks with floating pigs &hellip;  <a href="http://www.nbcbayarea.com/news/local/49ers-QB-Colin-Kaepernick-Wears-Socks-Depicting-Police-Officers-as-Pigs-392028551.html">more</a>.</p>
+					<p><p>Photos of San Francisco 49ers Colin Kaepernick at an Aug. 10 training session at Cezar Stadium show him wearing black socks with floating pigs &hellip;  <a href="http://www.nbcbayarea.com/news/local/49ers-QB-Colin-Kaepernick-Wears-Socks-Depicting-Police-Officers-as-Pigs-392028551.html" onclick="trackOutboundLink('http://www.nbcbayarea.com/news/local/49ers-QB-Colin-Kaepernick-Wears-Socks-Depicting-Police-Officers-as-Pigs-392028551.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

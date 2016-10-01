@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>Delanie Walker injury update: Titans TE questionable vs. Raiders</h3>
-					<p><p>The Tennessee Titans are listing tight end Delanie Walker as questionable for Week 3 vs. the Oakland Raiders. A hamstring injury has Walker in &hellip;  <a href="http://www.sbnation.com/2016/9/25/13036016/delanie-walker-injury-status-questionable-fantasy-football-titans-raiders">more</a>.</p>
+					<p><p>The Tennessee Titans are listing tight end Delanie Walker as questionable for Week 3 vs. the Oakland Raiders. A hamstring injury has Walker in &hellip;  <a href="http://www.sbnation.com/2016/9/25/13036016/delanie-walker-injury-status-questionable-fantasy-football-titans-raiders" onclick="trackOutboundLink('http://www.sbnation.com/2016/9/25/13036016/delanie-walker-injury-status-questionable-fantasy-football-titans-raiders'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

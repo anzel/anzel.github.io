@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>24</b></p>
 					<h3>49ers vs Seahawks: The Once Great Rivalry</h3>
-					<p><p>Once upon a time the San Francisco 49ers  Seattle Seahawks rivalry was arguably the most intense rivalry in the entire NFL. The success and youth &hellip;  <a href="http://ninernoise.com/2016/09/24/49ers-vs-seahawks-great-rivalry/">more</a>.</p>
+					<p><p>Once upon a time the San Francisco 49ers  Seattle Seahawks rivalry was arguably the most intense rivalry in the entire NFL. The success and youth &hellip;  <a href="http://ninernoise.com/2016/09/24/49ers-vs-seahawks-great-rivalry/" onclick="trackOutboundLink('http://ninernoise.com/2016/09/24/49ers-vs-seahawks-great-rivalry/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

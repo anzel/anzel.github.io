@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>13</b></p>
 					<h3>Oakland Raiders Sign OT to Practice Squad</h3>
-					<p><p>The Oakland Raiders have signed an offensive tackle to their practice squad. Per Precision Sports Management Group, the agency that represents OT &hellip;  <a href="https://justblogbaby.com/2016/09/13/oakland-raiders-sign-ot-to-practice-squad/">more</a>.</p>
+					<p><p>The Oakland Raiders have signed an offensive tackle to their practice squad. Per Precision Sports Management Group, the agency that represents OT &hellip;  <a href="https://justblogbaby.com/2016/09/13/oakland-raiders-sign-ot-to-practice-squad/" onclick="trackOutboundLink('https://justblogbaby.com/2016/09/13/oakland-raiders-sign-ot-to-practice-squad/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

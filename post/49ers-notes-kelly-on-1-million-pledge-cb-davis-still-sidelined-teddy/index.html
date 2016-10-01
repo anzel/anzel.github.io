@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>09</b></p>
 					<h3>49ers notes: Kelly on $1 million pledge; CB Davis still sidelined; Teddy</h3>
-					<p><p>SFGate Chip Kelly was asked today about CEO Jed York pledging to donate $1 million Thursday to improve racial and economic inequality. The 49ers&rsquo; &hellip;  <a href="http://www.sfgate.com/49ers/article/49ers-notes-Kelly-on-1-million-pledge-CB-Davis-9213159.php">more</a>.</p>
+					<p><p>SFGate Chip Kelly was asked today about CEO Jed York pledging to donate $1 million Thursday to improve racial and economic inequality. The 49ers&rsquo; &hellip;  <a href="http://www.sfgate.com/49ers/article/49ers-notes-Kelly-on-1-million-pledge-CB-Davis-9213159.php" onclick="trackOutboundLink('http://www.sfgate.com/49ers/article/49ers-notes-Kelly-on-1-million-pledge-CB-Davis-9213159.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

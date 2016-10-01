@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>22</b></p>
 					<h3>Oakland Raiders Wives Donate Shoes and Socks to Needy</h3>
-					<p><p>Diana Holmes, wife of Oakland Raiders wide receiver Andre Holmes, along with her son Micah, helped out at the mobile podiatry clinic event.  <a href="http://patch.com/california/sanleandro/oakland-raiders-wives-donate-shoes-socks-needy">more</a>.</p>
+					<p><p>Diana Holmes, wife of Oakland Raiders wide receiver Andre Holmes, along with her son Micah, helped out at the mobile podiatry clinic event.  <a href="http://patch.com/california/sanleandro/oakland-raiders-wives-donate-shoes-socks-needy" onclick="trackOutboundLink('http://patch.com/california/sanleandro/oakland-raiders-wives-donate-shoes-socks-needy'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

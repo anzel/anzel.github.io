@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>07</b></p>
 					<h3>Hidden Truth: Expect Washington to Overtake Murray as Raiders&#39; Top RB</h3>
-					<p><p>Bleacher Report With one of the most talented offensive lines in football, Oakland Raiders running backs should have plenty of room to run this year. Latavius Murray is &hellip;  <a href="http://bleacherreport.com/articles/2662084-hidden-truth-expect-washington-to-overtake-murray-as-raiders-top-rb-quickly">more</a>.</p>
+					<p><p>Bleacher Report With one of the most talented offensive lines in football, Oakland Raiders running backs should have plenty of room to run this year. Latavius Murray is &hellip;  <a href="http://bleacherreport.com/articles/2662084-hidden-truth-expect-washington-to-overtake-murray-as-raiders-top-rb-quickly" onclick="trackOutboundLink('http://bleacherreport.com/articles/2662084-hidden-truth-expect-washington-to-overtake-murray-as-raiders-top-rb-quickly'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

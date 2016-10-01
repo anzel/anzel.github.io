@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>24</b></p>
 					<h3>Rangers beat Oakland to clinch AL West</h3>
-					<p><p>SAN FRANCISCO - Cole Hamels threw seven shutout innings as the Texas Rangers defeated the Oakland Athletics 3-0 and clinched the American &hellip;  <a href="http://www.bangkokpost.com/news/sports/1093909/rangers-beat-oakland-to-clinch-al-west">more</a>.</p>
+					<p><p>SAN FRANCISCO - Cole Hamels threw seven shutout innings as the Texas Rangers defeated the Oakland Athletics 3-0 and clinched the American &hellip;  <a href="http://www.bangkokpost.com/news/sports/1093909/rangers-beat-oakland-to-clinch-al-west" onclick="trackOutboundLink('http://www.bangkokpost.com/news/sports/1093909/rangers-beat-oakland-to-clinch-al-west'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

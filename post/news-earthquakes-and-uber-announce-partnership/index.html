@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>NEWS: Earthquakes and Uber Announce Partnership</h3>
-					<p><p>Uber to provide fans with a convenient, reliable transportation option &hellip;  <a href="http://www.sjearthquakes.com/post/2016/09/27/news-earthquakes-and-uber-announce-partnership">more</a>.</p>
+					<p><p>Uber to provide fans with a convenient, reliable transportation option &hellip;  <a href="http://www.sjearthquakes.com/post/2016/09/27/news-earthquakes-and-uber-announce-partnership" onclick="trackOutboundLink('http://www.sjearthquakes.com/post/2016/09/27/news-earthquakes-and-uber-announce-partnership'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

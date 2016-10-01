@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>Golden Nuggets: Bring on the Seahawks!</h3>
-					<p><p>Today, the San Francisco 49ers will face the Seattle Seahawks in one of the toughest stadiums to play. The game, which is sure to be terrible in so &hellip;  <a href="http://www.ninersnation.com/2016/9/25/13045396/49ers-news-seahawks-gameday-week-3-chip-kelly-doomed">more</a>.</p>
+					<p><p>Today, the San Francisco 49ers will face the Seattle Seahawks in one of the toughest stadiums to play. The game, which is sure to be terrible in so &hellip;  <a href="http://www.ninersnation.com/2016/9/25/13045396/49ers-news-seahawks-gameday-week-3-chip-kelly-doomed" onclick="trackOutboundLink('http://www.ninersnation.com/2016/9/25/13045396/49ers-news-seahawks-gameday-week-3-chip-kelly-doomed'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

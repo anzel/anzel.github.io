@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>10</b></p>
 					<h3>A rare clunker for Graveman as Mariners clobber A&#39;s 14-3</h3>
-					<p><p>The Oakland Athletics&rsquo; Kendall Graveman pitches against the Baltimore Orioles Wednesday at O.co Coliseum in Oakland. By Carl Steward &hellip;  <a href="http://www.mercurynews.com/2016/09/10/a-rare-clunker-for-graveman-as-mariners-clobber-as-14-3/">more</a>.</p>
+					<p><p>The Oakland Athletics&rsquo; Kendall Graveman pitches against the Baltimore Orioles Wednesday at O.co Coliseum in Oakland. By Carl Steward &hellip;  <a href="http://www.mercurynews.com/2016/09/10/a-rare-clunker-for-graveman-as-mariners-clobber-as-14-3/" onclick="trackOutboundLink('http://www.mercurynews.com/2016/09/10/a-rare-clunker-for-graveman-as-mariners-clobber-as-14-3/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

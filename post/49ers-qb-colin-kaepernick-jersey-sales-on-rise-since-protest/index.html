@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>05</b></p>
 					<h3>49ers QB Colin Kaepernick jersey sales on rise since protest</h3>
-					<p><p>Colin Kaepernick&rsquo;s decision to sit during the &ldquo;Star-Spangled Banner&rdquo; has boosted sales of his merchandise. The San Francisco 49ers?quarterback &hellip;  <a href="http://abcnews.go.com/Sports/49ers-qb-colin-kaepernick-jersey-sales-rise-protest/story?id=41875813">more</a>.</p>
+					<p><p>Colin Kaepernick&rsquo;s decision to sit during the &ldquo;Star-Spangled Banner&rdquo; has boosted sales of his merchandise. The San Francisco 49ers?quarterback &hellip;  <a href="http://abcnews.go.com/Sports/49ers-qb-colin-kaepernick-jersey-sales-rise-protest/story?id=41875813" onclick="trackOutboundLink('http://abcnews.go.com/Sports/49ers-qb-colin-kaepernick-jersey-sales-rise-protest/story?id=41875813'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

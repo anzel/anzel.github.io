@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>06</b></p>
 					<h3>49ers Cut Player Who Allegedly Assaulted 70-Year-Old Man</h3>
-					<p><p>The San Francisco 49ers released Bruce Miller after cops arrested him for punching a 70-year-old man. Obviously looking to cut and run without &hellip;  <a href="http://www.breitbart.com/sports/2016/09/06/49ers-cut-player-allegedly/">more</a>.</p>
+					<p><p>The San Francisco 49ers released Bruce Miller after cops arrested him for punching a 70-year-old man. Obviously looking to cut and run without &hellip;  <a href="http://www.breitbart.com/sports/2016/09/06/49ers-cut-player-allegedly/" onclick="trackOutboundLink('http://www.breitbart.com/sports/2016/09/06/49ers-cut-player-allegedly/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

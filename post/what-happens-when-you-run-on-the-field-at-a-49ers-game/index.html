@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>What happens when you run on the field at a 49ers game</h3>
-					<p><p>The San Francisco 49ers Week 1 matchup was interrupted early in the fourth quarter by a fan running on the field for a full minute. It took some time for &hellip;  <a href="http://www.ninersnation.com/2016/9/14/12910142/fan-runs-on-the-field-conduct-class-ban-49ers-levis-stadium">more</a>.</p>
+					<p><p>The San Francisco 49ers Week 1 matchup was interrupted early in the fourth quarter by a fan running on the field for a full minute. It took some time for &hellip;  <a href="http://www.ninersnation.com/2016/9/14/12910142/fan-runs-on-the-field-conduct-class-ban-49ers-levis-stadium" onclick="trackOutboundLink('http://www.ninersnation.com/2016/9/14/12910142/fan-runs-on-the-field-conduct-class-ban-49ers-levis-stadium'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>Quick Hits: Jack Del Rio Talks About Preparing For Falcons Offense</h3>
-					<p><p>Wednesday afternoon, Oakland Raiders Head Coach Jack Del Rio spoke with the media about this week&rsquo;s preparation for the home opener against &hellip;  <a href="http://www.raiders.com/news/article-1/Quick-Hits-Jack-Del-Rio-Talks-About-Preparing-For-Falcons-Offense/c9150231-f3e9-49c2-8cd6-0fef931a6eea">more</a>.</p>
+					<p><p>Wednesday afternoon, Oakland Raiders Head Coach Jack Del Rio spoke with the media about this week&rsquo;s preparation for the home opener against &hellip;  <a href="http://www.raiders.com/news/article-1/Quick-Hits-Jack-Del-Rio-Talks-About-Preparing-For-Falcons-Offense/c9150231-f3e9-49c2-8cd6-0fef931a6eea" onclick="trackOutboundLink('http://www.raiders.com/news/article-1/Quick-Hits-Jack-Del-Rio-Talks-About-Preparing-For-Falcons-Offense/c9150231-f3e9-49c2-8cd6-0fef931a6eea'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

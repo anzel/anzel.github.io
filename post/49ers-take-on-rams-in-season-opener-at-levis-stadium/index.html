@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>49ers take on Rams in season opener at Levi&#39;s Stadium</h3>
-					<p><p>SANTA CLARA (KRON)  The San Francisco 49ers are taking on the Los Angeles Rams Monday night in their season opener at Levi&rsquo;s Stadium.  <a href="http://kron4.com/2016/09/12/san-francisco-49ers-take-on-los-anegles-rams-in-season-opener/">more</a>.</p>
+					<p><p>SANTA CLARA (KRON)  The San Francisco 49ers are taking on the Los Angeles Rams Monday night in their season opener at Levi&rsquo;s Stadium.  <a href="http://kron4.com/2016/09/12/san-francisco-49ers-take-on-los-anegles-rams-in-season-opener/" onclick="trackOutboundLink('http://kron4.com/2016/09/12/san-francisco-49ers-take-on-los-anegles-rams-in-season-opener/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

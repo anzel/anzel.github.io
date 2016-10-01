@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>Colin Kaepernick will get his chance as 49ers&#39; starter soon enough</h3>
-					<p><p>49ers brass has made that abundantly clear by publicly supporting his constitutional right to kneel. Team owner Jed York even pledged $1 million &hellip;  <a href="http://www.sportingnews.com/nfl/news/colin-kaepernick-49ers-starting-quarterback-situation-blaine-gabbert-chip-kelly/xx8c83j0fy6b18mu2407l28rd">more</a>.</p>
+					<p><p>49ers brass has made that abundantly clear by publicly supporting his constitutional right to kneel. Team owner Jed York even pledged $1 million &hellip;  <a href="http://www.sportingnews.com/nfl/news/colin-kaepernick-49ers-starting-quarterback-situation-blaine-gabbert-chip-kelly/xx8c83j0fy6b18mu2407l28rd" onclick="trackOutboundLink('http://www.sportingnews.com/nfl/news/colin-kaepernick-49ers-starting-quarterback-situation-blaine-gabbert-chip-kelly/xx8c83j0fy6b18mu2407l28rd'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

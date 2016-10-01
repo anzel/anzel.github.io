@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>20</b></p>
 					<h3>Giants Apologize for Offensive Tweet About Bumgarner&#39;s 3 Strikeouts Against</h3>
-					<p><p>NBC Bay Area Jeff Samardzija #29 of the San Francisco Giants holds back Madison Bumgarner #40 of the San Francisco Giants as Joc Pederson #31 of the Los &hellip;  <a href="http://www.nbcbayarea.com/news/local/Giants-Apologize-for-Offensive-Tweet-About-Bumgarners-3-Strikeouts-Against-Dodger-Enrique-Hernandez-394210191.html">more</a>.</p>
+					<p><p>NBC Bay Area Jeff Samardzija #29 of the San Francisco Giants holds back Madison Bumgarner #40 of the San Francisco Giants as Joc Pederson #31 of the Los &hellip;  <a href="http://www.nbcbayarea.com/news/local/Giants-Apologize-for-Offensive-Tweet-About-Bumgarners-3-Strikeouts-Against-Dodger-Enrique-Hernandez-394210191.html" onclick="trackOutboundLink('http://www.nbcbayarea.com/news/local/Giants-Apologize-for-Offensive-Tweet-About-Bumgarners-3-Strikeouts-Against-Dodger-Enrique-Hernandez-394210191.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

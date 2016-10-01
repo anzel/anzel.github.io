@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>Notebook: McCants Returns To Practice, Osemele Talks Matchup With Ravens</h3>
-					<p><p>The Oakland Raiders were back on the practice field Wednesday afternoon at their Alameda, Calif., facility. Offensive Lineman Kelechi Osemele and &hellip;  <a href="http://www.raiders.com/news/article-1/Notebook-McCants-Returns-To-Practice-Osemele-Talks-Matchup-With-Ravens/ccf1f4aa-5fa1-48be-9266-62f27be00f57">more</a>.</p>
+					<p><p>The Oakland Raiders were back on the practice field Wednesday afternoon at their Alameda, Calif., facility. Offensive Lineman Kelechi Osemele and &hellip;  <a href="http://www.raiders.com/news/article-1/Notebook-McCants-Returns-To-Practice-Osemele-Talks-Matchup-With-Ravens/ccf1f4aa-5fa1-48be-9266-62f27be00f57" onclick="trackOutboundLink('http://www.raiders.com/news/article-1/Notebook-McCants-Returns-To-Practice-Osemele-Talks-Matchup-With-Ravens/ccf1f4aa-5fa1-48be-9266-62f27be00f57'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>Tuesday Signings Tracker: San Francisco 49ers, WR Keshawn Martin agree to</h3>
-					<p><p>New England Patriots wide receiver Keshawn Martin (82) runs for a touchdown during the first half of a preseason NFL football game against the New &hellip;  <a href="http://www.profootballweekly.com/2016/09/27/tuesday-signings-tracker-san-francisco-49ers-wr-keshawn-martin-agree-to-2-year-deal/a6bjl9/">more</a>.</p>
+					<p><p>New England Patriots wide receiver Keshawn Martin (82) runs for a touchdown during the first half of a preseason NFL football game against the New &hellip;  <a href="http://www.profootballweekly.com/2016/09/27/tuesday-signings-tracker-san-francisco-49ers-wr-keshawn-martin-agree-to-2-year-deal/a6bjl9/" onclick="trackOutboundLink('http://www.profootballweekly.com/2016/09/27/tuesday-signings-tracker-san-francisco-49ers-wr-keshawn-martin-agree-to-2-year-deal/a6bjl9/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

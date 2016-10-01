@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>Local leaders near decision to advance Raiders stadium proposal</h3>
-					<p><p>The Oakland Raiders are one step close to calling Las Vegas home as local leaders near a decision on a proposed $1.9 Billion domed stadium.  <a href="http://news3lv.com/news/local/local-leaders-near-decision-to-advance-raiders-stadium-proposal">more</a>.</p>
+					<p><p>The Oakland Raiders are one step close to calling Las Vegas home as local leaders near a decision on a proposed $1.9 Billion domed stadium.  <a href="http://news3lv.com/news/local/local-leaders-near-decision-to-advance-raiders-stadium-proposal" onclick="trackOutboundLink('http://news3lv.com/news/local/local-leaders-near-decision-to-advance-raiders-stadium-proposal'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

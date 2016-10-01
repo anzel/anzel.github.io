@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>29</b></p>
 					<h3>Jack Del Rio: Khalil Mack&#39;s numbers will come</h3>
-					<p><p>Rams coach Jeff Fisher said this week that defensive tackle Aaron Donald&rsquo;s lack of sacks and modest overall numbers through the first three games &hellip;  <a href="http://profootballtalk.nbcsports.com/2016/09/29/jack-del-rio-khalil-macks-numbers-will-come/">more</a>.</p>
+					<p><p>Rams coach Jeff Fisher said this week that defensive tackle Aaron Donald&rsquo;s lack of sacks and modest overall numbers through the first three games &hellip;  <a href="http://profootballtalk.nbcsports.com/2016/09/29/jack-del-rio-khalil-macks-numbers-will-come/" onclick="trackOutboundLink('http://profootballtalk.nbcsports.com/2016/09/29/jack-del-rio-khalil-macks-numbers-will-come/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

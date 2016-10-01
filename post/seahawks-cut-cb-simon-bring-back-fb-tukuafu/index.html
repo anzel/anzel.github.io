@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>Seahawks cut CB Simon, bring back FB Tukuafu</h3>
-					<p><p>Thorpe played in 36 games for the Kansas City Chiefs and Oakland Raiders since 2012 and will assume Simon&rsquo;s former role in the secondary.  <a href="http://sportspressnw.com/2223704/2016/seahawks-ink-cb-thorpe-bring-back-fb-tukuafu">more</a>.</p>
+					<p><p>Thorpe played in 36 games for the Kansas City Chiefs and Oakland Raiders since 2012 and will assume Simon&rsquo;s former role in the secondary.  <a href="http://sportspressnw.com/2223704/2016/seahawks-ink-cb-thorpe-bring-back-fb-tukuafu" onclick="trackOutboundLink('http://sportspressnw.com/2223704/2016/seahawks-ink-cb-thorpe-bring-back-fb-tukuafu'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

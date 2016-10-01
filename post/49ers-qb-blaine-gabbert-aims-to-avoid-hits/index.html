@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>16</b></p>
 					<h3>49ers QB Blaine Gabbert aims to avoid hits</h3>
-					<p><p>Monday night&rsquo;s Rams-49ers game logged a 7.1 television rating on ESPN, according to The Sports Business Daily. It was the network&rsquo;s lowest draw &hellip;  <a href="http://www.pressdemocrat.com/sports/6092358-181/49ers-qb-blaine-gabbert-aims">more</a>.</p>
+					<p><p>Monday night&rsquo;s Rams-49ers game logged a 7.1 television rating on ESPN, according to The Sports Business Daily. It was the network&rsquo;s lowest draw &hellip;  <a href="http://www.pressdemocrat.com/sports/6092358-181/49ers-qb-blaine-gabbert-aims" onclick="trackOutboundLink('http://www.pressdemocrat.com/sports/6092358-181/49ers-qb-blaine-gabbert-aims'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>Kawakami: Del Rio has to fix the Raiders</h3>
-					<p><p>Oakland Raiders head coach Jack Del Rio talks with player D.J. Hayden (25) on the sideline in the second quarter of a NFL game against the Atlanta &hellip;  <a href="http://www.mercurynews.com/2016/09/18/the-raiders-defense-is-lost-and-its-up-to-jack-del-rio-to-find-it-immediately-or-else-this-season-could-be-lost-too/">more</a>.</p>
+					<p><p>Oakland Raiders head coach Jack Del Rio talks with player D.J. Hayden (25) on the sideline in the second quarter of a NFL game against the Atlanta &hellip;  <a href="http://www.mercurynews.com/2016/09/18/the-raiders-defense-is-lost-and-its-up-to-jack-del-rio-to-find-it-immediately-or-else-this-season-could-be-lost-too/" onclick="trackOutboundLink('http://www.mercurynews.com/2016/09/18/the-raiders-defense-is-lost-and-its-up-to-jack-del-rio-to-find-it-immediately-or-else-this-season-could-be-lost-too/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

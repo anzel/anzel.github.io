@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>23</b></p>
 					<h3>Sporting KC heads to San Jose clinging to playoff spot</h3>
-					<p><p>An equally desperate San Jose Earthquakes squad, six points below the red line, are hoping to make the MLS playoffs for the first time since 2012, &hellip;  <a href="http://www.foxsports.com/kansas-city/story/sporting-kc-heads-to-san-jose-clinging-to-playoff-spot-092316">more</a>.</p>
+					<p><p>An equally desperate San Jose Earthquakes squad, six points below the red line, are hoping to make the MLS playoffs for the first time since 2012, &hellip;  <a href="http://www.foxsports.com/kansas-city/story/sporting-kc-heads-to-san-jose-clinging-to-playoff-spot-092316" onclick="trackOutboundLink('http://www.foxsports.com/kansas-city/story/sporting-kc-heads-to-san-jose-clinging-to-playoff-spot-092316'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

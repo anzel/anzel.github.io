@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>21</b></p>
 					<h3>Going for Two: New dogs in the fight</h3>
-					<p><p>In that year, the Oakland Raiders won the conference with MVP Rich Gannon under center before falling to Tampa Bay in the Super Bowl. However &hellip;  <a href="http://dailyfreepress.com/2016/09/20/going-for-two-nfl-raiders-jaguars/">more</a>.</p>
+					<p><p>In that year, the Oakland Raiders won the conference with MVP Rich Gannon under center before falling to Tampa Bay in the Super Bowl. However &hellip;  <a href="http://dailyfreepress.com/2016/09/20/going-for-two-nfl-raiders-jaguars/" onclick="trackOutboundLink('http://dailyfreepress.com/2016/09/20/going-for-two-nfl-raiders-jaguars/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

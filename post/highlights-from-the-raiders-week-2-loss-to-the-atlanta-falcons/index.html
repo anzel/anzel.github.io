@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>19</b></p>
 					<h3>Highlights From The Raiders Week 2 Loss To The Atlanta Falcons</h3>
-					<p><p>The Oakland Raiders wrapped up Week 2 with a home loss to the Atlanta Falcons at the Oakland-Alameda County Coliseum. The final score was &hellip;  <a href="http://www.raiders.com/news/article-1/Highlights-From-The-Raiders-Week-2-Loss-To-The-Atlanta-Falcons/e1cc4d11-5e38-4403-8cb9-918c42d2d621">more</a>.</p>
+					<p><p>The Oakland Raiders wrapped up Week 2 with a home loss to the Atlanta Falcons at the Oakland-Alameda County Coliseum. The final score was &hellip;  <a href="http://www.raiders.com/news/article-1/Highlights-From-The-Raiders-Week-2-Loss-To-The-Atlanta-Falcons/e1cc4d11-5e38-4403-8cb9-918c42d2d621" onclick="trackOutboundLink('http://www.raiders.com/news/article-1/Highlights-From-The-Raiders-Week-2-Loss-To-The-Atlanta-Falcons/e1cc4d11-5e38-4403-8cb9-918c42d2d621'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>Raiders lock down outsides of PFF&#39;s Defense of the Week</h3>
-					<p><p>The Oakland Raiders take on the Baltimore Ravens in Week 4. Want the latest news on the matchup sent straight to your inbox?  Sign up for our &hellip;  <a href="http://oak.247sports.com/Bolt/Raiders-lock-down-outsides-of-PFFs-Defense-of-the-Week-47827845">more</a>.</p>
+					<p><p>The Oakland Raiders take on the Baltimore Ravens in Week 4. Want the latest news on the matchup sent straight to your inbox?  Sign up for our &hellip;  <a href="http://oak.247sports.com/Bolt/Raiders-lock-down-outsides-of-PFFs-Defense-of-the-Week-47827845" onclick="trackOutboundLink('http://oak.247sports.com/Bolt/Raiders-lock-down-outsides-of-PFFs-Defense-of-the-Week-47827845'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>Mac Attack: Chris Myers From FOX Talks Panthers-49ers</h3>
-					<p><p>joined Mac this morning to preview the game.  <a href="http://wfnz.com/2016/09/14/mac-attack-chris-myers-from-fox-talks-panthers-49ers/">more</a>.</p>
+					<p><p>joined Mac this morning to preview the game.  <a href="http://wfnz.com/2016/09/14/mac-attack-chris-myers-from-fox-talks-panthers-49ers/" onclick="trackOutboundLink('http://wfnz.com/2016/09/14/mac-attack-chris-myers-from-fox-talks-panthers-49ers/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

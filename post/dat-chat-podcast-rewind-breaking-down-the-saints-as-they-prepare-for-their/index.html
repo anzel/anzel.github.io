@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>09</b></p>
 					<h3>Dat Chat podcast rewind: Breaking down the Saints as they prepare for their</h3>
-					<p><p>NOLA.com &hellip; Drew Brees (9) this week and will be in the starting lineup on Sunday when the Saints open the 2016 regular season against the Oakland Raiders.  <a href="http://www.nola.com/saints/index.ssf/2016/09/dat_chat_podcast_rewind_breaki.html">more</a>.</p>
+					<p><p>NOLA.com &hellip; Drew Brees (9) this week and will be in the starting lineup on Sunday when the Saints open the 2016 regular season against the Oakland Raiders.  <a href="http://www.nola.com/saints/index.ssf/2016/09/dat_chat_podcast_rewind_breaki.html" onclick="trackOutboundLink('http://www.nola.com/saints/index.ssf/2016/09/dat_chat_podcast_rewind_breaki.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

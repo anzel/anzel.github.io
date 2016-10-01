@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Aug<b>31</b></p>
 					<h3>Oakland Raiders: What to watch for vs. Seattle Seahawks</h3>
-					<p><p>The Oakland Raiders will take on the Seattle Seahawks in their preseason finale on Thursday night. Many of Oakland&rsquo;s starters will sit out the game, &hellip;  <a href="http://oak.247sports.com/Gallery/Oakland-Raiders-What-to-watch-for-vs-Seattle-Seahawks-47091298">more</a>.</p>
+					<p><p>The Oakland Raiders will take on the Seattle Seahawks in their preseason finale on Thursday night. Many of Oakland&rsquo;s starters will sit out the game, &hellip;  <a href="http://oak.247sports.com/Gallery/Oakland-Raiders-What-to-watch-for-vs-Seattle-Seahawks-47091298" onclick="trackOutboundLink('http://oak.247sports.com/Gallery/Oakland-Raiders-What-to-watch-for-vs-Seattle-Seahawks-47091298'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

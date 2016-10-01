@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>NFL to spend $100 million to protect players from concussions</h3>
-					<p><p>&hellip; reported concussion during a game against the Oakland Raiders at Sports Authority Field at Mile High on December 28, 2014 in Denver, Colorado.  <a href="http://www.wsbradio.com/news/news/national/nfl-spend-100-million-protect-players-concussions/nsX25/">more</a>.</p>
+					<p><p>&hellip; reported concussion during a game against the Oakland Raiders at Sports Authority Field at Mile High on December 28, 2014 in Denver, Colorado.  <a href="http://www.wsbradio.com/news/news/national/nfl-spend-100-million-protect-players-concussions/nsX25/" onclick="trackOutboundLink('http://www.wsbradio.com/news/news/national/nfl-spend-100-million-protect-players-concussions/nsX25/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

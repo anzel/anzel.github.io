@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>San Francisco 49ers vs Carolina Panthers Start Time: TV Channel, Odds,</h3>
-					<p><p>Pabaon News The San Francisco 49ers take on the Carolina Panthers in one of the NFL Games on Sunday, September 18 start time at 1:00 PM ET, at Bank of &hellip;  <a href="http://www.pabaon.com/2016/09/san-francisco-49ers-vs-carolina-panthers-start-time-tv-channel-odds-preview-spread.html">more</a>.</p>
+					<p><p>Pabaon News The San Francisco 49ers take on the Carolina Panthers in one of the NFL Games on Sunday, September 18 start time at 1:00 PM ET, at Bank of &hellip;  <a href="http://www.pabaon.com/2016/09/san-francisco-49ers-vs-carolina-panthers-start-time-tv-channel-odds-preview-spread.html" onclick="trackOutboundLink('http://www.pabaon.com/2016/09/san-francisco-49ers-vs-carolina-panthers-start-time-tv-channel-odds-preview-spread.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

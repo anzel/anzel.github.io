@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>26</b></p>
 					<h3>A&#39;s Break Out of Slump, Beat Rangers to Avoid Sweep</h3>
-					<p><p>Joey Wendle #52 of the Oakland Athletics safely slides past Jonathan Lucroy #25 of the Texas Rangers to score on a hit by Stephen Vogt #21 of the &hellip;  <a href="http://www.nbcdfw.com/blogs/red-fever/As-Break-Out-of-Slump-and-Beat-Rangers-to-Avoid-Sweep-394749511.html">more</a>.</p>
+					<p><p>Joey Wendle #52 of the Oakland Athletics safely slides past Jonathan Lucroy #25 of the Texas Rangers to score on a hit by Stephen Vogt #21 of the &hellip;  <a href="http://www.nbcdfw.com/blogs/red-fever/As-Break-Out-of-Slump-and-Beat-Rangers-to-Avoid-Sweep-394749511.html" onclick="trackOutboundLink('http://www.nbcdfw.com/blogs/red-fever/As-Break-Out-of-Slump-and-Beat-Rangers-to-Avoid-Sweep-394749511.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

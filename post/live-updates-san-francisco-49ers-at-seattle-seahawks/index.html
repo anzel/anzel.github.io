@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>Live Updates: San Francisco 49ers at Seattle Seahawks</h3>
-					<p><p>On Seattle&rsquo;s second drive, second-year defensive lineman 49ers Arik Armstead was being checked by team doctors on the sideline. Despite the home &hellip;  <a href="http://www.49ers.com/news/article-2/Live-Updates-San-Francisco-49ers-at-Seattle-Seahawks/be15be07-57a1-455c-8556-cd19f954cc93">more</a>.</p>
+					<p><p>On Seattle&rsquo;s second drive, second-year defensive lineman 49ers Arik Armstead was being checked by team doctors on the sideline. Despite the home &hellip;  <a href="http://www.49ers.com/news/article-2/Live-Updates-San-Francisco-49ers-at-Seattle-Seahawks/be15be07-57a1-455c-8556-cd19f954cc93" onclick="trackOutboundLink('http://www.49ers.com/news/article-2/Live-Updates-San-Francisco-49ers-at-Seattle-Seahawks/be15be07-57a1-455c-8556-cd19f954cc93'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>Fantasy football start/sit advice, Week 3: who to start for Oakland Raiders</h3>
-					<p><p>SB Nation Dan Ciarrocchi reviews who needs to be in your fantasy lineup or on the bench for a battle between two 1-1 teams. By Dan Ciarrocchi @TheSackSBN &hellip;  <a href="http://www.sbnation.com/2016/9/25/13043392/fantasy-football-start-sit-advice-week-3-raiders-titans-derek-carr-demarco-murray">more</a>.</p>
+					<p><p>SB Nation Dan Ciarrocchi reviews who needs to be in your fantasy lineup or on the bench for a battle between two 1-1 teams. By Dan Ciarrocchi @TheSackSBN &hellip;  <a href="http://www.sbnation.com/2016/9/25/13043392/fantasy-football-start-sit-advice-week-3-raiders-titans-derek-carr-demarco-murray" onclick="trackOutboundLink('http://www.sbnation.com/2016/9/25/13043392/fantasy-football-start-sit-advice-week-3-raiders-titans-derek-carr-demarco-murray'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

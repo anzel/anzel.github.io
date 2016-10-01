@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>23</b></p>
 					<h3>Sharks&#39; DeBoer: Standing for anthem is everyone&#39;s personal choice</h3>
-					<p><p>SAN JOSE  Sharks coach Pete DeBoer was asked Friday how he&rsquo;d feel if one of his players refused to stand for the national anthem. DeBoer, who &hellip;  <a href="http://www.mercurynews.com/2016/09/23/sharks-deboer-says-standing-for-anthem-is-everyones-personal-choice/">more</a>.</p>
+					<p><p>SAN JOSE  Sharks coach Pete DeBoer was asked Friday how he&rsquo;d feel if one of his players refused to stand for the national anthem. DeBoer, who &hellip;  <a href="http://www.mercurynews.com/2016/09/23/sharks-deboer-says-standing-for-anthem-is-everyones-personal-choice/" onclick="trackOutboundLink('http://www.mercurynews.com/2016/09/23/sharks-deboer-says-standing-for-anthem-is-everyones-personal-choice/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

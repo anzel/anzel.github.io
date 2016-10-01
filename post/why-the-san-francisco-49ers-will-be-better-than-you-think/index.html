@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>01</b></p>
 					<h3>Why the San Francisco 49ers will be better than you think</h3>
-					<p><p>Why the San Francisco 49ers will be better than you think. play. Chip Kelly faces a tough task in 2016 (0:23). In this lightning-fast preview, Trey Wingo &hellip;  <a href="http://www.espn.com/nfl/insider/story/_/id/17434683/nfl-why-san-francisco-49ers-better-expected-2016-season-chip-kelly-blaine-gabbert-carlos-hyde">more</a>.</p>
+					<p><p>Why the San Francisco 49ers will be better than you think. play. Chip Kelly faces a tough task in 2016 (0:23). In this lightning-fast preview, Trey Wingo &hellip;  <a href="http://www.espn.com/nfl/insider/story/_/id/17434683/nfl-why-san-francisco-49ers-better-expected-2016-season-chip-kelly-blaine-gabbert-carlos-hyde" onclick="trackOutboundLink('http://www.espn.com/nfl/insider/story/_/id/17434683/nfl-why-san-francisco-49ers-better-expected-2016-season-chip-kelly-blaine-gabbert-carlos-hyde'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

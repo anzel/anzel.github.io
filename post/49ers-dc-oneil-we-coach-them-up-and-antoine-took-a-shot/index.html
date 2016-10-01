@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>20</b></p>
 					<h3>49ers DC O&#39;Neil: &#39;We Coach Them Up, and Antoine Took a Shot&#39;</h3>
-					<p><p>SANTA CLARA  Safety Antoine Bethea appeared to gamble and lose on Sunday against the Carolina Panthers. But 49ers defensive coordinator Jim &hellip;  <a href="http://www.nbcbayarea.com/news/sports/csn/49ers/49ers_DC_O_Neil___We_coach_them_up__and_Antoine_took_a_shot_-394163941.html">more</a>.</p>
+					<p><p>SANTA CLARA  Safety Antoine Bethea appeared to gamble and lose on Sunday against the Carolina Panthers. But 49ers defensive coordinator Jim &hellip;  <a href="http://www.nbcbayarea.com/news/sports/csn/49ers/49ers_DC_O_Neil___We_coach_them_up__and_Antoine_took_a_shot_-394163941.html" onclick="trackOutboundLink('http://www.nbcbayarea.com/news/sports/csn/49ers/49ers_DC_O_Neil___We_coach_them_up__and_Antoine_took_a_shot_-394163941.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

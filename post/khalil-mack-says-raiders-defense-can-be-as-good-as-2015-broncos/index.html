@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>05</b></p>
 					<h3>Khalil Mack says Raiders defense can be as good as 2015 Broncos</h3>
-					<p><p>The Oakland Raiders are expected to field a decent defense this year, but Khalil Mack thinks the unit has the potential to be historically strong.  <a href="http://oak.247sports.com/Bolt/Khalil-Mack-says-Raiders-defense-can-be-as-good-as-2015-Broncos-47230182">more</a>.</p>
+					<p><p>The Oakland Raiders are expected to field a decent defense this year, but Khalil Mack thinks the unit has the potential to be historically strong.  <a href="http://oak.247sports.com/Bolt/Khalil-Mack-says-Raiders-defense-can-be-as-good-as-2015-Broncos-47230182" onclick="trackOutboundLink('http://oak.247sports.com/Bolt/Khalil-Mack-says-Raiders-defense-can-be-as-good-as-2015-Broncos-47230182'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

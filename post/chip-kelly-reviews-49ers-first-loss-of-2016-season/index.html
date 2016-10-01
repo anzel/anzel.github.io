@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>Chip Kelly Reviews 49ers First Loss of 2016 Season</h3>
-					<p><p>The San Francisco 49ers scored 17 fourth quarter points to make things interesting, but Cam Newton and the Carolina Panthers prevailed in a 46-27 &hellip;  <a href="http://www.49ers.com/news/article-2/Chip-Kelly-Reviews-49ers-First-Loss-of-2016-Season/34a413e6-a12e-4305-8aa0-7b415b380b8f">more</a>.</p>
+					<p><p>The San Francisco 49ers scored 17 fourth quarter points to make things interesting, but Cam Newton and the Carolina Panthers prevailed in a 46-27 &hellip;  <a href="http://www.49ers.com/news/article-2/Chip-Kelly-Reviews-49ers-First-Loss-of-2016-Season/34a413e6-a12e-4305-8aa0-7b415b380b8f" onclick="trackOutboundLink('http://www.49ers.com/news/article-2/Chip-Kelly-Reviews-49ers-First-Loss-of-2016-Season/34a413e6-a12e-4305-8aa0-7b415b380b8f'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

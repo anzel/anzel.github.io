@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>22</b></p>
 					<h3>According to a Poll 49ers QB Colin Kaepernick most disliked player in NFL</h3>
-					<p><p>player in NFL | The Afternoon News with Kitty O&rsquo;Neal | NewsRadio KFBK.  <a href="http://kfbk.iheart.com/onair/the-afternoon-news-with-kitty-oneal-50603/according-to-a-poll-49ers-qb-15135459/">more</a>.</p>
+					<p><p>player in NFL | The Afternoon News with Kitty O&rsquo;Neal | NewsRadio KFBK.  <a href="http://kfbk.iheart.com/onair/the-afternoon-news-with-kitty-oneal-50603/according-to-a-poll-49ers-qb-15135459/" onclick="trackOutboundLink('http://kfbk.iheart.com/onair/the-afternoon-news-with-kitty-oneal-50603/according-to-a-poll-49ers-qb-15135459/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

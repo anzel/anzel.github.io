@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>11</b></p>
 					<h3>Return of Rams-49ers West Coast rivalry may take time to rekindle</h3>
-					<p><p>Let&rsquo;s be honest: The so-called rivalry between the 49ers and Rams has needed a little oomph for more than decade. It requires two competitive teams &hellip;  <a href="http://www.sfgate.com/49ers/article/Return-of-49ers-Rams-West-Coast-rivalry-may-take-9216242.php">more</a>.</p>
+					<p><p>Let&rsquo;s be honest: The so-called rivalry between the 49ers and Rams has needed a little oomph for more than decade. It requires two competitive teams &hellip;  <a href="http://www.sfgate.com/49ers/article/Return-of-49ers-Rams-West-Coast-rivalry-may-take-9216242.php" onclick="trackOutboundLink('http://www.sfgate.com/49ers/article/Return-of-49ers-Rams-West-Coast-rivalry-may-take-9216242.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

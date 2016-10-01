@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>23</b></p>
 					<h3>Snap Counts: Oakland Raiders vs. Atlanta Falcons</h3>
-					<p><p>The Oakland Raiders are hosting the Atlanta Falcons in their hope opener. Oakland maintains a slight 7-6 edge in the series entering this meeting.  <a href="http://www.crcconnection.com/2016/09/23/snap-counts-oakland-raiders-vs-atlanta-falcons.html">more</a>.</p>
+					<p><p>The Oakland Raiders are hosting the Atlanta Falcons in their hope opener. Oakland maintains a slight 7-6 edge in the series entering this meeting.  <a href="http://www.crcconnection.com/2016/09/23/snap-counts-oakland-raiders-vs-atlanta-falcons.html" onclick="trackOutboundLink('http://www.crcconnection.com/2016/09/23/snap-counts-oakland-raiders-vs-atlanta-falcons.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

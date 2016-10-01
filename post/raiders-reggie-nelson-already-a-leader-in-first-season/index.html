@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>07</b></p>
 					<h3>Raiders&#39; Reggie Nelson already a leader in first season</h3>
-					<p><p>Oakland Raiders safety Reggie Nelson is in his first season with the team, but has already earned a role as a captain.  <a href="http://www.mercurynews.com/2016/09/07/raiders-reggie-nelson-already-a-leader-in-first-season/">more</a>.</p>
+					<p><p>Oakland Raiders safety Reggie Nelson is in his first season with the team, but has already earned a role as a captain.  <a href="http://www.mercurynews.com/2016/09/07/raiders-reggie-nelson-already-a-leader-in-first-season/" onclick="trackOutboundLink('http://www.mercurynews.com/2016/09/07/raiders-reggie-nelson-already-a-leader-in-first-season/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

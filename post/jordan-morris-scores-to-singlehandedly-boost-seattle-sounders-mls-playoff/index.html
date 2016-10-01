@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>17</b></p>
 					<h3>Jordan Morris scores to single-handedly boost Seattle Sounders&#39; MLS playoff</h3>
-					<p><p>FOXSports.com &hellip; in the Western Conference to seventh in one fell swoop. The Sounders hopped past the Whitecaps and the San Jose Earthquakes in the standings.  <a href="http://www.foxsports.com/soccer/story/jordan-morris-scores-to-single-handedly-boost-seattle-sounders-mls-playoff-hopes-091716">more</a>.</p>
+					<p><p>FOXSports.com &hellip; in the Western Conference to seventh in one fell swoop. The Sounders hopped past the Whitecaps and the San Jose Earthquakes in the standings.  <a href="http://www.foxsports.com/soccer/story/jordan-morris-scores-to-single-handedly-boost-seattle-sounders-mls-playoff-hopes-091716" onclick="trackOutboundLink('http://www.foxsports.com/soccer/story/jordan-morris-scores-to-single-handedly-boost-seattle-sounders-mls-playoff-hopes-091716'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

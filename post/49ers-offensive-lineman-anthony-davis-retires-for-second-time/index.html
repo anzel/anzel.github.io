@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>49ers Offensive Lineman Anthony Davis Retires for Second Time</h3>
-					<p><p>&ldquo;Offensive lineman Anthony Davis informed the team that he has retired from the National Football League,&rdquo; the 49ers announced in a statement.  <a href="http://www.nbcbayarea.com/news/sports/csn/49ers/49ers_offensive_lineman_Anthony_Davis_retires_for_second_time-394889291.html">more</a>.</p>
+					<p><p>&ldquo;Offensive lineman Anthony Davis informed the team that he has retired from the National Football League,&rdquo; the 49ers announced in a statement.  <a href="http://www.nbcbayarea.com/news/sports/csn/49ers/49ers_offensive_lineman_Anthony_Davis_retires_for_second_time-394889291.html" onclick="trackOutboundLink('http://www.nbcbayarea.com/news/sports/csn/49ers/49ers_offensive_lineman_Anthony_Davis_retires_for_second_time-394889291.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

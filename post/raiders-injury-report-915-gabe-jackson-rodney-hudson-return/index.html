@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>16</b></p>
 					<h3>Raiders injury report (9/15): Gabe Jackson, Rodney Hudson return</h3>
-					<p><p>Center Rodney Hudson and guard Gabe Jackson returned to Oakland Raiders practice on Thursday, after sitting out Wednesday&rsquo;s practice with knee &hellip;  <a href="http://oak.247sports.com/Gallery/Raiders-injury-report-915-Gabe-Jackson-Rodney-Hudson-return-47491650">more</a>.</p>
+					<p><p>Center Rodney Hudson and guard Gabe Jackson returned to Oakland Raiders practice on Thursday, after sitting out Wednesday&rsquo;s practice with knee &hellip;  <a href="http://oak.247sports.com/Gallery/Raiders-injury-report-915-Gabe-Jackson-Rodney-Hudson-return-47491650" onclick="trackOutboundLink('http://oak.247sports.com/Gallery/Raiders-injury-report-915-Gabe-Jackson-Rodney-Hudson-return-47491650'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

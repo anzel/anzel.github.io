@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>Redzone Watch Oakland Raiders Vs Tennessee Titans Live Online Online NFL</h3>
-					<p><p>Online Espn3 Football Streaming|Stream Oakland Raiders Vs Tennessee Titans Live Online Where Can I Watch NFL. Football Replays Online|Watch &hellip;  <a href="http://www.downtownny.com/sites/default/files/webform/Android_Watch_Oakland_Raiders_Vs_Tennessee_Titans_Live_Online_NFL_Football_Schedule.pdf">more</a>.</p>
+					<p><p>Online Espn3 Football Streaming|Stream Oakland Raiders Vs Tennessee Titans Live Online Where Can I Watch NFL. Football Replays Online|Watch &hellip;  <a href="http://www.downtownny.com/sites/default/files/webform/Android_Watch_Oakland_Raiders_Vs_Tennessee_Titans_Live_Online_NFL_Football_Schedule.pdf" onclick="trackOutboundLink('http://www.downtownny.com/sites/default/files/webform/Android_Watch_Oakland_Raiders_Vs_Tennessee_Titans_Live_Online_NFL_Football_Schedule.pdf'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>10</b></p>
 					<h3>Saints DC Dennis Allen downplays revenge factor against Raiders</h3>
-					<p><p>Not only is Allen tasked with turning around one of the worst defenses in NFL history, but he gets to kick off the season against the Oakland Raiders; &hellip;  <a href="http://www.espn.com/blog/nfcsouth/post/_/id/65523/saints-dc-dennis-allen-downplays-revenge-factor-against-raiders">more</a>.</p>
+					<p><p>Not only is Allen tasked with turning around one of the worst defenses in NFL history, but he gets to kick off the season against the Oakland Raiders; &hellip;  <a href="http://www.espn.com/blog/nfcsouth/post/_/id/65523/saints-dc-dennis-allen-downplays-revenge-factor-against-raiders" onclick="trackOutboundLink('http://www.espn.com/blog/nfcsouth/post/_/id/65523/saints-dc-dennis-allen-downplays-revenge-factor-against-raiders'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

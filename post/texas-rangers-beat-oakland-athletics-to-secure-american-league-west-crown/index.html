@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>24</b></p>
 					<h3>Texas Rangers beat Oakland Athletics to secure American League West crown</h3>
-					<p><p>The Texas Rangers clinched their second consecutive American League West crown on Friday night by defeating the Oakland Athletics 3-0.  <a href="http://sport.bt.com/more-sport-hub/more-sport/texas-rangers-beat-oakland-athletics-to-secure-american-league-west-crown-S11364098639864">more</a>.</p>
+					<p><p>The Texas Rangers clinched their second consecutive American League West crown on Friday night by defeating the Oakland Athletics 3-0.  <a href="http://sport.bt.com/more-sport-hub/more-sport/texas-rangers-beat-oakland-athletics-to-secure-american-league-west-crown-S11364098639864" onclick="trackOutboundLink('http://sport.bt.com/more-sport-hub/more-sport/texas-rangers-beat-oakland-athletics-to-secure-american-league-west-crown-S11364098639864'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

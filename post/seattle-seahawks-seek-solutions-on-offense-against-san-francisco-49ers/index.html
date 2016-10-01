@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>22</b></p>
 					<h3>Seattle Seahawks seek solutions on offense against San Francisco 49ers</h3>
-					<p><p>Seattle Seahawks tight end Jimmy Graham (88) continues to work closer to full strength after knee surgery. His presence could help thwart the pass &hellip;  <a href="http://www.upi.com/Sports_News/NFL/2016/09/22/Seattle-Seahawks-seek-solutions-on-offense-against-San-Francisco-49ers/4521474548883/">more</a>.</p>
+					<p><p>Seattle Seahawks tight end Jimmy Graham (88) continues to work closer to full strength after knee surgery. His presence could help thwart the pass &hellip;  <a href="http://www.upi.com/Sports_News/NFL/2016/09/22/Seattle-Seahawks-seek-solutions-on-offense-against-San-Francisco-49ers/4521474548883/" onclick="trackOutboundLink('http://www.upi.com/Sports_News/NFL/2016/09/22/Seattle-Seahawks-seek-solutions-on-offense-against-San-Francisco-49ers/4521474548883/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

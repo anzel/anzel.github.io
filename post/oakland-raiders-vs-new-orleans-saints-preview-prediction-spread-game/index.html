@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>Oakland Raiders vs. New Orleans Saints Preview, Prediction, Spread, Game</h3>
-					<p><p>The Spun (press release) (blog) 11, the Oakland Raiders square off against the New Orleans Saints. The game, to be played at the Mercedes-Benz Superdome in New Orleans, &hellip;  <a href="http://thespun.com/nfl/afc-west/oakland-raiders/oakland-raiders-vs-new-orleans-saints-preview">more</a>.</p>
+					<p><p>The Spun (press release) (blog) 11, the Oakland Raiders square off against the New Orleans Saints. The game, to be played at the Mercedes-Benz Superdome in New Orleans, &hellip;  <a href="http://thespun.com/nfl/afc-west/oakland-raiders/oakland-raiders-vs-new-orleans-saints-preview" onclick="trackOutboundLink('http://thespun.com/nfl/afc-west/oakland-raiders/oakland-raiders-vs-new-orleans-saints-preview'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

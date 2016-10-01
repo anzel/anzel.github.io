@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>20</b></p>
 					<h3>49ers&#39; Colin Kaepernick setting up website to track $1 million in donations</h3>
-					<p><p>$100,000 a month for 10 months and will set up a website that allows &hellip;  <a href="http://wowway.net/news/read/category/sports/article/the_sacramento_bee-49ers_colin_kaepernick_setting_up_website_to_track-tca">more</a>.</p>
+					<p><p>$100,000 a month for 10 months and will set up a website that allows &hellip;  <a href="http://wowway.net/news/read/category/sports/article/the_sacramento_bee-49ers_colin_kaepernick_setting_up_website_to_track-tca" onclick="trackOutboundLink('http://wowway.net/news/read/category/sports/article/the_sacramento_bee-49ers_colin_kaepernick_setting_up_website_to_track-tca'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

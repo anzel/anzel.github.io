@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>San Francisco 49ers T Anthony Davis retires again</h3>
-					<p><p>San Francisco 49ers tackle Anthony Davis has retired from the NFL, the team announced Monday night. The tackle, citing health concerns, decided to &hellip;  <a href="http://www.oregonlive.com/nfl/index.ssf/2016/09/san_francisco_49ers_t_anthony_2.html">more</a>.</p>
+					<p><p>San Francisco 49ers tackle Anthony Davis has retired from the NFL, the team announced Monday night. The tackle, citing health concerns, decided to &hellip;  <a href="http://www.oregonlive.com/nfl/index.ssf/2016/09/san_francisco_49ers_t_anthony_2.html" onclick="trackOutboundLink('http://www.oregonlive.com/nfl/index.ssf/2016/09/san_francisco_49ers_t_anthony_2.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

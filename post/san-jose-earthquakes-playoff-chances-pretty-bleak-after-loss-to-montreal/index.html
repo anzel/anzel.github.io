@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>29</b></p>
 					<h3>San Jose Earthquakes playoff chances pretty bleak after loss to Montreal</h3>
-					<p><p>MONTREAL  The San Jose Earthquakes had to like their chances of getting a much-needed road result Wednesday night when captain Chris &hellip;  <a href="http://www.mlssoccer.com/post/2016/09/29/san-jose-earthquakes-playoff-chances-pretty-bleak-after-loss-montreal">more</a>.</p>
+					<p><p>MONTREAL  The San Jose Earthquakes had to like their chances of getting a much-needed road result Wednesday night when captain Chris &hellip;  <a href="http://www.mlssoccer.com/post/2016/09/29/san-jose-earthquakes-playoff-chances-pretty-bleak-after-loss-montreal" onclick="trackOutboundLink('http://www.mlssoccer.com/post/2016/09/29/san-jose-earthquakes-playoff-chances-pretty-bleak-after-loss-montreal'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

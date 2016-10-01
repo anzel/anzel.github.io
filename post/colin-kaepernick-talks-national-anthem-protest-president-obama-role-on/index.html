@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>Colin Kaepernick Talks National Anthem Protest, President Obama, Role on</h3>
-					<p><p>Bleacher Report San Francisco 49ers quarterback Colin Kaepernick is focused on making the biggest possible impact both on the football field and off it in the coming &hellip;  <a href="http://bleacherreport.com/articles/2662409-colin-kaepernick-talks-national-anthem-protest-president-obama-role-on-49ers">more</a>.</p>
+					<p><p>Bleacher Report San Francisco 49ers quarterback Colin Kaepernick is focused on making the biggest possible impact both on the football field and off it in the coming &hellip;  <a href="http://bleacherreport.com/articles/2662409-colin-kaepernick-talks-national-anthem-protest-president-obama-role-on-49ers" onclick="trackOutboundLink('http://bleacherreport.com/articles/2662409-colin-kaepernick-talks-national-anthem-protest-president-obama-role-on-49ers'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

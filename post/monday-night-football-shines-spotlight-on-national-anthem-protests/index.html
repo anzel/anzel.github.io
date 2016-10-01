@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>Monday Night Football shines spotlight on national anthem protests</h3>
-					<p><p>49ers safety Eric Reid knelt beside Kaepernick on the sidelines on Monday. Two other teammates, safety Antoine Bethea and linebacker Eli Harold, &hellip;  <a href="http://www.reuters.com/article/us-nfl-anthem-idUSKCN11I2N9">more</a>.</p>
+					<p><p>49ers safety Eric Reid knelt beside Kaepernick on the sidelines on Monday. Two other teammates, safety Antoine Bethea and linebacker Eli Harold, &hellip;  <a href="http://www.reuters.com/article/us-nfl-anthem-idUSKCN11I2N9" onclick="trackOutboundLink('http://www.reuters.com/article/us-nfl-anthem-idUSKCN11I2N9'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

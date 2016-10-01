@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>Can the Raiders keep Joe Flacco, Steve Smith off balance?</h3>
-					<p><p>ALAMEDA, Calif. &ndash; The Oakland Raiders are 2-0 on the road for the first time since 2002, which is also the last time they went to the playoffs and had a &hellip;  <a href="http://www.espn.com/blog/oakland-raiders/post/_/id/15901/can-the-raiders-keep-joe-flacco-steve-smith-off-balance">more</a>.</p>
+					<p><p>ALAMEDA, Calif. &ndash; The Oakland Raiders are 2-0 on the road for the first time since 2002, which is also the last time they went to the playoffs and had a &hellip;  <a href="http://www.espn.com/blog/oakland-raiders/post/_/id/15901/can-the-raiders-keep-joe-flacco-steve-smith-off-balance" onclick="trackOutboundLink('http://www.espn.com/blog/oakland-raiders/post/_/id/15901/can-the-raiders-keep-joe-flacco-steve-smith-off-balance'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

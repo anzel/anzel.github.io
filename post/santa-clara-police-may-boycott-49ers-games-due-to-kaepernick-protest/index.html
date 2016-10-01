@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>05</b></p>
 					<h3>Santa Clara Police may boycott 49ers games due to Kaepernick protest</h3>
-					<p><p>Francisco 49ers stating the officers may stop working team events unless &hellip;  <a href="https://www.msn.com/en-us/sports/nba/santa-clara-police-may-boycott-49ers-games-due-to-kaepernick-protest/vp-AAiqMyj">more</a>.</p>
+					<p><p>Francisco 49ers stating the officers may stop working team events unless &hellip;  <a href="https://www.msn.com/en-us/sports/nba/santa-clara-police-may-boycott-49ers-games-due-to-kaepernick-protest/vp-AAiqMyj" onclick="trackOutboundLink('https://www.msn.com/en-us/sports/nba/santa-clara-police-may-boycott-49ers-games-due-to-kaepernick-protest/vp-AAiqMyj'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

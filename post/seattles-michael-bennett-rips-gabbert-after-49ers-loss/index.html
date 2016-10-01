@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>26</b></p>
 					<h3>Seattle&#39;s Michael Bennett rips Gabbert after 49ers loss</h3>
-					<p><p>Reviews of Blaine Gabbert&rsquo;s performance against the 49ers are coming in hot off the presses. And Sunday&rsquo;s 27-18 loss is quickly becoming an outing &hellip;  <a href="http://www.knbr.com/2016/09/25/seattles-michael-bennett-rips-gabbert-after-49ers-loss/">more</a>.</p>
+					<p><p>Reviews of Blaine Gabbert&rsquo;s performance against the 49ers are coming in hot off the presses. And Sunday&rsquo;s 27-18 loss is quickly becoming an outing &hellip;  <a href="http://www.knbr.com/2016/09/25/seattles-michael-bennett-rips-gabbert-after-49ers-loss/" onclick="trackOutboundLink('http://www.knbr.com/2016/09/25/seattles-michael-bennett-rips-gabbert-after-49ers-loss/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

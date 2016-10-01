@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>22</b></p>
 					<h3>Nike Oakland Athletics Verbiage Logo Cap</h3>
-					<p><p>With a sleek design that displays the logo inside the team name, this hat is &hellip;  <a href="https://www.westfield.com/gardenstateplaza/products/us-macys/nike-oakland-athletics-verbiage-logo-cap/15bbcd7f-06a4-4a4d-be0f-bc68b5cbcde8">more</a>.</p>
+					<p><p>With a sleek design that displays the logo inside the team name, this hat is &hellip;  <a href="https://www.westfield.com/gardenstateplaza/products/us-macys/nike-oakland-athletics-verbiage-logo-cap/15bbcd7f-06a4-4a4d-be0f-bc68b5cbcde8" onclick="trackOutboundLink('https://www.westfield.com/gardenstateplaza/products/us-macys/nike-oakland-athletics-verbiage-logo-cap/15bbcd7f-06a4-4a4d-be0f-bc68b5cbcde8'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>02</b></p>
 					<h3>Kaepernick starts, 49ers come back to win preseason finale</h3>
-					<p><p>Colin Kaepernick led the 49ers on an impressive 16-play scoring drive to open the game, which was the most notable event between the lines in the &hellip;  <a href="http://ninerswire.usatoday.com/2016/09/02/kaepernick-starts-49ers-come-back-to-win-preseason-finale/">more</a>.</p>
+					<p><p>Colin Kaepernick led the 49ers on an impressive 16-play scoring drive to open the game, which was the most notable event between the lines in the &hellip;  <a href="http://ninerswire.usatoday.com/2016/09/02/kaepernick-starts-49ers-come-back-to-win-preseason-finale/" onclick="trackOutboundLink('http://ninerswire.usatoday.com/2016/09/02/kaepernick-starts-49ers-come-back-to-win-preseason-finale/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

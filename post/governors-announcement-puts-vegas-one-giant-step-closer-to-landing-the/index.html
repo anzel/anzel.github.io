@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>23</b></p>
 					<h3>Governor&#39;s announcement puts Vegas one giant step closer to landing the</h3>
-					<p><p>CBSSports.com The plan to build a $1.9 billion NFL stadium in Las Vegas is now one giant step closer to becoming a reality. Nevada governor Brian Sandoval &hellip;  <a href="http://www.cbssports.com/nfl/news/governors-announcement-puts-vegas-one-giant-step-closer-to-landing-the-raiders/">more</a>.</p>
+					<p><p>CBSSports.com The plan to build a $1.9 billion NFL stadium in Las Vegas is now one giant step closer to becoming a reality. Nevada governor Brian Sandoval &hellip;  <a href="http://www.cbssports.com/nfl/news/governors-announcement-puts-vegas-one-giant-step-closer-to-landing-the-raiders/" onclick="trackOutboundLink('http://www.cbssports.com/nfl/news/governors-announcement-puts-vegas-one-giant-step-closer-to-landing-the-raiders/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

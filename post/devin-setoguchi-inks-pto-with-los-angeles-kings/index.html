@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>06</b></p>
 					<h3>Devin Setoguchi inks PTO with Los Angeles Kings</h3>
-					<p><p>Forward Devin Setoguchi put up 31 goals and 65 points in 81 regular season games during his 2008-09 season with the San Jose Sharks. Substance &hellip;  <a href="http://www.todaysslapshot.com/from-the-ice/devin-setoguchi-inks-pto-los-angeles-kings/">more</a>.</p>
+					<p><p>Forward Devin Setoguchi put up 31 goals and 65 points in 81 regular season games during his 2008-09 season with the San Jose Sharks. Substance &hellip;  <a href="http://www.todaysslapshot.com/from-the-ice/devin-setoguchi-inks-pto-los-angeles-kings/" onclick="trackOutboundLink('http://www.todaysslapshot.com/from-the-ice/devin-setoguchi-inks-pto-los-angeles-kings/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

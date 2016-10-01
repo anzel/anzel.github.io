@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>06</b></p>
 					<h3>Jersey sales for 49ers&#39; Colin Kaepernick skyrocket after protest</h3>
-					<p><p>The San Francisco 49ers website sold more of their polarizing backup quarterback&rsquo;s jerseys last week than in the previous eight months combined, &hellip;  <a href="http://www.cnbc.com/2016/09/06/report-jersey-sales-for-49ers-colin-kaepernick-skyrocket-after-protest.html">more</a>.</p>
+					<p><p>The San Francisco 49ers website sold more of their polarizing backup quarterback&rsquo;s jerseys last week than in the previous eight months combined, &hellip;  <a href="http://www.cnbc.com/2016/09/06/report-jersey-sales-for-49ers-colin-kaepernick-skyrocket-after-protest.html" onclick="trackOutboundLink('http://www.cnbc.com/2016/09/06/report-jersey-sales-for-49ers-colin-kaepernick-skyrocket-after-protest.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

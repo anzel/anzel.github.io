@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Aug<b>31</b></p>
 					<h3>San Francisco 49ers at San Diego Chargers: Time, TV channel, live score,</h3>
-					<p><p>OregonLive.com Local players to watch: San Francisco- DE DeForest Buckner (Oregon), DE Arik Armstead (Oregon), G Alex Balducci (Oregon), LT Colin Kelly (Oregon &hellip;  <a href="http://www.oregonlive.com/nfl/index.ssf/2016/08/chip_kelly_49ers_at_san_diego.html">more</a>.</p>
+					<p><p>OregonLive.com Local players to watch: San Francisco- DE DeForest Buckner (Oregon), DE Arik Armstead (Oregon), G Alex Balducci (Oregon), LT Colin Kelly (Oregon &hellip;  <a href="http://www.oregonlive.com/nfl/index.ssf/2016/08/chip_kelly_49ers_at_san_diego.html" onclick="trackOutboundLink('http://www.oregonlive.com/nfl/index.ssf/2016/08/chip_kelly_49ers_at_san_diego.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

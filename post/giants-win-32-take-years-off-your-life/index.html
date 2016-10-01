@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>03</b></p>
 					<h3>Giants win, 3-2, take years off your life</h3>
-					<p><p>If you didn&rsquo;t read Friday&rsquo;s recap, don&rsquo;t go back and do it now. Just know that it was an extended exercise in whining and can-kicking. The Giants &hellip;  <a href="http://www.mccoveychronicles.com/2016/9/3/12787586/sf-giants-recap">more</a>.</p>
+					<p><p>If you didn&rsquo;t read Friday&rsquo;s recap, don&rsquo;t go back and do it now. Just know that it was an extended exercise in whining and can-kicking. The Giants &hellip;  <a href="http://www.mccoveychronicles.com/2016/9/3/12787586/sf-giants-recap" onclick="trackOutboundLink('http://www.mccoveychronicles.com/2016/9/3/12787586/sf-giants-recap'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

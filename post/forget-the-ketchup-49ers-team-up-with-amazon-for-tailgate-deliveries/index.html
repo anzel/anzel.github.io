@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>Forget the ketchup? 49ers team up with Amazon for tailgate deliveries</h3>
-					<p><p>Fans tailgate at Levi&rsquo;s Stadium before a 2014. The San Francisco 49ers announced a partnership with Amazon Prime Now that will give fans &hellip;  <a href="http://www.espn.com/blog/nfcwest/post/_/id/123607/forget-the-ketchup-49ers-team-up-with-amazon-for-tailgate-deliveries">more</a>.</p>
+					<p><p>Fans tailgate at Levi&rsquo;s Stadium before a 2014. The San Francisco 49ers announced a partnership with Amazon Prime Now that will give fans &hellip;  <a href="http://www.espn.com/blog/nfcwest/post/_/id/123607/forget-the-ketchup-49ers-team-up-with-amazon-for-tailgate-deliveries" onclick="trackOutboundLink('http://www.espn.com/blog/nfcwest/post/_/id/123607/forget-the-ketchup-49ers-team-up-with-amazon-for-tailgate-deliveries'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

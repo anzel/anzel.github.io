@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>04</b></p>
 					<h3>Oakland Raiders granted no waiver claims</h3>
-					<p><p>If the Oakland Raiders made any waiver claims, they weren&rsquo;t granted any of the players they targeted. Via Scott Bair of CSN Bay Area: &hellip;  <a href="http://oak.247sports.com/Bolt/Oakland-Raiders-granted-no-waiver-claims-47205119">more</a>.</p>
+					<p><p>If the Oakland Raiders made any waiver claims, they weren&rsquo;t granted any of the players they targeted. Via Scott Bair of CSN Bay Area: &hellip;  <a href="http://oak.247sports.com/Bolt/Oakland-Raiders-granted-no-waiver-claims-47205119" onclick="trackOutboundLink('http://oak.247sports.com/Bolt/Oakland-Raiders-granted-no-waiver-claims-47205119'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

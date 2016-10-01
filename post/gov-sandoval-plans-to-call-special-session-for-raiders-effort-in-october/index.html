@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>22</b></p>
 					<h3>Gov. Sandoval plans to call special session for Raiders effort in October</h3>
-					<p><p>Gov. Brian Sandoval said on Wednesday that he supports efforts to lure the Oakland Raiders to Las Vegas and plans to call a special session of the &hellip;  <a href="http://www.rgj.com/story/news/2016/09/21/gov-sandoval-plans-call-special-session-raiders-effort-october/90813982/">more</a>.</p>
+					<p><p>Gov. Brian Sandoval said on Wednesday that he supports efforts to lure the Oakland Raiders to Las Vegas and plans to call a special session of the &hellip;  <a href="http://www.rgj.com/story/news/2016/09/21/gov-sandoval-plans-call-special-session-raiders-effort-october/90813982/" onclick="trackOutboundLink('http://www.rgj.com/story/news/2016/09/21/gov-sandoval-plans-call-special-session-raiders-effort-october/90813982/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

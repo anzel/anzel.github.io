@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Oct<b>01</b></p>
 					<h3>Mariners 5, Athletics 1: Four early homers keep M&#39;s rolling</h3>
-					<p><p>&hellip; contributed one in support of a strong effort from Taijuan Walker as the Mariners rolled to a 5-1 victory over the Oakland Athletics at Safeco Field.  <a href="http://www.thenewstribune.com/sports/mlb/seattle-mariners/mariners-insider-blog/article105347451.html">more</a>.</p>
+					<p><p>&hellip; contributed one in support of a strong effort from Taijuan Walker as the Mariners rolled to a 5-1 victory over the Oakland Athletics at Safeco Field.  <a href="http://www.thenewstribune.com/sports/mlb/seattle-mariners/mariners-insider-blog/article105347451.html" onclick="trackOutboundLink('http://www.thenewstribune.com/sports/mlb/seattle-mariners/mariners-insider-blog/article105347451.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

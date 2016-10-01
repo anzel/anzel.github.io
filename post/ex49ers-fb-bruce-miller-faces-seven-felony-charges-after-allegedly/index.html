@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>Ex-49ers FB Bruce Miller faces seven felony charges after allegedly</h3>
-					<p><p>FOXSports.com Former San Francisco 49ers fullback Bruce Miller&rsquo;s Monday arrest for allegedly assaulting a 70-year-old man and his son has already cost him his &hellip;  <a href="http://www.foxsports.com/nfl/story/ex-49ers-fb-bruce-miller-faces-seven-felony-charges-after-allegedly-assaulting-70-year-old-090816">more</a>.</p>
+					<p><p>FOXSports.com Former San Francisco 49ers fullback Bruce Miller&rsquo;s Monday arrest for allegedly assaulting a 70-year-old man and his son has already cost him his &hellip;  <a href="http://www.foxsports.com/nfl/story/ex-49ers-fb-bruce-miller-faces-seven-felony-charges-after-allegedly-assaulting-70-year-old-090816" onclick="trackOutboundLink('http://www.foxsports.com/nfl/story/ex-49ers-fb-bruce-miller-faces-seven-felony-charges-after-allegedly-assaulting-70-year-old-090816'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

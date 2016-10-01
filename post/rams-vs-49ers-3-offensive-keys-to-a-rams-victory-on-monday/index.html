@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>10</b></p>
 					<h3>Rams vs. 49ers: 3 offensive keys to a Rams victory on Monday</h3>
-					<p><p>With Week 1 against the San Francisco 49ers on Monday Night Football just around the corner, let&rsquo;s take a look at the three offensive keys to a Rams &hellip;  <a href="http://theramswire.usatoday.com/2016/09/09/rams-vs-49ers-3-offensive-keys-to-a-rams-victory-on-monday/">more</a>.</p>
+					<p><p>With Week 1 against the San Francisco 49ers on Monday Night Football just around the corner, let&rsquo;s take a look at the three offensive keys to a Rams &hellip;  <a href="http://theramswire.usatoday.com/2016/09/09/rams-vs-49ers-3-offensive-keys-to-a-rams-victory-on-monday/" onclick="trackOutboundLink('http://theramswire.usatoday.com/2016/09/09/rams-vs-49ers-3-offensive-keys-to-a-rams-victory-on-monday/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

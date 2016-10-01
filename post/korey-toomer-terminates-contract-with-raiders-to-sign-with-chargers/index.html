@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>Korey Toomer terminates contract with Raiders to sign with Chargers</h3>
-					<p><p>A few things happened this week that seem to have something to do with one another. Marcel Reece was released, Korey Toomer terminated his &hellip;  <a href="http://www.silverandblackpride.com/2016/9/28/13099744/korey-toomer-terminates-contract-with-raiders-to-sign-with-chargers">more</a>.</p>
+					<p><p>A few things happened this week that seem to have something to do with one another. Marcel Reece was released, Korey Toomer terminated his &hellip;  <a href="http://www.silverandblackpride.com/2016/9/28/13099744/korey-toomer-terminates-contract-with-raiders-to-sign-with-chargers" onclick="trackOutboundLink('http://www.silverandblackpride.com/2016/9/28/13099744/korey-toomer-terminates-contract-with-raiders-to-sign-with-chargers'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

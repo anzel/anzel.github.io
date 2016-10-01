@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>22</b></p>
 					<h3>NFL Picks, Week 3: History points to Seattle, but for some reason I&#39;m going</h3>
-					<p><p>The Mercury News (blog) SEATTLE -9.5 over 49ERS  This will be the true test of Chip Kelly&rsquo;s offensive X and 0 prowess against one of the NFL&rsquo;s best defensive units. It&rsquo;s a lot &hellip;  <a href="http://blogs.mercurynews.com/kawakami/2016/09/22/nfl-picks-week-3/">more</a>.</p>
+					<p><p>The Mercury News (blog) SEATTLE -9.5 over 49ERS  This will be the true test of Chip Kelly&rsquo;s offensive X and 0 prowess against one of the NFL&rsquo;s best defensive units. It&rsquo;s a lot &hellip;  <a href="http://blogs.mercurynews.com/kawakami/2016/09/22/nfl-picks-week-3/" onclick="trackOutboundLink('http://blogs.mercurynews.com/kawakami/2016/09/22/nfl-picks-week-3/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

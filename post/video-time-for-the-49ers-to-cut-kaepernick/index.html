@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>02</b></p>
 					<h3>VIDEO: Time for the 49ers to Cut Kaepernick</h3>
-					<p><p>protest, but he has been an obnoxious distraction to his team. Topping it all &hellip;  <a href="http://gretawire.foxnewsinsider.com/video/video-time-for-the-49ers-to-cut-kaepernick/">more</a>.</p>
+					<p><p>protest, but he has been an obnoxious distraction to his team. Topping it all &hellip;  <a href="http://gretawire.foxnewsinsider.com/video/video-time-for-the-49ers-to-cut-kaepernick/" onclick="trackOutboundLink('http://gretawire.foxnewsinsider.com/video/video-time-for-the-49ers-to-cut-kaepernick/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

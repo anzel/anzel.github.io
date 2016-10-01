@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>NFL Power Rankings: 49ers Drop Even Further Entering Week 4</h3>
-					<p><p>The San Francisco 49ers fell to the Seattle Seahawks 37-18 last week, which means NFL power rankings in Week 4 won&rsquo;t exactly look kindly upon the &hellip;  <a href="http://ninernoise.com/2016/09/27/nfl-power-rankings-49ers-drop-even-further-entering-week-4/">more</a>.</p>
+					<p><p>The San Francisco 49ers fell to the Seattle Seahawks 37-18 last week, which means NFL power rankings in Week 4 won&rsquo;t exactly look kindly upon the &hellip;  <a href="http://ninernoise.com/2016/09/27/nfl-power-rankings-49ers-drop-even-further-entering-week-4/" onclick="trackOutboundLink('http://ninernoise.com/2016/09/27/nfl-power-rankings-49ers-drop-even-further-entering-week-4/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

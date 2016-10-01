@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>15</b></p>
 					<h3>San Francisco 49ers fan who ran on field said his friends dared him to do</h3>
-					<p><p>He is facing juvenile trspassing charges and banned from Levi&rsquo;s Stadium for a year.  <a href="http://www.hawkcentral.com/story/sports/nfl/49ers/2016/09/15/san-francisco-49ers-fan-police/90412128/">more</a>.</p>
+					<p><p>He is facing juvenile trspassing charges and banned from Levi&rsquo;s Stadium for a year.  <a href="http://www.hawkcentral.com/story/sports/nfl/49ers/2016/09/15/san-francisco-49ers-fan-police/90412128/" onclick="trackOutboundLink('http://www.hawkcentral.com/story/sports/nfl/49ers/2016/09/15/san-francisco-49ers-fan-police/90412128/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

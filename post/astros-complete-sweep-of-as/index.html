@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Aug<b>31</b></p>
 					<h3>Astros complete sweep of A&#39;s</h3>
-					<p><p>HOUSTON &ndash; Oakland Athletics left-hander Ross Detwiler had shackled the Astros lineup so effectively that the lone hope for the Astros seemingly was &hellip;  <a href="http://www.reuters.com/article/bbo-athletics-astros-writethru-idUSMTZEC8VSOLHNB">more</a>.</p>
+					<p><p>HOUSTON &ndash; Oakland Athletics left-hander Ross Detwiler had shackled the Astros lineup so effectively that the lone hope for the Astros seemingly was &hellip;  <a href="http://www.reuters.com/article/bbo-athletics-astros-writethru-idUSMTZEC8VSOLHNB" onclick="trackOutboundLink('http://www.reuters.com/article/bbo-athletics-astros-writethru-idUSMTZEC8VSOLHNB'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

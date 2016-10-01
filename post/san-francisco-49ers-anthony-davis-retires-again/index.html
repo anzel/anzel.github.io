@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>26</b></p>
 					<h3>San Francisco 49ers Anthony Davis retires again</h3>
-					<p><p>Offensive lineman Anthony Davis officially abandoned his comeback attempt and retired again Monday, the 49ers announced. In a farewell post on &hellip;  <a href="http://www.mercurynews.com/2016/09/26/49ers-announce-anthony-davis-retirement/">more</a>.</p>
+					<p><p>Offensive lineman Anthony Davis officially abandoned his comeback attempt and retired again Monday, the 49ers announced. In a farewell post on &hellip;  <a href="http://www.mercurynews.com/2016/09/26/49ers-announce-anthony-davis-retirement/" onclick="trackOutboundLink('http://www.mercurynews.com/2016/09/26/49ers-announce-anthony-davis-retirement/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

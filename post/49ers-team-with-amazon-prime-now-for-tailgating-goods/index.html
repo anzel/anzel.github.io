@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>10</b></p>
 					<h3>49ers team with Amazon Prime Now for tailgating goods</h3>
-					<p><p>The San Francisco 49ers have teamed up with Amazon to make tailgating a little more convenient. Under this partnership, 49ers fans at Levi&rsquo;s Stadium &hellip;  <a href="http://www.slashgear.com/49ers-team-with-amazon-prime-now-for-tailgating-goods-09455562/">more</a>.</p>
+					<p><p>The San Francisco 49ers have teamed up with Amazon to make tailgating a little more convenient. Under this partnership, 49ers fans at Levi&rsquo;s Stadium &hellip;  <a href="http://www.slashgear.com/49ers-team-with-amazon-prime-now-for-tailgating-goods-09455562/" onclick="trackOutboundLink('http://www.slashgear.com/49ers-team-with-amazon-prime-now-for-tailgating-goods-09455562/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

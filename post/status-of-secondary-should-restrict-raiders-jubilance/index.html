@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>15</b></p>
 					<h3>Status of secondary should restrict Raiders&#39; jubilance</h3>
-					<p><p>&hellip; Del Rio  and Derek Carr and Michael Crabtree  ensured the Oakland Raiders&rsquo; Week 1 conclusion will be one of the year&rsquo;s most memorable.  <a href="http://www.todayspigskin.com/afc/oakland-raiders/status-secondary-restrict-raiders-jubilance/">more</a>.</p>
+					<p><p>&hellip; Del Rio  and Derek Carr and Michael Crabtree  ensured the Oakland Raiders&rsquo; Week 1 conclusion will be one of the year&rsquo;s most memorable.  <a href="http://www.todayspigskin.com/afc/oakland-raiders/status-secondary-restrict-raiders-jubilance/" onclick="trackOutboundLink('http://www.todayspigskin.com/afc/oakland-raiders/status-secondary-restrict-raiders-jubilance/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

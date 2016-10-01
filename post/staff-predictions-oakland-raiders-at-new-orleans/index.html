@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>10</b></p>
 					<h3>Staff Predictions: Oakland Raiders at New Orleans</h3>
-					<p><p>The Oakland Raiders start off their season in New Orleans at 1 P.M. Eastern time. With a lot of hype being projected by the media onto the Raiders this &hellip;  <a href="http://isportsweb.com/2016/09/10/staff-predictions-oakland-raiders-new-orleans/">more</a>.</p>
+					<p><p>The Oakland Raiders start off their season in New Orleans at 1 P.M. Eastern time. With a lot of hype being projected by the media onto the Raiders this &hellip;  <a href="http://isportsweb.com/2016/09/10/staff-predictions-oakland-raiders-new-orleans/" onclick="trackOutboundLink('http://isportsweb.com/2016/09/10/staff-predictions-oakland-raiders-new-orleans/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

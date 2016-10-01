@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>Khris Davis&#39; record-setting homers lead A&#39;s over Rangers</h3>
-					<p><p>Khris Davis homered twice  what&rsquo;s knew?  to lead the Oakland A&rsquo;s over the Texas Rangers 5-2 Sunday at Globe Life Park. The A&rsquo;s took two of &hellip;  <a href="http://www.star-telegram.com/sports/mlb/texas-rangers/article102631382.html">more</a>.</p>
+					<p><p>Khris Davis homered twice  what&rsquo;s knew?  to lead the Oakland A&rsquo;s over the Texas Rangers 5-2 Sunday at Globe Life Park. The A&rsquo;s took two of &hellip;  <a href="http://www.star-telegram.com/sports/mlb/texas-rangers/article102631382.html" onclick="trackOutboundLink('http://www.star-telegram.com/sports/mlb/texas-rangers/article102631382.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

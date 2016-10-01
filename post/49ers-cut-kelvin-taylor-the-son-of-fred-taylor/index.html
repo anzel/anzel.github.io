@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>03</b></p>
 					<h3>49ers cut Kelvin Taylor, the son of Fred Taylor</h3>
-					<p><p>According to Adam Schefter of ESPN, the 49ers waived srookie running back Kelvin Taylor, the son of the longtime Jaguars running back.  <a href="http://profootballtalk.nbcsports.com/2016/09/03/49ers-cut-kelvin-taylor-the-son-of-fred-taylor/">more</a>.</p>
+					<p><p>According to Adam Schefter of ESPN, the 49ers waived srookie running back Kelvin Taylor, the son of the longtime Jaguars running back.  <a href="http://profootballtalk.nbcsports.com/2016/09/03/49ers-cut-kelvin-taylor-the-son-of-fred-taylor/" onclick="trackOutboundLink('http://profootballtalk.nbcsports.com/2016/09/03/49ers-cut-kelvin-taylor-the-son-of-fred-taylor/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>ABC w.at.ch &#39;49ers&#39; Free. Football. li.ve. Streaming. Iphone Click Here to</h3>
-					<p><p>w.at.ch &lsquo;49ers&rsquo; Free. Football. li.ve. Streaming. Iphone. Click Here to w.at.ch 49ers Online! San,;,Francisco,;,49ers,;,-,;,NFL,;,-,;,CBSS. Watch,;,Rams,;,vs &hellip;  <a href="https://www.arval.fi/sites/fi/files/media/a-b-cw.at_.ch_.49ers.li_.ve_.tv_.streaming.football.game_.pdf">more</a>.</p>
+					<p><p>w.at.ch &lsquo;49ers&rsquo; Free. Football. li.ve. Streaming. Iphone. Click Here to w.at.ch 49ers Online! San,;,Francisco,;,49ers,;,-,;,NFL,;,-,;,CBSS. Watch,;,Rams,;,vs &hellip;  <a href="https://www.arval.fi/sites/fi/files/media/a-b-cw.at_.ch_.49ers.li_.ve_.tv_.streaming.football.game_.pdf" onclick="trackOutboundLink('https://www.arval.fi/sites/fi/files/media/a-b-cw.at_.ch_.49ers.li_.ve_.tv_.streaming.football.game_.pdf'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

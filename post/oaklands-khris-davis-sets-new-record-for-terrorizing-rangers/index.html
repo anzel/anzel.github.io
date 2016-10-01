@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>Oakland&#39;s Khris Davis sets new record for terrorizing Rangers</h3>
-					<p><p>Oakland Athletics left fielder Khris Davis gets a hand from third baseman Danny Valencia after hitting a home run during the third inning against the &hellip;  <a href="http://sportsday.dallasnews.com/texas-rangers/rangers/2016/09/18/oaklands-khris-davis-sets-new-record-terrorizing-rangers">more</a>.</p>
+					<p><p>Oakland Athletics left fielder Khris Davis gets a hand from third baseman Danny Valencia after hitting a home run during the third inning against the &hellip;  <a href="http://sportsday.dallasnews.com/texas-rangers/rangers/2016/09/18/oaklands-khris-davis-sets-new-record-terrorizing-rangers" onclick="trackOutboundLink('http://sportsday.dallasnews.com/texas-rangers/rangers/2016/09/18/oaklands-khris-davis-sets-new-record-terrorizing-rangers'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

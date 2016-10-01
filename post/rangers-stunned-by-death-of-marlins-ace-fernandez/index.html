@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>Rangers stunned by death of Marlins ace Fernandez</h3>
-					<p><p>Jose Fernandez, a two-time All-Star with the Miami Marlins, was killed early Sunday morning in a boating accident. Wilfredo Lee AP. facebook twitter &hellip;  <a href="http://www.star-telegram.com/sports/mlb/texas-rangers/article104105826.html">more</a>.</p>
+					<p><p>Jose Fernandez, a two-time All-Star with the Miami Marlins, was killed early Sunday morning in a boating accident. Wilfredo Lee AP. facebook twitter &hellip;  <a href="http://www.star-telegram.com/sports/mlb/texas-rangers/article104105826.html" onclick="trackOutboundLink('http://www.star-telegram.com/sports/mlb/texas-rangers/article104105826.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

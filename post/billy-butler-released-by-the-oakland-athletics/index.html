@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>Billy Butler released by the Oakland Athletics</h3>
-					<p><p>Not even two full seasons into the 3 year/30 million dollar deal he signed before the 2015 season, Billy Butler&rsquo;s time as an Oakland Athletic is officially &hellip;  <a href="http://www.royalsblue.com/2016/09/billy-butler-released-by-the-oakland-athletics/">more</a>.</p>
+					<p><p>Not even two full seasons into the 3 year/30 million dollar deal he signed before the 2015 season, Billy Butler&rsquo;s time as an Oakland Athletic is officially &hellip;  <a href="http://www.royalsblue.com/2016/09/billy-butler-released-by-the-oakland-athletics/" onclick="trackOutboundLink('http://www.royalsblue.com/2016/09/billy-butler-released-by-the-oakland-athletics/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>19</b></p>
 					<h3>Jack Del Rio laments &#39;eye violations&#39; as cause for Raiders poor defensive</h3>
-					<p><p>ESPN (blog) Oakland has given up more than 1,000 combined yards of offense in two games forcing coach Jack Del Rio to take some play-calling responsibilities &hellip;  <a href="http://www.espn.com/blog/afcwest/post/_/id/75942/jack-del-rio-laments-eye-violations-as-cause-for-raiders-poor-defensive-play">more</a>.</p>
+					<p><p>ESPN (blog) Oakland has given up more than 1,000 combined yards of offense in two games forcing coach Jack Del Rio to take some play-calling responsibilities &hellip;  <a href="http://www.espn.com/blog/afcwest/post/_/id/75942/jack-del-rio-laments-eye-violations-as-cause-for-raiders-poor-defensive-play" onclick="trackOutboundLink('http://www.espn.com/blog/afcwest/post/_/id/75942/jack-del-rio-laments-eye-violations-as-cause-for-raiders-poor-defensive-play'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

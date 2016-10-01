@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>20</b></p>
 					<h3>Kelechi Osemele quickly becoming NFL&#39;s most feared O-lineman</h3>
-					<p><p>The Oakland Raiders signed Osemele to a five-year, $58.5 million contract in free agency this offseason, making him the highest paid player on the &hellip;  <a href="http://oak.247sports.com/Bolt/Kelechi-Osemele-quickly-becoming-NFLs-most-feared-O-lineman-47638698">more</a>.</p>
+					<p><p>The Oakland Raiders signed Osemele to a five-year, $58.5 million contract in free agency this offseason, making him the highest paid player on the &hellip;  <a href="http://oak.247sports.com/Bolt/Kelechi-Osemele-quickly-becoming-NFLs-most-feared-O-lineman-47638698" onclick="trackOutboundLink('http://oak.247sports.com/Bolt/Kelechi-Osemele-quickly-becoming-NFLs-most-feared-O-lineman-47638698'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

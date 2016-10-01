@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>09</b></p>
 					<h3>Reid: More 49ers discuss kneeling during anthem</h3>
-					<p><p>SANTA CLARA, Calif. &ndash; San Francisco 49ers safety Eric Reid was the first teammate of quarterback Colin Kaepernick&rsquo;s to join him in not standing for &hellip;  <a href="http://www.espn.com/nfl/story/_/id/17507634/eric-reid-san-francisco-49ers-join-colin-kaepernick-kneeling-national-anthem-monday-night-football">more</a>.</p>
+					<p><p>SANTA CLARA, Calif. &ndash; San Francisco 49ers safety Eric Reid was the first teammate of quarterback Colin Kaepernick&rsquo;s to join him in not standing for &hellip;  <a href="http://www.espn.com/nfl/story/_/id/17507634/eric-reid-san-francisco-49ers-join-colin-kaepernick-kneeling-national-anthem-monday-night-football" onclick="trackOutboundLink('http://www.espn.com/nfl/story/_/id/17507634/eric-reid-san-francisco-49ers-join-colin-kaepernick-kneeling-national-anthem-monday-night-football'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

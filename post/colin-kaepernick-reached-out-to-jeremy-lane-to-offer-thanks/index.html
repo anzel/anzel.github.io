@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>05</b></p>
 					<h3>Colin Kaepernick reached out to Jeremy Lane to offer thanks</h3>
-					<p><p>Seattle Seahawks cornerback Jeremy Lane said he heard from San Francisco 49ers quarterback Colin Kaepernick last week after Lane sat during the &hellip;  <a href="http://www.espn.com/nfl/story/_/id/17473450/colin-kaepernick-san-francisco-49ers-contacted-jeremy-lane-seattle-seahawks-thanks">more</a>.</p>
+					<p><p>Seattle Seahawks cornerback Jeremy Lane said he heard from San Francisco 49ers quarterback Colin Kaepernick last week after Lane sat during the &hellip;  <a href="http://www.espn.com/nfl/story/_/id/17473450/colin-kaepernick-san-francisco-49ers-contacted-jeremy-lane-seattle-seahawks-thanks" onclick="trackOutboundLink('http://www.espn.com/nfl/story/_/id/17473450/colin-kaepernick-san-francisco-49ers-contacted-jeremy-lane-seattle-seahawks-thanks'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

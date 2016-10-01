@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>01</b></p>
 					<h3>What Time &amp; TV Channel Is the Seahawks-Raiders Game on Tonight?</h3>
-					<p><p>The Seattle Seahawks take on the Oakland Raiders in the final preseason game for both teams. NFL Network will broadcast the game nationally at 10 &hellip;  <a href="http://heavy.com/sports/2016/09/seattle-seahawks-vs-oakland-raiders-preseason-game-what-time-start-tonight-kickoff-tv-channel-where-location-local-stations/">more</a>.</p>
+					<p><p>The Seattle Seahawks take on the Oakland Raiders in the final preseason game for both teams. NFL Network will broadcast the game nationally at 10 &hellip;  <a href="http://heavy.com/sports/2016/09/seattle-seahawks-vs-oakland-raiders-preseason-game-what-time-start-tonight-kickoff-tv-channel-where-location-local-stations/" onclick="trackOutboundLink('http://heavy.com/sports/2016/09/seattle-seahawks-vs-oakland-raiders-preseason-game-what-time-start-tonight-kickoff-tv-channel-where-location-local-stations/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

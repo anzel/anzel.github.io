@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>26</b></p>
 					<h3>Rookie, veteran to square off in Angels-A&#39;s opener (Sep 25, 2016)</h3>
-					<p><p>Two pitchers who are hitting their stride as the season concludes will face each other when the Oakland Athletics meet the Los Angeles Angels on &hellip;  <a href="http://www.foxsports.com/mlb/story/rookie-veteran-to-square-off-in-angels-a-s-opener-092516">more</a>.</p>
+					<p><p>Two pitchers who are hitting their stride as the season concludes will face each other when the Oakland Athletics meet the Los Angeles Angels on &hellip;  <a href="http://www.foxsports.com/mlb/story/rookie-veteran-to-square-off-in-angels-a-s-opener-092516" onclick="trackOutboundLink('http://www.foxsports.com/mlb/story/rookie-veteran-to-square-off-in-angels-a-s-opener-092516'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

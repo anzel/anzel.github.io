@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>20</b></p>
 					<h3>Cotton dandy but A&#39;s squander late lead, lose 4-2 to Astros</h3>
-					<p><p>Oakland Athletics pitcher Jharel Cotton works against the Houston Astros in the first inning of a baseball game Monday, Sept. 19, 2016, in Oakland, &hellip;  <a href="http://www.thehour.com/sports/article/Cotton-dandy-but-A-s-squander-late-lead-lose-4-2-9233599.php">more</a>.</p>
+					<p><p>Oakland Athletics pitcher Jharel Cotton works against the Houston Astros in the first inning of a baseball game Monday, Sept. 19, 2016, in Oakland, &hellip;  <a href="http://www.thehour.com/sports/article/Cotton-dandy-but-A-s-squander-late-lead-lose-4-2-9233599.php" onclick="trackOutboundLink('http://www.thehour.com/sports/article/Cotton-dandy-but-A-s-squander-late-lead-lose-4-2-9233599.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>20</b></p>
 					<h3>Lott investment group puts offer on coliseum land, Goodell believes</h3>
-					<p><p>Silver and Black Pride There is some more positive news coming out of Oakland Tuesday. A report filed by the East Bay Times details a letter that was sent from the &hellip;  <a href="http://www.silverandblackpride.com/2016/9/20/12997086/lott-investment-group-offer-on-coliseum-land-goodell-believes-there-s-a-solution-in-oakland-raiders">more</a>.</p>
+					<p><p>Silver and Black Pride There is some more positive news coming out of Oakland Tuesday. A report filed by the East Bay Times details a letter that was sent from the &hellip;  <a href="http://www.silverandblackpride.com/2016/9/20/12997086/lott-investment-group-offer-on-coliseum-land-goodell-believes-there-s-a-solution-in-oakland-raiders" onclick="trackOutboundLink('http://www.silverandblackpride.com/2016/9/20/12997086/lott-investment-group-offer-on-coliseum-land-goodell-believes-there-s-a-solution-in-oakland-raiders'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

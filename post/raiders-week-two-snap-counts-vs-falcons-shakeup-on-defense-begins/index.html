@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>20</b></p>
 					<h3>Raiders week two snap counts vs Falcons: Shakeup on defense begins</h3>
-					<p><p>There were already signs of some change in the Raiders&rsquo; defensive personnel in week two. And those changes will continue this week. By Levi &hellip;  <a href="http://www.silverandblackpride.com/2016/9/19/12983314/oakland-raiders-week-two-snap-counts-vs-falcons-shakeup-on-defense-begins">more</a>.</p>
+					<p><p>There were already signs of some change in the Raiders&rsquo; defensive personnel in week two. And those changes will continue this week. By Levi &hellip;  <a href="http://www.silverandblackpride.com/2016/9/19/12983314/oakland-raiders-week-two-snap-counts-vs-falcons-shakeup-on-defense-begins" onclick="trackOutboundLink('http://www.silverandblackpride.com/2016/9/19/12983314/oakland-raiders-week-two-snap-counts-vs-falcons-shakeup-on-defense-begins'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

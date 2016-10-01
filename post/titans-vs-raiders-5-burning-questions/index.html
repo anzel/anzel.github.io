@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>20</b></p>
 					<h3>Titans vs. Raiders: 5 Burning Questions</h3>
-					<p><p>Fresh off a big road victory in Detroit, the Titans (1-1) return home to face the Oakland Raiders (1-1). The Titans will be looking to avenge last season&rsquo;s &hellip;  <a href="http://www.tennessean.com/story/sports/nfl/titans/2016/09/20/titans-vs-raiders-5-burning-questions/90729378/">more</a>.</p>
+					<p><p>Fresh off a big road victory in Detroit, the Titans (1-1) return home to face the Oakland Raiders (1-1). The Titans will be looking to avenge last season&rsquo;s &hellip;  <a href="http://www.tennessean.com/story/sports/nfl/titans/2016/09/20/titans-vs-raiders-5-burning-questions/90729378/" onclick="trackOutboundLink('http://www.tennessean.com/story/sports/nfl/titans/2016/09/20/titans-vs-raiders-5-burning-questions/90729378/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

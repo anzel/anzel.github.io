@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>06</b></p>
 					<h3>49ers preview: Breaking down the schedule week by week</h3>
-					<p><p>12, 2014, the 49ers took a 23-10 divisional-round victory as Colin Kaepernick passed for a touchdown and ran for one. The Panthers have a few extra &hellip;  <a href="http://www.mercurynews.com/49ers/ci_30333002/49ers-preview-breaking-down-schedule-week-by-week">more</a>.</p>
+					<p><p>12, 2014, the 49ers took a 23-10 divisional-round victory as Colin Kaepernick passed for a touchdown and ran for one. The Panthers have a few extra &hellip;  <a href="http://www.mercurynews.com/49ers/ci_30333002/49ers-preview-breaking-down-schedule-week-by-week" onclick="trackOutboundLink('http://www.mercurynews.com/49ers/ci_30333002/49ers-preview-breaking-down-schedule-week-by-week'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

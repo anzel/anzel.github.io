@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>10</b></p>
 					<h3>[Live@Tv] San Jose v/s Seattle Live Strea.m Free</h3>
-					<p><p>wwwmlssoccercom//seattle-sounders-2-san-jose-earthquakes-0-mls-match- &hellip;  <a href="https://awethu.amandla.mobi/petitions/live-tv-san-jose-v-s-seattle-l-i-v-e-s-t-r-e-a-m-f-r-e-e">more</a>.</p>
+					<p><p>wwwmlssoccercom//seattle-sounders-2-san-jose-earthquakes-0-mls-match- &hellip;  <a href="https://awethu.amandla.mobi/petitions/live-tv-san-jose-v-s-seattle-l-i-v-e-s-t-r-e-a-m-f-r-e-e" onclick="trackOutboundLink('https://awethu.amandla.mobi/petitions/live-tv-san-jose-v-s-seattle-l-i-v-e-s-t-r-e-a-m-f-r-e-e'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

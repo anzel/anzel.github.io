@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>03</b></p>
 					<h3>SF Giants Minor Lines, 9/2</h3>
-					<p><p>The most anticipated games remaining in the minor league season&hellip;were delayed. But there&rsquo;s still good news! Dan Slania&rsquo;s back in Triple-A, and that &hellip;  <a href="http://www.mccoveychronicles.com/2016/9/3/12783202/sf-giants-minor-lines-9-2">more</a>.</p>
+					<p><p>The most anticipated games remaining in the minor league season&hellip;were delayed. But there&rsquo;s still good news! Dan Slania&rsquo;s back in Triple-A, and that &hellip;  <a href="http://www.mccoveychronicles.com/2016/9/3/12783202/sf-giants-minor-lines-9-2" onclick="trackOutboundLink('http://www.mccoveychronicles.com/2016/9/3/12783202/sf-giants-minor-lines-9-2'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

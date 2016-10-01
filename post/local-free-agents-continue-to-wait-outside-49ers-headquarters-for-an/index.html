@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>Local free agents continue to wait outside 49ers headquarters for an</h3>
-					<p><p>Yesterday, Cam Inman of the Bay Area News Group reported about two local free agents that were waiting outside of the San Francisco 49ers&rsquo; &hellip;  <a href="http://www.49erswebzone.com/news/98504-local-agents-continue-wait-outside-49ers-headquarters-opportunity/">more</a>.</p>
+					<p><p>Yesterday, Cam Inman of the Bay Area News Group reported about two local free agents that were waiting outside of the San Francisco 49ers&rsquo; &hellip;  <a href="http://www.49erswebzone.com/news/98504-local-agents-continue-wait-outside-49ers-headquarters-opportunity/" onclick="trackOutboundLink('http://www.49erswebzone.com/news/98504-local-agents-continue-wait-outside-49ers-headquarters-opportunity/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

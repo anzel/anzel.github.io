@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>Arizona violinist Lindsey Stirling performs national anthem at 49ers game</h3>
-					<p><p>The national anthem has suddenly become the center of controversy, especially in San Francisco, but on Monday the spotlight shone on two people.  <a href="http://ktar.com/story/1269472/arizona-violinist-lindsey-stirling-performs-national-anthem-at-49ers-game/">more</a>.</p>
+					<p><p>The national anthem has suddenly become the center of controversy, especially in San Francisco, but on Monday the spotlight shone on two people.  <a href="http://ktar.com/story/1269472/arizona-violinist-lindsey-stirling-performs-national-anthem-at-49ers-game/" onclick="trackOutboundLink('http://ktar.com/story/1269472/arizona-violinist-lindsey-stirling-performs-national-anthem-at-49ers-game/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

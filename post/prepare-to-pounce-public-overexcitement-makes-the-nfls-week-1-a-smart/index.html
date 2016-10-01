@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>Prepare to pounce: Public (over)excitement makes the NFL&#39;s Week 1 a smart</h3>
-					<p><p>Las Vegas Weekly (blog) Oakland Raiders The Packers are the only team William Hill sports books has printed more tickets on to win the Super Bowl than the Raiders.  <a href="http://lasvegasweekly.com/news/2016/sep/08/betting-nfl-week-one/">more</a>.</p>
+					<p><p>Las Vegas Weekly (blog) Oakland Raiders The Packers are the only team William Hill sports books has printed more tickets on to win the Super Bowl than the Raiders.  <a href="http://lasvegasweekly.com/news/2016/sep/08/betting-nfl-week-one/" onclick="trackOutboundLink('http://lasvegasweekly.com/news/2016/sep/08/betting-nfl-week-one/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

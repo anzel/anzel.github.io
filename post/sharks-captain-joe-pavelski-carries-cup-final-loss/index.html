@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>Sharks captain Joe Pavelski carries Cup Final loss</h3>
-					<p><p>Joe Pavelski arrived at San Jose Sharks training camp Tuesday with a lingering memory from last season. &ldquo;I don&rsquo;t know if you ever get over it,&rdquo; the San &hellip;  <a href="https://www.nhl.com/news/sharks-captain-joe-pavelski-carries-cup-final-loss/c-282194136">more</a>.</p>
+					<p><p>Joe Pavelski arrived at San Jose Sharks training camp Tuesday with a lingering memory from last season. &ldquo;I don&rsquo;t know if you ever get over it,&rdquo; the San &hellip;  <a href="https://www.nhl.com/news/sharks-captain-joe-pavelski-carries-cup-final-loss/c-282194136" onclick="trackOutboundLink('https://www.nhl.com/news/sharks-captain-joe-pavelski-carries-cup-final-loss/c-282194136'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

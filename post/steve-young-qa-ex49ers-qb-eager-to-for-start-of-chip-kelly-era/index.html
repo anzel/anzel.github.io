@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>07</b></p>
 					<h3>Steve Young Q&amp;A: Ex-49ers QB eager to for start of Chip Kelly era</h3>
-					<p><p>ESPN analyst Steve Young will be in the broadcast booth for the 49ers&rsquo; season opener on Monday night against the Rams and he&rsquo;s excited to have a &hellip;  <a href="http://www.sfgate.com/49ers/article/Steve-Young-Q-A-Ex-49ers-QB-eager-to-for-start-9209258.php">more</a>.</p>
+					<p><p>ESPN analyst Steve Young will be in the broadcast booth for the 49ers&rsquo; season opener on Monday night against the Rams and he&rsquo;s excited to have a &hellip;  <a href="http://www.sfgate.com/49ers/article/Steve-Young-Q-A-Ex-49ers-QB-eager-to-for-start-9209258.php" onclick="trackOutboundLink('http://www.sfgate.com/49ers/article/Steve-Young-Q-A-Ex-49ers-QB-eager-to-for-start-9209258.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

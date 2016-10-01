@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>06</b></p>
 					<h3>Oakland Raiders Depth Chart: News And Notes</h3>
-					<p><p>The Oakland Raiders have released their first depth chart of 2016 as the team prepares to open the regular season Sunday afternoon against the New &hellip;  <a href="http://www.raiders.com/news/article-1/Oakland-Raiders-Depth-Chart-News-And-Notes/9189c187-8e56-4d83-8ae0-58ee7d5696c9">more</a>.</p>
+					<p><p>The Oakland Raiders have released their first depth chart of 2016 as the team prepares to open the regular season Sunday afternoon against the New &hellip;  <a href="http://www.raiders.com/news/article-1/Oakland-Raiders-Depth-Chart-News-And-Notes/9189c187-8e56-4d83-8ae0-58ee7d5696c9" onclick="trackOutboundLink('http://www.raiders.com/news/article-1/Oakland-Raiders-Depth-Chart-News-And-Notes/9189c187-8e56-4d83-8ae0-58ee7d5696c9'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

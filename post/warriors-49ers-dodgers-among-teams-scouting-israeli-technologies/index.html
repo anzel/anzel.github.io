@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>04</b></p>
 					<h3>Warriors, 49ers, Dodgers Among Teams Scouting Israeli Technologies</h3>
-					<p><p>Among the organizations represented were the Golden State Warriors, the San Francisco 49ers, the Los Angeles Dodgers, Twitter, HTC, and Sony.  <a href="http://www.thetower.org/3875-warriors-49ers-dodgers-among-teams-scouting-israeli-technologies/">more</a>.</p>
+					<p><p>Among the organizations represented were the Golden State Warriors, the San Francisco 49ers, the Los Angeles Dodgers, Twitter, HTC, and Sony.  <a href="http://www.thetower.org/3875-warriors-49ers-dodgers-among-teams-scouting-israeli-technologies/" onclick="trackOutboundLink('http://www.thetower.org/3875-warriors-49ers-dodgers-among-teams-scouting-israeli-technologies/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

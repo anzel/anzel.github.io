@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>17</b></p>
 					<h3>49ers vs. Panthers: Point Spread, Total &amp; Prediction</h3>
-					<p><p>The Carolina Panthers are hosting the San Fransisco 49ers at Bank of America Stadium on Sunday, and the Panthers are heavy favorites to win, &hellip;  <a href="http://heavy.com/sports/2016/09/panthers-vs-49ers-point-spread-pick-against-the-spread-vegas-odds-line-prediction-favored-over-under-today-prediction/">more</a>.</p>
+					<p><p>The Carolina Panthers are hosting the San Fransisco 49ers at Bank of America Stadium on Sunday, and the Panthers are heavy favorites to win, &hellip;  <a href="http://heavy.com/sports/2016/09/panthers-vs-49ers-point-spread-pick-against-the-spread-vegas-odds-line-prediction-favored-over-under-today-prediction/" onclick="trackOutboundLink('http://heavy.com/sports/2016/09/panthers-vs-49ers-point-spread-pick-against-the-spread-vegas-odds-line-prediction-favored-over-under-today-prediction/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>03</b></p>
 					<h3>Cheers! Oakland A&#39;s treat David Ortiz to a bottle of wine</h3>
-					<p><p>OAKLAND, Calif. &ndash; You might say David Ortiz has aged like fine wine, and fine wine was a part of the pregame ceremony to honor the 40-year-old &hellip;  <a href="http://www.espn.com/blog/boston/red-sox/post/_/id/50738/cheers-oakland-as-treat-david-ortiz-to-a-bottle-of-wine">more</a>.</p>
+					<p><p>OAKLAND, Calif. &ndash; You might say David Ortiz has aged like fine wine, and fine wine was a part of the pregame ceremony to honor the 40-year-old &hellip;  <a href="http://www.espn.com/blog/boston/red-sox/post/_/id/50738/cheers-oakland-as-treat-david-ortiz-to-a-bottle-of-wine" onclick="trackOutboundLink('http://www.espn.com/blog/boston/red-sox/post/_/id/50738/cheers-oakland-as-treat-david-ortiz-to-a-bottle-of-wine'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>13</b></p>
 					<h3>ATMs May Start Disappearing From Your Neighborhood Bar</h3>
-					<p><p>Dillsaver says his customers often grab cash from the ATM before heading to a San Jose Sharks game or other event downtown. But if those ATMs &hellip;  <a href="http://sanfrancisco.cbslocal.com/2016/09/13/atms-may-start-disappearing-from-your-neighborhood-bar/">more</a>.</p>
+					<p><p>Dillsaver says his customers often grab cash from the ATM before heading to a San Jose Sharks game or other event downtown. But if those ATMs &hellip;  <a href="http://sanfrancisco.cbslocal.com/2016/09/13/atms-may-start-disappearing-from-your-neighborhood-bar/" onclick="trackOutboundLink('http://sanfrancisco.cbslocal.com/2016/09/13/atms-may-start-disappearing-from-your-neighborhood-bar/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

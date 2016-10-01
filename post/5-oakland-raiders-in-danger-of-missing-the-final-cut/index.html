@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Aug<b>31</b></p>
 					<h3>5 Oakland Raiders in danger of missing the final cut</h3>
-					<p><p>The Oakland Raiders will have to make some tough decisions at the end of this week. After trimming their roster from 90 men down to 75, the Raiders &hellip;  <a href="http://oak.247sports.com/Gallery/5-Oakland-Raiders-in-danger-of-missing-the-final-cut-46990377">more</a>.</p>
+					<p><p>The Oakland Raiders will have to make some tough decisions at the end of this week. After trimming their roster from 90 men down to 75, the Raiders &hellip;  <a href="http://oak.247sports.com/Gallery/5-Oakland-Raiders-in-danger-of-missing-the-final-cut-46990377" onclick="trackOutboundLink('http://oak.247sports.com/Gallery/5-Oakland-Raiders-in-danger-of-missing-the-final-cut-46990377'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>49ers&#39; Anthony Davis&#39; main position is tackle</h3>
-					<p><p>Transactions: The 49ers re-signed running back DuJuan Harris and released wide receiver Chris Harper, who was promoted from the practice squad &hellip;  <a href="http://www.sfchronicle.com/49ers/article/49ers-notes-Davis-main-poistion-is-tackle-9220998.php">more</a>.</p>
+					<p><p>Transactions: The 49ers re-signed running back DuJuan Harris and released wide receiver Chris Harper, who was promoted from the practice squad &hellip;  <a href="http://www.sfchronicle.com/49ers/article/49ers-notes-Davis-main-poistion-is-tackle-9220998.php" onclick="trackOutboundLink('http://www.sfchronicle.com/49ers/article/49ers-notes-Davis-main-poistion-is-tackle-9220998.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>04</b></p>
 					<h3>New Orleans Saints vs. Oakland Raiders Pick Prediction NFL Pro Football</h3>
-					<p><p>The Oakland Raiders are traveling to open the regular season to face the New Orleans Saints in an NFL pro football game slated for Sunday.  <a href="https://vimeo.com/181403959">more</a>.</p>
+					<p><p>The Oakland Raiders are traveling to open the regular season to face the New Orleans Saints in an NFL pro football game slated for Sunday.  <a href="https://vimeo.com/181403959" onclick="trackOutboundLink('https://vimeo.com/181403959'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

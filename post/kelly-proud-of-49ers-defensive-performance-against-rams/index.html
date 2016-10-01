@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>Kelly Proud of 49ers&#39; Defensive Performance Against Rams</h3>
-					<p><p>Last season, the 49ers defense was almost helpless against the run. The 49ers ranked 29th in a 32-team league, giving up an average of 126.2 yards &hellip;  <a href="http://www.nbcbayarea.com/news/local/Kelly-Proud-of-49ers-Defensive-Performance-Against-Rams-393268911.html">more</a>.</p>
+					<p><p>Last season, the 49ers defense was almost helpless against the run. The 49ers ranked 29th in a 32-team league, giving up an average of 126.2 yards &hellip;  <a href="http://www.nbcbayarea.com/news/local/Kelly-Proud-of-49ers-Defensive-Performance-Against-Rams-393268911.html" onclick="trackOutboundLink('http://www.nbcbayarea.com/news/local/Kelly-Proud-of-49ers-Defensive-Performance-Against-Rams-393268911.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

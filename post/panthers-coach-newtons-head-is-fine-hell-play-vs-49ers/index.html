@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>13</b></p>
 					<h3>Panthers&#39; coach: Newton&#39;s head is fine, he&#39;ll play vs. 49ers</h3>
-					<p><p>Sunday against the San Francisco 49ers despite taking at least four &hellip;  <a href="http://www.msn.com/en-us/sports/nfl/panthers-coach-newtons-head-is-fine-hell-play-vs-49ers/ar-AAiNSXB">more</a>.</p>
+					<p><p>Sunday against the San Francisco 49ers despite taking at least four &hellip;  <a href="http://www.msn.com/en-us/sports/nfl/panthers-coach-newtons-head-is-fine-hell-play-vs-49ers/ar-AAiNSXB" onclick="trackOutboundLink('http://www.msn.com/en-us/sports/nfl/panthers-coach-newtons-head-is-fine-hell-play-vs-49ers/ar-AAiNSXB'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

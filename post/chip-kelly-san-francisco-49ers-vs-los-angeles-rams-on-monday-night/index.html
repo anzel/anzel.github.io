@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>10</b></p>
 					<h3>Chip Kelly, San Francisco 49ers vs. Los Angeles Rams on Monday Night</h3>
-					<p><p>OregonLive.com Chip Kelly named Blaine Gabbert as the team&rsquo;s starting quarterback. Gabbert has accuracy issues, which could lead to trouble in Kelly&rsquo;s offense.  <a href="http://www.oregonlive.com/nfl/index.ssf/2016/09/san_francisco_49ers_vs_los_ang.html">more</a>.</p>
+					<p><p>OregonLive.com Chip Kelly named Blaine Gabbert as the team&rsquo;s starting quarterback. Gabbert has accuracy issues, which could lead to trouble in Kelly&rsquo;s offense.  <a href="http://www.oregonlive.com/nfl/index.ssf/2016/09/san_francisco_49ers_vs_los_ang.html" onclick="trackOutboundLink('http://www.oregonlive.com/nfl/index.ssf/2016/09/san_francisco_49ers_vs_los_ang.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

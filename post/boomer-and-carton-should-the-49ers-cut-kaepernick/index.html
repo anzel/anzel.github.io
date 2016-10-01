@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>01</b></p>
 					<h3>Boomer and Carton: Should the 49ers cut Kaepernick?</h3>
-					<p><p>and Marc Malusis about Colin Kaepernick and if the 49ers should cut &hellip;  <a href="https://www.msn.com/en-us/sports/watch/boomer-and-carton-should-the-49ers-cut-kaepernick/vp-AAimWHe">more</a>.</p>
+					<p><p>and Marc Malusis about Colin Kaepernick and if the 49ers should cut &hellip;  <a href="https://www.msn.com/en-us/sports/watch/boomer-and-carton-should-the-49ers-cut-kaepernick/vp-AAimWHe" onclick="trackOutboundLink('https://www.msn.com/en-us/sports/watch/boomer-and-carton-should-the-49ers-cut-kaepernick/vp-AAimWHe'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>Whicker: 49ers dominated &#39;80s, but Rams made it a rivalry</h3>
-					<p><p>In 1986, the 49ers scored only 37 points in those two games. The Rams also had an elite offensive line to push back Seifert&rsquo;s underrated defenses.  <a href="http://www.ocregister.com/articles/rams-728719-49ers-game.html">more</a>.</p>
+					<p><p>In 1986, the 49ers scored only 37 points in those two games. The Rams also had an elite offensive line to push back Seifert&rsquo;s underrated defenses.  <a href="http://www.ocregister.com/articles/rams-728719-49ers-game.html" onclick="trackOutboundLink('http://www.ocregister.com/articles/rams-728719-49ers-game.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

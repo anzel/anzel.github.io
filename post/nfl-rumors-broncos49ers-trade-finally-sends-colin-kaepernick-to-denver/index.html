@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Aug<b>31</b></p>
 					<h3>NFL Rumors: Broncos-49ers trade finally sends Colin Kaepernick to Denver?</h3>
-					<p><p>The Denver Broncos have placed veteran quarterback Mark Sanchez on the trading block, according to the latest NFL rumors. This could open the &hellip;  <a href="http://www.sportsrageous.com/nfl/nfl-rumors-broncos-49ers-sends-colin-kaepernick-denver/43578/">more</a>.</p>
+					<p><p>The Denver Broncos have placed veteran quarterback Mark Sanchez on the trading block, according to the latest NFL rumors. This could open the &hellip;  <a href="http://www.sportsrageous.com/nfl/nfl-rumors-broncos-49ers-sends-colin-kaepernick-denver/43578/" onclick="trackOutboundLink('http://www.sportsrageous.com/nfl/nfl-rumors-broncos-49ers-sends-colin-kaepernick-denver/43578/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

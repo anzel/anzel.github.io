@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>06</b></p>
 					<h3>Oakland Raiders Announce New Jersey Numbers</h3>
-					<p><p>Early this week, the two newest additions to the Oakland Raiders were assigned jersey numbers, and one current player elected to make a number &hellip;  <a href="http://www.raiders.com/news/article-1/Oakland-Raiders-Announce-New-Jersey-Numbers/9b48ddb0-dc1a-4e16-b26e-41063d972209">more</a>.</p>
+					<p><p>Early this week, the two newest additions to the Oakland Raiders were assigned jersey numbers, and one current player elected to make a number &hellip;  <a href="http://www.raiders.com/news/article-1/Oakland-Raiders-Announce-New-Jersey-Numbers/9b48ddb0-dc1a-4e16-b26e-41063d972209" onclick="trackOutboundLink('http://www.raiders.com/news/article-1/Oakland-Raiders-Announce-New-Jersey-Numbers/9b48ddb0-dc1a-4e16-b26e-41063d972209'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

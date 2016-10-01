@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>07</b></p>
 					<h3>Giants hang on against Rockies, win 3-2</h3>
-					<p><p>&hellip; Jake Peavy nominated for Roberto Clemente Award  SF Giants Minor Lines, <sup>9</sup>&frasl;<sub>5</sub>  The Giants sent 29 batters to the plate at Coors Field, and two of &hellip;  <a href="http://www.mccoveychronicles.com/2016/9/6/12826458/sf-giants-recap">more</a>.</p>
+					<p><p>&hellip; Jake Peavy nominated for Roberto Clemente Award  SF Giants Minor Lines, <sup>9</sup>&frasl;<sub>5</sub>  The Giants sent 29 batters to the plate at Coors Field, and two of &hellip;  <a href="http://www.mccoveychronicles.com/2016/9/6/12826458/sf-giants-recap" onclick="trackOutboundLink('http://www.mccoveychronicles.com/2016/9/6/12826458/sf-giants-recap'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

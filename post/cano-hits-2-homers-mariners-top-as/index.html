@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Oct<b>01</b></p>
 					<h3>Cano hits 2 homers, Mariners top A&#39;s</h3>
-					<p><p>Seattle Mariners&rsquo; Robinson Cano hits a two-run home run on a pitch from Oakland Athletics starter Raul Alcantara during the first inning a baseball &hellip;  <a href="http://koin.com/2016/09/30/cano-hits-2-homers-mariners-top-as/">more</a>.</p>
+					<p><p>Seattle Mariners&rsquo; Robinson Cano hits a two-run home run on a pitch from Oakland Athletics starter Raul Alcantara during the first inning a baseball &hellip;  <a href="http://koin.com/2016/09/30/cano-hits-2-homers-mariners-top-as/" onclick="trackOutboundLink('http://koin.com/2016/09/30/cano-hits-2-homers-mariners-top-as/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

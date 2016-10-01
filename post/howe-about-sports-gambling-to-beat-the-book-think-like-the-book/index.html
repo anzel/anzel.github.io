@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>23</b></p>
 					<h3>Howe About Sports Gambling: To beat the book, think like the book</h3>
-					<p><p>Tennessee (1-1) is a 1-point favorite hosting the Oakland Raiders (1-1). Coming into the season, the Raiders were the trendy pick. Everyone was in &hellip;  <a href="http://magicvalley.com/sports/high-school/howe-about-sports-gambling-to-beat-the-book-think-like/article_7df51d5a-e0d5-54b5-9f6a-5ce807eded4b.html">more</a>.</p>
+					<p><p>Tennessee (1-1) is a 1-point favorite hosting the Oakland Raiders (1-1). Coming into the season, the Raiders were the trendy pick. Everyone was in &hellip;  <a href="http://magicvalley.com/sports/high-school/howe-about-sports-gambling-to-beat-the-book-think-like/article_7df51d5a-e0d5-54b5-9f6a-5ce807eded4b.html" onclick="trackOutboundLink('http://magicvalley.com/sports/high-school/howe-about-sports-gambling-to-beat-the-book-think-like/article_7df51d5a-e0d5-54b5-9f6a-5ce807eded4b.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

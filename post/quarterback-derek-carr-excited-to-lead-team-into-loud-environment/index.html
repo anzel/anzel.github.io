@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>10</b></p>
 					<h3>Quarterback Derek Carr Excited To Lead Team Into Loud Environment</h3>
-					<p><p>The Oakland Raiders are heading into a raucous environment on Sunday, as they take on the New Orleans Saints at the Mercedes-Benz Superdome.  <a href="http://www.raiders.com/news/article-1/Quarterback-Derek-Carr-Excited-To-Lead-Team-Into-Loud-Environment/b253cefd-0283-4049-bbb2-55c80b276469">more</a>.</p>
+					<p><p>The Oakland Raiders are heading into a raucous environment on Sunday, as they take on the New Orleans Saints at the Mercedes-Benz Superdome.  <a href="http://www.raiders.com/news/article-1/Quarterback-Derek-Carr-Excited-To-Lead-Team-Into-Loud-Environment/b253cefd-0283-4049-bbb2-55c80b276469" onclick="trackOutboundLink('http://www.raiders.com/news/article-1/Quarterback-Derek-Carr-Excited-To-Lead-Team-Into-Loud-Environment/b253cefd-0283-4049-bbb2-55c80b276469'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

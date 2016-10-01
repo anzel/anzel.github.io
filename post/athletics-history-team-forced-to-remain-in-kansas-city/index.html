@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>Athletics History: Team Forced to Remain in Kansas City</h3>
-					<p><p>The Oakland Athletics called Kansas City home from 1955 through 1967 before moving to the Bay Area. However, if owner Charlie Finley had his way, &hellip;  <a href="http://calltothepen.com/2016/09/18/athletics-history-team-forced-remain-kansas-city/">more</a>.</p>
+					<p><p>The Oakland Athletics called Kansas City home from 1955 through 1967 before moving to the Bay Area. However, if owner Charlie Finley had his way, &hellip;  <a href="http://calltothepen.com/2016/09/18/athletics-history-team-forced-remain-kansas-city/" onclick="trackOutboundLink('http://calltothepen.com/2016/09/18/athletics-history-team-forced-remain-kansas-city/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

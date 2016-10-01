@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>17</b></p>
 					<h3>Is Joonas Donkoi A Flash In The Pan Or A Star In The Making?</h3>
-					<p><p>Joonas Donkoi was a standout rookie for the San Jose Sharks last season. After watching him play just two games I instantly became a fan. And I&rsquo;m &hellip;  <a href="http://www.hockeybuzz.com/blog/Steve-Palumbo/Is-Joonas-Donkoi-A-Flash-In-The-Pan-Or--A-Star-In-The-Making/166/79251">more</a>.</p>
+					<p><p>Joonas Donkoi was a standout rookie for the San Jose Sharks last season. After watching him play just two games I instantly became a fan. And I&rsquo;m &hellip;  <a href="http://www.hockeybuzz.com/blog/Steve-Palumbo/Is-Joonas-Donkoi-A-Flash-In-The-Pan-Or--A-Star-In-The-Making/166/79251" onclick="trackOutboundLink('http://www.hockeybuzz.com/blog/Steve-Palumbo/Is-Joonas-Donkoi-A-Flash-In-The-Pan-Or--A-Star-In-The-Making/166/79251'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>11</b></p>
 					<h3>Raiders vs. Saints 2016: Time, TV schedule and live stream</h3>
-					<p><p>Two quarterbacks at opposite ends of their careers will square off when the Oakland Raiders travel to Louisiana to face the New Orleans Saints on &hellip;  <a href="http://www.sbnation.com/nfl/2016/9/11/12856382/saints-raiders-2016-live-streaming-time-tv-schedule">more</a>.</p>
+					<p><p>Two quarterbacks at opposite ends of their careers will square off when the Oakland Raiders travel to Louisiana to face the New Orleans Saints on &hellip;  <a href="http://www.sbnation.com/nfl/2016/9/11/12856382/saints-raiders-2016-live-streaming-time-tv-schedule" onclick="trackOutboundLink('http://www.sbnation.com/nfl/2016/9/11/12856382/saints-raiders-2016-live-streaming-time-tv-schedule'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

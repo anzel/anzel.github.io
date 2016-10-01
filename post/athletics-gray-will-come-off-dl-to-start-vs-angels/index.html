@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>Athletics&#39; Gray will come off DL to start vs. Angels</h3>
-					<p><p>ANAHEIM, Calif. &ndash; One of the American League&rsquo;s best pitchers last year will make his first start in more than seven weeks when the Oakland Athletics &hellip;  <a href="http://www.foxsports.com/mlb/story/athletics-gray-will-come-off-dl-to-start-vs-angels-092816">more</a>.</p>
+					<p><p>ANAHEIM, Calif. &ndash; One of the American League&rsquo;s best pitchers last year will make his first start in more than seven weeks when the Oakland Athletics &hellip;  <a href="http://www.foxsports.com/mlb/story/athletics-gray-will-come-off-dl-to-start-vs-angels-092816" onclick="trackOutboundLink('http://www.foxsports.com/mlb/story/athletics-gray-will-come-off-dl-to-start-vs-angels-092816'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

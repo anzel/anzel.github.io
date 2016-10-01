@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Aug<b>31</b></p>
 					<h3>Who is Sheldon Adelson, and why should Raiders fans care?</h3>
-					<p><p>The average Oakland Raiders fan has no idea who Sheldon Adelson is, even though he may be the single most influential man when it comes to the &hellip;  <a href="http://oak.247sports.com/Bolt/Who-is-Sheldon-Adelson-and-why-should-Raiders-fans-care-47078972">more</a>.</p>
+					<p><p>The average Oakland Raiders fan has no idea who Sheldon Adelson is, even though he may be the single most influential man when it comes to the &hellip;  <a href="http://oak.247sports.com/Bolt/Who-is-Sheldon-Adelson-and-why-should-Raiders-fans-care-47078972" onclick="trackOutboundLink('http://oak.247sports.com/Bolt/Who-is-Sheldon-Adelson-and-why-should-Raiders-fans-care-47078972'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

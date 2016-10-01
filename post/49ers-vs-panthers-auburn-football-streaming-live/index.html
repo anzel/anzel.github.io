@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>&#39;49ers vs Panthers&#39; Auburn Football Streaming Live</h3>
-					<p><p>Free Live NFL Watch 49ers vs Panthers Live Football Streaming Free Go &hellip;  <a href="https://www.kishwaukeecollege.edu/sites/default/files/webform/%21TodayWatch%20%2749ers%20vs%20Panthers%27%20Auburn%20Football%20Streaming%20Live.pdf">more</a>.</p>
+					<p><p>Free Live NFL Watch 49ers vs Panthers Live Football Streaming Free Go &hellip;  <a href="https://www.kishwaukeecollege.edu/sites/default/files/webform/%21TodayWatch%20%2749ers%20vs%20Panthers%27%20Auburn%20Football%20Streaming%20Live.pdf" onclick="trackOutboundLink('https://www.kishwaukeecollege.edu/sites/default/files/webform/%21TodayWatch%20%2749ers%20vs%20Panthers%27%20Auburn%20Football%20Streaming%20Live.pdf'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

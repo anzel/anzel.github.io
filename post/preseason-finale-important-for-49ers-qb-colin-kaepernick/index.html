@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>01</b></p>
 					<h3>Preseason finale important for 49ers QB Colin Kaepernick</h3>
-					<p><p>SAN DIEGO &ndash; The San Francisco 49ers and San Diego Chargers wrap up the preseason on Thursday night. Kickoff is set for 10 p.m. ET at Qualcomm &hellip;  <a href="http://www.espn.com/blog/san-francisco-49ers/post/_/id/19064/preseason-finale-important-for-49ers-qb-colin-kaepernick">more</a>.</p>
+					<p><p>SAN DIEGO &ndash; The San Francisco 49ers and San Diego Chargers wrap up the preseason on Thursday night. Kickoff is set for 10 p.m. ET at Qualcomm &hellip;  <a href="http://www.espn.com/blog/san-francisco-49ers/post/_/id/19064/preseason-finale-important-for-49ers-qb-colin-kaepernick" onclick="trackOutboundLink('http://www.espn.com/blog/san-francisco-49ers/post/_/id/19064/preseason-finale-important-for-49ers-qb-colin-kaepernick'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

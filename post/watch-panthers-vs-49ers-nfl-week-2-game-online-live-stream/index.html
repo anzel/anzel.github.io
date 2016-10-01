@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>Watch Panthers Vs. 49ers NFL Week 2 Game Online (Live Stream)</h3>
-					<p><p>Carolina returns home looking to avoid an 0-2 start with a Week 2 matchup against the San Francisco 49ers, who defeated the Los Angeles Rams &hellip;  <a href="http://nesn.com/2016/09/watch-panthers-vs-49ers-nfl-week-2-game-online-live-stream/">more</a>.</p>
+					<p><p>Carolina returns home looking to avoid an 0-2 start with a Week 2 matchup against the San Francisco 49ers, who defeated the Los Angeles Rams &hellip;  <a href="http://nesn.com/2016/09/watch-panthers-vs-49ers-nfl-week-2-game-online-live-stream/" onclick="trackOutboundLink('http://nesn.com/2016/09/watch-panthers-vs-49ers-nfl-week-2-game-online-live-stream/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

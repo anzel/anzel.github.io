@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>07</b></p>
 					<h3>Feedback: Lowville American Legion Gets A Lot Of Response To 49ers Boycott</h3>
-					<p><p>Feedback: Lowville American Legion Gets A Lot Of Response To 49ers &hellip; That&rsquo;s in response to 49ers quarterback Colin Kaepernick&rsquo;s decision to &hellip;  <a href="http://www.wwnytv.com/news/local/Feedback-Lowville-American-Legion-Gets-A-Lot-Of-Response-To-49ers-Boycott-392647281.html">more</a>.</p>
+					<p><p>Feedback: Lowville American Legion Gets A Lot Of Response To 49ers &hellip; That&rsquo;s in response to 49ers quarterback Colin Kaepernick&rsquo;s decision to &hellip;  <a href="http://www.wwnytv.com/news/local/Feedback-Lowville-American-Legion-Gets-A-Lot-Of-Response-To-49ers-Boycott-392647281.html" onclick="trackOutboundLink('http://www.wwnytv.com/news/local/Feedback-Lowville-American-Legion-Gets-A-Lot-Of-Response-To-49ers-Boycott-392647281.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

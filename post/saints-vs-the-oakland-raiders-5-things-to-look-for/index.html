@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>09</b></p>
 					<h3>Saints vs. the Oakland Raiders: 5 Things to Look For</h3>
-					<p><p>&hellip; the New Orleans Saints will face off against one of the NFL&rsquo;s more historically famous teams when they host the visiting Oakland Raiders in a little bit &hellip;  <a href="http://bigeasybeliever.com/2016/09/09/saints-vs-the-oakland-raiders-5-things-to-look-for/">more</a>.</p>
+					<p><p>&hellip; the New Orleans Saints will face off against one of the NFL&rsquo;s more historically famous teams when they host the visiting Oakland Raiders in a little bit &hellip;  <a href="http://bigeasybeliever.com/2016/09/09/saints-vs-the-oakland-raiders-5-things-to-look-for/" onclick="trackOutboundLink('http://bigeasybeliever.com/2016/09/09/saints-vs-the-oakland-raiders-5-things-to-look-for/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

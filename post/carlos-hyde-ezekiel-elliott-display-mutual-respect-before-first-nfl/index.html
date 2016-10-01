@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>29</b></p>
 					<h3>Carlos Hyde, Ezekiel Elliott Display Mutual Respect before First NFL</h3>
-					<p><p>49ers.com Zeke is like a little brother to me, Hyde said during a recent sit-down interview with 49ers Studios. I&rsquo;m definitely going to swap jerseys with him.  <a href="http://www.49ers.com/news/article-2/Carlos-Hyde-Ezekiel-Elliott-Display-Mutual-Respect-before-First-NFL-Meeting/1850494f-30ae-44a7-8c70-5c405f6b4685">more</a>.</p>
+					<p><p>49ers.com Zeke is like a little brother to me, Hyde said during a recent sit-down interview with 49ers Studios. I&rsquo;m definitely going to swap jerseys with him.  <a href="http://www.49ers.com/news/article-2/Carlos-Hyde-Ezekiel-Elliott-Display-Mutual-Respect-before-First-NFL-Meeting/1850494f-30ae-44a7-8c70-5c405f6b4685" onclick="trackOutboundLink('http://www.49ers.com/news/article-2/Carlos-Hyde-Ezekiel-Elliott-Display-Mutual-Respect-before-First-NFL-Meeting/1850494f-30ae-44a7-8c70-5c405f6b4685'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>19</b></p>
 					<h3>Notebook: Blaine Gabbert Produces 3 TDs in Defeat, 49ers Remain atop NFC</h3>
-					<p><p>49ers.com Just as the 49ers battled back from a 21-point deficit to make it a one score game, Carolina tacked on a field goal to go up 10 with four minutes left in &hellip;  <a href="http://www.49ers.com/news/article-2/Notebook-Blaine-Gabbert-Produces-3-TDs-in-Defeat-49ers-Remain-atop-NFC-West/0328b6eb-40f8-4c76-a624-de6d2fab41f0">more</a>.</p>
+					<p><p>49ers.com Just as the 49ers battled back from a 21-point deficit to make it a one score game, Carolina tacked on a field goal to go up 10 with four minutes left in &hellip;  <a href="http://www.49ers.com/news/article-2/Notebook-Blaine-Gabbert-Produces-3-TDs-in-Defeat-49ers-Remain-atop-NFC-West/0328b6eb-40f8-4c76-a624-de6d2fab41f0" onclick="trackOutboundLink('http://www.49ers.com/news/article-2/Notebook-Blaine-Gabbert-Produces-3-TDs-in-Defeat-49ers-Remain-atop-NFC-West/0328b6eb-40f8-4c76-a624-de6d2fab41f0'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

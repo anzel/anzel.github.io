@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>11</b></p>
 					<h3>Warriors&#39; Stephen Curry, Kevin Durant show support for 49ers&#39; QB Colin</h3>
-					<p><p>WRIC San Francisco 49ers quarterback Colin Kaepernick, left, poses for photos with Golden State Warriors guard Stephen Curry during a boxing event &hellip;  <a href="http://wric.com/2016/09/10/warriors-stephen-curry-kevin-durant-show-support-for-49ers-qb-colin-kaepernick/">more</a>.</p>
+					<p><p>WRIC San Francisco 49ers quarterback Colin Kaepernick, left, poses for photos with Golden State Warriors guard Stephen Curry during a boxing event &hellip;  <a href="http://wric.com/2016/09/10/warriors-stephen-curry-kevin-durant-show-support-for-49ers-qb-colin-kaepernick/" onclick="trackOutboundLink('http://wric.com/2016/09/10/warriors-stephen-curry-kevin-durant-show-support-for-49ers-qb-colin-kaepernick/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

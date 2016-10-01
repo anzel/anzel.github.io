@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>05</b></p>
 					<h3>NFL 2016: 49ers put fate in hands of coach Kelly, QB Gabbert</h3>
-					<p><p>is about a second chance at NFL success. After being run off from his &hellip;  <a href="http://bigstory.ap.org/article/025c3a73345b4cf9a89ad35d9ac8ec37/nfl-2016-49ers-put-fate-hands-coach-kelly-qb-gabbert">more</a>.</p>
+					<p><p>is about a second chance at NFL success. After being run off from his &hellip;  <a href="http://bigstory.ap.org/article/025c3a73345b4cf9a89ad35d9ac8ec37/nfl-2016-49ers-put-fate-hands-coach-kelly-qb-gabbert" onclick="trackOutboundLink('http://bigstory.ap.org/article/025c3a73345b4cf9a89ad35d9ac8ec37/nfl-2016-49ers-put-fate-hands-coach-kelly-qb-gabbert'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

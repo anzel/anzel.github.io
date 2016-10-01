@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>Baseball to Play ECU, Arkansas in Home-and-Home Series</h3>
-					<p><p>their slate of non-conference games having scheduled &hellip;  <a href="http://charlotte49ers.com/news/2016/9/13/baseball-to-play-ecu-arkansas-in-home-and-home-series.aspx">more</a>.</p>
+					<p><p>their slate of non-conference games having scheduled &hellip;  <a href="http://charlotte49ers.com/news/2016/9/13/baseball-to-play-ecu-arkansas-in-home-and-home-series.aspx" onclick="trackOutboundLink('http://charlotte49ers.com/news/2016/9/13/baseball-to-play-ecu-arkansas-in-home-and-home-series.aspx'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

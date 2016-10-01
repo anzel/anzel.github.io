@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>26</b></p>
 					<h3>49ers defense allows glaring statistic for second time in 971 games</h3>
-					<p><p>It&rsquo;s been a rough go of it the last two games for the San Francisco 49ers defense. Last week, it was 46 points and 524 yards to the Panthers. This week &hellip;  <a href="http://www.knbr.com/2016/09/25/49ers-allow-glaring-statistic-for-the-first-time-in-971-games/">more</a>.</p>
+					<p><p>It&rsquo;s been a rough go of it the last two games for the San Francisco 49ers defense. Last week, it was 46 points and 524 yards to the Panthers. This week &hellip;  <a href="http://www.knbr.com/2016/09/25/49ers-allow-glaring-statistic-for-the-first-time-in-971-games/" onclick="trackOutboundLink('http://www.knbr.com/2016/09/25/49ers-allow-glaring-statistic-for-the-first-time-in-971-games/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

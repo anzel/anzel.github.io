@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>06</b></p>
 					<h3>San Jose Sharks Will Drive Team Canada</h3>
-					<p><p>The San Jose Sharks announced that Tomas Hertl has withdrawn from the World Cup of Hockey Sunday, Sept. 4. They still have seven players in the &hellip;  <a href="http://bladesofteal.com/2016/09/06/san-jose-sharks-will-drive-team-canada/">more</a>.</p>
+					<p><p>The San Jose Sharks announced that Tomas Hertl has withdrawn from the World Cup of Hockey Sunday, Sept. 4. They still have seven players in the &hellip;  <a href="http://bladesofteal.com/2016/09/06/san-jose-sharks-will-drive-team-canada/" onclick="trackOutboundLink('http://bladesofteal.com/2016/09/06/san-jose-sharks-will-drive-team-canada/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

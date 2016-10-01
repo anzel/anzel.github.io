@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>Game Notes: Oakland Raiders 17 Tennessee Titans 10</h3>
-					<p><p>Here are the game notes from the Oakland Raiders 17-10 road victory against the Tennessee Titans, presented by Microsoft Surface. Here are the &hellip;  <a href="http://www.raiders.com/news/article-1/Game-Notes-Oakland-Raiders-17-Tennessee-Titans-10/b93520a1-fb83-446c-8427-ffc519cb298e">more</a>.</p>
+					<p><p>Here are the game notes from the Oakland Raiders 17-10 road victory against the Tennessee Titans, presented by Microsoft Surface. Here are the &hellip;  <a href="http://www.raiders.com/news/article-1/Game-Notes-Oakland-Raiders-17-Tennessee-Titans-10/b93520a1-fb83-446c-8427-ffc519cb298e" onclick="trackOutboundLink('http://www.raiders.com/news/article-1/Game-Notes-Oakland-Raiders-17-Tennessee-Titans-10/b93520a1-fb83-446c-8427-ffc519cb298e'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

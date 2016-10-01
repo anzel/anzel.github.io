@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Oct<b>01</b></p>
 					<h3>THN&#39;s 2016-17 NHL season preview: San Jose Sharks</h3>
-					<p><p>The San Jose Sharks entered the 2015-16 season with pretty low expectations after a season where they missed the playoffs entirely. A few months &hellip;  <a href="http://www.thehockeynews.com/news/article/thn-s-2016-17-nhl-season-preview-san-jose-sharks">more</a>.</p>
+					<p><p>The San Jose Sharks entered the 2015-16 season with pretty low expectations after a season where they missed the playoffs entirely. A few months &hellip;  <a href="http://www.thehockeynews.com/news/article/thn-s-2016-17-nhl-season-preview-san-jose-sharks" onclick="trackOutboundLink('http://www.thehockeynews.com/news/article/thn-s-2016-17-nhl-season-preview-san-jose-sharks'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

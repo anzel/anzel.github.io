@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Aug<b>31</b></p>
 					<h3>Pete Carroll keeps Thomas Rawls status vs Raiders secret</h3>
-					<p><p>Seattle Seahawks running back Thomas Rawls will play against the Miami Dolphins in the team&rsquo;s season opener, barring something unforeseeable.  <a href="http://sea.247sports.com/Bolt/Pete-Carroll-keeps-Thomas-Rawls-status-vs-Raiders-secret-47084489">more</a>.</p>
+					<p><p>Seattle Seahawks running back Thomas Rawls will play against the Miami Dolphins in the team&rsquo;s season opener, barring something unforeseeable.  <a href="http://sea.247sports.com/Bolt/Pete-Carroll-keeps-Thomas-Rawls-status-vs-Raiders-secret-47084489" onclick="trackOutboundLink('http://sea.247sports.com/Bolt/Pete-Carroll-keeps-Thomas-Rawls-status-vs-Raiders-secret-47084489'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

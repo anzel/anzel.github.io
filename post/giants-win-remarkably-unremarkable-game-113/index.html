@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>10</b></p>
 					<h3>Giants win remarkably unremarkable game, 11-3</h3>
-					<p><p>&hellip; the most frustrating teams in franchise history  What if the Giants started the season like they started the second half? SF Giants Playoff Minor Lines, &hellip;  <a href="http://www.mccoveychronicles.com/2016/9/10/12876408/sf-giants-recap">more</a>.</p>
+					<p><p>&hellip; the most frustrating teams in franchise history  What if the Giants started the season like they started the second half? SF Giants Playoff Minor Lines, &hellip;  <a href="http://www.mccoveychronicles.com/2016/9/10/12876408/sf-giants-recap" onclick="trackOutboundLink('http://www.mccoveychronicles.com/2016/9/10/12876408/sf-giants-recap'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

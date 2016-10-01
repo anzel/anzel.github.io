@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>24</b></p>
 					<h3>San Jose Ultras exit stadium during SKC game in protest of sanctions</h3>
-					<p><p>The San Jose Ultras exited Avaya Stadium approximately a half hour ahead of the San Jose Earthquakes&rsquo; home meeting with Sporting Kansas City to &hellip;  <a href="http://quakestalk.com/2016/09/24/san-jose-ultras-exit-stadium-during-skc-game-in-protest-of-sanctions/">more</a>.</p>
+					<p><p>The San Jose Ultras exited Avaya Stadium approximately a half hour ahead of the San Jose Earthquakes&rsquo; home meeting with Sporting Kansas City to &hellip;  <a href="http://quakestalk.com/2016/09/24/san-jose-ultras-exit-stadium-during-skc-game-in-protest-of-sanctions/" onclick="trackOutboundLink('http://quakestalk.com/2016/09/24/san-jose-ultras-exit-stadium-during-skc-game-in-protest-of-sanctions/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

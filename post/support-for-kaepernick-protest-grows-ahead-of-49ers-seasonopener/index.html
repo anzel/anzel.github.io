@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>Support for Kaepernick protest grows, ahead of 49ers season-opener</h3>
-					<p><p>SANTA CLARA, Calif. (KTVU) - Colin Kaepernick&rsquo;s protest over racial inequality during the national anthem gained more support among NFL players &hellip;  <a href="http://www.ktvu.com/news/204655765-story">more</a>.</p>
+					<p><p>SANTA CLARA, Calif. (KTVU) - Colin Kaepernick&rsquo;s protest over racial inequality during the national anthem gained more support among NFL players &hellip;  <a href="http://www.ktvu.com/news/204655765-story" onclick="trackOutboundLink('http://www.ktvu.com/news/204655765-story'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

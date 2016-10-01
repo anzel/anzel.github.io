@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>03</b></p>
 					<h3>Texas A&amp;M&#39;s Myles Garrett Draws Raiders&#39; Khalil Mack Comparison (REPORT)</h3>
-					<p><p>Texas A&amp;M star pass rusher Myles Garrett reportedly has one NFC executive comparing him to Oakland Raiders defensive end Khalil Mack.  <a href="http://fourthandgoal.com/texas-ams-myles-garrett-draws-raiders-khalil-mack-comparison-report/">more</a>.</p>
+					<p><p>Texas A&amp;M star pass rusher Myles Garrett reportedly has one NFC executive comparing him to Oakland Raiders defensive end Khalil Mack.  <a href="http://fourthandgoal.com/texas-ams-myles-garrett-draws-raiders-khalil-mack-comparison-report/" onclick="trackOutboundLink('http://fourthandgoal.com/texas-ams-myles-garrett-draws-raiders-khalil-mack-comparison-report/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

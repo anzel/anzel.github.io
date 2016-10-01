@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>Sche-duled%Watch. &#39;Oakland Raiders vs Tennessee Titans&#39;. Live. Stream.</h3>
-					<p><p>Raiders vs Tennessee Titans Game Stream NFL Oakland Raiders vs Tennessee &hellip; Titans Live Sports Streaming Football Watch Oakland Raiders vs &hellip;  <a href="http://www.cityofvancouver.us/sites/default/files/webform/sche-duledwatch._oakland_raiders_vs_tennessee_titans._live._stream._football._today_android.pdf">more</a>.</p>
+					<p><p>Raiders vs Tennessee Titans Game Stream NFL Oakland Raiders vs Tennessee &hellip; Titans Live Sports Streaming Football Watch Oakland Raiders vs &hellip;  <a href="http://www.cityofvancouver.us/sites/default/files/webform/sche-duledwatch._oakland_raiders_vs_tennessee_titans._live._stream._football._today_android.pdf" onclick="trackOutboundLink('http://www.cityofvancouver.us/sites/default/files/webform/sche-duledwatch._oakland_raiders_vs_tennessee_titans._live._stream._football._today_android.pdf'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

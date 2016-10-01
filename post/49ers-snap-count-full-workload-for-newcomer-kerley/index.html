@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>13</b></p>
 					<h3>49ers snap count: Full workload for newcomer Kerley</h3>
-					<p><p>The 49ers struck a deal with the Detroit Lions, sending in return guard Brandon Thomas, who had never stepped onto the field for a regular season &hellip;  <a href="http://www.csnbayarea.com/49ers/snap-count-full-workload-newcomer-kerley">more</a>.</p>
+					<p><p>The 49ers struck a deal with the Detroit Lions, sending in return guard Brandon Thomas, who had never stepped onto the field for a regular season &hellip;  <a href="http://www.csnbayarea.com/49ers/snap-count-full-workload-newcomer-kerley" onclick="trackOutboundLink('http://www.csnbayarea.com/49ers/snap-count-full-workload-newcomer-kerley'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

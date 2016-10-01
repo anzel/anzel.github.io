@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>23</b></p>
 					<h3>Could Chip Kelly be looking any better right now?</h3>
-					<p><p>The San Francisco 49ers hired Kelly not too long after, and those questions were raised anew. How would he work with this locker room, and how &hellip;  <a href="http://www.ninersnation.com/2016/9/23/13035636/chip-kelly-colin-kaepernick-49ers">more</a>.</p>
+					<p><p>The San Francisco 49ers hired Kelly not too long after, and those questions were raised anew. How would he work with this locker room, and how &hellip;  <a href="http://www.ninersnation.com/2016/9/23/13035636/chip-kelly-colin-kaepernick-49ers" onclick="trackOutboundLink('http://www.ninersnation.com/2016/9/23/13035636/chip-kelly-colin-kaepernick-49ers'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

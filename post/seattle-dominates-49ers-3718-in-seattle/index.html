@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>26</b></p>
 					<h3>Seattle Dominates 49ers 37-18 in Seattle</h3>
-					<p><p>Running back Christine Michael #32 of the Seattle Seahawks rushes for a touchdown against safety Jaquiski Tartt #29 of the San Francisco 49ers at &hellip;  <a href="http://www.nbcbayarea.com/news/sports/Seattle-Dominates-49ers-37-18-in-Seattle-394746991.html">more</a>.</p>
+					<p><p>Running back Christine Michael #32 of the Seattle Seahawks rushes for a touchdown against safety Jaquiski Tartt #29 of the San Francisco 49ers at &hellip;  <a href="http://www.nbcbayarea.com/news/sports/Seattle-Dominates-49ers-37-18-in-Seattle-394746991.html" onclick="trackOutboundLink('http://www.nbcbayarea.com/news/sports/Seattle-Dominates-49ers-37-18-in-Seattle-394746991.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

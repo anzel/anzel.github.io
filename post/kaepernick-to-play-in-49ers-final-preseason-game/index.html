@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Aug<b>31</b></p>
 					<h3>Kaepernick to play in 49ers&#39; final preseason game</h3>
-					<p><p>SANTA CLARA, Calif.  Colin Kaepernick will get one more chance to impress Coach Chip Kelly before the San Francisco 49ers announce their &hellip;  <a href="http://www.pressherald.com/2016/08/30/kaepernick-to-play-in-49ers-final-preseason-game/">more</a>.</p>
+					<p><p>SANTA CLARA, Calif.  Colin Kaepernick will get one more chance to impress Coach Chip Kelly before the San Francisco 49ers announce their &hellip;  <a href="http://www.pressherald.com/2016/08/30/kaepernick-to-play-in-49ers-final-preseason-game/" onclick="trackOutboundLink('http://www.pressherald.com/2016/08/30/kaepernick-to-play-in-49ers-final-preseason-game/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>23</b></p>
 					<h3>Week 3: Seattle Seahawks vs San Francisco 49ers Picks &amp; Predictions</h3>
-					<p><p>Week 3: Seattle Seahawks vs San Francisco 49ers Picks &amp; Predictions &hellip; Seahawks&rsquo; Week 3 game against the NFC West rival San Francisco 49ers, &hellip;  <a href="http://www.seahawks.com/news/2016/09/23/week-3-seattle-seahawks-vs-san-francisco-49ers-picks-predictions">more</a>.</p>
+					<p><p>Week 3: Seattle Seahawks vs San Francisco 49ers Picks &amp; Predictions &hellip; Seahawks&rsquo; Week 3 game against the NFC West rival San Francisco 49ers, &hellip;  <a href="http://www.seahawks.com/news/2016/09/23/week-3-seattle-seahawks-vs-san-francisco-49ers-picks-predictions" onclick="trackOutboundLink('http://www.seahawks.com/news/2016/09/23/week-3-seattle-seahawks-vs-san-francisco-49ers-picks-predictions'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

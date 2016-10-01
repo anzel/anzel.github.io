@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>Revitalized Raiders D forces three turnovers in 17-10 win vs. Titans</h3>
-					<p><p>(1 of 11) Tennessee Titans quarterback Marcus Mariota (8) fumbles the ball as Oakland Raiders defenders Jihad Ward (95) and Denico Autry (96) &hellip;  <a href="http://www.pressdemocrat.com/sports/6128117-180/revitalized-raiders-d-forces-three">more</a>.</p>
+					<p><p>(1 of 11) Tennessee Titans quarterback Marcus Mariota (8) fumbles the ball as Oakland Raiders defenders Jihad Ward (95) and Denico Autry (96) &hellip;  <a href="http://www.pressdemocrat.com/sports/6128117-180/revitalized-raiders-d-forces-three" onclick="trackOutboundLink('http://www.pressdemocrat.com/sports/6128117-180/revitalized-raiders-d-forces-three'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

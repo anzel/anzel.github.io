@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>29</b></p>
 					<h3>Cowboys vs. 49ers: WR Dez Bryant Injury Beneficial to San Francisco Defense</h3>
-					<p><p>The San Francisco 49ers may not have to face off against wide receiver Dez Bryant when the Dallas Cowboys come to town in Week 4. And this is a &hellip;  <a href="http://ninernoise.com/2016/09/29/cowboys-vs-49ers-wr-dez-bryant-injury-beneficial-san-francisco-defense/">more</a>.</p>
+					<p><p>The San Francisco 49ers may not have to face off against wide receiver Dez Bryant when the Dallas Cowboys come to town in Week 4. And this is a &hellip;  <a href="http://ninernoise.com/2016/09/29/cowboys-vs-49ers-wr-dez-bryant-injury-beneficial-san-francisco-defense/" onclick="trackOutboundLink('http://ninernoise.com/2016/09/29/cowboys-vs-49ers-wr-dez-bryant-injury-beneficial-san-francisco-defense/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

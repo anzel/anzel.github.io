@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>30</b></p>
 					<h3>A&#39;s fall 8-6 to Angels in Sonny Gray&#39;s return</h3>
-					<p><p>Oakland Athletics starting pitcher Sonny Gray throws to a Los Angeles Angels batter during the first inning of a baseball game in Anaheim, Calif., &hellip;  <a href="http://cumberlink.com/sports/national/baseball/a-s-fall---to-angels-in-sonny-gray/article_b357707b-aa51-5b7a-8c43-0151c80d2e4c.html">more</a>.</p>
+					<p><p>Oakland Athletics starting pitcher Sonny Gray throws to a Los Angeles Angels batter during the first inning of a baseball game in Anaheim, Calif., &hellip;  <a href="http://cumberlink.com/sports/national/baseball/a-s-fall---to-angels-in-sonny-gray/article_b357707b-aa51-5b7a-8c43-0151c80d2e4c.html" onclick="trackOutboundLink('http://cumberlink.com/sports/national/baseball/a-s-fall---to-angels-in-sonny-gray/article_b357707b-aa51-5b7a-8c43-0151c80d2e4c.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>Davis hits 40th HR in A&#39;s 5-2 win over Rangers</h3>
-					<p><p>ARLINGTON, Texas &ndash; Khris Davis&rsquo; mastery of the Texas Rangers helped him earn a spot in Oakland Athletics history Sunday. Davis homered twice &hellip;  <a href="http://www.reuters.com/article/bbo-athletics-rangers-writethru-idUSMTZEC9IQ19R52">more</a>.</p>
+					<p><p>ARLINGTON, Texas &ndash; Khris Davis&rsquo; mastery of the Texas Rangers helped him earn a spot in Oakland Athletics history Sunday. Davis homered twice &hellip;  <a href="http://www.reuters.com/article/bbo-athletics-rangers-writethru-idUSMTZEC9IQ19R52" onclick="trackOutboundLink('http://www.reuters.com/article/bbo-athletics-rangers-writethru-idUSMTZEC9IQ19R52'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

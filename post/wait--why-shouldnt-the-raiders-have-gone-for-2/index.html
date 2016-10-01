@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>Wait  Why Shouldn&#39;t The Raiders Have Gone For 2?</h3>
-					<p><p>Down 24-10 early in the second half of their game Sunday against the New Orleans Saints, the Oakland Raiders seemed to be offering up more of the &hellip;  <a href="http://fivethirtyeight.com/features/a-better-question-why-shouldnt-the-raiders-have-gone-for-2/">more</a>.</p>
+					<p><p>Down 24-10 early in the second half of their game Sunday against the New Orleans Saints, the Oakland Raiders seemed to be offering up more of the &hellip;  <a href="http://fivethirtyeight.com/features/a-better-question-why-shouldnt-the-raiders-have-gone-for-2/" onclick="trackOutboundLink('http://fivethirtyeight.com/features/a-better-question-why-shouldnt-the-raiders-have-gone-for-2/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>09</b></p>
 					<h3>49ers&#39; Kilgore relishes another chance at Rams&#39; Donald</h3>
-					<p><p>Unfortunately for center Daniel Kilgore, the 49ers&rsquo; first opponent of the 2016 season is the same team they played to finish 2015. That means Kilgore &hellip;  <a href="http://www.sfgate.com/49ers/article/49ers-Kilgore-relishes-another-chance-at-9213895.php">more</a>.</p>
+					<p><p>Unfortunately for center Daniel Kilgore, the 49ers&rsquo; first opponent of the 2016 season is the same team they played to finish 2015. That means Kilgore &hellip;  <a href="http://www.sfgate.com/49ers/article/49ers-Kilgore-relishes-another-chance-at-9213895.php" onclick="trackOutboundLink('http://www.sfgate.com/49ers/article/49ers-Kilgore-relishes-another-chance-at-9213895.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

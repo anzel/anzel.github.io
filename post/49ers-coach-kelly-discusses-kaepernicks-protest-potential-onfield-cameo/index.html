@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>10</b></p>
 					<h3>49ers coach Kelly discusses Kaepernicks protest, potential on-field cameo</h3>
-					<p><p>&ldquo;That&rdquo;s really been the last time as a team we&rdquo;ve ever talked about the situation,&rdquo; 49ers coach Chip Kelly said Friday. &ldquo;We recognize and &hellip;  <a href="http://www.goerie.com/BC-FBN-49ERS-KELLY-SJ-sports-600-words-">more</a>.</p>
+					<p><p>&ldquo;That&rdquo;s really been the last time as a team we&rdquo;ve ever talked about the situation,&rdquo; 49ers coach Chip Kelly said Friday. &ldquo;We recognize and &hellip;  <a href="http://www.goerie.com/BC-FBN-49ERS-KELLY-SJ-sports-600-words-" onclick="trackOutboundLink('http://www.goerie.com/BC-FBN-49ERS-KELLY-SJ-sports-600-words-'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

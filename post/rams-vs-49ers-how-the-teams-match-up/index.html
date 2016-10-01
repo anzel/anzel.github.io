@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>09</b></p>
 					<h3>Rams vs. 49ers: How the teams match up</h3>
-					<p><p>A look at how the Rams and San Francisco 49ers compare heading into their matchup on Monday night: LAST YEAR: The Rams and 49ers split their &hellip;  <a href="http://www.latimes.com/sports/rams/la-sp-rams-49ers-compare-20160909-snap-story.html">more</a>.</p>
+					<p><p>A look at how the Rams and San Francisco 49ers compare heading into their matchup on Monday night: LAST YEAR: The Rams and 49ers split their &hellip;  <a href="http://www.latimes.com/sports/rams/la-sp-rams-49ers-compare-20160909-snap-story.html" onclick="trackOutboundLink('http://www.latimes.com/sports/rams/la-sp-rams-49ers-compare-20160909-snap-story.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

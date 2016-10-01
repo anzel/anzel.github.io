@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>Richard Graves v Oakland Raiders fan in week four NFL predictions</h3>
-					<p><p>This week, Richard takes on Oakland Raiders fan Nick Easey, (@niceasey) who is aiming to pile on the pressure. With the season in full flow now, &hellip;  <a href="http://www.skysports.com/nfl/news/12118/10596955/richard-graves-v-oakland-raiders-fan-in-week-four-nfl-predictions">more</a>.</p>
+					<p><p>This week, Richard takes on Oakland Raiders fan Nick Easey, (@niceasey) who is aiming to pile on the pressure. With the season in full flow now, &hellip;  <a href="http://www.skysports.com/nfl/news/12118/10596955/richard-graves-v-oakland-raiders-fan-in-week-four-nfl-predictions" onclick="trackOutboundLink('http://www.skysports.com/nfl/news/12118/10596955/richard-graves-v-oakland-raiders-fan-in-week-four-nfl-predictions'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

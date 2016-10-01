@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>09</b></p>
 					<h3>Athletics vs. Mariners - 9/10/16 MLB Pick, Odds, and Prediction</h3>
-					<p><p>The Oakland Athletics could use a win after losing six of their last nine games. The Athletics have allowed six runs in their last three games and four or &hellip;  <a href="http://sportschatplace.com/mlb-picks/2016/09/10/athletics-vs-mariners-9/10/16-mlb-pick-odds-and-prediction">more</a>.</p>
+					<p><p>The Oakland Athletics could use a win after losing six of their last nine games. The Athletics have allowed six runs in their last three games and four or &hellip;  <a href="http://sportschatplace.com/mlb-picks/2016/09/10/athletics-vs-mariners-9/10/16-mlb-pick-odds-and-prediction" onclick="trackOutboundLink('http://sportschatplace.com/mlb-picks/2016/09/10/athletics-vs-mariners-9/10/16-mlb-pick-odds-and-prediction'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

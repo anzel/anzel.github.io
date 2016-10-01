@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>03</b></p>
 					<h3>Seattle Seahawks Set 53-Man Roster, Trade For Defensive Backs LJ McCray And</h3>
-					<p><p>Seahawks.com Preseason Week 4: Seahawks at Raiders. Posted 2 days ago. Game action photos from the Seahawks&rsquo; preseason finale against the Oakland Raiders.  <a href="http://www.seahawks.com/news/2016/09/03/seattle-seahawks-set-53-man-roster-trade-defensive-backs-lj-mccray-and-dewey">more</a>.</p>
+					<p><p>Seahawks.com Preseason Week 4: Seahawks at Raiders. Posted 2 days ago. Game action photos from the Seahawks&rsquo; preseason finale against the Oakland Raiders.  <a href="http://www.seahawks.com/news/2016/09/03/seattle-seahawks-set-53-man-roster-trade-defensive-backs-lj-mccray-and-dewey" onclick="trackOutboundLink('http://www.seahawks.com/news/2016/09/03/seattle-seahawks-set-53-man-roster-trade-defensive-backs-lj-mccray-and-dewey'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

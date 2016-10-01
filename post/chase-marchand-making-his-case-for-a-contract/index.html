@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>17</b></p>
 					<h3>Chase Marchand making his case for a contract</h3>
-					<p><p>In Saturday&rsquo;s game, the first of the Rookie Showcase, the Colorado Avalanche took down the San Jose Sharks by the score of 4-1. One of the many &hellip;  <a href="http://bsndenver.com/chase-marchand-making-his-case-for-a-contract/">more</a>.</p>
+					<p><p>In Saturday&rsquo;s game, the first of the Rookie Showcase, the Colorado Avalanche took down the San Jose Sharks by the score of 4-1. One of the many &hellip;  <a href="http://bsndenver.com/chase-marchand-making-his-case-for-a-contract/" onclick="trackOutboundLink('http://bsndenver.com/chase-marchand-making-his-case-for-a-contract/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

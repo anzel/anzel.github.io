@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>07</b></p>
 					<h3>Athletics SP Henderson Alvarez to have shoulder evaluated by Dr. James</h3>
-					<p><p>Becker&rsquo;s Orthopedic &amp; Spine Oakland Athletics starting pitcher Henderson Alvarez is heading to see James Andrews, MD, to have his shoulder evaluated, according to MLB Trade &hellip;  <a href="http://www.beckersspine.com/sports-medicine/item/33085-athletics-sp-henderson-alvarez-to-have-shoulder-evaluated-by-dr-james-andrews-3-thoughts.html">more</a>.</p>
+					<p><p>Becker&rsquo;s Orthopedic &amp; Spine Oakland Athletics starting pitcher Henderson Alvarez is heading to see James Andrews, MD, to have his shoulder evaluated, according to MLB Trade &hellip;  <a href="http://www.beckersspine.com/sports-medicine/item/33085-athletics-sp-henderson-alvarez-to-have-shoulder-evaluated-by-dr-james-andrews-3-thoughts.html" onclick="trackOutboundLink('http://www.beckersspine.com/sports-medicine/item/33085-athletics-sp-henderson-alvarez-to-have-shoulder-evaluated-by-dr-james-andrews-3-thoughts.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

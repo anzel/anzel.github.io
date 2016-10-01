@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Oct<b>01</b></p>
 					<h3>Oakland Raiders: Will Khalil Mack Sack Joe Flacco?</h3>
-					<p><p>Where should you turn to ask questions about the Oakland Raiders? &hellip; Coming off a victory, Oakland Raiders fans still have questions about the &hellip;  <a href="http://nflspinzone.com/2016/09/30/oakland-raiders-will-khalil-mack-sack-joe-flacco/">more</a>.</p>
+					<p><p>Where should you turn to ask questions about the Oakland Raiders? &hellip; Coming off a victory, Oakland Raiders fans still have questions about the &hellip;  <a href="http://nflspinzone.com/2016/09/30/oakland-raiders-will-khalil-mack-sack-joe-flacco/" onclick="trackOutboundLink('http://nflspinzone.com/2016/09/30/oakland-raiders-will-khalil-mack-sack-joe-flacco/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

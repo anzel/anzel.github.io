@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>06</b></p>
 					<h3>vintage 99 San Jose Sharks Bear</h3>
-					<p><p>RearView mirror display. $15. San Jose, CA. San Jose Sharks Hat. $5.  <a href="https://offerupnow.com/item/detail/158685022/vintage-99-san-jose-sharks-bear">more</a>.</p>
+					<p><p>RearView mirror display. $15. San Jose, CA. San Jose Sharks Hat. $5.  <a href="https://offerupnow.com/item/detail/158685022/vintage-99-san-jose-sharks-bear" onclick="trackOutboundLink('https://offerupnow.com/item/detail/158685022/vintage-99-san-jose-sharks-bear'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

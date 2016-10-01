@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>15</b></p>
 					<h3>Colorado Rapids San Jose Earthquakes Sun 02:00</h3>
-					<p><p>betting available on Colorado Rapids v San Jose Earthquakes. Register &hellip;  <a href="https://sports.ladbrokes.com/en-gb/betting/football/american/american-major-league-soccer/colorado-rapids-v-san-jose-earthquakes/222620000/">more</a>.</p>
+					<p><p>betting available on Colorado Rapids v San Jose Earthquakes. Register &hellip;  <a href="https://sports.ladbrokes.com/en-gb/betting/football/american/american-major-league-soccer/colorado-rapids-v-san-jose-earthquakes/222620000/" onclick="trackOutboundLink('https://sports.ladbrokes.com/en-gb/betting/football/american/american-major-league-soccer/colorado-rapids-v-san-jose-earthquakes/222620000/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

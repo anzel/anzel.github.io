@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>23</b></p>
 					<h3>49ers-Seahawks picks and predictions: One person is picking the 49ers to</h3>
-					<p><p>Niners Nation The San Francisco 49ers are back on the road in Week 3, facing the Seattle Seahawks. Opinions are again decidedly one-sided. We run down various &hellip;  <a href="http://www.ninersnation.com/2016/9/23/13025736/49ers-seahawks-picks-predictions-everyone-loves-seattle">more</a>.</p>
+					<p><p>Niners Nation The San Francisco 49ers are back on the road in Week 3, facing the Seattle Seahawks. Opinions are again decidedly one-sided. We run down various &hellip;  <a href="http://www.ninersnation.com/2016/9/23/13025736/49ers-seahawks-picks-predictions-everyone-loves-seattle" onclick="trackOutboundLink('http://www.ninersnation.com/2016/9/23/13025736/49ers-seahawks-picks-predictions-everyone-loves-seattle'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

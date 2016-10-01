@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>49ers Share Thoughts on 2016 &#39;Hard Knocks&#39;</h3>
-					<p><p>Stay Connected @49ers  Podcast E-Mail &hellip; Season Tickets  49ers Gold Rush  Single Game Tickets &hellip; 49ers Share Thoughts on 2016 &lsquo;Hard Knocks&rsquo;.  <a href="http://www.49ers.com/news/article-3/49ers-Share-Thoughts-on-2016-Hard-Knocks/b84dbd4d-8e10-4c25-8a9a-a28ff1084251">more</a>.</p>
+					<p><p>Stay Connected @49ers  Podcast E-Mail &hellip; Season Tickets  49ers Gold Rush  Single Game Tickets &hellip; 49ers Share Thoughts on 2016 &lsquo;Hard Knocks&rsquo;.  <a href="http://www.49ers.com/news/article-3/49ers-Share-Thoughts-on-2016-Hard-Knocks/b84dbd4d-8e10-4c25-8a9a-a28ff1084251" onclick="trackOutboundLink('http://www.49ers.com/news/article-3/49ers-Share-Thoughts-on-2016-Hard-Knocks/b84dbd4d-8e10-4c25-8a9a-a28ff1084251'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

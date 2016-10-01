@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>A&#39;s score 3 in the eighth to beat Angels 3-2</h3>
-					<p><p>Oakland Athletics pitcher Zach Neal works against the Los Angeles Angels in the first inning of a baseball game Tuesday, Sept. 6, 2016, in Oakland, &hellip;  <a href="http://www.kitchenerpost.ca/sports-story/6843435-a-s-score-3-in-the-eighth-to-beat-angels-3-2/">more</a>.</p>
+					<p><p>Oakland Athletics pitcher Zach Neal works against the Los Angeles Angels in the first inning of a baseball game Tuesday, Sept. 6, 2016, in Oakland, &hellip;  <a href="http://www.kitchenerpost.ca/sports-story/6843435-a-s-score-3-in-the-eighth-to-beat-angels-3-2/" onclick="trackOutboundLink('http://www.kitchenerpost.ca/sports-story/6843435-a-s-score-3-in-the-eighth-to-beat-angels-3-2/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

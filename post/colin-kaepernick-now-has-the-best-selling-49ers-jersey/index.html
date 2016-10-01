@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>04</b></p>
 					<h3>Colin Kaepernick now has the best selling 49ers jersey</h3>
-					<p><p>Before people started noticing Kaepernick&rsquo;s protest, he had the 20th best selling jersey in the 49ers team store. Now it&rsquo;s their best seller. A particularly &hellip;  <a href="http://www.deathandtaxesmag.com/302618/colin-kaepernick-now-has-the-best-selling-49ers-jersey/">more</a>.</p>
+					<p><p>Before people started noticing Kaepernick&rsquo;s protest, he had the 20th best selling jersey in the 49ers team store. Now it&rsquo;s their best seller. A particularly &hellip;  <a href="http://www.deathandtaxesmag.com/302618/colin-kaepernick-now-has-the-best-selling-49ers-jersey/" onclick="trackOutboundLink('http://www.deathandtaxesmag.com/302618/colin-kaepernick-now-has-the-best-selling-49ers-jersey/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

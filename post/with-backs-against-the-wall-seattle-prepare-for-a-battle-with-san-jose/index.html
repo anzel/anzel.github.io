@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>With backs against the wall, Seattle prepare for a battle with San Jose</h3>
-					<p><p>As the Seattle Sounders get set to return from their two-week break from MLS play on Saturday with a road matchup against the San Jose Earthquakes &hellip;  <a href="http://www.soundersfc.com/post/2016/09/08/backs-against-wall-seattle-prepare-battle-san-jose">more</a>.</p>
+					<p><p>As the Seattle Sounders get set to return from their two-week break from MLS play on Saturday with a road matchup against the San Jose Earthquakes &hellip;  <a href="http://www.soundersfc.com/post/2016/09/08/backs-against-wall-seattle-prepare-battle-san-jose" onclick="trackOutboundLink('http://www.soundersfc.com/post/2016/09/08/backs-against-wall-seattle-prepare-battle-san-jose'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>16</b></p>
 					<h3>Finding Eric Reid: 49ers have big plans for safety</h3>
-					<p><p>SANTA CLARA, Calif. &ndash; In each of his first three NFL seasons, San Francisco 49ers safety Eric Reid hoped that his coaches would view him as the &hellip;  <a href="http://www.espn.com/blog/nflnation/post/_/id/214399/finding-eric-reid-49ers-have-big-plans-for-safety">more</a>.</p>
+					<p><p>SANTA CLARA, Calif. &ndash; In each of his first three NFL seasons, San Francisco 49ers safety Eric Reid hoped that his coaches would view him as the &hellip;  <a href="http://www.espn.com/blog/nflnation/post/_/id/214399/finding-eric-reid-49ers-have-big-plans-for-safety" onclick="trackOutboundLink('http://www.espn.com/blog/nflnation/post/_/id/214399/finding-eric-reid-49ers-have-big-plans-for-safety'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

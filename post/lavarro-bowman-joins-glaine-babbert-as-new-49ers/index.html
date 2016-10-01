@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>LaVarro Bowman joins Glaine Babbert as new 49ers</h3>
-					<p><p>Back in Week 1, a joke made the rounds of the Internet during Monday Night Football, showing an ESPN graphic that said Glaine Babbert instead of &hellip;  <a href="http://www.ninersnation.com/2016/9/27/13071832/lavarro-bowman-glaine-babbert-49ers">more</a>.</p>
+					<p><p>Back in Week 1, a joke made the rounds of the Internet during Monday Night Football, showing an ESPN graphic that said Glaine Babbert instead of &hellip;  <a href="http://www.ninersnation.com/2016/9/27/13071832/lavarro-bowman-glaine-babbert-49ers" onclick="trackOutboundLink('http://www.ninersnation.com/2016/9/27/13071832/lavarro-bowman-glaine-babbert-49ers'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

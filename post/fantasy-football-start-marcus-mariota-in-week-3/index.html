@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>23</b></p>
 					<h3>Fantasy Football: Start Marcus Mariota in Week 3!</h3>
-					<p><p>The Oakland Raiders have struggled to defend through the air but have remained tough in the middle. The Raiders might be able to stop Mariota on &hellip;  <a href="http://thehalkreport.sportsblog.com/posts/26140569/fantasy-football--start-marcus-mariota-in-week-3-.html">more</a>.</p>
+					<p><p>The Oakland Raiders have struggled to defend through the air but have remained tough in the middle. The Raiders might be able to stop Mariota on &hellip;  <a href="http://thehalkreport.sportsblog.com/posts/26140569/fantasy-football--start-marcus-mariota-in-week-3-.html" onclick="trackOutboundLink('http://thehalkreport.sportsblog.com/posts/26140569/fantasy-football--start-marcus-mariota-in-week-3-.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>07</b></p>
 					<h3>Chip Kelly taps Blaine Gabbert as starting QB for San Francisco 49ers</h3>
-					<p><p>To the surprise of no one, San Francisco 49ers Blaine Gabbert won the quarterback competition over Colin Kaepernick and will be the starter when &hellip;  <a href="http://www.oregonlive.com/nfl/index.ssf/2016/09/chip_kelly_taps_blaine_gabbert.html">more</a>.</p>
+					<p><p>To the surprise of no one, San Francisco 49ers Blaine Gabbert won the quarterback competition over Colin Kaepernick and will be the starter when &hellip;  <a href="http://www.oregonlive.com/nfl/index.ssf/2016/09/chip_kelly_taps_blaine_gabbert.html" onclick="trackOutboundLink('http://www.oregonlive.com/nfl/index.ssf/2016/09/chip_kelly_taps_blaine_gabbert.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

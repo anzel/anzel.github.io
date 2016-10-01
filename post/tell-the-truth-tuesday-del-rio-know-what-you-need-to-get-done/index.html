@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>20</b></p>
 					<h3>Tell The Truth Tuesday: Del Rio Know What You Need To Get Done</h3>
-					<p><p>The Oakland Raiders are coming off of their Week 2 loss to the Atlanta Falcons, which means it&rsquo;s it&rsquo;s time for Tell the Truth Tuesday. Regardless of &hellip;  <a href="http://www.raiders.com/news/article-1/Tell-The-Truth-Tuesday-Del-Rio-Know-What-You-Need-To-Get-Done/796ea3a7-2aac-41ac-a594-31f371f85baf">more</a>.</p>
+					<p><p>The Oakland Raiders are coming off of their Week 2 loss to the Atlanta Falcons, which means it&rsquo;s it&rsquo;s time for Tell the Truth Tuesday. Regardless of &hellip;  <a href="http://www.raiders.com/news/article-1/Tell-The-Truth-Tuesday-Del-Rio-Know-What-You-Need-To-Get-Done/796ea3a7-2aac-41ac-a594-31f371f85baf" onclick="trackOutboundLink('http://www.raiders.com/news/article-1/Tell-The-Truth-Tuesday-Del-Rio-Know-What-You-Need-To-Get-Done/796ea3a7-2aac-41ac-a594-31f371f85baf'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

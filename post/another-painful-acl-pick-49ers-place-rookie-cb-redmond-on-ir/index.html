@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>05</b></p>
 					<h3>Another painful ACL pick? 49ers place rookie CB Redmond on IR</h3>
-					<p><p>After the 49ers used a third-round pick on Mississippi State cornerback Will Redmond in April, general manager Trent Baalke was asked why he kept &hellip;  <a href="http://www.sfgate.com/49ers/article/Another-painful-ACL-pick-49ers-place-rookie-CB-9204010.php">more</a>.</p>
+					<p><p>After the 49ers used a third-round pick on Mississippi State cornerback Will Redmond in April, general manager Trent Baalke was asked why he kept &hellip;  <a href="http://www.sfgate.com/49ers/article/Another-painful-ACL-pick-49ers-place-rookie-CB-9204010.php" onclick="trackOutboundLink('http://www.sfgate.com/49ers/article/Another-painful-ACL-pick-49ers-place-rookie-CB-9204010.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

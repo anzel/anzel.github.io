@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>Oakland Raiders Ranked 11th in ESPN Power Rankings</h3>
-					<p><p>The first of a weekly series, tracking where the Oakland Raiders land in ESPN&rsquo;s Power Rankings. In ESPN&rsquo;s Power Rankings for the start of the regular &hellip;  <a href="http://justblogbaby.com/2016/09/08/oakland-raiders-ranked-11th-by-espn/">more</a>.</p>
+					<p><p>The first of a weekly series, tracking where the Oakland Raiders land in ESPN&rsquo;s Power Rankings. In ESPN&rsquo;s Power Rankings for the start of the regular &hellip;  <a href="http://justblogbaby.com/2016/09/08/oakland-raiders-ranked-11th-by-espn/" onclick="trackOutboundLink('http://justblogbaby.com/2016/09/08/oakland-raiders-ranked-11th-by-espn/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

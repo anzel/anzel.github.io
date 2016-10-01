@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>06</b></p>
 					<h3>49ers 53-man roster analysis: The more QB changes, the more it stays the</h3>
-					<p><p>Niners Nation The San Francisco 49ers settled on their 53-man roster over the weekend, or at least one version of it. On Monday, the team claimed Taylor Hart from &hellip;  <a href="http://www.ninersnation.com/2016/9/6/12812316/49ers-53-man-roster-analysis-2016-quarterbacks-blaine-gabbert-colin-kaepernick">more</a>.</p>
+					<p><p>Niners Nation The San Francisco 49ers settled on their 53-man roster over the weekend, or at least one version of it. On Monday, the team claimed Taylor Hart from &hellip;  <a href="http://www.ninersnation.com/2016/9/6/12812316/49ers-53-man-roster-analysis-2016-quarterbacks-blaine-gabbert-colin-kaepernick" onclick="trackOutboundLink('http://www.ninersnation.com/2016/9/6/12812316/49ers-53-man-roster-analysis-2016-quarterbacks-blaine-gabbert-colin-kaepernick'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

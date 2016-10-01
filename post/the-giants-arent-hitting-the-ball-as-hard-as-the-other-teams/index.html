@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>The Giants aren&#39;t hitting the ball as hard as the other teams</h3>
-					<p><p>The Giants&rsquo; starting lineup features four hitters in the bottom third of baseball when it comes to exit velocity. This might explain the warning-track outs.  <a href="http://www.mccoveychronicles.com/2016/9/13/12904592/sf-giants-home-runs-exit-velocity">more</a>.</p>
+					<p><p>The Giants&rsquo; starting lineup features four hitters in the bottom third of baseball when it comes to exit velocity. This might explain the warning-track outs.  <a href="http://www.mccoveychronicles.com/2016/9/13/12904592/sf-giants-home-runs-exit-velocity" onclick="trackOutboundLink('http://www.mccoveychronicles.com/2016/9/13/12904592/sf-giants-home-runs-exit-velocity'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

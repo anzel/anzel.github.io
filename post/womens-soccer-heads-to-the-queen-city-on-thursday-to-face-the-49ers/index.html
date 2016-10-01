@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>Women&#39;s Soccer Heads to the Queen City on Thursday to Face the 49ers</h3>
-					<p><p>to the Queen City on Thursday, Sept. 8, to take on the Charlotte 49ers.  <a href="http://www.elonphoenix.com/news/2016/9/7/womens-soccer-set-to-face-49ers-in-the-queen-city-on-thursday.aspx">more</a>.</p>
+					<p><p>to the Queen City on Thursday, Sept. 8, to take on the Charlotte 49ers.  <a href="http://www.elonphoenix.com/news/2016/9/7/womens-soccer-set-to-face-49ers-in-the-queen-city-on-thursday.aspx" onclick="trackOutboundLink('http://www.elonphoenix.com/news/2016/9/7/womens-soccer-set-to-face-49ers-in-the-queen-city-on-thursday.aspx'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

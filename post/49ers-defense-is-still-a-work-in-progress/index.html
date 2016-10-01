@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>49ers&#39; defense is still a work in progress</h3>
-					<p><p>&hellip; build through the draft, and that&rsquo;s certainly how he has attempted to construct an elite defense. The 49ers&rsquo; general manager has used his first pick on.  <a href="http://www.49erswebzone.com/news/98507-49ers-defense-still-work-progress/">more</a>.</p>
+					<p><p>&hellip; build through the draft, and that&rsquo;s certainly how he has attempted to construct an elite defense. The 49ers&rsquo; general manager has used his first pick on.  <a href="http://www.49erswebzone.com/news/98507-49ers-defense-still-work-progress/" onclick="trackOutboundLink('http://www.49erswebzone.com/news/98507-49ers-defense-still-work-progress/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

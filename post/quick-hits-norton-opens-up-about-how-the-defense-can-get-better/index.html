@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>22</b></p>
 					<h3>Quick Hits: Norton Opens Up About How The Defense Can Get Better</h3>
-					<p><p>The Oakland Raiders were back on the field Thursday, and defensive coordinator Ken Norton, Jr., is determined to get the defense on track. After a &hellip;  <a href="http://www.raiders.com/news/article-1/Quick-Hits-Norton-Opens-Up-About-How-The-Defense-Can-Get-Better/a77fbecf-8838-46c5-988c-c724b0f72b46">more</a>.</p>
+					<p><p>The Oakland Raiders were back on the field Thursday, and defensive coordinator Ken Norton, Jr., is determined to get the defense on track. After a &hellip;  <a href="http://www.raiders.com/news/article-1/Quick-Hits-Norton-Opens-Up-About-How-The-Defense-Can-Get-Better/a77fbecf-8838-46c5-988c-c724b0f72b46" onclick="trackOutboundLink('http://www.raiders.com/news/article-1/Quick-Hits-Norton-Opens-Up-About-How-The-Defense-Can-Get-Better/a77fbecf-8838-46c5-988c-c724b0f72b46'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

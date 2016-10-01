@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>16</b></p>
 					<h3>Pre-Game Men&#39;s Soccer Clinic To Be Held Sept. 24th</h3>
-					<p><p>be hosting a free pre-game clinic prior to their match against &hellip;  <a href="http://charlotte49ers.com/news/2016/9/15/pre-game-mens-soccer-youth-clinic-to-be-held-sept-24.aspx">more</a>.</p>
+					<p><p>be hosting a free pre-game clinic prior to their match against &hellip;  <a href="http://charlotte49ers.com/news/2016/9/15/pre-game-mens-soccer-youth-clinic-to-be-held-sept-24.aspx" onclick="trackOutboundLink('http://charlotte49ers.com/news/2016/9/15/pre-game-mens-soccer-youth-clinic-to-be-held-sept-24.aspx'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

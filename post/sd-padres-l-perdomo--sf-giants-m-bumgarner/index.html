@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>SD Padres (L Perdomo) @ SF Giants (M Bumgarner)</h3>
-					<p><p>odds and more from William Hill, the online bookmaker.  <a href="http://sports.williamhill.com/bet/en-ca/betting/e/9908690/SD+Padres+(L+Perdomo)+@+SF+Giants+(M+Bumgarner).html">more</a>.</p>
+					<p><p>odds and more from William Hill, the online bookmaker.  <a href="http://sports.williamhill.com/bet/en-ca/betting/e/9908690/SD+Padres+(L+Perdomo)+@+SF+Giants+(M+Bumgarner).html" onclick="trackOutboundLink('http://sports.williamhill.com/bet/en-ca/betting/e/9908690/SD+Padres+(L+Perdomo)+@+SF+Giants+(M+Bumgarner).html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

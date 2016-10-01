@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>13</b></p>
 					<h3>49ers should copy Raiders&#39; rebuilding model</h3>
-					<p><p>The Oakland Raiders and the San Francisco 49ers have switched places on football&rsquo;s totem poll. This makes people in San Francisco sick to their &hellip;  <a href="http://www.knbr.com/2016/09/12/49ers-should-copy-raiders-rebuilding-model/">more</a>.</p>
+					<p><p>The Oakland Raiders and the San Francisco 49ers have switched places on football&rsquo;s totem poll. This makes people in San Francisco sick to their &hellip;  <a href="http://www.knbr.com/2016/09/12/49ers-should-copy-raiders-rebuilding-model/" onclick="trackOutboundLink('http://www.knbr.com/2016/09/12/49ers-should-copy-raiders-rebuilding-model/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

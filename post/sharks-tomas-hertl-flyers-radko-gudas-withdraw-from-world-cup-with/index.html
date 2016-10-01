@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>04</b></p>
 					<h3>Sharks&#39; Tomas Hertl, Flyers&#39; Radko Gudas withdraw from World Cup with</h3>
-					<p><p>CBSSports.com Winger Tomas Hertl of the San Jose Sharks and defenseman Radko Gudas of the Philadelphia Flyers have each withdrawn from the tournament due &hellip;  <a href="http://www.cbssports.com/nhl/news/sharks-tomas-hertl-flyers-radko-gudas-withdraw-from-world-cup-with-injuries/">more</a>.</p>
+					<p><p>CBSSports.com Winger Tomas Hertl of the San Jose Sharks and defenseman Radko Gudas of the Philadelphia Flyers have each withdrawn from the tournament due &hellip;  <a href="http://www.cbssports.com/nhl/news/sharks-tomas-hertl-flyers-radko-gudas-withdraw-from-world-cup-with-injuries/" onclick="trackOutboundLink('http://www.cbssports.com/nhl/news/sharks-tomas-hertl-flyers-radko-gudas-withdraw-from-world-cup-with-injuries/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

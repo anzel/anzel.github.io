@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>02</b></p>
 					<h3>Friday&#39;s Red Sox-Athletics lineups: Moncada not in Sox starting lineup</h3>
-					<p><p>The 21-year-old is not in the team&rsquo;s starting lineup as they kick off a nine-game road road trip against the Oakland Athletics. David Price (13-8, 3.97 &hellip;  <a href="http://www.csnne.com/boston-red-sox/fridays-red-sox-athletics-lineups-moncada-not-sox-starting-lineup">more</a>.</p>
+					<p><p>The 21-year-old is not in the team&rsquo;s starting lineup as they kick off a nine-game road road trip against the Oakland Athletics. David Price (13-8, 3.97 &hellip;  <a href="http://www.csnne.com/boston-red-sox/fridays-red-sox-athletics-lineups-moncada-not-sox-starting-lineup" onclick="trackOutboundLink('http://www.csnne.com/boston-red-sox/fridays-red-sox-athletics-lineups-moncada-not-sox-starting-lineup'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

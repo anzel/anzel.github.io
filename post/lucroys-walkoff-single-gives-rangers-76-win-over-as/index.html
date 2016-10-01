@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>16</b></p>
 					<h3>Lucroy&#39;s walk-off single gives Rangers 7-6 win over A&#39;s</h3>
-					<p><p>Jonathan Lucroy&rsquo;s two-run single with two outs in the ninth inning gave the Texas Rangers a 7-6 victory over the Oakland Athletics on Friday night.  <a href="http://www.newsobserver.com/sports/article102410147.html">more</a>.</p>
+					<p><p>Jonathan Lucroy&rsquo;s two-run single with two outs in the ninth inning gave the Texas Rangers a 7-6 victory over the Oakland Athletics on Friday night.  <a href="http://www.newsobserver.com/sports/article102410147.html" onclick="trackOutboundLink('http://www.newsobserver.com/sports/article102410147.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>20</b></p>
 					<h3>Wendelken looks to finish big-league debut campaign in strong fashion</h3>
-					<p><p>ARLINGTON, Texas  J.B. Wendelken&rsquo;s rookie year with the Oakland Athletics has been one giant learning experience for the South Effingham High &hellip;  <a href="http://savannahnow.com/sports-news/2016-09-20/wendelken-looks-finish-big-league-debut-campaign-strong-fashion">more</a>.</p>
+					<p><p>ARLINGTON, Texas  J.B. Wendelken&rsquo;s rookie year with the Oakland Athletics has been one giant learning experience for the South Effingham High &hellip;  <a href="http://savannahnow.com/sports-news/2016-09-20/wendelken-looks-finish-big-league-debut-campaign-strong-fashion" onclick="trackOutboundLink('http://savannahnow.com/sports-news/2016-09-20/wendelken-looks-finish-big-league-debut-campaign-strong-fashion'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>21</b></p>
 					<h3>Johnny Cueto Injury: Updates on Giants Star&#39;s Groin and Return</h3>
-					<p><p>According to ESPN.com&rsquo;s Jim Bowden, Giants general manager Bobby Evans confirmed Cueto&rsquo;s status once he exited Tuesday night&rsquo;s game.  <a href="http://bleacherreport.com/articles/2625276-johnny-cueto-injury-updates-on-giants-stars-groin-and-return">more</a>.</p>
+					<p><p>According to ESPN.com&rsquo;s Jim Bowden, Giants general manager Bobby Evans confirmed Cueto&rsquo;s status once he exited Tuesday night&rsquo;s game.  <a href="http://bleacherreport.com/articles/2625276-johnny-cueto-injury-updates-on-giants-stars-groin-and-return" onclick="trackOutboundLink('http://bleacherreport.com/articles/2625276-johnny-cueto-injury-updates-on-giants-stars-groin-and-return'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

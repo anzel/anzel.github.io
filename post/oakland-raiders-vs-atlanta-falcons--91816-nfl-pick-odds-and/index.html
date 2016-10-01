@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>13</b></p>
 					<h3>Oakland Raiders vs. Atlanta Falcons - 9/18/16 NFL Pick, Odds, and</h3>
-					<p><p>Sports Chat Place Over at O.co Coliseum in Oakland, the Raiders will host the Atlanta Falcons in Week 2 NFL football on Sunday, September 18. The Falcons lost an &hellip;  <a href="http://sportschatplace.com/nfl-picks/2016/09/18/oakland-raiders-vs-atlanta-falcons-9/18/16-nfl-pick-odds-and-prediction">more</a>.</p>
+					<p><p>Sports Chat Place Over at O.co Coliseum in Oakland, the Raiders will host the Atlanta Falcons in Week 2 NFL football on Sunday, September 18. The Falcons lost an &hellip;  <a href="http://sportschatplace.com/nfl-picks/2016/09/18/oakland-raiders-vs-atlanta-falcons-9/18/16-nfl-pick-odds-and-prediction" onclick="trackOutboundLink('http://sportschatplace.com/nfl-picks/2016/09/18/oakland-raiders-vs-atlanta-falcons-9/18/16-nfl-pick-odds-and-prediction'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

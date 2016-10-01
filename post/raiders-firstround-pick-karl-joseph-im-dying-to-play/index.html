@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>20</b></p>
 					<h3>Raiders first-round pick Karl Joseph: &#39;I&#39;m dying to play&#39;</h3>
-					<p><p>ALAMEDA, Calif. &ndash; Karl Joseph, the Oakland Raiders&rsquo; first-round draft pick who has yet to play a single snap on defense through two forgettable &hellip;  <a href="http://www.espn.com/blog/nflnation/post/_/id/215045/raiders-first-round-pick-karl-joseph-im-dying-to-play">more</a>.</p>
+					<p><p>ALAMEDA, Calif. &ndash; Karl Joseph, the Oakland Raiders&rsquo; first-round draft pick who has yet to play a single snap on defense through two forgettable &hellip;  <a href="http://www.espn.com/blog/nflnation/post/_/id/215045/raiders-first-round-pick-karl-joseph-im-dying-to-play" onclick="trackOutboundLink('http://www.espn.com/blog/nflnation/post/_/id/215045/raiders-first-round-pick-karl-joseph-im-dying-to-play'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

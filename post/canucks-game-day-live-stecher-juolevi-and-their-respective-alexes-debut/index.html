@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>Canucks Game Day Live: Stecher, Juolevi and their respective Alexes debut</h3>
-					<p><p>The Province Vancouver Canucks goalie Richard Bachman (32) blocks a shot against the San Jose Sharks during the first period of an NHL preseason hockey &hellip;  <a href="http://theprovince.com/sports/hockey/nhl/vancouver-canucks/game-day-live-stecher-juolevi-and-their-respective-alexes-debut-versus-oilers">more</a>.</p>
+					<p><p>The Province Vancouver Canucks goalie Richard Bachman (32) blocks a shot against the San Jose Sharks during the first period of an NHL preseason hockey &hellip;  <a href="http://theprovince.com/sports/hockey/nhl/vancouver-canucks/game-day-live-stecher-juolevi-and-their-respective-alexes-debut-versus-oilers" onclick="trackOutboundLink('http://theprovince.com/sports/hockey/nhl/vancouver-canucks/game-day-live-stecher-juolevi-and-their-respective-alexes-debut-versus-oilers'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

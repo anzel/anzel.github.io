@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Aug<b>31</b></p>
 					<h3>Chargers to host annual salute to military during 49ers game</h3>
-					<p><p>The Chargers on Wednesday announced that they will hold their annual salute to the military before the final preseason game against the 49ers.  <a href="http://www.49erswebzone.com/news/97022-chargers-host-annual-salute-military-during-49ers-game/">more</a>.</p>
+					<p><p>The Chargers on Wednesday announced that they will hold their annual salute to the military before the final preseason game against the 49ers.  <a href="http://www.49erswebzone.com/news/97022-chargers-host-annual-salute-military-during-49ers-game/" onclick="trackOutboundLink('http://www.49erswebzone.com/news/97022-chargers-host-annual-salute-military-during-49ers-game/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>Inside the Oakland Raiders: Atlanta Falcons preview</h3>
-					<p><p>Inside the Oakland Raiders is a weekly show breaking down the latest news and happenings with the Raiders organization. More episodes can be &hellip;  <a href="http://www.mercurynews.com/2016/09/14/inside-the-oakland-raiders-atlanta-falcons-preview/">more</a>.</p>
+					<p><p>Inside the Oakland Raiders is a weekly show breaking down the latest news and happenings with the Raiders organization. More episodes can be &hellip;  <a href="http://www.mercurynews.com/2016/09/14/inside-the-oakland-raiders-atlanta-falcons-preview/" onclick="trackOutboundLink('http://www.mercurynews.com/2016/09/14/inside-the-oakland-raiders-atlanta-falcons-preview/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

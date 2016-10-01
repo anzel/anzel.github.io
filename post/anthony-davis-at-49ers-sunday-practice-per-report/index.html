@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>11</b></p>
 					<h3>Anthony Davis at 49ers Sunday practice, per report</h3>
-					<p><p>The San Francisco 49ers have one last practice on Sunday, likely just a walkthrough, and right guard Anthony Davis is back with the team, according &hellip;  <a href="http://www.ninersnation.com/2016/9/11/12880226/anthony-davis-49ers-sunday-practice-vs-rams-mnf">more</a>.</p>
+					<p><p>The San Francisco 49ers have one last practice on Sunday, likely just a walkthrough, and right guard Anthony Davis is back with the team, according &hellip;  <a href="http://www.ninersnation.com/2016/9/11/12880226/anthony-davis-49ers-sunday-practice-vs-rams-mnf" onclick="trackOutboundLink('http://www.ninersnation.com/2016/9/11/12880226/anthony-davis-49ers-sunday-practice-vs-rams-mnf'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

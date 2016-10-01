@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>04</b></p>
 					<h3>Bell Tolls: Colin Kaepernick&#39;s place in history still a work in progress</h3>
-					<p><p>If two players &ndash; 49ers safety Eric Reid, who took a knee alongside Kaepernick during the anthem in San Diego on Thursday night, and Seattle &hellip;  <a href="http://www.usatoday.com/story/sports/nfl/columnist/bell/2016/09/03/colin-kaepernick-49ers-muhammad-ali-tommie-smith-john-carlos/89846400/">more</a>.</p>
+					<p><p>If two players &ndash; 49ers safety Eric Reid, who took a knee alongside Kaepernick during the anthem in San Diego on Thursday night, and Seattle &hellip;  <a href="http://www.usatoday.com/story/sports/nfl/columnist/bell/2016/09/03/colin-kaepernick-49ers-muhammad-ali-tommie-smith-john-carlos/89846400/" onclick="trackOutboundLink('http://www.usatoday.com/story/sports/nfl/columnist/bell/2016/09/03/colin-kaepernick-49ers-muhammad-ali-tommie-smith-john-carlos/89846400/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

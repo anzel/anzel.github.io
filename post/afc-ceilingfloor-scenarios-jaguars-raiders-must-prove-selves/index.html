@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Aug<b>31</b></p>
 					<h3>AFC ceiling/floor scenarios: Jaguars, Raiders must prove selves</h3>
-					<p><p>The highs and lows of expectations &ndash; they&rsquo;re all around. From our parents.  From our employers. And, of course, we turn around and project the same &hellip;  <a href="http://www.nfl.com/news/story/0ap3000000693001/article/afc-ceilingfloor-scenarios-jaguars-raiders-must-prove-selves">more</a>.</p>
+					<p><p>The highs and lows of expectations &ndash; they&rsquo;re all around. From our parents.  From our employers. And, of course, we turn around and project the same &hellip;  <a href="http://www.nfl.com/news/story/0ap3000000693001/article/afc-ceilingfloor-scenarios-jaguars-raiders-must-prove-selves" onclick="trackOutboundLink('http://www.nfl.com/news/story/0ap3000000693001/article/afc-ceilingfloor-scenarios-jaguars-raiders-must-prove-selves'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

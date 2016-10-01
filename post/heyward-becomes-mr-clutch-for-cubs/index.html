@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>05</b></p>
 					<h3>Heyward becomes &#39;Mr. Clutch&#39; for Cubs</h3>
-					<p><p>&hellip; inning, and former Milwaukee Brewer Khris Davis hit a game-ending double in the ninth that sent the Oakland Athletics to a 1-0 victory Sunday.  <a href="http://journaltimes.com/heyward-becomes-mr-clutch-for-cubs/article_ef2dc128-6ae3-53df-b36e-af88a3d07390.html">more</a>.</p>
+					<p><p>&hellip; inning, and former Milwaukee Brewer Khris Davis hit a game-ending double in the ninth that sent the Oakland Athletics to a 1-0 victory Sunday.  <a href="http://journaltimes.com/heyward-becomes-mr-clutch-for-cubs/article_ef2dc128-6ae3-53df-b36e-af88a3d07390.html" onclick="trackOutboundLink('http://journaltimes.com/heyward-becomes-mr-clutch-for-cubs/article_ef2dc128-6ae3-53df-b36e-af88a3d07390.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

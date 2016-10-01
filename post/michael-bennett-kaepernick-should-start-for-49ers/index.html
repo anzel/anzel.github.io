@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>26</b></p>
 					<h3>Michael Bennett: Kaepernick should start for 49ers</h3>
-					<p><p>After his defense held Blaine Gabbert to a minuscule 119 passing yards Sunday, Seattle Seahawks pass rusher Michael Bennett was &ldquo;very surprised&rdquo; &hellip;  <a href="http://www.nfl.com/news/story/0ap3000000710067/article/michael-bennett-kaepernick-should-start-for-49ers">more</a>.</p>
+					<p><p>After his defense held Blaine Gabbert to a minuscule 119 passing yards Sunday, Seattle Seahawks pass rusher Michael Bennett was &ldquo;very surprised&rdquo; &hellip;  <a href="http://www.nfl.com/news/story/0ap3000000710067/article/michael-bennett-kaepernick-should-start-for-49ers" onclick="trackOutboundLink('http://www.nfl.com/news/story/0ap3000000710067/article/michael-bennett-kaepernick-should-start-for-49ers'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

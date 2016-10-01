@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>11</b></p>
 					<h3>Kawakami: Trent Baalke = Trent Dilfer, who just</h3>
-					<p><p>Trent Baalke, 49ers General Manager, speaks before Patrick Willis announces his retirement from the Trent Baalke, 49ers General Manager, in 2015.  <a href="http://www.mercurynews.com/2016/09/11/trent-dilfer-rebukes-colin-kaepernick-this-is-probably-indirectly-from-trent-baalke-right-yes-thats-right/">more</a>.</p>
+					<p><p>Trent Baalke, 49ers General Manager, speaks before Patrick Willis announces his retirement from the Trent Baalke, 49ers General Manager, in 2015.  <a href="http://www.mercurynews.com/2016/09/11/trent-dilfer-rebukes-colin-kaepernick-this-is-probably-indirectly-from-trent-baalke-right-yes-thats-right/" onclick="trackOutboundLink('http://www.mercurynews.com/2016/09/11/trent-dilfer-rebukes-colin-kaepernick-this-is-probably-indirectly-from-trent-baalke-right-yes-thats-right/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

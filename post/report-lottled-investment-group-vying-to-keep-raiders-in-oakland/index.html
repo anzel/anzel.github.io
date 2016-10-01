@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>22</b></p>
 					<h3>Report: Lott-led investment group vying to keep Raiders in Oakland</h3>
-					<p><p>The City of Oakland and an investment group tied to Hall of Fame safety Ronnie Lott engaged in negotiations geared on selling O.co Coliseum and &hellip;  <a href="http://www.wmur.com/sports/report-lottled-investment-group-vying-to-keep-raiders-in-oakland/41762804">more</a>.</p>
+					<p><p>The City of Oakland and an investment group tied to Hall of Fame safety Ronnie Lott engaged in negotiations geared on selling O.co Coliseum and &hellip;  <a href="http://www.wmur.com/sports/report-lottled-investment-group-vying-to-keep-raiders-in-oakland/41762804" onclick="trackOutboundLink('http://www.wmur.com/sports/report-lottled-investment-group-vying-to-keep-raiders-in-oakland/41762804'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

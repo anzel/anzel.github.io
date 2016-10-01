@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Oct<b>01</b></p>
 					<h3>Zunino HR Boosts Mariners Past Oakland 3-2</h3>
-					<p><p>SEATTLE (AP)  The last-place Oakland Athletics fell just short of handing the Seattle Mariners a crushing loss to their playoff hopes. Mike Zunino &hellip;  <a href="http://seattle.cbslocal.com/2016/09/30/zunino-hr-boosts-mariners-over-oakland-3-2/">more</a>.</p>
+					<p><p>SEATTLE (AP)  The last-place Oakland Athletics fell just short of handing the Seattle Mariners a crushing loss to their playoff hopes. Mike Zunino &hellip;  <a href="http://seattle.cbslocal.com/2016/09/30/zunino-hr-boosts-mariners-over-oakland-3-2/" onclick="trackOutboundLink('http://seattle.cbslocal.com/2016/09/30/zunino-hr-boosts-mariners-over-oakland-3-2/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

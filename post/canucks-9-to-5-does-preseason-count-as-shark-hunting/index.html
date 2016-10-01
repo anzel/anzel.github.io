@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>Canucks 9 to 5: Does pre-season count as Shark hunting?</h3>
-					<p><p>San Jose Sharks left wing James Sheppard (15) battles for the puck against former Canucks centre Shawn Matthias. AP Photo / Tony Avelar. Here we &hellip;  <a href="http://theprovince.com/sports/hockey/nhl/vancouver-canucks/canucks-9-to-5-does-pre-season-count-as-shark-hunting">more</a>.</p>
+					<p><p>San Jose Sharks left wing James Sheppard (15) battles for the puck against former Canucks centre Shawn Matthias. AP Photo / Tony Avelar. Here we &hellip;  <a href="http://theprovince.com/sports/hockey/nhl/vancouver-canucks/canucks-9-to-5-does-pre-season-count-as-shark-hunting" onclick="trackOutboundLink('http://theprovince.com/sports/hockey/nhl/vancouver-canucks/canucks-9-to-5-does-pre-season-count-as-shark-hunting'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

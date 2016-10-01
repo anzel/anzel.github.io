@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Aug<b>31</b></p>
 					<h3>Five Things To Watch In The Seahawks&#39; Preseason Finale at Oakland Raiders</h3>
-					<p><p>Sea Gal Mhkeeba is entering her fifth season on the team. Find out what special moments she&rsquo;s had as a Sea Gal and more about her in this video bio &hellip;  <a href="http://www.seahawks.com/news/2016/08/31/five-things-watch-seahawks%E2%80%99-preseason-finale-oakland-raiders">more</a>.</p>
+					<p><p>Sea Gal Mhkeeba is entering her fifth season on the team. Find out what special moments she&rsquo;s had as a Sea Gal and more about her in this video bio &hellip;  <a href="http://www.seahawks.com/news/2016/08/31/five-things-watch-seahawks%E2%80%99-preseason-finale-oakland-raiders" onclick="trackOutboundLink('http://www.seahawks.com/news/2016/08/31/five-things-watch-seahawks%E2%80%99-preseason-finale-oakland-raiders'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

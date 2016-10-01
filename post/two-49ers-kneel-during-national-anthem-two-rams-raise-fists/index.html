@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>Two 49ers kneel during national anthem; two Rams raise fists</h3>
-					<p><p>49ers safety Eric Reid, left, and quarterback Colin Kaepernick kneel during the national anthem before a game against the Rams in Santa Clara.  <a href="http://www.latimes.com/sports/la-sp-live-coverage-rams-two-49ers-kneel-during-national-anthem-1473734723-htmlstory.html">more</a>.</p>
+					<p><p>49ers safety Eric Reid, left, and quarterback Colin Kaepernick kneel during the national anthem before a game against the Rams in Santa Clara.  <a href="http://www.latimes.com/sports/la-sp-live-coverage-rams-two-49ers-kneel-during-national-anthem-1473734723-htmlstory.html" onclick="trackOutboundLink('http://www.latimes.com/sports/la-sp-live-coverage-rams-two-49ers-kneel-during-national-anthem-1473734723-htmlstory.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>26</b></p>
 					<h3>Oakland D forces 3 turnovers as Raiders beat Titans 17-10</h3>
-					<p><p>Oakland Raiders wide receiver Michael Crabtree (15) loses his helmet after catching a pass as he was defended by Tennessee Titans strong safety &hellip;  <a href="http://sports.yahoo.com/news/oakland-d-forces-3-turnovers-raiders-beat-titans-202125201--nfl.html">more</a>.</p>
+					<p><p>Oakland Raiders wide receiver Michael Crabtree (15) loses his helmet after catching a pass as he was defended by Tennessee Titans strong safety &hellip;  <a href="http://sports.yahoo.com/news/oakland-d-forces-3-turnovers-raiders-beat-titans-202125201--nfl.html" onclick="trackOutboundLink('http://sports.yahoo.com/news/oakland-d-forces-3-turnovers-raiders-beat-titans-202125201--nfl.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

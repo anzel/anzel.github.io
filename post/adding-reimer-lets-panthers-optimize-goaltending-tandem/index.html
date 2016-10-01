@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>Adding Reimer lets Panthers optimize goaltending tandem</h3>
-					<p><p>At the trade deadline he was dealt to the San Jose Sharks, where his play only bettered. In eight starts for the Sharks, Reimer posted a 0.938 save &hellip;  <a href="http://www.todaysslapshot.com/nhl-east/florida-panthers/florida-panthers-optimize-goaltending-tandem/">more</a>.</p>
+					<p><p>At the trade deadline he was dealt to the San Jose Sharks, where his play only bettered. In eight starts for the Sharks, Reimer posted a 0.938 save &hellip;  <a href="http://www.todaysslapshot.com/nhl-east/florida-panthers/florida-panthers-optimize-goaltending-tandem/" onclick="trackOutboundLink('http://www.todaysslapshot.com/nhl-east/florida-panthers/florida-panthers-optimize-goaltending-tandem/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

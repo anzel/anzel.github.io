@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>13</b></p>
 					<h3>Colin Kaepernick Continues Anthem Protest Before 49ers&#39; Monday Night</h3>
-					<p><p>Huffington Post San Francisco 49ers quarterback Colin Kaepernick continued his national anthem protest before the team opened its season Monday night, kneeling &hellip;  <a href="http://www.huffingtonpost.com/entry/kaepernick-national-anthem-rams_us_57d761e5e4b0fbd4b7bb3ef2">more</a>.</p>
+					<p><p>Huffington Post San Francisco 49ers quarterback Colin Kaepernick continued his national anthem protest before the team opened its season Monday night, kneeling &hellip;  <a href="http://www.huffingtonpost.com/entry/kaepernick-national-anthem-rams_us_57d761e5e4b0fbd4b7bb3ef2" onclick="trackOutboundLink('http://www.huffingtonpost.com/entry/kaepernick-national-anthem-rams_us_57d761e5e4b0fbd4b7bb3ef2'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>Collegian staff predictions for the AFC</h3>
-					<p><p>Oakland Raiders: Derek Carr, Amari Cooper, Latavius Murray and Khalil Mack are the faces, but the heart of this team comes from the consistency of &hellip;  <a href="http://www.collegian.psu.edu/sports/collection_3cafd5f6-7580-11e6-8c47-2b4d461a811e.html">more</a>.</p>
+					<p><p>Oakland Raiders: Derek Carr, Amari Cooper, Latavius Murray and Khalil Mack are the faces, but the heart of this team comes from the consistency of &hellip;  <a href="http://www.collegian.psu.edu/sports/collection_3cafd5f6-7580-11e6-8c47-2b4d461a811e.html" onclick="trackOutboundLink('http://www.collegian.psu.edu/sports/collection_3cafd5f6-7580-11e6-8c47-2b4d461a811e.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

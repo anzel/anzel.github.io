@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>N*B*C*%Watch &#39;49ers vs Seahawks&#39; Firstrow Live Football Free</h3>
-					<p><p>On PC Coverage live online on PC. 49ers vs Seahawks Live.  <a href="http://www.luaccommodation.lu.se/sites/luaccommodation.lu.se/files/webform/nbcwatch_49ers_vs_seahawks_firstrow_live_football_free.pdf">more</a>.</p>
+					<p><p>On PC Coverage live online on PC. 49ers vs Seahawks Live.  <a href="http://www.luaccommodation.lu.se/sites/luaccommodation.lu.se/files/webform/nbcwatch_49ers_vs_seahawks_firstrow_live_football_free.pdf" onclick="trackOutboundLink('http://www.luaccommodation.lu.se/sites/luaccommodation.lu.se/files/webform/nbcwatch_49ers_vs_seahawks_firstrow_live_football_free.pdf'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

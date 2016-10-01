@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>06</b></p>
 					<h3>SF Giants Minor Lines, 9/5</h3>
-					<p><p>SF Giants Minor Lines, <sup>9</sup>&frasl;<sub>5</sub> &hellip;.. incapable of coming back in the ninth inning  SF Giants Minor Lines, <sup>9</sup>&frasl;<sub>4</sub>  Giants give false hope, then lose 3-2 in 13th &hellip;  <a href="http://www.mccoveychronicles.com/2016/9/6/12820050/sf-giants-minor-lines-9-5">more</a>.</p>
+					<p><p>SF Giants Minor Lines, <sup>9</sup>&frasl;<sub>5</sub> &hellip;.. incapable of coming back in the ninth inning  SF Giants Minor Lines, <sup>9</sup>&frasl;<sub>4</sub>  Giants give false hope, then lose 3-2 in 13th &hellip;  <a href="http://www.mccoveychronicles.com/2016/9/6/12820050/sf-giants-minor-lines-9-5" onclick="trackOutboundLink('http://www.mccoveychronicles.com/2016/9/6/12820050/sf-giants-minor-lines-9-5'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

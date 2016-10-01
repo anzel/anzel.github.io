@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>Oakland Athletics waive disappointing Billy Butler</h3>
-					<p><p>Former Kansas City Royals DH Billy Butler (L) shakes hands with actor Paul Rudd after game 4 of the American League Championship Series against &hellip;  <a href="http://www.upi.com/Sports_News/2016/09/12/Oakland-Athletics-waive-disappointing-Billy-Butler/9191473653168/">more</a>.</p>
+					<p><p>Former Kansas City Royals DH Billy Butler (L) shakes hands with actor Paul Rudd after game 4 of the American League Championship Series against &hellip;  <a href="http://www.upi.com/Sports_News/2016/09/12/Oakland-Athletics-waive-disappointing-Billy-Butler/9191473653168/" onclick="trackOutboundLink('http://www.upi.com/Sports_News/2016/09/12/Oakland-Athletics-waive-disappointing-Billy-Butler/9191473653168/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

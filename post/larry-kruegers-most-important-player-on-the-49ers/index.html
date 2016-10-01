@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>Larry Krueger&#39;s most important player on the 49ers</h3>
-					<p><p>Larry Krueger reveals who the most important player for the 49ers will be on their defense this season.  <a href="http://www.49erswebzone.com/news/97737-larry-kruegers-most-important-player-49ers/">more</a>.</p>
+					<p><p>Larry Krueger reveals who the most important player for the 49ers will be on their defense this season.  <a href="http://www.49erswebzone.com/news/97737-larry-kruegers-most-important-player-49ers/" onclick="trackOutboundLink('http://www.49erswebzone.com/news/97737-larry-kruegers-most-important-player-49ers/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

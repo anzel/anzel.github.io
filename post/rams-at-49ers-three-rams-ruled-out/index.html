@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>10</b></p>
 					<h3>Rams At 49ers: Three Rams Ruled Out</h3>
-					<p><p>The Los Angeles Rams will open their 2016 regular season against the San Francisco 49ers on Monday. They&rsquo;ll be without three players, including &hellip;  <a href="http://www.turfshowtimes.com/2016/9/10/12876114/rams-49ers-preview-injury-report">more</a>.</p>
+					<p><p>The Los Angeles Rams will open their 2016 regular season against the San Francisco 49ers on Monday. They&rsquo;ll be without three players, including &hellip;  <a href="http://www.turfshowtimes.com/2016/9/10/12876114/rams-49ers-preview-injury-report" onclick="trackOutboundLink('http://www.turfshowtimes.com/2016/9/10/12876114/rams-49ers-preview-injury-report'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

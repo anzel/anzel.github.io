@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>16</b></p>
 					<h3>Madson can&#39;t finish off Rangers, who rally past A&#39;s, 7-6</h3>
-					<p><p>Oakland Athletics&rsquo; Ryan Madson adjusts his cap as he stands at the back of the mound in the ninth inning of a baseball game against the Texas &hellip;  <a href="http://www.newsobserver.com/sports/article102430017.html">more</a>.</p>
+					<p><p>Oakland Athletics&rsquo; Ryan Madson adjusts his cap as he stands at the back of the mound in the ninth inning of a baseball game against the Texas &hellip;  <a href="http://www.newsobserver.com/sports/article102430017.html" onclick="trackOutboundLink('http://www.newsobserver.com/sports/article102430017.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

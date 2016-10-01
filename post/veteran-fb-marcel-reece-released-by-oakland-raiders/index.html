@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>26</b></p>
 					<h3>Veteran FB Marcel Reece released by Oakland Raiders</h3>
-					<p><p>NFL Network Insider Ian Rapoport reported Monday that Oakland released the veteran fullback, per a source informed of the move. Reece is finally &hellip;  <a href="http://www.nfl.com/news/story/0ap3000000710447/article/veteran-fb-marcel-reece-released-by-oakland-raiders">more</a>.</p>
+					<p><p>NFL Network Insider Ian Rapoport reported Monday that Oakland released the veteran fullback, per a source informed of the move. Reece is finally &hellip;  <a href="http://www.nfl.com/news/story/0ap3000000710447/article/veteran-fb-marcel-reece-released-by-oakland-raiders" onclick="trackOutboundLink('http://www.nfl.com/news/story/0ap3000000710447/article/veteran-fb-marcel-reece-released-by-oakland-raiders'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

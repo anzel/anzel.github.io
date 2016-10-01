@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>29</b></p>
 					<h3>#TBT: Vin Scully&#39;s final football call was &#39;The Catch&#39; that launched a</h3>
-					<p><p>FOXSports.com The Dallas Cowboys will visit the San Francisco 49ers on Sunday, causing more than a bit of irony as Vin Scully calls the final game of his glorious &hellip;  <a href="http://www.foxsports.com/nfl/story/tbt-vin-scullys-final-football-call-was-the-catch-that-launched-a-49ers-dynasty-092916">more</a>.</p>
+					<p><p>FOXSports.com The Dallas Cowboys will visit the San Francisco 49ers on Sunday, causing more than a bit of irony as Vin Scully calls the final game of his glorious &hellip;  <a href="http://www.foxsports.com/nfl/story/tbt-vin-scullys-final-football-call-was-the-catch-that-launched-a-49ers-dynasty-092916" onclick="trackOutboundLink('http://www.foxsports.com/nfl/story/tbt-vin-scullys-final-football-call-was-the-catch-that-launched-a-49ers-dynasty-092916'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

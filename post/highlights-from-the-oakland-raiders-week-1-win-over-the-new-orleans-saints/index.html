@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>Highlights From The Oakland Raiders Week 1 Win Over The New Orleans Saints</h3>
-					<p><p>beating the New Orleans Saints 35-34 on the road at the Mercedes-Benz &hellip;  <a href="http://www.profootballweekly.com/nfl/imported/2016/09/12/22538e4b1d1699f679bd2ac71c76ce39/">more</a>.</p>
+					<p><p>beating the New Orleans Saints 35-34 on the road at the Mercedes-Benz &hellip;  <a href="http://www.profootballweekly.com/nfl/imported/2016/09/12/22538e4b1d1699f679bd2ac71c76ce39/" onclick="trackOutboundLink('http://www.profootballweekly.com/nfl/imported/2016/09/12/22538e4b1d1699f679bd2ac71c76ce39/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

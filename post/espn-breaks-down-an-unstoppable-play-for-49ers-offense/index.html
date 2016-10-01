@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>01</b></p>
 					<h3>ESPN breaks down an &#39;unstoppable play&#39; for 49ers offense</h3>
-					<p><p>The San Francisco 49ers offense has been solid on the ground in the preseason, but the passing game has been highly questionable. There have &hellip;  <a href="http://www.ninersnation.com/2016/9/1/12749986/espn-unstoppable-play-49ers-offense-carlos-hyde-chip-kelly">more</a>.</p>
+					<p><p>The San Francisco 49ers offense has been solid on the ground in the preseason, but the passing game has been highly questionable. There have &hellip;  <a href="http://www.ninersnation.com/2016/9/1/12749986/espn-unstoppable-play-49ers-offense-carlos-hyde-chip-kelly" onclick="trackOutboundLink('http://www.ninersnation.com/2016/9/1/12749986/espn-unstoppable-play-49ers-offense-carlos-hyde-chip-kelly'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

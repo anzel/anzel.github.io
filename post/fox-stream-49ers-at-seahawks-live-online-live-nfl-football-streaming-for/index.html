@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>Fox Stream 49ers at Seahawks Live Online Live NFL Football Streaming For</h3>
-					<p><p>NFL Football Games Today On Fox|Watch 49ers at Seahawks Live Online Free NFL Football Streaming Sites|Watch 49ers at Seahawks Live Online &hellip;  <a href="http://www.benderconsult.com/sites/default/files/webform/Fox_Watch_49ers_at_Seahawks_Live_Online_Watch_NFL_Football_For_Free.pdf">more</a>.</p>
+					<p><p>NFL Football Games Today On Fox|Watch 49ers at Seahawks Live Online Free NFL Football Streaming Sites|Watch 49ers at Seahawks Live Online &hellip;  <a href="http://www.benderconsult.com/sites/default/files/webform/Fox_Watch_49ers_at_Seahawks_Live_Online_Watch_NFL_Football_For_Free.pdf" onclick="trackOutboundLink('http://www.benderconsult.com/sites/default/files/webform/Fox_Watch_49ers_at_Seahawks_Live_Online_Watch_NFL_Football_For_Free.pdf'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

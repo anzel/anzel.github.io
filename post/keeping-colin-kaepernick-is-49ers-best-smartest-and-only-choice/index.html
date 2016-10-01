@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>02</b></p>
 					<h3>Keeping Colin Kaepernick is 49ers&#39; best, smartest and only choice</h3>
-					<p><p>Sixteen plays, 85 yards and 8:11 later, the 49ers were in the end zone. A lot of short passes, mixed in with two long runs, showed he has a better &hellip;  <a href="http://www.sportingnews.com/nfl/news/colin-kaepernick-49ers-chip-kelly-decision-battle-anthem-protest-roster/11yx1nhqyiv811nnjym8pv4e66">more</a>.</p>
+					<p><p>Sixteen plays, 85 yards and 8:11 later, the 49ers were in the end zone. A lot of short passes, mixed in with two long runs, showed he has a better &hellip;  <a href="http://www.sportingnews.com/nfl/news/colin-kaepernick-49ers-chip-kelly-decision-battle-anthem-protest-roster/11yx1nhqyiv811nnjym8pv4e66" onclick="trackOutboundLink('http://www.sportingnews.com/nfl/news/colin-kaepernick-49ers-chip-kelly-decision-battle-anthem-protest-roster/11yx1nhqyiv811nnjym8pv4e66'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

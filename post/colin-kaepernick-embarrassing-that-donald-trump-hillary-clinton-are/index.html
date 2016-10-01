@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>Colin Kaepernick: &#39;Embarrassing&#39; that Donald Trump, Hillary Clinton are</h3>
-					<p><p>USA TODAY The San Francisco 49ers backup quarterback, who has been kneeling during the national anthem as a form of protest since the preseason, hopes for &hellip;  <a href="http://www.usatoday.com/story/sports/nfl/49ers/2016/09/27/colin-kaepernick-donald-trump-hillary-clinton-debate/91181232/">more</a>.</p>
+					<p><p>USA TODAY The San Francisco 49ers backup quarterback, who has been kneeling during the national anthem as a form of protest since the preseason, hopes for &hellip;  <a href="http://www.usatoday.com/story/sports/nfl/49ers/2016/09/27/colin-kaepernick-donald-trump-hillary-clinton-debate/91181232/" onclick="trackOutboundLink('http://www.usatoday.com/story/sports/nfl/49ers/2016/09/27/colin-kaepernick-donald-trump-hillary-clinton-debate/91181232/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

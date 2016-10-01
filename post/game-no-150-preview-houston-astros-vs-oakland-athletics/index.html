@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>19</b></p>
 					<h3>Game No. 150 Preview: Houston Astros vs. Oakland Athletics</h3>
-					<p><p>The Houston Astros are living on the edge of a knife. The team is three game behind the AL Wild Card race with 13 games remaining in the season.  <a href="http://www.crawfishboxes.com/2016/9/19/12983090/game-no-150-preview-houston-astros-vs-oakland-athletics">more</a>.</p>
+					<p><p>The Houston Astros are living on the edge of a knife. The team is three game behind the AL Wild Card race with 13 games remaining in the season.  <a href="http://www.crawfishboxes.com/2016/9/19/12983090/game-no-150-preview-houston-astros-vs-oakland-athletics" onclick="trackOutboundLink('http://www.crawfishboxes.com/2016/9/19/12983090/game-no-150-preview-houston-astros-vs-oakland-athletics'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

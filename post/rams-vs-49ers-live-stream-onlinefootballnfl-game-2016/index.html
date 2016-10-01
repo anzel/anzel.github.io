@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>Rams vs 49ers Live Strea-m (Online/Football)...NFL Game 2016</h3>
-					<p><p>G.a.m.e 2016Rams v.s 49ers L.i.v.e S.t.r.e.a-m (O.n.l.i.n.e/F.o.o.t.b.a.l.l)&hellip;N.F.L G.a.m.e &hellip;  <a href="http://www.actionstation.org.nz/316196/rams_v_s_49ers_l_i_v_e_s_t_r_e_a_m_o_n_l_i_n_e_f_o_o_t_b_a_l_l_n_f_l_g_a_m_e_2016">more</a>.</p>
+					<p><p>G.a.m.e 2016Rams v.s 49ers L.i.v.e S.t.r.e.a-m (O.n.l.i.n.e/F.o.o.t.b.a.l.l)&hellip;N.F.L G.a.m.e &hellip;  <a href="http://www.actionstation.org.nz/316196/rams_v_s_49ers_l_i_v_e_s_t_r_e_a_m_o_n_l_i_n_e_f_o_o_t_b_a_l_l_n_f_l_g_a_m_e_2016" onclick="trackOutboundLink('http://www.actionstation.org.nz/316196/rams_v_s_49ers_l_i_v_e_s_t_r_e_a_m_o_n_l_i_n_e_f_o_o_t_b_a_l_l_n_f_l_g_a_m_e_2016'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

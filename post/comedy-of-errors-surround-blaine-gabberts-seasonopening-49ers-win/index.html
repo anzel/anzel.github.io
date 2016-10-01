@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>Comedy of errors surround Blaine Gabbert&#39;s season-opening 49ers win</h3>
-					<p><p>During the San Francisco 49ers&rsquo; season opener against the Los Angeles Rams, ESPN  as well the lackluster game itself, which the 49ers won 28-0 &hellip;  <a href="http://gridironnow.com/comedy-errors-surround-blaine-gabbert-49ers-win/">more</a>.</p>
+					<p><p>During the San Francisco 49ers&rsquo; season opener against the Los Angeles Rams, ESPN  as well the lackluster game itself, which the 49ers won 28-0 &hellip;  <a href="http://gridironnow.com/comedy-errors-surround-blaine-gabbert-49ers-win/" onclick="trackOutboundLink('http://gridironnow.com/comedy-errors-surround-blaine-gabbert-49ers-win/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>10</b></p>
 					<h3>Oakland Athletics: Sonny Gray Open to Talking Extension</h3>
-					<p><p>He has gone from an ace for the Oakland Athletics to a pitcher who would fail to maintain a spot in many rotations. Despite his struggles this season, &hellip;  <a href="https://calltothepen.com/2016/09/10/oakland-athletics-sonny-gray-open-to-talking-extension/">more</a>.</p>
+					<p><p>He has gone from an ace for the Oakland Athletics to a pitcher who would fail to maintain a spot in many rotations. Despite his struggles this season, &hellip;  <a href="https://calltothepen.com/2016/09/10/oakland-athletics-sonny-gray-open-to-talking-extension/" onclick="trackOutboundLink('https://calltothepen.com/2016/09/10/oakland-athletics-sonny-gray-open-to-talking-extension/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

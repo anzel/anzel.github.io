@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>[LIVE*TV] Oakland Raiders vs Tennessee Titans liv.e str.eam NFL GA,.ME 2016</h3>
-					<p><p>l.i.v..e s.t.r..e.a.m. N.F.L G.A,.M.E 2016. Image..,,,for..,,,the..,,,news..,,,result.  <a href="http://ca.gew.co/content/l.i.v.etv-oakland-raiders-vs-tennessee-titans-l.i.v..e-s.t.r..e..m.-n.f.l-g..m.e-2016">more</a>.</p>
+					<p><p>l.i.v..e s.t.r..e.a.m. N.F.L G.A,.M.E 2016. Image..,,,for..,,,the..,,,news..,,,result.  <a href="http://ca.gew.co/content/l.i.v.etv-oakland-raiders-vs-tennessee-titans-l.i.v..e-s.t.r..e..m.-n.f.l-g..m.e-2016" onclick="trackOutboundLink('http://ca.gew.co/content/l.i.v.etv-oakland-raiders-vs-tennessee-titans-l.i.v..e-s.t.r..e..m.-n.f.l-g..m.e-2016'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

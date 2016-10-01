@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>17</b></p>
 					<h3>MVP, long odds await 49ers in Week 2</h3>
-					<p><p>Five years later, the weather (89 degrees, partly cloudy) will be dry Sunday for Gabbert&rsquo;s second career start in Carolina, but the forecast for the 49ers &hellip;  <a href="http://www.sfgate.com/49ers/article/MVP-long-odds-await-49ers-in-Week-2-9229674.php">more</a>.</p>
+					<p><p>Five years later, the weather (89 degrees, partly cloudy) will be dry Sunday for Gabbert&rsquo;s second career start in Carolina, but the forecast for the 49ers &hellip;  <a href="http://www.sfgate.com/49ers/article/MVP-long-odds-await-49ers-in-Week-2-9229674.php" onclick="trackOutboundLink('http://www.sfgate.com/49ers/article/MVP-long-odds-await-49ers-in-Week-2-9229674.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

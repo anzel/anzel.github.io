@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>24</b></p>
 					<h3>Ex Raiders LB Napoleon Harris Fends Off Muggers; Helps Catch Murder</h3>
-					<p><p>The Sports Bank (blog) Then I knew Napoleon Harris the star linebacker at Northwestern, who would then go on to become a starter in the NFL with the Oakland Raiders, &hellip;  <a href="http://www.thesportsbank.net/oakland-raiders/napoleon-harris-raiders-northwestern-fends-off-muggers-helps-catch-murder-suspects/">more</a>.</p>
+					<p><p>The Sports Bank (blog) Then I knew Napoleon Harris the star linebacker at Northwestern, who would then go on to become a starter in the NFL with the Oakland Raiders, &hellip;  <a href="http://www.thesportsbank.net/oakland-raiders/napoleon-harris-raiders-northwestern-fends-off-muggers-helps-catch-murder-suspects/" onclick="trackOutboundLink('http://www.thesportsbank.net/oakland-raiders/napoleon-harris-raiders-northwestern-fends-off-muggers-helps-catch-murder-suspects/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

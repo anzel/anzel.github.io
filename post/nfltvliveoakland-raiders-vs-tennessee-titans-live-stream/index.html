@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>NFL~TV~Live&gt;&gt;oakland raiders vs tennessee titans live strea..m</h3>
-					<p><p>s.t.r.ea..m - Friday, November 4, 2016 - Find event and ticket information.  <a href="https://www.eventbrite.com/e/nfltvliveoakland-raiders-vs-tennessee-titans-live-stream-tickets-28115555383">more</a>.</p>
+					<p><p>s.t.r.ea..m - Friday, November 4, 2016 - Find event and ticket information.  <a href="https://www.eventbrite.com/e/nfltvliveoakland-raiders-vs-tennessee-titans-live-stream-tickets-28115555383" onclick="trackOutboundLink('https://www.eventbrite.com/e/nfltvliveoakland-raiders-vs-tennessee-titans-live-stream-tickets-28115555383'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

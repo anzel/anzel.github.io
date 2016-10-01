@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>01</b></p>
 					<h3>Oakland Raiders: Strengths and weaknesses before preseason finale versus</h3>
-					<p><p>Just Blog Baby (blog) The Oakland Raiders kickoff their final preseason game at 7:00 p.m. PST versus the Seattle Seahawks. Don&rsquo;t expect the starters to play much, as they &hellip;  <a href="http://justblogbaby.com/2016/09/01/oakland-raiders-strengths-and-weaknesses-headed-in-preseason-finale-versus-seattle-seahawks/">more</a>.</p>
+					<p><p>Just Blog Baby (blog) The Oakland Raiders kickoff their final preseason game at 7:00 p.m. PST versus the Seattle Seahawks. Don&rsquo;t expect the starters to play much, as they &hellip;  <a href="http://justblogbaby.com/2016/09/01/oakland-raiders-strengths-and-weaknesses-headed-in-preseason-finale-versus-seattle-seahawks/" onclick="trackOutboundLink('http://justblogbaby.com/2016/09/01/oakland-raiders-strengths-and-weaknesses-headed-in-preseason-finale-versus-seattle-seahawks/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

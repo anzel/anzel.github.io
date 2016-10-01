@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>10</b></p>
 					<h3>Colin Kaepernick A Muslim? San Francisco 49ers Quarterback Addresses Rumors</h3>
-					<p><p>The Inquisitr The San Francisco 49ers quarterback has been the center of controversy during the NFL preseason when he decided to sit during the national anthem &hellip;  <a href="http://www.inquisitr.com/3495826/colin-kaepernick-a-muslim-san-francisco-49ers-quarterback-addresses-rumors-that-he-converted-to-islam/?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed%3A+Inquisitr+%28Inquisitr%3A+All%29">more</a>.</p>
+					<p><p>The Inquisitr The San Francisco 49ers quarterback has been the center of controversy during the NFL preseason when he decided to sit during the national anthem &hellip;  <a href="http://www.inquisitr.com/3495826/colin-kaepernick-a-muslim-san-francisco-49ers-quarterback-addresses-rumors-that-he-converted-to-islam/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+Inquisitr+%28Inquisitr%3A+All%29" onclick="trackOutboundLink('http://www.inquisitr.com/3495826/colin-kaepernick-a-muslim-san-francisco-49ers-quarterback-addresses-rumors-that-he-converted-to-islam/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+Inquisitr+%28Inquisitr%3A+All%29'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

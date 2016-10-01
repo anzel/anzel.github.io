@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>15</b></p>
 					<h3>Oakland Raiders game and tailgaiting for out of town fans - Oakland Message</h3>
-					<p><p>Hi there! Can anyone tell me if Raiderville is still an option for out of town Raiders fans to come tailgate with other Raiders fans? If so, are there any &hellip;  <a href="https://www.tripadvisor.co.uk/ShowTopic-g32810-i743-k9868061-Oakland_Raiders_game_and_tailgaiting_for_out_of_town_fans-Oakland_California.html">more</a>.</p>
+					<p><p>Hi there! Can anyone tell me if Raiderville is still an option for out of town Raiders fans to come tailgate with other Raiders fans? If so, are there any &hellip;  <a href="https://www.tripadvisor.co.uk/ShowTopic-g32810-i743-k9868061-Oakland_Raiders_game_and_tailgaiting_for_out_of_town_fans-Oakland_California.html" onclick="trackOutboundLink('https://www.tripadvisor.co.uk/ShowTopic-g32810-i743-k9868061-Oakland_Raiders_game_and_tailgaiting_for_out_of_town_fans-Oakland_California.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

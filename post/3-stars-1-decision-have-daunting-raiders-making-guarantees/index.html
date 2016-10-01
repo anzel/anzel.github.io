@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>17</b></p>
 					<h3>3 stars, 1 decision have daunting Raiders making guarantees</h3>
-					<p><p>They were rebels, some of them without a cause, so many of them misfits or vagabonds or both. They marched out of Al Davis&rsquo; Home For Wayward &hellip;  <a href="http://nypost.com/2016/09/17/3-stars-1-decision-have-daunting-raiders-making-guarantees/">more</a>.</p>
+					<p><p>They were rebels, some of them without a cause, so many of them misfits or vagabonds or both. They marched out of Al Davis&rsquo; Home For Wayward &hellip;  <a href="http://nypost.com/2016/09/17/3-stars-1-decision-have-daunting-raiders-making-guarantees/" onclick="trackOutboundLink('http://nypost.com/2016/09/17/3-stars-1-decision-have-daunting-raiders-making-guarantees/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

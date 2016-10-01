@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>23</b></p>
 					<h3>Tomas Hertl has positive start to Sharks training camp</h3>
-					<p><p>Tomas Hertl (48), seen here with teammates Joel Ward (42) and Logan Couture (39) in the Western Conference Final in May, was smiling again &hellip;  <a href="http://www.mercurynews.com/2016/09/23/tomas-hertl-has-positive-start-to-sharks-training-camp/">more</a>.</p>
+					<p><p>Tomas Hertl (48), seen here with teammates Joel Ward (42) and Logan Couture (39) in the Western Conference Final in May, was smiling again &hellip;  <a href="http://www.mercurynews.com/2016/09/23/tomas-hertl-has-positive-start-to-sharks-training-camp/" onclick="trackOutboundLink('http://www.mercurynews.com/2016/09/23/tomas-hertl-has-positive-start-to-sharks-training-camp/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

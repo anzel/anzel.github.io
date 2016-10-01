@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>24</b></p>
 					<h3>Raiders&#39; Punter starts a GoFundMe for horse collar fine</h3>
-					<p><p>Oakland Raiders&rsquo; punter Marquette King was fined earlier today for one heck of a horse collar penalty against Atlanta Falcons&rsquo; return man Eric Weems &hellip;  <a href="http://thecomeback.com/nfl/raider-punter-starts-a-gofundme-for-horse-collar-fine.html">more</a>.</p>
+					<p><p>Oakland Raiders&rsquo; punter Marquette King was fined earlier today for one heck of a horse collar penalty against Atlanta Falcons&rsquo; return man Eric Weems &hellip;  <a href="http://thecomeback.com/nfl/raider-punter-starts-a-gofundme-for-horse-collar-fine.html" onclick="trackOutboundLink('http://thecomeback.com/nfl/raider-punter-starts-a-gofundme-for-horse-collar-fine.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

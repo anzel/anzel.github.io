@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>San Francisco 49ers will grow tomatoes and eggplants on top of Levi&#39;s</h3>
-					<p><p>GeekWire Home to the NFL&rsquo;s San Francisco 49ers, the high-tech stadium today &hellip; the Faithful Farm, Jim Mercurio, San Francisco 49ers vice president of stadium &hellip;  <a href="http://www.geekwire.com/2016/san-francisco-49ers-will-grow-tomatoes-eggplants-top-levis-stadium/">more</a>.</p>
+					<p><p>GeekWire Home to the NFL&rsquo;s San Francisco 49ers, the high-tech stadium today &hellip; the Faithful Farm, Jim Mercurio, San Francisco 49ers vice president of stadium &hellip;  <a href="http://www.geekwire.com/2016/san-francisco-49ers-will-grow-tomatoes-eggplants-top-levis-stadium/" onclick="trackOutboundLink('http://www.geekwire.com/2016/san-francisco-49ers-will-grow-tomatoes-eggplants-top-levis-stadium/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

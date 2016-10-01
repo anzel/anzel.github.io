@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>11</b></p>
 					<h3>Rams, 49ers ready to renew an old LA-San Francisco rivalry</h3>
-					<p><p>won all but two NFC West division titles. The Rams&rsquo; return to Southern &hellip;  <a href="http://wowway.net/news/read/category/sports/article/los_angeles_times-rams_49ers_ready_to_renew_an_old_lasan_francisco_r-tca">more</a>.</p>
+					<p><p>won all but two NFC West division titles. The Rams&rsquo; return to Southern &hellip;  <a href="http://wowway.net/news/read/category/sports/article/los_angeles_times-rams_49ers_ready_to_renew_an_old_lasan_francisco_r-tca" onclick="trackOutboundLink('http://wowway.net/news/read/category/sports/article/los_angeles_times-rams_49ers_ready_to_renew_an_old_lasan_francisco_r-tca'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

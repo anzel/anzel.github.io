@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>NFL Week 4 Power Rankings: Patriots Back On Top After Beating Up On Texans</h3>
-					<p><p>Oakland Raiders (13): The Raiders beat the Titans on Sunday despite not scoring a single second-half point. 17. Baltimore Ravens (15): On the other &hellip;  <a href="http://nesn.com/2016/09/nfl-week-4-power-rankings-patriots-back-on-top-after-beating-up-on-texans/">more</a>.</p>
+					<p><p>Oakland Raiders (13): The Raiders beat the Titans on Sunday despite not scoring a single second-half point. 17. Baltimore Ravens (15): On the other &hellip;  <a href="http://nesn.com/2016/09/nfl-week-4-power-rankings-patriots-back-on-top-after-beating-up-on-texans/" onclick="trackOutboundLink('http://nesn.com/2016/09/nfl-week-4-power-rankings-patriots-back-on-top-after-beating-up-on-texans/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

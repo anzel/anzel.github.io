@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>13</b></p>
 					<h3>Oakland Raiders New Era 2016 NFL On Field Color Rush 39THIRTY Cap</h3>
-					<p><p>huge selection of Oakland Raiders New Era gear, you&rsquo;ll find what you need.  <a href="https://www.lids.com/oakland-raiders-new-era-2016-nfl-on-field-color-rush-39thirty-cap/20866028">more</a>.</p>
+					<p><p>huge selection of Oakland Raiders New Era gear, you&rsquo;ll find what you need.  <a href="https://www.lids.com/oakland-raiders-new-era-2016-nfl-on-field-color-rush-39thirty-cap/20866028" onclick="trackOutboundLink('https://www.lids.com/oakland-raiders-new-era-2016-nfl-on-field-color-rush-39thirty-cap/20866028'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

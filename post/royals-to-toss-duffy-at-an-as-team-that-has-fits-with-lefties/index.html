@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>13</b></p>
 					<h3>Royals to toss Duffy at an A&#39;s team that has fits with lefties</h3>
-					<p><p>Oakland Athletics-Kansas City Royals preview. Danny Duffy has never lost to the A&rsquo;s, who fare poorly against left-handed pitchers. John Rieger / USA &hellip;  <a href="http://www.foxsports.com/kansas-city/story/kansas-city-royals-to-toss-danny-duffy-at-an-oakland-a-s-team-that-has-fits-with-lefties-091316">more</a>.</p>
+					<p><p>Oakland Athletics-Kansas City Royals preview. Danny Duffy has never lost to the A&rsquo;s, who fare poorly against left-handed pitchers. John Rieger / USA &hellip;  <a href="http://www.foxsports.com/kansas-city/story/kansas-city-royals-to-toss-danny-duffy-at-an-oakland-a-s-team-that-has-fits-with-lefties-091316" onclick="trackOutboundLink('http://www.foxsports.com/kansas-city/story/kansas-city-royals-to-toss-danny-duffy-at-an-oakland-a-s-team-that-has-fits-with-lefties-091316'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

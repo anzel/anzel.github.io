@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>24</b></p>
 					<h3>Del Rio on Karl Joseph: I&#39;m excited to see him play.</h3>
-					<p><p>That, and other notable quotes from the Oakland Raiders leading up to their Week 3 contest against the Tennessee Titans. It was a busy week with &hellip;  <a href="http://justblogbaby.com/2016/09/24/del-rio-on-karl-joseph-im-excited-to-see-him-play/">more</a>.</p>
+					<p><p>That, and other notable quotes from the Oakland Raiders leading up to their Week 3 contest against the Tennessee Titans. It was a busy week with &hellip;  <a href="http://justblogbaby.com/2016/09/24/del-rio-on-karl-joseph-im-excited-to-see-him-play/" onclick="trackOutboundLink('http://justblogbaby.com/2016/09/24/del-rio-on-karl-joseph-im-excited-to-see-him-play/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

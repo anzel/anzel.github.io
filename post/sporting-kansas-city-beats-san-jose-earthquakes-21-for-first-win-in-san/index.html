@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>Sporting Kansas City beats San Jose Earthquakes 2-1 for first win in San</h3>
-					<p><p>FOXSports.com SAN JOSE, Calif. &ndash; Kevin Ellis scored his first goal of the season in the 81st minute and Sporting Kansas City beat the Earthquakes 2-1 on Saturday &hellip;  <a href="http://www.foxsports.com/kansas-city/story/sporting-kansas-city-beats-san-jose-earthquakes-2-1-for-first-win-in-san-jose-since-2000-092516">more</a>.</p>
+					<p><p>FOXSports.com SAN JOSE, Calif. &ndash; Kevin Ellis scored his first goal of the season in the 81st minute and Sporting Kansas City beat the Earthquakes 2-1 on Saturday &hellip;  <a href="http://www.foxsports.com/kansas-city/story/sporting-kansas-city-beats-san-jose-earthquakes-2-1-for-first-win-in-san-jose-since-2000-092516" onclick="trackOutboundLink('http://www.foxsports.com/kansas-city/story/sporting-kansas-city-beats-san-jose-earthquakes-2-1-for-first-win-in-san-jose-since-2000-092516'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

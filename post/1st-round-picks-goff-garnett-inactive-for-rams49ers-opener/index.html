@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>1st round picks Goff, Garnett inactive for Rams-49ers opener</h3>
-					<p><p>are both inactive for the season opener between the Los Angeles Rams &hellip;  <a href="http://bigstory.ap.org/article/fdd26eaa60f74b80bf555ba4a9c3e030/1st-round-picks-goff-garnett-inactive-rams-49ers-opener">more</a>.</p>
+					<p><p>are both inactive for the season opener between the Los Angeles Rams &hellip;  <a href="http://bigstory.ap.org/article/fdd26eaa60f74b80bf555ba4a9c3e030/1st-round-picks-goff-garnett-inactive-rams-49ers-opener" onclick="trackOutboundLink('http://bigstory.ap.org/article/fdd26eaa60f74b80bf555ba4a9c3e030/1st-round-picks-goff-garnett-inactive-rams-49ers-opener'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

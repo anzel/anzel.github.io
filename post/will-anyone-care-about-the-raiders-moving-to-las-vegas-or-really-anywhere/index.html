@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>30</b></p>
 					<h3>Will anyone care about the Raiders moving to Las Vegas? Or really anywhere.</h3>
-					<p><p>So it now appears to be pretty much a done deal that the Oakland Raiders will soon call Las Vegas home. Is anyone really going to care tho?  <a href="http://www.dtvusaforum.com/threads/90128-Will-anyone-care-about-the-Raiders-moving-to-Las-Vegas-Or-really-anywhere">more</a>.</p>
+					<p><p>So it now appears to be pretty much a done deal that the Oakland Raiders will soon call Las Vegas home. Is anyone really going to care tho?  <a href="http://www.dtvusaforum.com/threads/90128-Will-anyone-care-about-the-Raiders-moving-to-Las-Vegas-Or-really-anywhere" onclick="trackOutboundLink('http://www.dtvusaforum.com/threads/90128-Will-anyone-care-about-the-Raiders-moving-to-Las-Vegas-Or-really-anywhere'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>10</b></p>
 					<h3>49ers Owner Down with Kaepernick; Pledges $1 Million to Inequality Fight</h3>
-					<p><p>Not only is York down with Kaepernick, the 49ers announced in a press &hellip; people of the Bay Area since 1948, almost as long as the 49ers franchise.  <a href="http://www.eurweb.com/2016/09/49ers-owner-kaepernick-pledges-1-million-inequality-fight/">more</a>.</p>
+					<p><p>Not only is York down with Kaepernick, the 49ers announced in a press &hellip; people of the Bay Area since 1948, almost as long as the 49ers franchise.  <a href="http://www.eurweb.com/2016/09/49ers-owner-kaepernick-pledges-1-million-inequality-fight/" onclick="trackOutboundLink('http://www.eurweb.com/2016/09/49ers-owner-kaepernick-pledges-1-million-inequality-fight/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

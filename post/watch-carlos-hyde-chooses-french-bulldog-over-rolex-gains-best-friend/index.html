@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>06</b></p>
 					<h3>Watch: Carlos Hyde chooses French Bulldog over Rolex, gains best friend</h3>
-					<p><p>San Francisco 49ers running back Carlos Hyde was facing a dilemma. With his birthday around the corner, Hyde had to decide what he wanted to gift &hellip;  <a href="http://www.mercurynews.com/49ers/ci_30333962/watch-carlos-hyde-chooses-french-bulldog-over-rolex">more</a>.</p>
+					<p><p>San Francisco 49ers running back Carlos Hyde was facing a dilemma. With his birthday around the corner, Hyde had to decide what he wanted to gift &hellip;  <a href="http://www.mercurynews.com/49ers/ci_30333962/watch-carlos-hyde-chooses-french-bulldog-over-rolex" onclick="trackOutboundLink('http://www.mercurynews.com/49ers/ci_30333962/watch-carlos-hyde-chooses-french-bulldog-over-rolex'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

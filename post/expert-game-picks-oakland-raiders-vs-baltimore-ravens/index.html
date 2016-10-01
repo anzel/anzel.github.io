@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Oct<b>01</b></p>
 					<h3>Expert Game Picks: Oakland Raiders vs. Baltimore Ravens</h3>
-					<p><p>The Raiders fly to Baltimore to take on the Ravens Sunday at M&amp;T Bank Stadium. Let&rsquo;s see who the experts think will win. The Oakland Raiders take &hellip;  <a href="http://www.raiders.com/news/article-1/Expert-Game-Picks-Oakland-Raiders-vs-Baltimore-Ravens/abcbe303-8ab5-4bc3-99f7-8296e3fcc342">more</a>.</p>
+					<p><p>The Raiders fly to Baltimore to take on the Ravens Sunday at M&amp;T Bank Stadium. Let&rsquo;s see who the experts think will win. The Oakland Raiders take &hellip;  <a href="http://www.raiders.com/news/article-1/Expert-Game-Picks-Oakland-Raiders-vs-Baltimore-Ravens/abcbe303-8ab5-4bc3-99f7-8296e3fcc342" onclick="trackOutboundLink('http://www.raiders.com/news/article-1/Expert-Game-Picks-Oakland-Raiders-vs-Baltimore-Ravens/abcbe303-8ab5-4bc3-99f7-8296e3fcc342'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

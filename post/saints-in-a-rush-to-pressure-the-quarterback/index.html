@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>15</b></p>
 					<h3>Saints in a rush to pressure the quarterback</h3>
-					<p><p>RCB Delvin Breaux suffered a fractured left fibula in Sunday&rsquo;s game against the Oakland Raiders and is expected to be sidelined for about six weeks.  <a href="http://www.wcti12.com/sports/saints-in-a-rush-to-pressure-the-quarterback/81059180">more</a>.</p>
+					<p><p>RCB Delvin Breaux suffered a fractured left fibula in Sunday&rsquo;s game against the Oakland Raiders and is expected to be sidelined for about six weeks.  <a href="http://www.wcti12.com/sports/saints-in-a-rush-to-pressure-the-quarterback/81059180" onclick="trackOutboundLink('http://www.wcti12.com/sports/saints-in-a-rush-to-pressure-the-quarterback/81059180'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>Nunez ties Sounds record in playoff opener</h3>
-					<p><p>Renato Nunez&rsquo;s most productive game of the year couldn&rsquo;t have come at a better time for the Nashville Sounds. In the opener of the best-of-5 Pacific &hellip;  <a href="http://www.milb.com/news/article.jsp?ymd=20160908&amp;content_id=200133690&amp;fext=.jsp&amp;vkey=news_l112">more</a>.</p>
+					<p><p>Renato Nunez&rsquo;s most productive game of the year couldn&rsquo;t have come at a better time for the Nashville Sounds. In the opener of the best-of-5 Pacific &hellip;  <a href="http://www.milb.com/news/article.jsp?ymd=20160908&content_id=200133690&fext=.jsp&vkey=news_l112" onclick="trackOutboundLink('http://www.milb.com/news/article.jsp?ymd=20160908&content_id=200133690&fext=.jsp&vkey=news_l112'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

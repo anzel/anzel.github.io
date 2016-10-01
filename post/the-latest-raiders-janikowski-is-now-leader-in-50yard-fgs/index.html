@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>The Latest: Raiders&#39; Janikowski is now leader in 50-yard FGs</h3>
-					<p><p>A handful of Tennessee Titans and a couple of Oakland Raiders raised their fists in protest Sunday. Tennessee&rsquo;s defensive captain and tackle Jurrell &hellip;  <a href="http://www.sanluisobispo.com/sports/article104085121.html">more</a>.</p>
+					<p><p>A handful of Tennessee Titans and a couple of Oakland Raiders raised their fists in protest Sunday. Tennessee&rsquo;s defensive captain and tackle Jurrell &hellip;  <a href="http://www.sanluisobispo.com/sports/article104085121.html" onclick="trackOutboundLink('http://www.sanluisobispo.com/sports/article104085121.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

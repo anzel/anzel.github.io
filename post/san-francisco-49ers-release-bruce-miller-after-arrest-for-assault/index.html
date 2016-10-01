@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>06</b></p>
 					<h3>San Francisco 49ers release Bruce Miller after arrest for assault</h3>
-					<p><p>San Francisco 49ers fullback Bruce Miller (49) following an NFL football game against the Detroit Lions Sunday, Dec. 27, 2015, in Detroit.  <a href="http://abc7news.com/sports/49ers-release-bruce-miller-after-arrest-for-assault/1499058/">more</a>.</p>
+					<p><p>San Francisco 49ers fullback Bruce Miller (49) following an NFL football game against the Detroit Lions Sunday, Dec. 27, 2015, in Detroit.  <a href="http://abc7news.com/sports/49ers-release-bruce-miller-after-arrest-for-assault/1499058/" onclick="trackOutboundLink('http://abc7news.com/sports/49ers-release-bruce-miller-after-arrest-for-assault/1499058/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

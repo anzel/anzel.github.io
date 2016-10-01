@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>Raiding the Register: Trademarks and Franchise Relocation</h3>
-					<p><p>And where there is a chance, there&rsquo;s always someone hoping to strike it rich with a gamble. The Oakland Raiders aren&rsquo;t the only entities with pending &hellip;  <a href="http://www.jdsupra.com/legalnews/raiding-the-register-trademarks-and-49688/">more</a>.</p>
+					<p><p>And where there is a chance, there&rsquo;s always someone hoping to strike it rich with a gamble. The Oakland Raiders aren&rsquo;t the only entities with pending &hellip;  <a href="http://www.jdsupra.com/legalnews/raiding-the-register-trademarks-and-49688/" onclick="trackOutboundLink('http://www.jdsupra.com/legalnews/raiding-the-register-trademarks-and-49688/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

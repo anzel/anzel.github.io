@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>Mariners edge Athletics for fifth win in a row</h3>
-					<p><p>Oakland Athletics&rsquo; Max Muncy (12) reacts after he strikes out looking to end the game in a 3-2 loss to the Seattle Mariners on Sunday at the Oakland &hellip;  <a href="http://www.timescolonist.com/sports/mariners-edge-athletics-for-fifth-win-in-a-row-1.2341265">more</a>.</p>
+					<p><p>Oakland Athletics&rsquo; Max Muncy (12) reacts after he strikes out looking to end the game in a 3-2 loss to the Seattle Mariners on Sunday at the Oakland &hellip;  <a href="http://www.timescolonist.com/sports/mariners-edge-athletics-for-fifth-win-in-a-row-1.2341265" onclick="trackOutboundLink('http://www.timescolonist.com/sports/mariners-edge-athletics-for-fifth-win-in-a-row-1.2341265'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

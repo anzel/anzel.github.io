@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>Raiders Sign G Denver Kirkland To Active Roster</h3>
-					<p><p>The Oakland Raiders have signed G Denver Kirkland to the active roster, the club announced Wednesday. Joining the active roster from the practice &hellip;  <a href="http://www.raiders.com/news/article-1/Raiders-Sign-G-Denver-Kirkland-To-Active-Roster/70cbec27-4057-4479-a4d2-bb0f141f4ced">more</a>.</p>
+					<p><p>The Oakland Raiders have signed G Denver Kirkland to the active roster, the club announced Wednesday. Joining the active roster from the practice &hellip;  <a href="http://www.raiders.com/news/article-1/Raiders-Sign-G-Denver-Kirkland-To-Active-Roster/70cbec27-4057-4479-a4d2-bb0f141f4ced" onclick="trackOutboundLink('http://www.raiders.com/news/article-1/Raiders-Sign-G-Denver-Kirkland-To-Active-Roster/70cbec27-4057-4479-a4d2-bb0f141f4ced'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

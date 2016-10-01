@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>29</b></p>
 					<h3>Player Performance: Bologna Loanee Matteo Mancosu Shines In Drogba&#39;s</h3>
-					<p><p>Italian Football Daily (blog) Without Didier Drogba up top going into a game with serious playoff implications against the San Jose Earthquakes, Matteo Mancosu needed to step &hellip;  <a href="http://www.italianfootballdaily.com/player-performance-bologna-loanee-matteo-mancosu-shines-drogbas-absence/">more</a>.</p>
+					<p><p>Italian Football Daily (blog) Without Didier Drogba up top going into a game with serious playoff implications against the San Jose Earthquakes, Matteo Mancosu needed to step &hellip;  <a href="http://www.italianfootballdaily.com/player-performance-bologna-loanee-matteo-mancosu-shines-drogbas-absence/" onclick="trackOutboundLink('http://www.italianfootballdaily.com/player-performance-bologna-loanee-matteo-mancosu-shines-drogbas-absence/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

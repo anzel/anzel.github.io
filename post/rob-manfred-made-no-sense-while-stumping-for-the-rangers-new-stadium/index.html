@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>21</b></p>
 					<h3>Rob Manfred made no sense while stumping for the Rangers&#39; new stadium</h3>
-					<p><p>And lost in all this is the Oakland Athletics&rsquo; situation with the Oakland Coliseum. They share it with the Oakland Raiders, which is terrible for both &hellip;  <a href="http://sports.yahoo.com/news/rob-manfred-made-no-sense-while-stumping-for-the-rangers-new-stadium-154511215.html">more</a>.</p>
+					<p><p>And lost in all this is the Oakland Athletics&rsquo; situation with the Oakland Coliseum. They share it with the Oakland Raiders, which is terrible for both &hellip;  <a href="http://sports.yahoo.com/news/rob-manfred-made-no-sense-while-stumping-for-the-rangers-new-stadium-154511215.html" onclick="trackOutboundLink('http://sports.yahoo.com/news/rob-manfred-made-no-sense-while-stumping-for-the-rangers-new-stadium-154511215.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

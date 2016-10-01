@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Aug<b>31</b></p>
 					<h3>NFL Boys&#39; Jersey Shirt - Oakland Raiders</h3>
-					<p><p>NFL Oakland Raiders jersey shirt. Designed with mesh for breathable &hellip;  <a href="http://www.kmart.com/nfl-boys-jersey-shirt-oakland-raiders/p-046VA92271712P">more</a>.</p>
+					<p><p>NFL Oakland Raiders jersey shirt. Designed with mesh for breathable &hellip;  <a href="http://www.kmart.com/nfl-boys-jersey-shirt-oakland-raiders/p-046VA92271712P" onclick="trackOutboundLink('http://www.kmart.com/nfl-boys-jersey-shirt-oakland-raiders/p-046VA92271712P'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

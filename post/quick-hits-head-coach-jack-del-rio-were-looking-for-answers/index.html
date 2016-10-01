@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>19</b></p>
 					<h3>Quick Hits: Head Coach Jack Del Rio We&#39;re Looking For Answers</h3>
-					<p><p>Oakland Raiders Head Coach Jack Del Rio addressed the media at the Raiders Alameda, Calif. practice facility Monday, and shared his thoughts on &hellip;  <a href="http://www.raiders.com/news/article-1/Quick-Hits-Head-Coach-Jack-Del-Rio-Were-Looking-For-Answers/852afb19-47dc-4a6e-92b5-ade9fea6c86e">more</a>.</p>
+					<p><p>Oakland Raiders Head Coach Jack Del Rio addressed the media at the Raiders Alameda, Calif. practice facility Monday, and shared his thoughts on &hellip;  <a href="http://www.raiders.com/news/article-1/Quick-Hits-Head-Coach-Jack-Del-Rio-Were-Looking-For-Answers/852afb19-47dc-4a6e-92b5-ade9fea6c86e" onclick="trackOutboundLink('http://www.raiders.com/news/article-1/Quick-Hits-Head-Coach-Jack-Del-Rio-Were-Looking-For-Answers/852afb19-47dc-4a6e-92b5-ade9fea6c86e'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

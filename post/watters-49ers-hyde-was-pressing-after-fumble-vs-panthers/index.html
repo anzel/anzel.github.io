@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>21</b></p>
 					<h3>Watters: 49ers&#39; Hyde Was Pressing After Fumble Vs Panthers</h3>
-					<p><p>Running back Carlos Hyde was critical of himself on Sunday after rushing for just 34 yards on 14 carries in the 49ers&rsquo; 46-27 loss to the Carolina &hellip;  <a href="http://www.nbcbayarea.com/news/sports/csn/49ers/Watters__49ers__Hyde_was_pressing_after_fumble_vs_Panthers-394227671.html">more</a>.</p>
+					<p><p>Running back Carlos Hyde was critical of himself on Sunday after rushing for just 34 yards on 14 carries in the 49ers&rsquo; 46-27 loss to the Carolina &hellip;  <a href="http://www.nbcbayarea.com/news/sports/csn/49ers/Watters__49ers__Hyde_was_pressing_after_fumble_vs_Panthers-394227671.html" onclick="trackOutboundLink('http://www.nbcbayarea.com/news/sports/csn/49ers/Watters__49ers__Hyde_was_pressing_after_fumble_vs_Panthers-394227671.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

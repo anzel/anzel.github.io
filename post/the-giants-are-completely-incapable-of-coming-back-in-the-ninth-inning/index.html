@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>05</b></p>
 					<h3>The Giants are completely incapable of coming back in the ninth inning</h3>
-					<p><p>This might be the first Giants team in San Francisco history to go through an entire season without a single ninth-inning comeback. It&rsquo;s impressive &hellip;  <a href="http://www.mccoveychronicles.com/2016/9/5/12800138/sf-giants-2016-ninth-inning-comebacks-or-lack-thereof">more</a>.</p>
+					<p><p>This might be the first Giants team in San Francisco history to go through an entire season without a single ninth-inning comeback. It&rsquo;s impressive &hellip;  <a href="http://www.mccoveychronicles.com/2016/9/5/12800138/sf-giants-2016-ninth-inning-comebacks-or-lack-thereof" onclick="trackOutboundLink('http://www.mccoveychronicles.com/2016/9/5/12800138/sf-giants-2016-ninth-inning-comebacks-or-lack-thereof'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

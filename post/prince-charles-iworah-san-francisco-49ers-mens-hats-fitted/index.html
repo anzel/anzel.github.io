@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>20</b></p>
 					<h3>Prince Charles Iworah San Francisco 49ers Mens Hats Fitted</h3>
-					<p><p>NFLShop.com! Browse all NFL merchandise for men, women, and kids at the &hellip;  <a href="http://www.nflshop.com/Prince_Charles_Iworah_San_Francisco_49ers_Men_Fitted_Hats">more</a>.</p>
+					<p><p>NFLShop.com! Browse all NFL merchandise for men, women, and kids at the &hellip;  <a href="http://www.nflshop.com/Prince_Charles_Iworah_San_Francisco_49ers_Men_Fitted_Hats" onclick="trackOutboundLink('http://www.nflshop.com/Prince_Charles_Iworah_San_Francisco_49ers_Men_Fitted_Hats'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

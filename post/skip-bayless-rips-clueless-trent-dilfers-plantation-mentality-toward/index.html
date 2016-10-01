@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>Skip Bayless rips &#39;clueless&#39; Trent Dilfer&#39;s &#39;plantation mentality&#39; toward</h3>
-					<p><p>Sporting News Dilfer said Kaepernick, as the backup to 49ers starter Blaine Gabbert, should &ldquo;be quiet and sit in the shadows&rdquo; so as not to disrupt the team.  <a href="http://www.sportingnews.com/nfl/news/skip-bayless-fs1-undisputed-trent-dilfer-colin-kaepernick-49ers-shannon-sharpe-espn-sunday-nfl-countdown-plantation-mentality/90am4rhlu6ah19rr74pozbova">more</a>.</p>
+					<p><p>Sporting News Dilfer said Kaepernick, as the backup to 49ers starter Blaine Gabbert, should &ldquo;be quiet and sit in the shadows&rdquo; so as not to disrupt the team.  <a href="http://www.sportingnews.com/nfl/news/skip-bayless-fs1-undisputed-trent-dilfer-colin-kaepernick-49ers-shannon-sharpe-espn-sunday-nfl-countdown-plantation-mentality/90am4rhlu6ah19rr74pozbova" onclick="trackOutboundLink('http://www.sportingnews.com/nfl/news/skip-bayless-fs1-undisputed-trent-dilfer-colin-kaepernick-49ers-shannon-sharpe-espn-sunday-nfl-countdown-plantation-mentality/90am4rhlu6ah19rr74pozbova'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

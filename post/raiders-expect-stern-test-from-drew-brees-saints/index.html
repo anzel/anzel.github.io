@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>Raiders expect stern test from Drew Brees, Saints</h3>
-					<p><p>Debate all you want on whether the Saints should have given 37-year-old Drew Brees another $44.25 million in guaranteed money Wednesday.  <a href="http://www.sfgate.com/raiders/article/Raiders-expect-stern-test-from-Drew-Brees-Saints-9208820.php">more</a>.</p>
+					<p><p>Debate all you want on whether the Saints should have given 37-year-old Drew Brees another $44.25 million in guaranteed money Wednesday.  <a href="http://www.sfgate.com/raiders/article/Raiders-expect-stern-test-from-Drew-Brees-Saints-9208820.php" onclick="trackOutboundLink('http://www.sfgate.com/raiders/article/Raiders-expect-stern-test-from-Drew-Brees-Saints-9208820.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

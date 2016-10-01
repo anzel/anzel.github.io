@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>24</b></p>
 					<h3>Niners Face Huge Hurdle of Beating Seahawks in Their Nest</h3>
-					<p><p>The 49ers are 1-1 and the Seahawks are 1-1. Both teams are trying to solve some significant problems. Yet, one thing remains the same: the Niners &hellip;  <a href="http://www.nbcbayarea.com/news/local/Niners-Face-Huge-Hurdle-of-Beating-Seahawks-in-Their-Nest-394580821.html">more</a>.</p>
+					<p><p>The 49ers are 1-1 and the Seahawks are 1-1. Both teams are trying to solve some significant problems. Yet, one thing remains the same: the Niners &hellip;  <a href="http://www.nbcbayarea.com/news/local/Niners-Face-Huge-Hurdle-of-Beating-Seahawks-in-Their-Nest-394580821.html" onclick="trackOutboundLink('http://www.nbcbayarea.com/news/local/Niners-Face-Huge-Hurdle-of-Beating-Seahawks-in-Their-Nest-394580821.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

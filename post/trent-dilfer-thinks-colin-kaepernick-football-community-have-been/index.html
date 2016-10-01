@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>11</b></p>
 					<h3>Trent Dilfer thinks Colin Kaepernick, &#39;football community&#39; have been</h3>
-					<p><p>Niners Nation Given Dilfer is self-admittedly tight with Jed York and the 49ers, I&rsquo;m curious if that has impacted his comments about this tearing at the fabric of the &hellip;  <a href="http://www.ninersnation.com/2016/9/11/12880026/trent-dilfer-comments-colin-kaepernick-national-anthem-protest">more</a>.</p>
+					<p><p>Niners Nation Given Dilfer is self-admittedly tight with Jed York and the 49ers, I&rsquo;m curious if that has impacted his comments about this tearing at the fabric of the &hellip;  <a href="http://www.ninersnation.com/2016/9/11/12880026/trent-dilfer-comments-colin-kaepernick-national-anthem-protest" onclick="trackOutboundLink('http://www.ninersnation.com/2016/9/11/12880026/trent-dilfer-comments-colin-kaepernick-national-anthem-protest'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

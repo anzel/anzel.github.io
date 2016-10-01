@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>01</b></p>
 					<h3>Live chat: Colin Kaepernick and controversy surrounding the 49ers</h3>
-					<p><p>The Mercury News Our Marcus Thompson II talks about his visit to Colin Kaepernick&rsquo;s hometown this week and takes your questions about the controversy surrounding &hellip;  <a href="http://www.mercurynews.com/49ers/ci_30315396/live-chat-colin-kaepernick-and-controversy-surround-49ers">more</a>.</p>
+					<p><p>The Mercury News Our Marcus Thompson II talks about his visit to Colin Kaepernick&rsquo;s hometown this week and takes your questions about the controversy surrounding &hellip;  <a href="http://www.mercurynews.com/49ers/ci_30315396/live-chat-colin-kaepernick-and-controversy-surround-49ers" onclick="trackOutboundLink('http://www.mercurynews.com/49ers/ci_30315396/live-chat-colin-kaepernick-and-controversy-surround-49ers'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

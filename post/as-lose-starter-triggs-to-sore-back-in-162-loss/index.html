@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>03</b></p>
 					<h3>A&#39;s lose starter Triggs to sore back in 16-2 loss...</h3>
-					<p><p>Boston Red Sox pitcher David Price works against the Oakland Athletics during the first inning of a baseball game Friday, Sept. 2, 2016, in Oakland, &hellip;  <a href="http://www.therecord.com/sports-story/6839113-a-s-lose-starter-triggs-to-sore-back-in-16-2-loss-to-red-sox/">more</a>.</p>
+					<p><p>Boston Red Sox pitcher David Price works against the Oakland Athletics during the first inning of a baseball game Friday, Sept. 2, 2016, in Oakland, &hellip;  <a href="http://www.therecord.com/sports-story/6839113-a-s-lose-starter-triggs-to-sore-back-in-16-2-loss-to-red-sox/" onclick="trackOutboundLink('http://www.therecord.com/sports-story/6839113-a-s-lose-starter-triggs-to-sore-back-in-16-2-loss-to-red-sox/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

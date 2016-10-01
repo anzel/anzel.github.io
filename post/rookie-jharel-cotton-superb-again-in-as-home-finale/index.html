@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>Rookie Jharel Cotton superb again in A&#39;s home finale</h3>
-					<p><p>Oakland Athletics&rsquo; Ryon Healy watches his two-run home run against the Texas Rangers during the second inning of a baseball game, Sunday, Sept.  <a href="http://www.sfchronicle.com/athletics/article/Rookie-Jharel-Cotton-superb-again-in-A-s-home-9283822.php">more</a>.</p>
+					<p><p>Oakland Athletics&rsquo; Ryon Healy watches his two-run home run against the Texas Rangers during the second inning of a baseball game, Sunday, Sept.  <a href="http://www.sfchronicle.com/athletics/article/Rookie-Jharel-Cotton-superb-again-in-A-s-home-9283822.php" onclick="trackOutboundLink('http://www.sfchronicle.com/athletics/article/Rookie-Jharel-Cotton-superb-again-in-A-s-home-9283822.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

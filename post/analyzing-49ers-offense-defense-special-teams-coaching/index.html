@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>07</b></p>
 					<h3>Analyzing 49ers&#39; offense, defense, special teams, coaching</h3>
-					<p><p>This area will be tested a lot early in the season: Each of the 49ers&rsquo; first six opponents ranked among the NFL&rsquo;s top 10 in rushing yards in 2015.  <a href="http://www.sfgate.com/49ers/article/Analyzing-49ers-offense-defense-special-9206320.php">more</a>.</p>
+					<p><p>This area will be tested a lot early in the season: Each of the 49ers&rsquo; first six opponents ranked among the NFL&rsquo;s top 10 in rushing yards in 2015.  <a href="http://www.sfgate.com/49ers/article/Analyzing-49ers-offense-defense-special-9206320.php" onclick="trackOutboundLink('http://www.sfgate.com/49ers/article/Analyzing-49ers-offense-defense-special-9206320.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

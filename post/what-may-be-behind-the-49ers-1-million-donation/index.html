@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>15</b></p>
 					<h3>What may be behind the 49ers&#39; $1 million donation</h3>
-					<p><p>The 49ers bring about 60,000 students per year to Levi&rsquo;s Stadium where they learn about Science, Technology, Engineering Art and Math. The team &hellip;  <a href="http://blog.sfgate.com/49ers/2016/09/14/what-may-be-behind-the-49ers-1-million-donation/">more</a>.</p>
+					<p><p>The 49ers bring about 60,000 students per year to Levi&rsquo;s Stadium where they learn about Science, Technology, Engineering Art and Math. The team &hellip;  <a href="http://blog.sfgate.com/49ers/2016/09/14/what-may-be-behind-the-49ers-1-million-donation/" onclick="trackOutboundLink('http://blog.sfgate.com/49ers/2016/09/14/what-may-be-behind-the-49ers-1-million-donation/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>13</b></p>
 					<h3>Oakland Athletics (Jharel Cotton) at Kansas City Royals (Danny Duffy)</h3>
-					<p><p>Duffy) at Ladbrokes. Live in-play betting available on Oakland Athletics (Jharel &hellip;  <a href="https://sports.ladbrokes.com/en-ie/betting/baseball/american/mlb-matches/oakland-athletics-jharel-cotton-at-kansas-city-royals-danny-duffy/222606808/">more</a>.</p>
+					<p><p>Duffy) at Ladbrokes. Live in-play betting available on Oakland Athletics (Jharel &hellip;  <a href="https://sports.ladbrokes.com/en-ie/betting/baseball/american/mlb-matches/oakland-athletics-jharel-cotton-at-kansas-city-royals-danny-duffy/222606808/" onclick="trackOutboundLink('https://sports.ladbrokes.com/en-ie/betting/baseball/american/mlb-matches/oakland-athletics-jharel-cotton-at-kansas-city-royals-danny-duffy/222606808/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

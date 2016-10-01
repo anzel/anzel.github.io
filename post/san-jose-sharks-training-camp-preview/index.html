@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>San Jose Sharks Training Camp Preview</h3>
-					<p><p>San Jose Sharks Training Camp Preview &hellip; With all the heart ache the San Jose Sharks have dealt with in the past, they felt last season was a step in &hellip;  <a href="http://kaplanssportgallery.sportsblog.com/posts/26449265/san-jose-sharks-training-camp-preview.html">more</a>.</p>
+					<p><p>San Jose Sharks Training Camp Preview &hellip; With all the heart ache the San Jose Sharks have dealt with in the past, they felt last season was a step in &hellip;  <a href="http://kaplanssportgallery.sportsblog.com/posts/26449265/san-jose-sharks-training-camp-preview.html" onclick="trackOutboundLink('http://kaplanssportgallery.sportsblog.com/posts/26449265/san-jose-sharks-training-camp-preview.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

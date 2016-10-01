@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>07</b></p>
 					<h3>Jharel Cotton makes memorable major league debut for A&#39;s</h3>
-					<p><p>Oakland Athletics pitcher Jharel Cotton works against the Los Angeles Angels in the first inning of a baseball game Wednesday, Sept. 7, 2016, in &hellip;  <a href="http://www.mysanantonio.com/sports/article/Jharel-Cotton-makes-memorable-major-league-debut-9208680.php">more</a>.</p>
+					<p><p>Oakland Athletics pitcher Jharel Cotton works against the Los Angeles Angels in the first inning of a baseball game Wednesday, Sept. 7, 2016, in &hellip;  <a href="http://www.mysanantonio.com/sports/article/Jharel-Cotton-makes-memorable-major-league-debut-9208680.php" onclick="trackOutboundLink('http://www.mysanantonio.com/sports/article/Jharel-Cotton-makes-memorable-major-league-debut-9208680.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

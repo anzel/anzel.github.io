@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>49ers lineman Quinton Dial helped hold the flag during National Anthem</h3>
-					<p><p>Although San Francisco 49ers-Los Angeles Rams&rsquo; Monday night game occurred one day after the 15th anniversary of the September 11 attacks, the &hellip;  <a href="http://www.foxsports.com/nfl/story/49ers-lineman-quinton-dial-helped-hold-the-flag-during-national-anthem-091316">more</a>.</p>
+					<p><p>Although San Francisco 49ers-Los Angeles Rams&rsquo; Monday night game occurred one day after the 15th anniversary of the September 11 attacks, the &hellip;  <a href="http://www.foxsports.com/nfl/story/49ers-lineman-quinton-dial-helped-hold-the-flag-during-national-anthem-091316" onclick="trackOutboundLink('http://www.foxsports.com/nfl/story/49ers-lineman-quinton-dial-helped-hold-the-flag-during-national-anthem-091316'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

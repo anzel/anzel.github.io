@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>05</b></p>
 					<h3>Eduardo Rodriguez loses no-hitter, Red Sox lose to A&#39;s on walk-off, 1-0</h3>
-					<p><p>&hellip; the ninth, when a Khris Davis double off Craig Kimbrel  and a Brock Holt error on the same play  gave the Oakland Athletics a 1-0 walk-off win.  <a href="http://www.bostonherald.com/sports/red_sox/clubhouse_insider/2016/09/eduardo_rodriguez_loses_no_hitter_red_sox_lose_to_as_on">more</a>.</p>
+					<p><p>&hellip; the ninth, when a Khris Davis double off Craig Kimbrel  and a Brock Holt error on the same play  gave the Oakland Athletics a 1-0 walk-off win.  <a href="http://www.bostonherald.com/sports/red_sox/clubhouse_insider/2016/09/eduardo_rodriguez_loses_no_hitter_red_sox_lose_to_as_on" onclick="trackOutboundLink('http://www.bostonherald.com/sports/red_sox/clubhouse_insider/2016/09/eduardo_rodriguez_loses_no_hitter_red_sox_lose_to_as_on'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

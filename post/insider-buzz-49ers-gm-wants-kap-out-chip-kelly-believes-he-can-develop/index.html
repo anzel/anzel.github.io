@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>Insider Buzz: 49ers GM Wants Kap Out, Chip Kelly Believes He Can Develop</h3>
-					<p><p>Would San Francisco 49ers general manager Trent Baalke get rid of Colin Kaepernick? Does head coach Chip Kelly want to see if he can fix the &hellip;  <a href="http://bleacherreport.com/articles/2663713-insider-buzz-49ers-gm-wants-kap-out-chip-kelly-believes-he-can-develop">more</a>.</p>
+					<p><p>Would San Francisco 49ers general manager Trent Baalke get rid of Colin Kaepernick? Does head coach Chip Kelly want to see if he can fix the &hellip;  <a href="http://bleacherreport.com/articles/2663713-insider-buzz-49ers-gm-wants-kap-out-chip-kelly-believes-he-can-develop" onclick="trackOutboundLink('http://bleacherreport.com/articles/2663713-insider-buzz-49ers-gm-wants-kap-out-chip-kelly-believes-he-can-develop'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

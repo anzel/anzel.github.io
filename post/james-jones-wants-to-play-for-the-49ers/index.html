@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>01</b></p>
 					<h3>James Jones wants to play for the 49ers</h3>
-					<p><p>The Oakland Raiders aren&rsquo;t an option, but the San Francisco 49ers might be a fit. The 49ers&rsquo; wideout depth chart is laughably bad, and Jones could &hellip;  <a href="https://www.numberfire.com/nfl/player-news/27929/james-jones-wants-to-play-for-the-49ers">more</a>.</p>
+					<p><p>The Oakland Raiders aren&rsquo;t an option, but the San Francisco 49ers might be a fit. The 49ers&rsquo; wideout depth chart is laughably bad, and Jones could &hellip;  <a href="https://www.numberfire.com/nfl/player-news/27929/james-jones-wants-to-play-for-the-49ers" onclick="trackOutboundLink('https://www.numberfire.com/nfl/player-news/27929/james-jones-wants-to-play-for-the-49ers'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>07</b></p>
 					<h3>San Jose Earthquakes sign 11-year-old ahead of match with Seattle Sounders</h3>
-					<p><p>Baker, who will serve as honorary captain for the Quakes, was diagnosed with stage IV neuroblastoma and is being given the opportunity as part of a &hellip;  <a href="http://www.soundersfc.com/post/2016/09/07/san-jose-earthquakes-sign-11-year-old-ahead-match-seattle-sounders">more</a>.</p>
+					<p><p>Baker, who will serve as honorary captain for the Quakes, was diagnosed with stage IV neuroblastoma and is being given the opportunity as part of a &hellip;  <a href="http://www.soundersfc.com/post/2016/09/07/san-jose-earthquakes-sign-11-year-old-ahead-match-seattle-sounders" onclick="trackOutboundLink('http://www.soundersfc.com/post/2016/09/07/san-jose-earthquakes-sign-11-year-old-ahead-match-seattle-sounders'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

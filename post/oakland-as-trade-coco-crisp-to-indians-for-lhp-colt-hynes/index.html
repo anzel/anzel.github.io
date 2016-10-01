@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>01</b></p>
 					<h3>Oakland A&#39;s trade Coco Crisp to Indians for LHP Colt Hynes</h3>
-					<p><p>The Oakland A&rsquo;s traded outfielder Coco Crisp to the Cleveland Indians on Wednesday. In return, they received 31-year-old LHP Colt Hynes. To take &hellip;  <a href="http://www.athleticsnation.com/2016/8/31/12730386/oakland-as-trade-coco-crisp-cleveland-indians-lhp-colt-hynes">more</a>.</p>
+					<p><p>The Oakland A&rsquo;s traded outfielder Coco Crisp to the Cleveland Indians on Wednesday. In return, they received 31-year-old LHP Colt Hynes. To take &hellip;  <a href="http://www.athleticsnation.com/2016/8/31/12730386/oakland-as-trade-coco-crisp-cleveland-indians-lhp-colt-hynes" onclick="trackOutboundLink('http://www.athleticsnation.com/2016/8/31/12730386/oakland-as-trade-coco-crisp-cleveland-indians-lhp-colt-hynes'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

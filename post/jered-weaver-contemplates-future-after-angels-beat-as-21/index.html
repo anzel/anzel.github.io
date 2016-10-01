@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>Jered Weaver contemplates future after Angels beat A&#39;s 2-1</h3>
-					<p><p>&hellip; and the Angels beat the Oakland Athletics 2-1 on Monday night when Yunel Escobar scored on Albert Pujols&rsquo; weak grounder in the eighth. Weaver &hellip;  <a href="http://www.thenewstribune.com/sports/article104371726.html">more</a>.</p>
+					<p><p>&hellip; and the Angels beat the Oakland Athletics 2-1 on Monday night when Yunel Escobar scored on Albert Pujols&rsquo; weak grounder in the eighth. Weaver &hellip;  <a href="http://www.thenewstribune.com/sports/article104371726.html" onclick="trackOutboundLink('http://www.thenewstribune.com/sports/article104371726.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

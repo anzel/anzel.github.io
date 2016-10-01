@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>20</b></p>
 					<h3>Colin Kaepernick Reportedly to be Cut by 49ers</h3>
-					<p><p>Regardless of politics or not, he has a very, very big uphill battle to make this team. I&rsquo;d be shocked if he&rsquo;s on the 49ers by the time this season ends  <a href="http://dunk360.com/colin-kaepernick-reportedly-going-to-be-cut/">more</a>.</p>
+					<p><p>Regardless of politics or not, he has a very, very big uphill battle to make this team. I&rsquo;d be shocked if he&rsquo;s on the 49ers by the time this season ends  <a href="http://dunk360.com/colin-kaepernick-reportedly-going-to-be-cut/" onclick="trackOutboundLink('http://dunk360.com/colin-kaepernick-reportedly-going-to-be-cut/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

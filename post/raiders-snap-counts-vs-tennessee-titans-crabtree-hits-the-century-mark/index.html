@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>26</b></p>
 					<h3>Raiders Snap Counts vs. Tennessee Titans: Crabtree Hits The Century Mark,</h3>
-					<p><p>Raiders.com The Oakland Raiders handled business at Nissan Stadium Sunday afternoon, beating the Tennessee Titans 17-10 to improve their overall record to &hellip;  <a href="http://www.raiders.com/news/article-1/Raiders-Snap-Counts-vs-Tennessee-Titans-Crabtree-Hits-The-Century-Mark-Joseph-Starts/74e2a4d1-da81-42e6-af81-42c77d528af0">more</a>.</p>
+					<p><p>Raiders.com The Oakland Raiders handled business at Nissan Stadium Sunday afternoon, beating the Tennessee Titans 17-10 to improve their overall record to &hellip;  <a href="http://www.raiders.com/news/article-1/Raiders-Snap-Counts-vs-Tennessee-Titans-Crabtree-Hits-The-Century-Mark-Joseph-Starts/74e2a4d1-da81-42e6-af81-42c77d528af0" onclick="trackOutboundLink('http://www.raiders.com/news/article-1/Raiders-Snap-Counts-vs-Tennessee-Titans-Crabtree-Hits-The-Century-Mark-Joseph-Starts/74e2a4d1-da81-42e6-af81-42c77d528af0'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>03</b></p>
 					<h3>Live updating 49ers final cut tracker</h3>
-					<p><p>This post will be updated throughout the day as news comes in. Here&rsquo;s what we know so far: Aaron Lynch will be start the season on the &hellip;  <a href="http://ninerswire.usatoday.com/2016/09/03/live-updating-49ers-final-cut-tracker/">more</a>.</p>
+					<p><p>This post will be updated throughout the day as news comes in. Here&rsquo;s what we know so far: Aaron Lynch will be start the season on the &hellip;  <a href="http://ninerswire.usatoday.com/2016/09/03/live-updating-49ers-final-cut-tracker/" onclick="trackOutboundLink('http://ninerswire.usatoday.com/2016/09/03/live-updating-49ers-final-cut-tracker/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

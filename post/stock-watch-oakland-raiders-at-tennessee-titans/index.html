@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>Stock Watch: Oakland Raiders at Tennessee Titans</h3>
-					<p><p>A weekly series recapping three players on the Oakland Raiders whose stock is on the rise after playing well, and three players whose stock has taken &hellip;  <a href="http://justblogbaby.com/2016/09/28/three-three-oakland-raiders-stock-watch/">more</a>.</p>
+					<p><p>A weekly series recapping three players on the Oakland Raiders whose stock is on the rise after playing well, and three players whose stock has taken &hellip;  <a href="http://justblogbaby.com/2016/09/28/three-three-oakland-raiders-stock-watch/" onclick="trackOutboundLink('http://justblogbaby.com/2016/09/28/three-three-oakland-raiders-stock-watch/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

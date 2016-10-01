@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>20</b></p>
 					<h3>Candidates for special session mum on Raiders stadium deal</h3>
-					<p><p>&hellip; before an expected special session where the Legislature will vote on public funding for a new stadium to attract the Oakland Raiders to Las Vegas.  <a href="http://www.rgj.com/story/news/politics/2016/09/19/county-fill-open-seats-possible-raiders-session/90700030/">more</a>.</p>
+					<p><p>&hellip; before an expected special session where the Legislature will vote on public funding for a new stadium to attract the Oakland Raiders to Las Vegas.  <a href="http://www.rgj.com/story/news/politics/2016/09/19/county-fill-open-seats-possible-raiders-session/90700030/" onclick="trackOutboundLink('http://www.rgj.com/story/news/politics/2016/09/19/county-fill-open-seats-possible-raiders-session/90700030/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>Charles Woodson Picks Oakland Raiders To Win Super Bowl</h3>
-					<p><p>Charles Woodson has bold predictions for the Oakland Raiders. &hellip; has picked the Oakland Raiders to not only win the AFC Championship, but also &hellip;  <a href="http://justblogbaby.com/2016/09/08/charles-woodson-picks-oakland-raiders-to-win-super-bowl/">more</a>.</p>
+					<p><p>Charles Woodson has bold predictions for the Oakland Raiders. &hellip; has picked the Oakland Raiders to not only win the AFC Championship, but also &hellip;  <a href="http://justblogbaby.com/2016/09/08/charles-woodson-picks-oakland-raiders-to-win-super-bowl/" onclick="trackOutboundLink('http://justblogbaby.com/2016/09/08/charles-woodson-picks-oakland-raiders-to-win-super-bowl/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

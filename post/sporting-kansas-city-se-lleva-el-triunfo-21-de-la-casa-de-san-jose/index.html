@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>Sporting Kansas City se lleva el triunfo 2-1 de la casa de San Jose</h3>
-					<p><p>Univision (Comunicado de prensa) Dom Dwyer abri el marcador para el Sporting Kansas City que abri el camino para arrancar un triunfo al San Jose Earthquakes en su propia casa.  <a href="http://www.univision.com/deportes/futbol/mls/sporting-kansas-city-se-lleva-el-triunfo-2-1-de-la-casa-de-san-jose-earthquakes">more</a>.</p>
+					<p><p>Univision (Comunicado de prensa) Dom Dwyer abri el marcador para el Sporting Kansas City que abri el camino para arrancar un triunfo al San Jose Earthquakes en su propia casa.  <a href="http://www.univision.com/deportes/futbol/mls/sporting-kansas-city-se-lleva-el-triunfo-2-1-de-la-casa-de-san-jose-earthquakes" onclick="trackOutboundLink('http://www.univision.com/deportes/futbol/mls/sporting-kansas-city-se-lleva-el-triunfo-2-1-de-la-casa-de-san-jose-earthquakes'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

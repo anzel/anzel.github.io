@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>09</b></p>
 					<h3>49ers&#39; Reid feels supported by ownership in anthem protest</h3>
-					<p><p>A day after the 49ers pledged $1 million to two Bay Area foundations to improve racial and economic inequities, safety Eric Reid said he viewed it as a &hellip;  <a href="http://www.sfgate.com/49ers/article/49ers-Reid-feels-supported-by-owenership-in-9213440.php">more</a>.</p>
+					<p><p>A day after the 49ers pledged $1 million to two Bay Area foundations to improve racial and economic inequities, safety Eric Reid said he viewed it as a &hellip;  <a href="http://www.sfgate.com/49ers/article/49ers-Reid-feels-supported-by-owenership-in-9213440.php" onclick="trackOutboundLink('http://www.sfgate.com/49ers/article/49ers-Reid-feels-supported-by-owenership-in-9213440.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

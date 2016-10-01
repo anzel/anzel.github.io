@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>Oakland Athletics Next Ace: 100% Cotton?</h3>
-					<p><p>A lot of criticism has been thrown the way of the Oakland Athletics over the past couple of dismal seasons in a ballpark that needs a serious facelift (or &hellip;  <a href="http://calltothepen.com/2016/09/25/oakland-athletics-next-ace/">more</a>.</p>
+					<p><p>A lot of criticism has been thrown the way of the Oakland Athletics over the past couple of dismal seasons in a ballpark that needs a serious facelift (or &hellip;  <a href="http://calltothepen.com/2016/09/25/oakland-athletics-next-ace/" onclick="trackOutboundLink('http://calltothepen.com/2016/09/25/oakland-athletics-next-ace/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>01</b></p>
 					<h3>Seahawks vs. Raiders tonight on KPUG to wrap up preseason</h3>
-					<p><p>Seattle Seahawks head coach Pete Carroll, left, talks with Oakland Raiders head coach Jack Del Rio, right, before the start of a preseason NFL &hellip;  <a href="http://kpug1170.com/news/007700-seahawks-vs-raiders-on-kpug-to-wrap-up-preseason/">more</a>.</p>
+					<p><p>Seattle Seahawks head coach Pete Carroll, left, talks with Oakland Raiders head coach Jack Del Rio, right, before the start of a preseason NFL &hellip;  <a href="http://kpug1170.com/news/007700-seahawks-vs-raiders-on-kpug-to-wrap-up-preseason/" onclick="trackOutboundLink('http://kpug1170.com/news/007700-seahawks-vs-raiders-on-kpug-to-wrap-up-preseason/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

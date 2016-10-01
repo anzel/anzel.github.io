@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>15</b></p>
 					<h3>Rams&#39; Case Keenum says he was &#39;seeing ghosts&#39; vs. 49ers, will start in Week</h3>
-					<p><p>CBSSports.com The Rams drafted quarterback Jared Goff first overall in the spring, but the future face of the franchise was inactive for the team&rsquo;s season opener &hellip;  <a href="http://www.cbssports.com/nfl/news/rams-case-keenum-says-he-was-seeing-ghosts-vs-49ers-will-start-in-week-2/">more</a>.</p>
+					<p><p>CBSSports.com The Rams drafted quarterback Jared Goff first overall in the spring, but the future face of the franchise was inactive for the team&rsquo;s season opener &hellip;  <a href="http://www.cbssports.com/nfl/news/rams-case-keenum-says-he-was-seeing-ghosts-vs-49ers-will-start-in-week-2/" onclick="trackOutboundLink('http://www.cbssports.com/nfl/news/rams-case-keenum-says-he-was-seeing-ghosts-vs-49ers-will-start-in-week-2/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

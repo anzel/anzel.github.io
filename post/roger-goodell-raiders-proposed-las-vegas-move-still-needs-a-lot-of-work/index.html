@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>19</b></p>
 					<h3>Roger Goodell: Raiders&#39; proposed Las Vegas move still needs &#39;a lot of work&#39;</h3>
-					<p><p>The Oakland Raiders&rsquo; bid to relocate to Las Vegas cleared a major hurdle last week in securing public funding for a stadium, but NFL commissioner &hellip;  <a href="http://sports.yahoo.com/news/roger-goodell-raiders-proposed-las-142517959.html">more</a>.</p>
+					<p><p>The Oakland Raiders&rsquo; bid to relocate to Las Vegas cleared a major hurdle last week in securing public funding for a stadium, but NFL commissioner &hellip;  <a href="http://sports.yahoo.com/news/roger-goodell-raiders-proposed-las-142517959.html" onclick="trackOutboundLink('http://sports.yahoo.com/news/roger-goodell-raiders-proposed-las-142517959.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

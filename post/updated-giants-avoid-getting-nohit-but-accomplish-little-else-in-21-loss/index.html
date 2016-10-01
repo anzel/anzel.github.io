@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>03</b></p>
 					<h3>UPDATED: Giants avoid getting no-hit but accomplish little else in 2-1 loss</h3>
-					<p><p>The Mercury News (blog) San Francisco Giants&rsquo; Eduardo Nunez kicks his helmet after lining out sharply to Chicago Cubs third baseman Kris Bryant during the seventh inning of &hellip;  <a href="http://blogs.mercurynews.com/giants/2016/09/02/giants-avoid-getting-no-hit-accomplish-little-else-2-1-loss-wrigley-field/">more</a>.</p>
+					<p><p>The Mercury News (blog) San Francisco Giants&rsquo; Eduardo Nunez kicks his helmet after lining out sharply to Chicago Cubs third baseman Kris Bryant during the seventh inning of &hellip;  <a href="http://blogs.mercurynews.com/giants/2016/09/02/giants-avoid-getting-no-hit-accomplish-little-else-2-1-loss-wrigley-field/" onclick="trackOutboundLink('http://blogs.mercurynews.com/giants/2016/09/02/giants-avoid-getting-no-hit-accomplish-little-else-2-1-loss-wrigley-field/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

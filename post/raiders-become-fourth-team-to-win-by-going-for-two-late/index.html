@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>Raiders become fourth team to win by going for two late</h3>
-					<p><p>Oakland Raiders wide receiver Michael Crabtree (15) pulls in a touchdown reception over New AP. In 1994, the NFL adopted the ability to go for two &hellip;  <a href="http://profootballtalk.nbcsports.com/2016/09/11/raiders-become-fourth-team-to-win-by-going-for-two/">more</a>.</p>
+					<p><p>Oakland Raiders wide receiver Michael Crabtree (15) pulls in a touchdown reception over New AP. In 1994, the NFL adopted the ability to go for two &hellip;  <a href="http://profootballtalk.nbcsports.com/2016/09/11/raiders-become-fourth-team-to-win-by-going-for-two/" onclick="trackOutboundLink('http://profootballtalk.nbcsports.com/2016/09/11/raiders-become-fourth-team-to-win-by-going-for-two/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

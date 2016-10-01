@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>A&#39;s Cotton impressive in MLB debut</h3>
-					<p><p>Right-hander Jharel Cotton allowed one run over 6 <sup>1</sup>&frasl;<sub>3</sub> innings in his major-league debut, leading the Oakland Athletics to a 4-1 victory against the &hellip;  <a href="http://www.crcconnection.com/2016/09/08/as-cotton-impressive-in-mlb-debut.html">more</a>.</p>
+					<p><p>Right-hander Jharel Cotton allowed one run over 6 <sup>1</sup>&frasl;<sub>3</sub> innings in his major-league debut, leading the Oakland Athletics to a 4-1 victory against the &hellip;  <a href="http://www.crcconnection.com/2016/09/08/as-cotton-impressive-in-mlb-debut.html" onclick="trackOutboundLink('http://www.crcconnection.com/2016/09/08/as-cotton-impressive-in-mlb-debut.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

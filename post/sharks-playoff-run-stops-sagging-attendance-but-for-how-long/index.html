@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>03</b></p>
 					<h3>Sharks&#39; Playoff Run Stops Sagging Attendance, But For How Long?</h3>
-					<p><p>It&rsquo;s been a couple of months since the Pittsburgh Penguins snatched the Stanley Cup from the jaws of the San Jose Sharks. The Sharks didn&rsquo;t hoist the &hellip;  <a href="http://www.hockeybuzz.com/blog/Steve-Palumbo/Sharks-Playoff-Run-Stops-Sagging-Attendance-But-For-How-Long/166/78966">more</a>.</p>
+					<p><p>It&rsquo;s been a couple of months since the Pittsburgh Penguins snatched the Stanley Cup from the jaws of the San Jose Sharks. The Sharks didn&rsquo;t hoist the &hellip;  <a href="http://www.hockeybuzz.com/blog/Steve-Palumbo/Sharks-Playoff-Run-Stops-Sagging-Attendance-But-For-How-Long/166/78966" onclick="trackOutboundLink('http://www.hockeybuzz.com/blog/Steve-Palumbo/Sharks-Playoff-Run-Stops-Sagging-Attendance-But-For-How-Long/166/78966'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

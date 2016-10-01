@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>07</b></p>
 					<h3>Rams vs. 49ers 2016 predictions: It&#39;s not pretty, but the Rams get to 1-0</h3>
-					<p><p>While the Week 1 matchup between the Los Angeles Rams and San Francisco 49ers is the final game of the opening week of action, it&rsquo;s still only days &hellip;  <a href="http://theramswire.usatoday.com/2016/09/07/rams-vs-49ers-2016-predictions-its-not-pretty-but-the-rams-get-to-1-0/">more</a>.</p>
+					<p><p>While the Week 1 matchup between the Los Angeles Rams and San Francisco 49ers is the final game of the opening week of action, it&rsquo;s still only days &hellip;  <a href="http://theramswire.usatoday.com/2016/09/07/rams-vs-49ers-2016-predictions-its-not-pretty-but-the-rams-get-to-1-0/" onclick="trackOutboundLink('http://theramswire.usatoday.com/2016/09/07/rams-vs-49ers-2016-predictions-its-not-pretty-but-the-rams-get-to-1-0/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

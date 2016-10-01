@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -72,6 +81,14 @@
 		<div id="featured">
 			<div class="title" style="text-align:left;margin-left:2.5em"><h2>Posts</h2></div>
 			<ul class="style2">
+				
+				<li>
+				<p><span style="width: 80px;margin: 0 2em 0 0.5em;">Oct 01, 2016</span> <a href="//anzel.net/post/cowboys-at-49ers-preview-predictions-and-more/">Cowboys at 49ers: Preview, Predictions, and More</a> </p>
+				</li>
+				
+				<li>
+				<p><span style="width: 80px;margin: 0 2em 0 0.5em;">Oct 01, 2016</span> <a href="//anzel.net/post/old-dominion-monarchs-at-charlotte-49ers/">Old Dominion Monarchs at Charlotte 49ers</a> </p>
+				</li>
 				
 				<li>
 				<p><span style="width: 80px;margin: 0 2em 0 0.5em;">Oct 01, 2016</span> <a href="//anzel.net/post/preview-and-prediction-oakland-raiders-at-baltimore-ravens/">Preview and Prediction: Oakland Raiders at Baltimore Ravens</a> </p>

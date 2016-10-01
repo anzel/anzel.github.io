@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>02</b></p>
 					<h3>San Francisco 49ers QB Colin Kaepernick refuses to stand AGAIN during</h3>
-					<p><p>Daily Mail The controversial quarterback knelt down as a black Navy sailor sang The Star Spangled Banner ahead of the San Francisco 49ers last pre-season &hellip;  <a href="http://www.dailymail.co.uk/news/article-3770140/San-Francisco-49ers-QB-Colin-Kaepernick-refuses-stand-national-anthem.html">more</a>.</p>
+					<p><p>Daily Mail The controversial quarterback knelt down as a black Navy sailor sang The Star Spangled Banner ahead of the San Francisco 49ers last pre-season &hellip;  <a href="http://www.dailymail.co.uk/news/article-3770140/San-Francisco-49ers-QB-Colin-Kaepernick-refuses-stand-national-anthem.html" onclick="trackOutboundLink('http://www.dailymail.co.uk/news/article-3770140/San-Francisco-49ers-QB-Colin-Kaepernick-refuses-stand-national-anthem.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

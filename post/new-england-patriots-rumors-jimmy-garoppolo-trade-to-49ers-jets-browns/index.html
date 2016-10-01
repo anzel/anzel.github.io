@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>23</b></p>
 					<h3>New England Patriots Rumors: Jimmy Garoppolo Trade To 49ers, Jets, Browns</h3>
-					<p><p>Morning News USA Jimmy Garoppolo&rsquo;s future with the New England Patriots seems set as a backup unless Jacoby Brissett shows him up with his performance against the &hellip;  <a href="http://www.morningnewsusa.com/new-england-patriots-rumors-jimmy-garoppolo-trade-49ers-jets-browns-next-season-possible-23107238.html">more</a>.</p>
+					<p><p>Morning News USA Jimmy Garoppolo&rsquo;s future with the New England Patriots seems set as a backup unless Jacoby Brissett shows him up with his performance against the &hellip;  <a href="http://www.morningnewsusa.com/new-england-patriots-rumors-jimmy-garoppolo-trade-49ers-jets-browns-next-season-possible-23107238.html" onclick="trackOutboundLink('http://www.morningnewsusa.com/new-england-patriots-rumors-jimmy-garoppolo-trade-49ers-jets-browns-next-season-possible-23107238.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

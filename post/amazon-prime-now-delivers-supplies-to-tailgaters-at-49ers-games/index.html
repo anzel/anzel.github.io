@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>09</b></p>
 					<h3>Amazon Prime Now delivers supplies to tailgaters at 49ers games</h3>
-					<p><p>The online retailer is teaming up with the San Francisco 49ers to deliver supplies to tailgaters at Levi&rsquo;s Stadium during this year&rsquo;s slate of NFL games.  <a href="https://www.engadget.com/2016/09/09/amazon-prime-now-49ers-tailgate-delivery/">more</a>.</p>
+					<p><p>The online retailer is teaming up with the San Francisco 49ers to deliver supplies to tailgaters at Levi&rsquo;s Stadium during this year&rsquo;s slate of NFL games.  <a href="https://www.engadget.com/2016/09/09/amazon-prime-now-49ers-tailgate-delivery/" onclick="trackOutboundLink('https://www.engadget.com/2016/09/09/amazon-prime-now-49ers-tailgate-delivery/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

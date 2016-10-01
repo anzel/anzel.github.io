@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>15</b></p>
 					<h3>Raiders Developing Triplets: Derek Carr, Latavius Murray, Amari Cooper</h3>
-					<p><p>On the heels of an instant classic finish last Sunday between the Oakland Raiders and New Orleans Saints, there&rsquo;s talk the Raiders will make the leap &hellip;  <a href="http://www.thesportsbank.net/oakland-raiders/triplets-derek-carr-latavius-murray-amari-cooper-raiders/">more</a>.</p>
+					<p><p>On the heels of an instant classic finish last Sunday between the Oakland Raiders and New Orleans Saints, there&rsquo;s talk the Raiders will make the leap &hellip;  <a href="http://www.thesportsbank.net/oakland-raiders/triplets-derek-carr-latavius-murray-amari-cooper-raiders/" onclick="trackOutboundLink('http://www.thesportsbank.net/oakland-raiders/triplets-derek-carr-latavius-murray-amari-cooper-raiders/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>09</b></p>
 					<h3>Keys 2 Victory: Week 1 at 49ers</h3>
-					<p><p>season with the Rams keys to victory for Monday Night Football.  <a href="http://www.therams.com/videos/videos/Keys-2-Victory-Week-1-at-49ers/7a1d3c1a-3d70-40fd-854c-1145a3182620">more</a>.</p>
+					<p><p>season with the Rams keys to victory for Monday Night Football.  <a href="http://www.therams.com/videos/videos/Keys-2-Victory-Week-1-at-49ers/7a1d3c1a-3d70-40fd-854c-1145a3182620" onclick="trackOutboundLink('http://www.therams.com/videos/videos/Keys-2-Victory-Week-1-at-49ers/7a1d3c1a-3d70-40fd-854c-1145a3182620'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

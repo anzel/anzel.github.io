@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>07</b></p>
 					<h3>Oakland Raiders vs New Orleans Saints: Week one preview</h3>
-					<p><p>The Oakland Raiders head into the 2016-17 with playoffs on the mind. The Raiders haven&rsquo;t made it past week 16 since 2002, the year they went to the &hellip;  <a href="http://theinscribermag.com/sports/oakland-raiders-vs-new-orleans-saints-week-one-preview.html">more</a>.</p>
+					<p><p>The Oakland Raiders head into the 2016-17 with playoffs on the mind. The Raiders haven&rsquo;t made it past week 16 since 2002, the year they went to the &hellip;  <a href="http://theinscribermag.com/sports/oakland-raiders-vs-new-orleans-saints-week-one-preview.html" onclick="trackOutboundLink('http://theinscribermag.com/sports/oakland-raiders-vs-new-orleans-saints-week-one-preview.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

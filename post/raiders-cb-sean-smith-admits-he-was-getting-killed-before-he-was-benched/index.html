@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>Raiders CB Sean Smith admits he &#39;was getting killed&#39; before he was benched</h3>
-					<p><p>The Oakland Raiders opened their 2016 season with a shocking win over the New Orleans Saints. It came down to a two-point conversion in the final &hellip;  <a href="http://www.foxsports.com/nfl/story/raiders-cb-sean-smith-admits-he-was-getting-killed-before-he-was-benched-091416">more</a>.</p>
+					<p><p>The Oakland Raiders opened their 2016 season with a shocking win over the New Orleans Saints. It came down to a two-point conversion in the final &hellip;  <a href="http://www.foxsports.com/nfl/story/raiders-cb-sean-smith-admits-he-was-getting-killed-before-he-was-benched-091416" onclick="trackOutboundLink('http://www.foxsports.com/nfl/story/raiders-cb-sean-smith-admits-he-was-getting-killed-before-he-was-benched-091416'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

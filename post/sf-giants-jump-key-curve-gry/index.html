@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>20</b></p>
 					<h3>SF GIANTS Jump Key Curve gry</h3>
-					<p><p>Francisco Giants &amp; MLB in style withlids.com Novelties! Your team &hellip;  <a href="https://www.westfield.com/products/us-lids/sf-giants-jump-key-curve-gry/861e57b1-94e8-4b93-abb5-3d929550497d">more</a>.</p>
+					<p><p>Francisco Giants &amp; MLB in style withlids.com Novelties! Your team &hellip;  <a href="https://www.westfield.com/products/us-lids/sf-giants-jump-key-curve-gry/861e57b1-94e8-4b93-abb5-3d929550497d" onclick="trackOutboundLink('https://www.westfield.com/products/us-lids/sf-giants-jump-key-curve-gry/861e57b1-94e8-4b93-abb5-3d929550497d'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

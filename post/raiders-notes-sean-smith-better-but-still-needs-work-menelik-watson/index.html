@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>20</b></p>
 					<h3>Raiders notes: Sean Smith better but still needs work; Menelik Watson,</h3>
-					<p><p>The Mercury News ALAMEDA  Raiders cornerback Sean Smith improved in his second game with the team, but still has work to do. It was a little better, still need more &hellip;  <a href="http://www.mercurynews.com/2016/09/19/raiders-notes-sean-smith-better-but-still-need-work-updates-on-amerson-and-watson/">more</a>.</p>
+					<p><p>The Mercury News ALAMEDA  Raiders cornerback Sean Smith improved in his second game with the team, but still has work to do. It was a little better, still need more &hellip;  <a href="http://www.mercurynews.com/2016/09/19/raiders-notes-sean-smith-better-but-still-need-work-updates-on-amerson-and-watson/" onclick="trackOutboundLink('http://www.mercurynews.com/2016/09/19/raiders-notes-sean-smith-better-but-still-need-work-updates-on-amerson-and-watson/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

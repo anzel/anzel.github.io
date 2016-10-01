@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>MLS Multiplex Team of the Week: Week 27</h3>
-					<p><p>Sporting KC, the Houston Dynamo, the Philadelphia Union, the Montreal Impact, the San Jose Earthquakes, the Seattle Sounders, the New York Red &hellip;  <a href="http://mlsmultiplex.com/2016/09/12/mls-multiplex-team-week-week-27/">more</a>.</p>
+					<p><p>Sporting KC, the Houston Dynamo, the Philadelphia Union, the Montreal Impact, the San Jose Earthquakes, the Seattle Sounders, the New York Red &hellip;  <a href="http://mlsmultiplex.com/2016/09/12/mls-multiplex-team-week-week-27/" onclick="trackOutboundLink('http://mlsmultiplex.com/2016/09/12/mls-multiplex-team-week-week-27/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

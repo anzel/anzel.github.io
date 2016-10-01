@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>11</b></p>
 					<h3>Saints vs. Raiders: What TV channel is the opener on?</h3>
-					<p><p>The New Orleans Saints begin their 2016 regular season at home against the Oakland Raiders Sunday at noon at the Mercedes-Benz Superdome.  <a href="http://www.nola.com/saints/index.ssf/2016/09/saints_vs_raiders_what_tv_chan.html">more</a>.</p>
+					<p><p>The New Orleans Saints begin their 2016 regular season at home against the Oakland Raiders Sunday at noon at the Mercedes-Benz Superdome.  <a href="http://www.nola.com/saints/index.ssf/2016/09/saints_vs_raiders_what_tv_chan.html" onclick="trackOutboundLink('http://www.nola.com/saints/index.ssf/2016/09/saints_vs_raiders_what_tv_chan.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

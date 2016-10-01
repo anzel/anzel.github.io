@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>49ers donating $1 million to community foundations</h3>
-					<p><p>Foundation are receiving a combined $1 million boost from the 49ers, &hellip;  <a href="http://wowway.net/news/read/category/sports/article/the_mercury_news-49ers_donating_1_million_to_community_foundations-tca">more</a>.</p>
+					<p><p>Foundation are receiving a combined $1 million boost from the 49ers, &hellip;  <a href="http://wowway.net/news/read/category/sports/article/the_mercury_news-49ers_donating_1_million_to_community_foundations-tca" onclick="trackOutboundLink('http://wowway.net/news/read/category/sports/article/the_mercury_news-49ers_donating_1_million_to_community_foundations-tca'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

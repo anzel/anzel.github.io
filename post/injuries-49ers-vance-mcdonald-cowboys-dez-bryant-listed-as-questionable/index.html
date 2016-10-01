@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Oct<b>01</b></p>
 					<h3>Injuries: 49ers&#39; Vance McDonald, Cowboys&#39; Dez Bryant listed as questionable</h3>
-					<p><p>SANTA CLARA &ndash; Tight ends Vance McDonald (hip) and Garrett Celek (back) practiced in a limited fashion for the last two days and are listed as &hellip;  <a href="http://www.sacbee.com/sports/nfl/san-francisco-49ers/article105202106.html">more</a>.</p>
+					<p><p>SANTA CLARA &ndash; Tight ends Vance McDonald (hip) and Garrett Celek (back) practiced in a limited fashion for the last two days and are listed as &hellip;  <a href="http://www.sacbee.com/sports/nfl/san-francisco-49ers/article105202106.html" onclick="trackOutboundLink('http://www.sacbee.com/sports/nfl/san-francisco-49ers/article105202106.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

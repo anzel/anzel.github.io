@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>23</b></p>
 					<h3>Four Downs: Players to Watch When 49ers Visit Seahawks in Week 3</h3>
-					<p><p>Our 49ers.com writers are back to break down four pressing topics in the San Francisco 49ers first divisional road game of the 2016 regular season &hellip;  <a href="http://www.49ers.com/news/article-2/Four-Downs-Players-to-Watch-When-49ers-Visit-Seahawks-in-Week-3/b9df06a9-1646-4907-927b-e7fa488697ab">more</a>.</p>
+					<p><p>Our 49ers.com writers are back to break down four pressing topics in the San Francisco 49ers first divisional road game of the 2016 regular season &hellip;  <a href="http://www.49ers.com/news/article-2/Four-Downs-Players-to-Watch-When-49ers-Visit-Seahawks-in-Week-3/b9df06a9-1646-4907-927b-e7fa488697ab" onclick="trackOutboundLink('http://www.49ers.com/news/article-2/Four-Downs-Players-to-Watch-When-49ers-Visit-Seahawks-in-Week-3/b9df06a9-1646-4907-927b-e7fa488697ab'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

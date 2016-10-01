@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>DEATH SENTENCE? Why Saints Can&#39;t Afford Another 0-2 Start</h3>
-					<p><p>Sep 11, 2016; New Orleans, LA, USA; Oakland Raiders strong safety T.J. Carrie (38) celebrates after New Orleans Saints kicker Will Lutz (3) misses a &hellip;  <a href="http://bigeasybeliever.com/2016/09/18/death-sentence-why-saints-cant-afford-another-0-2-start/">more</a>.</p>
+					<p><p>Sep 11, 2016; New Orleans, LA, USA; Oakland Raiders strong safety T.J. Carrie (38) celebrates after New Orleans Saints kicker Will Lutz (3) misses a &hellip;  <a href="http://bigeasybeliever.com/2016/09/18/death-sentence-why-saints-cant-afford-another-0-2-start/" onclick="trackOutboundLink('http://bigeasybeliever.com/2016/09/18/death-sentence-why-saints-cant-afford-another-0-2-start/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>04</b></p>
 					<h3>Police threaten to boycott 49ers games over Kaepernick&#39;s anthem protest</h3>
-					<p><p>Kaepernick&rsquo;s inappropriate behaviour has threatened our harmonious working relationship, the police union said in a letter to the 49ers.  <a href="https://www.thestar.com/sports/football/2016/09/04/police-threaten-to-boycott-49ers-games-over-kaepernicks-anthem-protest.html">more</a>.</p>
+					<p><p>Kaepernick&rsquo;s inappropriate behaviour has threatened our harmonious working relationship, the police union said in a letter to the 49ers.  <a href="https://www.thestar.com/sports/football/2016/09/04/police-threaten-to-boycott-49ers-games-over-kaepernicks-anthem-protest.html" onclick="trackOutboundLink('https://www.thestar.com/sports/football/2016/09/04/police-threaten-to-boycott-49ers-games-over-kaepernicks-anthem-protest.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

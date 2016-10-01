@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>29</b></p>
 					<h3>Keshawn Martin is latest vagabond receiver to join 49ers</h3>
-					<p><p>Wide receiver Keshawn Martin is living in a hotel, has a temporary nameplate taped to his locker in the 49ers&rsquo; facility and is spending his free time &hellip;  <a href="http://www.sfgate.com/49ers/article/Martin-is-latest-vagabond-WR-to-join-49ers-9457982.php">more</a>.</p>
+					<p><p>Wide receiver Keshawn Martin is living in a hotel, has a temporary nameplate taped to his locker in the 49ers&rsquo; facility and is spending his free time &hellip;  <a href="http://www.sfgate.com/49ers/article/Martin-is-latest-vagabond-WR-to-join-49ers-9457982.php" onclick="trackOutboundLink('http://www.sfgate.com/49ers/article/Martin-is-latest-vagabond-WR-to-join-49ers-9457982.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>05</b></p>
 					<h3>Santa Clara police chief vows safety at 49ers games despite officers&#39; talk</h3>
-					<p><p>Newsday SANTA CLARA, Calif. - The Santa Clara police chief has vowed to continue providing a safe environment at San Francisco home games after the &hellip;  <a href="http://www.newsday.com/news/nation/colin-kaepernick-controversy-santa-clara-police-chief-vows-49ers-games-will-be-safe-1.12265113">more</a>.</p>
+					<p><p>Newsday SANTA CLARA, Calif. - The Santa Clara police chief has vowed to continue providing a safe environment at San Francisco home games after the &hellip;  <a href="http://www.newsday.com/news/nation/colin-kaepernick-controversy-santa-clara-police-chief-vows-49ers-games-will-be-safe-1.12265113" onclick="trackOutboundLink('http://www.newsday.com/news/nation/colin-kaepernick-controversy-santa-clara-police-chief-vows-49ers-games-will-be-safe-1.12265113'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

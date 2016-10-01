@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>26</b></p>
 					<h3>Ravens open up as Week 4 field goal favorites over Raiders</h3>
-					<p><p>&hellip; through the first three weeks of the season, Baltimore is again favored heading into their Week 4 matchup with the Oakland Raiders in Baltimore.  <a href="http://bal.247sports.com/Bolt/Ravens-open-up-as-Week-4-field-goal-favorites-over-Raiders--47787332">more</a>.</p>
+					<p><p>&hellip; through the first three weeks of the season, Baltimore is again favored heading into their Week 4 matchup with the Oakland Raiders in Baltimore.  <a href="http://bal.247sports.com/Bolt/Ravens-open-up-as-Week-4-field-goal-favorites-over-Raiders--47787332" onclick="trackOutboundLink('http://bal.247sports.com/Bolt/Ravens-open-up-as-Week-4-field-goal-favorites-over-Raiders--47787332'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

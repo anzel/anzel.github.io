@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>15</b></p>
 					<h3>Is there a path to Canton for former Raiders coach Tom Flores?</h3>
-					<p><p>The Oakland Raiders have had a Pro Football Hall of Famer enshrined in Canton in each of the past four years, from Warren Sapp in 2013 to Ray Guy &hellip;  <a href="http://www.espn.com/blog/nflnation/post/_/id/214332/is-there-a-path-to-canton-for-former-raiders-coach-tom-flores">more</a>.</p>
+					<p><p>The Oakland Raiders have had a Pro Football Hall of Famer enshrined in Canton in each of the past four years, from Warren Sapp in 2013 to Ray Guy &hellip;  <a href="http://www.espn.com/blog/nflnation/post/_/id/214332/is-there-a-path-to-canton-for-former-raiders-coach-tom-flores" onclick="trackOutboundLink('http://www.espn.com/blog/nflnation/post/_/id/214332/is-there-a-path-to-canton-for-former-raiders-coach-tom-flores'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

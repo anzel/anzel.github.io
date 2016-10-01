@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>03</b></p>
 					<h3>Police Union Threatens to Boycott San Francisco 49ers Games Amid Colin</h3>
-					<p><p>TIME A California police union said its members might stop working San Francisco 49ers home games after quarterback Colin Kaepernick&rsquo;s protest of the &hellip;  <a href="http://time.com/4478542/colin-kaepernick-police-union-boycott-games/">more</a>.</p>
+					<p><p>TIME A California police union said its members might stop working San Francisco 49ers home games after quarterback Colin Kaepernick&rsquo;s protest of the &hellip;  <a href="http://time.com/4478542/colin-kaepernick-police-union-boycott-games/" onclick="trackOutboundLink('http://time.com/4478542/colin-kaepernick-police-union-boycott-games/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

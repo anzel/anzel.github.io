@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>02</b></p>
 					<h3>Warriors giving out Klay Thompson San Jose Sharks bobblehead, because why?</h3>
-					<p><p>ProBasketballTalk (blog) Just because you&rsquo;re playing a preseason game in San Jose&rsquo;s hockey arena doesn&rsquo;t mean you have to do this. 2nd Preseason Home Game: Oct. 6 vs.  <a href="http://nba.nbcsports.com/2016/09/02/warriors-giving-out-klay-thompson-san-jose-sharks-bobblehead-because-why-photo/">more</a>.</p>
+					<p><p>ProBasketballTalk (blog) Just because you&rsquo;re playing a preseason game in San Jose&rsquo;s hockey arena doesn&rsquo;t mean you have to do this. 2nd Preseason Home Game: Oct. 6 vs.  <a href="http://nba.nbcsports.com/2016/09/02/warriors-giving-out-klay-thompson-san-jose-sharks-bobblehead-because-why-photo/" onclick="trackOutboundLink('http://nba.nbcsports.com/2016/09/02/warriors-giving-out-klay-thompson-san-jose-sharks-bobblehead-because-why-photo/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

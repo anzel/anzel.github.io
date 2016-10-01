@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>15</b></p>
 					<h3>Right Combination Play: Jalen Richard Finds The End Zone</h3>
-					<p><p>The Oakland Raiders completed an impressive comeback, and beat the New Orleans Saints 35-34 Sunday at the Superdome. On the shoulders of &hellip;  <a href="http://www.raiders.com/news/article-1/Right-Combination-Play-Jalen-Richard-Finds-The-End-Zone/76efa5e7-6097-4ba2-9255-706075e73b65">more</a>.</p>
+					<p><p>The Oakland Raiders completed an impressive comeback, and beat the New Orleans Saints 35-34 Sunday at the Superdome. On the shoulders of &hellip;  <a href="http://www.raiders.com/news/article-1/Right-Combination-Play-Jalen-Richard-Finds-The-End-Zone/76efa5e7-6097-4ba2-9255-706075e73b65" onclick="trackOutboundLink('http://www.raiders.com/news/article-1/Right-Combination-Play-Jalen-Richard-Finds-The-End-Zone/76efa5e7-6097-4ba2-9255-706075e73b65'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

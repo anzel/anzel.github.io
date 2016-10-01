@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>06</b></p>
 					<h3>Raiders&#39; Khalil Mack: Meet the NFL&#39;s modest megastar</h3>
-					<p><p>It happened, to the recollection of Khalil Mack, at a gas station along U.S. 1 near his home in Fort Pierce, Florida. Sandy Mack, Khalil&rsquo;s father, spied a &hellip;  <a href="http://www.mercurynews.com/raiders/ci_30334924/raiders-khalil-mack-meet-nfls-modest-megastar">more</a>.</p>
+					<p><p>It happened, to the recollection of Khalil Mack, at a gas station along U.S. 1 near his home in Fort Pierce, Florida. Sandy Mack, Khalil&rsquo;s father, spied a &hellip;  <a href="http://www.mercurynews.com/raiders/ci_30334924/raiders-khalil-mack-meet-nfls-modest-megastar" onclick="trackOutboundLink('http://www.mercurynews.com/raiders/ci_30334924/raiders-khalil-mack-meet-nfls-modest-megastar'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

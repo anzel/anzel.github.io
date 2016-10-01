@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>Carroll says Seahawks will leave Jeremy Lane&#39;s protest &#39;up to him&#39;</h3>
-					<p><p>&hellip; CA - SEPTEMBER 01: Jeremy Lane #20 of the Seattle Seahawks stands on the sidelines during their preseason game against the Oakland Raiders &hellip;  <a href="http://q13fox.com/2016/09/07/carroll-says-seahawks-will-leave-jeremy-lanes-protest-up-to-him/">more</a>.</p>
+					<p><p>&hellip; CA - SEPTEMBER 01: Jeremy Lane #20 of the Seattle Seahawks stands on the sidelines during their preseason game against the Oakland Raiders &hellip;  <a href="http://q13fox.com/2016/09/07/carroll-says-seahawks-will-leave-jeremy-lanes-protest-up-to-him/" onclick="trackOutboundLink('http://q13fox.com/2016/09/07/carroll-says-seahawks-will-leave-jeremy-lanes-protest-up-to-him/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

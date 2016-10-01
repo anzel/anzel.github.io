@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>17</b></p>
 					<h3>Falcons prepare for Oakland trip with Raiders-themed rap music</h3>
-					<p><p>Mark Schlereth and Jeff Saturday expect the Oakland Raiders to beat a struggling Atlanta Falcons team on Sunday. (0:39). Facebook  Twitter &hellip;  <a href="http://www.espn.com.au/blog/atlanta-falcons/post/_/id/22542/falcons-prepare-for-oakland-trip-with-raiders-rap-music">more</a>.</p>
+					<p><p>Mark Schlereth and Jeff Saturday expect the Oakland Raiders to beat a struggling Atlanta Falcons team on Sunday. (0:39). Facebook  Twitter &hellip;  <a href="http://www.espn.com.au/blog/atlanta-falcons/post/_/id/22542/falcons-prepare-for-oakland-trip-with-raiders-rap-music" onclick="trackOutboundLink('http://www.espn.com.au/blog/atlanta-falcons/post/_/id/22542/falcons-prepare-for-oakland-trip-with-raiders-rap-music'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

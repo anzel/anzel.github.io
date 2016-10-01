@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>16</b></p>
 					<h3>Mayor Schaaf vows to fight to keep Raiders in Oakland</h3>
-					<p><p>Oakland Raiders fans Griz Jones, left, and Ray Perez make their case for keeping the NFL football team in Oakland outside the hotel where NFL &hellip;  <a href="http://kron4.com/2016/09/16/mayor-schaaf-vows-to-fight-to-keep-raiders-in-oakland/">more</a>.</p>
+					<p><p>Oakland Raiders fans Griz Jones, left, and Ray Perez make their case for keeping the NFL football team in Oakland outside the hotel where NFL &hellip;  <a href="http://kron4.com/2016/09/16/mayor-schaaf-vows-to-fight-to-keep-raiders-in-oakland/" onclick="trackOutboundLink('http://kron4.com/2016/09/16/mayor-schaaf-vows-to-fight-to-keep-raiders-in-oakland/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

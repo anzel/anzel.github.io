@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>16</b></p>
 					<h3>Matchups to Watch: Oakland Raiders vs. Atlanta Falcons</h3>
-					<p><p>victory in the home opener against the Atlanta Falcons. Here are matchups to &hellip;  <a href="http://wtar.com/matchups-to-watch-oakland-raiders-vs-atlanta-falcons/">more</a>.</p>
+					<p><p>victory in the home opener against the Atlanta Falcons. Here are matchups to &hellip;  <a href="http://wtar.com/matchups-to-watch-oakland-raiders-vs-atlanta-falcons/" onclick="trackOutboundLink('http://wtar.com/matchups-to-watch-oakland-raiders-vs-atlanta-falcons/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

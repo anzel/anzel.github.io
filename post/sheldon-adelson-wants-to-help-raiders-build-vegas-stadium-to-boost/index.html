@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>Sheldon Adelson wants to help Raiders build Vegas stadium to boost</h3>
-					<p><p>The Comeback (blog) Billionaire Sheldon Adelson&rsquo;s contribution to potentially bringing the Oakland Raiders to Las Vegas has much more to do with opportunity than football &hellip;  <a href="http://thecomeback.com/nfl/sheldon-adelson-raiders-stadium.html">more</a>.</p>
+					<p><p>The Comeback (blog) Billionaire Sheldon Adelson&rsquo;s contribution to potentially bringing the Oakland Raiders to Las Vegas has much more to do with opportunity than football &hellip;  <a href="http://thecomeback.com/nfl/sheldon-adelson-raiders-stadium.html" onclick="trackOutboundLink('http://thecomeback.com/nfl/sheldon-adelson-raiders-stadium.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

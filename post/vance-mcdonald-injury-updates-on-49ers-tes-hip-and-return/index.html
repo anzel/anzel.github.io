@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>Vance McDonald Injury: Updates on 49ers TE&#39;s Hip and Return</h3>
-					<p><p>This is a difficult setback for McDonald because he was looking to continue building on a career year in 2015 this season as San Francisco&rsquo;s primary &hellip;  <a href="http://bleacherreport.com/articles/2664879-vance-mcdonald-injury-updates-on-49ers-tes-hip-and-return">more</a>.</p>
+					<p><p>This is a difficult setback for McDonald because he was looking to continue building on a career year in 2015 this season as San Francisco&rsquo;s primary &hellip;  <a href="http://bleacherreport.com/articles/2664879-vance-mcdonald-injury-updates-on-49ers-tes-hip-and-return" onclick="trackOutboundLink('http://bleacherreport.com/articles/2664879-vance-mcdonald-injury-updates-on-49ers-tes-hip-and-return'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>09</b></p>
 					<h3>Can 49ers count on much from Rod Streater, Jeremy Kerley?</h3>
-					<p><p>The San Francisco 49ers made a pair of trades over the final week of the preseason, adding wide receivers to their depleted depth chart. The team &hellip;  <a href="http://www.ninersnation.com/2016/9/9/12860836/49ers-wide-receivers-rod-streater-jeremy-kerley-2016">more</a>.</p>
+					<p><p>The San Francisco 49ers made a pair of trades over the final week of the preseason, adding wide receivers to their depleted depth chart. The team &hellip;  <a href="http://www.ninersnation.com/2016/9/9/12860836/49ers-wide-receivers-rod-streater-jeremy-kerley-2016" onclick="trackOutboundLink('http://www.ninersnation.com/2016/9/9/12860836/49ers-wide-receivers-rod-streater-jeremy-kerley-2016'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

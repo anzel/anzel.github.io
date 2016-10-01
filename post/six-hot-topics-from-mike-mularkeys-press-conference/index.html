@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>Six Hot Topics from Mike Mularkey&#39;s Press Conference</h3>
-					<p><p>Titans coach Mike Mularkey met with reporters on Monday at Saint Thomas Sports Park, one day after the team&rsquo;s 17-10 loss to the Oakland Raiders.  <a href="http://www.titansonline.com/news/article-4/Six-Hot-Topics-from-Mike-Mularkeys-Press-Conference/02faca2f-bdd6-46d9-a80b-da9940beaa16">more</a>.</p>
+					<p><p>Titans coach Mike Mularkey met with reporters on Monday at Saint Thomas Sports Park, one day after the team&rsquo;s 17-10 loss to the Oakland Raiders.  <a href="http://www.titansonline.com/news/article-4/Six-Hot-Topics-from-Mike-Mularkeys-Press-Conference/02faca2f-bdd6-46d9-a80b-da9940beaa16" onclick="trackOutboundLink('http://www.titansonline.com/news/article-4/Six-Hot-Topics-from-Mike-Mularkeys-Press-Conference/02faca2f-bdd6-46d9-a80b-da9940beaa16'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

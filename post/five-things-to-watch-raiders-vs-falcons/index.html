@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>17</b></p>
 					<h3>Five things to watch: Raiders vs. Falcons</h3>
-					<p><p>Sports  San Francisco 49ers  San Francisco Giants  Golden State Warriors  Oakland Raiders  Oakland &hellip; Oakland Raiders &hellip; Tags: Oakland Raiders.  <a href="http://www.mercurynews.com/2016/09/17/five-things-to-watch-raiders-vs-falcons/">more</a>.</p>
+					<p><p>Sports  San Francisco 49ers  San Francisco Giants  Golden State Warriors  Oakland Raiders  Oakland &hellip; Oakland Raiders &hellip; Tags: Oakland Raiders.  <a href="http://www.mercurynews.com/2016/09/17/five-things-to-watch-raiders-vs-falcons/" onclick="trackOutboundLink('http://www.mercurynews.com/2016/09/17/five-things-to-watch-raiders-vs-falcons/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

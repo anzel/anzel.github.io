@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Aug<b>31</b></p>
 					<h3>Indians acquire OF Coco Crisp for pennant drive from A&#39;s</h3>
-					<p><p>Cleveland added much-needed outfield depth and postseason experience on Wednesday by acquiring Crisp in a trade with the Oakland Athletics.  <a href="http://www.stltoday.com/sports/indians-acquire-of-coco-crisp-for-pennant-drive-from-a/article_6811a78a-3e4e-561a-9d1a-9cab2cc4a275.html">more</a>.</p>
+					<p><p>Cleveland added much-needed outfield depth and postseason experience on Wednesday by acquiring Crisp in a trade with the Oakland Athletics.  <a href="http://www.stltoday.com/sports/indians-acquire-of-coco-crisp-for-pennant-drive-from-a/article_6811a78a-3e4e-561a-9d1a-9cab2cc4a275.html" onclick="trackOutboundLink('http://www.stltoday.com/sports/indians-acquire-of-coco-crisp-for-pennant-drive-from-a/article_6811a78a-3e4e-561a-9d1a-9cab2cc4a275.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

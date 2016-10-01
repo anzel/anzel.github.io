@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>07</b></p>
 					<h3>Quick Hits: Quarterback Derek Carr Ready To Embrace The Crowd Noise</h3>
-					<p><p>The Oakland Raiders will play the New Orleans Saints at the Mercedes-Benz Superdome on Sunday, and quarterback Derek Carr is prepared.  <a href="http://www.raiders.com/news/article-1/Quick-Hits-Quarterback-Derek-Carr-Ready-To-Embrace-The-Crowd-Noise/afb7875a-b806-4f7e-b826-91764d830756">more</a>.</p>
+					<p><p>The Oakland Raiders will play the New Orleans Saints at the Mercedes-Benz Superdome on Sunday, and quarterback Derek Carr is prepared.  <a href="http://www.raiders.com/news/article-1/Quick-Hits-Quarterback-Derek-Carr-Ready-To-Embrace-The-Crowd-Noise/afb7875a-b806-4f7e-b826-91764d830756" onclick="trackOutboundLink('http://www.raiders.com/news/article-1/Quick-Hits-Quarterback-Derek-Carr-Ready-To-Embrace-The-Crowd-Noise/afb7875a-b806-4f7e-b826-91764d830756'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

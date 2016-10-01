@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>Pair of 49ers&#39; first round picks headed in opposite directions</h3>
-					<p><p>SANTA CLARA  Picked to bolster the trenches, 49ers first round selections DeForest Buckner and Joshua Garnett both entered the season &hellip;  <a href="http://www.knbr.com/2016/09/14/pair-of-49ers-first-round-picks-headed-in-opposite-directions/">more</a>.</p>
+					<p><p>SANTA CLARA  Picked to bolster the trenches, 49ers first round selections DeForest Buckner and Joshua Garnett both entered the season &hellip;  <a href="http://www.knbr.com/2016/09/14/pair-of-49ers-first-round-picks-headed-in-opposite-directions/" onclick="trackOutboundLink('http://www.knbr.com/2016/09/14/pair-of-49ers-first-round-picks-headed-in-opposite-directions/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

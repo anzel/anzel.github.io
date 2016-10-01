@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>13</b></p>
 					<h3>Raiders wins via a gamble that pays off against Saints</h3>
-					<p><p>Oakland Raiders quarterback Derek Carr (4) celebrates with defensive end Khalil Mack (52) after an NFL football game against the New Orleans &hellip;  <a href="http://www.stltoday.com/sports/football/raiders-wins-via-a-gamble-that-pays-off-against-saints/article_80df69fd-fd9b-582f-9aa8-8fffe7065287.html">more</a>.</p>
+					<p><p>Oakland Raiders quarterback Derek Carr (4) celebrates with defensive end Khalil Mack (52) after an NFL football game against the New Orleans &hellip;  <a href="http://www.stltoday.com/sports/football/raiders-wins-via-a-gamble-that-pays-off-against-saints/article_80df69fd-fd9b-582f-9aa8-8fffe7065287.html" onclick="trackOutboundLink('http://www.stltoday.com/sports/football/raiders-wins-via-a-gamble-that-pays-off-against-saints/article_80df69fd-fd9b-582f-9aa8-8fffe7065287.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

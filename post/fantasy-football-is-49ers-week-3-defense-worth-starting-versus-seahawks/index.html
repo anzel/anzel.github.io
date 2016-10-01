@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>24</b></p>
 					<h3>Fantasy Football: Is 49ers Week 3 Defense Worth Starting versus Seahawks?</h3>
-					<p><p>Not too many fantasy football owners will be relying on the San Francisco 49ers defense this season. But a Week 3 contest against a struggling Seattle &hellip;  <a href="http://ninernoise.com/2016/09/24/fantasy-football-49ers-week-3-defense-worth-starting-versus-seahawks/">more</a>.</p>
+					<p><p>Not too many fantasy football owners will be relying on the San Francisco 49ers defense this season. But a Week 3 contest against a struggling Seattle &hellip;  <a href="http://ninernoise.com/2016/09/24/fantasy-football-49ers-week-3-defense-worth-starting-versus-seahawks/" onclick="trackOutboundLink('http://ninernoise.com/2016/09/24/fantasy-football-49ers-week-3-defense-worth-starting-versus-seahawks/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

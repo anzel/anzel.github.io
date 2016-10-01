@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>10</b></p>
 					<h3>Charlotte 49ers trounce Elon 47-14, snap 11-game losing streak</h3>
-					<p><p>The Charlotte 49ers hosted the Elon Phoenix on Saturday evening at McColl-Richardson Field at Jerry Richardson Stadium on the campus of UNC &hellip;  <a href="http://www.charlotteobserver.com/sports/college/article101169782.html">more</a>.</p>
+					<p><p>The Charlotte 49ers hosted the Elon Phoenix on Saturday evening at McColl-Richardson Field at Jerry Richardson Stadium on the campus of UNC &hellip;  <a href="http://www.charlotteobserver.com/sports/college/article101169782.html" onclick="trackOutboundLink('http://www.charlotteobserver.com/sports/college/article101169782.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

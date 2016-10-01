@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>17</b></p>
 					<h3>Frustrated Rapids settle for another scoreless draw at home</h3>
-					<p><p>COMMERCE CITY  The Rapids moved into a second-place tie with the Los Angeles Galaxy in the Western Conference on Saturday night but left &hellip;  <a href="http://www.denverpost.com/2016/09/17/colorado-rapids-san-jose-earthquakes-draw/">more</a>.</p>
+					<p><p>COMMERCE CITY  The Rapids moved into a second-place tie with the Los Angeles Galaxy in the Western Conference on Saturday night but left &hellip;  <a href="http://www.denverpost.com/2016/09/17/colorado-rapids-san-jose-earthquakes-draw/" onclick="trackOutboundLink('http://www.denverpost.com/2016/09/17/colorado-rapids-san-jose-earthquakes-draw/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

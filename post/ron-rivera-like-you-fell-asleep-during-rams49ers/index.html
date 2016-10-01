@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>Ron Rivera, like you, fell asleep during Rams-49ers</h3>
-					<p><p>Panthers coach Ron Rivera acknowledged he was unable to stay awake for the duration of the Rams-49ers snoozer on Monday night, this despite the &hellip;  <a href="http://www.nfl.com/news/story/0ap3000000702654/article/ron-rivera-like-you-fell-asleep-during-rams49ers">more</a>.</p>
+					<p><p>Panthers coach Ron Rivera acknowledged he was unable to stay awake for the duration of the Rams-49ers snoozer on Monday night, this despite the &hellip;  <a href="http://www.nfl.com/news/story/0ap3000000702654/article/ron-rivera-like-you-fell-asleep-during-rams49ers" onclick="trackOutboundLink('http://www.nfl.com/news/story/0ap3000000702654/article/ron-rivera-like-you-fell-asleep-during-rams49ers'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

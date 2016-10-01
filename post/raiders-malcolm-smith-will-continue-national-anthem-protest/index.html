@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Oct<b>01</b></p>
 					<h3>Raiders&#39; Malcolm Smith will continue national anthem protest</h3>
-					<p><p>Raiders linebacker Malcolm Smith joined the national anthem protest last week against Tennessee and plans to continue to do so Sunday in &hellip;  <a href="http://www.mercurynews.com/2016/09/30/raiders-malcolm-smith-will-continue-national-anthem-protest/">more</a>.</p>
+					<p><p>Raiders linebacker Malcolm Smith joined the national anthem protest last week against Tennessee and plans to continue to do so Sunday in &hellip;  <a href="http://www.mercurynews.com/2016/09/30/raiders-malcolm-smith-will-continue-national-anthem-protest/" onclick="trackOutboundLink('http://www.mercurynews.com/2016/09/30/raiders-malcolm-smith-will-continue-national-anthem-protest/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

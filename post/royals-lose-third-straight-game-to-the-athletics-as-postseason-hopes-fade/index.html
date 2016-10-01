@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>15</b></p>
 					<h3>Royals lose third straight game to the Athletics as postseason hopes fade</h3>
-					<p><p>Inside a hotel room in Little Rock, Ark., Sean Manaea glanced at his cell phone and saw a familiar phone number flash on the screen. It was a &hellip;  <a href="http://www.kansascity.com/sports/mlb/kansas-city-royals/article101928992.html">more</a>.</p>
+					<p><p>Inside a hotel room in Little Rock, Ark., Sean Manaea glanced at his cell phone and saw a familiar phone number flash on the screen. It was a &hellip;  <a href="http://www.kansascity.com/sports/mlb/kansas-city-royals/article101928992.html" onclick="trackOutboundLink('http://www.kansascity.com/sports/mlb/kansas-city-royals/article101928992.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

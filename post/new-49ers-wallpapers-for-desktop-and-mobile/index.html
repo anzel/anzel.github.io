@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>07</b></p>
 					<h3>New 49ers Wallpapers for Desktop and Mobile</h3>
-					<p><p>Football&rsquo;s return bring&rsquo;s all new 49ers wallpapers for your iPhone or Desktop from Better Rivals podcast staff designer Joce Bossin. There is both a &hellip;  <a href="http://www.ninersnation.com/2016/9/7/12829596/49ers-schedule-wallpaper-iphone-desktop-background">more</a>.</p>
+					<p><p>Football&rsquo;s return bring&rsquo;s all new 49ers wallpapers for your iPhone or Desktop from Better Rivals podcast staff designer Joce Bossin. There is both a &hellip;  <a href="http://www.ninersnation.com/2016/9/7/12829596/49ers-schedule-wallpaper-iphone-desktop-background" onclick="trackOutboundLink('http://www.ninersnation.com/2016/9/7/12829596/49ers-schedule-wallpaper-iphone-desktop-background'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

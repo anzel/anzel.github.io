@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>Santa Clara police reverse field on working 49ers games</h3>
-					<p><p>Santa Clara police appear to be reversing field after a threatened boycott of Levi&rsquo;s Stadium to protest Colin Kaepernick&rsquo;s protest, according to an NBC &hellip;  <a href="http://www.nydailynews.com/sports/football/santa-clara-police-reverse-field-working-49ers-games-article-1.2784016">more</a>.</p>
+					<p><p>Santa Clara police appear to be reversing field after a threatened boycott of Levi&rsquo;s Stadium to protest Colin Kaepernick&rsquo;s protest, according to an NBC &hellip;  <a href="http://www.nydailynews.com/sports/football/santa-clara-police-reverse-field-working-49ers-games-article-1.2784016" onclick="trackOutboundLink('http://www.nydailynews.com/sports/football/santa-clara-police-reverse-field-working-49ers-games-article-1.2784016'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

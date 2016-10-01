@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>A&#39;s Likely To Release Danny Valencia Before Season&#39;s End</h3>
-					<p><p>The A&rsquo;s released designated hitter Billy Butler today, and another veteran could soon be following Butler out of Oakland. The Athletics are likely to &hellip;  <a href="https://www.mlbtraderumors.com/2016/09/as-likely-to-release-danny-valencia-before-seasons-end.html">more</a>.</p>
+					<p><p>The A&rsquo;s released designated hitter Billy Butler today, and another veteran could soon be following Butler out of Oakland. The Athletics are likely to &hellip;  <a href="https://www.mlbtraderumors.com/2016/09/as-likely-to-release-danny-valencia-before-seasons-end.html" onclick="trackOutboundLink('https://www.mlbtraderumors.com/2016/09/as-likely-to-release-danny-valencia-before-seasons-end.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

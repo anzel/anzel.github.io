@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>You know you&#39;re a 49ers fan if...</h3>
-					<p><p>We get it: It&rsquo;s not a fun time to be a 49ers fan. But, if it&rsquo;s any consolation, true fandom means sticking it out through the tough times. After all, there&rsquo;s &hellip;  <a href="http://www.sfgate.com/49ers/article/You-know-you-re-a-49ers-fan-if-9211161.php">more</a>.</p>
+					<p><p>We get it: It&rsquo;s not a fun time to be a 49ers fan. But, if it&rsquo;s any consolation, true fandom means sticking it out through the tough times. After all, there&rsquo;s &hellip;  <a href="http://www.sfgate.com/49ers/article/You-know-you-re-a-49ers-fan-if-9211161.php" onclick="trackOutboundLink('http://www.sfgate.com/49ers/article/You-know-you-re-a-49ers-fan-if-9211161.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

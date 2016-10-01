@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>Five Takeaways From The Oakland Raiders Loss To The Atlanta Falcons</h3>
-					<p><p>The Oakland Raiders dropped their 2016 regular season home opener to the Atlanta Falcons 35-28 at the Oakland-Alameda County Coliseum &hellip;  <a href="http://www.raiders.com/news/article-1/Five-Takeaways-From-The-Oakland-Raiders-Loss-To-The-Atlanta-Falcons/a2c0434a-cd4c-443b-89bf-28ccf058b986">more</a>.</p>
+					<p><p>The Oakland Raiders dropped their 2016 regular season home opener to the Atlanta Falcons 35-28 at the Oakland-Alameda County Coliseum &hellip;  <a href="http://www.raiders.com/news/article-1/Five-Takeaways-From-The-Oakland-Raiders-Loss-To-The-Atlanta-Falcons/a2c0434a-cd4c-443b-89bf-28ccf058b986" onclick="trackOutboundLink('http://www.raiders.com/news/article-1/Five-Takeaways-From-The-Oakland-Raiders-Loss-To-The-Atlanta-Falcons/a2c0434a-cd4c-443b-89bf-28ccf058b986'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

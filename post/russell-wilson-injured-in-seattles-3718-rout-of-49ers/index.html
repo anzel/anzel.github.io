@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>Russell Wilson injured in Seattle&#39;s 37-18 rout of 49ers</h3>
-					<p><p>Seattle Seahawks&rsquo; Doug Baldwin scores a touchdown against the San Francisco 49ers in the second half of an NFL football game, Sunday, Sept.  <a href="http://qctimes.com/sports/football/professional/russell-wilson-injured-in-seattle-s---rout-of/article_5fb40ab4-c5fb-5482-b114-950018fc99e4.html">more</a>.</p>
+					<p><p>Seattle Seahawks&rsquo; Doug Baldwin scores a touchdown against the San Francisco 49ers in the second half of an NFL football game, Sunday, Sept.  <a href="http://qctimes.com/sports/football/professional/russell-wilson-injured-in-seattle-s---rout-of/article_5fb40ab4-c5fb-5482-b114-950018fc99e4.html" onclick="trackOutboundLink('http://qctimes.com/sports/football/professional/russell-wilson-injured-in-seattle-s---rout-of/article_5fb40ab4-c5fb-5482-b114-950018fc99e4.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>04</b></p>
 					<h3>49ers keep Colin Kaepernick as backup QB to Blaine Gabbert</h3>
-					<p><p>49ers determined that his ability as a quarterback more than offset any &hellip;  <a href="https://www.msn.com/en-us/sports/nfl/49ers-keep-colin-kaepernick-as-backup-qb-to-blaine-gabbert/ar-AAitigG">more</a>.</p>
+					<p><p>49ers determined that his ability as a quarterback more than offset any &hellip;  <a href="https://www.msn.com/en-us/sports/nfl/49ers-keep-colin-kaepernick-as-backup-qb-to-blaine-gabbert/ar-AAitigG" onclick="trackOutboundLink('https://www.msn.com/en-us/sports/nfl/49ers-keep-colin-kaepernick-as-backup-qb-to-blaine-gabbert/ar-AAitigG'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

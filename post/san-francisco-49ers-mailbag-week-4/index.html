@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>San Francisco 49ers mailbag: Week 4</h3>
-					<p><p>The chances are increasing weekly at this snowballing rate. Now in his seventh year as the 49ers personnel czar, Trent Baalke has banked his fate on &hellip;  <a href="http://www.mercurynews.com/2016/09/27/san-francisco-49ers-mailbag-week-4-questions-swirl-around-trent-baalke-colin-kaepernick-absent-pass-rushers/">more</a>.</p>
+					<p><p>The chances are increasing weekly at this snowballing rate. Now in his seventh year as the 49ers personnel czar, Trent Baalke has banked his fate on &hellip;  <a href="http://www.mercurynews.com/2016/09/27/san-francisco-49ers-mailbag-week-4-questions-swirl-around-trent-baalke-colin-kaepernick-absent-pass-rushers/" onclick="trackOutboundLink('http://www.mercurynews.com/2016/09/27/san-francisco-49ers-mailbag-week-4-questions-swirl-around-trent-baalke-colin-kaepernick-absent-pass-rushers/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

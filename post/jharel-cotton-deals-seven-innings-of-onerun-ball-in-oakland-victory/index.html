@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>26</b></p>
 					<h3>Jharel Cotton deals seven innings of one-run ball in Oakland victory</h3>
-					<p><p>Oakland Athletics pitcher Jharel Cotton spun seven innings of one-run ball, striking out five as the A&rsquo;s beat the Texas Rangers 7-1. What It Means:.  <a href="https://www.numberfire.com/mlb/player-news/29284/jharel-cotton-deals-seven-innings-of-one-run-ball-in-oakland-victory">more</a>.</p>
+					<p><p>Oakland Athletics pitcher Jharel Cotton spun seven innings of one-run ball, striking out five as the A&rsquo;s beat the Texas Rangers 7-1. What It Means:.  <a href="https://www.numberfire.com/mlb/player-news/29284/jharel-cotton-deals-seven-innings-of-one-run-ball-in-oakland-victory" onclick="trackOutboundLink('https://www.numberfire.com/mlb/player-news/29284/jharel-cotton-deals-seven-innings-of-one-run-ball-in-oakland-victory'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

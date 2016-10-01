@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>01</b></p>
 					<h3>Kawakami: 49ers&#39; Kaepernick wasn&#39;t alone in Thursday&#39;s protest</h3>
-					<p><p>But I doubt the 49ers will cut him now, and they shouldn&rsquo;t, unless they believe that Jeff Driskel is a better backup option, which he isn&rsquo;t. This preseason &hellip;  <a href="http://www.mercurynews.com/tim-kawakami/ci_30319611/kawakami-49ers-kaepernick-wasnt-alone-thursdays-protest">more</a>.</p>
+					<p><p>But I doubt the 49ers will cut him now, and they shouldn&rsquo;t, unless they believe that Jeff Driskel is a better backup option, which he isn&rsquo;t. This preseason &hellip;  <a href="http://www.mercurynews.com/tim-kawakami/ci_30319611/kawakami-49ers-kaepernick-wasnt-alone-thursdays-protest" onclick="trackOutboundLink('http://www.mercurynews.com/tim-kawakami/ci_30319611/kawakami-49ers-kaepernick-wasnt-alone-thursdays-protest'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

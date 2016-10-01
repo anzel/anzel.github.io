@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>07</b></p>
 					<h3>Oakland Athletics to Feature Young Rotation Rest of Month</h3>
-					<p><p>The Oakland Athletics&rsquo; starting rotation has been a major concern this season, but they&rsquo;ll be testing out a few young pitchers to end the year. Entering &hellip;  <a href="http://calltothepen.com/2016/09/07/oakland-athletics-to-feature-young-rotation-rest-of-month/">more</a>.</p>
+					<p><p>The Oakland Athletics&rsquo; starting rotation has been a major concern this season, but they&rsquo;ll be testing out a few young pitchers to end the year. Entering &hellip;  <a href="http://calltothepen.com/2016/09/07/oakland-athletics-to-feature-young-rotation-rest-of-month/" onclick="trackOutboundLink('http://calltothepen.com/2016/09/07/oakland-athletics-to-feature-young-rotation-rest-of-month/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

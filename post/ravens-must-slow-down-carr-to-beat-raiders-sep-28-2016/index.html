@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>Ravens must slow down Carr to beat Raiders (Sep 28, 2016)</h3>
-					<p><p>BALTIMORE &ndash; The undefeated Baltimore Ravens face their biggest test so far in Week 4 against the Oakland Raiders and their high-powered offense.  <a href="http://www.foxsports.com/nfl/story/ravens-must-slow-down-carr-to-beat-raiders-092816">more</a>.</p>
+					<p><p>BALTIMORE &ndash; The undefeated Baltimore Ravens face their biggest test so far in Week 4 against the Oakland Raiders and their high-powered offense.  <a href="http://www.foxsports.com/nfl/story/ravens-must-slow-down-carr-to-beat-raiders-092816" onclick="trackOutboundLink('http://www.foxsports.com/nfl/story/ravens-must-slow-down-carr-to-beat-raiders-092816'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>16</b></p>
 					<h3>Former San Francisco 49ers center, Super Bowl champion Fred Quillan dies at</h3>
-					<p><p>KGO-TV Former San Francisco 49ers center Fred Quillan passed away on Monday, September 12 at the age of 60. A two-time Super Bowl champion, Quillan &hellip;  <a href="http://abc7news.com/sports/former-49ers-center-fred-quillan-dies-at-age-60/1513472/">more</a>.</p>
+					<p><p>KGO-TV Former San Francisco 49ers center Fred Quillan passed away on Monday, September 12 at the age of 60. A two-time Super Bowl champion, Quillan &hellip;  <a href="http://abc7news.com/sports/former-49ers-center-fred-quillan-dies-at-age-60/1513472/" onclick="trackOutboundLink('http://abc7news.com/sports/former-49ers-center-fred-quillan-dies-at-age-60/1513472/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

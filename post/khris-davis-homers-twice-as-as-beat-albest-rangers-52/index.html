@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>Khris Davis homers twice as A&#39;s beat AL-best Rangers 5-2</h3>
-					<p><p>Khris Davis homered twice, giving him 40 for the season, and the Oakland Athletics beat Texas 5-2 on Sunday to keep the Rangers from moving &hellip;  <a href="http://www.bnd.com/sports/article102633527.html">more</a>.</p>
+					<p><p>Khris Davis homered twice, giving him 40 for the season, and the Oakland Athletics beat Texas 5-2 on Sunday to keep the Rangers from moving &hellip;  <a href="http://www.bnd.com/sports/article102633527.html" onclick="trackOutboundLink('http://www.bnd.com/sports/article102633527.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

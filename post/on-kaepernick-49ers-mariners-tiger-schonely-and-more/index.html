@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>On Kaepernick, 49ers, Mariners, Tiger, Schonely and more</h3>
-					<p><p>I am not going to stand up to show pride in a flag of a country that oppresses black people and people of color, the San Francisco 49ers quarterback &hellip;  <a href="http://portlandtribune.com/pt/12-sports/322772-201375-on-kaepernick-49ers-mariners-tiger-schonely-and-more">more</a>.</p>
+					<p><p>I am not going to stand up to show pride in a flag of a country that oppresses black people and people of color, the San Francisco 49ers quarterback &hellip;  <a href="http://portlandtribune.com/pt/12-sports/322772-201375-on-kaepernick-49ers-mariners-tiger-schonely-and-more" onclick="trackOutboundLink('http://portlandtribune.com/pt/12-sports/322772-201375-on-kaepernick-49ers-mariners-tiger-schonely-and-more'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>20</b></p>
 					<h3>George Atkinson III proud to be with Cleveland Browns</h3>
-					<p><p>Young running back George Atkinson III is proud to be a member of the Cleveland Browns after his recent release from the Oakland Raiders. (Photo: &hellip;  <a href="http://www.wkyc.com/sports/nfl/browns/george-atkinson-iii-proud-to-be-with-cleveland-browns/322027812">more</a>.</p>
+					<p><p>Young running back George Atkinson III is proud to be a member of the Cleveland Browns after his recent release from the Oakland Raiders. (Photo: &hellip;  <a href="http://www.wkyc.com/sports/nfl/browns/george-atkinson-iii-proud-to-be-with-cleveland-browns/322027812" onclick="trackOutboundLink('http://www.wkyc.com/sports/nfl/browns/george-atkinson-iii-proud-to-be-with-cleveland-browns/322027812'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

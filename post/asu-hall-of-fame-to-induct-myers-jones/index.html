@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>15</b></p>
 					<h3>ASU Hall of Fame to induct Myers, Jones</h3>
-					<p><p>Selected by the Oakland Athletics in the ninth round of the 2001 draft, Myers played in 382 minor league games over eight seasons from 2001-08.  <a href="http://www.trivalleycentral.com/casa_grande_dispatch/local_sports/asu-hall-of-fame-to-induct-myers-jones/article_8165b336-7b6c-11e6-8bc6-3f06ddffd98c.html">more</a>.</p>
+					<p><p>Selected by the Oakland Athletics in the ninth round of the 2001 draft, Myers played in 382 minor league games over eight seasons from 2001-08.  <a href="http://www.trivalleycentral.com/casa_grande_dispatch/local_sports/asu-hall-of-fame-to-induct-myers-jones/article_8165b336-7b6c-11e6-8bc6-3f06ddffd98c.html" onclick="trackOutboundLink('http://www.trivalleycentral.com/casa_grande_dispatch/local_sports/asu-hall-of-fame-to-induct-myers-jones/article_8165b336-7b6c-11e6-8bc6-3f06ddffd98c.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

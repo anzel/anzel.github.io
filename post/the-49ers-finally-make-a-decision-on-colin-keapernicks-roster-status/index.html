@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>03</b></p>
 					<h3>The 49ers finally make a decision on Colin Keapernick&#39;s roster status</h3>
-					<p><p>The San Francisco 49ers have decided not to let a small controversy affect Colin Kaepernick&rsquo;s roster spot with the team. The quarterback made the &hellip;  <a href="http://www.cbssports.com/nfl/news/the-49ers-finally-make-a-decision-on-colin-keapernicks-roster-status/">more</a>.</p>
+					<p><p>The San Francisco 49ers have decided not to let a small controversy affect Colin Kaepernick&rsquo;s roster spot with the team. The quarterback made the &hellip;  <a href="http://www.cbssports.com/nfl/news/the-49ers-finally-make-a-decision-on-colin-keapernicks-roster-status/" onclick="trackOutboundLink('http://www.cbssports.com/nfl/news/the-49ers-finally-make-a-decision-on-colin-keapernicks-roster-status/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

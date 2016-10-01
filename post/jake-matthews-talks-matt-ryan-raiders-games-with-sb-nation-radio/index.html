@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>21</b></p>
 					<h3>Jake Matthews talks Matt Ryan, Raiders games with SB Nation Radio</h3>
-					<p><p>Jake Matthews rebounded from a shaky first week of the season to deliver some excellent pass protection Sunday against the Oakland Raiders, and &hellip;  <a href="http://www.thefalcoholic.com/2016/9/21/12989972/jake-matthews-raiders-falcons-matt-ryan-leadership">more</a>.</p>
+					<p><p>Jake Matthews rebounded from a shaky first week of the season to deliver some excellent pass protection Sunday against the Oakland Raiders, and &hellip;  <a href="http://www.thefalcoholic.com/2016/9/21/12989972/jake-matthews-raiders-falcons-matt-ryan-leadership" onclick="trackOutboundLink('http://www.thefalcoholic.com/2016/9/21/12989972/jake-matthews-raiders-falcons-matt-ryan-leadership'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

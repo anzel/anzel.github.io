@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Aug<b>31</b></p>
 					<h3>3 things to expect on 49ers&#39; final depth chart</h3>
-					<p><p>The wave of news surrounding the San Francisco 49ers currently has nothing to do with the team&rsquo;s 53-man roster, which will be set on Saturday &hellip;  <a href="http://www.todayspigskin.com/nfc/san-francisco-49ers/3-things-expect-49ers-final-depth-chart/">more</a>.</p>
+					<p><p>The wave of news surrounding the San Francisco 49ers currently has nothing to do with the team&rsquo;s 53-man roster, which will be set on Saturday &hellip;  <a href="http://www.todayspigskin.com/nfc/san-francisco-49ers/3-things-expect-49ers-final-depth-chart/" onclick="trackOutboundLink('http://www.todayspigskin.com/nfc/san-francisco-49ers/3-things-expect-49ers-final-depth-chart/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

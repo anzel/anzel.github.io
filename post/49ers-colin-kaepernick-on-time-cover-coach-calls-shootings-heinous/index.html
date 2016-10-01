@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>23</b></p>
 					<h3>49ers&#39; Colin Kaepernick on Time cover; coach calls shootings &#39;heinous&#39;</h3>
-					<p><p>Now, another San Francisco 49ers quarterback, Colin Kaepernick, will be on the cover for a much different reason. Kaepernick, who has repeatedly &hellip;  <a href="http://gazette.com/49ers-colin-kaepernick-on-time-cover-coach-calls-shootings-heinous/article/1586132">more</a>.</p>
+					<p><p>Now, another San Francisco 49ers quarterback, Colin Kaepernick, will be on the cover for a much different reason. Kaepernick, who has repeatedly &hellip;  <a href="http://gazette.com/49ers-colin-kaepernick-on-time-cover-coach-calls-shootings-heinous/article/1586132" onclick="trackOutboundLink('http://gazette.com/49ers-colin-kaepernick-on-time-cover-coach-calls-shootings-heinous/article/1586132'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

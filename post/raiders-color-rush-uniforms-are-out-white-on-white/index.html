@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>13</b></p>
 					<h3>Raiders Color Rush uniforms are out: White on white</h3>
-					<p><p>After months of speculation and &lsquo;leaks&rsquo; about what color combination the Raiders will be wearing, we finally have our first look at them. From the looks &hellip;  <a href="http://www.silverandblackpride.com/2016/9/13/12903098/oakland-raiders-color-rush-uniforms-are-out-white-on-white">more</a>.</p>
+					<p><p>After months of speculation and &lsquo;leaks&rsquo; about what color combination the Raiders will be wearing, we finally have our first look at them. From the looks &hellip;  <a href="http://www.silverandblackpride.com/2016/9/13/12903098/oakland-raiders-color-rush-uniforms-are-out-white-on-white" onclick="trackOutboundLink('http://www.silverandblackpride.com/2016/9/13/12903098/oakland-raiders-color-rush-uniforms-are-out-white-on-white'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

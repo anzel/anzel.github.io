@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>Chip Kelly on what he&#39;s done different as 49ers coach: &#39;More sunscreen&#39;</h3>
-					<p><p>When the 49ers introduced Chip Kelly as their next coach in January, they seemed unconcerned by the disastrous ending of Kelly&rsquo;s tenure as the &hellip;  <a href="http://www.cbssports.com/nfl/news/chip-kelly-on-what-hes-done-different-as-49ers-coach-more-sunscreen/">more</a>.</p>
+					<p><p>When the 49ers introduced Chip Kelly as their next coach in January, they seemed unconcerned by the disastrous ending of Kelly&rsquo;s tenure as the &hellip;  <a href="http://www.cbssports.com/nfl/news/chip-kelly-on-what-hes-done-different-as-49ers-coach-more-sunscreen/" onclick="trackOutboundLink('http://www.cbssports.com/nfl/news/chip-kelly-on-what-hes-done-different-as-49ers-coach-more-sunscreen/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

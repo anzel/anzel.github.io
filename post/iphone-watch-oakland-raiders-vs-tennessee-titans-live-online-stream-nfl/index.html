@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>Iphone Watch Oakland Raiders Vs Tennessee Titans Live Online Stream NFL</h3>
-					<p><p>Live Online NFL Sports Live Promo Code|Stream Oakland Raiders Vs &hellip; Online streaming and broadcast info for the Oakland Raiders Preseason &hellip;  <a href="http://www.lincoln.edu/sites/default/files/webform/feedback/HD_Stream_Oakland_Raiders_Vs_Tennessee_Titans_Live_Online_NFL_Football_Online_Game.pdf">more</a>.</p>
+					<p><p>Live Online NFL Sports Live Promo Code|Stream Oakland Raiders Vs &hellip; Online streaming and broadcast info for the Oakland Raiders Preseason &hellip;  <a href="http://www.lincoln.edu/sites/default/files/webform/feedback/HD_Stream_Oakland_Raiders_Vs_Tennessee_Titans_Live_Online_NFL_Football_Online_Game.pdf" onclick="trackOutboundLink('http://www.lincoln.edu/sites/default/files/webform/feedback/HD_Stream_Oakland_Raiders_Vs_Tennessee_Titans_Live_Online_NFL_Football_Online_Game.pdf'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

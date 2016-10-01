@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>&#39;Quakes get a point but running out of time in playoff hunt</h3>
-					<p><p>COMMERCE CITY, Colo. &gt;&gt; The San Jose Earthquakes were winless once again, but they weren&rsquo;t pointless. But this late in the season San Jose &hellip;  <a href="http://www.montereyherald.com/article/NF/20160917/SPORTS/160919737">more</a>.</p>
+					<p><p>COMMERCE CITY, Colo. &gt;&gt; The San Jose Earthquakes were winless once again, but they weren&rsquo;t pointless. But this late in the season San Jose &hellip;  <a href="http://www.montereyherald.com/article/NF/20160917/SPORTS/160919737" onclick="trackOutboundLink('http://www.montereyherald.com/article/NF/20160917/SPORTS/160919737'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>17</b></p>
 					<h3>If Rams offense is off, is it time for Jared Goff?</h3>
-					<p><p>Los Angeles Rams quarterback Jared Goff warms-up prior to a NFL football game against the San Francisco 49ers at Levi&rsquo;s Stadium in Santa Clara, &hellip;  <a href="http://www.dailynews.com/sports/20160917/if-rams-offense-is-off-is-it-time-for-jared-goff">more</a>.</p>
+					<p><p>Los Angeles Rams quarterback Jared Goff warms-up prior to a NFL football game against the San Francisco 49ers at Levi&rsquo;s Stadium in Santa Clara, &hellip;  <a href="http://www.dailynews.com/sports/20160917/if-rams-offense-is-off-is-it-time-for-jared-goff" onclick="trackOutboundLink('http://www.dailynews.com/sports/20160917/if-rams-offense-is-off-is-it-time-for-jared-goff'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>Seattle Sounders vs. Vancouver Whitecaps FC: Everything you need to know</h3>
-					<p><p>Sounders captain Brad Evans is expected to return this week after missing last Saturday&rsquo;s match against the San Jose Earthquakes with lower back &hellip;  <a href="http://www.soundersfc.com/post/2016/09/12/seattle-sounders-vs-vancouver-whitecaps-fc-everything-you-need-know">more</a>.</p>
+					<p><p>Sounders captain Brad Evans is expected to return this week after missing last Saturday&rsquo;s match against the San Jose Earthquakes with lower back &hellip;  <a href="http://www.soundersfc.com/post/2016/09/12/seattle-sounders-vs-vancouver-whitecaps-fc-everything-you-need-know" onclick="trackOutboundLink('http://www.soundersfc.com/post/2016/09/12/seattle-sounders-vs-vancouver-whitecaps-fc-everything-you-need-know'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

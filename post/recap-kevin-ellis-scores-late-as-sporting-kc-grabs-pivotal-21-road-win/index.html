@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>Recap: Kevin Ellis scores late as Sporting KC grabs pivotal 2-1 road win</h3>
-					<p><p>Sporting Kansas City Sporting Kansas City claimed an invaluable 2-1 road victory over the San Jose Earthquakes on Saturday night, jumping up to fifth place in the Western &hellip;  <a href="http://www.sportingkc.com/post/2016/09/25/recap-kevin-ellis-scores-late-sporting-kc-grabs-pivotal-2-1-road-win-over-san-jose">more</a>.</p>
+					<p><p>Sporting Kansas City Sporting Kansas City claimed an invaluable 2-1 road victory over the San Jose Earthquakes on Saturday night, jumping up to fifth place in the Western &hellip;  <a href="http://www.sportingkc.com/post/2016/09/25/recap-kevin-ellis-scores-late-sporting-kc-grabs-pivotal-2-1-road-win-over-san-jose" onclick="trackOutboundLink('http://www.sportingkc.com/post/2016/09/25/recap-kevin-ellis-scores-late-sporting-kc-grabs-pivotal-2-1-road-win-over-san-jose'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

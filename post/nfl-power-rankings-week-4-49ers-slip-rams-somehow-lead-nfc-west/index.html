@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>NFL power rankings, Week 4: 49ers slip, Rams somehow lead NFC West</h3>
-					<p><p>The San Francisco 49ers are coming off a brutal loss to the Seattle Seahawks. They got some late scores, but this game felt like it was in the bag &hellip;  <a href="http://www.ninersnation.com/2016/9/27/13071596/nfl-power-rankings-week-4-49ers-rams-nfc-west">more</a>.</p>
+					<p><p>The San Francisco 49ers are coming off a brutal loss to the Seattle Seahawks. They got some late scores, but this game felt like it was in the bag &hellip;  <a href="http://www.ninersnation.com/2016/9/27/13071596/nfl-power-rankings-week-4-49ers-rams-nfc-west" onclick="trackOutboundLink('http://www.ninersnation.com/2016/9/27/13071596/nfl-power-rankings-week-4-49ers-rams-nfc-west'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

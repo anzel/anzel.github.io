@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>11</b></p>
 					<h3>New Orleans Saints defense crumbles in fourth quarter of loss to Oakland</h3>
-					<p><p>NOLA.com The 2016 New Orleans Saints look quite similar to the teams of the past two seasons  electric offense, a defense that crumbled in the worst moments &hellip;  <a href="http://www.nola.com/saints/index.ssf/2016/09/saints_drew_brees_raiders.html">more</a>.</p>
+					<p><p>NOLA.com The 2016 New Orleans Saints look quite similar to the teams of the past two seasons  electric offense, a defense that crumbled in the worst moments &hellip;  <a href="http://www.nola.com/saints/index.ssf/2016/09/saints_drew_brees_raiders.html" onclick="trackOutboundLink('http://www.nola.com/saints/index.ssf/2016/09/saints_drew_brees_raiders.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>19</b></p>
 					<h3>Oakland Raiders Score 28 Points But Lose to Atlanta Falcons</h3>
-					<p><p>Sometimes, all it takes is one big play in the NFL to win a game. According to ESPN, the Atlanta Falcons defeated the Oakland Raiders by a score of &hellip;  <a href="http://www.inquisitr.com/3522422/oakland-raiders-score-28-points-but-lose-to-atlanta-falcons/?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed%3A+Inquisitr+(Inquisitr%3A+All)">more</a>.</p>
+					<p><p>Sometimes, all it takes is one big play in the NFL to win a game. According to ESPN, the Atlanta Falcons defeated the Oakland Raiders by a score of &hellip;  <a href="http://www.inquisitr.com/3522422/oakland-raiders-score-28-points-but-lose-to-atlanta-falcons/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+Inquisitr+(Inquisitr%3A+All)" onclick="trackOutboundLink('http://www.inquisitr.com/3522422/oakland-raiders-score-28-points-but-lose-to-atlanta-falcons/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+Inquisitr+(Inquisitr%3A+All)'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

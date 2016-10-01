@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>05</b></p>
 					<h3>Former 49ers Player Bruce Miller Arrested After Allegedly Assaulting</h3>
-					<p><p>Complex Former San Francisco 49ers fullback Bruce Miller was arrested Monday morning following an altercation where he allegedly assaulted two people, &hellip;  <a href="http://www.complex.com/sports/2016/09/bruce-miller-former-49ers-player-arrested-assaulting-70-year-old-man">more</a>.</p>
+					<p><p>Complex Former San Francisco 49ers fullback Bruce Miller was arrested Monday morning following an altercation where he allegedly assaulted two people, &hellip;  <a href="http://www.complex.com/sports/2016/09/bruce-miller-former-49ers-player-arrested-assaulting-70-year-old-man" onclick="trackOutboundLink('http://www.complex.com/sports/2016/09/bruce-miller-former-49ers-player-arrested-assaulting-70-year-old-man'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

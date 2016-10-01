@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>11</b></p>
 					<h3>Mayo: Kaepernick may cause some division in 49ers locker room</h3>
-					<p><p>Jerod Mayo discusses Colin Kaepernick not standing up for the National Anthem and how Bill Belichick would handle that situation. Tags: Colin &hellip;  <a href="http://www.csnne.com/new-england-patriots/mayo-kaepernick-may-cause-some-division-49ers-locker-room">more</a>.</p>
+					<p><p>Jerod Mayo discusses Colin Kaepernick not standing up for the National Anthem and how Bill Belichick would handle that situation. Tags: Colin &hellip;  <a href="http://www.csnne.com/new-england-patriots/mayo-kaepernick-may-cause-some-division-49ers-locker-room" onclick="trackOutboundLink('http://www.csnne.com/new-england-patriots/mayo-kaepernick-may-cause-some-division-49ers-locker-room'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>10</b></p>
 					<h3>New Orleans Saints vs Oakland Raiders live NFL</h3>
-					<p><p>New Orleans Saints live Stream Online, New Orleans Saints vs Oakland &hellip;  <a href="https://awethu.amandla.mobi/petitions/new-orleans-saints-vs-oakland-raiders-live-nfl">more</a>.</p>
+					<p><p>New Orleans Saints live Stream Online, New Orleans Saints vs Oakland &hellip;  <a href="https://awethu.amandla.mobi/petitions/new-orleans-saints-vs-oakland-raiders-live-nfl" onclick="trackOutboundLink('https://awethu.amandla.mobi/petitions/new-orleans-saints-vs-oakland-raiders-live-nfl'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

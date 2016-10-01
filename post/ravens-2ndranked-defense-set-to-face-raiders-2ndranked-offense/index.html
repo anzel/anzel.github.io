@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>29</b></p>
 					<h3>Ravens&#39; 2nd-ranked defense set to face Raiders&#39; 2nd-ranked offense</h3>
-					<p><p>Led by their takeaways, the Ravens enter their Week 4 matchup against the Oakland Raiders ranked second in the NFL in total defense, allowing &hellip;  <a href="http://www.cecildaily.com/sports/pros/article_ecdf2041-89d6-5a94-a543-e2870f7b575d.html">more</a>.</p>
+					<p><p>Led by their takeaways, the Ravens enter their Week 4 matchup against the Oakland Raiders ranked second in the NFL in total defense, allowing &hellip;  <a href="http://www.cecildaily.com/sports/pros/article_ecdf2041-89d6-5a94-a543-e2870f7b575d.html" onclick="trackOutboundLink('http://www.cecildaily.com/sports/pros/article_ecdf2041-89d6-5a94-a543-e2870f7b575d.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>22</b></p>
 					<h3>SF GIANTS Galaxy Aframe MLB 9Fifty Snapback</h3>
-					<p><p>(raised) San Francisco Giants logo at front, a stitched New Era flag at &hellip;  <a href="https://www.westfield.com/products/us-lids-locker-room/sf-giants-galaxy-aframe-mlb-9fifty-snapback/f691d659-17b9-46a7-852c-021f3695857c">more</a>.</p>
+					<p><p>(raised) San Francisco Giants logo at front, a stitched New Era flag at &hellip;  <a href="https://www.westfield.com/products/us-lids-locker-room/sf-giants-galaxy-aframe-mlb-9fifty-snapback/f691d659-17b9-46a7-852c-021f3695857c" onclick="trackOutboundLink('https://www.westfield.com/products/us-lids-locker-room/sf-giants-galaxy-aframe-mlb-9fifty-snapback/f691d659-17b9-46a7-852c-021f3695857c'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

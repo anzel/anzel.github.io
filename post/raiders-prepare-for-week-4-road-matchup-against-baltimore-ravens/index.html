@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>Raiders Prepare For Week 4 Road Matchup Against Baltimore Ravens</h3>
-					<p><p>The Oakland Raiders will make their first trip of the young season to the Eastern Time Zone this weekend, traveling to Baltimore to face the Ravens at &hellip;  <a href="http://www.raiders.com/news/article-1/Raiders-Prepare-For-Week-4-Road-Matchup-Against-Baltimore-Ravens/0035d376-8b4c-42fd-9f37-7ca4657f960e">more</a>.</p>
+					<p><p>The Oakland Raiders will make their first trip of the young season to the Eastern Time Zone this weekend, traveling to Baltimore to face the Ravens at &hellip;  <a href="http://www.raiders.com/news/article-1/Raiders-Prepare-For-Week-4-Road-Matchup-Against-Baltimore-Ravens/0035d376-8b4c-42fd-9f37-7ca4657f960e" onclick="trackOutboundLink('http://www.raiders.com/news/article-1/Raiders-Prepare-For-Week-4-Road-Matchup-Against-Baltimore-Ravens/0035d376-8b4c-42fd-9f37-7ca4657f960e'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

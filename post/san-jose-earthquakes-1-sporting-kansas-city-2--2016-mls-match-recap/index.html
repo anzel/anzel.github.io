@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>San Jose Earthquakes 1, Sporting Kansas City 2 - 2016 MLS Match Recap</h3>
-					<p><p>Defender Kevin Ellis backheeled in Benny Feilhaber&rsquo;s corner kick in the 81st minute, giving Sporting Kansas City a 2-1 victory over the San Jose &hellip;  <a href="http://www.mlssoccer.com/post/2016/09/25/san-jose-earthquakes-1-sporting-kansas-city-2-2016-mls-match-recap">more</a>.</p>
+					<p><p>Defender Kevin Ellis backheeled in Benny Feilhaber&rsquo;s corner kick in the 81st minute, giving Sporting Kansas City a 2-1 victory over the San Jose &hellip;  <a href="http://www.mlssoccer.com/post/2016/09/25/san-jose-earthquakes-1-sporting-kansas-city-2-2016-mls-match-recap" onclick="trackOutboundLink('http://www.mlssoccer.com/post/2016/09/25/san-jose-earthquakes-1-sporting-kansas-city-2-2016-mls-match-recap'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

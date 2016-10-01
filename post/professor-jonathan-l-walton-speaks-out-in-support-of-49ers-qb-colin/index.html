@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>02</b></p>
 					<h3>Professor Jonathan L. Walton speaks out in support of 49ers QB Colin</h3>
-					<p><p>Last Friday before the preseason game between the 49ers and the Green Bay Packers, Kaepernick expressed his feelings about the state of race &hellip;  <a href="http://memorialchurch.harvard.edu/news/professor-jonathan-l-walton-speaks-out-support-49ers-qb-colin-kaepernick">more</a>.</p>
+					<p><p>Last Friday before the preseason game between the 49ers and the Green Bay Packers, Kaepernick expressed his feelings about the state of race &hellip;  <a href="http://memorialchurch.harvard.edu/news/professor-jonathan-l-walton-speaks-out-support-49ers-qb-colin-kaepernick" onclick="trackOutboundLink('http://memorialchurch.harvard.edu/news/professor-jonathan-l-walton-speaks-out-support-49ers-qb-colin-kaepernick'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

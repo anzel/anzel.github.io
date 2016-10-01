@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>NFL Week 3 Outlook: Pressure Starting To Mount On 0-2 Teams</h3>
-					<p><p>Oakland Raiders vs. Tennessee Titans. It&rsquo;s hard to make sense of how the Raiders defense, which entered the regular season with so much promise, &hellip;  <a href="http://www.forbes.com/sites/anthonydimoro/2016/09/25/nfl-week-3-outlook-pressure-starting-to-mount-on-0-2-teams/">more</a>.</p>
+					<p><p>Oakland Raiders vs. Tennessee Titans. It&rsquo;s hard to make sense of how the Raiders defense, which entered the regular season with so much promise, &hellip;  <a href="http://www.forbes.com/sites/anthonydimoro/2016/09/25/nfl-week-3-outlook-pressure-starting-to-mount-on-0-2-teams/" onclick="trackOutboundLink('http://www.forbes.com/sites/anthonydimoro/2016/09/25/nfl-week-3-outlook-pressure-starting-to-mount-on-0-2-teams/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

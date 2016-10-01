@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>01</b></p>
 					<h3>Seattle Seahawks vs Oakland Raiders Preview: Hawks look tofinish preseason</h3>
-					<p><p>VAVEL.com The Seattle Seahawks will look to finish the preseason with a 3-1 record as they head to the Bay Area to face the Oakland Raiders. Ben Rosener.  <a href="http://www.vavel.com/en-us/nfl/689652-seattle-seahawks-vs-oakland-raiders-preview-hawks-look-to-finish-preseason-on-high-note.html">more</a>.</p>
+					<p><p>VAVEL.com The Seattle Seahawks will look to finish the preseason with a 3-1 record as they head to the Bay Area to face the Oakland Raiders. Ben Rosener.  <a href="http://www.vavel.com/en-us/nfl/689652-seattle-seahawks-vs-oakland-raiders-preview-hawks-look-to-finish-preseason-on-high-note.html" onclick="trackOutboundLink('http://www.vavel.com/en-us/nfl/689652-seattle-seahawks-vs-oakland-raiders-preview-hawks-look-to-finish-preseason-on-high-note.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

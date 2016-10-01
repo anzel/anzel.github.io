@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>01</b></p>
 					<h3>Astros sweep Oakland with 4-3 win</h3>
-					<p><p>Houston Astros&rsquo; Carlos Correa (1) and Jose Altuve celebrate the Astros&rsquo; 3-1 victory over the Oakland Athletics in a baseball game Tuesday, Aug.  <a href="http://abc13.com/sports/astros-sweep-oakland-with-4-3-win/1493777/">more</a>.</p>
+					<p><p>Houston Astros&rsquo; Carlos Correa (1) and Jose Altuve celebrate the Astros&rsquo; 3-1 victory over the Oakland Athletics in a baseball game Tuesday, Aug.  <a href="http://abc13.com/sports/astros-sweep-oakland-with-4-3-win/1493777/" onclick="trackOutboundLink('http://abc13.com/sports/astros-sweep-oakland-with-4-3-win/1493777/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>06</b></p>
 					<h3>Hertl the latest to withdraw with injury; opts to put NHL club first</h3>
-					<p><p>OTTAWA  San Jose Sharks winger Tomas Hertl is the latest player to pull out of the World Cup of Hockey with an injury. The 22-year-old withdrew &hellip;  <a href="http://www.therecord.com/sports-story/6841255-hertl-the-latest-to-withdraw-with-injury-opts-to-put-nhl-club-first/">more</a>.</p>
+					<p><p>OTTAWA  San Jose Sharks winger Tomas Hertl is the latest player to pull out of the World Cup of Hockey with an injury. The 22-year-old withdrew &hellip;  <a href="http://www.therecord.com/sports-story/6841255-hertl-the-latest-to-withdraw-with-injury-opts-to-put-nhl-club-first/" onclick="trackOutboundLink('http://www.therecord.com/sports-story/6841255-hertl-the-latest-to-withdraw-with-injury-opts-to-put-nhl-club-first/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

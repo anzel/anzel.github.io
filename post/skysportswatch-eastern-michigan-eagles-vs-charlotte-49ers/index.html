@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>17</b></p>
 					<h3>Sky-Sports^Watch. &#39;Eastern Michigan Eagles vs Charlotte 49ers&#39;.</h3>
-					<p><p>vs Charlotte 49ers Online Live Feed Watch Live. Eastern Michigan &hellip;  <a href="http://sports.westway.org/sites/default/files/webform/sky-sportswatch._eastern_michigan_eagles_vs_charlotte_49ers._football._online._streaming._sopcast.pdf">more</a>.</p>
+					<p><p>vs Charlotte 49ers Online Live Feed Watch Live. Eastern Michigan &hellip;  <a href="http://sports.westway.org/sites/default/files/webform/sky-sportswatch._eastern_michigan_eagles_vs_charlotte_49ers._football._online._streaming._sopcast.pdf" onclick="trackOutboundLink('http://sports.westway.org/sites/default/files/webform/sky-sportswatch._eastern_michigan_eagles_vs_charlotte_49ers._football._online._streaming._sopcast.pdf'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

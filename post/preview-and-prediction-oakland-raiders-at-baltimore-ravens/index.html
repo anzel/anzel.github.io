@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -82,6 +91,8 @@
 
 				<li style="font-size: 1.4em">
 					<p>Read these next:</p>
+					
+					<p>- <a style="text-decoration: none" href="//anzel.net/post/old-dominion-monarchs-at-charlotte-49ers/">Old Dominion Monarchs at Charlotte 49ers</a></p>
 					
 					
 					<p>- <a style="text-decoration: none" href="//anzel.net/post/former-tcu-receiver-jeremy-kerley-feeling-at-home-in-san-francisco/">Former TCU receiver Jeremy Kerley feeling at home in San Francisco</a></p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>11</b></p>
 					<h3>San Jose Earthquakes vs Seattle Sounders as it happened: Quakes squander</h3>
-					<p><p>Center Line Soccer SAN JOSE, Calif.  It was a slight improvement in play, as the San Jose Earthquakes started the game smartly, but it was much of the same old, same &hellip;  <a href="http://www.centerlinesoccer.com/2016/9/10/12876104/san-jose-earthquakes-vs-seattle-sounders-match-report-mls-2016-chris-wondolowski-record-goal">more</a>.</p>
+					<p><p>Center Line Soccer SAN JOSE, Calif.  It was a slight improvement in play, as the San Jose Earthquakes started the game smartly, but it was much of the same old, same &hellip;  <a href="http://www.centerlinesoccer.com/2016/9/10/12876104/san-jose-earthquakes-vs-seattle-sounders-match-report-mls-2016-chris-wondolowski-record-goal" onclick="trackOutboundLink('http://www.centerlinesoccer.com/2016/9/10/12876104/san-jose-earthquakes-vs-seattle-sounders-match-report-mls-2016-chris-wondolowski-record-goal'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

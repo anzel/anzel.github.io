@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>01</b></p>
 					<h3>Live.Seahawks vs Raiders Live Stream.</h3>
-					<p><p>K.;&rsquo;\ &hellip; -Oakland-Raiders-vs-Seattle-Seahawks-live-national-football-lea.;&rsquo;\,4.;&rsquo;\ &hellip;  <a href="http://www.bravenewfilms.org/bikre/l_i_v_e_seahawks_v_s_raiders_l_i_v_e_s_t_r_e_a_m">more</a>.</p>
+					<p><p>K.;&rsquo;\ &hellip; -Oakland-Raiders-vs-Seattle-Seahawks-live-national-football-lea.;&rsquo;\,4.;&rsquo;\ &hellip;  <a href="http://www.bravenewfilms.org/bikre/l_i_v_e_seahawks_v_s_raiders_l_i_v_e_s_t_r_e_a_m" onclick="trackOutboundLink('http://www.bravenewfilms.org/bikre/l_i_v_e_seahawks_v_s_raiders_l_i_v_e_s_t_r_e_a_m'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

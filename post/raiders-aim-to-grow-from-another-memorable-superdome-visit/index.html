@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>Raiders aim to grow from another memorable Superdome visit</h3>
-					<p><p>NEW ORLEANS (AP)  Even if the Oakland Raiders&rsquo; latest visit to the Superdome won&rsquo;t go down as their most memorable triumph in New Orleans, &hellip;  <a href="http://www.sfgate.com/sports/article/Raiders-aim-to-grow-from-another-memorable-9216383.php">more</a>.</p>
+					<p><p>NEW ORLEANS (AP)  Even if the Oakland Raiders&rsquo; latest visit to the Superdome won&rsquo;t go down as their most memorable triumph in New Orleans, &hellip;  <a href="http://www.sfgate.com/sports/article/Raiders-aim-to-grow-from-another-memorable-9216383.php" onclick="trackOutboundLink('http://www.sfgate.com/sports/article/Raiders-aim-to-grow-from-another-memorable-9216383.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

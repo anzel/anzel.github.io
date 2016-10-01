@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>11</b></p>
 					<h3>Oakland Raiders vs. New Orleans Saints Live Stream: How To Watch NFL Week 1</h3>
-					<p><p>Decider The NFL is back! And the road to Super Bowl LI (51, for the Roman numeral-challenged) begins here in Week 1. The Oakland Raiders are one of this &hellip;  <a href="http://decider.com/2016/09/11/oakland-raiders-new-orleans-saints-live-stream-nfl-week-1-free/">more</a>.</p>
+					<p><p>Decider The NFL is back! And the road to Super Bowl LI (51, for the Roman numeral-challenged) begins here in Week 1. The Oakland Raiders are one of this &hellip;  <a href="http://decider.com/2016/09/11/oakland-raiders-new-orleans-saints-live-stream-nfl-week-1-free/" onclick="trackOutboundLink('http://decider.com/2016/09/11/oakland-raiders-new-orleans-saints-live-stream-nfl-week-1-free/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

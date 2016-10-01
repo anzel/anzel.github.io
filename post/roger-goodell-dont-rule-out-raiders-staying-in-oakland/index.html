@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>19</b></p>
 					<h3>Roger Goodell: Don&#39;t rule out Raiders staying in Oakland</h3>
-					<p><p>An Oakland Raiders fan yells support in the first second half against the Atlanta Falcons at the Coliseum in Oakland, California on September 18, 2016 &hellip;  <a href="http://www.upi.com/Sports_News/2016/09/20/Roger-Goodell-Dont-rule-out-Raiders-staying-in-Oakland/7711474346247/">more</a>.</p>
+					<p><p>An Oakland Raiders fan yells support in the first second half against the Atlanta Falcons at the Coliseum in Oakland, California on September 18, 2016 &hellip;  <a href="http://www.upi.com/Sports_News/2016/09/20/Roger-Goodell-Dont-rule-out-Raiders-staying-in-Oakland/7711474346247/" onclick="trackOutboundLink('http://www.upi.com/Sports_News/2016/09/20/Roger-Goodell-Dont-rule-out-Raiders-staying-in-Oakland/7711474346247/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

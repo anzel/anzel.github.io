@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>16</b></p>
 					<h3>Vogt drives in 5 runs as A&#39;s win 14-5 to sweep Royals</h3>
-					<p><p>Kansas City Royals second baseman Whit Merrifield (15) tags out Oakland Athletics&rsquo; Stephen Vogt during the third inning of a baseball game at &hellip;  <a href="http://www.fultonsun.com/news/sports/pro/story/2016/sep/16/vogt-drives-5-runs-win-14-5-sweep-royals/640412/">more</a>.</p>
+					<p><p>Kansas City Royals second baseman Whit Merrifield (15) tags out Oakland Athletics&rsquo; Stephen Vogt during the third inning of a baseball game at &hellip;  <a href="http://www.fultonsun.com/news/sports/pro/story/2016/sep/16/vogt-drives-5-runs-win-14-5-sweep-royals/640412/" onclick="trackOutboundLink('http://www.fultonsun.com/news/sports/pro/story/2016/sep/16/vogt-drives-5-runs-win-14-5-sweep-royals/640412/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

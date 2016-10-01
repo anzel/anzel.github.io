@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>29</b></p>
 					<h3>Raiders coach Jack Del Rio explains why Khalil Mack doesn&#39;t have a sack</h3>
-					<p><p>After racking up 15 sacks last season, Oakland Raiders pass rusher Khalil Mack was expected to approach 20 in 2016. Along with Von Miller, Mack is &hellip;  <a href="http://www.foxsports.com/nfl/story/raiders-coach-jack-del-rio-explains-why-khalil-mack-doesnt-have-a-sack-092916">more</a>.</p>
+					<p><p>After racking up 15 sacks last season, Oakland Raiders pass rusher Khalil Mack was expected to approach 20 in 2016. Along with Von Miller, Mack is &hellip;  <a href="http://www.foxsports.com/nfl/story/raiders-coach-jack-del-rio-explains-why-khalil-mack-doesnt-have-a-sack-092916" onclick="trackOutboundLink('http://www.foxsports.com/nfl/story/raiders-coach-jack-del-rio-explains-why-khalil-mack-doesnt-have-a-sack-092916'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

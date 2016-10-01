@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>Sean Manaea impressive again despite A&#39;s 2-1 loss...</h3>
-					<p><p>Oakland Athletics&rsquo; Stephen Vogt is greeted by teammate Danny Valencia after hitting a home run against the Los Angeles Angels during the sixth &hellip;  <a href="http://www.insidehalton.com/sports-story/6880554-sean-manaea-impressive-again-despite-a-s-2-1-loss-to-angels/">more</a>.</p>
+					<p><p>Oakland Athletics&rsquo; Stephen Vogt is greeted by teammate Danny Valencia after hitting a home run against the Los Angeles Angels during the sixth &hellip;  <a href="http://www.insidehalton.com/sports-story/6880554-sean-manaea-impressive-again-despite-a-s-2-1-loss-to-angels/" onclick="trackOutboundLink('http://www.insidehalton.com/sports-story/6880554-sean-manaea-impressive-again-despite-a-s-2-1-loss-to-angels/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

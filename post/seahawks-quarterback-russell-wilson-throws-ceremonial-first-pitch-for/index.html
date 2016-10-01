@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>03</b></p>
 					<h3>Seahawks Quarterback Russell Wilson Throws Ceremonial First Pitch For</h3>
-					<p><p>Seahawks.com Take a sneak peek at Seahawks Saturday Night&rsquo;s &ldquo;Mic&rsquo;d Up&rdquo; segment with Seahawks offensive line coach Tom Cable. Tune in to Q13 FOX on &hellip;  <a href="http://www.seahawks.com/news/2016/09/02/seahawks-quarterback-russell-wilson-throws-ceremonial-first-pitch-seattle-mariners">more</a>.</p>
+					<p><p>Seahawks.com Take a sneak peek at Seahawks Saturday Night&rsquo;s &ldquo;Mic&rsquo;d Up&rdquo; segment with Seahawks offensive line coach Tom Cable. Tune in to Q13 FOX on &hellip;  <a href="http://www.seahawks.com/news/2016/09/02/seahawks-quarterback-russell-wilson-throws-ceremonial-first-pitch-seattle-mariners" onclick="trackOutboundLink('http://www.seahawks.com/news/2016/09/02/seahawks-quarterback-russell-wilson-throws-ceremonial-first-pitch-seattle-mariners'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

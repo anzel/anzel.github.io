@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>16</b></p>
 					<h3>Former 49ers Pro Bowler Fred Quillan passes away at 60</h3>
-					<p><p>Fred Quillan played 10 years in the National Football league, all with the San Francisco 49ers. An original seventh-round pick out of Oregon back in &hellip;  <a href="http://sportsnaut.com/2016/09/former-49ers-pro-bowler-fred-quillan-passes-away-at-60/">more</a>.</p>
+					<p><p>Fred Quillan played 10 years in the National Football league, all with the San Francisco 49ers. An original seventh-round pick out of Oregon back in &hellip;  <a href="http://sportsnaut.com/2016/09/former-49ers-pro-bowler-fred-quillan-passes-away-at-60/" onclick="trackOutboundLink('http://sportsnaut.com/2016/09/former-49ers-pro-bowler-fred-quillan-passes-away-at-60/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Oct<b>01</b></p>
 					<h3>Lowell Cohn: Firing Baalke would make 49ers&#39; situation worse</h3>
-					<p><p>The latest crusade is against 49ers general manager Trent Baalke. You and I read it in the papers and on tweets and emails. Baalke is the 49ers &hellip;  <a href="http://www.pressdemocrat.com/sports/6143437-181/lowell-cohn-firing-baalke-would">more</a>.</p>
+					<p><p>The latest crusade is against 49ers general manager Trent Baalke. You and I read it in the papers and on tweets and emails. Baalke is the 49ers &hellip;  <a href="http://www.pressdemocrat.com/sports/6143437-181/lowell-cohn-firing-baalke-would" onclick="trackOutboundLink('http://www.pressdemocrat.com/sports/6143437-181/lowell-cohn-firing-baalke-would'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

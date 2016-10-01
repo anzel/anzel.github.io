@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>01</b></p>
 					<h3>Seattle Seahawks vs Oakland Raiders Live Stream NFL Preseason</h3>
-					<p><p>-sensational-performance-helps-the-Raiders-defeat-the-Seattle- &hellip;  <a href="http://www.jill2016.com/jiaurrahman32/_n_f_l_tv_s_e_a_t_t_l_e_s_e_a_h_a_w_k_s_v_s_o_a_k_l_a_n_d_r_a_i_d_e_r_s_l_i_v_e_s_t_r_e_a_m_n_f_l_p_r_e_s_e_a_s_o_n">more</a>.</p>
+					<p><p>-sensational-performance-helps-the-Raiders-defeat-the-Seattle- &hellip;  <a href="http://www.jill2016.com/jiaurrahman32/_n_f_l_tv_s_e_a_t_t_l_e_s_e_a_h_a_w_k_s_v_s_o_a_k_l_a_n_d_r_a_i_d_e_r_s_l_i_v_e_s_t_r_e_a_m_n_f_l_p_r_e_s_e_a_s_o_n" onclick="trackOutboundLink('http://www.jill2016.com/jiaurrahman32/_n_f_l_tv_s_e_a_t_t_l_e_s_e_a_h_a_w_k_s_v_s_o_a_k_l_a_n_d_r_a_i_d_e_r_s_l_i_v_e_s_t_r_e_a_m_n_f_l_p_r_e_s_e_a_s_o_n'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

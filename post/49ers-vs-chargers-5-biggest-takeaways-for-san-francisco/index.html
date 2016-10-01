@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>03</b></p>
 					<h3>49ers vs. Chargers: 5 Biggest Takeaways for San Francisco</h3>
-					<p><p>With preseason wrapped up, it&rsquo;s time for the San Francisco 49ers to select their 53-man roster. Here are five takeaways from the game against San &hellip;  <a href="http://ninernoise.com/2016/09/02/49ers-vs-chargers-5-biggest-takeaways-san-francisco/">more</a>.</p>
+					<p><p>With preseason wrapped up, it&rsquo;s time for the San Francisco 49ers to select their 53-man roster. Here are five takeaways from the game against San &hellip;  <a href="http://ninernoise.com/2016/09/02/49ers-vs-chargers-5-biggest-takeaways-san-francisco/" onclick="trackOutboundLink('http://ninernoise.com/2016/09/02/49ers-vs-chargers-5-biggest-takeaways-san-francisco/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

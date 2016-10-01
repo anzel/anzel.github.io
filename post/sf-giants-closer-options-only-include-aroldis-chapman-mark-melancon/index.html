@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>29</b></p>
 					<h3>SF Giants Closer Options Only Include Aroldis Chapman, Mark Melancon</h3>
-					<p><p>Next year we&rsquo;ll see the San Francisco Giants go down a different path at the closer spot. Sergio Romo and Santiago Casilla are free agents, and more &hellip;  <a href="http://inningseaters.sportsblog.com/posts/26533291/sf-giants-closer-options-only-include-aroldis-chapman--mark-melancon.html">more</a>.</p>
+					<p><p>Next year we&rsquo;ll see the San Francisco Giants go down a different path at the closer spot. Sergio Romo and Santiago Casilla are free agents, and more &hellip;  <a href="http://inningseaters.sportsblog.com/posts/26533291/sf-giants-closer-options-only-include-aroldis-chapman--mark-melancon.html" onclick="trackOutboundLink('http://inningseaters.sportsblog.com/posts/26533291/sf-giants-closer-options-only-include-aroldis-chapman--mark-melancon.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

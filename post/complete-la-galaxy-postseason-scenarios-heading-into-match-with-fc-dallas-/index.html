@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Oct<b>01</b></p>
 					<h3>Complete LA Galaxy postseason scenarios heading into match with FC Dallas -</h3>
-					<p><p>LA Galaxy San Jose Earthquakes on Saturday AND.  Seattle Sounders FC lose vs. Vancouver Whitecaps FC on Sunday AND.  Sporting Kansas City lose or tie &hellip;  <a href="http://www.lagalaxy.com/post/2016/09/30/complete-la-galaxy-postseason-scenarios-heading-match-fc-dallas-insider">more</a>.</p>
+					<p><p>LA Galaxy San Jose Earthquakes on Saturday AND.  Seattle Sounders FC lose vs. Vancouver Whitecaps FC on Sunday AND.  Sporting Kansas City lose or tie &hellip;  <a href="http://www.lagalaxy.com/post/2016/09/30/complete-la-galaxy-postseason-scenarios-heading-match-fc-dallas-insider" onclick="trackOutboundLink('http://www.lagalaxy.com/post/2016/09/30/complete-la-galaxy-postseason-scenarios-heading-match-fc-dallas-insider'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>20</b></p>
 					<h3>Springer delivers, Astros hold off Athletics in 10 innings</h3>
-					<p><p>(AP)  George Springer hit a go-ahead single in the top of the 10th inning, and the Houston Astros beat the Oakland Athletics 2-1 on Tuesday night.  <a href="http://www.stltoday.com/sports/baseball/springer-delivers-astros-hold-off-athletics-in-innings/article_b18c38ad-614d-5399-904c-7704e33f6002.html">more</a>.</p>
+					<p><p>(AP)  George Springer hit a go-ahead single in the top of the 10th inning, and the Houston Astros beat the Oakland Athletics 2-1 on Tuesday night.  <a href="http://www.stltoday.com/sports/baseball/springer-delivers-astros-hold-off-athletics-in-innings/article_b18c38ad-614d-5399-904c-7704e33f6002.html" onclick="trackOutboundLink('http://www.stltoday.com/sports/baseball/springer-delivers-astros-hold-off-athletics-in-innings/article_b18c38ad-614d-5399-904c-7704e33f6002.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>First impressions: Moncada makes debut as Red Sox pummel Athletics, 16-2</h3>
-					<p><p>In order to emphasize divisional rivalries, teams now play far more games within their division, while playing every every team in the league in just two &hellip;  <a href="http://www.csnne.com/boston-red-sox/first-impressions-moncada-makes-debut-red-sox-pummel-athletics-16-2">more</a>.</p>
+					<p><p>In order to emphasize divisional rivalries, teams now play far more games within their division, while playing every every team in the league in just two &hellip;  <a href="http://www.csnne.com/boston-red-sox/first-impressions-moncada-makes-debut-red-sox-pummel-athletics-16-2" onclick="trackOutboundLink('http://www.csnne.com/boston-red-sox/first-impressions-moncada-makes-debut-red-sox-pummel-athletics-16-2'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

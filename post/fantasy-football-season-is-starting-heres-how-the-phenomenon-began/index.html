@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>Fantasy Football Season Is Starting. Here&#39;s How the Phenomenon Began</h3>
-					<p><p>Robert KleinAP Al Davis, head coach of the American Football League&rsquo;s Oakland Raiders, is shown as he talked, Dec. 18, 1963 in Oakland with his &hellip;  <a href="http://time.com/4482137/fantasy-football-history/">more</a>.</p>
+					<p><p>Robert KleinAP Al Davis, head coach of the American Football League&rsquo;s Oakland Raiders, is shown as he talked, Dec. 18, 1963 in Oakland with his &hellip;  <a href="http://time.com/4482137/fantasy-football-history/" onclick="trackOutboundLink('http://time.com/4482137/fantasy-football-history/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

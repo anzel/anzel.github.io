@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>49ers to pledge $1 million to Bay Area groups to &#39;bridge the gap&#39; of social</h3>
-					<p><p>Washington Post Kaepernick&rsquo;s decision to not stand during the national anthem during 49ers games sparked a national debate after he said he will not stand to show &hellip;  <a href="https://www.washingtonpost.com/news/early-lead/wp/2016/09/08/49ers-to-pledge-1-million-to-bay-area-groups-to-bridge-the-gap-of-social-inequality/">more</a>.</p>
+					<p><p>Washington Post Kaepernick&rsquo;s decision to not stand during the national anthem during 49ers games sparked a national debate after he said he will not stand to show &hellip;  <a href="https://www.washingtonpost.com/news/early-lead/wp/2016/09/08/49ers-to-pledge-1-million-to-bay-area-groups-to-bridge-the-gap-of-social-inequality/" onclick="trackOutboundLink('https://www.washingtonpost.com/news/early-lead/wp/2016/09/08/49ers-to-pledge-1-million-to-bay-area-groups-to-bridge-the-gap-of-social-inequality/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

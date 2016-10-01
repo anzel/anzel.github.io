@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>05</b></p>
 					<h3>The Oakland Athletics recall Mengden and his scary stats</h3>
-					<p><p>Halloween is more than one month away. But the Oakland Athletics have already experienced a season of scary performances from their rotation.  <a href="http://isportsweb.com/2016/09/05/oakland-athletics-mengden-scary-stats/">more</a>.</p>
+					<p><p>Halloween is more than one month away. But the Oakland Athletics have already experienced a season of scary performances from their rotation.  <a href="http://isportsweb.com/2016/09/05/oakland-athletics-mengden-scary-stats/" onclick="trackOutboundLink('http://isportsweb.com/2016/09/05/oakland-athletics-mengden-scary-stats/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

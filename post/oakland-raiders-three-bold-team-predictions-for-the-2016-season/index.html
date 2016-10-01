@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>Oakland Raiders: Three Bold Team Predictions for the 2016 Season</h3>
-					<p><p>Aug 12, 2016; Glendale, AZ, USA; Oakland Raiders safety Karl Joseph (42) talks with defensive back Reggie Nelson (27) and outside linebacker &hellip;  <a href="http://justblogbaby.com/2016/09/08/oakland-raiders-three-bold-team-predictions-for-the-2016-season/">more</a>.</p>
+					<p><p>Aug 12, 2016; Glendale, AZ, USA; Oakland Raiders safety Karl Joseph (42) talks with defensive back Reggie Nelson (27) and outside linebacker &hellip;  <a href="http://justblogbaby.com/2016/09/08/oakland-raiders-three-bold-team-predictions-for-the-2016-season/" onclick="trackOutboundLink('http://justblogbaby.com/2016/09/08/oakland-raiders-three-bold-team-predictions-for-the-2016-season/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

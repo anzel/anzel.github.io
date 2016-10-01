@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>10</b></p>
 					<h3>Iwakuma earns 15th win in Mariners&#39; 3-2 win over A&#39;s</h3>
-					<p><p>&hellip; Oakland Athletics during the third inning of a baseball game Friday, Sept. &hellip; and the Seattle Mariners beat the Oakland Athletics 3-2 on Friday night.  <a href="http://www.charlotteobserver.com/sports/article101052777.html">more</a>.</p>
+					<p><p>&hellip; Oakland Athletics during the third inning of a baseball game Friday, Sept. &hellip; and the Seattle Mariners beat the Oakland Athletics 3-2 on Friday night.  <a href="http://www.charlotteobserver.com/sports/article101052777.html" onclick="trackOutboundLink('http://www.charlotteobserver.com/sports/article101052777.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

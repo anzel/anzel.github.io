@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>22</b></p>
 					<h3>Officially Licensed MLB Car Front Floor Mats by Northwest - Oakland</h3>
-					<p><p>Shop Officially Licensed MLB Car Front Floor Mats by Northwest - Oakland Athletics 7809893, read customer reviews and more at HSN.com.  <a href="https://www.hsn.com/products/officially-licensed-mlb-car-front-floor-mats-by-northwe/7809893">more</a>.</p>
+					<p><p>Shop Officially Licensed MLB Car Front Floor Mats by Northwest - Oakland Athletics 7809893, read customer reviews and more at HSN.com.  <a href="https://www.hsn.com/products/officially-licensed-mlb-car-front-floor-mats-by-northwe/7809893" onclick="trackOutboundLink('https://www.hsn.com/products/officially-licensed-mlb-car-front-floor-mats-by-northwe/7809893'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

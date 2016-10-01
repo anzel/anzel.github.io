@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>Terelle Pryor appears at QB for the Cleveland Browns</h3>
-					<p><p>Pryor, 27, entered the league as a quarterback after the Oakland Raiders picked him up in the third round of the 2011 supplemental draft. At Ohio State &hellip;  <a href="http://www.sbnation.com/nfl/2016/9/25/13048340/terrelle-pryor-browns-quarterback">more</a>.</p>
+					<p><p>Pryor, 27, entered the league as a quarterback after the Oakland Raiders picked him up in the third round of the 2011 supplemental draft. At Ohio State &hellip;  <a href="http://www.sbnation.com/nfl/2016/9/25/13048340/terrelle-pryor-browns-quarterback" onclick="trackOutboundLink('http://www.sbnation.com/nfl/2016/9/25/13048340/terrelle-pryor-browns-quarterback'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>Lodeiro scores late goal, Sounders tie Earthquakes 1-1</h3>
-					<p><p>SAN JOSE, Calif. (AP)  Nicolas Lodeiro scored in the 80th minute and the Seattle Sounders rallied to tie the San Jose Earthquakes 1-1 on Saturday &hellip;  <a href="http://kgmi.com/news/007700-lodeiro-scores-late-goal-sounders-tie-earthquakes-1-1/">more</a>.</p>
+					<p><p>SAN JOSE, Calif. (AP)  Nicolas Lodeiro scored in the 80th minute and the Seattle Sounders rallied to tie the San Jose Earthquakes 1-1 on Saturday &hellip;  <a href="http://kgmi.com/news/007700-lodeiro-scores-late-goal-sounders-tie-earthquakes-1-1/" onclick="trackOutboundLink('http://kgmi.com/news/007700-lodeiro-scores-late-goal-sounders-tie-earthquakes-1-1/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

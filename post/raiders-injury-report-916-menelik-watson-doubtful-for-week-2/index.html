@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>16</b></p>
 					<h3>Raiders injury report (9/16): Menelik Watson doubtful for Week 2</h3>
-					<p><p>Derek Carr has been named the NFL&rsquo;s Clutch Player of the Week for his performance in the Oakland Raiders&rsquo; 35-34 win over the New Orleans Saints &hellip;  <a href="http://oak.247sports.com/Gallery/Oakland-Raiders-injury-report-916-Menelik-Watson-doubtful-for-We-47508627">more</a>.</p>
+					<p><p>Derek Carr has been named the NFL&rsquo;s Clutch Player of the Week for his performance in the Oakland Raiders&rsquo; 35-34 win over the New Orleans Saints &hellip;  <a href="http://oak.247sports.com/Gallery/Oakland-Raiders-injury-report-916-Menelik-Watson-doubtful-for-We-47508627" onclick="trackOutboundLink('http://oak.247sports.com/Gallery/Oakland-Raiders-injury-report-916-Menelik-Watson-doubtful-for-We-47508627'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

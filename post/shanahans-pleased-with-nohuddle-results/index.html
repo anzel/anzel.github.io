@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>24</b></p>
 					<h3>Shanahan&#39;s pleased with no-huddle results</h3>
-					<p><p>The Falcons, according to the official gamebook, ran 25 no-huddle plays in their 35-28 win over the Oakland Raiders. Against Oakland, we definitely &hellip;  <a href="http://www.myajc.com/news/sports/football/shanahans-pleased-with-no-huddle-results/nsdkq/">more</a>.</p>
+					<p><p>The Falcons, according to the official gamebook, ran 25 no-huddle plays in their 35-28 win over the Oakland Raiders. Against Oakland, we definitely &hellip;  <a href="http://www.myajc.com/news/sports/football/shanahans-pleased-with-no-huddle-results/nsdkq/" onclick="trackOutboundLink('http://www.myajc.com/news/sports/football/shanahans-pleased-with-no-huddle-results/nsdkq/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

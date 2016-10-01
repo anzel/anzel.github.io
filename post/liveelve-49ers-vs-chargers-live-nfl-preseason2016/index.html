@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>01</b></p>
 					<h3>((LIVE))@E#L$V!E 49ers v&gt;s Chargers Live NFL .(Preseason).-.2.0.1.6</h3>
-					<p><p>ago. The San Francisco 49ers wrap up the 2016 preseason on the &hellip;  <a href="http://www.educause.edu/events/liveelve-49ers-vs-chargers-live-nfl-preseason-2016">more</a>.</p>
+					<p><p>ago. The San Francisco 49ers wrap up the 2016 preseason on the &hellip;  <a href="http://www.educause.edu/events/liveelve-49ers-vs-chargers-live-nfl-preseason-2016" onclick="trackOutboundLink('http://www.educause.edu/events/liveelve-49ers-vs-chargers-live-nfl-preseason-2016'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>23</b></p>
 					<h3>Seahawks vs. 49ers injury report: Rawls listed as doubtful</h3>
-					<p><p>Notes: The biggest question revolves around Rawls. who suffered a bruised shin in last week&rsquo;s 9-3 loss to the Los Angeles Rams. Seahawks coach &hellip;  <a href="http://www.heraldnet.com/sports/seahawks-vs-49ers-injury-report-rawls-listed-as-doubtful/">more</a>.</p>
+					<p><p>Notes: The biggest question revolves around Rawls. who suffered a bruised shin in last week&rsquo;s 9-3 loss to the Los Angeles Rams. Seahawks coach &hellip;  <a href="http://www.heraldnet.com/sports/seahawks-vs-49ers-injury-report-rawls-listed-as-doubtful/" onclick="trackOutboundLink('http://www.heraldnet.com/sports/seahawks-vs-49ers-injury-report-rawls-listed-as-doubtful/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

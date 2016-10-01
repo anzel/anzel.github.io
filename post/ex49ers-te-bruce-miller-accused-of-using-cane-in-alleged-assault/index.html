@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>Ex-49ers TE Bruce Miller accused of using cane in alleged assault</h3>
-					<p><p>The 49ers cut ties with Bruce Miller earlier this week after a report surfaced that he was arrested following an assault on a 70-year-old man and his son &hellip;  <a href="http://www.sportingnews.com/nfl/news/bruce-miller-video-arrested-assault-fight-49ers/x7qpegkv5igy11jc187p304km">more</a>.</p>
+					<p><p>The 49ers cut ties with Bruce Miller earlier this week after a report surfaced that he was arrested following an assault on a 70-year-old man and his son &hellip;  <a href="http://www.sportingnews.com/nfl/news/bruce-miller-video-arrested-assault-fight-49ers/x7qpegkv5igy11jc187p304km" onclick="trackOutboundLink('http://www.sportingnews.com/nfl/news/bruce-miller-video-arrested-assault-fight-49ers/x7qpegkv5igy11jc187p304km'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

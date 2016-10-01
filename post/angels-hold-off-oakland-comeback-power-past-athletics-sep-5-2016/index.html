@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>05</b></p>
 					<h3>Angels hold off Oakland comeback, power past Athletics (Sep 5, 2016)</h3>
-					<p><p>Los Angeles Angels second baseman Kaleb Cowart, bottom, collides with right fielder Kole Calhoun (56) on a double by Oakland Athletics&rsquo; Danny &hellip;  <a href="http://www.foxsports.com/mlb/story/angels-hold-off-oakland-comeback-power-past-athletics-090516">more</a>.</p>
+					<p><p>Los Angeles Angels second baseman Kaleb Cowart, bottom, collides with right fielder Kole Calhoun (56) on a double by Oakland Athletics&rsquo; Danny &hellip;  <a href="http://www.foxsports.com/mlb/story/angels-hold-off-oakland-comeback-power-past-athletics-090516" onclick="trackOutboundLink('http://www.foxsports.com/mlb/story/angels-hold-off-oakland-comeback-power-past-athletics-090516'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

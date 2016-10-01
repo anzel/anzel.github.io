@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>06</b></p>
 					<h3>Report: 49ers extend Tank Carradine&#39;s deal by a year</h3>
-					<p><p>According to Matt Barrows of the Sacramento Bee, the 49ers have signed Carradine to a one-year contract extension. He was set to become an &hellip;  <a href="http://profootballtalk.nbcsports.com/2016/09/06/report-49ers-extend-tank-carradines-deal-by-a-year/">more</a>.</p>
+					<p><p>According to Matt Barrows of the Sacramento Bee, the 49ers have signed Carradine to a one-year contract extension. He was set to become an &hellip;  <a href="http://profootballtalk.nbcsports.com/2016/09/06/report-49ers-extend-tank-carradines-deal-by-a-year/" onclick="trackOutboundLink('http://profootballtalk.nbcsports.com/2016/09/06/report-49ers-extend-tank-carradines-deal-by-a-year/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

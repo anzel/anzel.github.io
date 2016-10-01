@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>Are the 49ers Preparing to Shorten the Leash on QB Blaine Gabbert?</h3>
-					<p><p>After a sub-par start to the season the San Francisco 49ers are already being faced with inevitable questions at quarterback. Is Blaine Gabbert the &hellip;  <a href="http://ninernoise.com/2016/09/28/49ers-qb-situation-blaine-gabbert-leash-shortened/">more</a>.</p>
+					<p><p>After a sub-par start to the season the San Francisco 49ers are already being faced with inevitable questions at quarterback. Is Blaine Gabbert the &hellip;  <a href="http://ninernoise.com/2016/09/28/49ers-qb-situation-blaine-gabbert-leash-shortened/" onclick="trackOutboundLink('http://ninernoise.com/2016/09/28/49ers-qb-situation-blaine-gabbert-leash-shortened/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

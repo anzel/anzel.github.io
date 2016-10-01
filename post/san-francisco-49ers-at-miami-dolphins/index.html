@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>15</b></p>
 					<h3>San Francisco 49ers at Miami Dolphins</h3>
-					<p><p>Tickets on November 27, 2016 in Miami, FL with Deal Score.  <a href="https://seatgeek.com/49ers-at-dolphins-tickets/11-27-2016-miami-florida-hard-rock-stadium/nfl/3233134">more</a>.</p>
+					<p><p>Tickets on November 27, 2016 in Miami, FL with Deal Score.  <a href="https://seatgeek.com/49ers-at-dolphins-tickets/11-27-2016-miami-florida-hard-rock-stadium/nfl/3233134" onclick="trackOutboundLink('https://seatgeek.com/49ers-at-dolphins-tickets/11-27-2016-miami-florida-hard-rock-stadium/nfl/3233134'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

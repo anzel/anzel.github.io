@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>[LIVE-NFL]..Rams vs San Francisco 49.ers NFL Football Online TV</h3>
-					<p><p>San..Francisco..49ers NFLcom..Game..Pass..gives..fans..access..to..live..and..on..demand.  <a href="https://awethu.amandla.mobi/petitions/l-i-v-e-n-f-l-r-a-m-s-v-s-s-a-n-f-r-a-n-c-i-s-c-o-49-e-r-s-n-f-l-f-o-o-t-b-a-l-l-o-n-l-i-n-e-t-v">more</a>.</p>
+					<p><p>San..Francisco..49ers NFLcom..Game..Pass..gives..fans..access..to..live..and..on..demand.  <a href="https://awethu.amandla.mobi/petitions/l-i-v-e-n-f-l-r-a-m-s-v-s-s-a-n-f-r-a-n-c-i-s-c-o-49-e-r-s-n-f-l-f-o-o-t-b-a-l-l-o-n-l-i-n-e-t-v" onclick="trackOutboundLink('https://awethu.amandla.mobi/petitions/l-i-v-e-n-f-l-r-a-m-s-v-s-s-a-n-f-r-a-n-c-i-s-c-o-49-e-r-s-n-f-l-f-o-o-t-b-a-l-l-o-n-l-i-n-e-t-v'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

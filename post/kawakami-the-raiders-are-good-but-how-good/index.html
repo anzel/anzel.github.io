@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>05</b></p>
 					<h3>Kawakami: The Raiders are good, but how good?</h3>
-					<p><p>OAKLAND &ndash; The expectation is balanced by the anxiety which is balanced by the excitement and that&rsquo;s balanced by the bracing reality that the &hellip;  <a href="http://www.mercurynews.com/tim-kawakami/ci_30330219/kawakami-raiders-are-good-but-how-good">more</a>.</p>
+					<p><p>OAKLAND &ndash; The expectation is balanced by the anxiety which is balanced by the excitement and that&rsquo;s balanced by the bracing reality that the &hellip;  <a href="http://www.mercurynews.com/tim-kawakami/ci_30330219/kawakami-raiders-are-good-but-how-good" onclick="trackOutboundLink('http://www.mercurynews.com/tim-kawakami/ci_30330219/kawakami-raiders-are-good-but-how-good'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

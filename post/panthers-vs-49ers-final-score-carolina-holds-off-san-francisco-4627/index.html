@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>Panthers vs 49ers Final Score: Carolina holds off San Francisco 46-27</h3>
-					<p><p>The Carolina Panthers hosted the San Francisco 49ers in Charlotte for the 2016 home opener. Most experts expected a Panthers win and&hellip;  <a href="http://www.catscratchreader.com/2016/9/18/12960930/panthers-vs-49ers-final-score-carolina-holds-off-san-francisco-46-27">more</a>.</p>
+					<p><p>The Carolina Panthers hosted the San Francisco 49ers in Charlotte for the 2016 home opener. Most experts expected a Panthers win and&hellip;  <a href="http://www.catscratchreader.com/2016/9/18/12960930/panthers-vs-49ers-final-score-carolina-holds-off-san-francisco-46-27" onclick="trackOutboundLink('http://www.catscratchreader.com/2016/9/18/12960930/panthers-vs-49ers-final-score-carolina-holds-off-san-francisco-46-27'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

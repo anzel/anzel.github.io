@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>02</b></p>
 					<h3>Highlights From The Oakland Raiders Matchup Against The Seattle Seahawks</h3>
-					<p><p>Thursday night the Oakland Raiders concluded their preseason with a 23-21 loss to the Seattle Seahawks, at the Oakland-Alameda County Coliseum.  <a href="http://www.raiders.com/news/article-1/Highlights-From-The-Oakland-Raiders-Matchup-Against-The-Seattle-Seahawks/914d95c8-fc0a-4f5c-a3ec-57fff7c2e91c">more</a>.</p>
+					<p><p>Thursday night the Oakland Raiders concluded their preseason with a 23-21 loss to the Seattle Seahawks, at the Oakland-Alameda County Coliseum.  <a href="http://www.raiders.com/news/article-1/Highlights-From-The-Oakland-Raiders-Matchup-Against-The-Seattle-Seahawks/914d95c8-fc0a-4f5c-a3ec-57fff7c2e91c" onclick="trackOutboundLink('http://www.raiders.com/news/article-1/Highlights-From-The-Oakland-Raiders-Matchup-Against-The-Seattle-Seahawks/914d95c8-fc0a-4f5c-a3ec-57fff7c2e91c'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

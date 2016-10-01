@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>07</b></p>
 					<h3>Jed York selected as most hated figure among 49ers fans</h3>
-					<p><p>No NFL figure draws the ire of 49ers fans more than team CEO Jed York, according to a new CBS Sports feature. The feature selected the most hated &hellip;  <a href="http://sfo.247sports.com/Bolt/Jed-York-selected-as-most-hated-figure-among-49ers-fans-47269370">more</a>.</p>
+					<p><p>No NFL figure draws the ire of 49ers fans more than team CEO Jed York, according to a new CBS Sports feature. The feature selected the most hated &hellip;  <a href="http://sfo.247sports.com/Bolt/Jed-York-selected-as-most-hated-figure-among-49ers-fans-47269370" onclick="trackOutboundLink('http://sfo.247sports.com/Bolt/Jed-York-selected-as-most-hated-figure-among-49ers-fans-47269370'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

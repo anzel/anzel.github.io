@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>San Jose Sharks Get Own Gordon Biersch Ale</h3>
-					<p><p>San Jose&rsquo;s own Gordon Biersch Brewing Company has joined forces with the city&rsquo;s NHL team, the San Jose Sharks, to create Chum Red Ale.  <a href="http://sacramento.cbslocal.com/2016/09/08/san-jose-sharks-get-own-gordon-biersch-ale/">more</a>.</p>
+					<p><p>San Jose&rsquo;s own Gordon Biersch Brewing Company has joined forces with the city&rsquo;s NHL team, the San Jose Sharks, to create Chum Red Ale.  <a href="http://sacramento.cbslocal.com/2016/09/08/san-jose-sharks-get-own-gordon-biersch-ale/" onclick="trackOutboundLink('http://sacramento.cbslocal.com/2016/09/08/san-jose-sharks-get-own-gordon-biersch-ale/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

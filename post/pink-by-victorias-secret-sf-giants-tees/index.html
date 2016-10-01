@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>19</b></p>
 					<h3>PINK by Victoria&#39;s Secret SF GIANTS tees</h3>
-					<p><p>times- in excellent condition. Smoke free home. Size Medium. Price is for the set.  <a href="https://offerupnow.com/item/detail/164659926/pink-by-victorias-secret-sf-giants-tees">more</a>.</p>
+					<p><p>times- in excellent condition. Smoke free home. Size Medium. Price is for the set.  <a href="https://offerupnow.com/item/detail/164659926/pink-by-victorias-secret-sf-giants-tees" onclick="trackOutboundLink('https://offerupnow.com/item/detail/164659926/pink-by-victorias-secret-sf-giants-tees'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

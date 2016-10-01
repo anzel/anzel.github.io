@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>Elvis Dumervil expected to play against the Oakland Raiders in Week 4</h3>
-					<p><p>Outside linebacker Elvis Dumervil will likely make his season debut against the Raiders this week, per Clifton Brown of CSN. Dumervil missed the &hellip;  <a href="http://www.baltimorebeatdown.com/2016/9/28/13096628/elvis-dumervil-expected-to-play-against-the-oakland-raiders-in-week-4">more</a>.</p>
+					<p><p>Outside linebacker Elvis Dumervil will likely make his season debut against the Raiders this week, per Clifton Brown of CSN. Dumervil missed the &hellip;  <a href="http://www.baltimorebeatdown.com/2016/9/28/13096628/elvis-dumervil-expected-to-play-against-the-oakland-raiders-in-week-4" onclick="trackOutboundLink('http://www.baltimorebeatdown.com/2016/9/28/13096628/elvis-dumervil-expected-to-play-against-the-oakland-raiders-in-week-4'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

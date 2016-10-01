@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>02</b></p>
 					<h3>Report: Colin Kaepernick expected to make 49ers roster</h3>
-					<p><p>Kaepernick is expected to make the San Francisco 49ers roster when cuts are announced Saturday, CSN&rsquo;s Matt Maiocco reported Friday. Kaepernick &hellip;  <a href="http://www.foxsports.com/nfl/story/sf-49ers-colin-kaepernick-expected-to-make-49ers-roster-cut-down-day-chip-kelly-090216">more</a>.</p>
+					<p><p>Kaepernick is expected to make the San Francisco 49ers roster when cuts are announced Saturday, CSN&rsquo;s Matt Maiocco reported Friday. Kaepernick &hellip;  <a href="http://www.foxsports.com/nfl/story/sf-49ers-colin-kaepernick-expected-to-make-49ers-roster-cut-down-day-chip-kelly-090216" onclick="trackOutboundLink('http://www.foxsports.com/nfl/story/sf-49ers-colin-kaepernick-expected-to-make-49ers-roster-cut-down-day-chip-kelly-090216'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

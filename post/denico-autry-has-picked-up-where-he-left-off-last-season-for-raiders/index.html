@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>17</b></p>
 					<h3>Denico Autry has picked up where he left off last season for Raiders</h3>
-					<p><p>In the Raiders&rsquo; Renaissance, the 2014 Draft will be legendary as the draft that laid the foundation for the Raiders. Mack, Carr, Gabe, Jelly, McGill, &hellip;  <a href="http://www.silverandblackpride.com/2016/9/17/12950614/denico-autry-has-picked-up-where-he-left-off-last-season-for-oakland-raiders">more</a>.</p>
+					<p><p>In the Raiders&rsquo; Renaissance, the 2014 Draft will be legendary as the draft that laid the foundation for the Raiders. Mack, Carr, Gabe, Jelly, McGill, &hellip;  <a href="http://www.silverandblackpride.com/2016/9/17/12950614/denico-autry-has-picked-up-where-he-left-off-last-season-for-oakland-raiders" onclick="trackOutboundLink('http://www.silverandblackpride.com/2016/9/17/12950614/denico-autry-has-picked-up-where-he-left-off-last-season-for-oakland-raiders'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

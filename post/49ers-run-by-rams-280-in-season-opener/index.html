@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>13</b></p>
 					<h3>49ers run by Rams, 28-0, in season opener</h3>
-					<p><p>49ers receiver Quinton Patton eludes the tackle of Rams defenders Maurice Alexander, left, and Coty Sensabaugh for a huge gain in the fourth quarter &hellip;  <a href="http://www.latimes.com/sports/la-sp-live-coverage-rams-49ers-run-by-rams-28-0-in-season-1473745228-htmlstory.html">more</a>.</p>
+					<p><p>49ers receiver Quinton Patton eludes the tackle of Rams defenders Maurice Alexander, left, and Coty Sensabaugh for a huge gain in the fourth quarter &hellip;  <a href="http://www.latimes.com/sports/la-sp-live-coverage-rams-49ers-run-by-rams-28-0-in-season-1473745228-htmlstory.html" onclick="trackOutboundLink('http://www.latimes.com/sports/la-sp-live-coverage-rams-49ers-run-by-rams-28-0-in-season-1473745228-htmlstory.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

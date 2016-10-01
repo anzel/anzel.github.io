@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>Oakland Raiders present grant, meet with kids in Hayward</h3>
-					<p><p>In an effort to support Hayward Unified School District&rsquo;s new fitness and wellness programs Oakland Raiders and California Milk Advisory Board came &hellip;  <a href="http://abc7news.com/sports/raiders-present-grant-meet-with-kids-in-hayward/1530425/">more</a>.</p>
+					<p><p>In an effort to support Hayward Unified School District&rsquo;s new fitness and wellness programs Oakland Raiders and California Milk Advisory Board came &hellip;  <a href="http://abc7news.com/sports/raiders-present-grant-meet-with-kids-in-hayward/1530425/" onclick="trackOutboundLink('http://abc7news.com/sports/raiders-present-grant-meet-with-kids-in-hayward/1530425/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

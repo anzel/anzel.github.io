@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>03</b></p>
 					<h3>AFC West: Denver Broncos, Kansas City Chiefs, Oakland Raiders, San Diego</h3>
-					<p><p>SkySports No Peyton Manning for the Denver Broncos so how will they fare in the AFC West this season? What should we expect in the AFC West between the &hellip;  <a href="http://www.skysports.com/nfl/news/12118/10549783/denver-broncos-kansas-city-chiefs-oakland-raiders-san-diego-chargers">more</a>.</p>
+					<p><p>SkySports No Peyton Manning for the Denver Broncos so how will they fare in the AFC West this season? What should we expect in the AFC West between the &hellip;  <a href="http://www.skysports.com/nfl/news/12118/10549783/denver-broncos-kansas-city-chiefs-oakland-raiders-san-diego-chargers" onclick="trackOutboundLink('http://www.skysports.com/nfl/news/12118/10549783/denver-broncos-kansas-city-chiefs-oakland-raiders-san-diego-chargers'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

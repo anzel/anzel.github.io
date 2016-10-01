@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>Atlanta Falcons vs New Orleans Saints live stream (ESPN): Watch NFL Monday</h3>
-					<p><p>ChristianToday An opening game loss at home to the Oakland Raiders was desperately disappointing. Playing at home in front of thousands of your own fans, and &hellip;  <a href="http://www.christiantoday.com/article/atlanta.falcons.vs.new.orleans.saints.live.stream.watch.nfl.monday.night.football.2016.online/96412.htm">more</a>.</p>
+					<p><p>ChristianToday An opening game loss at home to the Oakland Raiders was desperately disappointing. Playing at home in front of thousands of your own fans, and &hellip;  <a href="http://www.christiantoday.com/article/atlanta.falcons.vs.new.orleans.saints.live.stream.watch.nfl.monday.night.football.2016.online/96412.htm" onclick="trackOutboundLink('http://www.christiantoday.com/article/atlanta.falcons.vs.new.orleans.saints.live.stream.watch.nfl.monday.night.football.2016.online/96412.htm'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

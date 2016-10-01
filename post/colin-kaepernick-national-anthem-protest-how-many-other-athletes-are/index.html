@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>10</b></p>
 					<h3>Colin Kaepernick National Anthem Protest: How Many Other Athletes Are</h3>
-					<p><p>International Business Times Brandon Marshall of the Denver Broncos followed in the footsteps of San Francisco 49ers quarterback Colin Kaepernick by choosing not to stand &hellip;  <a href="http://www.ibtimes.com/colin-kaepernick-national-anthem-protest-how-many-other-athletes-are-joining-san-2414002">more</a>.</p>
+					<p><p>International Business Times Brandon Marshall of the Denver Broncos followed in the footsteps of San Francisco 49ers quarterback Colin Kaepernick by choosing not to stand &hellip;  <a href="http://www.ibtimes.com/colin-kaepernick-national-anthem-protest-how-many-other-athletes-are-joining-san-2414002" onclick="trackOutboundLink('http://www.ibtimes.com/colin-kaepernick-national-anthem-protest-how-many-other-athletes-are-joining-san-2414002'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

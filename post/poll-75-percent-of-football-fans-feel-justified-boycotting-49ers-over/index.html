@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>09</b></p>
 					<h3>Poll: 75 Percent of Football Fans Feel Justified Boycotting 49ers over</h3>
-					<p><p>Breitbart News More than 75 percent of football fans feel justified in boycotting the San Francisco 49ers over quarterback Colin Kaepernick&rsquo;s refusal to stand for the &hellip;  <a href="http://www.breitbart.com/big-government/2016/09/09/poll-75-percent-football-fans-feel-justified-boycotting-49ers-kaepernick/">more</a>.</p>
+					<p><p>Breitbart News More than 75 percent of football fans feel justified in boycotting the San Francisco 49ers over quarterback Colin Kaepernick&rsquo;s refusal to stand for the &hellip;  <a href="http://www.breitbart.com/big-government/2016/09/09/poll-75-percent-football-fans-feel-justified-boycotting-49ers-kaepernick/" onclick="trackOutboundLink('http://www.breitbart.com/big-government/2016/09/09/poll-75-percent-football-fans-feel-justified-boycotting-49ers-kaepernick/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

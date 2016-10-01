@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>06</b></p>
 					<h3>How many more 49ers woes can squeeze into Levi&#39;s?</h3>
-					<p><p>In their final two years at Candlestick Park, the 49ers appeared to turn a corner. To be moving back among the elite in the league. To maybe even &hellip;  <a href="http://www.sfchronicle.com/49ers/article/How-many-more-49ers-woes-can-squeeze-into-9206326.php">more</a>.</p>
+					<p><p>In their final two years at Candlestick Park, the 49ers appeared to turn a corner. To be moving back among the elite in the league. To maybe even &hellip;  <a href="http://www.sfchronicle.com/49ers/article/How-many-more-49ers-woes-can-squeeze-into-9206326.php" onclick="trackOutboundLink('http://www.sfchronicle.com/49ers/article/How-many-more-49ers-woes-can-squeeze-into-9206326.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

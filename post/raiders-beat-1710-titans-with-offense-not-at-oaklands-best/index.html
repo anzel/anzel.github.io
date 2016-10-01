@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>Raiders beat 17-10 Titans with offense not at Oakland&#39;s best</h3>
-					<p><p>LivestreamSports Live Tv: <a href="http://tinyurl.com/SportsLive360">http://tinyurl.com/SportsLive360</a> NFL Match 2016 between Oakland Raiders vs Tennessee Titans Live Streaming on Sunday &hellip;  <a href="http://topchronicle.com/2016/09/raiders-beat-17-10-titans-with-offense-not-at-oaklands-best/">more</a>.</p>
+					<p><p>LivestreamSports Live Tv: <a href="http://tinyurl.com/SportsLive360">http://tinyurl.com/SportsLive360</a> NFL Match 2016 between Oakland Raiders vs Tennessee Titans Live Streaming on Sunday &hellip;  <a href="http://topchronicle.com/2016/09/raiders-beat-17-10-titans-with-offense-not-at-oaklands-best/" onclick="trackOutboundLink('http://topchronicle.com/2016/09/raiders-beat-17-10-titans-with-offense-not-at-oaklands-best/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

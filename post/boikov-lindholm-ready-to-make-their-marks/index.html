@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>20</b></p>
 					<h3>Boikov, Lindholm Ready To Make Their Marks</h3>
-					<p><p>Boikov played in both contests, while Lindholm only dressed for Saturday&rsquo;s matchup against the San Jose Sharks. It was Lindholm&rsquo;s first taste of what &hellip;  <a href="https://www.nhl.com/avalanche/news/boikov-lindholm-look-to-make-avalanche-roster/c-281945330">more</a>.</p>
+					<p><p>Boikov played in both contests, while Lindholm only dressed for Saturday&rsquo;s matchup against the San Jose Sharks. It was Lindholm&rsquo;s first taste of what &hellip;  <a href="https://www.nhl.com/avalanche/news/boikov-lindholm-look-to-make-avalanche-roster/c-281945330" onclick="trackOutboundLink('https://www.nhl.com/avalanche/news/boikov-lindholm-look-to-make-avalanche-roster/c-281945330'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

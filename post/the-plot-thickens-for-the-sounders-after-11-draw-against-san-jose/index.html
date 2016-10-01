@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>13</b></p>
 					<h3>The Plot Thickens for the Sounders after 1-1 Draw Against San Jose</h3>
-					<p><p>The Sounders may have saved their season with a dramatic tie on the road against the San Jose Earthquakes last weekend, but several more &hellip;  <a href="http://emeraldcityswagger.com/2016/09/13/plot-thickens-sounders-1-1-draw-san-jose/">more</a>.</p>
+					<p><p>The Sounders may have saved their season with a dramatic tie on the road against the San Jose Earthquakes last weekend, but several more &hellip;  <a href="http://emeraldcityswagger.com/2016/09/13/plot-thickens-sounders-1-1-draw-san-jose/" onclick="trackOutboundLink('http://emeraldcityswagger.com/2016/09/13/plot-thickens-sounders-1-1-draw-san-jose/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

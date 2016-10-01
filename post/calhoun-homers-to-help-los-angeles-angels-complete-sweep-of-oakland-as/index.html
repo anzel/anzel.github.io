@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>29</b></p>
 					<h3>Calhoun homers to help Los Angeles Angels complete sweep of Oakland A&#39;s</h3>
-					<p><p>Kole Calhoun homered, Alex Meyer earned his second major league win and the Los Angeles Angels held off a late rally from the Oakland Athletics to &hellip;  <a href="http://abc7news.com/sports/calhoun-homers-to-help-angels-complete-sweep-of-as/1531424/">more</a>.</p>
+					<p><p>Kole Calhoun homered, Alex Meyer earned his second major league win and the Los Angeles Angels held off a late rally from the Oakland Athletics to &hellip;  <a href="http://abc7news.com/sports/calhoun-homers-to-help-angels-complete-sweep-of-as/1531424/" onclick="trackOutboundLink('http://abc7news.com/sports/calhoun-homers-to-help-angels-complete-sweep-of-as/1531424/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

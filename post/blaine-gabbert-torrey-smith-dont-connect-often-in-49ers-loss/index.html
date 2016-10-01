@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>19</b></p>
 					<h3>Blaine Gabbert, Torrey Smith don&#39;t connect often in 49ers&#39; loss</h3>
-					<p><p>CHARLOTTE, N.C.  At some point soon, it&rsquo;s safe to say, the 49ers are going to want to see more of a connection between their starting quarterback &hellip;  <a href="http://www.sfchronicle.com/49ers/ostler/article/Smith-Gabbert-largely-a-failed-connection-in-9230862.php">more</a>.</p>
+					<p><p>CHARLOTTE, N.C.  At some point soon, it&rsquo;s safe to say, the 49ers are going to want to see more of a connection between their starting quarterback &hellip;  <a href="http://www.sfchronicle.com/49ers/ostler/article/Smith-Gabbert-largely-a-failed-connection-in-9230862.php" onclick="trackOutboundLink('http://www.sfchronicle.com/49ers/ostler/article/Smith-Gabbert-largely-a-failed-connection-in-9230862.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>23</b></p>
 					<h3>49ers guard Beadles has been steady on, off field</h3>
-					<p><p>After his junior season at Utah, 49ers left guard Zane Beadles shared his latest goal with his mom: He wanted to play in the NFL. In response, she &hellip;  <a href="http://www.sfgate.com/49ers/article/49ers-guard-Beadles-has-been-steady-on-off-field-9243056.php">more</a>.</p>
+					<p><p>After his junior season at Utah, 49ers left guard Zane Beadles shared his latest goal with his mom: He wanted to play in the NFL. In response, she &hellip;  <a href="http://www.sfgate.com/49ers/article/49ers-guard-Beadles-has-been-steady-on-off-field-9243056.php" onclick="trackOutboundLink('http://www.sfgate.com/49ers/article/49ers-guard-Beadles-has-been-steady-on-off-field-9243056.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

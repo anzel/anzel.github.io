@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>19</b></p>
 					<h3>Five Questions Answered In The Week 2 Loss To The Atlanta Falcons</h3>
-					<p><p>Heading into the Oakland Raiders Week 2 contest with the Atlanta Falcons, we highlighted five questions that we were hoping to get answered &hellip;  <a href="http://www.raiders.com/news/article-1/Five-Questions-Answered-In-The-Week-2-Loss-To-The-Atlanta-Falcons/75d55493-903a-4fa7-a3c2-89c32e07ee48">more</a>.</p>
+					<p><p>Heading into the Oakland Raiders Week 2 contest with the Atlanta Falcons, we highlighted five questions that we were hoping to get answered &hellip;  <a href="http://www.raiders.com/news/article-1/Five-Questions-Answered-In-The-Week-2-Loss-To-The-Atlanta-Falcons/75d55493-903a-4fa7-a3c2-89c32e07ee48" onclick="trackOutboundLink('http://www.raiders.com/news/article-1/Five-Questions-Answered-In-The-Week-2-Loss-To-The-Atlanta-Falcons/75d55493-903a-4fa7-a3c2-89c32e07ee48'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

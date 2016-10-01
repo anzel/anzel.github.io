@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>Live coverage: Seattle Seahawks vs San Francisco 49ers (Week 3)</h3>
-					<p><p>The Seahawks (1-1) host the division rival 49ers (1-1) in an early season NFC West clash. Follow along with seattlepi.com&rsquo;s Stephen Cohen and &hellip;  <a href="http://www.seattlepi.com/sports/football/article/Live-coverage-Seattle-Seahawks-vs-San-Francisco-9283437.php">more</a>.</p>
+					<p><p>The Seahawks (1-1) host the division rival 49ers (1-1) in an early season NFC West clash. Follow along with seattlepi.com&rsquo;s Stephen Cohen and &hellip;  <a href="http://www.seattlepi.com/sports/football/article/Live-coverage-Seattle-Seahawks-vs-San-Francisco-9283437.php" onclick="trackOutboundLink('http://www.seattlepi.com/sports/football/article/Live-coverage-Seattle-Seahawks-vs-San-Francisco-9283437.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

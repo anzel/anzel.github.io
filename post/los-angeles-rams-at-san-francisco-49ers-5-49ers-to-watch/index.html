@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>11</b></p>
 					<h3>Los Angeles Rams At San Francisco 49ers: 5 49ers to Watch</h3>
-					<p><p>It will be a good test for the Rams offensive line especially the interior  if it can contain the 49ers&rsquo; D-line. The 49ers also have Armstead&rsquo;s former &hellip;  <a href="http://www.turfshowtimes.com/2016/9/12/12868092/2016-los-angeles-rams-san-francisco-49ers-5-49ers-to-watch">more</a>.</p>
+					<p><p>It will be a good test for the Rams offensive line especially the interior  if it can contain the 49ers&rsquo; D-line. The 49ers also have Armstead&rsquo;s former &hellip;  <a href="http://www.turfshowtimes.com/2016/9/12/12868092/2016-los-angeles-rams-san-francisco-49ers-5-49ers-to-watch" onclick="trackOutboundLink('http://www.turfshowtimes.com/2016/9/12/12868092/2016-los-angeles-rams-san-francisco-49ers-5-49ers-to-watch'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

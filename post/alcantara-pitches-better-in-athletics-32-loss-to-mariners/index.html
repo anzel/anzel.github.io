@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>11</b></p>
 					<h3>Alcantara pitches better in Athletics&#39; 3-2 loss to Mariners</h3>
-					<p><p>Oakland Athletics center fielder Brett Eibner makes a sliding catch on a fly ball from Seattle Mariners&rsquo; Dae-Ho Lee during the eighth inning of a &hellip;  <a href="http://www.theolympian.com/sports/article101287467.html">more</a>.</p>
+					<p><p>Oakland Athletics center fielder Brett Eibner makes a sliding catch on a fly ball from Seattle Mariners&rsquo; Dae-Ho Lee during the eighth inning of a &hellip;  <a href="http://www.theolympian.com/sports/article101287467.html" onclick="trackOutboundLink('http://www.theolympian.com/sports/article101287467.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

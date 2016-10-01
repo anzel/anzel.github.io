@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>49ers lead Rams, 14-0, in the second quarter</h3>
-					<p><p>Shaun Draughn rushed for three yards and a 49ers touchdown. The 49ers lead the Rams, 14-0, in the second quarter. In the words of Rams Coach &hellip;  <a href="http://www.latimes.com/sports/la-sp-live-coverage-rams-forty-niners-lead-rams-14-0-in-the-1473736963-htmlstory.html">more</a>.</p>
+					<p><p>Shaun Draughn rushed for three yards and a 49ers touchdown. The 49ers lead the Rams, 14-0, in the second quarter. In the words of Rams Coach &hellip;  <a href="http://www.latimes.com/sports/la-sp-live-coverage-rams-forty-niners-lead-rams-14-0-in-the-1473736963-htmlstory.html" onclick="trackOutboundLink('http://www.latimes.com/sports/la-sp-live-coverage-rams-forty-niners-lead-rams-14-0-in-the-1473736963-htmlstory.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

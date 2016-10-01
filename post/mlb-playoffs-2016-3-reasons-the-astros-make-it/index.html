@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>23</b></p>
 					<h3>MLB playoffs 2016: 3 reasons the Astros make it</h3>
-					<p><p>Overall, the Astros have gone 24-8 against the Angels and Oakland Athletics, and are a sub-.500 team against the rest of the league. It does all come &hellip;  <a href="http://fansided.com/2016/09/23/3-reasons-astros-mlb-wild-card-2016/">more</a>.</p>
+					<p><p>Overall, the Astros have gone 24-8 against the Angels and Oakland Athletics, and are a sub-.500 team against the rest of the league. It does all come &hellip;  <a href="http://fansided.com/2016/09/23/3-reasons-astros-mlb-wild-card-2016/" onclick="trackOutboundLink('http://fansided.com/2016/09/23/3-reasons-astros-mlb-wild-card-2016/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>13</b></p>
 					<h3>Oakland Raiders&#39; strong offensive showing prompted gutsy call</h3>
-					<p><p>Oakland Raiders Michael Crabtree (15) celebrates with Donald Penn (72) after catching a TD pass from QB Derek Carr in the second quarter against &hellip;  <a href="http://www.upi.com/Sports_News/NFL/2016/09/13/Oakland-Raiders-strong-offensive-showing-prompted-gutsy-call/8661473770220/">more</a>.</p>
+					<p><p>Oakland Raiders Michael Crabtree (15) celebrates with Donald Penn (72) after catching a TD pass from QB Derek Carr in the second quarter against &hellip;  <a href="http://www.upi.com/Sports_News/NFL/2016/09/13/Oakland-Raiders-strong-offensive-showing-prompted-gutsy-call/8661473770220/" onclick="trackOutboundLink('http://www.upi.com/Sports_News/NFL/2016/09/13/Oakland-Raiders-strong-offensive-showing-prompted-gutsy-call/8661473770220/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

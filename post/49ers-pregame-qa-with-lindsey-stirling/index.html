@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>49ers Pregame Q&amp;A with Lindsey Stirling</h3>
-					<p><p>The 49ers open the season on &ldquo;Monday Night Football&rdquo; against the Los Angeles Rams. Prior to the opener, violinist Lindsey Stirling will play a &hellip;  <a href="http://www.49ers.com/news/article-2/49ers-Pregame-QA-with-Lindsey-Stirling/fccacdcb-e444-4f01-9d61-445181c0cffb">more</a>.</p>
+					<p><p>The 49ers open the season on &ldquo;Monday Night Football&rdquo; against the Los Angeles Rams. Prior to the opener, violinist Lindsey Stirling will play a &hellip;  <a href="http://www.49ers.com/news/article-2/49ers-Pregame-QA-with-Lindsey-Stirling/fccacdcb-e444-4f01-9d61-445181c0cffb" onclick="trackOutboundLink('http://www.49ers.com/news/article-2/49ers-Pregame-QA-with-Lindsey-Stirling/fccacdcb-e444-4f01-9d61-445181c0cffb'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

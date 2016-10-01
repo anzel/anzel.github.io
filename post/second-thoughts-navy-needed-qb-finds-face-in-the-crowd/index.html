@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>05</b></p>
 					<h3>Second thoughts Navy needed QB, finds face in the crowd</h3>
-					<p><p>Former Oakland Athletics player Jose Canseco throws out the ceremonial first pitch prior to a baseball game against the Boston Red Sox, Saturday, &hellip;  <a href="http://www.arkansasonline.com/news/2016/sep/05/navy-needed-qb-finds-face-in-the-crowd-/?f=sports">more</a>.</p>
+					<p><p>Former Oakland Athletics player Jose Canseco throws out the ceremonial first pitch prior to a baseball game against the Boston Red Sox, Saturday, &hellip;  <a href="http://www.arkansasonline.com/news/2016/sep/05/navy-needed-qb-finds-face-in-the-crowd-/?f=sports" onclick="trackOutboundLink('http://www.arkansasonline.com/news/2016/sep/05/navy-needed-qb-finds-face-in-the-crowd-/?f=sports'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>19</b></p>
 					<h3>Oakland Raiders Fans Were Fighting Each Other During The Game (Video)</h3>
-					<p><p>On Sunday, the Oakland Raiders were on cloud 9 after coming into Week 2 with a win for the first time in 5 years after a gutsy call last week to go for &hellip;  <a href="http://www.totalprosports.com/2016/09/19/oakland-raiders-fans-were-fighting-each-other-during-the-game-video/">more</a>.</p>
+					<p><p>On Sunday, the Oakland Raiders were on cloud 9 after coming into Week 2 with a win for the first time in 5 years after a gutsy call last week to go for &hellip;  <a href="http://www.totalprosports.com/2016/09/19/oakland-raiders-fans-were-fighting-each-other-during-the-game-video/" onclick="trackOutboundLink('http://www.totalprosports.com/2016/09/19/oakland-raiders-fans-were-fighting-each-other-during-the-game-video/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>Lewis allows seven runs, but sees progress in loss</h3>
-					<p><p>He wasn&rsquo;t making any excuses, as the Oakland Athletics dinked and dunked most of their way to a 7-1 victory that left the Texas Rangers tied with the &hellip;  <a href="http://www.star-telegram.com/sports/mlb/texas-rangers/article104149996.html">more</a>.</p>
+					<p><p>He wasn&rsquo;t making any excuses, as the Oakland Athletics dinked and dunked most of their way to a 7-1 victory that left the Texas Rangers tied with the &hellip;  <a href="http://www.star-telegram.com/sports/mlb/texas-rangers/article104149996.html" onclick="trackOutboundLink('http://www.star-telegram.com/sports/mlb/texas-rangers/article104149996.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

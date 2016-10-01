@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>01</b></p>
 					<h3>Reebok San Jose Sharks Patrick Marleau #12 Jersey</h3>
-					<p><p>Marleau 12. Dimensions: Size: M // Across Shoulders: 24 // Chest: 44 &hellip;  <a href="http://www.shopgoodwill.com/auctions/Reebok-San-Jose-Sharks-Patrick-Marleau-12-Jersey-32633372.html">more</a>.</p>
+					<p><p>Marleau 12. Dimensions: Size: M // Across Shoulders: 24 // Chest: 44 &hellip;  <a href="http://www.shopgoodwill.com/auctions/Reebok-San-Jose-Sharks-Patrick-Marleau-12-Jersey-32633372.html" onclick="trackOutboundLink('http://www.shopgoodwill.com/auctions/Reebok-San-Jose-Sharks-Patrick-Marleau-12-Jersey-32633372.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

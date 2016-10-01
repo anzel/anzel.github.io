@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>20</b></p>
 					<h3>Mark Davis clearly is serious about Sin City Raiders</h3>
-					<p><p>When Oakland Raiders&rsquo; owner Mark Davis trademarked the Las Vegas Raiders name, it became even more obvious how serious he is about moving &hellip;  <a href="http://www.pleasantonweekly.com/blogs/p/2016/09/20/mark-davis-clearly-is-serious-about-sin-city-raiders">more</a>.</p>
+					<p><p>When Oakland Raiders&rsquo; owner Mark Davis trademarked the Las Vegas Raiders name, it became even more obvious how serious he is about moving &hellip;  <a href="http://www.pleasantonweekly.com/blogs/p/2016/09/20/mark-davis-clearly-is-serious-about-sin-city-raiders" onclick="trackOutboundLink('http://www.pleasantonweekly.com/blogs/p/2016/09/20/mark-davis-clearly-is-serious-about-sin-city-raiders'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

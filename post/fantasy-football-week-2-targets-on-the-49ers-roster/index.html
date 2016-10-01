@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>16</b></p>
 					<h3>Fantasy Football: Week 2 Targets on the 49ers Roster</h3>
-					<p><p>Which players on the 49ers roster are fantasy football relevant? Here are the players that are Startable, Ownable and Eyeable in Week 2 of the 2016 &hellip;  <a href="https://ninernoise.com/2016/09/16/fantasy-football-week-2-targets-49ers-roster/">more</a>.</p>
+					<p><p>Which players on the 49ers roster are fantasy football relevant? Here are the players that are Startable, Ownable and Eyeable in Week 2 of the 2016 &hellip;  <a href="https://ninernoise.com/2016/09/16/fantasy-football-week-2-targets-49ers-roster/" onclick="trackOutboundLink('https://ninernoise.com/2016/09/16/fantasy-football-week-2-targets-49ers-roster/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

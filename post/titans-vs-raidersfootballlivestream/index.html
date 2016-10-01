@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>&#39;Titans vs Raiders&#39;.-.Football.-.Live.-.Stream.</h3>
-					<p><p>&hellip; Live Stream Match Tennessee Titans vs Oakland Raiders Football NFL &hellip;  <a href="https://inside.trinity.edu/sites/inside.trinity.edu/files/webform/cci/msnsc.orewatc-h.-.titans_vs_raiders.-.football.-.live_.-.stream.-.sites_.pdf">more</a>.</p>
+					<p><p>&hellip; Live Stream Match Tennessee Titans vs Oakland Raiders Football NFL &hellip;  <a href="https://inside.trinity.edu/sites/inside.trinity.edu/files/webform/cci/msnsc.orewatc-h.-.titans_vs_raiders.-.football.-.live_.-.stream.-.sites_.pdf" onclick="trackOutboundLink('https://inside.trinity.edu/sites/inside.trinity.edu/files/webform/cci/msnsc.orewatc-h.-.titans_vs_raiders.-.football.-.live_.-.stream.-.sites_.pdf'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

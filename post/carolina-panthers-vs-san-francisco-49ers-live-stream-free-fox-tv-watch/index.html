@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>Carolina Panthers vs San Francisco 49ers live stream free (Fox TV): Watch</h3>
-					<p><p>ChristianToday The Carolina Panthers will host the San Francisco 49ers on Sunday in a massive Week 2 clash from the Bank of America Stadium in Charlotte.  <a href="http://www.christiantoday.com/article/carolina.panthers.vs.san.francisco.49ers.live.stream.watch.nfl.2016.football.online/95716.htm">more</a>.</p>
+					<p><p>ChristianToday The Carolina Panthers will host the San Francisco 49ers on Sunday in a massive Week 2 clash from the Bank of America Stadium in Charlotte.  <a href="http://www.christiantoday.com/article/carolina.panthers.vs.san.francisco.49ers.live.stream.watch.nfl.2016.football.online/95716.htm" onclick="trackOutboundLink('http://www.christiantoday.com/article/carolina.panthers.vs.san.francisco.49ers.live.stream.watch.nfl.2016.football.online/95716.htm'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

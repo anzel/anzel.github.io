@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>24</b></p>
 					<h3>Raiders Week 3 breakout pick vs. Titans: LB Cory James</h3>
-					<p><p>There will be a lot of eyes on the Oakland Raiders&rsquo; defensive backfield in Week 3. Karl Joseph, the 14th-overall pick in this year&rsquo;s draft, is expected to &hellip;  <a href="http://oak.247sports.com/Bolt/Raiders-Week-3-breakout-pick-vs-Titans-LB-Cory-James-47718670">more</a>.</p>
+					<p><p>There will be a lot of eyes on the Oakland Raiders&rsquo; defensive backfield in Week 3. Karl Joseph, the 14th-overall pick in this year&rsquo;s draft, is expected to &hellip;  <a href="http://oak.247sports.com/Bolt/Raiders-Week-3-breakout-pick-vs-Titans-LB-Cory-James-47718670" onclick="trackOutboundLink('http://oak.247sports.com/Bolt/Raiders-Week-3-breakout-pick-vs-Titans-LB-Cory-James-47718670'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

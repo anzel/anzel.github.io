@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>06</b></p>
 					<h3>49ers depth chart: Buckner, Garnett second string; Armstrong/Hodges at ILB</h3>
-					<p><p>Although classified as unofficial, the 49ers had no surprises in their initial depth for Monday night&rsquo;s season opener against the Los Angeles Rams.  <a href="http://blogs.mercurynews.com/49ers/2016/09/06/49ers-depth-chart-debut-kerley-among-starting-wrs-armstronghodges-ilb/">more</a>.</p>
+					<p><p>Although classified as unofficial, the 49ers had no surprises in their initial depth for Monday night&rsquo;s season opener against the Los Angeles Rams.  <a href="http://blogs.mercurynews.com/49ers/2016/09/06/49ers-depth-chart-debut-kerley-among-starting-wrs-armstronghodges-ilb/" onclick="trackOutboundLink('http://blogs.mercurynews.com/49ers/2016/09/06/49ers-depth-chart-debut-kerley-among-starting-wrs-armstronghodges-ilb/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

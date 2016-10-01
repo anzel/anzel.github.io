@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>20</b></p>
 					<h3>Khris Davis &#39;flattered&#39; by AL honor</h3>
-					<p><p>ARLINGTON, TX - SEPTEMBER 18: Khris Davis #2 of the Oakland Athletics is congratulated for hitting a two run home run against the Texas Rangers &hellip;  <a href="http://www.sfchronicle.com/athletics/article/A-s-Khris-Davis-flattered-by-AL-player-of-9233199.php">more</a>.</p>
+					<p><p>ARLINGTON, TX - SEPTEMBER 18: Khris Davis #2 of the Oakland Athletics is congratulated for hitting a two run home run against the Texas Rangers &hellip;  <a href="http://www.sfchronicle.com/athletics/article/A-s-Khris-Davis-flattered-by-AL-player-of-9233199.php" onclick="trackOutboundLink('http://www.sfchronicle.com/athletics/article/A-s-Khris-Davis-flattered-by-AL-player-of-9233199.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

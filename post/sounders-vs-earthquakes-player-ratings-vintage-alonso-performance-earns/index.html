@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>15</b></p>
 					<h3>Sounders vs. Earthquakes Player Ratings: Vintage Alonso performance earns</h3>
-					<p><p>Sounder At Heart There were things to like and dislike in our recent game against the San Jose Earthquakes. Our offense still gets stifled without Clint Dempsey to open &hellip;  <a href="http://www.sounderatheart.com/2016/9/15/12925558/realio-s-ratings-vintage-alonso-performance-earns-top-score">more</a>.</p>
+					<p><p>Sounder At Heart There were things to like and dislike in our recent game against the San Jose Earthquakes. Our offense still gets stifled without Clint Dempsey to open &hellip;  <a href="http://www.sounderatheart.com/2016/9/15/12925558/realio-s-ratings-vintage-alonso-performance-earns-top-score" onclick="trackOutboundLink('http://www.sounderatheart.com/2016/9/15/12925558/realio-s-ratings-vintage-alonso-performance-earns-top-score'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

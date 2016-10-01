@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>Raiders defensive snap counts from Week 1</h3>
-					<p><p>The Oakland Raiders started the 2016 season with a 35-34 win over the New Orleans Saints on Sunday. Although it was a total team victory, some &hellip;  <a href="http://oak.247sports.com/Gallery/Oakland-Raiders-defensive-snap-counts-from-Week-1-47433190">more</a>.</p>
+					<p><p>The Oakland Raiders started the 2016 season with a 35-34 win over the New Orleans Saints on Sunday. Although it was a total team victory, some &hellip;  <a href="http://oak.247sports.com/Gallery/Oakland-Raiders-defensive-snap-counts-from-Week-1-47433190" onclick="trackOutboundLink('http://oak.247sports.com/Gallery/Oakland-Raiders-defensive-snap-counts-from-Week-1-47433190'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

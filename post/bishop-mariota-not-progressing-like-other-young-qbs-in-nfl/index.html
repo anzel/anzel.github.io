@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>29</b></p>
 					<h3>Bishop: Mariota Not Progressing Like Other Young QBs In NFL</h3>
-					<p><p>&hellip; pregame warm ups prior to playing the Oakland Raiders in a preseason game at the Oakland Coliseum on August 27, 2016 in Oakland, California.  <a href="http://houston.cbslocal.com/2016/09/29/bishop-mariota-not-progressing-like-other-young-qbs-in-nfl/">more</a>.</p>
+					<p><p>&hellip; pregame warm ups prior to playing the Oakland Raiders in a preseason game at the Oakland Coliseum on August 27, 2016 in Oakland, California.  <a href="http://houston.cbslocal.com/2016/09/29/bishop-mariota-not-progressing-like-other-young-qbs-in-nfl/" onclick="trackOutboundLink('http://houston.cbslocal.com/2016/09/29/bishop-mariota-not-progressing-like-other-young-qbs-in-nfl/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>17</b></p>
 					<h3>Raiders line trying to mend after rough first week</h3>
-					<p><p>The Raiders are likely to be without starting right tackle Menelik Watson and a key backup for their home opener. Watson missed practice Friday &hellip;  <a href="http://www.sacbee.com/sports/nfl/oakland-raiders/article102292327.html">more</a>.</p>
+					<p><p>The Raiders are likely to be without starting right tackle Menelik Watson and a key backup for their home opener. Watson missed practice Friday &hellip;  <a href="http://www.sacbee.com/sports/nfl/oakland-raiders/article102292327.html" onclick="trackOutboundLink('http://www.sacbee.com/sports/nfl/oakland-raiders/article102292327.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

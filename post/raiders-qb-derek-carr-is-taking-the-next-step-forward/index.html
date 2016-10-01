@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>Raiders QB Derek Carr is Taking the Next Step Forward</h3>
-					<p><p>Oakland Raiders quarterback Derek Carr had a very impressive box score during NFL kickoff weekend, and it&rsquo;s likely indicative of the season to come.  <a href="http://www.thesportsbank.net/oakland-raiders/derek-carr-taking-next-step-forward/">more</a>.</p>
+					<p><p>Oakland Raiders quarterback Derek Carr had a very impressive box score during NFL kickoff weekend, and it&rsquo;s likely indicative of the season to come.  <a href="http://www.thesportsbank.net/oakland-raiders/derek-carr-taking-next-step-forward/" onclick="trackOutboundLink('http://www.thesportsbank.net/oakland-raiders/derek-carr-taking-next-step-forward/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

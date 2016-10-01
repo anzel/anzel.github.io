@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>15</b></p>
 					<h3>49ers offensive coordinator Curtis Modkins talks Rams win, red zone play</h3>
-					<p><p>Niners Nation John Hefti-USA TODAY Sports. 49ers offensive coordinator Curtis Modkins talked about a variety of topics during a press conference on Wednesday.  <a href="http://www.ninersnation.com/2016/9/15/12926038/49ers-coordinator-curtis-modkins-press-conference-transcript-rams-panthers">more</a>.</p>
+					<p><p>Niners Nation John Hefti-USA TODAY Sports. 49ers offensive coordinator Curtis Modkins talked about a variety of topics during a press conference on Wednesday.  <a href="http://www.ninersnation.com/2016/9/15/12926038/49ers-coordinator-curtis-modkins-press-conference-transcript-rams-panthers" onclick="trackOutboundLink('http://www.ninersnation.com/2016/9/15/12926038/49ers-coordinator-curtis-modkins-press-conference-transcript-rams-panthers'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

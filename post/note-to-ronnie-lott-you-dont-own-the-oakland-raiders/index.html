@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>Note to Ronnie Lott: You Don&#39;t Own the Oakland Raiders</h3>
-					<p><p>Much is being made of Hall of Fame safety and 49eraider (cq) Ronnie Lott and his attempt to buy the land upon which the Oakland Coliseum Complex &hellip;  <a href="http://www.nbcbayarea.com/news/sports/csn/raiders/Note_to_Ronnie_Lott__You_don_t_own_the_Oakland_Raiders-395182321.html">more</a>.</p>
+					<p><p>Much is being made of Hall of Fame safety and 49eraider (cq) Ronnie Lott and his attempt to buy the land upon which the Oakland Coliseum Complex &hellip;  <a href="http://www.nbcbayarea.com/news/sports/csn/raiders/Note_to_Ronnie_Lott__You_don_t_own_the_Oakland_Raiders-395182321.html" onclick="trackOutboundLink('http://www.nbcbayarea.com/news/sports/csn/raiders/Note_to_Ronnie_Lott__You_don_t_own_the_Oakland_Raiders-395182321.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

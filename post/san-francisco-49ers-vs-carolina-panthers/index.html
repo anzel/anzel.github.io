@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>San Francisco 49ers vs Carolina Panthers</h3>
-					<p><p>Francisco 49ers vs Carolina Panthers NFL Live Game Streamcast Watch (HD) &hellip;  <a href="http://www.plymouth-ma.gov/sites/plymouthma/files/webform/fieldgoalwatch_san_francisco_49ers_vs_carolina_panthers_on_pc_live_online.pdf">more</a>.</p>
+					<p><p>Francisco 49ers vs Carolina Panthers NFL Live Game Streamcast Watch (HD) &hellip;  <a href="http://www.plymouth-ma.gov/sites/plymouthma/files/webform/fieldgoalwatch_san_francisco_49ers_vs_carolina_panthers_on_pc_live_online.pdf" onclick="trackOutboundLink('http://www.plymouth-ma.gov/sites/plymouthma/files/webform/fieldgoalwatch_san_francisco_49ers_vs_carolina_panthers_on_pc_live_online.pdf'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

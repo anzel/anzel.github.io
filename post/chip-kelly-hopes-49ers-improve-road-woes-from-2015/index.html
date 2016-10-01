@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>15</b></p>
 					<h3>Chip Kelly hopes 49ers improve road woes from 2015</h3>
-					<p><p>The 49ers find themselves in almost the same position entering Week 2 under Chip Kelly as they did after their season opening win in 2015 under Jim &hellip;  <a href="http://ninerswire.usatoday.com/2016/09/14/chip-kelly-hopes-49ers-improve-road-woes-from-2015/">more</a>.</p>
+					<p><p>The 49ers find themselves in almost the same position entering Week 2 under Chip Kelly as they did after their season opening win in 2015 under Jim &hellip;  <a href="http://ninerswire.usatoday.com/2016/09/14/chip-kelly-hopes-49ers-improve-road-woes-from-2015/" onclick="trackOutboundLink('http://ninerswire.usatoday.com/2016/09/14/chip-kelly-hopes-49ers-improve-road-woes-from-2015/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

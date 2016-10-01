@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>01</b></p>
 					<h3>Chargers vs 49ers Preseason Game Tonight</h3>
-					<p><p>preseason football game! But tonight&rsquo;s game will not be focused on &hellip;  <a href="http://www.magic925.com/xavier-the-x-man/the-chargers-vs-the-49ers-preseason-game-tonight/">more</a>.</p>
+					<p><p>preseason football game! But tonight&rsquo;s game will not be focused on &hellip;  <a href="http://www.magic925.com/xavier-the-x-man/the-chargers-vs-the-49ers-preseason-game-tonight/" onclick="trackOutboundLink('http://www.magic925.com/xavier-the-x-man/the-chargers-vs-the-49ers-preseason-game-tonight/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

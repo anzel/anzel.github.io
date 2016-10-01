@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>26</b></p>
 					<h3>Wilson injury casts cloud over Seahawks&#39; romp of 49ers</h3>
-					<p><p>SEATTLE (AP)  Just as the Seattle Seahawks &lsquo; offense got going, they&rsquo;re back wondering if another injury to Russell Wilson will return them to the &hellip;  <a href="http://www.usatoday.com/story/sports/nfl/2016/09/25/wilson-injury-casts-cloud-over-seahawks-romp-of-49ers/91103096/">more</a>.</p>
+					<p><p>SEATTLE (AP)  Just as the Seattle Seahawks &lsquo; offense got going, they&rsquo;re back wondering if another injury to Russell Wilson will return them to the &hellip;  <a href="http://www.usatoday.com/story/sports/nfl/2016/09/25/wilson-injury-casts-cloud-over-seahawks-romp-of-49ers/91103096/" onclick="trackOutboundLink('http://www.usatoday.com/story/sports/nfl/2016/09/25/wilson-injury-casts-cloud-over-seahawks-romp-of-49ers/91103096/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

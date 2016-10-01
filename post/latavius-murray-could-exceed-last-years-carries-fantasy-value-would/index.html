@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>07</b></p>
 					<h3>Latavius Murray could exceed last year&#39;s carries, fantasy value would</h3>
-					<p><p>SB Nation Oakland Raiders running back Latavius Murray could see the ball in his hands more this season according to the San Francisco Chronicle&rsquo;s Vic Tafur &hellip;  <a href="http://www.sbnation.com/2016/9/7/12835416/latavius-murray-fantasy-football-running-backs">more</a>.</p>
+					<p><p>SB Nation Oakland Raiders running back Latavius Murray could see the ball in his hands more this season according to the San Francisco Chronicle&rsquo;s Vic Tafur &hellip;  <a href="http://www.sbnation.com/2016/9/7/12835416/latavius-murray-fantasy-football-running-backs" onclick="trackOutboundLink('http://www.sbnation.com/2016/9/7/12835416/latavius-murray-fantasy-football-running-backs'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

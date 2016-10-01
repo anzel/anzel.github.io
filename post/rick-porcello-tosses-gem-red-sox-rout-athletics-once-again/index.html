@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>03</b></p>
 					<h3>Rick Porcello tosses gem, Red Sox rout Athletics once again</h3>
-					<p><p>Boston Red Sox pitcher Rick Porcello works against the Oakland Athletics in the first inning of a baseball game Saturday, Sept. 3, 2016, in Oakland, &hellip;  <a href="http://www.thehour.com/sports/article/Rick-Porcello-tosses-gem-Red-Sox-rout-Athletics-9202459.php">more</a>.</p>
+					<p><p>Boston Red Sox pitcher Rick Porcello works against the Oakland Athletics in the first inning of a baseball game Saturday, Sept. 3, 2016, in Oakland, &hellip;  <a href="http://www.thehour.com/sports/article/Rick-Porcello-tosses-gem-Red-Sox-rout-Athletics-9202459.php" onclick="trackOutboundLink('http://www.thehour.com/sports/article/Rick-Porcello-tosses-gem-Red-Sox-rout-Athletics-9202459.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

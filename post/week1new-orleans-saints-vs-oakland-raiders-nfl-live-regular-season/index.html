@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>11</b></p>
 					<h3>week-1@New Orleans Saints [v/s] Oakland Raiders NFL Live Regular season</h3>
-					<p><p>week-1@New Orleans Saints [v/s] Oakland Raiders NFL L.i.v.e Regular season 11/09/2016 View-Live.New Orleans Saints vs Oakland Raiders live &hellip;  <a href="https://awethu.amandla.mobi/petitions/week-1-new-orleans-saints-v-s-oakland-raiders-nfl-l-i-v-e-regular-season-11-09-2016-view-live">more</a>.</p>
+					<p><p>week-1@New Orleans Saints [v/s] Oakland Raiders NFL L.i.v.e Regular season 11/09/2016 View-Live.New Orleans Saints vs Oakland Raiders live &hellip;  <a href="https://awethu.amandla.mobi/petitions/week-1-new-orleans-saints-v-s-oakland-raiders-nfl-l-i-v-e-regular-season-11-09-2016-view-live" onclick="trackOutboundLink('https://awethu.amandla.mobi/petitions/week-1-new-orleans-saints-v-s-oakland-raiders-nfl-l-i-v-e-regular-season-11-09-2016-view-live'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

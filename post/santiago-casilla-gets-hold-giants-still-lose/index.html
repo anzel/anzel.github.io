@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>Santiago Casilla gets hold, Giants still lose</h3>
-					<p><p>&hellip; The Giants are making ninth-inning history  SF Giants Minor Lines, <sup>9</sup>&frasl;<sub>5</sub>  Jake Peavy nominated for Roberto Clemente Award  Open GameThread, &hellip;  <a href="http://www.mccoveychronicles.com/2016/9/7/12845096/sf-giants-whatever">more</a>.</p>
+					<p><p>&hellip; The Giants are making ninth-inning history  SF Giants Minor Lines, <sup>9</sup>&frasl;<sub>5</sub>  Jake Peavy nominated for Roberto Clemente Award  Open GameThread, &hellip;  <a href="http://www.mccoveychronicles.com/2016/9/7/12845096/sf-giants-whatever" onclick="trackOutboundLink('http://www.mccoveychronicles.com/2016/9/7/12845096/sf-giants-whatever'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

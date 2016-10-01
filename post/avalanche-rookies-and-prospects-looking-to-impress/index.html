@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>17</b></p>
 					<h3>Avalanche Rookies and Prospects Looking to Impress</h3>
-					<p><p>For this three-game tournament, rookies and prospects from the Avs face off with similar players from the San Jose Sharks and Anaheim Ducks.  <a href="http://milehighsticking.com/2016/09/17/colorado-avalanche-rookies-and-prospects-looking-to-impress/">more</a>.</p>
+					<p><p>For this three-game tournament, rookies and prospects from the Avs face off with similar players from the San Jose Sharks and Anaheim Ducks.  <a href="http://milehighsticking.com/2016/09/17/colorado-avalanche-rookies-and-prospects-looking-to-impress/" onclick="trackOutboundLink('http://milehighsticking.com/2016/09/17/colorado-avalanche-rookies-and-prospects-looking-to-impress/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

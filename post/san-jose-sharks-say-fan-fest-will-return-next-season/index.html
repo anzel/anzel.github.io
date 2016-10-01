@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>16</b></p>
 					<h3>San Jose Sharks say Fan Fest will return next season</h3>
-					<p><p>Sharks forward Patrick Marleau meets with a fan at the 2015 Fan Fest at SAP Center. The World Cup of Hockey made it difficult for the Sharks to hold &hellip;  <a href="http://www.mercurynews.com/2016/09/16/san-jose-sharks-say-fan-fest-will-return-next-season/">more</a>.</p>
+					<p><p>Sharks forward Patrick Marleau meets with a fan at the 2015 Fan Fest at SAP Center. The World Cup of Hockey made it difficult for the Sharks to hold &hellip;  <a href="http://www.mercurynews.com/2016/09/16/san-jose-sharks-say-fan-fest-will-return-next-season/" onclick="trackOutboundLink('http://www.mercurynews.com/2016/09/16/san-jose-sharks-say-fan-fest-will-return-next-season/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

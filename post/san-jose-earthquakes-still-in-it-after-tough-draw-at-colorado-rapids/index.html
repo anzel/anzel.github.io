@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>San Jose Earthquakes still in it after tough draw at Colorado Rapids</h3>
-					<p><p>COMMERCE CITY, Colo.  The San Jose Earthquakes entered Saturday night desperate for points in a tight race for the Western Conference&rsquo;s final &hellip;  <a href="http://www.mlssoccer.com/post/2016/09/18/san-jose-earthquakes-still-it-after-tough-draw-colorado-rapids">more</a>.</p>
+					<p><p>COMMERCE CITY, Colo.  The San Jose Earthquakes entered Saturday night desperate for points in a tight race for the Western Conference&rsquo;s final &hellip;  <a href="http://www.mlssoccer.com/post/2016/09/18/san-jose-earthquakes-still-it-after-tough-draw-colorado-rapids" onclick="trackOutboundLink('http://www.mlssoccer.com/post/2016/09/18/san-jose-earthquakes-still-it-after-tough-draw-colorado-rapids'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>06</b></p>
 					<h3>Angels snuff out A&#39;s comeback to get 10-7 victory</h3>
-					<p><p>(1 of 7) Oakland Athletics&rsquo; Joey Wendle, left, scores past Los Angeles &hellip; the fourth and the Los Angeles held off the Oakland Athletics 10-7 on Monday.  <a href="http://www.pressdemocrat.com/sports/6054590-181/angels-snuff-out-as-comeback">more</a>.</p>
+					<p><p>(1 of 7) Oakland Athletics&rsquo; Joey Wendle, left, scores past Los Angeles &hellip; the fourth and the Los Angeles held off the Oakland Athletics 10-7 on Monday.  <a href="http://www.pressdemocrat.com/sports/6054590-181/angels-snuff-out-as-comeback" onclick="trackOutboundLink('http://www.pressdemocrat.com/sports/6054590-181/angels-snuff-out-as-comeback'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

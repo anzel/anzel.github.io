@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>01</b></p>
 					<h3>Seattle Seahawks: What to Watch vs the Oakland Raiders</h3>
-					<p><p>The Seattle Seahawks take on the Oakland Raiders from O.co Coliseum on Thusday for their fourth preseason matchup and although some might take &hellip;  <a href="http://sea.247sports.com/Bolt/Seattle-Seahawks-What-to-Watch-vs-the-Oakland-Raiders-47105286">more</a>.</p>
+					<p><p>The Seattle Seahawks take on the Oakland Raiders from O.co Coliseum on Thusday for their fourth preseason matchup and although some might take &hellip;  <a href="http://sea.247sports.com/Bolt/Seattle-Seahawks-What-to-Watch-vs-the-Oakland-Raiders-47105286" onclick="trackOutboundLink('http://sea.247sports.com/Bolt/Seattle-Seahawks-What-to-Watch-vs-the-Oakland-Raiders-47105286'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

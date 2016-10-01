@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>23</b></p>
 					<h3>Sporting KC v SJ Earthquakes: Preview, Prediction, Injuries and Starting XI</h3>
-					<p><p>Two of those four games will be played against the San Jose Earthquakes. Unlike last season, Sporting doesn&rsquo;t have any games in hand on their &hellip;  <a href="http://www.thebluetestament.com/2016/9/23/13036350/sporting-kc-v-sj-earthquakes-preview-prediction-injuries-and-starting">more</a>.</p>
+					<p><p>Two of those four games will be played against the San Jose Earthquakes. Unlike last season, Sporting doesn&rsquo;t have any games in hand on their &hellip;  <a href="http://www.thebluetestament.com/2016/9/23/13036350/sporting-kc-v-sj-earthquakes-preview-prediction-injuries-and-starting" onclick="trackOutboundLink('http://www.thebluetestament.com/2016/9/23/13036350/sporting-kc-v-sj-earthquakes-preview-prediction-injuries-and-starting'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

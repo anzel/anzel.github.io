@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>SUTTON: Richard makes memorable NFL debut</h3>
-					<p><p>Richard&rsquo;s 75-yard touchdown run  the first carry of his NFL career  proved critical in the Oakland Raiders&rsquo; comeback victory over the New Orleans &hellip;  <a href="http://www.hattiesburgamerican.com/story/sports/nfl/saints/2016/09/13/sutton-richard-makes-memorable-breakout/90282992/">more</a>.</p>
+					<p><p>Richard&rsquo;s 75-yard touchdown run  the first carry of his NFL career  proved critical in the Oakland Raiders&rsquo; comeback victory over the New Orleans &hellip;  <a href="http://www.hattiesburgamerican.com/story/sports/nfl/saints/2016/09/13/sutton-richard-makes-memorable-breakout/90282992/" onclick="trackOutboundLink('http://www.hattiesburgamerican.com/story/sports/nfl/saints/2016/09/13/sutton-richard-makes-memorable-breakout/90282992/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

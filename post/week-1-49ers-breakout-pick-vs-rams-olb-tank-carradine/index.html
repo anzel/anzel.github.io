@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>07</b></p>
 					<h3>Week 1 49ers breakout pick vs. Rams: OLB Tank Carradine</h3>
-					<p><p>49ers fans have been waiting a long time for Tank Carradine to live up to the hype he had surrounding him coming out of Florida State in the 2013 &hellip;  <a href="http://sfo.247sports.com/Bolt/Week-1-49ers-breakout-pick-vs-Rams-OLB-Tank-Carradine-47268494">more</a>.</p>
+					<p><p>49ers fans have been waiting a long time for Tank Carradine to live up to the hype he had surrounding him coming out of Florida State in the 2013 &hellip;  <a href="http://sfo.247sports.com/Bolt/Week-1-49ers-breakout-pick-vs-Rams-OLB-Tank-Carradine-47268494" onclick="trackOutboundLink('http://sfo.247sports.com/Bolt/Week-1-49ers-breakout-pick-vs-Rams-OLB-Tank-Carradine-47268494'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

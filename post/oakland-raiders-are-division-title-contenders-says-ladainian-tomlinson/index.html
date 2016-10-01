@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>15</b></p>
 					<h3>Oakland Raiders are Division Title Contenders Says LaDainian Tomlinson</h3>
-					<p><p>We took this opportunity to ask Tomlinson his thoughts on one of his former AFC West division rivals; the Oakland Raiders. A lot of people are say this &hellip;  <a href="http://www.thesportsbank.net/oakland-raiders/ladanian-tomlinson-oakland-raiders-division-title-contenders/">more</a>.</p>
+					<p><p>We took this opportunity to ask Tomlinson his thoughts on one of his former AFC West division rivals; the Oakland Raiders. A lot of people are say this &hellip;  <a href="http://www.thesportsbank.net/oakland-raiders/ladanian-tomlinson-oakland-raiders-division-title-contenders/" onclick="trackOutboundLink('http://www.thesportsbank.net/oakland-raiders/ladanian-tomlinson-oakland-raiders-division-title-contenders/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

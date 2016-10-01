@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>11</b></p>
 					<h3>Fantasy football advice, Week 1: Who to start for Rams vs. 49ers</h3>
-					<p><p>With the 49ers devoid of talent on offense, Hyde is in line to monopolize carries, although the degree of success he can achieve is anyone&rsquo;s guess.  <a href="http://www.sbnation.com/2016/9/11/12874344/fantasy-football-sit-start-advice-week-1-rams-vs-49ers">more</a>.</p>
+					<p><p>With the 49ers devoid of talent on offense, Hyde is in line to monopolize carries, although the degree of success he can achieve is anyone&rsquo;s guess.  <a href="http://www.sbnation.com/2016/9/11/12874344/fantasy-football-sit-start-advice-week-1-rams-vs-49ers" onclick="trackOutboundLink('http://www.sbnation.com/2016/9/11/12874344/fantasy-football-sit-start-advice-week-1-rams-vs-49ers'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

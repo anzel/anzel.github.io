@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>29</b></p>
 					<h3>Elvis Dumervil confirms that he will play Sunday vs. Raiders</h3>
-					<p><p>Baltimore Ravens LB Evlis Dumervil will make his 2016 season debut on Sunday when the Ravens host the Oakland Raiders. by Michael Kaskey- &hellip;  <a href="http://www.cbssports.com/nfl/news/elvis-dumervil-confirms-that-he-will-play-sunday-vs-raiders/">more</a>.</p>
+					<p><p>Baltimore Ravens LB Evlis Dumervil will make his 2016 season debut on Sunday when the Ravens host the Oakland Raiders. by Michael Kaskey- &hellip;  <a href="http://www.cbssports.com/nfl/news/elvis-dumervil-confirms-that-he-will-play-sunday-vs-raiders/" onclick="trackOutboundLink('http://www.cbssports.com/nfl/news/elvis-dumervil-confirms-that-he-will-play-sunday-vs-raiders/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

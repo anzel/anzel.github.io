@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>Sporting KC Weekly Update: September 28, 2016</h3>
-					<p><p>Sporting KC claimed an invaluable 2-1 road victory over the San Jose Earthquakes on Saturday night, jumping up to fifth place in the Western &hellip;  <a href="http://www.sportingkc.com/post/2016/09/28/sporting-kc-weekly-update-september-28-2016">more</a>.</p>
+					<p><p>Sporting KC claimed an invaluable 2-1 road victory over the San Jose Earthquakes on Saturday night, jumping up to fifth place in the Western &hellip;  <a href="http://www.sportingkc.com/post/2016/09/28/sporting-kc-weekly-update-september-28-2016" onclick="trackOutboundLink('http://www.sportingkc.com/post/2016/09/28/sporting-kc-weekly-update-september-28-2016'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

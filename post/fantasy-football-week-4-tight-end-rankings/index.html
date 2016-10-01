@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>29</b></p>
 					<h3>Fantasy Football: Week 4 Tight End Rankings</h3>
-					<p><p>I expect that to continue against the Oakland Raiders. The Raiders have allowed the eighth-most fantasy points per game to tight ends this season.  <a href="http://www.upi.com/Sports_News/NFL/2016/09/28/Fantasy-Football-Week-4-Tight-End-Rankings/3151475097488/">more</a>.</p>
+					<p><p>I expect that to continue against the Oakland Raiders. The Raiders have allowed the eighth-most fantasy points per game to tight ends this season.  <a href="http://www.upi.com/Sports_News/NFL/2016/09/28/Fantasy-Football-Week-4-Tight-End-Rankings/3151475097488/" onclick="trackOutboundLink('http://www.upi.com/Sports_News/NFL/2016/09/28/Fantasy-Football-Week-4-Tight-End-Rankings/3151475097488/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

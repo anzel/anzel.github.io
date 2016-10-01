@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>10</b></p>
 					<h3>Can Chip Kelly calm the 49ers chaos?</h3>
-					<p><p>San Francisco 49ers head coach Chip Kelly is photographed on the sidelines against the Houston Texans in the fourth quarter of an NFL preseason &hellip;  <a href="http://www.mercurynews.com/2016/09/10/the-49ers-wont-be-good-ill-say-6-10-but-maybe-chip-kelly-can-make-sense-of-this-half-roster-and-navigate-through-some-storms/">more</a>.</p>
+					<p><p>San Francisco 49ers head coach Chip Kelly is photographed on the sidelines against the Houston Texans in the fourth quarter of an NFL preseason &hellip;  <a href="http://www.mercurynews.com/2016/09/10/the-49ers-wont-be-good-ill-say-6-10-but-maybe-chip-kelly-can-make-sense-of-this-half-roster-and-navigate-through-some-storms/" onclick="trackOutboundLink('http://www.mercurynews.com/2016/09/10/the-49ers-wont-be-good-ill-say-6-10-but-maybe-chip-kelly-can-make-sense-of-this-half-roster-and-navigate-through-some-storms/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

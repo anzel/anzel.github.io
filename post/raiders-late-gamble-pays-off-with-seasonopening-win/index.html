@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>Raiders&#39; late gamble pays off with season-opening win</h3>
-					<p><p>NEW ORLEANS  The Saints were marching in for a good part of the game, and the penalty flags were flying in, but in the end, Sunday&rsquo;s season &hellip;  <a href="http://www.sfgate.com/raiders/article/Raiders-late-gamble-pays-off-with-9216141.php">more</a>.</p>
+					<p><p>NEW ORLEANS  The Saints were marching in for a good part of the game, and the penalty flags were flying in, but in the end, Sunday&rsquo;s season &hellip;  <a href="http://www.sfgate.com/raiders/article/Raiders-late-gamble-pays-off-with-9216141.php" onclick="trackOutboundLink('http://www.sfgate.com/raiders/article/Raiders-late-gamble-pays-off-with-9216141.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>19</b></p>
 					<h3>Ice Cube rips the Oakland Raiders for lack of &#39;D&#39;</h3>
-					<p><p>Rapper/entertainer and noted Oakland Raiders fan Ice Cube has joined the chorus of critics when it comes to the team&rsquo;s defense. Ice Cube tweeted a &hellip;  <a href="http://oak.247sports.com/Bolt/Ice-Cube-rips-the-Oakland-Raiders-for-lack-of-D-47613212">more</a>.</p>
+					<p><p>Rapper/entertainer and noted Oakland Raiders fan Ice Cube has joined the chorus of critics when it comes to the team&rsquo;s defense. Ice Cube tweeted a &hellip;  <a href="http://oak.247sports.com/Bolt/Ice-Cube-rips-the-Oakland-Raiders-for-lack-of-D-47613212" onclick="trackOutboundLink('http://oak.247sports.com/Bolt/Ice-Cube-rips-the-Oakland-Raiders-for-lack-of-D-47613212'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

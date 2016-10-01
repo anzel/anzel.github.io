@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>13</b></p>
 					<h3>Canucks add Ruutu, Sheppard on tryout contracts</h3>
-					<p><p>He bounced around from the Wild to the San Jose Sharks, then the New York Rangers at the end of the 2014-15 season. With just 23 goals and 91 &hellip;  <a href="http://www.todaysslapshot.com/from-the-ice/canucks-add-ruutu-sheppard-tryout-contracts/">more</a>.</p>
+					<p><p>He bounced around from the Wild to the San Jose Sharks, then the New York Rangers at the end of the 2014-15 season. With just 23 goals and 91 &hellip;  <a href="http://www.todaysslapshot.com/from-the-ice/canucks-add-ruutu-sheppard-tryout-contracts/" onclick="trackOutboundLink('http://www.todaysslapshot.com/from-the-ice/canucks-add-ruutu-sheppard-tryout-contracts/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

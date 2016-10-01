@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>02</b></p>
 					<h3>The Oakland Raiders fell to the Seattle Seahawks 23-21 in preseason finale</h3>
-					<p><p>The Oakland Raiders took the field at the Oakland-Alameda Coliseum for their fourth and final preseason game on Thursday night, hosting the Seattle &hellip;  <a href="http://www.scout.com/nfl/raiders/story/1702105-raiders-fall-23-21-in-preseason-finale">more</a>.</p>
+					<p><p>The Oakland Raiders took the field at the Oakland-Alameda Coliseum for their fourth and final preseason game on Thursday night, hosting the Seattle &hellip;  <a href="http://www.scout.com/nfl/raiders/story/1702105-raiders-fall-23-21-in-preseason-finale" onclick="trackOutboundLink('http://www.scout.com/nfl/raiders/story/1702105-raiders-fall-23-21-in-preseason-finale'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

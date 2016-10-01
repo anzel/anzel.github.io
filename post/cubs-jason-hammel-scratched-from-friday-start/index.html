@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>29</b></p>
 					<h3>Cubs&#39; Jason Hammel scratched from Friday start</h3>
-					<p><p>&hellip; pitched for the Colorado Rockies, Baltimore Orioles and Oakland Athletics in addition to his two separate stints with the Cubs. He went from Chicago &hellip;  <a href="http://www.todaysknuckleball.com/news/cubs-jason-hammel-scratched-from-friday-start/">more</a>.</p>
+					<p><p>&hellip; pitched for the Colorado Rockies, Baltimore Orioles and Oakland Athletics in addition to his two separate stints with the Cubs. He went from Chicago &hellip;  <a href="http://www.todaysknuckleball.com/news/cubs-jason-hammel-scratched-from-friday-start/" onclick="trackOutboundLink('http://www.todaysknuckleball.com/news/cubs-jason-hammel-scratched-from-friday-start/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

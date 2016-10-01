@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>Kelly: Cowboys Drafted Prescott Near Where 49ers Had Him Slotted</h3>
-					<p><p>SANTA CLARA  The 49ers will get an up-close look Sunday at the quarterback they could have taken as late as their fourth-round pick. Quarterback &hellip;  <a href="http://www.nbcbayarea.com/news/sports/csn/49ers/Kelly__Cowboys_drafted_Prescott_near_where_49ers_had_him_slotted-395148541.html">more</a>.</p>
+					<p><p>SANTA CLARA  The 49ers will get an up-close look Sunday at the quarterback they could have taken as late as their fourth-round pick. Quarterback &hellip;  <a href="http://www.nbcbayarea.com/news/sports/csn/49ers/Kelly__Cowboys_drafted_Prescott_near_where_49ers_had_him_slotted-395148541.html" onclick="trackOutboundLink('http://www.nbcbayarea.com/news/sports/csn/49ers/Kelly__Cowboys_drafted_Prescott_near_where_49ers_had_him_slotted-395148541.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

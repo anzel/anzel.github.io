@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>09</b></p>
 					<h3>Mariners 3, Athletics 2: Victory pulls M&#39;s a little closer in wild-card</h3>
-					<p><p>The News Tribune (blog) &hellip; moved up another notch Friday night in the American League wild-card standings by holding on for for a 3-2 victory over the Oakland Athletics.  <a href="http://www.thenewstribune.com/sports/mlb/seattle-mariners/mariners-insider-blog/article101038427.html">more</a>.</p>
+					<p><p>The News Tribune (blog) &hellip; moved up another notch Friday night in the American League wild-card standings by holding on for for a 3-2 victory over the Oakland Athletics.  <a href="http://www.thenewstribune.com/sports/mlb/seattle-mariners/mariners-insider-blog/article101038427.html" onclick="trackOutboundLink('http://www.thenewstribune.com/sports/mlb/seattle-mariners/mariners-insider-blog/article101038427.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

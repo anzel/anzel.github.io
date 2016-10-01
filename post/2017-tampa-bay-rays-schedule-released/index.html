@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>2017 Tampa Bay Rays schedule released</h3>
-					<p><p>The Rays will also host the Oakland Athletics in a single-admission doubleheader on Saturday, June 10 &ndash; Major League Baseball&rsquo;s first scheduled &hellip;  <a href="http://www.foxsports.com/florida/story/tampa-bay-rays-2017-schedule-released-091416">more</a>.</p>
+					<p><p>The Rays will also host the Oakland Athletics in a single-admission doubleheader on Saturday, June 10 &ndash; Major League Baseball&rsquo;s first scheduled &hellip;  <a href="http://www.foxsports.com/florida/story/tampa-bay-rays-2017-schedule-released-091416" onclick="trackOutboundLink('http://www.foxsports.com/florida/story/tampa-bay-rays-2017-schedule-released-091416'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

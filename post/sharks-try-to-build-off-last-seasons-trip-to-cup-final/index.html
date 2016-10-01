@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>23</b></p>
 					<h3>Sharks try to build off last season&#39;s trip to Cup final</h3>
-					<p><p>SAN JOSE, Calif.  If Joel Ward needed any reminder of how close the San Jose Sharks came to winning the Stanley Cup, it was right there in front of &hellip;  <a href="https://www.washingtonpost.com/sports/capitals/sharks-try-to-build-off-last-seasons-trip-to-cup-final/2016/09/23/9621c536-81d3-11e6-9578-558cc125c7ba_story.html">more</a>.</p>
+					<p><p>SAN JOSE, Calif.  If Joel Ward needed any reminder of how close the San Jose Sharks came to winning the Stanley Cup, it was right there in front of &hellip;  <a href="https://www.washingtonpost.com/sports/capitals/sharks-try-to-build-off-last-seasons-trip-to-cup-final/2016/09/23/9621c536-81d3-11e6-9578-558cc125c7ba_story.html" onclick="trackOutboundLink('https://www.washingtonpost.com/sports/capitals/sharks-try-to-build-off-last-seasons-trip-to-cup-final/2016/09/23/9621c536-81d3-11e6-9578-558cc125c7ba_story.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

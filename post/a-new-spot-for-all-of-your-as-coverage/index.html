@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>15</b></p>
 					<h3>A new spot for all of your A&#39;s coverage</h3>
-					<p><p>With that launch, the Oakland Athletics blog will no longer be populated. The blog site will still be here in an archived form, but we won&rsquo;t be adding &hellip;  <a href="http://www.ibabuzz.com/athletics/2016/09/15/new-spot-coverage/">more</a>.</p>
+					<p><p>With that launch, the Oakland Athletics blog will no longer be populated. The blog site will still be here in an archived form, but we won&rsquo;t be adding &hellip;  <a href="http://www.ibabuzz.com/athletics/2016/09/15/new-spot-coverage/" onclick="trackOutboundLink('http://www.ibabuzz.com/athletics/2016/09/15/new-spot-coverage/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

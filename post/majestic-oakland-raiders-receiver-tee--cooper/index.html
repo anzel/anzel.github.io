@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>10</b></p>
 					<h3>Majestic Oakland Raiders Receiver Tee - Cooper</h3>
-					<p><p>Raiders logo in bold screen print. Amari Cooper&rsquo;s name and #89 are printed &hellip;  <a href="https://www.boscovs.com/shop/prod/majestic-oakland-raiders-receiver-tee-cooper/508304.htm">more</a>.</p>
+					<p><p>Raiders logo in bold screen print. Amari Cooper&rsquo;s name and #89 are printed &hellip;  <a href="https://www.boscovs.com/shop/prod/majestic-oakland-raiders-receiver-tee-cooper/508304.htm" onclick="trackOutboundLink('https://www.boscovs.com/shop/prod/majestic-oakland-raiders-receiver-tee-cooper/508304.htm'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

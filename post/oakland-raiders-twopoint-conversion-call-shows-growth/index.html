@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>15</b></p>
 					<h3>Oakland Raiders: Two-point conversion call shows growth</h3>
-					<p><p>The Oakland Raiders stunned the New Orleans Saints in a 35-34 victory in which David Carr threw a 10-yard touchdown to Seth Roberts and drilled in &hellip;  <a href="http://newhistorianinfo.com/2016/09/15/oakland-raiders-two-point-conversion-call-shows-growth.html">more</a>.</p>
+					<p><p>The Oakland Raiders stunned the New Orleans Saints in a 35-34 victory in which David Carr threw a 10-yard touchdown to Seth Roberts and drilled in &hellip;  <a href="http://newhistorianinfo.com/2016/09/15/oakland-raiders-two-point-conversion-call-shows-growth.html" onclick="trackOutboundLink('http://newhistorianinfo.com/2016/09/15/oakland-raiders-two-point-conversion-call-shows-growth.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

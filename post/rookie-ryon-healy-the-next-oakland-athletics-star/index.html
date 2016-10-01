@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>20</b></p>
 					<h3>Rookie Ryon Healy the Next Oakland Athletics Star?</h3>
-					<p><p>Still a bad move dealing Donaldson to the Toronto Blue Jays, Healy could eventually become the next Oakland Athletics star and the trade helped to &hellip;  <a href="http://inningseaters.sportsblog.com/posts/26024210/rookie-ryon-healy-the-next-oakland-athletics-star-.html">more</a>.</p>
+					<p><p>Still a bad move dealing Donaldson to the Toronto Blue Jays, Healy could eventually become the next Oakland Athletics star and the trade helped to &hellip;  <a href="http://inningseaters.sportsblog.com/posts/26024210/rookie-ryon-healy-the-next-oakland-athletics-star-.html" onclick="trackOutboundLink('http://inningseaters.sportsblog.com/posts/26024210/rookie-ryon-healy-the-next-oakland-athletics-star-.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

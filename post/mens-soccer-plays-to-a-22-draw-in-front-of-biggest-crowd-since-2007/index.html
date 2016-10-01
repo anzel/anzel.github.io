@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>24</b></p>
 					<h3>Men&#39;s Soccer Plays To a 2-2 Draw In Front Of Biggest Crowd Since 2007</h3>
-					<p><p>The participants juggled on the field along with Spartans mascot, Sammy, and with San Jose Earthquakes mascot, Q. Various local youth club teams &hellip;  <a href="http://www.sjsuspartans.com/sports/m-soccer/recaps/092416aaa.html">more</a>.</p>
+					<p><p>The participants juggled on the field along with Spartans mascot, Sammy, and with San Jose Earthquakes mascot, Q. Various local youth club teams &hellip;  <a href="http://www.sjsuspartans.com/sports/m-soccer/recaps/092416aaa.html" onclick="trackOutboundLink('http://www.sjsuspartans.com/sports/m-soccer/recaps/092416aaa.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

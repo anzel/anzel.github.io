@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>05</b></p>
 					<h3>Browns claim NFL-high five players off waivers following cutdown day, waive</h3>
-					<p><p>Akron Beacon Journal Former Oakland Raiders running back George Atkinson, 23, 6-1 and 220 pounds. He signed with the Raiders in 2014 as an undrafted free agent from &hellip;  <a href="http://www.ohio.com/sports/browns/browns-claim-nfl-high-five-players-off-waivers-following-cutdown-day-waive-rookie-fifth-round-pick-trey-caldwell-1.709521">more</a>.</p>
+					<p><p>Akron Beacon Journal Former Oakland Raiders running back George Atkinson, 23, 6-1 and 220 pounds. He signed with the Raiders in 2014 as an undrafted free agent from &hellip;  <a href="http://www.ohio.com/sports/browns/browns-claim-nfl-high-five-players-off-waivers-following-cutdown-day-waive-rookie-fifth-round-pick-trey-caldwell-1.709521" onclick="trackOutboundLink('http://www.ohio.com/sports/browns/browns-claim-nfl-high-five-players-off-waivers-following-cutdown-day-waive-rookie-fifth-round-pick-trey-caldwell-1.709521'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

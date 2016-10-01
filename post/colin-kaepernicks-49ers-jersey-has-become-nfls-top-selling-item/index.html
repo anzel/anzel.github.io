@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>06</b></p>
 					<h3>Colin Kaepernick&#39;s 49ers jersey has become NFL&#39;s top selling item</h3>
-					<p><p>The suddenly controversial San Francisco 49ers back-up quarterback has been the talk of the sports world for over a week. With a spot on San Fran&rsquo;s &hellip;  <a href="http://www.nj.com/sports/index.ssf/2016/09/colin_kaepernick_49ers_jersey_sales.html">more</a>.</p>
+					<p><p>The suddenly controversial San Francisco 49ers back-up quarterback has been the talk of the sports world for over a week. With a spot on San Fran&rsquo;s &hellip;  <a href="http://www.nj.com/sports/index.ssf/2016/09/colin_kaepernick_49ers_jersey_sales.html" onclick="trackOutboundLink('http://www.nj.com/sports/index.ssf/2016/09/colin_kaepernick_49ers_jersey_sales.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

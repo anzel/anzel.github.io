@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>Kansas City Royals vs Oakland Athletics and Chicago White Sox September</h3>
-					<p><p>Kansas City infoZine The World Champion Kansas City Royals will return home for an eight-game homestand to host the Oakland Athletics (September 12-15) and &hellip;  <a href="http://www.infozine.com/news/stories/op/storiesView/sid/65364/">more</a>.</p>
+					<p><p>Kansas City infoZine The World Champion Kansas City Royals will return home for an eight-game homestand to host the Oakland Athletics (September 12-15) and &hellip;  <a href="http://www.infozine.com/news/stories/op/storiesView/sid/65364/" onclick="trackOutboundLink('http://www.infozine.com/news/stories/op/storiesView/sid/65364/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

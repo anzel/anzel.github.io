@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>23</b></p>
 					<h3>Five Questions Heading Into The Oakland Raiders Week 3 Clash With The</h3>
-					<p><p>Raiders.com The Oakland Raiders head to Nashville this weekend to take on the Tennessee Titans Sunday afternoon at Nissan Stadium. After dropping their home &hellip;  <a href="http://www.raiders.com/news/article-1/Five-Questions-Heading-Into-The-Oakland-Raiders-Week-3-Clash-With-The-Tennessee-Titans/e130a4f4-db8b-4bb8-801a-28d59b5c813d">more</a>.</p>
+					<p><p>Raiders.com The Oakland Raiders head to Nashville this weekend to take on the Tennessee Titans Sunday afternoon at Nissan Stadium. After dropping their home &hellip;  <a href="http://www.raiders.com/news/article-1/Five-Questions-Heading-Into-The-Oakland-Raiders-Week-3-Clash-With-The-Tennessee-Titans/e130a4f4-db8b-4bb8-801a-28d59b5c813d" onclick="trackOutboundLink('http://www.raiders.com/news/article-1/Five-Questions-Heading-Into-The-Oakland-Raiders-Week-3-Clash-With-The-Tennessee-Titans/e130a4f4-db8b-4bb8-801a-28d59b5c813d'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

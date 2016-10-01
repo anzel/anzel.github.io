@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Oct<b>01</b></p>
 					<h3>Vote: Who is the Athletics&#39; 2016 MVP?</h3>
-					<p><p>It&rsquo;s been another rough season for the Oakland Athletics, who will finish in last place in the American League West for the second year in a row.  <a href="http://www.espn.com/sportsnation/story/_/page/QTP_160929athleticsmvp/sportsnation-poll-oakland-athletics-2016-mvp">more</a>.</p>
+					<p><p>It&rsquo;s been another rough season for the Oakland Athletics, who will finish in last place in the American League West for the second year in a row.  <a href="http://www.espn.com/sportsnation/story/_/page/QTP_160929athleticsmvp/sportsnation-poll-oakland-athletics-2016-mvp" onclick="trackOutboundLink('http://www.espn.com/sportsnation/story/_/page/QTP_160929athleticsmvp/sportsnation-poll-oakland-athletics-2016-mvp'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

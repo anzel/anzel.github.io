@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>06</b></p>
 					<h3>Raiders big back Latavius Murray looks for even bigger role</h3>
-					<p><p>The bigger the running back, the bigger the target. That goes for defensive players, as well as fans, when it comes to the Raiders&rsquo; Latavius Murray.  <a href="http://www.sfgate.com/raiders/article/Raiders-big-back-Latavius-Murray-looks-for-even-9206338.php">more</a>.</p>
+					<p><p>The bigger the running back, the bigger the target. That goes for defensive players, as well as fans, when it comes to the Raiders&rsquo; Latavius Murray.  <a href="http://www.sfgate.com/raiders/article/Raiders-big-back-Latavius-Murray-looks-for-even-9206338.php" onclick="trackOutboundLink('http://www.sfgate.com/raiders/article/Raiders-big-back-Latavius-Murray-looks-for-even-9206338.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

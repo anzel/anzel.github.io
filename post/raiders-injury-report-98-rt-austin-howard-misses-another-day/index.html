@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>09</b></p>
 					<h3>Raiders injury report (9/8): RT Austin Howard misses another day</h3>
-					<p><p>Through three seasons with the Oakland Raiders, the talented offensive tackle has struggled to stay on the field. He dealt with knee and calf injuries in &hellip;  <a href="http://oak.247sports.com/Bolt/Raiders-injury-report-98-RT-Austin-Howard-misses-another-day-47316913">more</a>.</p>
+					<p><p>Through three seasons with the Oakland Raiders, the talented offensive tackle has struggled to stay on the field. He dealt with knee and calf injuries in &hellip;  <a href="http://oak.247sports.com/Bolt/Raiders-injury-report-98-RT-Austin-Howard-misses-another-day-47316913" onclick="trackOutboundLink('http://oak.247sports.com/Bolt/Raiders-injury-report-98-RT-Austin-Howard-misses-another-day-47316913'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

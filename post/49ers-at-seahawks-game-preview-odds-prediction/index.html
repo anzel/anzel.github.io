@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>22</b></p>
 					<h3>49ers at Seahawks: Game preview, odds, prediction</h3>
-					<p><p>The San Francisco 49ers and Seattle Seahawks used to run the NFC West. Now, the Seahawks are trying to stay on top, while the 49ers feel like they &hellip;  <a href="http://fansided.com/2016/09/22/49ers-seahawks-preview-prediction-pick/">more</a>.</p>
+					<p><p>The San Francisco 49ers and Seattle Seahawks used to run the NFC West. Now, the Seahawks are trying to stay on top, while the 49ers feel like they &hellip;  <a href="http://fansided.com/2016/09/22/49ers-seahawks-preview-prediction-pick/" onclick="trackOutboundLink('http://fansided.com/2016/09/22/49ers-seahawks-preview-prediction-pick/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

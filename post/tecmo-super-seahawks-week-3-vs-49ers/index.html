@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>26</b></p>
 					<h3>Tecmo Super Seahawks Week 3 vs 49ers</h3>
-					<p><p>Tecmo Super Seahawks Week 3 vs 49ers &hellip; The Morning After: Seahawks Find Their Altitude, Leave 49ers Below Them, 37-18. No More Stories &hellip;  <a href="http://www.hawkblogger.com/2016/09/tecmo-super-seahawks-week-3-vs-49ers.html">more</a>.</p>
+					<p><p>Tecmo Super Seahawks Week 3 vs 49ers &hellip; The Morning After: Seahawks Find Their Altitude, Leave 49ers Below Them, 37-18. No More Stories &hellip;  <a href="http://www.hawkblogger.com/2016/09/tecmo-super-seahawks-week-3-vs-49ers.html" onclick="trackOutboundLink('http://www.hawkblogger.com/2016/09/tecmo-super-seahawks-week-3-vs-49ers.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

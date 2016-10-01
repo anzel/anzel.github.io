@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>22</b></p>
 					<h3>Should Derek Carr be taking deeper shots for the Raiders?</h3>
-					<p><p>The Oakland Raiders quarterback wanted to know how often pass-interference calls were made on deep passes. The answer to his oh-so-unscientific &hellip;  <a href="http://www.espn.com/blog/nflnation/post/_/id/215258/should-derek-carr-be-taking-deeper-shots-for-the-raiders">more</a>.</p>
+					<p><p>The Oakland Raiders quarterback wanted to know how often pass-interference calls were made on deep passes. The answer to his oh-so-unscientific &hellip;  <a href="http://www.espn.com/blog/nflnation/post/_/id/215258/should-derek-carr-be-taking-deeper-shots-for-the-raiders" onclick="trackOutboundLink('http://www.espn.com/blog/nflnation/post/_/id/215258/should-derek-carr-be-taking-deeper-shots-for-the-raiders'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>How Would DeMarcus Cousins Look On The Oakland Raiders?</h3>
-					<p><p>LOS ANGELES, CA - FEBRUARY 21: DeMarcus Cousins #15 of the Sacramento Kings complains to a referee in the game with the Los Angeles &hellip;  <a href="http://sacramento.cbslocal.com/2016/09/14/how-would-demarcus-cousins-look-on-the-oakland-raiders/">more</a>.</p>
+					<p><p>LOS ANGELES, CA - FEBRUARY 21: DeMarcus Cousins #15 of the Sacramento Kings complains to a referee in the game with the Los Angeles &hellip;  <a href="http://sacramento.cbslocal.com/2016/09/14/how-would-demarcus-cousins-look-on-the-oakland-raiders/" onclick="trackOutboundLink('http://sacramento.cbslocal.com/2016/09/14/how-would-demarcus-cousins-look-on-the-oakland-raiders/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

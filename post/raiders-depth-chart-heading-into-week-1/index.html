@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>04</b></p>
 					<h3>Raiders depth chart heading into Week 1</h3>
-					<p><p>Now that the Oakland Raiders have cut their roster down to just 53 men, the depth chart has come into full clarity. This gallery will go through the roster &hellip;  <a href="http://oak.247sports.com/Gallery/Oakland-Raiders-depth-chart-heading-into-Week-1-47204851">more</a>.</p>
+					<p><p>Now that the Oakland Raiders have cut their roster down to just 53 men, the depth chart has come into full clarity. This gallery will go through the roster &hellip;  <a href="http://oak.247sports.com/Gallery/Oakland-Raiders-depth-chart-heading-into-Week-1-47204851" onclick="trackOutboundLink('http://oak.247sports.com/Gallery/Oakland-Raiders-depth-chart-heading-into-Week-1-47204851'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

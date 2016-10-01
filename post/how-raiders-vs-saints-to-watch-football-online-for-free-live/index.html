@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>11</b></p>
 					<h3>How Raiders vs Saints To Watch Football Online For Free Live</h3>
-					<p><p>Us For Raiders vs Saints Live Stream NFL Week-1 Regular Season HD &hellip;  <a href="http://www.brownpapertickets.com/profile/2186051">more</a>.</p>
+					<p><p>Us For Raiders vs Saints Live Stream NFL Week-1 Regular Season HD &hellip;  <a href="http://www.brownpapertickets.com/profile/2186051" onclick="trackOutboundLink('http://www.brownpapertickets.com/profile/2186051'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

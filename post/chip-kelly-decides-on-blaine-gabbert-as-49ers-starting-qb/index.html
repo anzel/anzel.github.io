@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>03</b></p>
 					<h3>Chip Kelly decides on Blaine Gabbert as 49ers&#39; starting QB</h3>
-					<p><p>SANTA CLARA, Calif. &ndash; On a day when the San Francisco 49ers joined the rest of the NFL in trimming their roster to 53 players, coach Chip Kelly also &hellip;  <a href="http://www.espn.com/nfl/story/_/id/17458863/blaine-gabbert-starting-quarterback-san-francisco-49ers">more</a>.</p>
+					<p><p>SANTA CLARA, Calif. &ndash; On a day when the San Francisco 49ers joined the rest of the NFL in trimming their roster to 53 players, coach Chip Kelly also &hellip;  <a href="http://www.espn.com/nfl/story/_/id/17458863/blaine-gabbert-starting-quarterback-san-francisco-49ers" onclick="trackOutboundLink('http://www.espn.com/nfl/story/_/id/17458863/blaine-gabbert-starting-quarterback-san-francisco-49ers'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

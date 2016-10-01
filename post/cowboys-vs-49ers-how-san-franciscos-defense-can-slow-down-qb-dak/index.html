@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>29</b></p>
 					<h3>Cowboys vs. 49ers: How San Francisco&#39;s Defense Can Slow Down QB Dak</h3>
-					<p><p>Niner Noise The San Francisco 49ers host the Dallas Cowboys in Week 4, which means the Niners defense will be tasked with slowing down rookie quarterback &hellip;  <a href="http://ninernoise.com/2016/09/28/cowboys-vs-49ers-san-franciscos-defense-can-slow-qb-dak-prescott/">more</a>.</p>
+					<p><p>Niner Noise The San Francisco 49ers host the Dallas Cowboys in Week 4, which means the Niners defense will be tasked with slowing down rookie quarterback &hellip;  <a href="http://ninernoise.com/2016/09/28/cowboys-vs-49ers-san-franciscos-defense-can-slow-qb-dak-prescott/" onclick="trackOutboundLink('http://ninernoise.com/2016/09/28/cowboys-vs-49ers-san-franciscos-defense-can-slow-qb-dak-prescott/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

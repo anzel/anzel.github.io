@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>Raiders&#39; two-point conversion call made on &#39;trust,&#39; not guts</h3>
-					<p><p>As the Oakland Raiders said in the locker room following their come-from-behind 35-34 victory over the New Orleans Saints, guts had little to do with &hellip;  <a href="http://www.espn.com/blog/afcwest/post/_/id/75859/raiders-two-point-conversion-call-made-on-trust-not-guts">more</a>.</p>
+					<p><p>As the Oakland Raiders said in the locker room following their come-from-behind 35-34 victory over the New Orleans Saints, guts had little to do with &hellip;  <a href="http://www.espn.com/blog/afcwest/post/_/id/75859/raiders-two-point-conversion-call-made-on-trust-not-guts" onclick="trackOutboundLink('http://www.espn.com/blog/afcwest/post/_/id/75859/raiders-two-point-conversion-call-made-on-trust-not-guts'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

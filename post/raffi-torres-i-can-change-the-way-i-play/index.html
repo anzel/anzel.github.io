@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>02</b></p>
 					<h3>Raffi Torres: &#39;I can change the way I play&#39;</h3>
-					<p><p>Raffi Torres #13 of the San Jose Sharks skates with the puck in Game Four of &hellip; A year ago, playing for the San Jose Sharks in a preseason game, the &hellip;  <a href="http://www.newsobserver.com/sports/nhl/carolina-hurricanes/article99634497.html">more</a>.</p>
+					<p><p>Raffi Torres #13 of the San Jose Sharks skates with the puck in Game Four of &hellip; A year ago, playing for the San Jose Sharks in a preseason game, the &hellip;  <a href="http://www.newsobserver.com/sports/nhl/carolina-hurricanes/article99634497.html" onclick="trackOutboundLink('http://www.newsobserver.com/sports/nhl/carolina-hurricanes/article99634497.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

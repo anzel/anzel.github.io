@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>Oakland Raiders release Pro Bowl FB Marcel Reece</h3>
-					<p><p>Denver Broncos cornerback Nate Jones, right, dives for Oakland Raiders fullback Marcel Reese during the third quarter of an NFL game at Invesco &hellip;  <a href="http://www.denverpost.com/2016/09/27/marcel-reese-released-oakland-raiders/">more</a>.</p>
+					<p><p>Denver Broncos cornerback Nate Jones, right, dives for Oakland Raiders fullback Marcel Reese during the third quarter of an NFL game at Invesco &hellip;  <a href="http://www.denverpost.com/2016/09/27/marcel-reese-released-oakland-raiders/" onclick="trackOutboundLink('http://www.denverpost.com/2016/09/27/marcel-reese-released-oakland-raiders/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

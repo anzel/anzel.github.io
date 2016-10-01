@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>07</b></p>
 					<h3>Colin Kaepernick: False rumors of conversion tied to Islamophobia</h3>
-					<p><p>I have great respect for the religion, know a lot of people that are Muslim and are phenomenal people,&rdquo; Kaepernick, the San Francisco 49ers&rsquo; backup &hellip;  <a href="http://www.usatoday.com/story/sports/nfl/49ers/2016/09/07/colin-kaepernick-national-anthem-protest/89975464/">more</a>.</p>
+					<p><p>I have great respect for the religion, know a lot of people that are Muslim and are phenomenal people,&rdquo; Kaepernick, the San Francisco 49ers&rsquo; backup &hellip;  <a href="http://www.usatoday.com/story/sports/nfl/49ers/2016/09/07/colin-kaepernick-national-anthem-protest/89975464/" onclick="trackOutboundLink('http://www.usatoday.com/story/sports/nfl/49ers/2016/09/07/colin-kaepernick-national-anthem-protest/89975464/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

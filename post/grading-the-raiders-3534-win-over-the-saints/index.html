@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>Grading the Raiders&#39; 35-34 win over the Saints</h3>
-					<p><p>Michael Crabtree #15 of the Oakland Raiders catches a pass over Delvin Breaux #40 Michael Crabtree got great position and caught a perfect pass &hellip;  <a href="http://www.mercurynews.com/2016/09/12/grading-the-raiders-35-34-win-over-the-saints/">more</a>.</p>
+					<p><p>Michael Crabtree #15 of the Oakland Raiders catches a pass over Delvin Breaux #40 Michael Crabtree got great position and caught a perfect pass &hellip;  <a href="http://www.mercurynews.com/2016/09/12/grading-the-raiders-35-34-win-over-the-saints/" onclick="trackOutboundLink('http://www.mercurynews.com/2016/09/12/grading-the-raiders-35-34-win-over-the-saints/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

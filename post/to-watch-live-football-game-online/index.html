@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>To. Watch. Live. Football. Game. Online</h3>
-					<p><p>49ers Online! Watch Rams vs 49ers Live Stream NFL Games Online.  <a href="http://www.stubor.se/sites/default/files/webform/gameplanhow_49ers_to._watch._live._football._game._online.pdf">more</a>.</p>
+					<p><p>49ers Online! Watch Rams vs 49ers Live Stream NFL Games Online.  <a href="http://www.stubor.se/sites/default/files/webform/gameplanhow_49ers_to._watch._live._football._game._online.pdf" onclick="trackOutboundLink('http://www.stubor.se/sites/default/files/webform/gameplanhow_49ers_to._watch._live._football._game._online.pdf'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

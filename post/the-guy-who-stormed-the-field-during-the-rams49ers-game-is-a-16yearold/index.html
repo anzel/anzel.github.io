@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>The guy who stormed the field during the Rams-49ers game is a 16-year-old</h3>
-					<p><p>Los Angeles Times Turns out the guy who inspired the NFL play-by-play call of the week by running onto the field during the Monday Night Football game between the &hellip;  <a href="http://www.latimes.com/sports/sportsnow/la-sp-49ers-fan-on-field-20160914-snap-story.html">more</a>.</p>
+					<p><p>Los Angeles Times Turns out the guy who inspired the NFL play-by-play call of the week by running onto the field during the Monday Night Football game between the &hellip;  <a href="http://www.latimes.com/sports/sportsnow/la-sp-49ers-fan-on-field-20160914-snap-story.html" onclick="trackOutboundLink('http://www.latimes.com/sports/sportsnow/la-sp-49ers-fan-on-field-20160914-snap-story.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

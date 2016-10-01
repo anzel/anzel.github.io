@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>10</b></p>
 					<h3>Seattle Mariners  Oakland Athletics Preview  09.10.2016</h3>
-					<p><p>In the second of a three-game series between the Oakland Athletics (60-80) and the Seattle Mariners (73-68) at O.C. Coliseum, Kendall Graveman &hellip;  <a href="https://www.getmoresports.com/seattle-mariners-oakland-athletics-preview-09-10-2016/">more</a>.</p>
+					<p><p>In the second of a three-game series between the Oakland Athletics (60-80) and the Seattle Mariners (73-68) at O.C. Coliseum, Kendall Graveman &hellip;  <a href="https://www.getmoresports.com/seattle-mariners-oakland-athletics-preview-09-10-2016/" onclick="trackOutboundLink('https://www.getmoresports.com/seattle-mariners-oakland-athletics-preview-09-10-2016/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

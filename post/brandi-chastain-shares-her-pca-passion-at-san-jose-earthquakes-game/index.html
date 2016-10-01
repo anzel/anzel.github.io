@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>16</b></p>
 					<h3>Brandi Chastain Shares Her PCA Passion at San Jose Earthquakes Game</h3>
-					<p><p>Celebrity Root Beer Float Night on Saturday, Sept. 10th in the 7UP &hellip;  <a href="http://www.positivecoach.org/the-pca-blog/brandi-chastain-shares-her-pca-passion-at-san-jose-earthquakes-game/">more</a>.</p>
+					<p><p>Celebrity Root Beer Float Night on Saturday, Sept. 10th in the 7UP &hellip;  <a href="http://www.positivecoach.org/the-pca-blog/brandi-chastain-shares-her-pca-passion-at-san-jose-earthquakes-game/" onclick="trackOutboundLink('http://www.positivecoach.org/the-pca-blog/brandi-chastain-shares-her-pca-passion-at-san-jose-earthquakes-game/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

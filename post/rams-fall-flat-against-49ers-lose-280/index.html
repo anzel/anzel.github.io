@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>16</b></p>
 					<h3>Rams fall flat against 49ers, lose 28-0</h3>
-					<p><p>Rams fall flat against 49ers, lose 28-0. Rams fall flat against 49ers, lose 28-0. Loading. A recap of the Rams&rsquo; 28-0 loss to the 49ers on Monday Night &hellip;  <a href="http://www.cbssports.com/video/player/nfl/763683395966/0/rams-fall-flat-against-49ers-lose-28-0">more</a>.</p>
+					<p><p>Rams fall flat against 49ers, lose 28-0. Rams fall flat against 49ers, lose 28-0. Loading. A recap of the Rams&rsquo; 28-0 loss to the 49ers on Monday Night &hellip;  <a href="http://www.cbssports.com/video/player/nfl/763683395966/0/rams-fall-flat-against-49ers-lose-28-0" onclick="trackOutboundLink('http://www.cbssports.com/video/player/nfl/763683395966/0/rams-fall-flat-against-49ers-lose-28-0'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

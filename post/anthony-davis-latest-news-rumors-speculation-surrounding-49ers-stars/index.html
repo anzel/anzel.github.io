@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>10</b></p>
 					<h3>Anthony Davis: Latest News, Rumors, Speculation Surrounding 49ers Star&#39;s</h3>
-					<p><p>Bleacher Report San Francisco 49ers right guard Anthony Davis returned to the NFL this summer following an extended hiatus that started in June 2015, but he&rsquo;s &hellip;  <a href="http://bleacherreport.com/articles/2662859-anthony-davis-latest-news-rumors-speculation-surrounding-49ers-stars-future">more</a>.</p>
+					<p><p>Bleacher Report San Francisco 49ers right guard Anthony Davis returned to the NFL this summer following an extended hiatus that started in June 2015, but he&rsquo;s &hellip;  <a href="http://bleacherreport.com/articles/2662859-anthony-davis-latest-news-rumors-speculation-surrounding-49ers-stars-future" onclick="trackOutboundLink('http://bleacherreport.com/articles/2662859-anthony-davis-latest-news-rumors-speculation-surrounding-49ers-stars-future'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

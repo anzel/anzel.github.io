@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>19</b></p>
 					<h3>A SF Giants Security Guard Broke His Leg While Tackling a Man on the Field!</h3>
-					<p><p>Francisco a guy ran on the field and broke the leg of the security &hellip;  <a href="http://wild949.iheart.com/onair/the-jv-show-51342/a-sf-giants-security-guard-broke-15119194/">more</a>.</p>
+					<p><p>Francisco a guy ran on the field and broke the leg of the security &hellip;  <a href="http://wild949.iheart.com/onair/the-jv-show-51342/a-sf-giants-security-guard-broke-15119194/" onclick="trackOutboundLink('http://wild949.iheart.com/onair/the-jv-show-51342/a-sf-giants-security-guard-broke-15119194/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

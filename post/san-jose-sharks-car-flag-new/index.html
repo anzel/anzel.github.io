@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>07</b></p>
 					<h3>San Jose Sharks car flag new</h3>
-					<p><p>Jose Sharks Ryan Clowe 2005. $20. San Jose, CA. Superfeet Size C new.  <a href="https://offerupnow.com/item/detail/159000027/san-jose-sharks-car-flag-new">more</a>.</p>
+					<p><p>Jose Sharks Ryan Clowe 2005. $20. San Jose, CA. Superfeet Size C new.  <a href="https://offerupnow.com/item/detail/159000027/san-jose-sharks-car-flag-new" onclick="trackOutboundLink('https://offerupnow.com/item/detail/159000027/san-jose-sharks-car-flag-new'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

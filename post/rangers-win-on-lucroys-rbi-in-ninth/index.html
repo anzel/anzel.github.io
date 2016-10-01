@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>17</b></p>
 					<h3>Rangers win on Lucroy&#39;s RBI in ninth</h3>
-					<p><p>&hellip; Texas &ndash; Jonathan Lucroy&rsquo;s two-out RBI single in the bottom of the ninth lifted the Texas Rangers to a 7-6 victory over the Oakland Athletics on Friday &hellip;  <a href="http://www.reuters.com/article/bbo-athletics-rangers-recap-idUSMTZEC9HMPX01P">more</a>.</p>
+					<p><p>&hellip; Texas &ndash; Jonathan Lucroy&rsquo;s two-out RBI single in the bottom of the ninth lifted the Texas Rangers to a 7-6 victory over the Oakland Athletics on Friday &hellip;  <a href="http://www.reuters.com/article/bbo-athletics-rangers-recap-idUSMTZEC9HMPX01P" onclick="trackOutboundLink('http://www.reuters.com/article/bbo-athletics-rangers-recap-idUSMTZEC9HMPX01P'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

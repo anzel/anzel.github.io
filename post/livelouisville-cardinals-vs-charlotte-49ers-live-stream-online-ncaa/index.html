@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>01</b></p>
 					<h3>[Live]Louisville Cardinals vs Charlotte 49ers Liv-e S-tream O-nline NCAA</h3>
-					<p><p>How to watch Louisville vs. Charlotte: Game time, TV schedule, live streaming, and more How to watch Louisville vs.. If you live in Louisville, here are &hellip;  <a href="http://gamejolt.com/games/l-i-v-e-louisville-cardinals-vs-charlotte-49ers-liv-e-s-tream-o-nline-ncaa-9-1-2016/185221">more</a>.</p>
+					<p><p>How to watch Louisville vs. Charlotte: Game time, TV schedule, live streaming, and more How to watch Louisville vs.. If you live in Louisville, here are &hellip;  <a href="http://gamejolt.com/games/l-i-v-e-louisville-cardinals-vs-charlotte-49ers-liv-e-s-tream-o-nline-ncaa-9-1-2016/185221" onclick="trackOutboundLink('http://gamejolt.com/games/l-i-v-e-louisville-cardinals-vs-charlotte-49ers-liv-e-s-tream-o-nline-ncaa-9-1-2016/185221'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

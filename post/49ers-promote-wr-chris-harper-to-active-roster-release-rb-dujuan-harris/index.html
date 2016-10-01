@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>49ers Promote WR Chris Harper to Active Roster, Release RB DuJuan Harris</h3>
-					<p><p>Harper (5-11, 185) originally signed on the 49ers practice squad on Sept. 5, 2016. He entered the NFL with the New England Patriots as an undrafted &hellip;  <a href="http://www.49ers.com/news/article-2/49ers-Promote-WR-Chris-Harper-to-Active-Roster-Release-RB-DuJuan-Harris/1ff22583-8cb4-4acc-b483-6a1edd6b6f1f">more</a>.</p>
+					<p><p>Harper (5-11, 185) originally signed on the 49ers practice squad on Sept. 5, 2016. He entered the NFL with the New England Patriots as an undrafted &hellip;  <a href="http://www.49ers.com/news/article-2/49ers-Promote-WR-Chris-Harper-to-Active-Roster-Release-RB-DuJuan-Harris/1ff22583-8cb4-4acc-b483-6a1edd6b6f1f" onclick="trackOutboundLink('http://www.49ers.com/news/article-2/49ers-Promote-WR-Chris-Harper-to-Active-Roster-Release-RB-DuJuan-Harris/1ff22583-8cb4-4acc-b483-6a1edd6b6f1f'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

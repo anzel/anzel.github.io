@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>02</b></p>
 					<h3>Kaepernick fallout: Santa Clara cops threaten not to staff 49ers games</h3>
-					<p><p>The union representing Santa Clara police officers said some of its members may not work at 49ers games over comments made by quarterback Colin &hellip;  <a href="http://www.sfgate.com/bayarea/article/Kaepernick-fallout-Santa-Clara-cops-threaten-not-9201248.php">more</a>.</p>
+					<p><p>The union representing Santa Clara police officers said some of its members may not work at 49ers games over comments made by quarterback Colin &hellip;  <a href="http://www.sfgate.com/bayarea/article/Kaepernick-fallout-Santa-Clara-cops-threaten-not-9201248.php" onclick="trackOutboundLink('http://www.sfgate.com/bayarea/article/Kaepernick-fallout-Santa-Clara-cops-threaten-not-9201248.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

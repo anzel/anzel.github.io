@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>15</b></p>
 					<h3>Wild west appears wide open for 2016-17</h3>
-					<p><p>The San Jose Sharks ended the Chicago Blackhawks&rsquo; and Los Angeles Kings&rsquo; battle to be the Western Conference champions last postseason, &hellip;  <a href="http://www.todaysslapshot.com/nhl-west/wild-west-appears-wide-open-2016-17/">more</a>.</p>
+					<p><p>The San Jose Sharks ended the Chicago Blackhawks&rsquo; and Los Angeles Kings&rsquo; battle to be the Western Conference champions last postseason, &hellip;  <a href="http://www.todaysslapshot.com/nhl-west/wild-west-appears-wide-open-2016-17/" onclick="trackOutboundLink('http://www.todaysslapshot.com/nhl-west/wild-west-appears-wide-open-2016-17/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

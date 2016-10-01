@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>22</b></p>
 					<h3>The Daily Chum: Logan Couture is the hero Canada needed</h3>
-					<p><p>A bunch of nerds who aren&rsquo;t as cool as Couture have four points but none of them play for the San Jose Sharks so they can take a suck of it IMO.  <a href="http://www.fearthefin.com/2016/9/22/13012294/the-daily-chum-logan-couture-is-the-hero-canada-needed">more</a>.</p>
+					<p><p>A bunch of nerds who aren&rsquo;t as cool as Couture have four points but none of them play for the San Jose Sharks so they can take a suck of it IMO.  <a href="http://www.fearthefin.com/2016/9/22/13012294/the-daily-chum-logan-couture-is-the-hero-canada-needed" onclick="trackOutboundLink('http://www.fearthefin.com/2016/9/22/13012294/the-daily-chum-logan-couture-is-the-hero-canada-needed'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

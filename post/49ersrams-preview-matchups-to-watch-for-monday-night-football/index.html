@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>49ers-Rams preview: Matchups to watch for Monday Night Football</h3>
-					<p><p>The 49ers and Rams are expected to compete at the bottom of the NFC West, but there is still plenty to watch on Monday Night Football. Here are the &hellip;  <a href="http://www.ninersnation.com/2016/9/12/12888038/49ers-rams-preview-matchups-mnf-andrew-tiller-vs-aaron-donald-jimmie-ward-tavon-austin">more</a>.</p>
+					<p><p>The 49ers and Rams are expected to compete at the bottom of the NFC West, but there is still plenty to watch on Monday Night Football. Here are the &hellip;  <a href="http://www.ninersnation.com/2016/9/12/12888038/49ers-rams-preview-matchups-mnf-andrew-tiller-vs-aaron-donald-jimmie-ward-tavon-austin" onclick="trackOutboundLink('http://www.ninersnation.com/2016/9/12/12888038/49ers-rams-preview-matchups-mnf-andrew-tiller-vs-aaron-donald-jimmie-ward-tavon-austin'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

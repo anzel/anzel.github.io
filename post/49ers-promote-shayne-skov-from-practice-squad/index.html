@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>21</b></p>
 					<h3>49ers promote Shayne Skov from practice squad</h3>
-					<p><p>The team promoted Shayne Skov from their practice squad to take Armstrong&rsquo;s place on their 53-man roster. Skov appeared in 15 games for the 49ers &hellip;  <a href="http://profootballtalk.nbcsports.com/2016/09/22/49ers-promote-shayne-skov-from-practice-squad/">more</a>.</p>
+					<p><p>The team promoted Shayne Skov from their practice squad to take Armstrong&rsquo;s place on their 53-man roster. Skov appeared in 15 games for the 49ers &hellip;  <a href="http://profootballtalk.nbcsports.com/2016/09/22/49ers-promote-shayne-skov-from-practice-squad/" onclick="trackOutboundLink('http://profootballtalk.nbcsports.com/2016/09/22/49ers-promote-shayne-skov-from-practice-squad/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>02</b></p>
 					<h3>NFL Men&#39;s Crew Neck T-Shirt - Oakland Raiders</h3>
-					<p><p>neck T-shirt to the stadium. Crafted from cotton jersey knit, this shor&hellip;  <a href="http://www.kmart.com/nfl-men-s-crew-neck-t-shirt-oakland-raiders/p-046VA92363812P">more</a>.</p>
+					<p><p>neck T-shirt to the stadium. Crafted from cotton jersey knit, this shor&hellip;  <a href="http://www.kmart.com/nfl-men-s-crew-neck-t-shirt-oakland-raiders/p-046VA92363812P" onclick="trackOutboundLink('http://www.kmart.com/nfl-men-s-crew-neck-t-shirt-oakland-raiders/p-046VA92363812P'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

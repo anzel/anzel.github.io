@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>Dak Prescott: 49ers were one of the teams he talked to least</h3>
-					<p><p>The San Francisco 49ers face off this Sunday against a Dallas Cowboys team that could very well be making a big transition. The offensive line &hellip;  <a href="http://www.ninersnation.com/2016/9/28/13098572/dak-prescott-49ers-nfl-draft-combine-cowboys">more</a>.</p>
+					<p><p>The San Francisco 49ers face off this Sunday against a Dallas Cowboys team that could very well be making a big transition. The offensive line &hellip;  <a href="http://www.ninersnation.com/2016/9/28/13098572/dak-prescott-49ers-nfl-draft-combine-cowboys" onclick="trackOutboundLink('http://www.ninersnation.com/2016/9/28/13098572/dak-prescott-49ers-nfl-draft-combine-cowboys'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

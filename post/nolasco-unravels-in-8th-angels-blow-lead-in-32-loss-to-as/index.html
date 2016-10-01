@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>Nolasco unravels in 8th, Angels blow lead in 3-2 loss to A&#39;s</h3>
-					<p><p>Los Angeles Angels pitcher Ricky Nolasco, second from right, waits to be removed from the baseball game against the Oakland Athletics during the &hellip;  <a href="http://www.pantagraph.com/sports/baseball/professional/nolasco-unravels-in-th-angels-blow-lead-in--/article_6051086a-954e-5470-bc0f-18b4c9ed0fbe.html">more</a>.</p>
+					<p><p>Los Angeles Angels pitcher Ricky Nolasco, second from right, waits to be removed from the baseball game against the Oakland Athletics during the &hellip;  <a href="http://www.pantagraph.com/sports/baseball/professional/nolasco-unravels-in-th-angels-blow-lead-in--/article_6051086a-954e-5470-bc0f-18b4c9ed0fbe.html" onclick="trackOutboundLink('http://www.pantagraph.com/sports/baseball/professional/nolasco-unravels-in-th-angels-blow-lead-in--/article_6051086a-954e-5470-bc0f-18b4c9ed0fbe.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>16</b></p>
 					<h3>49ers&#39; Anthony Davis saga continues with late-breaking concussion</h3>
-					<p><p>return for the 2016 NFL season, but you&rsquo;d be hard-pressed to find him on &hellip;  <a href="http://www.flowsports.co/nfl/news/49ers-anthony-davis-saga-continues-with-late-breaking-concussion">more</a>.</p>
+					<p><p>return for the 2016 NFL season, but you&rsquo;d be hard-pressed to find him on &hellip;  <a href="http://www.flowsports.co/nfl/news/49ers-anthony-davis-saga-continues-with-late-breaking-concussion" onclick="trackOutboundLink('http://www.flowsports.co/nfl/news/49ers-anthony-davis-saga-continues-with-late-breaking-concussion'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

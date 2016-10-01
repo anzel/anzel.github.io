@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>DC United beats Columbus Crew; Montreal Impact eases past San Jose</h3>
-					<p><p>Matteo Mancosu set up first-half goals from Dominic Oduro and Ignacio Piatti and the Montreal Impact beat the San Jose Earthquakes 3-1 to snap a &hellip;  <a href="http://www.espnfc.com/major-league-soccer/story/2961693/major-league-soccer-dc-united-beats-columbus-crew-montreal-impact-ease-past-san-jose">more</a>.</p>
+					<p><p>Matteo Mancosu set up first-half goals from Dominic Oduro and Ignacio Piatti and the Montreal Impact beat the San Jose Earthquakes 3-1 to snap a &hellip;  <a href="http://www.espnfc.com/major-league-soccer/story/2961693/major-league-soccer-dc-united-beats-columbus-crew-montreal-impact-ease-past-san-jose" onclick="trackOutboundLink('http://www.espnfc.com/major-league-soccer/story/2961693/major-league-soccer-dc-united-beats-columbus-crew-montreal-impact-ease-past-san-jose'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

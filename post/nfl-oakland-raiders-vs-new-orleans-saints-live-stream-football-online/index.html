@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>11</b></p>
 					<h3>[&#43;NFL&#43;] Oakland Raiders vs New Orleans Saints Live St-ream Football Online</h3>
-					<p><p>2016 NFL Football Full &hellip; Raiders vs. Saints 2016: Time, TV &hellip;  <a href="https://awethu.amandla.mobi/petitions/nfl-oakland-raiders-vs-new-orleans-saints-live-st-ream-football-online">more</a>.</p>
+					<p><p>2016 NFL Football Full &hellip; Raiders vs. Saints 2016: Time, TV &hellip;  <a href="https://awethu.amandla.mobi/petitions/nfl-oakland-raiders-vs-new-orleans-saints-live-st-ream-football-online" onclick="trackOutboundLink('https://awethu.amandla.mobi/petitions/nfl-oakland-raiders-vs-new-orleans-saints-live-st-ream-football-online'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

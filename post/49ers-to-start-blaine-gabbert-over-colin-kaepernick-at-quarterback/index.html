@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>04</b></p>
 					<h3>49ers to start Blaine Gabbert over Colin Kaepernick at quarterback</h3>
-					<p><p>The 49ers kept not only Kaepernick, but veteran quarterback Christian Ponder, who signed with the team in mid-August. &ldquo;I think you need to have &hellip;  <a href="http://sports.yahoo.com/news/49ers-start-blaine-gabbert-over-125038761.html">more</a>.</p>
+					<p><p>The 49ers kept not only Kaepernick, but veteran quarterback Christian Ponder, who signed with the team in mid-August. &ldquo;I think you need to have &hellip;  <a href="http://sports.yahoo.com/news/49ers-start-blaine-gabbert-over-125038761.html" onclick="trackOutboundLink('http://sports.yahoo.com/news/49ers-start-blaine-gabbert-over-125038761.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

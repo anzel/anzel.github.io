@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>23</b></p>
 					<h3>Quick Hits: Del Rio Commends Rookie Safety Karl Joseph&#39;s Attitude</h3>
-					<p><p>Head Coach Jack Del Rio concluded the Oakland Raiders practice on Friday with some quick notes, the team faces the Tennessee Titans on Sunday.  <a href="http://www.raiders.com/news/article-1/Quick-Hits-Del-Rio-Commends-Rookie-Safety-Karl-Josephs-Attitude/0ed8a411-337b-4bf4-8b7e-86c557708ba1">more</a>.</p>
+					<p><p>Head Coach Jack Del Rio concluded the Oakland Raiders practice on Friday with some quick notes, the team faces the Tennessee Titans on Sunday.  <a href="http://www.raiders.com/news/article-1/Quick-Hits-Del-Rio-Commends-Rookie-Safety-Karl-Josephs-Attitude/0ed8a411-337b-4bf4-8b7e-86c557708ba1" onclick="trackOutboundLink('http://www.raiders.com/news/article-1/Quick-Hits-Del-Rio-Commends-Rookie-Safety-Karl-Josephs-Attitude/0ed8a411-337b-4bf4-8b7e-86c557708ba1'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

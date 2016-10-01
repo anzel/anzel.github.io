@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Aug<b>31</b></p>
 					<h3>Oakland Raiders 1.9 Billion dollar Nevada Stadium</h3>
-					<p><p>1.9 billion to build an NFL Stadium near the Las Vegas strip in hopes of bringing the Oakland Raiders to Sin City. Andy Abboud, Vice President of &hellip;  <a href="http://mynews4.com/sports/content/oakland-raiders-19-billion-dollar-nevada-stadium">more</a>.</p>
+					<p><p>1.9 billion to build an NFL Stadium near the Las Vegas strip in hopes of bringing the Oakland Raiders to Sin City. Andy Abboud, Vice President of &hellip;  <a href="http://mynews4.com/sports/content/oakland-raiders-19-billion-dollar-nevada-stadium" onclick="trackOutboundLink('http://mynews4.com/sports/content/oakland-raiders-19-billion-dollar-nevada-stadium'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

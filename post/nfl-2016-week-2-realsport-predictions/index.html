@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>NFL 2016 Week 2: RealSport Predictions</h3>
-					<p><p>The Oakland Raiders had one wild finish to their first game of the season vs the New Orleans Saints on the road. The Raiders faced early adversity by &hellip;  <a href="https://realsport101.com/news/sports/nfl/nfl-2016-week-2-raiders-falcons-preview">more</a>.</p>
+					<p><p>The Oakland Raiders had one wild finish to their first game of the season vs the New Orleans Saints on the road. The Raiders faced early adversity by &hellip;  <a href="https://realsport101.com/news/sports/nfl/nfl-2016-week-2-raiders-falcons-preview" onclick="trackOutboundLink('https://realsport101.com/news/sports/nfl/nfl-2016-week-2-raiders-falcons-preview'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>07</b></p>
 					<h3>San Francisco, CA (PRWEB) September 07, 2016</h3>
-					<p><p>&ldquo;We were part of the inaugural Adoptee Night with the SF Giants event in &hellip; orange and black or SF Giants attire to match the SF Giants team colors.  <a href="http://www.benzinga.com/pressreleases/16/09/p8431806/mixed-roots-foundation-teams-up-with-at-t-and-john-burton-foundation-to">more</a>.</p>
+					<p><p>&ldquo;We were part of the inaugural Adoptee Night with the SF Giants event in &hellip; orange and black or SF Giants attire to match the SF Giants team colors.  <a href="http://www.benzinga.com/pressreleases/16/09/p8431806/mixed-roots-foundation-teams-up-with-at-t-and-john-burton-foundation-to" onclick="trackOutboundLink('http://www.benzinga.com/pressreleases/16/09/p8431806/mixed-roots-foundation-teams-up-with-at-t-and-john-burton-foundation-to'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

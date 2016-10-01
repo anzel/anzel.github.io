@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>Vancouver Canucks: Jake Virtanen Injured in Preseason Game vs. Sharks</h3>
-					<p><p>In Tuesday night&rsquo;s 3-2 overtime loss against the San Jose Sharks, the sophomore winger did not return for the third period, as he suffered a shoulder &hellip;  <a href="http://thecanuckway.com/2016/09/28/vancouver-canucks-jake-virtanen-injured-preseason-game-vs-sharks/">more</a>.</p>
+					<p><p>In Tuesday night&rsquo;s 3-2 overtime loss against the San Jose Sharks, the sophomore winger did not return for the third period, as he suffered a shoulder &hellip;  <a href="http://thecanuckway.com/2016/09/28/vancouver-canucks-jake-virtanen-injured-preseason-game-vs-sharks/" onclick="trackOutboundLink('http://thecanuckway.com/2016/09/28/vancouver-canucks-jake-virtanen-injured-preseason-game-vs-sharks/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

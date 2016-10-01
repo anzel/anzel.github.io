@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>09</b></p>
 					<h3>Round Table: Predicting the San Francisco 49ers&#39; 2016 record</h3>
-					<p><p>In our latest Round Table, our staff makes their predictions on the San Francisco 49ers&rsquo; 2016 record and share their reasoning for their predictions.  <a href="http://www.49erswebzone.com/commentary/1600-round-table-predicting-san-francisco-49ers-2016-record/">more</a>.</p>
+					<p><p>In our latest Round Table, our staff makes their predictions on the San Francisco 49ers&rsquo; 2016 record and share their reasoning for their predictions.  <a href="http://www.49erswebzone.com/commentary/1600-round-table-predicting-san-francisco-49ers-2016-record/" onclick="trackOutboundLink('http://www.49erswebzone.com/commentary/1600-round-table-predicting-san-francisco-49ers-2016-record/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

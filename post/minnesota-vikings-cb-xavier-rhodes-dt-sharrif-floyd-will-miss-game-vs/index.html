@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>17</b></p>
 					<h3>Minnesota Vikings CB Xavier Rhodes, DT Sharrif Floyd will miss game vs.</h3>
-					<p><p>UPI.com Minnesota Vikings&rsquo; Terrence Newman (23) is congratulated by Xavier Rhodes (29) after picking off a second pass from Oakland Raiders QB Derek &hellip;  <a href="http://www.upi.com/Sports_News/2016/09/17/Minnesota-Vikings-CB-Xavier-Rhodes-DT-Sharrif-Floyd-will-miss-game-vs-Green-Bay-Packers/9041474099009/">more</a>.</p>
+					<p><p>UPI.com Minnesota Vikings&rsquo; Terrence Newman (23) is congratulated by Xavier Rhodes (29) after picking off a second pass from Oakland Raiders QB Derek &hellip;  <a href="http://www.upi.com/Sports_News/2016/09/17/Minnesota-Vikings-CB-Xavier-Rhodes-DT-Sharrif-Floyd-will-miss-game-vs-Green-Bay-Packers/9041474099009/" onclick="trackOutboundLink('http://www.upi.com/Sports_News/2016/09/17/Minnesota-Vikings-CB-Xavier-Rhodes-DT-Sharrif-Floyd-will-miss-game-vs-Green-Bay-Packers/9041474099009/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>San Jose Earthquakes vs Seattle Sounders preview: Two Western Conference</h3>
-					<p><p>VAVEL.com The Seattle Sounders travel to Avaya Stadium to take on the San Jose Earthquakes. Both clubs are fighting for their playoff lives. The game is &hellip;  <a href="http://www.vavel.com/en-us/soccer/692572-san-jose-earthquakes-vs-seattle-sounders-preview-two-western-conference-foes-battle-for-playoff-spot.html">more</a>.</p>
+					<p><p>VAVEL.com The Seattle Sounders travel to Avaya Stadium to take on the San Jose Earthquakes. Both clubs are fighting for their playoff lives. The game is &hellip;  <a href="http://www.vavel.com/en-us/soccer/692572-san-jose-earthquakes-vs-seattle-sounders-preview-two-western-conference-foes-battle-for-playoff-spot.html" onclick="trackOutboundLink('http://www.vavel.com/en-us/soccer/692572-san-jose-earthquakes-vs-seattle-sounders-preview-two-western-conference-foes-battle-for-playoff-spot.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>When did you know the Giants were going to lose last night?</h3>
-					<p><p>If you look at the picture long enough, it looks like the ball slipped out of his hand. Whoopsie! What a goof! Ha ha! Anyway, everything is terrible.  <a href="http://www.mccoveychronicles.com/2016/9/8/12849070/mlb-sf-giants-choked-rockies-won-giants-didnt-the-giants-are-bad">more</a>.</p>
+					<p><p>If you look at the picture long enough, it looks like the ball slipped out of his hand. Whoopsie! What a goof! Ha ha! Anyway, everything is terrible.  <a href="http://www.mccoveychronicles.com/2016/9/8/12849070/mlb-sf-giants-choked-rockies-won-giants-didnt-the-giants-are-bad" onclick="trackOutboundLink('http://www.mccoveychronicles.com/2016/9/8/12849070/mlb-sf-giants-choked-rockies-won-giants-didnt-the-giants-are-bad'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>07</b></p>
 					<h3>Chip Kelly, San Francisco 49ers cut Bruce Miller, add ex-Duck Taylor Hart</h3>
-					<p><p>The San Francisco 49ers cut fullback Bruce Miller after he allegedly punched a 70-year-old man and was arrested on multiple charges, including &hellip;  <a href="http://www.oregonlive.com/nfl/index.ssf/2016/09/chip_kelly_san_francisco_49ers_8.html">more</a>.</p>
+					<p><p>The San Francisco 49ers cut fullback Bruce Miller after he allegedly punched a 70-year-old man and was arrested on multiple charges, including &hellip;  <a href="http://www.oregonlive.com/nfl/index.ssf/2016/09/chip_kelly_san_francisco_49ers_8.html" onclick="trackOutboundLink('http://www.oregonlive.com/nfl/index.ssf/2016/09/chip_kelly_san_francisco_49ers_8.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

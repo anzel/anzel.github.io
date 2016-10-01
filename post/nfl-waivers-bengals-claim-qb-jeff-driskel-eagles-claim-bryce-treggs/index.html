@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>05</b></p>
 					<h3>NFL waivers: Bengals claim QB Jeff Driskel, Eagles claim Bryce Treggs,</h3>
-					<p><p>Niners Nation The San Francisco 49ers did not claim anybody on waivers Sunday morning, but they have lost several players. We know about Garrison Smith to the &hellip;  <a href="http://www.ninersnation.com/2016/9/4/12792852/nfl-waiver-claims-bengals-claim-jeff-driskel-eagles-claim-bryce-treggs-browns-claim-corey-lemonier">more</a>.</p>
+					<p><p>Niners Nation The San Francisco 49ers did not claim anybody on waivers Sunday morning, but they have lost several players. We know about Garrison Smith to the &hellip;  <a href="http://www.ninersnation.com/2016/9/4/12792852/nfl-waiver-claims-bengals-claim-jeff-driskel-eagles-claim-bryce-treggs-browns-claim-corey-lemonier" onclick="trackOutboundLink('http://www.ninersnation.com/2016/9/4/12792852/nfl-waiver-claims-bengals-claim-jeff-driskel-eagles-claim-bryce-treggs-browns-claim-corey-lemonier'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

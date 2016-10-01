@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>03</b></p>
 					<h3>(((*W*A*T*C*H*))) San Jose Earthquakes - Pachuca Video Streaming 03.09.2016</h3>
-					<p><p><a href="http://stream24.space/4064-san-jose-earthquakes-pachuca-04-sep-2016-0230-ut">http://stream24.space/4064-san-jose-earthquakes-pachuca-04-sep-2016-0230-ut</a> c.html. San,.,Jose,.,Earthquakes,.,-,.,CF,.  <a href="http://www.brownpapertickets.com/profile/1973368">more</a>.</p>
+					<p><p><a href="http://stream24.space/4064-san-jose-earthquakes-pachuca-04-sep-2016-0230-ut">http://stream24.space/4064-san-jose-earthquakes-pachuca-04-sep-2016-0230-ut</a> c.html. San,.,Jose,.,Earthquakes,.,-,.,CF,.  <a href="http://www.brownpapertickets.com/profile/1973368" onclick="trackOutboundLink('http://www.brownpapertickets.com/profile/1973368'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

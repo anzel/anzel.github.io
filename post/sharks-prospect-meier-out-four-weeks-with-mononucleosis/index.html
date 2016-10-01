@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Oct<b>01</b></p>
 					<h3>Sharks prospect Meier out four weeks with mononucleosis</h3>
-					<p><p>Veteran defenseman T.J. Brennan lit up the American Hockey League last season, with 25 goals and 68 points in 69 games to earn a two-way deal &hellip;  <a href="http://nhl.nbcsports.com/2016/09/30/the-playoff-race-in-the-west-could-be-tighter-than-ever/">more</a>.</p>
+					<p><p>Veteran defenseman T.J. Brennan lit up the American Hockey League last season, with 25 goals and 68 points in 69 games to earn a two-way deal &hellip;  <a href="http://nhl.nbcsports.com/2016/09/30/the-playoff-race-in-the-west-could-be-tighter-than-ever/" onclick="trackOutboundLink('http://nhl.nbcsports.com/2016/09/30/the-playoff-race-in-the-west-could-be-tighter-than-ever/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

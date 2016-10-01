@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>13</b></p>
 					<h3>Raiders patchwork O-line &#39;phenomenal,&#39; remains unsettled</h3>
-					<p><p>Top Stories, Scott Bair, Oakland Raiders, NFL, Jack Del Rio, Matt McCants, menelik watson, Donald Penn, Jon Feliciano, kelechi osemele. Scott Bair &hellip;  <a href="http://www.csnbayarea.com/raiders/raiders-patchwork-o-line-phenomenal-remains-unsettled">more</a>.</p>
+					<p><p>Top Stories, Scott Bair, Oakland Raiders, NFL, Jack Del Rio, Matt McCants, menelik watson, Donald Penn, Jon Feliciano, kelechi osemele. Scott Bair &hellip;  <a href="http://www.csnbayarea.com/raiders/raiders-patchwork-o-line-phenomenal-remains-unsettled" onclick="trackOutboundLink('http://www.csnbayarea.com/raiders/raiders-patchwork-o-line-phenomenal-remains-unsettled'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

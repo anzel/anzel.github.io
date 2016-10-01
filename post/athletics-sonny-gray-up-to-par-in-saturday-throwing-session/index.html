@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>24</b></p>
 					<h3>Athletics&#39; Sonny Gray up to par in Saturday throwing session</h3>
-					<p><p>Oakland Athletics ace Sonny Gray hasn&rsquo;t pitched live since enduring a strained forearm on August 6, but did look good in his throwing session on &hellip;  <a href="http://www.todaysknuckleball.com/news/athletics-sonny-gray-par-saturday-throwing-session/">more</a>.</p>
+					<p><p>Oakland Athletics ace Sonny Gray hasn&rsquo;t pitched live since enduring a strained forearm on August 6, but did look good in his throwing session on &hellip;  <a href="http://www.todaysknuckleball.com/news/athletics-sonny-gray-par-saturday-throwing-session/" onclick="trackOutboundLink('http://www.todaysknuckleball.com/news/athletics-sonny-gray-par-saturday-throwing-session/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>Oakland Raiders&#39; First-Round Pick Solid in Debut</h3>
-					<p><p>It took a little while for the Oakland Raiders to use 2016 first-round pick Karl Joseph at safety. But he arrived just in time to help the Raiders go to 2-1 &hellip;  <a href="http://withthefirstpick.com/2016/09/25/oakland-raiders-first-round-pick-solid/">more</a>.</p>
+					<p><p>It took a little while for the Oakland Raiders to use 2016 first-round pick Karl Joseph at safety. But he arrived just in time to help the Raiders go to 2-1 &hellip;  <a href="http://withthefirstpick.com/2016/09/25/oakland-raiders-first-round-pick-solid/" onclick="trackOutboundLink('http://withthefirstpick.com/2016/09/25/oakland-raiders-first-round-pick-solid/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

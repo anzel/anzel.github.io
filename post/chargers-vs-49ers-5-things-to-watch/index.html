@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Aug<b>31</b></p>
 					<h3>Chargers vs. 49ers: 5 things to watch</h3>
-					<p><p>The 49ers quarterback has made a political stand this preseason, choosing to sit during the pre-game national anthem. His statement and the crowd &hellip;  <a href="http://www.sandiegouniontribune.com/news/2016/aug/31/chargers-49ers-colin-kaepernick-jatavis-brown/">more</a>.</p>
+					<p><p>The 49ers quarterback has made a political stand this preseason, choosing to sit during the pre-game national anthem. His statement and the crowd &hellip;  <a href="http://www.sandiegouniontribune.com/news/2016/aug/31/chargers-49ers-colin-kaepernick-jatavis-brown/" onclick="trackOutboundLink('http://www.sandiegouniontribune.com/news/2016/aug/31/chargers-49ers-colin-kaepernick-jatavis-brown/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

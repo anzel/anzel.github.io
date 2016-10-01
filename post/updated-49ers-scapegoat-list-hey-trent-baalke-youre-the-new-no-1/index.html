@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>06</b></p>
 					<h3>Updated 49ers Scapegoat List: Hey, Trent Baalke, you&#39;re the new No. 1</h3>
-					<p><p>The Mercury News (blog) Even among all the recent notably odd and off-kilter 49ers days, yesterday was a bizarre day and just the sort that will end up getting 49ers GM Trent &hellip;  <a href="http://blogs.mercurynews.com/kawakami/2016/09/06/new-49ers-scapegoat-list/">more</a>.</p>
+					<p><p>The Mercury News (blog) Even among all the recent notably odd and off-kilter 49ers days, yesterday was a bizarre day and just the sort that will end up getting 49ers GM Trent &hellip;  <a href="http://blogs.mercurynews.com/kawakami/2016/09/06/new-49ers-scapegoat-list/" onclick="trackOutboundLink('http://blogs.mercurynews.com/kawakami/2016/09/06/new-49ers-scapegoat-list/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

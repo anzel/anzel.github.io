@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>22</b></p>
 					<h3>Oakland Raiders: Week 1 Excellence, Silver Lining, Black Cloud</h3>
-					<p><p>Del Rio had no interest in a conservative point-after kick, and let his offense know it well before the decision had to be made. The Raiders clawed out a &hellip;  <a href="http://www.crcconnection.com/2016/09/23/oakland-raiders-week-1-excellence-silver-lining-black-cloud.html">more</a>.</p>
+					<p><p>Del Rio had no interest in a conservative point-after kick, and let his offense know it well before the decision had to be made. The Raiders clawed out a &hellip;  <a href="http://www.crcconnection.com/2016/09/23/oakland-raiders-week-1-excellence-silver-lining-black-cloud.html" onclick="trackOutboundLink('http://www.crcconnection.com/2016/09/23/oakland-raiders-week-1-excellence-silver-lining-black-cloud.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

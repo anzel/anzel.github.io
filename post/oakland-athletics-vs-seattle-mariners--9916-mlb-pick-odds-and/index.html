@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>Oakland Athletics vs. Seattle Mariners - 9/9/16 MLB Pick, Odds, and</h3>
-					<p><p>Sports Chat Place The Seattle Mariners look to snap out of their losing ways as they head into the Coliseum to face off with the Oakland Athletics on Friday night.  <a href="http://sportschatplace.com/mlb-picks/2016/09/09/oakland-athletics-vs-seattle-mariners-9/9/16-mlb-pick-odds-and-prediction">more</a>.</p>
+					<p><p>Sports Chat Place The Seattle Mariners look to snap out of their losing ways as they head into the Coliseum to face off with the Oakland Athletics on Friday night.  <a href="http://sportschatplace.com/mlb-picks/2016/09/09/oakland-athletics-vs-seattle-mariners-9/9/16-mlb-pick-odds-and-prediction" onclick="trackOutboundLink('http://sportschatplace.com/mlb-picks/2016/09/09/oakland-athletics-vs-seattle-mariners-9/9/16-mlb-pick-odds-and-prediction'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

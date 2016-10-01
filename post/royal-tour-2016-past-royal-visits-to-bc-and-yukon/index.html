@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>23</b></p>
 					<h3>Royal Tour 2016: Past royal visits to BC and Yukon</h3>
-					<p><p>&hellip; Canucks bench on her way to the ceremonial dropping of the puck in a pre-season NHL game against the San Jose Sharks at General Motors Place &hellip;  <a href="http://globalnews.ca/news/2946639/royal-tour-2016-past-royal-visits-to-bc-and-yukon/">more</a>.</p>
+					<p><p>&hellip; Canucks bench on her way to the ceremonial dropping of the puck in a pre-season NHL game against the San Jose Sharks at General Motors Place &hellip;  <a href="http://globalnews.ca/news/2946639/royal-tour-2016-past-royal-visits-to-bc-and-yukon/" onclick="trackOutboundLink('http://globalnews.ca/news/2946639/royal-tour-2016-past-royal-visits-to-bc-and-yukon/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>20</b></p>
 					<h3>Raiders making changes in bid to plug leaky defense</h3>
-					<p><p>As Raiders defenders watched the Falcons continually get wide open Sunday, fans couldn&rsquo;t be blamed for wondering, Whatever happened to &hellip;  <a href="http://www.sfgate.com/raiders/article/Raiders-making-changes-in-bid-to-plug-leaky-9233334.php">more</a>.</p>
+					<p><p>As Raiders defenders watched the Falcons continually get wide open Sunday, fans couldn&rsquo;t be blamed for wondering, Whatever happened to &hellip;  <a href="http://www.sfgate.com/raiders/article/Raiders-making-changes-in-bid-to-plug-leaky-9233334.php" onclick="trackOutboundLink('http://www.sfgate.com/raiders/article/Raiders-making-changes-in-bid-to-plug-leaky-9233334.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

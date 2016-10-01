@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>02</b></p>
 					<h3>Athletics will have crowded infield in 2017</h3>
-					<p><p>The Oakland Athletics have a number of very talented and MLB-ready prospects who will be looking to break into the big leagues either in September &hellip;  <a href="http://www.todaysknuckleball.com/al/oakland-athletics/athletics-will-crowded-infield-2017/">more</a>.</p>
+					<p><p>The Oakland Athletics have a number of very talented and MLB-ready prospects who will be looking to break into the big leagues either in September &hellip;  <a href="http://www.todaysknuckleball.com/al/oakland-athletics/athletics-will-crowded-infield-2017/" onclick="trackOutboundLink('http://www.todaysknuckleball.com/al/oakland-athletics/athletics-will-crowded-infield-2017/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

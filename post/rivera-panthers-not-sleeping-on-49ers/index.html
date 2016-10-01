@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>Rivera, Panthers not sleeping on 49ers</h3>
-					<p><p>CHARLOTTE  Head coach Ron Rivera has a game plan for scouting the San Francisco 49ers, who kick off their season against the Los Angeles at &hellip;  <a href="http://www.panthers.com/news/article-2/Rivera-Panthers-not-sleeping-on-49ers/4901bf8a-fdce-473d-ae6b-def8eb6948a6">more</a>.</p>
+					<p><p>CHARLOTTE  Head coach Ron Rivera has a game plan for scouting the San Francisco 49ers, who kick off their season against the Los Angeles at &hellip;  <a href="http://www.panthers.com/news/article-2/Rivera-Panthers-not-sleeping-on-49ers/4901bf8a-fdce-473d-ae6b-def8eb6948a6" onclick="trackOutboundLink('http://www.panthers.com/news/article-2/Rivera-Panthers-not-sleeping-on-49ers/4901bf8a-fdce-473d-ae6b-def8eb6948a6'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

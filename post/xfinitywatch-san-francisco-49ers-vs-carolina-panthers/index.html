@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>Xfin&#43;ity@Watch &#39;San Francisco 49ers vs Carolina Panthers&#39;</h3>
-					<p><p>vs Carolina Panthers Football Live HD Online Watch San Francisco &hellip;  <a href="https://clickky.biz/sites/default/files/webform/cv/xfinitywatch_san_francisco_49ers_vs_carolina_panthers_live_football_on_firestick.pdf">more</a>.</p>
+					<p><p>vs Carolina Panthers Football Live HD Online Watch San Francisco &hellip;  <a href="https://clickky.biz/sites/default/files/webform/cv/xfinitywatch_san_francisco_49ers_vs_carolina_panthers_live_football_on_firestick.pdf" onclick="trackOutboundLink('https://clickky.biz/sites/default/files/webform/cv/xfinitywatch_san_francisco_49ers_vs_carolina_panthers_live_football_on_firestick.pdf'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

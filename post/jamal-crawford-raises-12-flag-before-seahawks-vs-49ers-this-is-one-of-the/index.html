@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>26</b></p>
 					<h3>Jamal Crawford Raises 12 Flag Before Seahawks vs 49ers: This Is One Of The</h3>
-					<p><p>Seahawks.com Deion Sanders reveals who impressed as he breaks down the top 5 performances from Week 3, one of which includes Seahawks receiver Doug &hellip;  <a href="http://www.seahawks.com/news/2016/09/26/jamal-crawford-raises-12-flag-seahawks-vs-49ers-one-pinnacles-city">more</a>.</p>
+					<p><p>Seahawks.com Deion Sanders reveals who impressed as he breaks down the top 5 performances from Week 3, one of which includes Seahawks receiver Doug &hellip;  <a href="http://www.seahawks.com/news/2016/09/26/jamal-crawford-raises-12-flag-seahawks-vs-49ers-one-pinnacles-city" onclick="trackOutboundLink('http://www.seahawks.com/news/2016/09/26/jamal-crawford-raises-12-flag-seahawks-vs-49ers-one-pinnacles-city'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>16</b></p>
 					<h3>Chambers: Q&amp;A with Avs assistant GM Craig Billington, recap of Day 1 at</h3>
-					<p><p>The Denver Post They&rsquo;ll face the San Jose Sharks&rsquo; youngsters Saturday at the Ice Centre at the Promenade in Westminster. Game time: 2 p.m., and it&rsquo;s free to the public &hellip;  <a href="http://www.denverpost.com/2016/09/16/craig-billington-colorado-avalanche/">more</a>.</p>
+					<p><p>The Denver Post They&rsquo;ll face the San Jose Sharks&rsquo; youngsters Saturday at the Ice Centre at the Promenade in Westminster. Game time: 2 p.m., and it&rsquo;s free to the public &hellip;  <a href="http://www.denverpost.com/2016/09/16/craig-billington-colorado-avalanche/" onclick="trackOutboundLink('http://www.denverpost.com/2016/09/16/craig-billington-colorado-avalanche/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

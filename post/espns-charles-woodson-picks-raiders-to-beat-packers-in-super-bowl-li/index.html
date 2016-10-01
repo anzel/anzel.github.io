@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>ESPN&#39;s Charles Woodson picks Raiders to beat Packers in Super Bowl LI</h3>
-					<p><p>Woodson picked the Oakland Raiders to win Super Bowl LI, beating the Green Bay Packers. And yes, it should be noted that Woodson spent the first &hellip;  <a href="http://www.espn.com/blog/nflnation/post/_/id/213499/espns-charles-woodson-picks-raiders-to-beat-packers-in-super-bowl-li">more</a>.</p>
+					<p><p>Woodson picked the Oakland Raiders to win Super Bowl LI, beating the Green Bay Packers. And yes, it should be noted that Woodson spent the first &hellip;  <a href="http://www.espn.com/blog/nflnation/post/_/id/213499/espns-charles-woodson-picks-raiders-to-beat-packers-in-super-bowl-li" onclick="trackOutboundLink('http://www.espn.com/blog/nflnation/post/_/id/213499/espns-charles-woodson-picks-raiders-to-beat-packers-in-super-bowl-li'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

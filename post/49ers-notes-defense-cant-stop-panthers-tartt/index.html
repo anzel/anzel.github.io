@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>49ers notes: defense can&#39;t stop Panthers; Tartt</h3>
-					<p><p>Jimmie Ward #25 of the San Francisco 49ers tackles Ed Dickson #84 of the Carolina Panthers in the 3rd quarter during the game at Bank of America &hellip;  <a href="http://www.mercurynews.com/2016/09/18/49ers-notes-defense-yield-529-yards-to-cam-newton-led-panthers-jaquiski-tartt-joins-anthem-protest-vance-mcdonalds-long-td-historic/">more</a>.</p>
+					<p><p>Jimmie Ward #25 of the San Francisco 49ers tackles Ed Dickson #84 of the Carolina Panthers in the 3rd quarter during the game at Bank of America &hellip;  <a href="http://www.mercurynews.com/2016/09/18/49ers-notes-defense-yield-529-yards-to-cam-newton-led-panthers-jaquiski-tartt-joins-anthem-protest-vance-mcdonalds-long-td-historic/" onclick="trackOutboundLink('http://www.mercurynews.com/2016/09/18/49ers-notes-defense-yield-529-yards-to-cam-newton-led-panthers-jaquiski-tartt-joins-anthem-protest-vance-mcdonalds-long-td-historic/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

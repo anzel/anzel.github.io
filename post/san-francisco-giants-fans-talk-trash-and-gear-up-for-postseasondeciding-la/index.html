@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Oct<b>01</b></p>
 					<h3>San Francisco Giants fans talk trash and gear up for postseason-deciding LA</h3>
-					<p><p>KGO-TV With a couple of wins this weekend, the San Francisco Giants could make the playoffs. Baseball fans are firing up the grills and lining up at the ticket &hellip;  <a href="http://abc7news.com/sports/sf-giants-fans-gear-up-for-postseason-deciding-dodgers-series-/1534415/">more</a>.</p>
+					<p><p>KGO-TV With a couple of wins this weekend, the San Francisco Giants could make the playoffs. Baseball fans are firing up the grills and lining up at the ticket &hellip;  <a href="http://abc7news.com/sports/sf-giants-fans-gear-up-for-postseason-deciding-dodgers-series-/1534415/" onclick="trackOutboundLink('http://abc7news.com/sports/sf-giants-fans-gear-up-for-postseason-deciding-dodgers-series-/1534415/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

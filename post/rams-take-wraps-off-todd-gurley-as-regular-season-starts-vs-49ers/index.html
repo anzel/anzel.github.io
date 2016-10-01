@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>09</b></p>
 					<h3>Rams take wraps off Todd Gurley as regular season starts vs. 49ers</h3>
-					<p><p>In two days, Gurley takes perhaps his biggest star turn yet when the Rams open the season against the San Francisco 49ers on Monday Night &hellip;  <a href="http://www.latimes.com/sports/rams/la-sp-0910-rams-gurley-20160909-snap-story.html">more</a>.</p>
+					<p><p>In two days, Gurley takes perhaps his biggest star turn yet when the Rams open the season against the San Francisco 49ers on Monday Night &hellip;  <a href="http://www.latimes.com/sports/rams/la-sp-0910-rams-gurley-20160909-snap-story.html" onclick="trackOutboundLink('http://www.latimes.com/sports/rams/la-sp-0910-rams-gurley-20160909-snap-story.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

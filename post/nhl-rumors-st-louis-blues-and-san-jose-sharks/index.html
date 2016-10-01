@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>24</b></p>
 					<h3>NHL Rumors: St. Louis Blues and San Jose Sharks</h3>
-					<p><p>Jeremy Rutherford: Blues GM Doug Armstrong met with Vladimir Sobotka and his agent at the World Cup. Armstrong said that the situation is more &hellip;  <a href="http://mynhltraderumors.com/nhl-rumors-st-louis-blues-san-jose-sharks/2016/09/24/">more</a>.</p>
+					<p><p>Jeremy Rutherford: Blues GM Doug Armstrong met with Vladimir Sobotka and his agent at the World Cup. Armstrong said that the situation is more &hellip;  <a href="http://mynhltraderumors.com/nhl-rumors-st-louis-blues-san-jose-sharks/2016/09/24/" onclick="trackOutboundLink('http://mynhltraderumors.com/nhl-rumors-st-louis-blues-san-jose-sharks/2016/09/24/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

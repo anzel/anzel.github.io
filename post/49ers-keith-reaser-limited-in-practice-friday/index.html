@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>10</b></p>
 					<h3>49ers&#39; Keith Reaser: Limited in practice Friday</h3>
-					<p><p>Reaser (ankle) was limited in his participation during Friday&rsquo;s practice, Cam INman of the Bay Area News Group reports. Reaser was sidelined for &hellip;  <a href="http://www.cbssports.com/fantasy/football/news/49ers-keith-reaser-limited-in-practice-friday/">more</a>.</p>
+					<p><p>Reaser (ankle) was limited in his participation during Friday&rsquo;s practice, Cam INman of the Bay Area News Group reports. Reaser was sidelined for &hellip;  <a href="http://www.cbssports.com/fantasy/football/news/49ers-keith-reaser-limited-in-practice-friday/" onclick="trackOutboundLink('http://www.cbssports.com/fantasy/football/news/49ers-keith-reaser-limited-in-practice-friday/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

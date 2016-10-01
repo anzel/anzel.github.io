@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>03</b></p>
 					<h3>Report: Raiders guaged trade interest for TE Mychal Rivera</h3>
-					<p><p>There had been some trade talk around #Raiders TE Mychal Rivera, but sounds like he sticks in Oakland, I&rsquo;m told.  Ian Rapoport (@RapSheet) &hellip;  <a href="http://oak.247sports.com/Bolt/Report-Raiders-guaged-trade-interest-for-TE-Mychal-Rivera-47167017">more</a>.</p>
+					<p><p>There had been some trade talk around #Raiders TE Mychal Rivera, but sounds like he sticks in Oakland, I&rsquo;m told.  Ian Rapoport (@RapSheet) &hellip;  <a href="http://oak.247sports.com/Bolt/Report-Raiders-guaged-trade-interest-for-TE-Mychal-Rivera-47167017" onclick="trackOutboundLink('http://oak.247sports.com/Bolt/Report-Raiders-guaged-trade-interest-for-TE-Mychal-Rivera-47167017'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

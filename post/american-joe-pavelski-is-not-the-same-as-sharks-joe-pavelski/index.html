@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>16</b></p>
 					<h3>American Joe Pavelski is not the same as Sharks Joe Pavelski</h3>
-					<p><p>Pavelski was named the captain of the San Jose Sharks before the 2015-2016 season, and then proceeded to lead the Sharks to the Stanley Cup &hellip;  <a href="http://www.todaysslapshot.com/nhl-west/san-jose-sharks/american-joe-pavelski-is-not-the-same-as-sharks-joe-pavelski/">more</a>.</p>
+					<p><p>Pavelski was named the captain of the San Jose Sharks before the 2015-2016 season, and then proceeded to lead the Sharks to the Stanley Cup &hellip;  <a href="http://www.todaysslapshot.com/nhl-west/san-jose-sharks/american-joe-pavelski-is-not-the-same-as-sharks-joe-pavelski/" onclick="trackOutboundLink('http://www.todaysslapshot.com/nhl-west/san-jose-sharks/american-joe-pavelski-is-not-the-same-as-sharks-joe-pavelski/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

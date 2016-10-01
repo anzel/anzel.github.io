@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>11</b></p>
 					<h3>Raiders announce inactives for Week 1 vs. Saints</h3>
-					<p><p>The Oakland Raiders have announced the six players who will be inactive for the team&rsquo;s Week 1 matchup versus the New Orleans Saints on Sunday.  <a href="http://oak.247sports.com/Gallery/Oakland-Raiders-announce-inactives-for-Week-1-vs-New-Orleans-Sai-47395328">more</a>.</p>
+					<p><p>The Oakland Raiders have announced the six players who will be inactive for the team&rsquo;s Week 1 matchup versus the New Orleans Saints on Sunday.  <a href="http://oak.247sports.com/Gallery/Oakland-Raiders-announce-inactives-for-Week-1-vs-New-Orleans-Sai-47395328" onclick="trackOutboundLink('http://oak.247sports.com/Gallery/Oakland-Raiders-announce-inactives-for-Week-1-vs-New-Orleans-Sai-47395328'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

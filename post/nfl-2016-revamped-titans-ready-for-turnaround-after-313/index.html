@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>05</b></p>
 					<h3>NFL 2016: Revamped Titans ready for turnaround after 3-13</h3>
-					<p><p>27, 2016, file photo, Tennessee Titans running back DeMarco Murray carries the ball past Oakland Raiders cornerback David Amerson, left, during the &hellip;  <a href="http://www.thenewstribune.com/sports/article100045742.html">more</a>.</p>
+					<p><p>27, 2016, file photo, Tennessee Titans running back DeMarco Murray carries the ball past Oakland Raiders cornerback David Amerson, left, during the &hellip;  <a href="http://www.thenewstribune.com/sports/article100045742.html" onclick="trackOutboundLink('http://www.thenewstribune.com/sports/article100045742.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

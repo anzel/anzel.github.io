@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>01</b></p>
 					<h3>Best/Worst Case Scenarios For 49ers&#39; QBs</h3>
-					<p><p>As hard as it is to believe, there are things going on with the San Francisco 49ers&rsquo; quarterbacks other than Colin Kaepernick not standing during the &hellip;  <a href="http://sacramento.cbslocal.com/2016/09/01/bestworst-case-scenarios-for-49ers-qbs/">more</a>.</p>
+					<p><p>As hard as it is to believe, there are things going on with the San Francisco 49ers&rsquo; quarterbacks other than Colin Kaepernick not standing during the &hellip;  <a href="http://sacramento.cbslocal.com/2016/09/01/bestworst-case-scenarios-for-49ers-qbs/" onclick="trackOutboundLink('http://sacramento.cbslocal.com/2016/09/01/bestworst-case-scenarios-for-49ers-qbs/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

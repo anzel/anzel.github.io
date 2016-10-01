@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>19</b></p>
 					<h3>A&#39;s bats sizzle ahead of Astros series (Sep 19, 2016)</h3>
-					<p><p>The hot-hitting Oakland Athletics will attempt to continue their torrid pace in front of the home fans when they open a three-game series against the &hellip;  <a href="http://www.foxsports.com/mlb/story/a-s-bats-sizzle-ahead-of-astros-series-091916">more</a>.</p>
+					<p><p>The hot-hitting Oakland Athletics will attempt to continue their torrid pace in front of the home fans when they open a three-game series against the &hellip;  <a href="http://www.foxsports.com/mlb/story/a-s-bats-sizzle-ahead-of-astros-series-091916" onclick="trackOutboundLink('http://www.foxsports.com/mlb/story/a-s-bats-sizzle-ahead-of-astros-series-091916'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>The Giants are a very bad baseball team, and they were swept by the Padres</h3>
-					<p><p>The thing about Luis Perdomo is that he pitches more like a guy with a 4.89 ERA instead of a 5.89 ERA, so what are you gonna do? - Kenny &hellip;  <a href="http://www.mccoveychronicles.com/2016/9/14/12922544/sf-giants-why-are-you-even-here">more</a>.</p>
+					<p><p>The thing about Luis Perdomo is that he pitches more like a guy with a 4.89 ERA instead of a 5.89 ERA, so what are you gonna do? - Kenny &hellip;  <a href="http://www.mccoveychronicles.com/2016/9/14/12922544/sf-giants-why-are-you-even-here" onclick="trackOutboundLink('http://www.mccoveychronicles.com/2016/9/14/12922544/sf-giants-why-are-you-even-here'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

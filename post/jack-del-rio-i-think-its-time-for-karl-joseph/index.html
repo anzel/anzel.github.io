@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>19</b></p>
 					<h3>Jack Del Rio: &#39;I think it&#39;s time&#39; for Karl Joseph</h3>
-					<p><p>Karl Joseph is primed to make his defensive debut when the Oakland Raiders travel to take on the Tennessee Titans in Week 3. Raiders head coach &hellip;  <a href="http://oak.247sports.com/Bolt/Jack-Del-Rio-I-think-its-time-for-Karl-Joseph-47621609">more</a>.</p>
+					<p><p>Karl Joseph is primed to make his defensive debut when the Oakland Raiders travel to take on the Tennessee Titans in Week 3. Raiders head coach &hellip;  <a href="http://oak.247sports.com/Bolt/Jack-Del-Rio-I-think-its-time-for-Karl-Joseph-47621609" onclick="trackOutboundLink('http://oak.247sports.com/Bolt/Jack-Del-Rio-I-think-its-time-for-Karl-Joseph-47621609'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

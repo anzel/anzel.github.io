@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>24</b></p>
 					<h3>Charlotte puts on dominate display to shut out Panthers</h3>
-					<p><p>women&rsquo;s soccer program, as the 49ers came out of the extended break with &hellip;  <a href="http://charlotte49ers.com/news/2016/9/23/womens-soccer-charlotte-puts-on-dominate-display-to-shut-out-panthers.aspx">more</a>.</p>
+					<p><p>women&rsquo;s soccer program, as the 49ers came out of the extended break with &hellip;  <a href="http://charlotte49ers.com/news/2016/9/23/womens-soccer-charlotte-puts-on-dominate-display-to-shut-out-panthers.aspx" onclick="trackOutboundLink('http://charlotte49ers.com/news/2016/9/23/womens-soccer-charlotte-puts-on-dominate-display-to-shut-out-panthers.aspx'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

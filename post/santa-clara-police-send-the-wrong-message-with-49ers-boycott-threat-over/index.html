@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>03</b></p>
 					<h3>Santa Clara police send the wrong message with 49ers boycott threat over</h3>
-					<p><p>SB Nation At the crux of Colin Kaepernick&rsquo;s national anthem protest is the San Francisco 49ers quarterback&rsquo;s belief that police brutality against minorities is a &hellip;  <a href="http://www.sbnation.com/nfl/2016/9/3/12782140/colin-kaepernick-national-anthem-police-boycott">more</a>.</p>
+					<p><p>SB Nation At the crux of Colin Kaepernick&rsquo;s national anthem protest is the San Francisco 49ers quarterback&rsquo;s belief that police brutality against minorities is a &hellip;  <a href="http://www.sbnation.com/nfl/2016/9/3/12782140/colin-kaepernick-national-anthem-police-boycott" onclick="trackOutboundLink('http://www.sbnation.com/nfl/2016/9/3/12782140/colin-kaepernick-national-anthem-police-boycott'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>Janikoski sets new NFL record for most 50-plus-yard field goals</h3>
-					<p><p>With a successful 52-yard attempt against the Tennessee Titans on Twitter, Oakland Raiders kicker Sebastian Janikowski set a new NFL record for &hellip;  <a href="http://oak.247sports.com/Bolt/Janikoski-sets-new-NFL-record-for-most-50-plus-yard-field-goals-47769287">more</a>.</p>
+					<p><p>With a successful 52-yard attempt against the Tennessee Titans on Twitter, Oakland Raiders kicker Sebastian Janikowski set a new NFL record for &hellip;  <a href="http://oak.247sports.com/Bolt/Janikoski-sets-new-NFL-record-for-most-50-plus-yard-field-goals-47769287" onclick="trackOutboundLink('http://oak.247sports.com/Bolt/Janikoski-sets-new-NFL-record-for-most-50-plus-yard-field-goals-47769287'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

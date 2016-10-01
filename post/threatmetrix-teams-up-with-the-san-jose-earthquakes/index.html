@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>21</b></p>
 					<h3>ThreatMetrix Teams Up with the San Jose Earthquakes</h3>
-					<p><p>SAN JOSE, CA&ndash;(Marketwired - September 21, 2016) - ThreatMetrix, The Digital Identity Company, and the San Jose Earthquakes today &hellip;  <a href="http://www.marketwired.com/press-release/threatmetrix-teams-up-with-the-san-jose-earthquakes-2160274.htm">more</a>.</p>
+					<p><p>SAN JOSE, CA&ndash;(Marketwired - September 21, 2016) - ThreatMetrix, The Digital Identity Company, and the San Jose Earthquakes today &hellip;  <a href="http://www.marketwired.com/press-release/threatmetrix-teams-up-with-the-san-jose-earthquakes-2160274.htm" onclick="trackOutboundLink('http://www.marketwired.com/press-release/threatmetrix-teams-up-with-the-san-jose-earthquakes-2160274.htm'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Oct<b>01</b></p>
 					<h3>Oakland Athletics 20oz. Double Wall Stainless Steel Tumbler</h3>
-					<p><p>Official Online Retailer of Major League Baseball. Browse all MLB gear &hellip;  <a href="http://www.mlbshop.com/catalog/product/Oakland_Athletics_20oz._Double_Wall_Stainless_Steel_Tumbler">more</a>.</p>
+					<p><p>Official Online Retailer of Major League Baseball. Browse all MLB gear &hellip;  <a href="http://www.mlbshop.com/catalog/product/Oakland_Athletics_20oz._Double_Wall_Stainless_Steel_Tumbler" onclick="trackOutboundLink('http://www.mlbshop.com/catalog/product/Oakland_Athletics_20oz._Double_Wall_Stainless_Steel_Tumbler'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

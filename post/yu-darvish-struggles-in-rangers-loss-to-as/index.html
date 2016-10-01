@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>Yu Darvish struggles in Rangers&#39; loss to A&#39;s</h3>
-					<p><p>The Oakland Athletics haven&rsquo;t had a lot to smile about this season but they had one of their best games of the year last night on the road against the &hellip;  <a href="http://crcconnection.com/2016/09/18/yu-darvish-struggles-in-rangers-loss-to-as.html">more</a>.</p>
+					<p><p>The Oakland Athletics haven&rsquo;t had a lot to smile about this season but they had one of their best games of the year last night on the road against the &hellip;  <a href="http://crcconnection.com/2016/09/18/yu-darvish-struggles-in-rangers-loss-to-as.html" onclick="trackOutboundLink('http://crcconnection.com/2016/09/18/yu-darvish-struggles-in-rangers-loss-to-as.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

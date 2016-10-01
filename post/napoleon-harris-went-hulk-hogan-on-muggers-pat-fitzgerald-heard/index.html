@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>30</b></p>
 					<h3>Napoleon Harris Went Hulk Hogan on Muggers Pat Fitzgerald Heard</h3>
-					<p><p>In 2002, he was made the 23rd overall pick in the NFL Draft by the Oakland Raiders. He would play in the NFL for seven seasons, with the Minnesota &hellip;  <a href="http://www.thesportsbank.net/oakland-raiders/napoleon-harris-went-hulk-hogan-on-muggers-heard-pat-fitzgerald/">more</a>.</p>
+					<p><p>In 2002, he was made the 23rd overall pick in the NFL Draft by the Oakland Raiders. He would play in the NFL for seven seasons, with the Minnesota &hellip;  <a href="http://www.thesportsbank.net/oakland-raiders/napoleon-harris-went-hulk-hogan-on-muggers-heard-pat-fitzgerald/" onclick="trackOutboundLink('http://www.thesportsbank.net/oakland-raiders/napoleon-harris-went-hulk-hogan-on-muggers-heard-pat-fitzgerald/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

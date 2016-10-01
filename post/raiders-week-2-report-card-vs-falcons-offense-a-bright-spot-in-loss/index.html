@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>19</b></p>
 					<h3>Raiders week 2 report card vs Falcons: Offense a bright spot in loss</h3>
-					<p><p>After defeating the New Orleans Saints week one, the Oakland Raiders lost their home opener against the Atlanta Falcons 35-28. Here&rsquo;s is the report &hellip;  <a href="http://www.silverandblackpride.com/2016/9/19/12963886/oakland-raiders-week-2-report-card-vs-falcons-offense-a-bright-spot-in-loss">more</a>.</p>
+					<p><p>After defeating the New Orleans Saints week one, the Oakland Raiders lost their home opener against the Atlanta Falcons 35-28. Here&rsquo;s is the report &hellip;  <a href="http://www.silverandblackpride.com/2016/9/19/12963886/oakland-raiders-week-2-report-card-vs-falcons-offense-a-bright-spot-in-loss" onclick="trackOutboundLink('http://www.silverandblackpride.com/2016/9/19/12963886/oakland-raiders-week-2-report-card-vs-falcons-offense-a-bright-spot-in-loss'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

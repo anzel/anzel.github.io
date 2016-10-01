@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Aug<b>31</b></p>
 					<h3>Waupaca County Supervisor Makes Controversial Comment About 49ers</h3>
-					<p><p>WBAY Colin Kaepernick FILE - In this Nov. 8, 2015, file photo, San Francisco 49ers quarterback Colin Kaepernick (7) stands on the sideline during the first &hellip;  <a href="http://wbay.com/2016/08/31/waupaca-county-supervisor-makes-controversial-comment-about-49ers-quarterback/">more</a>.</p>
+					<p><p>WBAY Colin Kaepernick FILE - In this Nov. 8, 2015, file photo, San Francisco 49ers quarterback Colin Kaepernick (7) stands on the sideline during the first &hellip;  <a href="http://wbay.com/2016/08/31/waupaca-county-supervisor-makes-controversial-comment-about-49ers-quarterback/" onclick="trackOutboundLink('http://wbay.com/2016/08/31/waupaca-county-supervisor-makes-controversial-comment-about-49ers-quarterback/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

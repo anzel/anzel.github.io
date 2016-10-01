@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>21</b></p>
 					<h3>A&#39;s Rally in 10th Comes Up Short in Loss to Astros</h3>
-					<p><p>OAKLAND, CA - SEPTEMBER 20: Sean Manaea #55 of the Oakland Athletics pitches against the Houston Astros during the first inning at the Oakland &hellip;  <a href="http://www.nbcbayarea.com/news/local/As-Rally-in-10th-Comes-Up-Short-in-Loss-to-Astros--394230111.html">more</a>.</p>
+					<p><p>OAKLAND, CA - SEPTEMBER 20: Sean Manaea #55 of the Oakland Athletics pitches against the Houston Astros during the first inning at the Oakland &hellip;  <a href="http://www.nbcbayarea.com/news/local/As-Rally-in-10th-Comes-Up-Short-in-Loss-to-Astros--394230111.html" onclick="trackOutboundLink('http://www.nbcbayarea.com/news/local/As-Rally-in-10th-Comes-Up-Short-in-Loss-to-Astros--394230111.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>03</b></p>
 					<h3>Packers keep Holy Spirit&#39;s Callahan on 53-man roster</h3>
-					<p><p>Green Bay Packers quarterback Joe Callahan (6) throws against the Oakland Raiders during the first half of an NFL preseason football game in Green &hellip;  <a href="http://www.pressofatlanticcity.com/sports/local/eagles/packers-keep-holy-spirit-s-callahan-on--man-roster/article_721c47de-721e-11e6-bdce-ff66229af84d.html">more</a>.</p>
+					<p><p>Green Bay Packers quarterback Joe Callahan (6) throws against the Oakland Raiders during the first half of an NFL preseason football game in Green &hellip;  <a href="http://www.pressofatlanticcity.com/sports/local/eagles/packers-keep-holy-spirit-s-callahan-on--man-roster/article_721c47de-721e-11e6-bdce-ff66229af84d.html" onclick="trackOutboundLink('http://www.pressofatlanticcity.com/sports/local/eagles/packers-keep-holy-spirit-s-callahan-on--man-roster/article_721c47de-721e-11e6-bdce-ff66229af84d.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

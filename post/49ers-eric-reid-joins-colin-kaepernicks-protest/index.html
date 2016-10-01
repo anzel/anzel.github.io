@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>02</b></p>
 					<h3>49ers&#39; Eric Reid joins Colin Kaepernick&#39;s protest</h3>
-					<p><p>Safety Eric Reid joined Kaepernick in taking a knee among the 49ers on the team&rsquo;s sideline during the playing of the Star-Spangled Banner.  <a href="http://www.csnbayarea.com/49ers/49ers-eric-reid-joins-colin-kaepernicks-protest">more</a>.</p>
+					<p><p>Safety Eric Reid joined Kaepernick in taking a knee among the 49ers on the team&rsquo;s sideline during the playing of the Star-Spangled Banner.  <a href="http://www.csnbayarea.com/49ers/49ers-eric-reid-joins-colin-kaepernicks-protest" onclick="trackOutboundLink('http://www.csnbayarea.com/49ers/49ers-eric-reid-joins-colin-kaepernicks-protest'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

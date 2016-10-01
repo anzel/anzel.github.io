@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>10</b></p>
 					<h3>49ers Players Say Kaepernick Has Brought Some Teammates Closer</h3>
-					<p><p>SAN DIEGO, CA - SEPTEMBER 01: Colin Kaepernick #7 of the San Francisco 49ers signs autographs for fans after a 31-21 win over the San Diego &hellip;  <a href="http://sacramento.cbslocal.com/2016/09/09/49ers-players-say-kaepernick-has-brought-some-teammates-closer/">more</a>.</p>
+					<p><p>SAN DIEGO, CA - SEPTEMBER 01: Colin Kaepernick #7 of the San Francisco 49ers signs autographs for fans after a 31-21 win over the San Diego &hellip;  <a href="http://sacramento.cbslocal.com/2016/09/09/49ers-players-say-kaepernick-has-brought-some-teammates-closer/" onclick="trackOutboundLink('http://sacramento.cbslocal.com/2016/09/09/49ers-players-say-kaepernick-has-brought-some-teammates-closer/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

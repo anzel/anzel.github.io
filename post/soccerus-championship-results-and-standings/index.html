@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>Soccer-US championship results and standings</h3>
-					<p><p>&hellip; 49 35 9 San Jose Earthquakes 29 7 13 9 28 32 34 10 Houston Dynamo 29 7 11 11 36 38 32 Next Fixtures (GMT): Sunday, September 25 Columbus &hellip;  <a href="http://economictimes.indiatimes.com/news/sports/update-5-soccer-us-championship-results-and-standings/articleshow/54515458.cms">more</a>.</p>
+					<p><p>&hellip; 49 35 9 San Jose Earthquakes 29 7 13 9 28 32 34 10 Houston Dynamo 29 7 11 11 36 38 32 Next Fixtures (GMT): Sunday, September 25 Columbus &hellip;  <a href="http://economictimes.indiatimes.com/news/sports/update-5-soccer-us-championship-results-and-standings/articleshow/54515458.cms" onclick="trackOutboundLink('http://economictimes.indiatimes.com/news/sports/update-5-soccer-us-championship-results-and-standings/articleshow/54515458.cms'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

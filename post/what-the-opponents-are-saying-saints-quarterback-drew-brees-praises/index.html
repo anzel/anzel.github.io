@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>09</b></p>
 					<h3>What The Opponents Are Saying: Saints Quarterback Drew Brees Praises</h3>
-					<p><p>Raiders.com The Oakland Raiders are gearing up to take on the New Orleans Saints this Sunday, at the Mercedes-Benz Superdome. This should be a good test for &hellip;  <a href="http://www.raiders.com/news/article-1/What-The-Opponents-Are-Saying-Saints-Quarterback-Drew-Brees-Praises-Raiders-Quarterback-Derek-Carr/bfca9756-5cbb-4705-83e2-efe925d0886e">more</a>.</p>
+					<p><p>Raiders.com The Oakland Raiders are gearing up to take on the New Orleans Saints this Sunday, at the Mercedes-Benz Superdome. This should be a good test for &hellip;  <a href="http://www.raiders.com/news/article-1/What-The-Opponents-Are-Saying-Saints-Quarterback-Drew-Brees-Praises-Raiders-Quarterback-Derek-Carr/bfca9756-5cbb-4705-83e2-efe925d0886e" onclick="trackOutboundLink('http://www.raiders.com/news/article-1/What-The-Opponents-Are-Saying-Saints-Quarterback-Drew-Brees-Praises-Raiders-Quarterback-Derek-Carr/bfca9756-5cbb-4705-83e2-efe925d0886e'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

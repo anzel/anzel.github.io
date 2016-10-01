@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>Atlanta Falcons vs Oakland Raiders Live Stream Free-- Watch Sunday Night</h3>
-					<p><p>The Mountaineer think, you are surfing internet for get your favorite teams match Atlanta Falcons vs Oakland Raiders live streaming NFL REGULAR SEASON &hellip;  <a href="http://themountaineer.villagesoup.com/p/atlanta-falcons-vs-oakland-raiders-live-stream-free-watch-sunday-night-football-p2p-online-radi/1574624">more</a>.</p>
+					<p><p>The Mountaineer think, you are surfing internet for get your favorite teams match Atlanta Falcons vs Oakland Raiders live streaming NFL REGULAR SEASON &hellip;  <a href="http://themountaineer.villagesoup.com/p/atlanta-falcons-vs-oakland-raiders-live-stream-free-watch-sunday-night-football-p2p-online-radi/1574624" onclick="trackOutboundLink('http://themountaineer.villagesoup.com/p/atlanta-falcons-vs-oakland-raiders-live-stream-free-watch-sunday-night-football-p2p-online-radi/1574624'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

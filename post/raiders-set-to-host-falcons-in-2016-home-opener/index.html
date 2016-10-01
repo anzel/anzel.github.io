@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>13</b></p>
 					<h3>Raiders Set to Host Falcons in 2016 Home Opener</h3>
-					<p><p>The Oakland Raiders will play in their home opener this weekend as they host the Atlanta Falcons at the Oakland-Alameda County Coliseum on &hellip;  <a href="http://www.raiders.com/news/article-1/Raiders-Set-to-Host-Falcons-in-2016-Home-Opener/6df2e99d-802e-4339-a7d4-08091299ffb8">more</a>.</p>
+					<p><p>The Oakland Raiders will play in their home opener this weekend as they host the Atlanta Falcons at the Oakland-Alameda County Coliseum on &hellip;  <a href="http://www.raiders.com/news/article-1/Raiders-Set-to-Host-Falcons-in-2016-Home-Opener/6df2e99d-802e-4339-a7d4-08091299ffb8" onclick="trackOutboundLink('http://www.raiders.com/news/article-1/Raiders-Set-to-Host-Falcons-in-2016-Home-Opener/6df2e99d-802e-4339-a7d4-08091299ffb8'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

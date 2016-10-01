@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>06</b></p>
 					<h3>Sharks&#39; Tomas Hertl Expected to Be Healthy for Start of Season</h3>
-					<p><p>Tomas Hertl is on track to be ready for the start of the regular season with the San Jose Sharks despite missing the World Cup due to injury, Sharks &hellip;  <a href="http://thehockeywriters.com/sharks-tomas-hertl-expected-to-be-healthy-for-start-of-season/">more</a>.</p>
+					<p><p>Tomas Hertl is on track to be ready for the start of the regular season with the San Jose Sharks despite missing the World Cup due to injury, Sharks &hellip;  <a href="http://thehockeywriters.com/sharks-tomas-hertl-expected-to-be-healthy-for-start-of-season/" onclick="trackOutboundLink('http://thehockeywriters.com/sharks-tomas-hertl-expected-to-be-healthy-for-start-of-season/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

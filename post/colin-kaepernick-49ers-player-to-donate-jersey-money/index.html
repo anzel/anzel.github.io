@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>Colin Kaepernick: 49ers player to donate jersey money</h3>
-					<p><p>Kaepernick is still the 49ers back-up quarterback so it seems clear the surge in jersey sales has less to do with his play on the field and more to do &hellip;  <a href="http://www.fox29.com/sports/203317711-story">more</a>.</p>
+					<p><p>Kaepernick is still the 49ers back-up quarterback so it seems clear the surge in jersey sales has less to do with his play on the field and more to do &hellip;  <a href="http://www.fox29.com/sports/203317711-story" onclick="trackOutboundLink('http://www.fox29.com/sports/203317711-story'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

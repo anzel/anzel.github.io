@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>Who will be inactive for 49ers-Rams, Week 1?</h3>
-					<p><p>The San Francisco 49ers host the Los Angeles Rams Monday evening, and 90 minutes before kickoff, the team will need to announce seven inactive &hellip;  <a href="http://www.ninersnation.com/2016/9/12/12890372/49ers-rams-inactives-week-1-predictions">more</a>.</p>
+					<p><p>The San Francisco 49ers host the Los Angeles Rams Monday evening, and 90 minutes before kickoff, the team will need to announce seven inactive &hellip;  <a href="http://www.ninersnation.com/2016/9/12/12890372/49ers-rams-inactives-week-1-predictions" onclick="trackOutboundLink('http://www.ninersnation.com/2016/9/12/12890372/49ers-rams-inactives-week-1-predictions'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

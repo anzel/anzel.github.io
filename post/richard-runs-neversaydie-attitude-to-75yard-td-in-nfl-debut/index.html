@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>16</b></p>
 					<h3>Richard runs never-say-die attitude to 75-yard TD in NFL debut</h3>
-					<p><p>No, the only offer for Richard came from the Oakland Raiders. It was a tryout at rookie minicamp in May. Perhaps that is what flashed through Richard&rsquo;s &hellip;  <a href="http://www.thetowntalk.com/story/sports/2016/09/16/richard-runs-never-say-die-attitude-75-yard-td-run-nfl-debut/90511826/">more</a>.</p>
+					<p><p>No, the only offer for Richard came from the Oakland Raiders. It was a tryout at rookie minicamp in May. Perhaps that is what flashed through Richard&rsquo;s &hellip;  <a href="http://www.thetowntalk.com/story/sports/2016/09/16/richard-runs-never-say-die-attitude-75-yard-td-run-nfl-debut/90511826/" onclick="trackOutboundLink('http://www.thetowntalk.com/story/sports/2016/09/16/richard-runs-never-say-die-attitude-75-yard-td-run-nfl-debut/90511826/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

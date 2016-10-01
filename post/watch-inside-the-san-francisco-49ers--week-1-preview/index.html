@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>Watch: Inside the San Francisco 49ers  Week 1 preview</h3>
-					<p><p>San Francisco 49ers&rsquo; Gerald Hodges (51) congratulates San Francisco 49ers&rsquo; Jaquiski Tartt (29) on his breakup of a pass against Atlanta Falcons&rsquo; &hellip;  <a href="http://www.mercurynews.com/2016/09/08/watch-inside-the-san-francisco-49ers-week-1-preview/">more</a>.</p>
+					<p><p>San Francisco 49ers&rsquo; Gerald Hodges (51) congratulates San Francisco 49ers&rsquo; Jaquiski Tartt (29) on his breakup of a pass against Atlanta Falcons&rsquo; &hellip;  <a href="http://www.mercurynews.com/2016/09/08/watch-inside-the-san-francisco-49ers-week-1-preview/" onclick="trackOutboundLink('http://www.mercurynews.com/2016/09/08/watch-inside-the-san-francisco-49ers-week-1-preview/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

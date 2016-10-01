@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>13</b></p>
 					<h3>Two free agents who came up big for the Raiders in game one</h3>
-					<p><p>One of the big stories from the big win on Sunday for the Oakland Raiders was the fact that one of their key free agent signings, Sean Smith, was &hellip;  <a href="http://sports.yahoo.com/news/two-free-agents-came-big-080202790.html">more</a>.</p>
+					<p><p>One of the big stories from the big win on Sunday for the Oakland Raiders was the fact that one of their key free agent signings, Sean Smith, was &hellip;  <a href="http://sports.yahoo.com/news/two-free-agents-came-big-080202790.html" onclick="trackOutboundLink('http://sports.yahoo.com/news/two-free-agents-came-big-080202790.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

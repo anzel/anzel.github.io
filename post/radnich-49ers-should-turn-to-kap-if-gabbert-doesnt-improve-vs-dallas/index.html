@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>Radnich: 49ers should turn to Kap if Gabbert doesn&#39;t improve vs. Dallas</h3>
-					<p><p>After the 49ers&rsquo; offense laid an egg in Seattle, I think Blaine Gabbert has one more week to prove himself before a change needs to be made.  <a href="http://www.knbr.com/2016/09/26/radnich-49ers-should-turn-to-kap-if-gabbert-doesnt-improve-vs-dallas/">more</a>.</p>
+					<p><p>After the 49ers&rsquo; offense laid an egg in Seattle, I think Blaine Gabbert has one more week to prove himself before a change needs to be made.  <a href="http://www.knbr.com/2016/09/26/radnich-49ers-should-turn-to-kap-if-gabbert-doesnt-improve-vs-dallas/" onclick="trackOutboundLink('http://www.knbr.com/2016/09/26/radnich-49ers-should-turn-to-kap-if-gabbert-doesnt-improve-vs-dallas/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

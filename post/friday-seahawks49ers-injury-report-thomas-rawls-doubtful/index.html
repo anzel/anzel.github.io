@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>23</b></p>
 					<h3>Friday Seahawks/49ers injury report: Thomas Rawls doubtful</h3>
-					<p><p>The Seattle Seahawks and San Francisco 49ers have announced the injury status for several players for this Sunday&rsquo;s game (1:05 p.m. PT). Notable &hellip;  <a href="http://sea.247sports.com/Gallery/Friday-Seahawks49ers-injury-report-Thomas-Rawls-doubtful-Tyler-L-47697995">more</a>.</p>
+					<p><p>The Seattle Seahawks and San Francisco 49ers have announced the injury status for several players for this Sunday&rsquo;s game (1:05 p.m. PT). Notable &hellip;  <a href="http://sea.247sports.com/Gallery/Friday-Seahawks49ers-injury-report-Thomas-Rawls-doubtful-Tyler-L-47697995" onclick="trackOutboundLink('http://sea.247sports.com/Gallery/Friday-Seahawks49ers-injury-report-Thomas-Rawls-doubtful-Tyler-L-47697995'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

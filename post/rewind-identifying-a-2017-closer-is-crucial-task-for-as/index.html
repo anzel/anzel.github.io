@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>17</b></p>
 					<h3>Rewind: Identifying a 2017 closer is crucial task for A&#39;s</h3>
-					<p><p>Top Stories, Oakland A&rsquo;s, mlb, Oakland Athletics, joe stiglich. Joe Stiglich is CSNBayArea.com&rsquo;s A&rsquo;s Insider. Follow him on Twitter @JoeStiglichCSN.  <a href="http://www.csnbayarea.com/athletics/rewind-identifying-2017-closer-crucial-task">more</a>.</p>
+					<p><p>Top Stories, Oakland A&rsquo;s, mlb, Oakland Athletics, joe stiglich. Joe Stiglich is CSNBayArea.com&rsquo;s A&rsquo;s Insider. Follow him on Twitter @JoeStiglichCSN.  <a href="http://www.csnbayarea.com/athletics/rewind-identifying-2017-closer-crucial-task" onclick="trackOutboundLink('http://www.csnbayarea.com/athletics/rewind-identifying-2017-closer-crucial-task'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

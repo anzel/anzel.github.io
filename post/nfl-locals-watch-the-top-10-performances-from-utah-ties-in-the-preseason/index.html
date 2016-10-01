@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>03</b></p>
 					<h3>NFL locals watch: The top 10 performances from Utah ties in the preseason</h3>
-					<p><p>Deseret News Arizona Cardinals running back Kerwynn Williams (31) slips past the tackle of Oakland Raiders&rsquo; Neiron Ball during the first half of an NFL preseason &hellip;  <a href="http://www.deseretnews.com/article/865661591/NFL-locals-watch-The-top-10-performances-from-Utah-ties-in-the-preseason-finales.html?pg=all">more</a>.</p>
+					<p><p>Deseret News Arizona Cardinals running back Kerwynn Williams (31) slips past the tackle of Oakland Raiders&rsquo; Neiron Ball during the first half of an NFL preseason &hellip;  <a href="http://www.deseretnews.com/article/865661591/NFL-locals-watch-The-top-10-performances-from-Utah-ties-in-the-preseason-finales.html?pg=all" onclick="trackOutboundLink('http://www.deseretnews.com/article/865661591/NFL-locals-watch-The-top-10-performances-from-Utah-ties-in-the-preseason-finales.html?pg=all'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

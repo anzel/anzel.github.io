@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>Four 49ers join Kaepernick, Reid in protest</h3>
-					<p><p>CHARLOTTE, N.C.  Four 49ers players raised a fist in protest on the 49ers&rsquo; sideline while Colin Kaepernick and Eric Reid took a knee during the &hellip;  <a href="http://www.csnbayarea.com/49ers/four-49ers-join-kaepernick-reid-protest">more</a>.</p>
+					<p><p>CHARLOTTE, N.C.  Four 49ers players raised a fist in protest on the 49ers&rsquo; sideline while Colin Kaepernick and Eric Reid took a knee during the &hellip;  <a href="http://www.csnbayarea.com/49ers/four-49ers-join-kaepernick-reid-protest" onclick="trackOutboundLink('http://www.csnbayarea.com/49ers/four-49ers-join-kaepernick-reid-protest'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

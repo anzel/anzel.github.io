@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>21</b></p>
 					<h3>49ers&#39; Garrett Celek: Tallies one catch in loss to Carolina</h3>
-					<p><p>Celek caught one of two targets for 12 yards in Sunday&rsquo;s loss to the Panthers. Celek has been held to just one catch in each of the first two weeks of &hellip;  <a href="http://www.cbssports.com/fantasy/football/news/49ers-garrett-celek-tallies-one-catch-in-loss-to-carolina/">more</a>.</p>
+					<p><p>Celek caught one of two targets for 12 yards in Sunday&rsquo;s loss to the Panthers. Celek has been held to just one catch in each of the first two weeks of &hellip;  <a href="http://www.cbssports.com/fantasy/football/news/49ers-garrett-celek-tallies-one-catch-in-loss-to-carolina/" onclick="trackOutboundLink('http://www.cbssports.com/fantasy/football/news/49ers-garrett-celek-tallies-one-catch-in-loss-to-carolina/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

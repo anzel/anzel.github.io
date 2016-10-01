@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>29</b></p>
 					<h3>NFL Week 4 schedule: Colts center Ryan Kelly taking business trip to London</h3>
-					<p><p>&hellip; Twickenham Stadium and Bengals-Washington Redskins on Oct. 30 at Wembley Stadium in England and Oakland Raiders-Houston Texans on Nov &hellip;  <a href="http://www.al.com/sports/index.ssf/2016/09/nfl_week_4_schedule_colts_cent.html">more</a>.</p>
+					<p><p>&hellip; Twickenham Stadium and Bengals-Washington Redskins on Oct. 30 at Wembley Stadium in England and Oakland Raiders-Houston Texans on Nov &hellip;  <a href="http://www.al.com/sports/index.ssf/2016/09/nfl_week_4_schedule_colts_cent.html" onclick="trackOutboundLink('http://www.al.com/sports/index.ssf/2016/09/nfl_week_4_schedule_colts_cent.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

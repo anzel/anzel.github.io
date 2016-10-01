@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>23</b></p>
 					<h3>Preview and Prediction: Oakland Raiders at Tennessee Titans</h3>
-					<p><p>Coming off a 35-38 loss to the Atlanta Falcons (1-1) in their first home game of the 2016 season, the Oakland Raiders (1-1) will go back on the road to &hellip;  <a href="http://justblogbaby.com/2016/09/23/preview-and-prediction-oakland-raiders-at-tennessee-titans/">more</a>.</p>
+					<p><p>Coming off a 35-38 loss to the Atlanta Falcons (1-1) in their first home game of the 2016 season, the Oakland Raiders (1-1) will go back on the road to &hellip;  <a href="http://justblogbaby.com/2016/09/23/preview-and-prediction-oakland-raiders-at-tennessee-titans/" onclick="trackOutboundLink('http://justblogbaby.com/2016/09/23/preview-and-prediction-oakland-raiders-at-tennessee-titans/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

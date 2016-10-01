@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>16</b></p>
 					<h3>Best of NFL: 49ers open Chip Kelly era with shutout win</h3>
-					<p><p>Carlos Hyde ran for 88 yards and two touchdowns and the San Francisco 49ers posted their first season-opening shutout in franchise history to spoil &hellip;  <a href="http://www.csnphilly.com/philadelphia-eagles/best-nfl-49ers-open-chip-kelly-era-shutout-win">more</a>.</p>
+					<p><p>Carlos Hyde ran for 88 yards and two touchdowns and the San Francisco 49ers posted their first season-opening shutout in franchise history to spoil &hellip;  <a href="http://www.csnphilly.com/philadelphia-eagles/best-nfl-49ers-open-chip-kelly-era-shutout-win" onclick="trackOutboundLink('http://www.csnphilly.com/philadelphia-eagles/best-nfl-49ers-open-chip-kelly-era-shutout-win'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

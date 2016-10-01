@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>13</b></p>
 					<h3>Did the Giants get out of their funk in Arizona?</h3>
-					<p><p>The Giants have had a miserable second half, with 14 wins and 788 losses going into tonight&rsquo;s contest with San Diego. But at the end of their last road &hellip;  <a href="http://www.mccoveychronicles.com/2016/9/13/12899644/mlb-sf-giants-garbage-funk">more</a>.</p>
+					<p><p>The Giants have had a miserable second half, with 14 wins and 788 losses going into tonight&rsquo;s contest with San Diego. But at the end of their last road &hellip;  <a href="http://www.mccoveychronicles.com/2016/9/13/12899644/mlb-sf-giants-garbage-funk" onclick="trackOutboundLink('http://www.mccoveychronicles.com/2016/9/13/12899644/mlb-sf-giants-garbage-funk'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

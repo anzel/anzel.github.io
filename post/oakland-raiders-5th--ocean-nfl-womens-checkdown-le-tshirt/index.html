@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>09</b></p>
 					<h3>Oakland Raiders 5th &amp; Ocean NFL Women&#39;s Checkdown LE T-Shirt</h3>
-					<p><p>selection of Oakland Raiders 5th &amp; Ocean gear, you&rsquo;ll find what you need.  <a href="https://www.lids.com/oakland-raiders-5th-%26-ocean-nfl-women's-checkdown-le-t-shirt/20881959">more</a>.</p>
+					<p><p>selection of Oakland Raiders 5th &amp; Ocean gear, you&rsquo;ll find what you need.  <a href="https://www.lids.com/oakland-raiders-5th-%26-ocean-nfl-women's-checkdown-le-t-shirt/20881959" onclick="trackOutboundLink('https://www.lids.com/oakland-raiders-5th-%26-ocean-nfl-women's-checkdown-le-t-shirt/20881959'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

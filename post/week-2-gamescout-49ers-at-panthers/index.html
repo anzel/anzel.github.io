@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>16</b></p>
 					<h3>Week 2 GameScout: 49ers at Panthers</h3>
-					<p><p>Panthers have won four in a row, if you throw out the most recent meeting &ndash; the 49ers&rsquo; 23-10 win at Carolina in the 2014 playoffs. The Panthers won at &hellip;  <a href="http://www.wptz.com/sports/week-2-gamescout-49ers-at-panthers/41702582">more</a>.</p>
+					<p><p>Panthers have won four in a row, if you throw out the most recent meeting &ndash; the 49ers&rsquo; 23-10 win at Carolina in the 2014 playoffs. The Panthers won at &hellip;  <a href="http://www.wptz.com/sports/week-2-gamescout-49ers-at-panthers/41702582" onclick="trackOutboundLink('http://www.wptz.com/sports/week-2-gamescout-49ers-at-panthers/41702582'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

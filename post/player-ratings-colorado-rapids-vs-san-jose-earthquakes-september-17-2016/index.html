@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>20</b></p>
 					<h3>Player Ratings: Colorado Rapids vs San Jose Earthquakes, September 17, 2016</h3>
-					<p><p>The Colorado Rapids hosted the San Jose Earthquakes in front of a pretty full house and I think put most of the attendees asleep. The score finished &hellip;  <a href="http://www.burgundywave.com/2016/9/20/12985940/player-ratings-colorado-rapids-vs-san-jose-earthquakes-september-17-2016">more</a>.</p>
+					<p><p>The Colorado Rapids hosted the San Jose Earthquakes in front of a pretty full house and I think put most of the attendees asleep. The score finished &hellip;  <a href="http://www.burgundywave.com/2016/9/20/12985940/player-ratings-colorado-rapids-vs-san-jose-earthquakes-september-17-2016" onclick="trackOutboundLink('http://www.burgundywave.com/2016/9/20/12985940/player-ratings-colorado-rapids-vs-san-jose-earthquakes-september-17-2016'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

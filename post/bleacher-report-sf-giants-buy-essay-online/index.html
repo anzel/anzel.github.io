@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>Bleacher Report Sf Giants, Buy Essay Online</h3>
-					<p><p>pill. Bleacher Report Sf Giants, Essay price.  <a href="http://transpenninetrail.org.uk/wp-content/themes/pagelines/less/text.php?bleacher-report-sf-giants&amp;cache=1474240103">more</a>.</p>
+					<p><p>pill. Bleacher Report Sf Giants, Essay price.  <a href="http://transpenninetrail.org.uk/wp-content/themes/pagelines/less/text.php?bleacher-report-sf-giants&cache=1474240103" onclick="trackOutboundLink('http://transpenninetrail.org.uk/wp-content/themes/pagelines/less/text.php?bleacher-report-sf-giants&cache=1474240103'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>09</b></p>
 					<h3>NFL Week 1 Predictions: Oakland Raiders vs. New Orleans Saints 9/11/16</h3>
-					<p><p>Will this Sunday&rsquo;s matchup between the Raiders and Saints be high-scoring for bettors at 1:00PM ET? According to oddsmakers from online sports &hellip;  <a href="http://www.thespread.com/nfl-articles/090916-nfl-week-1-predictions-oakland-raiders-vs-new-orleans-saints-9-11-16">more</a>.</p>
+					<p><p>Will this Sunday&rsquo;s matchup between the Raiders and Saints be high-scoring for bettors at 1:00PM ET? According to oddsmakers from online sports &hellip;  <a href="http://www.thespread.com/nfl-articles/090916-nfl-week-1-predictions-oakland-raiders-vs-new-orleans-saints-9-11-16" onclick="trackOutboundLink('http://www.thespread.com/nfl-articles/090916-nfl-week-1-predictions-oakland-raiders-vs-new-orleans-saints-9-11-16'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

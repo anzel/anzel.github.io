@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>07</b></p>
 					<h3>LOOK: Rams release unofficial depth chart for Week 1 vs. 49ers</h3>
-					<p><p>The Los Angeles Rams are now preparing for their Week 1 matchup against the San Francisco 49ers, and after a summer full of drama and a bit of &hellip;  <a href="http://theramswire.usatoday.com/2016/09/07/look-rams-release-unofficial-depth-chart-for-week-1-vs-49ers/">more</a>.</p>
+					<p><p>The Los Angeles Rams are now preparing for their Week 1 matchup against the San Francisco 49ers, and after a summer full of drama and a bit of &hellip;  <a href="http://theramswire.usatoday.com/2016/09/07/look-rams-release-unofficial-depth-chart-for-week-1-vs-49ers/" onclick="trackOutboundLink('http://theramswire.usatoday.com/2016/09/07/look-rams-release-unofficial-depth-chart-for-week-1-vs-49ers/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

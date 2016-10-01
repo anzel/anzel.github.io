@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>19</b></p>
 					<h3>Sports Illustrated, others mock Cam&#39;s hat. Other writers on Panthers vs.</h3>
-					<p><p>Charlotte Observer Carolina Panthers&rsquo; Cam Newton talks to the media after an NFL football game against the San Francisco 49ers in Charlotte. His choice of a wearing a &hellip;  <a href="http://www.charlotteobserver.com/sports/nfl/carolina-panthers/article102683812.html">more</a>.</p>
+					<p><p>Charlotte Observer Carolina Panthers&rsquo; Cam Newton talks to the media after an NFL football game against the San Francisco 49ers in Charlotte. His choice of a wearing a &hellip;  <a href="http://www.charlotteobserver.com/sports/nfl/carolina-panthers/article102683812.html" onclick="trackOutboundLink('http://www.charlotteobserver.com/sports/nfl/carolina-panthers/article102683812.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

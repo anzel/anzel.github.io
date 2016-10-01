@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>26</b></p>
 					<h3>Suspension is up for Marcel Reece, but Raiders release him</h3>
-					<p><p>Raiders fullback Marcel Reece, whose suspension for using performance-enhancing drugs just ended, paid an even stiffer penalty Monday when the &hellip;  <a href="http://www.sfgate.com/raiders/article/Suspension-is-up-for-Reece-but-Raiders-release-9289608.php">more</a>.</p>
+					<p><p>Raiders fullback Marcel Reece, whose suspension for using performance-enhancing drugs just ended, paid an even stiffer penalty Monday when the &hellip;  <a href="http://www.sfgate.com/raiders/article/Suspension-is-up-for-Reece-but-Raiders-release-9289608.php" onclick="trackOutboundLink('http://www.sfgate.com/raiders/article/Suspension-is-up-for-Reece-but-Raiders-release-9289608.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

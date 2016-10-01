@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>07</b></p>
 					<h3>US Figure Skating award 2018 National Championships to San Jose</h3>
-					<p><p>Competition will be held at the SAP Center, the home of National Hockey League (NHL) ice hockey outfit San Jose Sharks. San Jose has hosted the &hellip;  <a href="http://www.insidethegames.biz/index.php/articles/1041346/us-figure-skating-award-2018-national-championships-to-san-jose">more</a>.</p>
+					<p><p>Competition will be held at the SAP Center, the home of National Hockey League (NHL) ice hockey outfit San Jose Sharks. San Jose has hosted the &hellip;  <a href="http://www.insidethegames.biz/index.php/articles/1041346/us-figure-skating-award-2018-national-championships-to-san-jose" onclick="trackOutboundLink('http://www.insidethegames.biz/index.php/articles/1041346/us-figure-skating-award-2018-national-championships-to-san-jose'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

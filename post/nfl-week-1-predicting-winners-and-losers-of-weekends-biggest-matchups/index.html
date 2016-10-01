@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>10</b></p>
 					<h3>NFL Week 1: Predicting Winners and Losers of Weekend&#39;s Biggest Matchups</h3>
-					<p><p>What will happen when monstrous New Orleans Saints tackle Terron Armstead tangles with the Oakland Raiders&rsquo; Khalil Mack? And will New England &hellip;  <a href="http://bleacherreport.com/articles/2661073-nfl-week-1-predicting-winners-losers-of-weekends-biggest-matchups">more</a>.</p>
+					<p><p>What will happen when monstrous New Orleans Saints tackle Terron Armstead tangles with the Oakland Raiders&rsquo; Khalil Mack? And will New England &hellip;  <a href="http://bleacherreport.com/articles/2661073-nfl-week-1-predicting-winners-losers-of-weekends-biggest-matchups" onclick="trackOutboundLink('http://bleacherreport.com/articles/2661073-nfl-week-1-predicting-winners-losers-of-weekends-biggest-matchups'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

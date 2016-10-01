@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>29</b></p>
 					<h3>49ers players praise coach Chip Kelly for publicly supporting Colin</h3>
-					<p><p>CBSSports.com And that support hasn&rsquo;t gone unnoticed by Kaepernick&rsquo;s 49ers&rsquo; teammates. In fact, they were especially impressed when Kelly was asked last &hellip;  <a href="http://www.cbssports.com/nfl/news/49ers-players-praise-coach-chip-kelly-for-public-supporting-colin-kaepernick/">more</a>.</p>
+					<p><p>CBSSports.com And that support hasn&rsquo;t gone unnoticed by Kaepernick&rsquo;s 49ers&rsquo; teammates. In fact, they were especially impressed when Kelly was asked last &hellip;  <a href="http://www.cbssports.com/nfl/news/49ers-players-praise-coach-chip-kelly-for-public-supporting-colin-kaepernick/" onclick="trackOutboundLink('http://www.cbssports.com/nfl/news/49ers-players-praise-coach-chip-kelly-for-public-supporting-colin-kaepernick/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

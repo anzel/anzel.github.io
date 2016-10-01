@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>10</b></p>
 					<h3>49ers to donate $1M to Bay Area orgs in hopes of bridging racial gap</h3>
-					<p><p>One week after San Francisco 49ers quarterback Colin Kaepernick announced plans to donate the first $1 million of his salary to charity, the team &hellip;  <a href="http://blavity.com/49ers-donate-1m-bay-area-orgs-hopes-bridging-racial-gap/">more</a>.</p>
+					<p><p>One week after San Francisco 49ers quarterback Colin Kaepernick announced plans to donate the first $1 million of his salary to charity, the team &hellip;  <a href="http://blavity.com/49ers-donate-1m-bay-area-orgs-hopes-bridging-racial-gap/" onclick="trackOutboundLink('http://blavity.com/49ers-donate-1m-bay-area-orgs-hopes-bridging-racial-gap/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

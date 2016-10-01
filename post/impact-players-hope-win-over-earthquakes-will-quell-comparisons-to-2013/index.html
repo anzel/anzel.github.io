@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>Impact players hope win over Earthquakes will quell comparisons to 2013</h3>
-					<p><p>The slumping Impact hope a win over the San Jose Earthquakes will quell comparisons to 2013. Paul Chiasson / THE CANADIAN PRESS.  <a href="http://montrealgazette.com/sports/soccer/mls/montreal-impact/impact-players-hope-win-over-earthquakes-will-quell-comparisons-to-2013">more</a>.</p>
+					<p><p>The slumping Impact hope a win over the San Jose Earthquakes will quell comparisons to 2013. Paul Chiasson / THE CANADIAN PRESS.  <a href="http://montrealgazette.com/sports/soccer/mls/montreal-impact/impact-players-hope-win-over-earthquakes-will-quell-comparisons-to-2013" onclick="trackOutboundLink('http://montrealgazette.com/sports/soccer/mls/montreal-impact/impact-players-hope-win-over-earthquakes-will-quell-comparisons-to-2013'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

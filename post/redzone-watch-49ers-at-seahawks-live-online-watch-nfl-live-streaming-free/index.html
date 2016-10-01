@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>Redzone Watch 49ers at Seahawks Live Online Watch NFL Live Streaming Free</h3>
-					<p><p>Seahawks Live Online NFL Football Broadcast Online|Watch 49ers at &hellip;  <a href="http://www.tbh.org/sites/default/files/webform/mdinfo/4K_Watch_49ers_at_Seahawks_Live_Online_NFL_Sports_Live_Coupons.pdf">more</a>.</p>
+					<p><p>Seahawks Live Online NFL Football Broadcast Online|Watch 49ers at &hellip;  <a href="http://www.tbh.org/sites/default/files/webform/mdinfo/4K_Watch_49ers_at_Seahawks_Live_Online_NFL_Sports_Live_Coupons.pdf" onclick="trackOutboundLink('http://www.tbh.org/sites/default/files/webform/mdinfo/4K_Watch_49ers_at_Seahawks_Live_Online_NFL_Sports_Live_Coupons.pdf'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

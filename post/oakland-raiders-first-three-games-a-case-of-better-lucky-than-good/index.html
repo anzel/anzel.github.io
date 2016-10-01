@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Oct<b>01</b></p>
 					<h3>Oakland Raiders: First Three Games A Case Of Better Lucky Than Good</h3>
-					<p><p>On the surface, the Oakland Raiders are 2-1, and the arrow is pointed way upward for this long suffering franchise. Which is great news for the team &hellip;  <a href="http://goldengatesports.com/2016/09/30/oakland-raiders-sometimes-better-lucky-good/">more</a>.</p>
+					<p><p>On the surface, the Oakland Raiders are 2-1, and the arrow is pointed way upward for this long suffering franchise. Which is great news for the team &hellip;  <a href="http://goldengatesports.com/2016/09/30/oakland-raiders-sometimes-better-lucky-good/" onclick="trackOutboundLink('http://goldengatesports.com/2016/09/30/oakland-raiders-sometimes-better-lucky-good/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

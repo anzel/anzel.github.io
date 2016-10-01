@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>13</b></p>
 					<h3>Week 1: Rams vs. 49ers highlights</h3>
-					<p><p>action.  <a href="https://www.msn.com/en-us/sports/watch/highlights-49ers-dominate-rams-in-kellys-debut/vi-AAiPf1q">more</a>.</p>
+					<p><p>action.  <a href="https://www.msn.com/en-us/sports/watch/highlights-49ers-dominate-rams-in-kellys-debut/vi-AAiPf1q" onclick="trackOutboundLink('https://www.msn.com/en-us/sports/watch/highlights-49ers-dominate-rams-in-kellys-debut/vi-AAiPf1q'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

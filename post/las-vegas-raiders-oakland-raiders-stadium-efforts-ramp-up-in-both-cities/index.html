@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>02</b></p>
 					<h3>Las Vegas Raiders? Oakland Raiders? Stadium efforts ramp up in both cities</h3>
-					<p><p>&rdquo;(Lott) and his partners would go down in the annals of the Oakland Raiders as some of the greatest heroes if they can get this done,&rdquo; said Jim Zelinski &hellip;  <a href="http://www.mercurynews.com/raiders/ci_30322854/las-vegas-raiders-oakland-raiders-stadium-efforts-ramp">more</a>.</p>
+					<p><p>&rdquo;(Lott) and his partners would go down in the annals of the Oakland Raiders as some of the greatest heroes if they can get this done,&rdquo; said Jim Zelinski &hellip;  <a href="http://www.mercurynews.com/raiders/ci_30322854/las-vegas-raiders-oakland-raiders-stadium-efforts-ramp" onclick="trackOutboundLink('http://www.mercurynews.com/raiders/ci_30322854/las-vegas-raiders-oakland-raiders-stadium-efforts-ramp'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

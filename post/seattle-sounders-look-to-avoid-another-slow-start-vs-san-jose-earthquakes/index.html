@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>Seattle Sounders look to avoid another slow start vs. San Jose Earthquakes</h3>
-					<p><p>TUKWILA, Wash.  With all of their internationals returning to camp on Thursday, the Seattle Sounders can finally turn their full attention to one of their &hellip;  <a href="http://www.soundersfc.com/post/2016/09/08/seattle-sounders-look-avoid-another-slow-start-vs-san-jose-earthquakes">more</a>.</p>
+					<p><p>TUKWILA, Wash.  With all of their internationals returning to camp on Thursday, the Seattle Sounders can finally turn their full attention to one of their &hellip;  <a href="http://www.soundersfc.com/post/2016/09/08/seattle-sounders-look-avoid-another-slow-start-vs-san-jose-earthquakes" onclick="trackOutboundLink('http://www.soundersfc.com/post/2016/09/08/seattle-sounders-look-avoid-another-slow-start-vs-san-jose-earthquakes'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>19</b></p>
 					<h3>Raiders are being pulled in several directions</h3>
-					<p><p>Off the field? Gorgeous East Bay late-summer day, packed Coliseum, Raiders tradition and legends everywhere you look. And an owner who claimed &hellip;  <a href="http://www.sfchronicle.com/raiders/article/Raiders-are-being-pulled-in-several-directions-9231139.php">more</a>.</p>
+					<p><p>Off the field? Gorgeous East Bay late-summer day, packed Coliseum, Raiders tradition and legends everywhere you look. And an owner who claimed &hellip;  <a href="http://www.sfchronicle.com/raiders/article/Raiders-are-being-pulled-in-several-directions-9231139.php" onclick="trackOutboundLink('http://www.sfchronicle.com/raiders/article/Raiders-are-being-pulled-in-several-directions-9231139.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

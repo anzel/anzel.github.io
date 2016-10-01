@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>29</b></p>
 					<h3>Sonny Gray&#39;s inning is good, rest of A&#39;s night is not</h3>
-					<p><p>Oakland Athletics catcher Bruce Maxwell loses his grip on the ball while trying to throw out Los Angeles Angels&rsquo; Jeff Bandy during the fourth inning of &hellip;  <a href="http://www.sfchronicle.com/athletics/article/Sonny-Gray-s-inning-is-good-rest-of-A-s-9413805.php">more</a>.</p>
+					<p><p>Oakland Athletics catcher Bruce Maxwell loses his grip on the ball while trying to throw out Los Angeles Angels&rsquo; Jeff Bandy during the fourth inning of &hellip;  <a href="http://www.sfchronicle.com/athletics/article/Sonny-Gray-s-inning-is-good-rest-of-A-s-9413805.php" onclick="trackOutboundLink('http://www.sfchronicle.com/athletics/article/Sonny-Gray-s-inning-is-good-rest-of-A-s-9413805.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

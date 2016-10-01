@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>29</b></p>
 					<h3>New Orleans Saints vs. San Diego Chargers Preview, Prediction, Spread, Game</h3>
-					<p><p>The Spun (press release) (blog) The Saints have yet to win a game this year, opening with three straight losses to the Oakland Raiders, New York Giants, and Atlanta Falcons.  <a href="http://thespun.com/nfl/new-orleans-saints-vs-san-diego-chargers-preview">more</a>.</p>
+					<p><p>The Spun (press release) (blog) The Saints have yet to win a game this year, opening with three straight losses to the Oakland Raiders, New York Giants, and Atlanta Falcons.  <a href="http://thespun.com/nfl/new-orleans-saints-vs-san-diego-chargers-preview" onclick="trackOutboundLink('http://thespun.com/nfl/new-orleans-saints-vs-san-diego-chargers-preview'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

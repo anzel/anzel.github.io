@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>Charlotte 49ers feeling &#39;sense of urgency&#39; with Saturday&#39;s C-USA opener</h3>
-					<p><p>Charlotte Observer Charlotte football coach Brad Lambert and the 49ers finished their nonconferernce schedule with losses Eastern Michigan and Temple. They will start &hellip;  <a href="http://www.charlotteobserver.com/sports/college/article104506346.html">more</a>.</p>
+					<p><p>Charlotte Observer Charlotte football coach Brad Lambert and the 49ers finished their nonconferernce schedule with losses Eastern Michigan and Temple. They will start &hellip;  <a href="http://www.charlotteobserver.com/sports/college/article104506346.html" onclick="trackOutboundLink('http://www.charlotteobserver.com/sports/college/article104506346.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

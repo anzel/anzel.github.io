@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>Derek Carr Nominated For CastrolUSA Clutch Performer Of The Week</h3>
-					<p><p>Oakland Raiders quarterback Derek Carr has been nominated for the Castrol USA Clutch Performer Of The Week, following his impressive &hellip;  <a href="http://www.raiders.com/news/article-1/Derek-Carr-Nominated-For-CastrolUSA-Clutch-Performer-Of-The-Week-/13935b14-c118-4444-9c4d-30f31ce4f9e9">more</a>.</p>
+					<p><p>Oakland Raiders quarterback Derek Carr has been nominated for the Castrol USA Clutch Performer Of The Week, following his impressive &hellip;  <a href="http://www.raiders.com/news/article-1/Derek-Carr-Nominated-For-CastrolUSA-Clutch-Performer-Of-The-Week-/13935b14-c118-4444-9c4d-30f31ce4f9e9" onclick="trackOutboundLink('http://www.raiders.com/news/article-1/Derek-Carr-Nominated-For-CastrolUSA-Clutch-Performer-Of-The-Week-/13935b14-c118-4444-9c4d-30f31ce4f9e9'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

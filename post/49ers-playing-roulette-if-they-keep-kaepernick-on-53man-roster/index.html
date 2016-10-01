@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>01</b></p>
 					<h3>49ers playing roulette if they keep Kaepernick on 53-man roster</h3>
-					<p><p>Will the 49ers cut Colin Kaepernick? We&rsquo;ll find out in the coming days after Thursday&rsquo;s preseason finale against the San Diego Chargers. Chip Kelly &hellip;  <a href="http://www.knbr.com/2016/09/01/49ers-playing-roulette-if-they-let-kaepernick-see-the-field/">more</a>.</p>
+					<p><p>Will the 49ers cut Colin Kaepernick? We&rsquo;ll find out in the coming days after Thursday&rsquo;s preseason finale against the San Diego Chargers. Chip Kelly &hellip;  <a href="http://www.knbr.com/2016/09/01/49ers-playing-roulette-if-they-let-kaepernick-see-the-field/" onclick="trackOutboundLink('http://www.knbr.com/2016/09/01/49ers-playing-roulette-if-they-let-kaepernick-see-the-field/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

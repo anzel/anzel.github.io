@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>Scouting the 49ers: San Francisco used draft to fix defensive problems when</h3>
-					<p><p>Dallas News (blog) But the Cowboys opted not to take LSU All-American Eric Reid, instead trading down 13 spots in the first round with the San Francisco 49ers, where &hellip;  <a href="http://sportsday.dallasnews.com/dallas-cowboys/cowboys/2016/09/28/scouting-49ers-san-francisco-used-draft-fix-defensive-problems-cowboys-went-offense">more</a>.</p>
+					<p><p>Dallas News (blog) But the Cowboys opted not to take LSU All-American Eric Reid, instead trading down 13 spots in the first round with the San Francisco 49ers, where &hellip;  <a href="http://sportsday.dallasnews.com/dallas-cowboys/cowboys/2016/09/28/scouting-49ers-san-francisco-used-draft-fix-defensive-problems-cowboys-went-offense" onclick="trackOutboundLink('http://sportsday.dallasnews.com/dallas-cowboys/cowboys/2016/09/28/scouting-49ers-san-francisco-used-draft-fix-defensive-problems-cowboys-went-offense'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>15</b></p>
 					<h3>Panthers coach Ron Rivera fell asleep during 49ers-Rams game</h3>
-					<p><p>Even while preparing for the 49ers, Panthers coach Ron Rivera couldn&rsquo;t manage to stay awake long enough to finish out the ugly game Monday night &hellip;  <a href="http://ninerswire.usatoday.com/2016/09/14/panthers-coach-ron-rivera-fell-asleep-during-49ers-rams-game/">more</a>.</p>
+					<p><p>Even while preparing for the 49ers, Panthers coach Ron Rivera couldn&rsquo;t manage to stay awake long enough to finish out the ugly game Monday night &hellip;  <a href="http://ninerswire.usatoday.com/2016/09/14/panthers-coach-ron-rivera-fell-asleep-during-49ers-rams-game/" onclick="trackOutboundLink('http://ninerswire.usatoday.com/2016/09/14/panthers-coach-ron-rivera-fell-asleep-during-49ers-rams-game/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

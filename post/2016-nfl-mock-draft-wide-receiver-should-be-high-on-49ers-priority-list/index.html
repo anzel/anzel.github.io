@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>24</b></p>
 					<h3>2016 NFL mock draft: Wide receiver should be high on 49ers priority list</h3>
-					<p><p>s recent power rankings. that gives the Cleveland Browns the top pick, and the San Francisco 49ers pick No. 4. The mock draft has quarterbacks going &hellip;  <a href="http://www.ninersnation.com/2016/9/24/13034240/2016-nfl-mock-draft-49ers-wide-receivers-mike-williams">more</a>.</p>
+					<p><p>s recent power rankings. that gives the Cleveland Browns the top pick, and the San Francisco 49ers pick No. 4. The mock draft has quarterbacks going &hellip;  <a href="http://www.ninersnation.com/2016/9/24/13034240/2016-nfl-mock-draft-49ers-wide-receivers-mike-williams" onclick="trackOutboundLink('http://www.ninersnation.com/2016/9/24/13034240/2016-nfl-mock-draft-49ers-wide-receivers-mike-williams'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

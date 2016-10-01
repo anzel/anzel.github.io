@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>09</b></p>
 					<h3>Amy Trask&#39;s NFL lessons live on in her new book, &#39;You Negotiate Like A</h3>
-					<p><p>ESPN Al Davis, the late owner of the Oakland Raiders, had a long history of shepherding trailblazers, from George Blanda and John Madden, to Tom Flores &hellip;  <a href="http://www.espn.com/espnw/voices/article/17493928/amy-trask-embraces-negotiating-girl-nfl">more</a>.</p>
+					<p><p>ESPN Al Davis, the late owner of the Oakland Raiders, had a long history of shepherding trailblazers, from George Blanda and John Madden, to Tom Flores &hellip;  <a href="http://www.espn.com/espnw/voices/article/17493928/amy-trask-embraces-negotiating-girl-nfl" onclick="trackOutboundLink('http://www.espn.com/espnw/voices/article/17493928/amy-trask-embraces-negotiating-girl-nfl'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

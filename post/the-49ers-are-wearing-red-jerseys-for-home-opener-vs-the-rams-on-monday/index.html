@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>09</b></p>
 					<h3>The 49ers are wearing red jerseys for home opener vs. the Rams on Monday</h3>
-					<p><p>Niners Nation The San Francisco 49ers are wearing their cherry red jerseys for the home opener against the Los Angeles Rams. People have been repeatedly &hellip;  <a href="http://www.ninersnation.com/2016/9/9/12868182/what-color-jerseys-are-the-49ers-wearing-vs-rams-monday-night-football-red-not-black">more</a>.</p>
+					<p><p>Niners Nation The San Francisco 49ers are wearing their cherry red jerseys for the home opener against the Los Angeles Rams. People have been repeatedly &hellip;  <a href="http://www.ninersnation.com/2016/9/9/12868182/what-color-jerseys-are-the-49ers-wearing-vs-rams-monday-night-football-red-not-black" onclick="trackOutboundLink('http://www.ninersnation.com/2016/9/9/12868182/what-color-jerseys-are-the-49ers-wearing-vs-rams-monday-night-football-red-not-black'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

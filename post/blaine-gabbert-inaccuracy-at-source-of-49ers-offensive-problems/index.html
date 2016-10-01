@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>23</b></p>
 					<h3>Blaine Gabbert inaccuracy at source of 49ers&#39; offensive problems</h3>
-					<p><p>Let&rsquo;s make one thing clear from the jump: The 2016 San Francisco 49ers offense is markedly more competent than a 2015 49ers offense that wouldn&rsquo;t &hellip;  <a href="http://www.ninersnation.com/2016/9/23/13021084/blaine-gabbert-inaccuracy-49ers-offensive-problems">more</a>.</p>
+					<p><p>Let&rsquo;s make one thing clear from the jump: The 2016 San Francisco 49ers offense is markedly more competent than a 2015 49ers offense that wouldn&rsquo;t &hellip;  <a href="http://www.ninersnation.com/2016/9/23/13021084/blaine-gabbert-inaccuracy-49ers-offensive-problems" onclick="trackOutboundLink('http://www.ninersnation.com/2016/9/23/13021084/blaine-gabbert-inaccuracy-49ers-offensive-problems'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

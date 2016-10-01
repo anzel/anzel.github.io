@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>07</b></p>
 					<h3>Sports digest: Jared Goff to be inactive against 49ers, L.A. Rams confirm</h3>
-					<p><p>2 quarterback behind starter Case Keenum against the 49ers. That meant Goff probably would be inactive for the opener because teams have only 46 &hellip;  <a href="http://www.mercurynews.com/sports/ci_30335767/sports-digest-jared-goff-be-inactive-against-49ers">more</a>.</p>
+					<p><p>2 quarterback behind starter Case Keenum against the 49ers. That meant Goff probably would be inactive for the opener because teams have only 46 &hellip;  <a href="http://www.mercurynews.com/sports/ci_30335767/sports-digest-jared-goff-be-inactive-against-49ers" onclick="trackOutboundLink('http://www.mercurynews.com/sports/ci_30335767/sports-digest-jared-goff-be-inactive-against-49ers'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

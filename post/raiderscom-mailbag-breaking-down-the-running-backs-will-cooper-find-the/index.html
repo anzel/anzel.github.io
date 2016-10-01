@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Oct<b>01</b></p>
 					<h3>Raiders.com Mailbag: Breaking Down The Running Backs, Will Cooper Find The</h3>
-					<p><p>Raiders.com Oakland Raiders Week 4 Injury Report: Trio Of Raiders Ruled Out Of &hellip; Oakland Raiders Depart For Baltimore &hellip; 2016 by The Oakland Raiders.  <a href="http://www.raiders.com/news/article-1/Raiderscom-Mailbag-Breaking-Down-The-Running-Backs-Will-Cooper-Find-The-End-Zone/659e62c2-5a8a-45be-9cff-4e7c9b792cda">more</a>.</p>
+					<p><p>Raiders.com Oakland Raiders Week 4 Injury Report: Trio Of Raiders Ruled Out Of &hellip; Oakland Raiders Depart For Baltimore &hellip; 2016 by The Oakland Raiders.  <a href="http://www.raiders.com/news/article-1/Raiderscom-Mailbag-Breaking-Down-The-Running-Backs-Will-Cooper-Find-The-End-Zone/659e62c2-5a8a-45be-9cff-4e7c9b792cda" onclick="trackOutboundLink('http://www.raiders.com/news/article-1/Raiderscom-Mailbag-Breaking-Down-The-Running-Backs-Will-Cooper-Find-The-End-Zone/659e62c2-5a8a-45be-9cff-4e7c9b792cda'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

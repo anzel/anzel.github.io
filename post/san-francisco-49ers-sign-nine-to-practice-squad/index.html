@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>05</b></p>
 					<h3>San Francisco 49ers sign nine to practice squad</h3>
-					<p><p>The San Francisco 49ers have announced the signing of players who will be part of their practice squad, and there&rsquo;s one more expected to join them &hellip;  <a href="http://sfo.247sports.com/Gallery/San-Francisco-49ers-sign-nine-to-practice-squad-Kelvin-Taylor-Ma-47180761">more</a>.</p>
+					<p><p>The San Francisco 49ers have announced the signing of players who will be part of their practice squad, and there&rsquo;s one more expected to join them &hellip;  <a href="http://sfo.247sports.com/Gallery/San-Francisco-49ers-sign-nine-to-practice-squad-Kelvin-Taylor-Ma-47180761" onclick="trackOutboundLink('http://sfo.247sports.com/Gallery/San-Francisco-49ers-sign-nine-to-practice-squad-Kelvin-Taylor-Ma-47180761'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

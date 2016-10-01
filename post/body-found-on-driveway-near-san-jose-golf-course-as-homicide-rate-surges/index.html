@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>21</b></p>
 					<h3>Body Found on Driveway Near San Jose Golf Course as Homicide Rate Surges:</h3>
-					<p><p>NBC Bay Area San Jose police acknowledge that they have their hands full dealing with a surge in homicide cases. The latest came early Tuesday morning when a &hellip;  <a href="http://www.nbcbayarea.com/news/local/Body-Found-in-sidewalk-of-San-Jose-Home-Near-Encampment-Golf-Course-394139361.html">more</a>.</p>
+					<p><p>NBC Bay Area San Jose police acknowledge that they have their hands full dealing with a surge in homicide cases. The latest came early Tuesday morning when a &hellip;  <a href="http://www.nbcbayarea.com/news/local/Body-Found-in-sidewalk-of-San-Jose-Home-Near-Encampment-Golf-Course-394139361.html" onclick="trackOutboundLink('http://www.nbcbayarea.com/news/local/Body-Found-in-sidewalk-of-San-Jose-Home-Near-Encampment-Golf-Course-394139361.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

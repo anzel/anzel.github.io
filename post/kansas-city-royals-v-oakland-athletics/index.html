@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>11</b></p>
 					<h3>Kansas City Royals V Oakland Athletics</h3>
-					<p><p>Your best bet for Baseball markets.  <a href="https://www.skybet.com/baseball/mlb/event/19752540">more</a>.</p>
+					<p><p>Your best bet for Baseball markets.  <a href="https://www.skybet.com/baseball/mlb/event/19752540" onclick="trackOutboundLink('https://www.skybet.com/baseball/mlb/event/19752540'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

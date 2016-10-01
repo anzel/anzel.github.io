@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>MLB Rookie Report: Jharel Cotton, RHP, Oakland Athletics</h3>
-					<p><p>Right-hander Jharel Cotton made his major league debut for the Oakland Athletics last night, throwing 6.1 effective innings against the Los Angeles &hellip;  <a href="http://www.minorleagueball.com/2016/9/8/12840412/mlb-rookie-report-jharel-cotton-rhp-oakland-athletics">more</a>.</p>
+					<p><p>Right-hander Jharel Cotton made his major league debut for the Oakland Athletics last night, throwing 6.1 effective innings against the Los Angeles &hellip;  <a href="http://www.minorleagueball.com/2016/9/8/12840412/mlb-rookie-report-jharel-cotton-rhp-oakland-athletics" onclick="trackOutboundLink('http://www.minorleagueball.com/2016/9/8/12840412/mlb-rookie-report-jharel-cotton-rhp-oakland-athletics'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

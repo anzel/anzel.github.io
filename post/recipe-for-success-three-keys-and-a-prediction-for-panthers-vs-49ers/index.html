@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>Recipe for success: Three keys and a prediction for Panthers vs 49ers</h3>
-					<p><p>Recipe for success: Three keys and a prediction for Panthers vs 49ers &hellip; field quickly and it will help the offense by wearing that 49ers defense down.  <a href="http://www.wcnc.com/sports/nfl/panthers/recipe-for-success-three-keys-and-a-prediction-for-panthers-vs-49ers/320420215">more</a>.</p>
+					<p><p>Recipe for success: Three keys and a prediction for Panthers vs 49ers &hellip; field quickly and it will help the offense by wearing that 49ers defense down.  <a href="http://www.wcnc.com/sports/nfl/panthers/recipe-for-success-three-keys-and-a-prediction-for-panthers-vs-49ers/320420215" onclick="trackOutboundLink('http://www.wcnc.com/sports/nfl/panthers/recipe-for-success-three-keys-and-a-prediction-for-panthers-vs-49ers/320420215'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>49ers&#39; Vance McDonald: Listed as only starter at tight end</h3>
-					<p><p>McDonald was listed as the only starting tight end on the first unofficial depth chart released by the 49ers on Tuesday, CSN Bay Area reports.  <a href="http://www.cbssports.com/fantasy/football/news/49ers-vance-mcdonald-listed-as-only-starter-at-tight-end/">more</a>.</p>
+					<p><p>McDonald was listed as the only starting tight end on the first unofficial depth chart released by the 49ers on Tuesday, CSN Bay Area reports.  <a href="http://www.cbssports.com/fantasy/football/news/49ers-vance-mcdonald-listed-as-only-starter-at-tight-end/" onclick="trackOutboundLink('http://www.cbssports.com/fantasy/football/news/49ers-vance-mcdonald-listed-as-only-starter-at-tight-end/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

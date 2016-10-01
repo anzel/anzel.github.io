@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>03</b></p>
 					<h3>Police Union Threatens to Stop Working Unless 49ers Take Action</h3>
-					<p><p>promising to stop working the games unless the team &ldquo;takes action&rdquo; against &hellip;  <a href="http://thefreethoughtproject.com/police-threaten-49ers-action-kaepernick/">more</a>.</p>
+					<p><p>promising to stop working the games unless the team &ldquo;takes action&rdquo; against &hellip;  <a href="http://thefreethoughtproject.com/police-threaten-49ers-action-kaepernick/" onclick="trackOutboundLink('http://thefreethoughtproject.com/police-threaten-49ers-action-kaepernick/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

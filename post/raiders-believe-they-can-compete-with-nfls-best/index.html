@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>11</b></p>
 					<h3>Raiders believe they can compete with NFL&#39;s best</h3>
-					<p><p>NEW ORLEANS  Former Raiders safety Charles Woodson, in his new job as ESPN analyst, shocked the world last week when he picked Oakland to &hellip;  <a href="http://www.sfgate.com/raiders/article/Raiders-believe-they-can-compete-with-NFL-s-best-9215236.php">more</a>.</p>
+					<p><p>NEW ORLEANS  Former Raiders safety Charles Woodson, in his new job as ESPN analyst, shocked the world last week when he picked Oakland to &hellip;  <a href="http://www.sfgate.com/raiders/article/Raiders-believe-they-can-compete-with-NFL-s-best-9215236.php" onclick="trackOutboundLink('http://www.sfgate.com/raiders/article/Raiders-believe-they-can-compete-with-NFL-s-best-9215236.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -75,7 +84,7 @@
 					<p class="date">Sep<b>27</b></p>
 					<h3>Baseball to Host Homecoming Events Next Weekend</h3>
 					<p><ol>
-<li>Recap; Final Stats. Mar 05 - Final. BASE. Charlotte. 6. Kent State. 11.  <a href="http://charlotte49ers.com/news/2016/9/27/baseball-to-host-homecoming-events-friday-saturday.aspx">more</a>.</li>
+<li>Recap; Final Stats. Mar 05 - Final. BASE. Charlotte. 6. Kent State. 11.  <a href="http://charlotte49ers.com/news/2016/9/27/baseball-to-host-homecoming-events-friday-saturday.aspx" onclick="trackOutboundLink('http://charlotte49ers.com/news/2016/9/27/baseball-to-host-homecoming-events-friday-saturday.aspx'); return false;">more</a>.</li>
 </ol>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>

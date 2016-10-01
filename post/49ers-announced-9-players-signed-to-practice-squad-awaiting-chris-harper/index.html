@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>04</b></p>
 					<h3>49ers announced 9 players signed to practice squad, awaiting Chris Harper</h3>
-					<p><p>The San Francisco 49ers announced nine signings to the 2016 practice squad on Sunday morning. The team could begin signing players at 10 a.m. &hellip;  <a href="http://www.ninersnation.com/2016/9/4/12793846/49ers-practice-squad-signings-dres-anderson-alex-balducci-chris-harper">more</a>.</p>
+					<p><p>The San Francisco 49ers announced nine signings to the 2016 practice squad on Sunday morning. The team could begin signing players at 10 a.m. &hellip;  <a href="http://www.ninersnation.com/2016/9/4/12793846/49ers-practice-squad-signings-dres-anderson-alex-balducci-chris-harper" onclick="trackOutboundLink('http://www.ninersnation.com/2016/9/4/12793846/49ers-practice-squad-signings-dres-anderson-alex-balducci-chris-harper'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

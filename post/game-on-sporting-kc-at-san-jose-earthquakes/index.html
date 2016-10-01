@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>24</b></p>
 					<h3>Game On: Sporting KC at San Jose Earthquakes</h3>
-					<p><p>Sporting Kansas City looks to break a 16-year drought on Saturday when they travel to California to take on the San Jose Earthquakes. Sporting KC &hellip;  <a href="http://www.sportingkc.com/post/2016/09/24/game-sporting-kc-san-jose-earthquakes-september-24-2016">more</a>.</p>
+					<p><p>Sporting Kansas City looks to break a 16-year drought on Saturday when they travel to California to take on the San Jose Earthquakes. Sporting KC &hellip;  <a href="http://www.sportingkc.com/post/2016/09/24/game-sporting-kc-san-jose-earthquakes-september-24-2016" onclick="trackOutboundLink('http://www.sportingkc.com/post/2016/09/24/game-sporting-kc-san-jose-earthquakes-september-24-2016'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

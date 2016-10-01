@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>07</b></p>
 					<h3>Oakland Raiders: The Bestsand the Worst in 2016</h3>
-					<p><p>Here we take a look at how the Oakland Raiders prepared for 2016. &hellip; Arizona Cardinals and we are now on our 24th team in the Oakland Raiders.  <a href="http://nflspinzone.com/2016/09/07/oakland-raiders-bestsand-worst-2016/">more</a>.</p>
+					<p><p>Here we take a look at how the Oakland Raiders prepared for 2016. &hellip; Arizona Cardinals and we are now on our 24th team in the Oakland Raiders.  <a href="http://nflspinzone.com/2016/09/07/oakland-raiders-bestsand-worst-2016/" onclick="trackOutboundLink('http://nflspinzone.com/2016/09/07/oakland-raiders-bestsand-worst-2016/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

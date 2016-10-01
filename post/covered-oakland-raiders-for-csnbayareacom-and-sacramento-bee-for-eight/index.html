@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>21</b></p>
 					<h3>Covered Oakland Raiders for CSNBayArea.com and Sacramento Bee for eight</h3>
-					<p><p>ESPN (blog) ALAMEDA, Calif. &ndash; The Oakland Raiders are licking their wounds after a pride-stunning 35-28 loss to the Atlanta Falcons in their home opener.  <a href="http://www.espn.com/blog/oakland-raiders/post/_/id/15789/can-the-raiders-regain-momentum-vs-titans">more</a>.</p>
+					<p><p>ESPN (blog) ALAMEDA, Calif. &ndash; The Oakland Raiders are licking their wounds after a pride-stunning 35-28 loss to the Atlanta Falcons in their home opener.  <a href="http://www.espn.com/blog/oakland-raiders/post/_/id/15789/can-the-raiders-regain-momentum-vs-titans" onclick="trackOutboundLink('http://www.espn.com/blog/oakland-raiders/post/_/id/15789/can-the-raiders-regain-momentum-vs-titans'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>Mr. Versatility: 49ers DC says Eric Reid could play ... defensive end</h3>
-					<p><p>Niners defensive coordinator Jim O&rsquo;Neil plans to take full advantage of safety Eric Reid&rsquo;s versatility in 2016. We&rsquo;ll go through this season and Eric, &hellip;  <a href="http://www.sfgate.com/49ers/article/Mr-Versatility-O-Neil-said-Reid-could-play-9222809.php">more</a>.</p>
+					<p><p>Niners defensive coordinator Jim O&rsquo;Neil plans to take full advantage of safety Eric Reid&rsquo;s versatility in 2016. We&rsquo;ll go through this season and Eric, &hellip;  <a href="http://www.sfgate.com/49ers/article/Mr-Versatility-O-Neil-said-Reid-could-play-9222809.php" onclick="trackOutboundLink('http://www.sfgate.com/49ers/article/Mr-Versatility-O-Neil-said-Reid-could-play-9222809.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

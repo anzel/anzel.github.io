@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>Raiders make &#39;tough decision&#39; to cut Marcel Reece</h3>
-					<p><p>&ldquo;What he has meant to the organization and to me over the past few years is hard to put into words, but his actions, both on and off the field, speak &hellip;  <a href="http://www.nfl.com/news/story/0ap3000000710447/article/raiders-make-tough-decision-to-cut-marcel-reece">more</a>.</p>
+					<p><p>&ldquo;What he has meant to the organization and to me over the past few years is hard to put into words, but his actions, both on and off the field, speak &hellip;  <a href="http://www.nfl.com/news/story/0ap3000000710447/article/raiders-make-tough-decision-to-cut-marcel-reece" onclick="trackOutboundLink('http://www.nfl.com/news/story/0ap3000000710447/article/raiders-make-tough-decision-to-cut-marcel-reece'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

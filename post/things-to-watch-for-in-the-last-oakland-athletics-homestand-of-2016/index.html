@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>Things to watch for in the last Oakland Athletics homestand of 2016</h3>
-					<p><p>The Oakland Athletics season has not been good and there has not been much of a reason to watch it. Oakland is 65-83 and is already eliminated &hellip;  <a href="http://isportsweb.com/2016/09/18/things-watch-last-oakland-athletics-homestand-2016/">more</a>.</p>
+					<p><p>The Oakland Athletics season has not been good and there has not been much of a reason to watch it. Oakland is 65-83 and is already eliminated &hellip;  <a href="http://isportsweb.com/2016/09/18/things-watch-last-oakland-athletics-homestand-2016/" onclick="trackOutboundLink('http://isportsweb.com/2016/09/18/things-watch-last-oakland-athletics-homestand-2016/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

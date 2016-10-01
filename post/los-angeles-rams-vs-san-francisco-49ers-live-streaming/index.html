@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>Los Angeles Rams vs San Francisco 49ers Live Streaming</h3>
-					<p><p>Online/WebCast.. 12/9/2016. United States. Where.,/,.to.,/,.Watch.,/,.San.,/,.Francisco.  <a href="http://www.brownpapertickets.com/profile/2227997">more</a>.</p>
+					<p><p>Online/WebCast.. 12/9/2016. United States. Where.,/,.to.,/,.Watch.,/,.San.,/,.Francisco.  <a href="http://www.brownpapertickets.com/profile/2227997" onclick="trackOutboundLink('http://www.brownpapertickets.com/profile/2227997'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>VTA expected to sell 2500 49ers train tickets to Levi&#39;s, have only sold 11</h3>
-					<p><p>The 49ers can count on 11 fans coming to tonight&rsquo;s game, and possibly no more. Santa Clara VTA has only sold 11 49ers Express Train season &hellip;  <a href="http://www.sfgate.com/49ers/article/VTA-49ers-express-train-tickets-sales-9217741.php">more</a>.</p>
+					<p><p>The 49ers can count on 11 fans coming to tonight&rsquo;s game, and possibly no more. Santa Clara VTA has only sold 11 49ers Express Train season &hellip;  <a href="http://www.sfgate.com/49ers/article/VTA-49ers-express-train-tickets-sales-9217741.php" onclick="trackOutboundLink('http://www.sfgate.com/49ers/article/VTA-49ers-express-train-tickets-sales-9217741.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

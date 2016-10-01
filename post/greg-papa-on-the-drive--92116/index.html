@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>21</b></p>
 					<h3>Greg Papa on The Drive  9/21/16</h3>
-					<p><p>OAKLAND, CA - SEPTEMBER 18: Jamize Olawale #49 of the Oakland Raiders rusn with the ball against the Atlanta Falcons during their NFL game at &hellip;  <a href="http://sacramento.cbslocal.com/2016/09/21/greg-papa-on-the-drive-92116/">more</a>.</p>
+					<p><p>OAKLAND, CA - SEPTEMBER 18: Jamize Olawale #49 of the Oakland Raiders rusn with the ball against the Atlanta Falcons during their NFL game at &hellip;  <a href="http://sacramento.cbslocal.com/2016/09/21/greg-papa-on-the-drive-92116/" onclick="trackOutboundLink('http://sacramento.cbslocal.com/2016/09/21/greg-papa-on-the-drive-92116/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>13</b></p>
 					<h3>Despite Bold Win, Oakland Raiders Coach Jack Del Rio Says He&#39;s Not A</h3>
-					<p><p>CBS Local ALAMEDA, Calif. (AP)  The most daring gambler on the NFL&rsquo;s first weekend turns out not to be much of a betting man at all. Raiders coach Jack Del &hellip;  <a href="http://sacramento.cbslocal.com/2016/09/13/despite-bold-win-oakland-raiders-coach-jack-del-rio-says-hes-not-a-gambler/">more</a>.</p>
+					<p><p>CBS Local ALAMEDA, Calif. (AP)  The most daring gambler on the NFL&rsquo;s first weekend turns out not to be much of a betting man at all. Raiders coach Jack Del &hellip;  <a href="http://sacramento.cbslocal.com/2016/09/13/despite-bold-win-oakland-raiders-coach-jack-del-rio-says-hes-not-a-gambler/" onclick="trackOutboundLink('http://sacramento.cbslocal.com/2016/09/13/despite-bold-win-oakland-raiders-coach-jack-del-rio-says-hes-not-a-gambler/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

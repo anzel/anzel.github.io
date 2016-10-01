@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>22</b></p>
 					<h3>WATCH: Attackers to Watch - Sporting KC&#39;s Dom Dwyer</h3>
-					<p><p>stop Sporting KC&rsquo;s attacker Dom Dwyer Saturday night at Avaya &hellip;  <a href="http://www.sjearthquakes.com/post/2016/09/22/watch-attackers-watch-sporting-kcs-dom-dwyer">more</a>.</p>
+					<p><p>stop Sporting KC&rsquo;s attacker Dom Dwyer Saturday night at Avaya &hellip;  <a href="http://www.sjearthquakes.com/post/2016/09/22/watch-attackers-watch-sporting-kcs-dom-dwyer" onclick="trackOutboundLink('http://www.sjearthquakes.com/post/2016/09/22/watch-attackers-watch-sporting-kcs-dom-dwyer'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

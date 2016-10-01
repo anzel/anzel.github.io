@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>15</b></p>
 					<h3>Some 49ers grumbling about Colin Kaepernick taking spotlight</h3>
-					<p><p>I like the commentary but why throw this line in there when football players are obviously saying what is in their heart and not what they&rsquo;re told to say?  <a href="http://49ers.pressdemocrat.com/49ers-grumbling-colin-kaepernick-taking-spotlight/">more</a>.</p>
+					<p><p>I like the commentary but why throw this line in there when football players are obviously saying what is in their heart and not what they&rsquo;re told to say?  <a href="http://49ers.pressdemocrat.com/49ers-grumbling-colin-kaepernick-taking-spotlight/" onclick="trackOutboundLink('http://49ers.pressdemocrat.com/49ers-grumbling-colin-kaepernick-taking-spotlight/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

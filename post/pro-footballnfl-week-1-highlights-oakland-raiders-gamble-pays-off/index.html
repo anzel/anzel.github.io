@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>11</b></p>
 					<h3>Pro Football-NFL Week 1 Highlights: Oakland Raiders&#39; Gamble Pays Off</h3>
-					<p><p>Following a touchdown late in the fourth quarter, Coach Jack Del Rio of the Oakland Raiders decided he had no interest in going to overtime against &hellip;  <a href="http://www.nytimes.com/2016/09/11/sports/nfl-scores-schedule.html">more</a>.</p>
+					<p><p>Following a touchdown late in the fourth quarter, Coach Jack Del Rio of the Oakland Raiders decided he had no interest in going to overtime against &hellip;  <a href="http://www.nytimes.com/2016/09/11/sports/nfl-scores-schedule.html" onclick="trackOutboundLink('http://www.nytimes.com/2016/09/11/sports/nfl-scores-schedule.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

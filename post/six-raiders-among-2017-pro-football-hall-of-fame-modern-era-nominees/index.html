@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>Six Raiders among 2017 Pro Football Hall of Fame modern era nominees</h3>
-					<p><p>The Pro Football Hall of Fame announced their nominees for the class of 2017 Wednesday. Among the list of 94 nominees are six former Raiders.  <a href="http://www.silverandblackpride.com/2016/9/14/12924402/six-raiders-among-2017-pro-football-hall-of-fame-modern-era-nominees">more</a>.</p>
+					<p><p>The Pro Football Hall of Fame announced their nominees for the class of 2017 Wednesday. Among the list of 94 nominees are six former Raiders.  <a href="http://www.silverandblackpride.com/2016/9/14/12924402/six-raiders-among-2017-pro-football-hall-of-fame-modern-era-nominees" onclick="trackOutboundLink('http://www.silverandblackpride.com/2016/9/14/12924402/six-raiders-among-2017-pro-football-hall-of-fame-modern-era-nominees'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

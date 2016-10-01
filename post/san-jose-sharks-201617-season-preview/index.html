@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>San Jose Sharks 2016-17 Season Preview</h3>
-					<p><p>Last season, the San Jose Sharks put together their best season ever. While the regular season was nothing special, the Sharks&rsquo; impressive &hellip;  <a href="http://thehockeywriters.com/san-jose-sharks-2016-17-season-preview/">more</a>.</p>
+					<p><p>Last season, the San Jose Sharks put together their best season ever. While the regular season was nothing special, the Sharks&rsquo; impressive &hellip;  <a href="http://thehockeywriters.com/san-jose-sharks-2016-17-season-preview/" onclick="trackOutboundLink('http://thehockeywriters.com/san-jose-sharks-2016-17-season-preview/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

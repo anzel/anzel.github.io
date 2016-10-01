@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>29</b></p>
 					<h3>Keys to the game: Cowboys vs. 49ers (Week 4)</h3>
-					<p><p>It&rsquo;ll be the 34th time in NFL history the two hated rivals clash, with the Niners owning the edge by a single victory: 17-16-1. On Sunday, the Cowboys &hellip;  <a href="http://dal.247sports.com/Bolt/Keys-to-the-game-Cowboys-vs-49ers-Week-4-47867128">more</a>.</p>
+					<p><p>It&rsquo;ll be the 34th time in NFL history the two hated rivals clash, with the Niners owning the edge by a single victory: 17-16-1. On Sunday, the Cowboys &hellip;  <a href="http://dal.247sports.com/Bolt/Keys-to-the-game-Cowboys-vs-49ers-Week-4-47867128" onclick="trackOutboundLink('http://dal.247sports.com/Bolt/Keys-to-the-game-Cowboys-vs-49ers-Week-4-47867128'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

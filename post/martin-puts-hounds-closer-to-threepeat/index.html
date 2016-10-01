@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>15</b></p>
 					<h3>Martin puts &#39;Hounds closer to three-peat</h3>
-					<p><p>Richie Martin&rsquo;s productive night at the dish Wednesday pushed Double-A Midland within a victory of becoming the first team to win three straight Texas &hellip;  <a href="http://www.milb.com/news/article.jsp?ymd=20160914&amp;content_id=201429538&amp;fext=.jsp&amp;vkey=news_l109">more</a>.</p>
+					<p><p>Richie Martin&rsquo;s productive night at the dish Wednesday pushed Double-A Midland within a victory of becoming the first team to win three straight Texas &hellip;  <a href="http://www.milb.com/news/article.jsp?ymd=20160914&content_id=201429538&fext=.jsp&vkey=news_l109" onclick="trackOutboundLink('http://www.milb.com/news/article.jsp?ymd=20160914&content_id=201429538&fext=.jsp&vkey=news_l109'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>Quick Hits: Derek Carr Excited To Battle A Tough Ravens Defense</h3>
-					<p><p>Third-year quarterback Derek Carr is excited to lead the Oakland Raiders into battle against the Baltimore Ravens this Sunday, here are the quick hit&rsquo;s &hellip;  <a href="http://www.raiders.com/news/article-1/Quick-Hits-Derek-Carr-Excited-To-Battle-A-Tough-Ravens-Defense/77eaef4b-559e-44a2-ba0d-7a1db7282bbd">more</a>.</p>
+					<p><p>Third-year quarterback Derek Carr is excited to lead the Oakland Raiders into battle against the Baltimore Ravens this Sunday, here are the quick hit&rsquo;s &hellip;  <a href="http://www.raiders.com/news/article-1/Quick-Hits-Derek-Carr-Excited-To-Battle-A-Tough-Ravens-Defense/77eaef4b-559e-44a2-ba0d-7a1db7282bbd" onclick="trackOutboundLink('http://www.raiders.com/news/article-1/Quick-Hits-Derek-Carr-Excited-To-Battle-A-Tough-Ravens-Defense/77eaef4b-559e-44a2-ba0d-7a1db7282bbd'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

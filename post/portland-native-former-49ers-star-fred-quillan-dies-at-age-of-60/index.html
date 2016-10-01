@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>16</b></p>
 					<h3>Portland native, former 49ers star Fred Quillan dies at age of 60</h3>
-					<p><p>Quillan was a center on the 49ers&rsquo; offensive line that was a part of two Super Bowl champion teams in 1981 and 1984. He got to snap the ball to Joe &hellip;  <a href="http://www.kgw.com/sports/portland-native-former-49er-fred-quillan-dies/319297291">more</a>.</p>
+					<p><p>Quillan was a center on the 49ers&rsquo; offensive line that was a part of two Super Bowl champion teams in 1981 and 1984. He got to snap the ball to Joe &hellip;  <a href="http://www.kgw.com/sports/portland-native-former-49er-fred-quillan-dies/319297291" onclick="trackOutboundLink('http://www.kgw.com/sports/portland-native-former-49er-fred-quillan-dies/319297291'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

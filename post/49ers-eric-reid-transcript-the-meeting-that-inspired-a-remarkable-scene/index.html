@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>02</b></p>
 					<h3>49ers&#39; Eric Reid transcript: The meeting that inspired a remarkable scene</h3>
-					<p><p>And Reid explained how it unfolded after the 49ers&rsquo; preseason finale Thursday. The meeting was launched when Boyer, 35, penned a thoughtful open &hellip;  <a href="http://www.sfgate.com/49ers/article/49ers-Eric-Reid-transcript-The-meeting-that-9199428.php">more</a>.</p>
+					<p><p>And Reid explained how it unfolded after the 49ers&rsquo; preseason finale Thursday. The meeting was launched when Boyer, 35, penned a thoughtful open &hellip;  <a href="http://www.sfgate.com/49ers/article/49ers-Eric-Reid-transcript-The-meeting-that-9199428.php" onclick="trackOutboundLink('http://www.sfgate.com/49ers/article/49ers-Eric-Reid-transcript-The-meeting-that-9199428.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

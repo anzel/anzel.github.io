@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>26</b></p>
 					<h3>Team of the Week: Kevin Ellis and Tim Melia deliver big performances in 2-1</h3>
-					<p><p>Sporting Kansas City Facing the San Jose Earthquakes in a pivotal Western Conference clash at Avaya Stadium, Melia produced three superb saves and Ellis scored &hellip;  <a href="http://www.sportingkc.com/post/2016/09/26/team-week-kevin-ellis-and-tim-melia-deliver-big-performances-2-1-win-over-san-jose">more</a>.</p>
+					<p><p>Sporting Kansas City Facing the San Jose Earthquakes in a pivotal Western Conference clash at Avaya Stadium, Melia produced three superb saves and Ellis scored &hellip;  <a href="http://www.sportingkc.com/post/2016/09/26/team-week-kevin-ellis-and-tim-melia-deliver-big-performances-2-1-win-over-san-jose" onclick="trackOutboundLink('http://www.sportingkc.com/post/2016/09/26/team-week-kevin-ellis-and-tim-melia-deliver-big-performances-2-1-win-over-san-jose'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

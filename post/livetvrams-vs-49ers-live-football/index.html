@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>[Live-tv]Rams vs 49ers Live Football.</h3>
-					<p><p>decidercomsan-francisco-49ers-vs-los-angeles-rams-live-stream-how-to- &hellip;  <a href="http://www.swalwellforcongress.com/hitsinmen/_l_i_v_e_t_v_rams_v_s_49ers_l_i_v_e_f_o_o_t_b_a_l_l">more</a>.</p>
+					<p><p>decidercomsan-francisco-49ers-vs-los-angeles-rams-live-stream-how-to- &hellip;  <a href="http://www.swalwellforcongress.com/hitsinmen/_l_i_v_e_t_v_rams_v_s_49ers_l_i_v_e_f_o_o_t_b_a_l_l" onclick="trackOutboundLink('http://www.swalwellforcongress.com/hitsinmen/_l_i_v_e_t_v_rams_v_s_49ers_l_i_v_e_f_o_o_t_b_a_l_l'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

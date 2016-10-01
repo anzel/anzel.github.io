@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>49ers add to receiving corps, sign Keshawn Martin</h3>
-					<p><p>The 49ers aren&rsquo;t exactly what you&rsquo;d call overburdened with offensive firepower at the moment. So they made an addition to their receiving core, &hellip;  <a href="http://profootballtalk.nbcsports.com/2016/09/27/49ers-add-to-receiving-corps-sign-keshawn-martin/">more</a>.</p>
+					<p><p>The 49ers aren&rsquo;t exactly what you&rsquo;d call overburdened with offensive firepower at the moment. So they made an addition to their receiving core, &hellip;  <a href="http://profootballtalk.nbcsports.com/2016/09/27/49ers-add-to-receiving-corps-sign-keshawn-martin/" onclick="trackOutboundLink('http://profootballtalk.nbcsports.com/2016/09/27/49ers-add-to-receiving-corps-sign-keshawn-martin/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

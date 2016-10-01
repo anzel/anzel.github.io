@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>01</b></p>
 					<h3>John Clayton gives 8 reasons the 49ers might be better than people think</h3>
-					<p><p>The close of the preseason Thursday evening means we will be just over a week away from the San Francisco 49ers taking the field in a regular &hellip;  <a href="http://www.ninersnation.com/2016/9/1/12748920/john-clayton-8-reasons-the-49ers-might-be-better-than-people-think">more</a>.</p>
+					<p><p>The close of the preseason Thursday evening means we will be just over a week away from the San Francisco 49ers taking the field in a regular &hellip;  <a href="http://www.ninersnation.com/2016/9/1/12748920/john-clayton-8-reasons-the-49ers-might-be-better-than-people-think" onclick="trackOutboundLink('http://www.ninersnation.com/2016/9/1/12748920/john-clayton-8-reasons-the-49ers-might-be-better-than-people-think'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

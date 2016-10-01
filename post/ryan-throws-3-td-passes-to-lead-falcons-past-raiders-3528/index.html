@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>20</b></p>
 					<h3>Ryan throws 3 TD passes to lead Falcons past Raiders 35-28</h3>
-					<p><p>Oakland Raiders head coach Jack Del Rio walks on the field during the &hellip; Atlanta Falcons wide receiver Julio Jones (11) runs past Oakland Raiders &hellip;  <a href="http://missoulian.com/sports/football/professional/ryan-throws-td-passes-to-lead-falcons-past-raiders/article_298938e9-536c-55e4-aa45-3192d2aba4a1.html">more</a>.</p>
+					<p><p>Oakland Raiders head coach Jack Del Rio walks on the field during the &hellip; Atlanta Falcons wide receiver Julio Jones (11) runs past Oakland Raiders &hellip;  <a href="http://missoulian.com/sports/football/professional/ryan-throws-td-passes-to-lead-falcons-past-raiders/article_298938e9-536c-55e4-aa45-3192d2aba4a1.html" onclick="trackOutboundLink('http://missoulian.com/sports/football/professional/ryan-throws-td-passes-to-lead-falcons-past-raiders/article_298938e9-536c-55e4-aa45-3192d2aba4a1.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

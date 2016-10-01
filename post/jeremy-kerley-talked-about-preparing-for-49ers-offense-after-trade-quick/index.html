@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>17</b></p>
 					<h3>Jeremy Kerley talked about preparing for 49ers offense after trade, quick</h3>
-					<p><p>Niners Nation The San Francisco 49ers slot receiver led the team in receptions and yards after only joining the team a couple weeks before. He discussed it in a &hellip;  <a href="http://www.ninersnation.com/2016/9/17/12953156/jeremy-kerley-trade-49ers-offense-chip-kelly">more</a>.</p>
+					<p><p>Niners Nation The San Francisco 49ers slot receiver led the team in receptions and yards after only joining the team a couple weeks before. He discussed it in a &hellip;  <a href="http://www.ninersnation.com/2016/9/17/12953156/jeremy-kerley-trade-49ers-offense-chip-kelly" onclick="trackOutboundLink('http://www.ninersnation.com/2016/9/17/12953156/jeremy-kerley-trade-49ers-offense-chip-kelly'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

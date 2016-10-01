@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>05</b></p>
 					<h3>Sports Night: 49ers rely on towers</h3>
-					<p><p>49ers: Team expects big things from towering Armstead and Buckner. Defensive linemen Arik Armstead and DeForest Buckner, first-round picks by the &hellip;  <a href="http://www.sacbee.com/sports/article100024357.html">more</a>.</p>
+					<p><p>49ers: Team expects big things from towering Armstead and Buckner. Defensive linemen Arik Armstead and DeForest Buckner, first-round picks by the &hellip;  <a href="http://www.sacbee.com/sports/article100024357.html" onclick="trackOutboundLink('http://www.sacbee.com/sports/article100024357.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

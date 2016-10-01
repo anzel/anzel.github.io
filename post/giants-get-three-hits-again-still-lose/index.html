@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>02</b></p>
 					<h3>Giants get three hits again, still lose</h3>
-					<p><p>&hellip; 5-4  Watch this depressing Giants video from 1985  SF Giants Minor Lines, <sup>8</sup>&frasl;<sub>31</sub>  Open GameThread, <sup>9</sup>&frasl;<sub>1</sub>  Giants win, 4-2, gain ground on Dodgers &hellip;  <a href="http://www.mccoveychronicles.com/2016/9/2/12777586/sf-giants-recap">more</a>.</p>
+					<p><p>&hellip; 5-4  Watch this depressing Giants video from 1985  SF Giants Minor Lines, <sup>8</sup>&frasl;<sub>31</sub>  Open GameThread, <sup>9</sup>&frasl;<sub>1</sub>  Giants win, 4-2, gain ground on Dodgers &hellip;  <a href="http://www.mccoveychronicles.com/2016/9/2/12777586/sf-giants-recap" onclick="trackOutboundLink('http://www.mccoveychronicles.com/2016/9/2/12777586/sf-giants-recap'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

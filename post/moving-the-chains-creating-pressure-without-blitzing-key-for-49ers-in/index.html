@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>24</b></p>
 					<h3>Moving the chains, creating pressure without blitzing key for 49ers in</h3>
-					<p><p>ESPN (blog) Darren Woodson and Herm Edwards both predict Russell Wilson and the Seahawks&rsquo; offense will finally get it together in Week 3 against the 49ers.  <a href="http://www.espn.com/blog/nflnation/post/_/id/215315/moving-the-chains-creating-pressure-without-blitzing-key-for-49ers-in-seattle">more</a>.</p>
+					<p><p>ESPN (blog) Darren Woodson and Herm Edwards both predict Russell Wilson and the Seahawks&rsquo; offense will finally get it together in Week 3 against the 49ers.  <a href="http://www.espn.com/blog/nflnation/post/_/id/215315/moving-the-chains-creating-pressure-without-blitzing-key-for-49ers-in-seattle" onclick="trackOutboundLink('http://www.espn.com/blog/nflnation/post/_/id/215315/moving-the-chains-creating-pressure-without-blitzing-key-for-49ers-in-seattle'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

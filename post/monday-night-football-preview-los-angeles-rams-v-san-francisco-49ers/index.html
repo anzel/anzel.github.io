@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>10</b></p>
 					<h3>Monday Night Football Preview: Los Angeles Rams v San Francisco 49ers</h3>
-					<p><p>For the 49ers, it has to be the introduction of new head coach, Chip Kelly. There was a lot of controversy surrounding the departure of Chip Kelly from &hellip;  <a href="http://allsportsingeneral.sportsblog.com/posts/25343425/monday-night-football-preview--los-angeles-rams-v-san-francisco-49ers.html">more</a>.</p>
+					<p><p>For the 49ers, it has to be the introduction of new head coach, Chip Kelly. There was a lot of controversy surrounding the departure of Chip Kelly from &hellip;  <a href="http://allsportsingeneral.sportsblog.com/posts/25343425/monday-night-football-preview--los-angeles-rams-v-san-francisco-49ers.html" onclick="trackOutboundLink('http://allsportsingeneral.sportsblog.com/posts/25343425/monday-night-football-preview--los-angeles-rams-v-san-francisco-49ers.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

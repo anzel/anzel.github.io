@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>03</b></p>
 					<h3>49ers name Gabbert starting quarterback, make two trades</h3>
-					<p><p>The 49ers acquired a new target for Gabbert as well. The team announced that they sent an undisclosed draft pick to the Chiefs for veteran Rod &hellip;  <a href="http://profootballtalk.nbcsports.com/2016/09/03/49ers-name-gabbert-starting-quarterback-make-two-trades/">more</a>.</p>
+					<p><p>The 49ers acquired a new target for Gabbert as well. The team announced that they sent an undisclosed draft pick to the Chiefs for veteran Rod &hellip;  <a href="http://profootballtalk.nbcsports.com/2016/09/03/49ers-name-gabbert-starting-quarterback-make-two-trades/" onclick="trackOutboundLink('http://profootballtalk.nbcsports.com/2016/09/03/49ers-name-gabbert-starting-quarterback-make-two-trades/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

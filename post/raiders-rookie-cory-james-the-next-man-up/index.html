@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>20</b></p>
 					<h3>Raiders rookie Cory James the &#39;next man up&#39;</h3>
-					<p><p>The phrase next man up doesn&rsquo;t pertain only to injuries in the NFL. It also summarizes the turnstile nature of the league, as new players get their shot &hellip;  <a href="http://www.sfgate.com/raiders/article/Raiders-rookie-Cory-James-the-next-man-up-9235791.php">more</a>.</p>
+					<p><p>The phrase next man up doesn&rsquo;t pertain only to injuries in the NFL. It also summarizes the turnstile nature of the league, as new players get their shot &hellip;  <a href="http://www.sfgate.com/raiders/article/Raiders-rookie-Cory-James-the-next-man-up-9235791.php" onclick="trackOutboundLink('http://www.sfgate.com/raiders/article/Raiders-rookie-Cory-James-the-next-man-up-9235791.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

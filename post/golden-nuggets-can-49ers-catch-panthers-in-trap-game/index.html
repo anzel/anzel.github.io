@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>Golden Nuggets: Can 49ers catch Panthers in trap game?</h3>
-					<p><p>The San Francisco 49ers are, surprisingly, 1-0 after beating the Los Angeles Rams in equally surprising fashion. They shutout Jeff Fisher&rsquo;s Rams, &hellip;  <a href="http://www.ninersnation.com/2016/9/18/12957478/49ers-news-gameday-panthers-week-2-preview">more</a>.</p>
+					<p><p>The San Francisco 49ers are, surprisingly, 1-0 after beating the Los Angeles Rams in equally surprising fashion. They shutout Jeff Fisher&rsquo;s Rams, &hellip;  <a href="http://www.ninersnation.com/2016/9/18/12957478/49ers-news-gameday-panthers-week-2-preview" onclick="trackOutboundLink('http://www.ninersnation.com/2016/9/18/12957478/49ers-news-gameday-panthers-week-2-preview'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

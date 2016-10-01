@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>49ers&#39; to Donate $1 million to ease racial inequality</h3>
-					<p><p>Francisco Foundation in this effort. We have chosen to work with these &hellip;  <a href="http://www.dailykos.com/story/2016/9/8/1568200/-49ers-to-Donate-1-million-to-ease-racial-inequality">more</a>.</p>
+					<p><p>Francisco Foundation in this effort. We have chosen to work with these &hellip;  <a href="http://www.dailykos.com/story/2016/9/8/1568200/-49ers-to-Donate-1-million-to-ease-racial-inequality" onclick="trackOutboundLink('http://www.dailykos.com/story/2016/9/8/1568200/-49ers-to-Donate-1-million-to-ease-racial-inequality'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

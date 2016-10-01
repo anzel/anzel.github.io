@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>Week 1 NFL Picks: Raiders Ready To Roll; Can Patriots Hang With Cardinals?</h3>
-					<p><p>There are no more beach trips, the sunburns have peeled, and it feels like we lose another hour of daylight every day, but there&rsquo;s a light at the end of &hellip;  <a href="http://nesn.com/2016/09/week-1-nfl-picks-raiders-ready-to-roll-can-patriots-hang-with-cardinals/">more</a>.</p>
+					<p><p>There are no more beach trips, the sunburns have peeled, and it feels like we lose another hour of daylight every day, but there&rsquo;s a light at the end of &hellip;  <a href="http://nesn.com/2016/09/week-1-nfl-picks-raiders-ready-to-roll-can-patriots-hang-with-cardinals/" onclick="trackOutboundLink('http://nesn.com/2016/09/week-1-nfl-picks-raiders-ready-to-roll-can-patriots-hang-with-cardinals/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

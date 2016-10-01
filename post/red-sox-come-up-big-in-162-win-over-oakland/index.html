@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>03</b></p>
 					<h3>Red Sox come up big in 16-2 win over Oakland</h3>
-					<p><p>Boston Red Sox&rsquo;s David Ortiz watches his RBI sacrifice fly against the Oakland Athletics in the fifth inning of a baseball Friday, Sept. 2, 2016, in &hellip;  <a href="http://wpri.com/2016/09/03/red-sox-come-up-big-in-16-2-win-over-oakland/">more</a>.</p>
+					<p><p>Boston Red Sox&rsquo;s David Ortiz watches his RBI sacrifice fly against the Oakland Athletics in the fifth inning of a baseball Friday, Sept. 2, 2016, in &hellip;  <a href="http://wpri.com/2016/09/03/red-sox-come-up-big-in-16-2-win-over-oakland/" onclick="trackOutboundLink('http://wpri.com/2016/09/03/red-sox-come-up-big-in-16-2-win-over-oakland/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

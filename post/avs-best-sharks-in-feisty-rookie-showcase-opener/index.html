@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>17</b></p>
 					<h3>Avs best Sharks in feisty Rookie Showcase opener</h3>
-					<p><p>&hellip; the first of a three-game Rookie Showcase taking place over the weekend between the Colorado Avalanche, San Jose Sharks, and Anaheim Ducks.  <a href="http://bsndenver.com/avs-best-sharks-in-feisty-rookie-showcase-opener/">more</a>.</p>
+					<p><p>&hellip; the first of a three-game Rookie Showcase taking place over the weekend between the Colorado Avalanche, San Jose Sharks, and Anaheim Ducks.  <a href="http://bsndenver.com/avs-best-sharks-in-feisty-rookie-showcase-opener/" onclick="trackOutboundLink('http://bsndenver.com/avs-best-sharks-in-feisty-rookie-showcase-opener/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

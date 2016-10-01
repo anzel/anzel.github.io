@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>23</b></p>
 					<h3>Kawakami&#39;s Q&amp;A with Billy Beane</h3>
-					<p><p>Oakland Athletics executive Billy Beane watches the team play an inter-squad game during spring training at the Lew Wolff Training Complex in Mesa, &hellip;  <a href="http://www.mercurynews.com/2016/09/23/billy-beane-tkshow-podcast/">more</a>.</p>
+					<p><p>Oakland Athletics executive Billy Beane watches the team play an inter-squad game during spring training at the Lew Wolff Training Complex in Mesa, &hellip;  <a href="http://www.mercurynews.com/2016/09/23/billy-beane-tkshow-podcast/" onclick="trackOutboundLink('http://www.mercurynews.com/2016/09/23/billy-beane-tkshow-podcast/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

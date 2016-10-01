@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>NFL L-ive- S&#39;tream San Francisco 49ers -vs- Seattle Seahawks</h3>
-					<p><p>Seahawks vs San Francisco 49ers live stream online for free, VIPBoxTV &hellip;  <a href="https://vimeo.com/184227270">more</a>.</p>
+					<p><p>Seahawks vs San Francisco 49ers live stream online for free, VIPBoxTV &hellip;  <a href="https://vimeo.com/184227270" onclick="trackOutboundLink('https://vimeo.com/184227270'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

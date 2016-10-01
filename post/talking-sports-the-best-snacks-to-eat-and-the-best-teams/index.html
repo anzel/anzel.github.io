@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>Talking sports: The best snacks to eat and the best teams</h3>
-					<p><p>When I was really little, my parents took me to a 49ers game. The Niners were winning and that must have put my mom in a really good mood.  <a href="http://www.thereporter.com/article/NG/20160917/NEWS/160919883">more</a>.</p>
+					<p><p>When I was really little, my parents took me to a 49ers game. The Niners were winning and that must have put my mom in a really good mood.  <a href="http://www.thereporter.com/article/NG/20160917/NEWS/160919883" onclick="trackOutboundLink('http://www.thereporter.com/article/NG/20160917/NEWS/160919883'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

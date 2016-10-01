@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>22</b></p>
 					<h3>Gattis homers twice to help Astros complete sweep of A&#39;s</h3>
-					<p><p>&hellip; Castro threw out a runner to end the game and the contending Houston Astros beat the Oakland Athletics 6-5 on Wednesday to complete a sweep.  <a href="http://cumberlink.com/sports/national/baseball/gattis-homers-twice-to-help-astros-complete-sweep-of-a/article_a98ea122-a6be-5191-aa69-4f863e8486e8.html">more</a>.</p>
+					<p><p>&hellip; Castro threw out a runner to end the game and the contending Houston Astros beat the Oakland Athletics 6-5 on Wednesday to complete a sweep.  <a href="http://cumberlink.com/sports/national/baseball/gattis-homers-twice-to-help-astros-complete-sweep-of-a/article_a98ea122-a6be-5191-aa69-4f863e8486e8.html" onclick="trackOutboundLink('http://cumberlink.com/sports/national/baseball/gattis-homers-twice-to-help-astros-complete-sweep-of-a/article_a98ea122-a6be-5191-aa69-4f863e8486e8.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

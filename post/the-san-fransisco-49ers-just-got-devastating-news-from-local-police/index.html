@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>03</b></p>
 					<h3>The San Fransisco 49ers Just Got DEVASTATING News From Local Police</h3>
-					<p><p>San Francisco 49ers quarterback Colin Kaepernick not only decided to sit out and, subsequently, take a knee during the national anthem, he has even &hellip;  <a href="http://conservativetribune.com/san-francisco-49ers-police/">more</a>.</p>
+					<p><p>San Francisco 49ers quarterback Colin Kaepernick not only decided to sit out and, subsequently, take a knee during the national anthem, he has even &hellip;  <a href="http://conservativetribune.com/san-francisco-49ers-police/" onclick="trackOutboundLink('http://conservativetribune.com/san-francisco-49ers-police/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>22</b></p>
 					<h3>LOOK: 49ers quarterback Colin Kaepernick makes cover of Time</h3>
-					<p><p>49ers quarterback Colin Kaepernick is on the cover of the Oct. 3 edition of Time magazine, which features an article about the discussion that has &hellip;  <a href="http://sfo.247sports.com/Bolt/LOOK-49ers-quarterback-Colin-Kaepernick-makes-cover-of-Time-47671762">more</a>.</p>
+					<p><p>49ers quarterback Colin Kaepernick is on the cover of the Oct. 3 edition of Time magazine, which features an article about the discussion that has &hellip;  <a href="http://sfo.247sports.com/Bolt/LOOK-49ers-quarterback-Colin-Kaepernick-makes-cover-of-Time-47671762" onclick="trackOutboundLink('http://sfo.247sports.com/Bolt/LOOK-49ers-quarterback-Colin-Kaepernick-makes-cover-of-Time-47671762'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

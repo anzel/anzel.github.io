@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>06</b></p>
 					<h3>Bruce Miller case continues troubling trend for the 49ers</h3>
-					<p><p>Since 2011, the 49ers are fourth in NFL player arrests with 15 total arrests in that time. The latest, a second assault arrest for tight end Bruce Miller, &hellip;  <a href="http://www.yardbarker.com/nfl/articles/bruce_miller_case_continues_troubling_trend_for_the_san_francisco_49ers/s1_13132_21747745">more</a>.</p>
+					<p><p>Since 2011, the 49ers are fourth in NFL player arrests with 15 total arrests in that time. The latest, a second assault arrest for tight end Bruce Miller, &hellip;  <a href="http://www.yardbarker.com/nfl/articles/bruce_miller_case_continues_troubling_trend_for_the_san_francisco_49ers/s1_13132_21747745" onclick="trackOutboundLink('http://www.yardbarker.com/nfl/articles/bruce_miller_case_continues_troubling_trend_for_the_san_francisco_49ers/s1_13132_21747745'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

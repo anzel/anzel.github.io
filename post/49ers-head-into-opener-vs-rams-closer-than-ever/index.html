@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>10</b></p>
 					<h3>49ers head into opener vs. Rams closer than ever</h3>
-					<p><p>SANTA CLARA, Calif. (AP)  When Colin Kaepernick &rsquo;s national anthem protest initially went public, talk immediately turned to whether it would lead &hellip;  <a href="http://www.usatoday.com/story/sports/nfl/2016/09/10/49ers-head-into-opener-vs-rams-closer-than-ever/90183594/">more</a>.</p>
+					<p><p>SANTA CLARA, Calif. (AP)  When Colin Kaepernick &rsquo;s national anthem protest initially went public, talk immediately turned to whether it would lead &hellip;  <a href="http://www.usatoday.com/story/sports/nfl/2016/09/10/49ers-head-into-opener-vs-rams-closer-than-ever/90183594/" onclick="trackOutboundLink('http://www.usatoday.com/story/sports/nfl/2016/09/10/49ers-head-into-opener-vs-rams-closer-than-ever/90183594/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

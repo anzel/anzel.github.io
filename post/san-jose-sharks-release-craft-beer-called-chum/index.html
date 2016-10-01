@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>09</b></p>
 					<h3>San Jose Sharks release craft beer called &#39;Chum&#39;</h3>
-					<p><p>The San Jose Sharks and Gordon Biersch Brewery are two fantastic, local brands that resonate with both hockey fans and beer enthusiasts &hellip;  <a href="https://www.thedrinksbusiness.com/2016/09/san-jose-sharks-release-craft-beer-called-chum/">more</a>.</p>
+					<p><p>The San Jose Sharks and Gordon Biersch Brewery are two fantastic, local brands that resonate with both hockey fans and beer enthusiasts &hellip;  <a href="https://www.thedrinksbusiness.com/2016/09/san-jose-sharks-release-craft-beer-called-chum/" onclick="trackOutboundLink('https://www.thedrinksbusiness.com/2016/09/san-jose-sharks-release-craft-beer-called-chum/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

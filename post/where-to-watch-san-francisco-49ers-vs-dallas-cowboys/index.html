@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Oct<b>01</b></p>
 					<h3>Where to Watch San Francisco 49ers vs. Dallas Cowboys</h3>
-					<p><p>The 49ers face the Dallas Cowboys in Week 4 of the 2016 regular season. The game kicks off at 1:25 p.m. PT on Sunday, October 2 at Levi&rsquo;s &hellip;  <a href="http://www.49ers.com/news/article-2/Where-to-Watch-San-Francisco-49ers-vs-Dallas-Cowboys/2f954068-0243-4c43-b40f-8796fad620fa">more</a>.</p>
+					<p><p>The 49ers face the Dallas Cowboys in Week 4 of the 2016 regular season. The game kicks off at 1:25 p.m. PT on Sunday, October 2 at Levi&rsquo;s &hellip;  <a href="http://www.49ers.com/news/article-2/Where-to-Watch-San-Francisco-49ers-vs-Dallas-Cowboys/2f954068-0243-4c43-b40f-8796fad620fa" onclick="trackOutboundLink('http://www.49ers.com/news/article-2/Where-to-Watch-San-Francisco-49ers-vs-Dallas-Cowboys/2f954068-0243-4c43-b40f-8796fad620fa'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

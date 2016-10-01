@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>20</b></p>
 					<h3>NFL executive in Oakland for stadium discussions</h3>
-					<p><p>&hellip; San Francisco Giants  Golden State Warriors  Oakland Raiders  Oakland Athletics &hellip; SportsOakland Raiders &hellip;. Tags: Football,; Oakland Raiders.  <a href="http://www.mercurynews.com/2016/09/19/purdy-yes-the-nfl-and-oakland-are-talking-this-week-about-a-raiders-stadium-but-to-what-end/">more</a>.</p>
+					<p><p>&hellip; San Francisco Giants  Golden State Warriors  Oakland Raiders  Oakland Athletics &hellip; SportsOakland Raiders &hellip;. Tags: Football,; Oakland Raiders.  <a href="http://www.mercurynews.com/2016/09/19/purdy-yes-the-nfl-and-oakland-are-talking-this-week-about-a-raiders-stadium-but-to-what-end/" onclick="trackOutboundLink('http://www.mercurynews.com/2016/09/19/purdy-yes-the-nfl-and-oakland-are-talking-this-week-about-a-raiders-stadium-but-to-what-end/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

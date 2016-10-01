@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>04</b></p>
 					<h3>Union: Santa Clara police might boycott 49ers games over Colin Kaepernick&#39;s</h3>
-					<p><p>ABC News The Santa Clara police union has sent a letter to the San Francisco 49ers, warning that police might stop working the team&rsquo;s home games due to Colin &hellip;  <a href="http://abcnews.go.com/Sports/union-santa-clara-police-boycott-49ers-games-colin/story?id=41849418">more</a>.</p>
+					<p><p>ABC News The Santa Clara police union has sent a letter to the San Francisco 49ers, warning that police might stop working the team&rsquo;s home games due to Colin &hellip;  <a href="http://abcnews.go.com/Sports/union-santa-clara-police-boycott-49ers-games-colin/story?id=41849418" onclick="trackOutboundLink('http://abcnews.go.com/Sports/union-santa-clara-police-boycott-49ers-games-colin/story?id=41849418'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

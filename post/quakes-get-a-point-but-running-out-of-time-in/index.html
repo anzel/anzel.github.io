@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>17</b></p>
 					<h3>Quakes get a point, but running out of time in</h3>
-					<p><p>Chris Wondolowski and the San Jose Earthquakes played to a 0-0 tie in Colorado on Saturday night. Nhat V. Meyer/Bay Area News Group archives.  <a href="http://www.mercurynews.com/2016/09/17/quakes-get-a-point-but-running-out-of-time-in-mls-playoff-hunt/">more</a>.</p>
+					<p><p>Chris Wondolowski and the San Jose Earthquakes played to a 0-0 tie in Colorado on Saturday night. Nhat V. Meyer/Bay Area News Group archives.  <a href="http://www.mercurynews.com/2016/09/17/quakes-get-a-point-but-running-out-of-time-in-mls-playoff-hunt/" onclick="trackOutboundLink('http://www.mercurynews.com/2016/09/17/quakes-get-a-point-but-running-out-of-time-in-mls-playoff-hunt/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

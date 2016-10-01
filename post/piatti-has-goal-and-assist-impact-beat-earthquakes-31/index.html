@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>Piatti has goal and assist, Impact beat Earthquakes 3-1</h3>
-					<p><p>Montreal Impact midfielder Patrice Bernier (8) pokes the ball away from San Jose Earthquakes midfielder Darwin Ceren, right, during the first half of a &hellip;  <a href="http://www.timesunion.com/sports/article/Piatti-has-goal-and-assist-Impact-beat-9402867.php">more</a>.</p>
+					<p><p>Montreal Impact midfielder Patrice Bernier (8) pokes the ball away from San Jose Earthquakes midfielder Darwin Ceren, right, during the first half of a &hellip;  <a href="http://www.timesunion.com/sports/article/Piatti-has-goal-and-assist-Impact-beat-9402867.php" onclick="trackOutboundLink('http://www.timesunion.com/sports/article/Piatti-has-goal-and-assist-Impact-beat-9402867.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

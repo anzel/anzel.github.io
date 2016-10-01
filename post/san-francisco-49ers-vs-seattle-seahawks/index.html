@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>&#39;San Francisco 49ers vs Seattle Seahawks&#39;.</h3>
-					<p><p>Seattle Seahawks Online Video Stream Game Go Watch. San Francisco &hellip;  <a href="http://globalstudies.virginia.edu/sites/globalstudies.virginia.edu/files/webform/xfin-itywatch._san_francisco_49ers_vs_seattle_seahawks._live._football._now_android.pdf">more</a>.</p>
+					<p><p>Seattle Seahawks Online Video Stream Game Go Watch. San Francisco &hellip;  <a href="http://globalstudies.virginia.edu/sites/globalstudies.virginia.edu/files/webform/xfin-itywatch._san_francisco_49ers_vs_seattle_seahawks._live._football._now_android.pdf" onclick="trackOutboundLink('http://globalstudies.virginia.edu/sites/globalstudies.virginia.edu/files/webform/xfin-itywatch._san_francisco_49ers_vs_seattle_seahawks._live._football._now_android.pdf'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

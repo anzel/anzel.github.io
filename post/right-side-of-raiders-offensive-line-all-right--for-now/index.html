@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>Right side of Raiders&#39; offensive line all right ... for now</h3>
-					<p><p>Menelik Watson suffered a groin injury in the Oakland Raiders&rsquo; season opener at the New Orleans Saints and was replaced by Matt McCants, who &hellip;  <a href="http://www.espn.com/blog/nflnation/post/_/id/215858/right-side-of-raiders-offensive-line-all-right-for-now">more</a>.</p>
+					<p><p>Menelik Watson suffered a groin injury in the Oakland Raiders&rsquo; season opener at the New Orleans Saints and was replaced by Matt McCants, who &hellip;  <a href="http://www.espn.com/blog/nflnation/post/_/id/215858/right-side-of-raiders-offensive-line-all-right-for-now" onclick="trackOutboundLink('http://www.espn.com/blog/nflnation/post/_/id/215858/right-side-of-raiders-offensive-line-all-right-for-now'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

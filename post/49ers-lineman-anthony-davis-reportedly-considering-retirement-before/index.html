@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>10</b></p>
 					<h3>49ers lineman Anthony Davis reportedly considering retirement before</h3>
-					<p><p>Sporting News September 10, 2016 6:59pm EDT September 10, 2016 6:58pm EDT The 49ers tackle is reportedly flirting with the idea of retiring again, according to &hellip;  <a href="http://www.sportingnews.com/nfl/news/san-francisco-49ers-anthony-davis-considering-retirement-again/19a721j1rlewr1b7iwwyl3ptpw">more</a>.</p>
+					<p><p>Sporting News September 10, 2016 6:59pm EDT September 10, 2016 6:58pm EDT The 49ers tackle is reportedly flirting with the idea of retiring again, according to &hellip;  <a href="http://www.sportingnews.com/nfl/news/san-francisco-49ers-anthony-davis-considering-retirement-again/19a721j1rlewr1b7iwwyl3ptpw" onclick="trackOutboundLink('http://www.sportingnews.com/nfl/news/san-francisco-49ers-anthony-davis-considering-retirement-again/19a721j1rlewr1b7iwwyl3ptpw'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

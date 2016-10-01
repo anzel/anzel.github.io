@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>22</b></p>
 					<h3>49ers quarterback Blaine Gabbert still seeking &#39;repetitive accuracy&#39;</h3>
-					<p><p>SANTA CLARA, Calif. &ndash; Among the many qualities San Francisco 49ers coach Chip Kelly values in a quarterback is the ability to consistently throw an &hellip;  <a href="http://www.espn.com/blog/nflnation/post/_/id/215216/49ers-quarterback-blaine-gabbert-still-seeking-repetitive-accuracy">more</a>.</p>
+					<p><p>SANTA CLARA, Calif. &ndash; Among the many qualities San Francisco 49ers coach Chip Kelly values in a quarterback is the ability to consistently throw an &hellip;  <a href="http://www.espn.com/blog/nflnation/post/_/id/215216/49ers-quarterback-blaine-gabbert-still-seeking-repetitive-accuracy" onclick="trackOutboundLink('http://www.espn.com/blog/nflnation/post/_/id/215216/49ers-quarterback-blaine-gabbert-still-seeking-repetitive-accuracy'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

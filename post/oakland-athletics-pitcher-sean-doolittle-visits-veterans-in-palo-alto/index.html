@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>Oakland Athletics pitcher Sean Doolittle visits veterans in Palo Alto</h3>
-					<p><p>The hospital posted a photo on Instagram and wrote, &ldquo;Oakland Athletics pitcher Sean Doolittle stopped by to visit our Veterans today. This makes his &hellip;  <a href="http://abc7news.com/sports/oakland-as-pitcher-visits-veterans-in-palo-alto/1504124/">more</a>.</p>
+					<p><p>The hospital posted a photo on Instagram and wrote, &ldquo;Oakland Athletics pitcher Sean Doolittle stopped by to visit our Veterans today. This makes his &hellip;  <a href="http://abc7news.com/sports/oakland-as-pitcher-visits-veterans-in-palo-alto/1504124/" onclick="trackOutboundLink('http://abc7news.com/sports/oakland-as-pitcher-visits-veterans-in-palo-alto/1504124/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

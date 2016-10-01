@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>02</b></p>
 					<h3>49ers&#39; Reid explains decision to join Kaepernick</h3>
-					<p><p>He is taking advantage of the platform that he&rsquo;s given to bring awareness to a worthy cause, Reid said after the 49ers&rsquo; exhibition game Thursday &hellip;  <a href="http://www.csnbayarea.com/49ers/reid-explains-decision-join-kaepernick">more</a>.</p>
+					<p><p>He is taking advantage of the platform that he&rsquo;s given to bring awareness to a worthy cause, Reid said after the 49ers&rsquo; exhibition game Thursday &hellip;  <a href="http://www.csnbayarea.com/49ers/reid-explains-decision-join-kaepernick" onclick="trackOutboundLink('http://www.csnbayarea.com/49ers/reid-explains-decision-join-kaepernick'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

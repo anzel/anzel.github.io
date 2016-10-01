@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>What The Opponents Are Saying: Saints Quarterback Drew Brees Talks The</h3>
-					<p><p>Raiders.com The Oakland Raiders sealed Sunday&rsquo;s game against New Orleans with a game-winning two-point conversion. Here&rsquo;s what the Saints had to say.  <a href="http://www.raiders.com/news/article-1/What-The-Opponents-Are-Saying-Saints-Quarterback-Drew-Brees-Talks-The-Raiders-Two-Point-Conversion/8533c07a-7f55-42ad-9c1d-21c8ae796fe0">more</a>.</p>
+					<p><p>Raiders.com The Oakland Raiders sealed Sunday&rsquo;s game against New Orleans with a game-winning two-point conversion. Here&rsquo;s what the Saints had to say.  <a href="http://www.raiders.com/news/article-1/What-The-Opponents-Are-Saying-Saints-Quarterback-Drew-Brees-Talks-The-Raiders-Two-Point-Conversion/8533c07a-7f55-42ad-9c1d-21c8ae796fe0" onclick="trackOutboundLink('http://www.raiders.com/news/article-1/What-The-Opponents-Are-Saying-Saints-Quarterback-Drew-Brees-Talks-The-Raiders-Two-Point-Conversion/8533c07a-7f55-42ad-9c1d-21c8ae796fe0'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

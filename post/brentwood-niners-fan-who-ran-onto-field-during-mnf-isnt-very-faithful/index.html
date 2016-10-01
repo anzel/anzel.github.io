@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>Brentwood Niners fan who ran onto field during &#39;MNF&#39; isn&#39;t very &#39;Faithful&#39;</h3>
-					<p><p>There&rsquo;s a reason that &ldquo;Faithful&rdquo; is a slogan for the 49ers: it maintains that even when times are bad for the team, the fans will still rally behind them.  <a href="http://www.sfgate.com/49ers/article/Ninerd-fan-who-ran-onto-field-during-MNF-isn-t-9223498.php">more</a>.</p>
+					<p><p>There&rsquo;s a reason that &ldquo;Faithful&rdquo; is a slogan for the 49ers: it maintains that even when times are bad for the team, the fans will still rally behind them.  <a href="http://www.sfgate.com/49ers/article/Ninerd-fan-who-ran-onto-field-during-MNF-isn-t-9223498.php" onclick="trackOutboundLink('http://www.sfgate.com/49ers/article/Ninerd-fan-who-ran-onto-field-during-MNF-isn-t-9223498.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

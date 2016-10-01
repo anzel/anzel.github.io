@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>49ers dominate Rams 28-0 in season opener</h3>
-					<p><p>Carlos Hyde outran the more heralded Todd Gurley, San Francisco&rsquo;s defensive front proved more fearsome than Los Angeles&rsquo; line and the resumption &hellip;  <a href="http://www.sanluisobispo.com/sports/article101508137.html">more</a>.</p>
+					<p><p>Carlos Hyde outran the more heralded Todd Gurley, San Francisco&rsquo;s defensive front proved more fearsome than Los Angeles&rsquo; line and the resumption &hellip;  <a href="http://www.sanluisobispo.com/sports/article101508137.html" onclick="trackOutboundLink('http://www.sanluisobispo.com/sports/article101508137.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

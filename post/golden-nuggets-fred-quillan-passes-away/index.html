@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>16</b></p>
 					<h3>Golden Nuggets: Fred Quillan passes away</h3>
-					<p><p>Good morning 49ers fans. A bit of sad news was passed along on Thursday. Former San Francisco 49ers center Fred Quillan passed away on &hellip;  <a href="http://www.ninersnation.com/2016/9/16/12939898/49ers-links-fred-quillan-passes-away">more</a>.</p>
+					<p><p>Good morning 49ers fans. A bit of sad news was passed along on Thursday. Former San Francisco 49ers center Fred Quillan passed away on &hellip;  <a href="http://www.ninersnation.com/2016/9/16/12939898/49ers-links-fred-quillan-passes-away" onclick="trackOutboundLink('http://www.ninersnation.com/2016/9/16/12939898/49ers-links-fred-quillan-passes-away'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

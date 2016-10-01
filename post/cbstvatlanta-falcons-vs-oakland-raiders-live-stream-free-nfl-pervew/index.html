@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>[CBSTV]***Atlanta Falcons vs Oakland Raiders Live St-ream Free Nfl Pervew</h3>
-					<p><p>Eventbrite - [CBSTV]***Atlanta Falcons vs Oakland Raiders Live St-ream Free Nfl Pervew 2016/09/18 - Friday, October 28, 2016 - Find event and ticket &hellip;  <a href="https://www.eventbrite.com/e/cbstvatlanta-falcons-vs-oakland-raiders-live-st-ream-free-nfl-pervew-20160918-tickets-27799423825">more</a>.</p>
+					<p><p>Eventbrite - [CBSTV]***Atlanta Falcons vs Oakland Raiders Live St-ream Free Nfl Pervew 2016/09/18 - Friday, October 28, 2016 - Find event and ticket &hellip;  <a href="https://www.eventbrite.com/e/cbstvatlanta-falcons-vs-oakland-raiders-live-st-ream-free-nfl-pervew-20160918-tickets-27799423825" onclick="trackOutboundLink('https://www.eventbrite.com/e/cbstvatlanta-falcons-vs-oakland-raiders-live-st-ream-free-nfl-pervew-20160918-tickets-27799423825'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

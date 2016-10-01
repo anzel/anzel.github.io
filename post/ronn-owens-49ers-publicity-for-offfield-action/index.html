@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>07</b></p>
 					<h3>Ronn Owens: 49ers Publicity for Off-Field Action</h3>
-					<p><p>are the most talked-about #NFL team right nowbut because of off-field &hellip;  <a href="http://www.kgoradio.com/2016/09/06/ronn-owens-49ers-publicity-for-off-field-action/">more</a>.</p>
+					<p><p>are the most talked-about #NFL team right nowbut because of off-field &hellip;  <a href="http://www.kgoradio.com/2016/09/06/ronn-owens-49ers-publicity-for-off-field-action/" onclick="trackOutboundLink('http://www.kgoradio.com/2016/09/06/ronn-owens-49ers-publicity-for-off-field-action/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>Parkview&#39;s Matt Olson celebrates a playoff victory. (File photo)</h3>
-					<p><p>Mar 29, 2016; Mesa, AZ, USA; Oakland Athletics outfielder Matt Olson against the Chicago Cubs during a spring training game at Sloan Park.  <a href="http://www.gwinnettdailypost.com/sports/professional/parkview-grad-matt-olson-called-up-to-major-leagues-by/article_fb371550-220f-5b7e-a95b-4b2b71282360.html">more</a>.</p>
+					<p><p>Mar 29, 2016; Mesa, AZ, USA; Oakland Athletics outfielder Matt Olson against the Chicago Cubs during a spring training game at Sloan Park.  <a href="http://www.gwinnettdailypost.com/sports/professional/parkview-grad-matt-olson-called-up-to-major-leagues-by/article_fb371550-220f-5b7e-a95b-4b2b71282360.html" onclick="trackOutboundLink('http://www.gwinnettdailypost.com/sports/professional/parkview-grad-matt-olson-called-up-to-major-leagues-by/article_fb371550-220f-5b7e-a95b-4b2b71282360.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>24</b></p>
 					<h3>Simulation Saturday: 49ers vs. Seahawks in Madden 17</h3>
-					<p><p>Madden is currently 1-1 in our simulations. Last week they predicted the 49ers would lose via a 20-0 shutout to the Carolina Panthers. That didn&rsquo;t &hellip;  <a href="http://www.ninersnation.com/2016/9/24/13043172/simulation-saturday-49ers-vs-seahawks-madden-17">more</a>.</p>
+					<p><p>Madden is currently 1-1 in our simulations. Last week they predicted the 49ers would lose via a 20-0 shutout to the Carolina Panthers. That didn&rsquo;t &hellip;  <a href="http://www.ninersnation.com/2016/9/24/13043172/simulation-saturday-49ers-vs-seahawks-madden-17" onclick="trackOutboundLink('http://www.ninersnation.com/2016/9/24/13043172/simulation-saturday-49ers-vs-seahawks-madden-17'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

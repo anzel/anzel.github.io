@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>01</b></p>
 					<h3>49ers-Chargers preview: Philip Rivers value, Joey Bosa, 2nd half names to</h3>
-					<p><p>Niners Nation The San Francisco 49ers and San Diego Chargers wrap up the preseason Thursday in front of what could be a feisty crowd. The most interesting &hellip;  <a href="http://www.ninersnation.com/2016/9/1/12744036/49ers-chargers-preview-philip-rivers-value-joey-bosa">more</a>.</p>
+					<p><p>Niners Nation The San Francisco 49ers and San Diego Chargers wrap up the preseason Thursday in front of what could be a feisty crowd. The most interesting &hellip;  <a href="http://www.ninersnation.com/2016/9/1/12744036/49ers-chargers-preview-philip-rivers-value-joey-bosa" onclick="trackOutboundLink('http://www.ninersnation.com/2016/9/1/12744036/49ers-chargers-preview-philip-rivers-value-joey-bosa'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

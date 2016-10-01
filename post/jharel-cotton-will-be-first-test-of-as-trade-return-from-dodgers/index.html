@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>06</b></p>
 					<h3>Jharel Cotton will be first test of A&#39;s trade return from Dodgers</h3>
-					<p><p>The Oakland Athletics have called up some pretty promising prospects so far, especially in third baseman Ryon Healy (who was actually called up in &hellip;  <a href="http://www.todaysknuckleball.com/al/oakland-athletics/jharel-cotton-will-be-first-test-of-as-trade-return-from-dodgers/">more</a>.</p>
+					<p><p>The Oakland Athletics have called up some pretty promising prospects so far, especially in third baseman Ryon Healy (who was actually called up in &hellip;  <a href="http://www.todaysknuckleball.com/al/oakland-athletics/jharel-cotton-will-be-first-test-of-as-trade-return-from-dodgers/" onclick="trackOutboundLink('http://www.todaysknuckleball.com/al/oakland-athletics/jharel-cotton-will-be-first-test-of-as-trade-return-from-dodgers/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

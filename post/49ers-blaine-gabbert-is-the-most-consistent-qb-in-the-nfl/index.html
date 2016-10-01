@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>19</b></p>
 					<h3>49ers Blaine Gabbert is the most consistent QB in the NFL</h3>
-					<p><p>September 18, 2016 10:53pm EDT September 18, 2016 8:26pm EDT The quarterback owning the most consecutive games played with a touchdown &hellip;  <a href="http://www.sportingnews.com/nfl/news/blaine-gabbert-most-consistent-qb-nfl/djpwamcteqho1ncfanzzwr6cm">more</a>.</p>
+					<p><p>September 18, 2016 10:53pm EDT September 18, 2016 8:26pm EDT The quarterback owning the most consecutive games played with a touchdown &hellip;  <a href="http://www.sportingnews.com/nfl/news/blaine-gabbert-most-consistent-qb-nfl/djpwamcteqho1ncfanzzwr6cm" onclick="trackOutboundLink('http://www.sportingnews.com/nfl/news/blaine-gabbert-most-consistent-qb-nfl/djpwamcteqho1ncfanzzwr6cm'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

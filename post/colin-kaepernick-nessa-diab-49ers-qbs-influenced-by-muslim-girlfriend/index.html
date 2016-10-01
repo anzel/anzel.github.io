@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>16</b></p>
 					<h3>Colin Kaepernick, Nessa Diab: 49ers QB&#39;s Influenced By Muslim Girlfriend?</h3>
-					<p><p>Enstarz As Colin Kaepernick continues to take a knee as the National Anthem is sang around the country, he is facing backlash from one particular &hellip;  <a href="http://www.enstarz.com/articles/173597/20160916/colin-kaepernick-nessa-diab-49ers-qbs-influenced-by-muslim-girlfriend-video.htm">more</a>.</p>
+					<p><p>Enstarz As Colin Kaepernick continues to take a knee as the National Anthem is sang around the country, he is facing backlash from one particular &hellip;  <a href="http://www.enstarz.com/articles/173597/20160916/colin-kaepernick-nessa-diab-49ers-qbs-influenced-by-muslim-girlfriend-video.htm" onclick="trackOutboundLink('http://www.enstarz.com/articles/173597/20160916/colin-kaepernick-nessa-diab-49ers-qbs-influenced-by-muslim-girlfriend-video.htm'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

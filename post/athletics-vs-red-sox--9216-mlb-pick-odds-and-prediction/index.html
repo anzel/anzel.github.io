@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>01</b></p>
 					<h3>Athletics vs. Red Sox - 9/2/16 MLB Pick, Odds, and Prediction</h3>
-					<p><p>The Boston Red Sox and Oakland Athletics begin a three-game series late Friday night. The Boston Red Sox could use a win after losing five of their &hellip;  <a href="http://sportschatplace.com/mlb-picks/2016/09/02/athletics-vs-red-sox-9/2/16-mlb-pick-odds-and-prediction">more</a>.</p>
+					<p><p>The Boston Red Sox and Oakland Athletics begin a three-game series late Friday night. The Boston Red Sox could use a win after losing five of their &hellip;  <a href="http://sportschatplace.com/mlb-picks/2016/09/02/athletics-vs-red-sox-9/2/16-mlb-pick-odds-and-prediction" onclick="trackOutboundLink('http://sportschatplace.com/mlb-picks/2016/09/02/athletics-vs-red-sox-9/2/16-mlb-pick-odds-and-prediction'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

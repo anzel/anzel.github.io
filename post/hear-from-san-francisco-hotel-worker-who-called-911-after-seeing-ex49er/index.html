@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>06</b></p>
 					<h3>Hear from San Francisco hotel worker who called 911 after seeing ex-49er</h3>
-					<p><p>KGO-TV A Travelodge worker says former San Francisco 49ers fullback Bruce Miller was bleeding from the head and vomiting after getting into an alleged fight &hellip;  <a href="http://abc7news.com/sports/hotel-worker-says-bruce-miller-bloody-after-alleged-sf-assault/1499514/">more</a>.</p>
+					<p><p>KGO-TV A Travelodge worker says former San Francisco 49ers fullback Bruce Miller was bleeding from the head and vomiting after getting into an alleged fight &hellip;  <a href="http://abc7news.com/sports/hotel-worker-says-bruce-miller-bloody-after-alleged-sf-assault/1499514/" onclick="trackOutboundLink('http://abc7news.com/sports/hotel-worker-says-bruce-miller-bloody-after-alleged-sf-assault/1499514/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>30</b></p>
 					<h3>Fantasy Football: Start or Sit Cole Beasley in Week 4?</h3>
-					<p><p>This week the Cowboys will be on the road, traveling to the west coast to take on the San Francisco 49ers. Luckily for Dallas and Beasley, the 49ers &hellip;  <a href="http://theinscribermag.com/sports/fantasy-football-start-sit-cole-beasley-week-4.html">more</a>.</p>
+					<p><p>This week the Cowboys will be on the road, traveling to the west coast to take on the San Francisco 49ers. Luckily for Dallas and Beasley, the 49ers &hellip;  <a href="http://theinscribermag.com/sports/fantasy-football-start-sit-cole-beasley-week-4.html" onclick="trackOutboundLink('http://theinscribermag.com/sports/fantasy-football-start-sit-cole-beasley-week-4.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

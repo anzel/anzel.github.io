@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>23</b></p>
 					<h3>A&#39;s Wendle aims to add another position in winter ball</h3>
-					<p><p>The rookie is heading to Mexico for winter ball, and the plan is to play third base while he&rsquo;s down there. That&rsquo;s one nugget that Wendle shared during &hellip;  <a href="http://www.csnbayarea.com/athletics/wendle-aims-add-another-position-winter-ball">more</a>.</p>
+					<p><p>The rookie is heading to Mexico for winter ball, and the plan is to play third base while he&rsquo;s down there. That&rsquo;s one nugget that Wendle shared during &hellip;  <a href="http://www.csnbayarea.com/athletics/wendle-aims-add-another-position-winter-ball" onclick="trackOutboundLink('http://www.csnbayarea.com/athletics/wendle-aims-add-another-position-winter-ball'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

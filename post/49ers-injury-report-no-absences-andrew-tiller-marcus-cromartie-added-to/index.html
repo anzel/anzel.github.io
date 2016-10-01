@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>49ers injury report: No absences, Andrew Tiller, Marcus Cromartie added to</h3>
-					<p><p>Niners Nation The San Francisco 49ers were back at practice Wednesday morning, and while there are some new additions to the injury report, everybody appears &hellip;  <a href="http://www.ninersnation.com/2016/9/14/12920868/49ers-injury-report-vs-panthers-andrew-tiller-marcus-cromartie-glenn-dorsey">more</a>.</p>
+					<p><p>Niners Nation The San Francisco 49ers were back at practice Wednesday morning, and while there are some new additions to the injury report, everybody appears &hellip;  <a href="http://www.ninersnation.com/2016/9/14/12920868/49ers-injury-report-vs-panthers-andrew-tiller-marcus-cromartie-glenn-dorsey" onclick="trackOutboundLink('http://www.ninersnation.com/2016/9/14/12920868/49ers-injury-report-vs-panthers-andrew-tiller-marcus-cromartie-glenn-dorsey'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

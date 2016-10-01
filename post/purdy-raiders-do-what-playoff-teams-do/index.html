@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>Purdy: Raiders do what playoff teams do</h3>
-					<p><p>&hellip; San Francisco Giants  Golden State Warriors  Oakland Raiders  Oakland &hellip; SportsOakland Raiders &hellip;. Tags: Football,; NFL,; Oakland Raiders.  <a href="http://www.mercurynews.com/2016/09/25/purdy-playoff-teams-do-what-raiders-did-against-tennessee/">more</a>.</p>
+					<p><p>&hellip; San Francisco Giants  Golden State Warriors  Oakland Raiders  Oakland &hellip; SportsOakland Raiders &hellip;. Tags: Football,; NFL,; Oakland Raiders.  <a href="http://www.mercurynews.com/2016/09/25/purdy-playoff-teams-do-what-raiders-did-against-tennessee/" onclick="trackOutboundLink('http://www.mercurynews.com/2016/09/25/purdy-playoff-teams-do-what-raiders-did-against-tennessee/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

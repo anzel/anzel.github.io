@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>29</b></p>
 					<h3>Chip Kelly says he met with just two QBs before draft</h3>
-					<p><p>I know talking to [49ers director of human performance Mark Uyeyama] Uye he&rsquo;s doing a heck-of-a job working and working extremely hard. So, we&rsquo;re &hellip;  <a href="http://49ers.pressdemocrat.com/chip-kelly-says-met-just-two-qbs-draft/">more</a>.</p>
+					<p><p>I know talking to [49ers director of human performance Mark Uyeyama] Uye he&rsquo;s doing a heck-of-a job working and working extremely hard. So, we&rsquo;re &hellip;  <a href="http://49ers.pressdemocrat.com/chip-kelly-says-met-just-two-qbs-draft/" onclick="trackOutboundLink('http://49ers.pressdemocrat.com/chip-kelly-says-met-just-two-qbs-draft/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

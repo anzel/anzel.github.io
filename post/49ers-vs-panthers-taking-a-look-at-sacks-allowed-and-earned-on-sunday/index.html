@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>20</b></p>
 					<h3>49ers vs. Panthers: Taking a look at sacks allowed and earned on Sunday</h3>
-					<p><p>The 49ers should not have competed with the Panthers, and looking at the final score, they kind of didn&rsquo;t. But there was some time, particularly in the &hellip;  <a href="http://www.ninersnation.com/2016/9/20/12986242/49ers-vs-panthers-breakdown-video-gif-sack-blaine-gabbert-cam-newton">more</a>.</p>
+					<p><p>The 49ers should not have competed with the Panthers, and looking at the final score, they kind of didn&rsquo;t. But there was some time, particularly in the &hellip;  <a href="http://www.ninersnation.com/2016/9/20/12986242/49ers-vs-panthers-breakdown-video-gif-sack-blaine-gabbert-cam-newton" onclick="trackOutboundLink('http://www.ninersnation.com/2016/9/20/12986242/49ers-vs-panthers-breakdown-video-gif-sack-blaine-gabbert-cam-newton'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

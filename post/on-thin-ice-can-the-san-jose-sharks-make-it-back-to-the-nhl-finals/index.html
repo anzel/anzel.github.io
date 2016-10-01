@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>23</b></p>
 					<h3>On thin ice: can the San Jose Sharks make it back to the NHL finals?</h3>
-					<p><p>San Jose Sharks  These perennial underachievers actually overachieved last season, making it all the way to the Stanley Cup Final before falling to &hellip;  <a href="http://www.troymedia.com/2016/09/23/san-jose-sharks-nhl-finals/">more</a>.</p>
+					<p><p>San Jose Sharks  These perennial underachievers actually overachieved last season, making it all the way to the Stanley Cup Final before falling to &hellip;  <a href="http://www.troymedia.com/2016/09/23/san-jose-sharks-nhl-finals/" onclick="trackOutboundLink('http://www.troymedia.com/2016/09/23/san-jose-sharks-nhl-finals/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

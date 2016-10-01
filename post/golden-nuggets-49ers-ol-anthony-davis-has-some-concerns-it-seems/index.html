@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>11</b></p>
 					<h3>Golden Nuggets: 49ers OL Anthony Davis has some concerns, it seems</h3>
-					<p><p>San Francisco 49ers offensive lineman Anthony Davis had some issues that needed to be resolved and was apparently considering retirement, but &hellip;  <a href="http://www.ninersnation.com/2016/9/11/12877582/49ers-news-anthony-davis-retirement-ahaha-dumpster-fire-lol-doomed-were-doomed">more</a>.</p>
+					<p><p>San Francisco 49ers offensive lineman Anthony Davis had some issues that needed to be resolved and was apparently considering retirement, but &hellip;  <a href="http://www.ninersnation.com/2016/9/11/12877582/49ers-news-anthony-davis-retirement-ahaha-dumpster-fire-lol-doomed-were-doomed" onclick="trackOutboundLink('http://www.ninersnation.com/2016/9/11/12877582/49ers-news-anthony-davis-retirement-ahaha-dumpster-fire-lol-doomed-were-doomed'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

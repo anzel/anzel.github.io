@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>09</b></p>
 					<h3>49ers select Tyree Bracy of Milpitas High School as the Week 2 Player of</h3>
-					<p><p>49ers.com The 49ers High School Player of the Week Award for week 2 goes to Tyree Bracy of Milpitas High School in Milpitas, CA. In what became the talk of &hellip;  <a href="http://www.49ers.com/news/article-2/49ers-select-Tyree-Bracy-of-Milpitas-High-School-as-the-Week-2-Player-of-the-Week/ebd5606d-9157-440b-9bd0-324190d0efc0">more</a>.</p>
+					<p><p>49ers.com The 49ers High School Player of the Week Award for week 2 goes to Tyree Bracy of Milpitas High School in Milpitas, CA. In what became the talk of &hellip;  <a href="http://www.49ers.com/news/article-2/49ers-select-Tyree-Bracy-of-Milpitas-High-School-as-the-Week-2-Player-of-the-Week/ebd5606d-9157-440b-9bd0-324190d0efc0" onclick="trackOutboundLink('http://www.49ers.com/news/article-2/49ers-select-Tyree-Bracy-of-Milpitas-High-School-as-the-Week-2-Player-of-the-Week/ebd5606d-9157-440b-9bd0-324190d0efc0'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

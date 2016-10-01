@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>Lewis rocked as A&#39;s beat Rangers 7-1</h3>
-					<p><p>&hellip; in the second inning Sunday, and the Texas Rangers fell into a tie for home-field advantage in the playoffs after a 7-1 loss to the Oakland Athletics.  <a href="http://www.star-telegram.com/sports/mlb/texas-rangers/article104126791.html">more</a>.</p>
+					<p><p>&hellip; in the second inning Sunday, and the Texas Rangers fell into a tie for home-field advantage in the playoffs after a 7-1 loss to the Oakland Athletics.  <a href="http://www.star-telegram.com/sports/mlb/texas-rangers/article104126791.html" onclick="trackOutboundLink('http://www.star-telegram.com/sports/mlb/texas-rangers/article104126791.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

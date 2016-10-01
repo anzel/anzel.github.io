@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>07</b></p>
 					<h3>The 49ers sold more Kaepernick jerseys last week than in the past eight</h3>
-					<p><p>For The Win ESPN&rsquo;s Darren Rovell reports that Colin Kaepernick jerseys have flown off the shelves following his initial protest during the 49ers preseason game &hellip;  <a href="http://ftw.usatoday.com/2016/09/kaepernick-jerseys-sales-rise-after-protest-49ers-nfl-merchandise">more</a>.</p>
+					<p><p>For The Win ESPN&rsquo;s Darren Rovell reports that Colin Kaepernick jerseys have flown off the shelves following his initial protest during the 49ers preseason game &hellip;  <a href="http://ftw.usatoday.com/2016/09/kaepernick-jerseys-sales-rise-after-protest-49ers-nfl-merchandise" onclick="trackOutboundLink('http://ftw.usatoday.com/2016/09/kaepernick-jerseys-sales-rise-after-protest-49ers-nfl-merchandise'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

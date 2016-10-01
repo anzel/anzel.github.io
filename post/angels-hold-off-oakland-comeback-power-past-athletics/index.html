@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>07</b></p>
 					<h3>Angels hold off Oakland comeback, power past Athletics</h3>
-					<p><p>Oakland Athletics&rsquo; Ryon Healy drives in a run with a double against the Los &hellip; Oakland Athletics&rsquo; Joey Wendle, left, scores past Los Angeles Angels &hellip;  <a href="http://missoulian.com/sports/baseball/professional/angels-hold-off-oakland-comeback-power-past-athletics/article_9c7587b8-f7b2-5aac-8052-d8e37bc43388.html">more</a>.</p>
+					<p><p>Oakland Athletics&rsquo; Ryon Healy drives in a run with a double against the Los &hellip; Oakland Athletics&rsquo; Joey Wendle, left, scores past Los Angeles Angels &hellip;  <a href="http://missoulian.com/sports/baseball/professional/angels-hold-off-oakland-comeback-power-past-athletics/article_9c7587b8-f7b2-5aac-8052-d8e37bc43388.html" onclick="trackOutboundLink('http://missoulian.com/sports/baseball/professional/angels-hold-off-oakland-comeback-power-past-athletics/article_9c7587b8-f7b2-5aac-8052-d8e37bc43388.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

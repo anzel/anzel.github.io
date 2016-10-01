@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>23</b></p>
 					<h3>Seahawks Injury Report: Thomas Rawls Doubtful, Doug Baldwin And Tyler</h3>
-					<p><p>Seahawks.com The Seahawks are set to play host to their NFC West divisional rivals the San Francisco 49ers, as Chip Kelly and his fast paced offense visits &hellip;  <a href="http://www.seahawks.com/news/2016/09/23/seahawks-injury-report-thomas-rawls-doubtful-doug-baldwin-and-tyler-lockett-%E2%80%9Cready">more</a>.</p>
+					<p><p>Seahawks.com The Seahawks are set to play host to their NFC West divisional rivals the San Francisco 49ers, as Chip Kelly and his fast paced offense visits &hellip;  <a href="http://www.seahawks.com/news/2016/09/23/seahawks-injury-report-thomas-rawls-doubtful-doug-baldwin-and-tyler-lockett-%E2%80%9Cready" onclick="trackOutboundLink('http://www.seahawks.com/news/2016/09/23/seahawks-injury-report-thomas-rawls-doubtful-doug-baldwin-and-tyler-lockett-%E2%80%9Cready'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>07</b></p>
 					<h3>49ers teammates react to Bruce Miller&#39;s departure</h3>
-					<p><p>Miller, who moved from fullback to tight end because coach Chip Kelly&rsquo;s system does not use a fullback, was one of the 49ers most popular players in &hellip;  <a href="http://www.mercurynews.com/2016/09/07/49ers-notes-teammates-to-react-to-arrest-release-of-bruce-miller/">more</a>.</p>
+					<p><p>Miller, who moved from fullback to tight end because coach Chip Kelly&rsquo;s system does not use a fullback, was one of the 49ers most popular players in &hellip;  <a href="http://www.mercurynews.com/2016/09/07/49ers-notes-teammates-to-react-to-arrest-release-of-bruce-miller/" onclick="trackOutboundLink('http://www.mercurynews.com/2016/09/07/49ers-notes-teammates-to-react-to-arrest-release-of-bruce-miller/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

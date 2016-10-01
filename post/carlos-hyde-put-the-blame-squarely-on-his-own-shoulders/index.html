@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>20</b></p>
 					<h3>Carlos Hyde put the blame squarely on his own shoulders</h3>
-					<p><p>It was a disheartened Carlos Hyde that was in the locker room after the San Francisco 49ers loss to the Carolina Panthers. He was introspective and &hellip;  <a href="http://www.ninersnation.com/2016/9/20/12971582/carlos-hyde-49ers-vs-panthers-run-game-blame">more</a>.</p>
+					<p><p>It was a disheartened Carlos Hyde that was in the locker room after the San Francisco 49ers loss to the Carolina Panthers. He was introspective and &hellip;  <a href="http://www.ninersnation.com/2016/9/20/12971582/carlos-hyde-49ers-vs-panthers-run-game-blame" onclick="trackOutboundLink('http://www.ninersnation.com/2016/9/20/12971582/carlos-hyde-49ers-vs-panthers-run-game-blame'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>NFL round-up: Jimmy Garoppolo stars for New England Patriots and Oakland</h3>
-					<p><p>Daily Mail Kicker Wil Lutz missed a 61-yard field goal attempt in the dying seconds as the New Orleans Saints were beaten 35-34 by the Oakland Raiders.  <a href="http://www.dailymail.co.uk/sport/nfl/article-3784573/NFL-round-Jimmy-Garoppolo-stars-New-England-Patriots-Oakland-Raiders-snatch-late-victory-against-New-Orleans-Saints.html">more</a>.</p>
+					<p><p>Daily Mail Kicker Wil Lutz missed a 61-yard field goal attempt in the dying seconds as the New Orleans Saints were beaten 35-34 by the Oakland Raiders.  <a href="http://www.dailymail.co.uk/sport/nfl/article-3784573/NFL-round-Jimmy-Garoppolo-stars-New-England-Patriots-Oakland-Raiders-snatch-late-victory-against-New-Orleans-Saints.html" onclick="trackOutboundLink('http://www.dailymail.co.uk/sport/nfl/article-3784573/NFL-round-Jimmy-Garoppolo-stars-New-England-Patriots-Oakland-Raiders-snatch-late-victory-against-New-Orleans-Saints.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>Coke, Walmart bungle 9/11 display; Lauer woes; 49ers&#39; Amazon deal</h3>
-					<p><p>The 49ers and Amazon Prime Now are teaming up to help fans get stuff delivered for their tailgate parties. Amazon spokeswoman Amanda Ip said &hellip;  <a href="http://www.sfgate.com/business/article/Coke-Walmart-bungle-9-11-display-Lauer-woes-9211259.php">more</a>.</p>
+					<p><p>The 49ers and Amazon Prime Now are teaming up to help fans get stuff delivered for their tailgate parties. Amazon spokeswoman Amanda Ip said &hellip;  <a href="http://www.sfgate.com/business/article/Coke-Walmart-bungle-9-11-display-Lauer-woes-9211259.php" onclick="trackOutboundLink('http://www.sfgate.com/business/article/Coke-Walmart-bungle-9-11-display-Lauer-woes-9211259.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

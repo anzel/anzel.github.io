@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>SHARKS 1994 SAN JOSE SHARKS MAGAZINE VOL. 3 NO. 6 in 5miles</h3>
-					<p><p>AND MORE.  <a href="https://www.5milesapp.com/item/a0mlgmjW4DvJ13qD/sharks-1994-san-jose-sharks-magazine-vol-3-no-6">more</a>.</p>
+					<p><p>AND MORE.  <a href="https://www.5milesapp.com/item/a0mlgmjW4DvJ13qD/sharks-1994-san-jose-sharks-magazine-vol-3-no-6" onclick="trackOutboundLink('https://www.5milesapp.com/item/a0mlgmjW4DvJ13qD/sharks-1994-san-jose-sharks-magazine-vol-3-no-6'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

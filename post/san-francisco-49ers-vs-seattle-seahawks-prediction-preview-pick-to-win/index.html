@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>23</b></p>
 					<h3>San Francisco 49ers vs Seattle Seahawks: prediction, preview, pick to win</h3>
-					<p><p>p.m. ET at CenturyLink Field. TV: FOX, Kevin Burkhardt, John Lynch, &hellip;  <a href="http://talk921.com/san-francisco-49ers-vs-seattle-seahawks-prediction-preview-pick-to-win/">more</a>.</p>
+					<p><p>p.m. ET at CenturyLink Field. TV: FOX, Kevin Burkhardt, John Lynch, &hellip;  <a href="http://talk921.com/san-francisco-49ers-vs-seattle-seahawks-prediction-preview-pick-to-win/" onclick="trackOutboundLink('http://talk921.com/san-francisco-49ers-vs-seattle-seahawks-prediction-preview-pick-to-win/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

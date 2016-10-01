@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>05</b></p>
 					<h3>Sounds Of The Game From The Oakland Raiders 2016 Preseason</h3>
-					<p><p>Last Thursday, The Oakland Raiders wrapped up their 2016 preseason in a 23-21 loss to the Seattle Seahawks. Over the course of the preseason &hellip;  <a href="http://www.raiders.com/news/article-1/Sounds-Of-The-Game-From-The-Oakland-Raiders-2016-Preseason/c75ffc7b-a0a4-4ef2-8607-06c46f277a07">more</a>.</p>
+					<p><p>Last Thursday, The Oakland Raiders wrapped up their 2016 preseason in a 23-21 loss to the Seattle Seahawks. Over the course of the preseason &hellip;  <a href="http://www.raiders.com/news/article-1/Sounds-Of-The-Game-From-The-Oakland-Raiders-2016-Preseason/c75ffc7b-a0a4-4ef2-8607-06c46f277a07" onclick="trackOutboundLink('http://www.raiders.com/news/article-1/Sounds-Of-The-Game-From-The-Oakland-Raiders-2016-Preseason/c75ffc7b-a0a4-4ef2-8607-06c46f277a07'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

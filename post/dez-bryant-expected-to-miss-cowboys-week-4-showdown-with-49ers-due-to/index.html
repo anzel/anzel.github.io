@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>29</b></p>
 					<h3>Dez Bryant expected to miss Cowboys&#39; Week 4 showdown with 49ers due to</h3>
-					<p><p>SB Nation After a week of turmoil and mystery in Dallas, Dez Bryant won&rsquo;t be active when the Cowboys take on the San Francisco 49ers Sunday. The star &hellip;  <a href="http://www.sbnation.com/nfl/2016/9/29/13102458/2016-nfl-football-cowboys-dez-bryant-knee-injury-inactive-week-4">more</a>.</p>
+					<p><p>SB Nation After a week of turmoil and mystery in Dallas, Dez Bryant won&rsquo;t be active when the Cowboys take on the San Francisco 49ers Sunday. The star &hellip;  <a href="http://www.sbnation.com/nfl/2016/9/29/13102458/2016-nfl-football-cowboys-dez-bryant-knee-injury-inactive-week-4" onclick="trackOutboundLink('http://www.sbnation.com/nfl/2016/9/29/13102458/2016-nfl-football-cowboys-dez-bryant-knee-injury-inactive-week-4'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

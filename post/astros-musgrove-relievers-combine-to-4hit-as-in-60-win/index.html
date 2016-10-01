@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>15</b></p>
 					<h3>Astros&#39; Musgrove, relievers combine to 4-hit A&#39;s in 6-0 win</h3>
-					<p><p>And it was a pitch that got away really cost the Oakland Athletics. &hellip; Astros&rsquo; Evan gates watches his solo home run off Oakland Athletics starting pitcher &hellip;  <a href="http://www.crcconnection.com/2016/09/15/astros-musgrove-relievers-combine-to-4-hit-as-in-6-0-win.html">more</a>.</p>
+					<p><p>And it was a pitch that got away really cost the Oakland Athletics. &hellip; Astros&rsquo; Evan gates watches his solo home run off Oakland Athletics starting pitcher &hellip;  <a href="http://www.crcconnection.com/2016/09/15/astros-musgrove-relievers-combine-to-4-hit-as-in-6-0-win.html" onclick="trackOutboundLink('http://www.crcconnection.com/2016/09/15/astros-musgrove-relievers-combine-to-4-hit-as-in-6-0-win.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

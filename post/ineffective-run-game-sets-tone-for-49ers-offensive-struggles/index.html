@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>19</b></p>
 					<h3>Ineffective run game sets tone for 49ers&#39; offensive struggles</h3>
-					<p><p>The San Francisco 49ers offense brought on memories of a year ago with an inconsistent and struggling offense in Sunday&rsquo;s 46-27 loss to the &hellip;  <a href="http://www.espn.com/blog/nflnation/post/_/id/214736/ineffective-run-game-sets-tone-for-49ers-offensive-struggles">more</a>.</p>
+					<p><p>The San Francisco 49ers offense brought on memories of a year ago with an inconsistent and struggling offense in Sunday&rsquo;s 46-27 loss to the &hellip;  <a href="http://www.espn.com/blog/nflnation/post/_/id/214736/ineffective-run-game-sets-tone-for-49ers-offensive-struggles" onclick="trackOutboundLink('http://www.espn.com/blog/nflnation/post/_/id/214736/ineffective-run-game-sets-tone-for-49ers-offensive-struggles'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

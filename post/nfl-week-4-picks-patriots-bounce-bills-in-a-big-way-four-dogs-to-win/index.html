@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>30</b></p>
 					<h3>NFL Week 4 Picks: Patriots bounce Bills in a big way, four dogs to win</h3>
-					<p><p>CBSSports.com It really stinks when you consider that the 49ers have shown the ability &ndash; not the recent ability, mind you, but the ability &ndash; to stop a run-heavy team and &hellip;  <a href="http://www.cbssports.com/nfl/news/nfl-week-4-picks-patriots-bounce-bills-in-a-big-way-four-dogs-to-win-outright/">more</a>.</p>
+					<p><p>CBSSports.com It really stinks when you consider that the 49ers have shown the ability &ndash; not the recent ability, mind you, but the ability &ndash; to stop a run-heavy team and &hellip;  <a href="http://www.cbssports.com/nfl/news/nfl-week-4-picks-patriots-bounce-bills-in-a-big-way-four-dogs-to-win-outright/" onclick="trackOutboundLink('http://www.cbssports.com/nfl/news/nfl-week-4-picks-patriots-bounce-bills-in-a-big-way-four-dogs-to-win-outright/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

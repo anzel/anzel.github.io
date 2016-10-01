@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>Notebook: Charles Woodson With Big Prediction For Khalil Mack And The</h3>
-					<p><p>Raiders.com It&rsquo;s no secret, after a resurgent effort in 2015 the Oakland Raiders are a trendy pick to earn their way back into the postseason this year, but a future &hellip;  <a href="http://www.raiders.com/news/article-1/Notebook-Charles-Woodson-With-Big-Prediction-For-Khalil-Mack-And-The-Oakland-Raiders/6595f2fd-8b9c-4d83-b2da-af6669a77c68">more</a>.</p>
+					<p><p>Raiders.com It&rsquo;s no secret, after a resurgent effort in 2015 the Oakland Raiders are a trendy pick to earn their way back into the postseason this year, but a future &hellip;  <a href="http://www.raiders.com/news/article-1/Notebook-Charles-Woodson-With-Big-Prediction-For-Khalil-Mack-And-The-Oakland-Raiders/6595f2fd-8b9c-4d83-b2da-af6669a77c68" onclick="trackOutboundLink('http://www.raiders.com/news/article-1/Notebook-Charles-Woodson-With-Big-Prediction-For-Khalil-Mack-And-The-Oakland-Raiders/6595f2fd-8b9c-4d83-b2da-af6669a77c68'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

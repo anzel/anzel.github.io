@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>16</b></p>
 					<h3>Raiders Continue To Be Their Own Worst Enemy</h3>
-					<p><p>The Oakland Raiders got 2016 off to a good start with a thrilling come from behind win in New Orleans  yet even in victory, the team proved to be their &hellip;  <a href="http://goldengatesports.com/2016/09/16/oakland-raiders-continue-worst-enemies/">more</a>.</p>
+					<p><p>The Oakland Raiders got 2016 off to a good start with a thrilling come from behind win in New Orleans  yet even in victory, the team proved to be their &hellip;  <a href="http://goldengatesports.com/2016/09/16/oakland-raiders-continue-worst-enemies/" onclick="trackOutboundLink('http://goldengatesports.com/2016/09/16/oakland-raiders-continue-worst-enemies/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

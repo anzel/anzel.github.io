@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>29</b></p>
 					<h3>Montreal Impact 3, San Jose Earthquakes 1 - 2016 MLS Match Recap</h3>
-					<p><p>In a game between two teams desperate for points, the Montreal Impact scored twice in a 10-minute span in the first half and again in second-half &hellip;  <a href="http://www.mlssoccer.com/post/2016/09/28/montreal-impact-3-san-jose-earthquakes-1-2016-mls-match-recap">more</a>.</p>
+					<p><p>In a game between two teams desperate for points, the Montreal Impact scored twice in a 10-minute span in the first half and again in second-half &hellip;  <a href="http://www.mlssoccer.com/post/2016/09/28/montreal-impact-3-san-jose-earthquakes-1-2016-mls-match-recap" onclick="trackOutboundLink('http://www.mlssoccer.com/post/2016/09/28/montreal-impact-3-san-jose-earthquakes-1-2016-mls-match-recap'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

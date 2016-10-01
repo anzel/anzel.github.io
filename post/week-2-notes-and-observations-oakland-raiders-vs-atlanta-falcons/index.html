@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>21</b></p>
 					<h3>Week 2 Notes and Observations: Oakland Raiders vs. Atlanta Falcons</h3>
-					<p><p>Raiders&rsquo; Week 2 home loss to the Atlanta Falcons. The Oakland Raiders came &hellip;  <a href="http://www.profootballweekly.com/nfl/imported/2016/09/21/46e13a5dd944bd44b9680b5c6e60b0cd/index.xml">more</a>.</p>
+					<p><p>Raiders&rsquo; Week 2 home loss to the Atlanta Falcons. The Oakland Raiders came &hellip;  <a href="http://www.profootballweekly.com/nfl/imported/2016/09/21/46e13a5dd944bd44b9680b5c6e60b0cd/index.xml" onclick="trackOutboundLink('http://www.profootballweekly.com/nfl/imported/2016/09/21/46e13a5dd944bd44b9680b5c6e60b0cd/index.xml'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>24</b></p>
 					<h3>Colin Kaepernick joins Oakland high school football team&#39;s protest</h3>
-					<p><p>&hellip; where numerous players were photographed lying on their backs with their hands raised while the San Francisco 49ers quarterback kneeled during &hellip;  <a href="http://www.espn.com/nfl/story/_/id/17624951/san-francisco-49ers-quarterback-colin-kaepernick-joins-high-school-football-team-protest">more</a>.</p>
+					<p><p>&hellip; where numerous players were photographed lying on their backs with their hands raised while the San Francisco 49ers quarterback kneeled during &hellip;  <a href="http://www.espn.com/nfl/story/_/id/17624951/san-francisco-49ers-quarterback-colin-kaepernick-joins-high-school-football-team-protest" onclick="trackOutboundLink('http://www.espn.com/nfl/story/_/id/17624951/san-francisco-49ers-quarterback-colin-kaepernick-joins-high-school-football-team-protest'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

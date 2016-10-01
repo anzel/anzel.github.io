@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>19</b></p>
 					<h3>What the Raiders had to say after their loss to the Falcons</h3>
-					<p><p>OAKLAND, CA - SEPTEMBER 18: The Raiderettes perform during the NFL game between the Oakland Raiders and the Atlanta Falcons at &hellip; read &hellip;  <a href="http://www.myajc.com/news/sports/football/what-the-raiders-had-to-say-after-their-loss-to-th/nsZ8m/">more</a>.</p>
+					<p><p>OAKLAND, CA - SEPTEMBER 18: The Raiderettes perform during the NFL game between the Oakland Raiders and the Atlanta Falcons at &hellip; read &hellip;  <a href="http://www.myajc.com/news/sports/football/what-the-raiders-had-to-say-after-their-loss-to-th/nsZ8m/" onclick="trackOutboundLink('http://www.myajc.com/news/sports/football/what-the-raiders-had-to-say-after-their-loss-to-th/nsZ8m/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

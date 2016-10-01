@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>Jim Steadman: 49ers quarterback has right ... to do what is right</h3>
-					<p><p>I have never been so sick of hearing what San Francisco 49ers quarterback Colin Kaepernick has to say and the refusal to stand for the national &hellip;  <a href="http://www.reporternews.com/opinion/columnists/jim-steadman-49ers-quarterback-has-right--to-do-what-is-right-3c656f26-c3b2-2174-e053-0100007fe454-393794661.html">more</a>.</p>
+					<p><p>I have never been so sick of hearing what San Francisco 49ers quarterback Colin Kaepernick has to say and the refusal to stand for the national &hellip;  <a href="http://www.reporternews.com/opinion/columnists/jim-steadman-49ers-quarterback-has-right--to-do-what-is-right-3c656f26-c3b2-2174-e053-0100007fe454-393794661.html" onclick="trackOutboundLink('http://www.reporternews.com/opinion/columnists/jim-steadman-49ers-quarterback-has-right--to-do-what-is-right-3c656f26-c3b2-2174-e053-0100007fe454-393794661.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

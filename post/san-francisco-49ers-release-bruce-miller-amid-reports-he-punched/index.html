@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>05</b></p>
 					<h3>San Francisco 49ers Release Bruce Miller Amid Reports He Punched</h3>
-					<p><p>TIME The San Francisco 49ers released Bruce Miller on Monday after the fullback was arrested for allegedly punching a 70-year-old man in the face, &hellip;  <a href="http://time.com/4479411/49ers-release-bruce-miller-assault/">more</a>.</p>
+					<p><p>TIME The San Francisco 49ers released Bruce Miller on Monday after the fullback was arrested for allegedly punching a 70-year-old man in the face, &hellip;  <a href="http://time.com/4479411/49ers-release-bruce-miller-assault/" onclick="trackOutboundLink('http://time.com/4479411/49ers-release-bruce-miller-assault/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

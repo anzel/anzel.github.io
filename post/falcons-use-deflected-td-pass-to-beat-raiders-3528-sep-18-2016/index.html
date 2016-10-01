@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>19</b></p>
 					<h3>Falcons use deflected TD pass to beat Raiders 35-28 (Sep 18, 2016)</h3>
-					<p><p>Atlanta Falcons wide receiver Justin Hardy (16) catches a touchdown pass in front of Oakland Raiders cornerback Sean Smith (partially obscured) &hellip;  <a href="http://www.foxsports.com/nfl/story/falcons-use-deflected-td-pass-to-beat-raiders-35-28-091816">more</a>.</p>
+					<p><p>Atlanta Falcons wide receiver Justin Hardy (16) catches a touchdown pass in front of Oakland Raiders cornerback Sean Smith (partially obscured) &hellip;  <a href="http://www.foxsports.com/nfl/story/falcons-use-deflected-td-pass-to-beat-raiders-35-28-091816" onclick="trackOutboundLink('http://www.foxsports.com/nfl/story/falcons-use-deflected-td-pass-to-beat-raiders-35-28-091816'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

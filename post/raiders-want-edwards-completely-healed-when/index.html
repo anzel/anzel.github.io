@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>Raiders want Edwards &#39;completely healed&#39; when</h3>
-					<p><p>The Oakland Raiders want to make sure Mario Edwards Jr. is 100 percent before he returns, even if he&rsquo;s out a couple extra weeks.  <a href="http://www.mercurynews.com/2016/09/07/raiders-want-defensive-end-mario-edwards-jr-completely-healed-when-he-returns/">more</a>.</p>
+					<p><p>The Oakland Raiders want to make sure Mario Edwards Jr. is 100 percent before he returns, even if he&rsquo;s out a couple extra weeks.  <a href="http://www.mercurynews.com/2016/09/07/raiders-want-defensive-end-mario-edwards-jr-completely-healed-when-he-returns/" onclick="trackOutboundLink('http://www.mercurynews.com/2016/09/07/raiders-want-defensive-end-mario-edwards-jr-completely-healed-when-he-returns/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

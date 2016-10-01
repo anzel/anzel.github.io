@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>13</b></p>
 					<h3>Oakland Raiders vs. Atlanta Falcons Pick Prediction NFL Pro Football Odds</h3>
-					<p><p>The Atlanta Falcons are headed to the west coast in week three to face the Oakland Raiders in an NFL pro football game set for Sunday. Start Time: &hellip;  <a href="https://vimeo.com/182501776">more</a>.</p>
+					<p><p>The Atlanta Falcons are headed to the west coast in week three to face the Oakland Raiders in an NFL pro football game set for Sunday. Start Time: &hellip;  <a href="https://vimeo.com/182501776" onclick="trackOutboundLink('https://vimeo.com/182501776'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

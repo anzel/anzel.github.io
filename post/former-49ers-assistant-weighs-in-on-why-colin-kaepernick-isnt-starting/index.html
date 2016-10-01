@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>Former 49ers assistant weighs in on why Colin Kaepernick isn&#39;t starting</h3>
-					<p><p>The San Francisco 49ers have struggled behind Blaine Gabbert the past two weeks, and some critics are calling for Chip Kelly to replace him with &hellip;  <a href="http://www.foxsports.com/nfl/story/san-francisco-49ers-colin-kaepernick-blaine-gabbert-starting-qb-092716">more</a>.</p>
+					<p><p>The San Francisco 49ers have struggled behind Blaine Gabbert the past two weeks, and some critics are calling for Chip Kelly to replace him with &hellip;  <a href="http://www.foxsports.com/nfl/story/san-francisco-49ers-colin-kaepernick-blaine-gabbert-starting-qb-092716" onclick="trackOutboundLink('http://www.foxsports.com/nfl/story/san-francisco-49ers-colin-kaepernick-blaine-gabbert-starting-qb-092716'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

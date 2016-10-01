@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>49ers pre-game thoughts ahead of opener against Rams</h3>
-					<p><p>That&rsquo;s the 100-yard wide flag the 49ers will trot out for the national anthem ahead of their season opener tonight against the Rams. We know Colin &hellip;  <a href="http://ninerswire.usatoday.com/2016/09/12/49ers-pre-game-thoughts-ahead-of-opener-against-rams/">more</a>.</p>
+					<p><p>That&rsquo;s the 100-yard wide flag the 49ers will trot out for the national anthem ahead of their season opener tonight against the Rams. We know Colin &hellip;  <a href="http://ninerswire.usatoday.com/2016/09/12/49ers-pre-game-thoughts-ahead-of-opener-against-rams/" onclick="trackOutboundLink('http://ninerswire.usatoday.com/2016/09/12/49ers-pre-game-thoughts-ahead-of-opener-against-rams/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

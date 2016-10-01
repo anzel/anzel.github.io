@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>21</b></p>
 					<h3>49ers Gabbert-Hyde combo faces big test in Seattle</h3>
-					<p><p>49ers QB Blaine Gabbert (2) and RB Carlos Hyde (28) look to break the 49ers&rsquo; four-year losing streak in Seattle. (Nhat V. Meyer/Bay Area News Group).  <a href="http://www.mercurynews.com/2016/09/21/49ers-blaine-gabbert-carlos-hyde-combo-faces-biggest-test-yet-in-seattle-seahawks/">more</a>.</p>
+					<p><p>49ers QB Blaine Gabbert (2) and RB Carlos Hyde (28) look to break the 49ers&rsquo; four-year losing streak in Seattle. (Nhat V. Meyer/Bay Area News Group).  <a href="http://www.mercurynews.com/2016/09/21/49ers-blaine-gabbert-carlos-hyde-combo-faces-biggest-test-yet-in-seattle-seahawks/" onclick="trackOutboundLink('http://www.mercurynews.com/2016/09/21/49ers-blaine-gabbert-carlos-hyde-combo-faces-biggest-test-yet-in-seattle-seahawks/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

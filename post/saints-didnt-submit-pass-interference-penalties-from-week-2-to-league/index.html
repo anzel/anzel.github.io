@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>22</b></p>
 					<h3>Saints didn&#39;t submit pass interference penalties from Week 2 to league,</h3>
-					<p><p>NOLA.com The Saints had such a play in Week 1&rsquo;s 35-34 loss to the Oakland Raiders when linebacker Craig Robertson drew a controversial flag for pass &hellip;  <a href="http://www.nola.com/saints/index.ssf/2016/09/saints_didnt_submit_pass_inter.html">more</a>.</p>
+					<p><p>NOLA.com The Saints had such a play in Week 1&rsquo;s 35-34 loss to the Oakland Raiders when linebacker Craig Robertson drew a controversial flag for pass &hellip;  <a href="http://www.nola.com/saints/index.ssf/2016/09/saints_didnt_submit_pass_inter.html" onclick="trackOutboundLink('http://www.nola.com/saints/index.ssf/2016/09/saints_didnt_submit_pass_inter.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

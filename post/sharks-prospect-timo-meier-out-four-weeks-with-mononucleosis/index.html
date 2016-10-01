@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Oct<b>01</b></p>
 					<h3>Sharks prospect Timo Meier out four weeks with mononucleosis</h3>
-					<p><p>Sharks forward prospect Timo Meier has been ill for the last five days but returned to practice Friday. By Curtis Pashelka &hellip;  <a href="http://www.mercurynews.com/2016/09/30/sharks-prospect-timo-meier-glad-to-be-back-practicing/">more</a>.</p>
+					<p><p>Sharks forward prospect Timo Meier has been ill for the last five days but returned to practice Friday. By Curtis Pashelka &hellip;  <a href="http://www.mercurynews.com/2016/09/30/sharks-prospect-timo-meier-glad-to-be-back-practicing/" onclick="trackOutboundLink('http://www.mercurynews.com/2016/09/30/sharks-prospect-timo-meier-glad-to-be-back-practicing/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

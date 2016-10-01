@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>22</b></p>
 					<h3>New Era Men&#39;s San Jose Sharks 39Thirty Team Classic Flex Hat</h3>
-					<p><p>Sporting Goods. Find more information and get customer ratings and &hellip;  <a href="http://www.dickssportinggoods.com/product/index.jsp?productId=93250216">more</a>.</p>
+					<p><p>Sporting Goods. Find more information and get customer ratings and &hellip;  <a href="http://www.dickssportinggoods.com/product/index.jsp?productId=93250216" onclick="trackOutboundLink('http://www.dickssportinggoods.com/product/index.jsp?productId=93250216'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>04</b></p>
 					<h3>Athletics routed by power-hitting Red Sox yet again</h3>
-					<p><p>Oakland Athletics pitcher Daniel Mengden works against the Boston Red Sox in the first inning of a baseball game Saturday, Sept. 3, 2016, in Oakland &hellip;  <a href="http://newsok.com/article/feed/1068661">more</a>.</p>
+					<p><p>Oakland Athletics pitcher Daniel Mengden works against the Boston Red Sox in the first inning of a baseball game Saturday, Sept. 3, 2016, in Oakland &hellip;  <a href="http://newsok.com/article/feed/1068661" onclick="trackOutboundLink('http://newsok.com/article/feed/1068661'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

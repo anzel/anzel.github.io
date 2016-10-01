@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>10</b></p>
 					<h3>Santa Clara police rescind 49ers, Kaepernick boycott threat</h3>
-					<p><p>The Santa Clara police officers&rsquo; union has rescinded its earlier threat to boycott patrolling San Francisco 49ers home games over the Colin &hellip;  <a href="http://ninernoise.com/2016/09/10/santa-clara-police-rescind-49ers-boycott-threat/">more</a>.</p>
+					<p><p>The Santa Clara police officers&rsquo; union has rescinded its earlier threat to boycott patrolling San Francisco 49ers home games over the Colin &hellip;  <a href="http://ninernoise.com/2016/09/10/santa-clara-police-rescind-49ers-boycott-threat/" onclick="trackOutboundLink('http://ninernoise.com/2016/09/10/santa-clara-police-rescind-49ers-boycott-threat/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

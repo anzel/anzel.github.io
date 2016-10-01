@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>11</b></p>
 					<h3>Los Angeles Rams vs. San Francisco 49ers: Week 1 Mail Pail</h3>
-					<p><p>Every week this season, TST will take questions from y&rsquo;all and answer them to the best of our ability. If you&rsquo;d like to take part in future Mail Pails, hit us &hellip;  <a href="http://www.turfshowtimes.com/2016/9/11/12877398/los-angeles-rams-vs-san-francisco-49ers-week-1-mail-pail">more</a>.</p>
+					<p><p>Every week this season, TST will take questions from y&rsquo;all and answer them to the best of our ability. If you&rsquo;d like to take part in future Mail Pails, hit us &hellip;  <a href="http://www.turfshowtimes.com/2016/9/11/12877398/los-angeles-rams-vs-san-francisco-49ers-week-1-mail-pail" onclick="trackOutboundLink('http://www.turfshowtimes.com/2016/9/11/12877398/los-angeles-rams-vs-san-francisco-49ers-week-1-mail-pail'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

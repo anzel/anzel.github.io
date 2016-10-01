@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>22</b></p>
 					<h3>Reebok Men&#39;s San Jose Sharks Black Center Ice Authentic Locker Room T-Shirt</h3>
-					<p><p>the Reebok Men&rsquo;s San Jose Sharks Center Ice Authentic Locker Room &hellip;  <a href="http://www.dickssportinggoods.com/product/index.jsp?productId=69144416">more</a>.</p>
+					<p><p>the Reebok Men&rsquo;s San Jose Sharks Center Ice Authentic Locker Room &hellip;  <a href="http://www.dickssportinggoods.com/product/index.jsp?productId=69144416" onclick="trackOutboundLink('http://www.dickssportinggoods.com/product/index.jsp?productId=69144416'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

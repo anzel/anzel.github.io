@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Oct<b>01</b></p>
 					<h3>Cowboys vs. 49ers Preview and Live Streaming: Colin Kaepernick to replace</h3>
-					<p><p>Sportsrageous Come Sunday the San Francisco 49ers might be getting a glimpse of Colin Kaepernick calling the snaps against the Dallas Cowboys. Rumors are &hellip;  <a href="http://www.sportsrageous.com/nfl/cowboys-vs-49ers-preview-live-streaming-colin-kaepernick-replace-blaine-gabbert-dak-prescott-continues-impress-week-4/48856/">more</a>.</p>
+					<p><p>Sportsrageous Come Sunday the San Francisco 49ers might be getting a glimpse of Colin Kaepernick calling the snaps against the Dallas Cowboys. Rumors are &hellip;  <a href="http://www.sportsrageous.com/nfl/cowboys-vs-49ers-preview-live-streaming-colin-kaepernick-replace-blaine-gabbert-dak-prescott-continues-impress-week-4/48856/" onclick="trackOutboundLink('http://www.sportsrageous.com/nfl/cowboys-vs-49ers-preview-live-streaming-colin-kaepernick-replace-blaine-gabbert-dak-prescott-continues-impress-week-4/48856/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

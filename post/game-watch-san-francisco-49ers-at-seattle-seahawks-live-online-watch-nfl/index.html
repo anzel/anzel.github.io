@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>Game Watch San Francisco 49ers At Seattle Seahawks Live Online Watch NFL</h3>
-					<p><p>Live Online NFL Football Game Live Streaming Free|Stream San Francisco 49ers At Seattle Seahawks Live Online Live. NFL Football Streaming &hellip;  <a href="http://www.sonomacounty.com/sites/default/master/files/webform/game_stream_san_francisco_49ers_at_seattle_seahawks_live_online_cbs_nfl_football_watch_online.pdf">more</a>.</p>
+					<p><p>Live Online NFL Football Game Live Streaming Free|Stream San Francisco 49ers At Seattle Seahawks Live Online Live. NFL Football Streaming &hellip;  <a href="http://www.sonomacounty.com/sites/default/master/files/webform/game_stream_san_francisco_49ers_at_seattle_seahawks_live_online_cbs_nfl_football_watch_online.pdf" onclick="trackOutboundLink('http://www.sonomacounty.com/sites/default/master/files/webform/game_stream_san_francisco_49ers_at_seattle_seahawks_live_online_cbs_nfl_football_watch_online.pdf'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

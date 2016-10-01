@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>20</b></p>
 					<h3>Anthony Davis, Jaquiski Tartt working in weight room at start of 49ers</h3>
-					<p><p>Niners Nation The 49ers will release an injury report later this week, and Anthony Davis and Jaquiski Tartt will likely end up on it. By David Fucillo @davidfucillo Sep &hellip;  <a href="http://www.ninersnation.com/2016/9/20/12990730/anthony-davis-jaquiski-tartt-49ers-injury-report-week-3-practice">more</a>.</p>
+					<p><p>Niners Nation The 49ers will release an injury report later this week, and Anthony Davis and Jaquiski Tartt will likely end up on it. By David Fucillo @davidfucillo Sep &hellip;  <a href="http://www.ninersnation.com/2016/9/20/12990730/anthony-davis-jaquiski-tartt-49ers-injury-report-week-3-practice" onclick="trackOutboundLink('http://www.ninersnation.com/2016/9/20/12990730/anthony-davis-jaquiski-tartt-49ers-injury-report-week-3-practice'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

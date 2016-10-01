@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>28</b></p>
 					<h3>Blaine Gabbert grilled about 49ers&#39; third down woes</h3>
-					<p><p>The San Francisco 49ers converted just four of their 15 third down situations against the Seattle Seahawks on Sunday. They have converted just 16 of &hellip;  <a href="http://www.49erswebzone.com/news/98558-blaine-gabbert-grilled-about-49ers-third-down-woes/">more</a>.</p>
+					<p><p>The San Francisco 49ers converted just four of their 15 third down situations against the Seattle Seahawks on Sunday. They have converted just 16 of &hellip;  <a href="http://www.49erswebzone.com/news/98558-blaine-gabbert-grilled-about-49ers-third-down-woes/" onclick="trackOutboundLink('http://www.49erswebzone.com/news/98558-blaine-gabbert-grilled-about-49ers-third-down-woes/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

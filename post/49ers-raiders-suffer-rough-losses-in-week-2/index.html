@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>19</b></p>
 					<h3>49ers, Raiders Suffer Rough Losses in Week 2</h3>
-					<p><p>The Oakland Raiders and San Francisco 49ers suffered rough losses in the second week of the season after promising performances during opening &hellip;  <a href="http://www.nbcbayarea.com/news/local/49ers-Raiders-Suffer-Rough-Losses-in-Week-2-394060691.html">more</a>.</p>
+					<p><p>The Oakland Raiders and San Francisco 49ers suffered rough losses in the second week of the season after promising performances during opening &hellip;  <a href="http://www.nbcbayarea.com/news/local/49ers-Raiders-Suffer-Rough-Losses-in-Week-2-394060691.html" onclick="trackOutboundLink('http://www.nbcbayarea.com/news/local/49ers-Raiders-Suffer-Rough-Losses-in-Week-2-394060691.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

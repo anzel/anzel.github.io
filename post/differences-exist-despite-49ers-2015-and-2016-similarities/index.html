@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>29</b></p>
 					<h3>Differences Exist Despite 49ers 2015 and 2016 Similarities</h3>
-					<p><p>On the surface, the 2016 San Francisco 49ers have gotten off to an eerily similar start as they did a year ago under former head coach Jim Tomsula.  <a href="http://ninernoise.com/2016/09/28/differences-exist-despite-49ers-2015-2016-similarities/">more</a>.</p>
+					<p><p>On the surface, the 2016 San Francisco 49ers have gotten off to an eerily similar start as they did a year ago under former head coach Jim Tomsula.  <a href="http://ninernoise.com/2016/09/28/differences-exist-despite-49ers-2015-2016-similarities/" onclick="trackOutboundLink('http://ninernoise.com/2016/09/28/differences-exist-despite-49ers-2015-2016-similarities/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

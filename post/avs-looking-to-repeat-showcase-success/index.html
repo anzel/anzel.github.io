@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>19</b></p>
 					<h3>Avs Looking To Repeat Showcase Success</h3>
-					<p><p>The 2016 Colorado Avalanche Rookie Showcase is underway and the Avs are off to a great start after defeating the San Jose Sharks 4-1 on Saturday &hellip;  <a href="https://www.nhl.com/avalanche/news/avalanche-take-on-the-ducks-on-day-2-of-the-rookie-showcase/c-281904002">more</a>.</p>
+					<p><p>The 2016 Colorado Avalanche Rookie Showcase is underway and the Avs are off to a great start after defeating the San Jose Sharks 4-1 on Saturday &hellip;  <a href="https://www.nhl.com/avalanche/news/avalanche-take-on-the-ducks-on-day-2-of-the-rookie-showcase/c-281904002" onclick="trackOutboundLink('https://www.nhl.com/avalanche/news/avalanche-take-on-the-ducks-on-day-2-of-the-rookie-showcase/c-281904002'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

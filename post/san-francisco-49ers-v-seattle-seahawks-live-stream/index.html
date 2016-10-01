@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>San Francisco 49ers v Seattle Seahawks L&#39;ive S&#39;tream</h3>
-					<p><p>online &hellip;  <a href="https://vimeo.com/184232146">more</a>.</p>
+					<p><p>online &hellip;  <a href="https://vimeo.com/184232146" onclick="trackOutboundLink('https://vimeo.com/184232146'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

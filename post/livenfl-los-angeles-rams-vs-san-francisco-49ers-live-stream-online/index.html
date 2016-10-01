@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>[Live@NFL] Los Angeles Rams vs. San Francisco 49ers Live s-trea.m Online</h3>
-					<p><p>San Francisco 49ers Live. WATCH&lt;&gt;. <a href="http://sports-live.twitens.pw/september2016/nfl-regular-season-live.html">http://sports-live.twitens.pw/september2016/nfl-regular-season-live.html</a>. Watch,.,Los Angeles Rams,.,Vs,.,San &hellip;  <a href="https://awethu.amandla.mobi/petitions/live-nfl-los-angeles-rams-vs-san-francisco-49ers-live-s-trea-m-online-game-1">more</a>.</p>
+					<p><p>San Francisco 49ers Live. WATCH&lt;&gt;. <a href="http://sports-live.twitens.pw/september2016/nfl-regular-season-live.html">http://sports-live.twitens.pw/september2016/nfl-regular-season-live.html</a>. Watch,.,Los Angeles Rams,.,Vs,.,San &hellip;  <a href="https://awethu.amandla.mobi/petitions/live-nfl-los-angeles-rams-vs-san-francisco-49ers-live-s-trea-m-online-game-1" onclick="trackOutboundLink('https://awethu.amandla.mobi/petitions/live-nfl-los-angeles-rams-vs-san-francisco-49ers-live-s-trea-m-online-game-1'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

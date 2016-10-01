@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>49ers CEO pledges $1 million to &#39;help bridge the gap&#39; and address social</h3>
-					<p><p>ESPN San Francisco 49ers CEO Jed York on Thursday told ESPN that the team will give $1 million to two area groups to &ldquo;help bridge the gap&rdquo; and address &hellip;  <a href="http://www.espn.com/nfl/story/_/id/17498281/san-francisco-49ers-pledge-1-million-help-bridge-gap-address-social-inequities">more</a>.</p>
+					<p><p>ESPN San Francisco 49ers CEO Jed York on Thursday told ESPN that the team will give $1 million to two area groups to &ldquo;help bridge the gap&rdquo; and address &hellip;  <a href="http://www.espn.com/nfl/story/_/id/17498281/san-francisco-49ers-pledge-1-million-help-bridge-gap-address-social-inequities" onclick="trackOutboundLink('http://www.espn.com/nfl/story/_/id/17498281/san-francisco-49ers-pledge-1-million-help-bridge-gap-address-social-inequities'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

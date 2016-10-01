@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>02</b></p>
 					<h3>Oakland Raiders&#39; Khalil Mack Is Heavy Favorite For This In 2016</h3>
-					<p><p>It&rsquo;s good being the Oakland Raiders these days because anybody with eyes can see that this team is ready to start winning football games again.  <a href="http://nflmocks.com/2016/09/02/oakland-raiders-khalil-mack-is-heavy-favorite-for-this-in-2016/">more</a>.</p>
+					<p><p>It&rsquo;s good being the Oakland Raiders these days because anybody with eyes can see that this team is ready to start winning football games again.  <a href="http://nflmocks.com/2016/09/02/oakland-raiders-khalil-mack-is-heavy-favorite-for-this-in-2016/" onclick="trackOutboundLink('http://nflmocks.com/2016/09/02/oakland-raiders-khalil-mack-is-heavy-favorite-for-this-in-2016/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

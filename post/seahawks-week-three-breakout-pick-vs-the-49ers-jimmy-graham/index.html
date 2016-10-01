@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>Seahawks Week Three Breakout Pick vs the 49ers: Jimmy Graham</h3>
-					<p><p>The Seattle Seahawks have some players that definitely need to step up for the win like Russell Wilson or Christine Michael but how about a few &hellip;  <a href="http://sea.247sports.com/Gallery/Five-Seahawks-of-intrigue-vs-the-49ers-47763811">more</a>.</p>
+					<p><p>The Seattle Seahawks have some players that definitely need to step up for the win like Russell Wilson or Christine Michael but how about a few &hellip;  <a href="http://sea.247sports.com/Gallery/Five-Seahawks-of-intrigue-vs-the-49ers-47763811" onclick="trackOutboundLink('http://sea.247sports.com/Gallery/Five-Seahawks-of-intrigue-vs-the-49ers-47763811'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

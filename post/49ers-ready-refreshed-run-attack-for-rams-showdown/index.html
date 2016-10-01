@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>11</b></p>
 					<h3>49ers ready refreshed run attack for Rams showdown</h3>
-					<p><p>However, the 49ers offensive line isn&rsquo;t the only new weapon that Los Angeles will see, as Hyde returns from his injury looking to steal the spotlight &hellip;  <a href="https://sfbay.ca/2016/09/11/49ers-ready-refreshed-run-attack-for-rams-showdown/">more</a>.</p>
+					<p><p>However, the 49ers offensive line isn&rsquo;t the only new weapon that Los Angeles will see, as Hyde returns from his injury looking to steal the spotlight &hellip;  <a href="https://sfbay.ca/2016/09/11/49ers-ready-refreshed-run-attack-for-rams-showdown/" onclick="trackOutboundLink('https://sfbay.ca/2016/09/11/49ers-ready-refreshed-run-attack-for-rams-showdown/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

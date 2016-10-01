@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>In-Game Feed: Oakland Raiders Travel To Nashville For Clash With Tennessee</h3>
-					<p><p>Raiders.com The Silver and Black traveled to Nashville to play the Tennessee Titans in Week 3 action. The Oakland Raiders are back on the road today, taking on &hellip;  <a href="http://www.raiders.com/news/article-1/In-Game-Feed-Oakland-Raiders-Travel-To-Nashville-For-Clash-With-Tennessee-Titans/e913b558-75d9-4472-8384-7e00cd33b8ae">more</a>.</p>
+					<p><p>Raiders.com The Silver and Black traveled to Nashville to play the Tennessee Titans in Week 3 action. The Oakland Raiders are back on the road today, taking on &hellip;  <a href="http://www.raiders.com/news/article-1/In-Game-Feed-Oakland-Raiders-Travel-To-Nashville-For-Clash-With-Tennessee-Titans/e913b558-75d9-4472-8384-7e00cd33b8ae" onclick="trackOutboundLink('http://www.raiders.com/news/article-1/In-Game-Feed-Oakland-Raiders-Travel-To-Nashville-For-Clash-With-Tennessee-Titans/e913b558-75d9-4472-8384-7e00cd33b8ae'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

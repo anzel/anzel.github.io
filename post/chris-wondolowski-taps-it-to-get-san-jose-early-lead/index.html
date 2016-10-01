@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>10</b></p>
 					<h3>Chris Wondolowski taps it to get San Jose early lead</h3>
-					<p><p>San Jose Earthquakes have dominated possession early in the match. Seattle is not creating going forward, and their defense is defined by Stefan &hellip;  <a href="http://www.sounderatheart.com/2016/9/10/12876292/chris-wondolowski-taps-it-to-get-san-jose-early-lead">more</a>.</p>
+					<p><p>San Jose Earthquakes have dominated possession early in the match. Seattle is not creating going forward, and their defense is defined by Stefan &hellip;  <a href="http://www.sounderatheart.com/2016/9/10/12876292/chris-wondolowski-taps-it-to-get-san-jose-early-lead" onclick="trackOutboundLink('http://www.sounderatheart.com/2016/9/10/12876292/chris-wondolowski-taps-it-to-get-san-jose-early-lead'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>Quick Hits: Bruce Irvin Talks Big Win With 95.7 The Game</h3>
-					<p><p>Monday morning, Oakland Raiders linebacker Bruce Irvin was on air with 95.7 The Game to talk about the team&rsquo;s big win against the New Orleans &hellip;  <a href="http://www.raiders.com/news/article-1/Quick-Hits-Bruce-Irvin-Talks-Big-Win-With-957-The-Game/37e30b59-4452-4c84-8254-73b4b0768436">more</a>.</p>
+					<p><p>Monday morning, Oakland Raiders linebacker Bruce Irvin was on air with 95.7 The Game to talk about the team&rsquo;s big win against the New Orleans &hellip;  <a href="http://www.raiders.com/news/article-1/Quick-Hits-Bruce-Irvin-Talks-Big-Win-With-957-The-Game/37e30b59-4452-4c84-8254-73b4b0768436" onclick="trackOutboundLink('http://www.raiders.com/news/article-1/Quick-Hits-Bruce-Irvin-Talks-Big-Win-With-957-The-Game/37e30b59-4452-4c84-8254-73b4b0768436'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

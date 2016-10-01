@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>13</b></p>
 					<h3>Quinn won&#39;t rule Neal out for Raiders&#39; game</h3>
-					<p><p>Falcons coach Dan Quinn doesn&rsquo;t expect Neal to practice this week, but wouldn&rsquo;t rule him out of Sunday&rsquo;s game against the Oakland Raiders. We are &hellip;  <a href="http://www.ajc.com/news/sports/football/quinn-wont-rule-neal-out-for-raiders-game/nsW6R/">more</a>.</p>
+					<p><p>Falcons coach Dan Quinn doesn&rsquo;t expect Neal to practice this week, but wouldn&rsquo;t rule him out of Sunday&rsquo;s game against the Oakland Raiders. We are &hellip;  <a href="http://www.ajc.com/news/sports/football/quinn-wont-rule-neal-out-for-raiders-game/nsW6R/" onclick="trackOutboundLink('http://www.ajc.com/news/sports/football/quinn-wont-rule-neal-out-for-raiders-game/nsW6R/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>15</b></p>
 					<h3>Rams QB Case Keenum was &#39;seeing ghosts&#39; against 49ers</h3>
-					<p><p>Keenum didn&rsquo;t do that nearly enough in a demoralizing, 28-0 loss to the San Francisco 49ers at Levi&rsquo;s Stadium. He went 17-of-35 for 130 yards and &hellip;  <a href="http://www.espn.com/blog/los-angeles-rams/post/_/id/30710/rams-qb-case-keenum-was-seeing-ghosts-against-49ers">more</a>.</p>
+					<p><p>Keenum didn&rsquo;t do that nearly enough in a demoralizing, 28-0 loss to the San Francisco 49ers at Levi&rsquo;s Stadium. He went 17-of-35 for 130 yards and &hellip;  <a href="http://www.espn.com/blog/los-angeles-rams/post/_/id/30710/rams-qb-case-keenum-was-seeing-ghosts-against-49ers" onclick="trackOutboundLink('http://www.espn.com/blog/los-angeles-rams/post/_/id/30710/rams-qb-case-keenum-was-seeing-ghosts-against-49ers'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

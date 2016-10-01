@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>49ers snap count vs. Seahawks: Starters stick around until the end</h3>
-					<p><p>The San Francisco 49ers struggled in a big way on Sunday, and at the end of the first half, the 49ers had executed as many plays (24) as the &hellip;  <a href="http://www.ninersnation.com/2016/9/26/13057794/49ers-snap-count-vs-seahawks-starters">more</a>.</p>
+					<p><p>The San Francisco 49ers struggled in a big way on Sunday, and at the end of the first half, the 49ers had executed as many plays (24) as the &hellip;  <a href="http://www.ninersnation.com/2016/9/26/13057794/49ers-snap-count-vs-seahawks-starters" onclick="trackOutboundLink('http://www.ninersnation.com/2016/9/26/13057794/49ers-snap-count-vs-seahawks-starters'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

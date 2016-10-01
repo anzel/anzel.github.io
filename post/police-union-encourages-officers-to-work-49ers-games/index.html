@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>10</b></p>
 					<h3>Police union encourages officers to work 49ers games</h3>
-					<p><p>(AP)  A police union says it is again encouraging its officers to work at San Francisco 49ers home games despite statements about police by &hellip;  <a href="http://federalnewsradio.com/sports-news/2016/09/police-union-encourages-officers-to-work-49ers-games/">more</a>.</p>
+					<p><p>(AP)  A police union says it is again encouraging its officers to work at San Francisco 49ers home games despite statements about police by &hellip;  <a href="http://federalnewsradio.com/sports-news/2016/09/police-union-encourages-officers-to-work-49ers-games/" onclick="trackOutboundLink('http://federalnewsradio.com/sports-news/2016/09/police-union-encourages-officers-to-work-49ers-games/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>Live Stream Oakland Raiders At Tennessee Titans Live Online Streaming Live</h3>
-					<p><p>Click Here To Watch Oakland Raiders At Tennessee Titans Live &hellip; Online Watch Live NFL Football On Abc|Stream Oakland Raiders At Tennessee &hellip;  <a href="http://investigate.afsc.org/sites/default/files/query-docs/2016/09/25/Mac_Watch_Oakland_Raiders_At_Tennessee_Titans_Live_Online_NFL_Football_Online_Simulation_Game.pdf">more</a>.</p>
+					<p><p>Click Here To Watch Oakland Raiders At Tennessee Titans Live &hellip; Online Watch Live NFL Football On Abc|Stream Oakland Raiders At Tennessee &hellip;  <a href="http://investigate.afsc.org/sites/default/files/query-docs/2016/09/25/Mac_Watch_Oakland_Raiders_At_Tennessee_Titans_Live_Online_NFL_Football_Online_Simulation_Game.pdf" onclick="trackOutboundLink('http://investigate.afsc.org/sites/default/files/query-docs/2016/09/25/Mac_Watch_Oakland_Raiders_At_Tennessee_Titans_Live_Online_NFL_Football_Online_Simulation_Game.pdf'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

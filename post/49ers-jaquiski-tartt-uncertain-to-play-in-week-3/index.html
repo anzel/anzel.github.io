@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>24</b></p>
 					<h3>49ers&#39; Jaquiski Tartt: Uncertain to play in Week 3</h3>
-					<p><p>Tartt (knee) is questionable to play on Sunday against the Seahawks. Tartt was limited throughout the week with a knee injury. His status will be &hellip;  <a href="http://www.cbssports.com/fantasy/football/news/49ers-jaquiski-tartt-uncertain-to-play-in-week-3/">more</a>.</p>
+					<p><p>Tartt (knee) is questionable to play on Sunday against the Seahawks. Tartt was limited throughout the week with a knee injury. His status will be &hellip;  <a href="http://www.cbssports.com/fantasy/football/news/49ers-jaquiski-tartt-uncertain-to-play-in-week-3/" onclick="trackOutboundLink('http://www.cbssports.com/fantasy/football/news/49ers-jaquiski-tartt-uncertain-to-play-in-week-3/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

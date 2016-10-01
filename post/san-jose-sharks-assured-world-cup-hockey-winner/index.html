@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>26</b></p>
 					<h3>San Jose Sharks Assured World Cup Hockey Winner</h3>
-					<p><p>A Team Europe upset of Team Sweden leads to a matchup with Team Canada for the title. Thus one or four San Jose Sharks will be world cup hockey &hellip;  <a href="http://bladesofteal.com/2016/09/26/san-jose-sharks-assured-world-cup-hockey/">more</a>.</p>
+					<p><p>A Team Europe upset of Team Sweden leads to a matchup with Team Canada for the title. Thus one or four San Jose Sharks will be world cup hockey &hellip;  <a href="http://bladesofteal.com/2016/09/26/san-jose-sharks-assured-world-cup-hockey/" onclick="trackOutboundLink('http://bladesofteal.com/2016/09/26/san-jose-sharks-assured-world-cup-hockey/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

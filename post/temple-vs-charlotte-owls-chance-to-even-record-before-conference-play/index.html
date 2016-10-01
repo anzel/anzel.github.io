@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>24</b></p>
 					<h3>Temple vs. Charlotte: Owls&#39; chance to even record before conference play</h3>
-					<p><p>If you think you&rsquo;ve heard about Charlotte this season, it&rsquo;s probably because the 49ers were the first victim of Louisville quarterback Lamar Jackson, &hellip;  <a href="http://www.csnphilly.com/ncaa/temple-football-vs-charlotte-owls-chance-even-record-conference-play">more</a>.</p>
+					<p><p>If you think you&rsquo;ve heard about Charlotte this season, it&rsquo;s probably because the 49ers were the first victim of Louisville quarterback Lamar Jackson, &hellip;  <a href="http://www.csnphilly.com/ncaa/temple-football-vs-charlotte-owls-chance-even-record-conference-play" onclick="trackOutboundLink('http://www.csnphilly.com/ncaa/temple-football-vs-charlotte-owls-chance-even-record-conference-play'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

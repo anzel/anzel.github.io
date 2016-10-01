@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>11</b></p>
 					<h3>Oakland Athletics Rookie Sean Manaea Review</h3>
-					<p><p>Oakland Athletics&rsquo; rookie pitcher Sean Manaea deserves credit for the 2015 Kansas City Royals&rsquo; championship as he was one of the big pieces dealt &hellip;  <a href="http://inningseaters.sportsblog.com/posts/25419311/oakland-athletics-rookie-sean-manaea-review.html">more</a>.</p>
+					<p><p>Oakland Athletics&rsquo; rookie pitcher Sean Manaea deserves credit for the 2015 Kansas City Royals&rsquo; championship as he was one of the big pieces dealt &hellip;  <a href="http://inningseaters.sportsblog.com/posts/25419311/oakland-athletics-rookie-sean-manaea-review.html" onclick="trackOutboundLink('http://inningseaters.sportsblog.com/posts/25419311/oakland-athletics-rookie-sean-manaea-review.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

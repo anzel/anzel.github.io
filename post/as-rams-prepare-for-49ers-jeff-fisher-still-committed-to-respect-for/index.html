@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>09</b></p>
 					<h3>As Rams prepare for 49ers, Jeff Fisher still committed to &#39;respect&#39; for</h3>
-					<p><p>ESPN (blog) At the time, San Francisco 49ers quarterback Colin Kaepernick had not yet begun his protest of racial oppression and other societal issues by sitting or &hellip;  <a href="http://www.espn.com/blog/nfcwest/post/_/id/123611/as-rams-prepare-for-49ers-jeff-fisher-still-committed-to-respect-for-national-anthem">more</a>.</p>
+					<p><p>ESPN (blog) At the time, San Francisco 49ers quarterback Colin Kaepernick had not yet begun his protest of racial oppression and other societal issues by sitting or &hellip;  <a href="http://www.espn.com/blog/nfcwest/post/_/id/123611/as-rams-prepare-for-49ers-jeff-fisher-still-committed-to-respect-for-national-anthem" onclick="trackOutboundLink('http://www.espn.com/blog/nfcwest/post/_/id/123611/as-rams-prepare-for-49ers-jeff-fisher-still-committed-to-respect-for-national-anthem'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

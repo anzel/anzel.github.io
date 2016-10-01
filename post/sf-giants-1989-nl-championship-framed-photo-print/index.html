@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>02</b></p>
 					<h3>SF Giants 1989 NL Championship Framed Photo Print</h3>
-					<p><p>This item celebrates the Giants&rsquo; 1989 National League championship.  <a href="http://www.shopgoodwill.com/auctions/SF-Giants-1989-NL-Championship-Framed-Photo-Print-32623574.html">more</a>.</p>
+					<p><p>This item celebrates the Giants&rsquo; 1989 National League championship.  <a href="http://www.shopgoodwill.com/auctions/SF-Giants-1989-NL-Championship-Framed-Photo-Print-32623574.html" onclick="trackOutboundLink('http://www.shopgoodwill.com/auctions/SF-Giants-1989-NL-Championship-Framed-Photo-Print-32623574.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

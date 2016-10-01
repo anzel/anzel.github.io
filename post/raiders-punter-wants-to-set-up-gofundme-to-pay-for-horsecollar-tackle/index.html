@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>20</b></p>
 					<h3>Raiders Punter Wants To Set Up GoFundMe to Pay For Horse-Collar Tackle</h3>
-					<p><p>On Sunday, Oakland Raiders punter Marquette King made a touchdown saving horse-collar tackle, which he was flagged for. But it forced the Atlanta &hellip;  <a href="http://www.totalprosports.com/2016/09/19/raiders-punter-wants-to-set-up-gofundme-to-pay-for-horse-collar-tackle/">more</a>.</p>
+					<p><p>On Sunday, Oakland Raiders punter Marquette King made a touchdown saving horse-collar tackle, which he was flagged for. But it forced the Atlanta &hellip;  <a href="http://www.totalprosports.com/2016/09/19/raiders-punter-wants-to-set-up-gofundme-to-pay-for-horse-collar-tackle/" onclick="trackOutboundLink('http://www.totalprosports.com/2016/09/19/raiders-punter-wants-to-set-up-gofundme-to-pay-for-horse-collar-tackle/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

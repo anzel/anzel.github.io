@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>13</b></p>
 					<h3>Veteran Joe Thornton could be representing Canada for the last time</h3>
-					<p><p>San Jose Sharks&rsquo; Joe Thornton talks to reporters during Stanley Cup Finals media day in Pittsburgh, Sunday May 29, 2016. Thornton is the unofficial &hellip;  <a href="http://www.yorktonthisweek.com/veteran-joe-thornton-could-be-representing-canada-for-the-last-time-1.2342113">more</a>.</p>
+					<p><p>San Jose Sharks&rsquo; Joe Thornton talks to reporters during Stanley Cup Finals media day in Pittsburgh, Sunday May 29, 2016. Thornton is the unofficial &hellip;  <a href="http://www.yorktonthisweek.com/veteran-joe-thornton-could-be-representing-canada-for-the-last-time-1.2342113" onclick="trackOutboundLink('http://www.yorktonthisweek.com/veteran-joe-thornton-could-be-representing-canada-for-the-last-time-1.2342113'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

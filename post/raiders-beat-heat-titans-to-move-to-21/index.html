@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>Raiders beat heat, Titans to move to 2-1</h3>
-					<p><p>There was plenty of contact between the Raiders&rsquo; TJ Carrie and Tennessee receiver Harry Douglas but no penalty was called on the fourth-down pass &hellip;  <a href="http://www.sfchronicle.com/raiders/article/Raiders-beat-heat-Titans-to-move-to-2-1-9283698.php">more</a>.</p>
+					<p><p>There was plenty of contact between the Raiders&rsquo; TJ Carrie and Tennessee receiver Harry Douglas but no penalty was called on the fourth-down pass &hellip;  <a href="http://www.sfchronicle.com/raiders/article/Raiders-beat-heat-Titans-to-move-to-2-1-9283698.php" onclick="trackOutboundLink('http://www.sfchronicle.com/raiders/article/Raiders-beat-heat-Titans-to-move-to-2-1-9283698.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

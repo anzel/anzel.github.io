@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>15</b></p>
 					<h3>Raiders stadium in Las Vegas is now just one step away from approval</h3>
-					<p><p>&hellip; Tourism Infrastructure Committee voted &ldquo;unanimously&rdquo; Thursday to approve $750 million in public money to bring the Oakland Raiders to Vegas.  <a href="http://www.cbssports.com/nfl/news/raiders-stadium-in-las-vegas-is-now-just-one-step-away-from-approval/">more</a>.</p>
+					<p><p>&hellip; Tourism Infrastructure Committee voted &ldquo;unanimously&rdquo; Thursday to approve $750 million in public money to bring the Oakland Raiders to Vegas.  <a href="http://www.cbssports.com/nfl/news/raiders-stadium-in-las-vegas-is-now-just-one-step-away-from-approval/" onclick="trackOutboundLink('http://www.cbssports.com/nfl/news/raiders-stadium-in-las-vegas-is-now-just-one-step-away-from-approval/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

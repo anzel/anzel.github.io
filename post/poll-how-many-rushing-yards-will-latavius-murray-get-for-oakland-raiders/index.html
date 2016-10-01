@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>02</b></p>
 					<h3>Poll: How many rushing yards will Latavius Murray get for Oakland Raiders?</h3>
-					<p><p>Last season, the Oakland Raiders ranked 29th in the league in rushing attempts and 28th in yards. Still, Latavius Murray finished the season with &hellip;  <a href="http://justblogbaby.com/2016/09/02/poll-many-rushing-yards-will-latavius-murray-get-oakland-raiders/">more</a>.</p>
+					<p><p>Last season, the Oakland Raiders ranked 29th in the league in rushing attempts and 28th in yards. Still, Latavius Murray finished the season with &hellip;  <a href="http://justblogbaby.com/2016/09/02/poll-many-rushing-yards-will-latavius-murray-get-oakland-raiders/" onclick="trackOutboundLink('http://justblogbaby.com/2016/09/02/poll-many-rushing-yards-will-latavius-murray-get-oakland-raiders/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

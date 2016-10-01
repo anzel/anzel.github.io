@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>MLB Rookie Report: Matt Olson, 1B, Oakland Athletics</h3>
-					<p><p>With the end of the Billy Butler era in Oakland, the Athletics have promoted first baseman/outfielder Matt Olson and third baseman Renato Nunez to the &hellip;  <a href="http://www.minorleagueball.com/2016/9/12/12892700/mlb-rookie-report-matt-olson-1b-oakland-athletics">more</a>.</p>
+					<p><p>With the end of the Billy Butler era in Oakland, the Athletics have promoted first baseman/outfielder Matt Olson and third baseman Renato Nunez to the &hellip;  <a href="http://www.minorleagueball.com/2016/9/12/12892700/mlb-rookie-report-matt-olson-1b-oakland-athletics" onclick="trackOutboundLink('http://www.minorleagueball.com/2016/9/12/12892700/mlb-rookie-report-matt-olson-1b-oakland-athletics'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

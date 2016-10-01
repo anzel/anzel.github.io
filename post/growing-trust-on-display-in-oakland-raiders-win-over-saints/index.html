@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>Growing Trust On Display In Oakland Raiders Win Over Saints</h3>
-					<p><p>The Oakland Raiders battled their way back to a 35-34 victory over the Saints Sunday, and conveyed that they believe and trust in one another.  <a href="http://www.raiders.com/news/article-1/Growing-Trust-On-Display-In-Oakland-Raiders-Win-Over-Saints/c24f08fd-86c1-4d75-8d2b-93838051823e">more</a>.</p>
+					<p><p>The Oakland Raiders battled their way back to a 35-34 victory over the Saints Sunday, and conveyed that they believe and trust in one another.  <a href="http://www.raiders.com/news/article-1/Growing-Trust-On-Display-In-Oakland-Raiders-Win-Over-Saints/c24f08fd-86c1-4d75-8d2b-93838051823e" onclick="trackOutboundLink('http://www.raiders.com/news/article-1/Growing-Trust-On-Display-In-Oakland-Raiders-Win-Over-Saints/c24f08fd-86c1-4d75-8d2b-93838051823e'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>17</b></p>
 					<h3>Comcast^Watch. &#39;Eastern Michigan Eagles vs Charlotte 49ers&#39;.</h3>
-					<p><p>Michigan Eagles vs Charlotte 49ers Game. Click Here to Watch Eastern &hellip;  <a href="https://www.healthit.gov/sites/default/files/webform/comcastwatch._eastern_michigan_eagles_vs_charlotte_49ers._live._sport._streaming._links.pdf">more</a>.</p>
+					<p><p>Michigan Eagles vs Charlotte 49ers Game. Click Here to Watch Eastern &hellip;  <a href="https://www.healthit.gov/sites/default/files/webform/comcastwatch._eastern_michigan_eagles_vs_charlotte_49ers._live._sport._streaming._links.pdf" onclick="trackOutboundLink('https://www.healthit.gov/sites/default/files/webform/comcastwatch._eastern_michigan_eagles_vs_charlotte_49ers._live._sport._streaming._links.pdf'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

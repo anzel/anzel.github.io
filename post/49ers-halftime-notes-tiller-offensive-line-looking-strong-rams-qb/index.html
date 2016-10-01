@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>49ers halftime notes: Tiller, offensive line looking strong; Rams&#39; QB</h3>
-					<p><p>The Mercury News 49ers halftime notes: Tiller, offensive line looking strong; Rams&rsquo; QB &hellip;. San Francisco 49ers&rsquo; Shaun Draughn (24) runs in for a touchdown against the &hellip;  <a href="http://www.mercurynews.com/2016/09/12/49ers-halftime-notes-tiller-offensive-line-looking-strong-rams-qb-keenum-crumbling/">more</a>.</p>
+					<p><p>The Mercury News 49ers halftime notes: Tiller, offensive line looking strong; Rams&rsquo; QB &hellip;. San Francisco 49ers&rsquo; Shaun Draughn (24) runs in for a touchdown against the &hellip;  <a href="http://www.mercurynews.com/2016/09/12/49ers-halftime-notes-tiller-offensive-line-looking-strong-rams-qb-keenum-crumbling/" onclick="trackOutboundLink('http://www.mercurynews.com/2016/09/12/49ers-halftime-notes-tiller-offensive-line-looking-strong-rams-qb-keenum-crumbling/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

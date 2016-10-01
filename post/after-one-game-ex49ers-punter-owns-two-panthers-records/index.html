@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>17</b></p>
 					<h3>After one game, ex-49ers punter owns two Panthers records</h3>
-					<p><p>The 49ers selected punter Bradley Pinion in the fifth round, and the 49ers traded Lee to the Cleveland Browns for a seventh-round pick in 2017.  <a href="http://www.csnbayarea.com/49ers/after-one-game-ex-49ers-punter-owns-two-panthers-records">more</a>.</p>
+					<p><p>The 49ers selected punter Bradley Pinion in the fifth round, and the 49ers traded Lee to the Cleveland Browns for a seventh-round pick in 2017.  <a href="http://www.csnbayarea.com/49ers/after-one-game-ex-49ers-punter-owns-two-panthers-records" onclick="trackOutboundLink('http://www.csnbayarea.com/49ers/after-one-game-ex-49ers-punter-owns-two-panthers-records'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

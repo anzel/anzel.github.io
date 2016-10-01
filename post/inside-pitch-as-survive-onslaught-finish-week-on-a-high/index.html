@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>06</b></p>
 					<h3>Inside Pitch: A&#39;s survive onslaught, finish week on a high</h3>
-					<p><p>The Oakland Athletics came four outs from bringing an 0-6 week to the most catastrophic end imaginable  being no-hit. With two down in the eighth, &hellip;  <a href="https://sfbay.ca/2016/09/05/inside-pitch-as-survive-onslaught-finish-week-on-a-high/">more</a>.</p>
+					<p><p>The Oakland Athletics came four outs from bringing an 0-6 week to the most catastrophic end imaginable  being no-hit. With two down in the eighth, &hellip;  <a href="https://sfbay.ca/2016/09/05/inside-pitch-as-survive-onslaught-finish-week-on-a-high/" onclick="trackOutboundLink('https://sfbay.ca/2016/09/05/inside-pitch-as-survive-onslaught-finish-week-on-a-high/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>49ers fans trying to dump tickets to Rams game at a fraction of face value</h3>
-					<p><p>The 49er Faithful are already being tested. With a shortage of talent and a brutal schedule on tap, the 2016 team is projected to be the worst in a long, &hellip;  <a href="http://www.sfgate.com/sports/49ersfandomold/article/49ers-fans-already-trying-to-dump-tickets-at-9217355.php">more</a>.</p>
+					<p><p>The 49er Faithful are already being tested. With a shortage of talent and a brutal schedule on tap, the 2016 team is projected to be the worst in a long, &hellip;  <a href="http://www.sfgate.com/sports/49ersfandomold/article/49ers-fans-already-trying-to-dump-tickets-at-9217355.php" onclick="trackOutboundLink('http://www.sfgate.com/sports/49ersfandomold/article/49ers-fans-already-trying-to-dump-tickets-at-9217355.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

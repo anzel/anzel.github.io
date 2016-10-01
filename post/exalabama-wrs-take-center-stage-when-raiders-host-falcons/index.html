@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>17</b></p>
 					<h3>Ex-Alabama WRs take center stage when Raiders host Falcons</h3>
-					<p><p>Now Cooper gets to share a field with Jones when the Oakland Raiders (1-0) host the Atlanta Falcons (0-1) on Sunday. When I got to Alabama he &hellip;  <a href="http://www.dailyrepublic.com/sports/ex-alabama-wrs-take-center-stage-when-raiders-host-falcons/">more</a>.</p>
+					<p><p>Now Cooper gets to share a field with Jones when the Oakland Raiders (1-0) host the Atlanta Falcons (0-1) on Sunday. When I got to Alabama he &hellip;  <a href="http://www.dailyrepublic.com/sports/ex-alabama-wrs-take-center-stage-when-raiders-host-falcons/" onclick="trackOutboundLink('http://www.dailyrepublic.com/sports/ex-alabama-wrs-take-center-stage-when-raiders-host-falcons/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

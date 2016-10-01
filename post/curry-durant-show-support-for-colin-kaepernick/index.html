@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>10</b></p>
 					<h3>Curry, Durant show support for Colin Kaepernick</h3>
-					<p><p>Colin Kaepernick, Stephen Curry San Francisco 49ers quarterback Colin Kaepernick, left, poses for photos with Golden State Warriors guard Stephen &hellip;  <a href="http://kron4.com/2016/09/10/warriors-stephen-curry-kevin-durant-show-support-for-49ers-qb-colin-kaepernick/">more</a>.</p>
+					<p><p>Colin Kaepernick, Stephen Curry San Francisco 49ers quarterback Colin Kaepernick, left, poses for photos with Golden State Warriors guard Stephen &hellip;  <a href="http://kron4.com/2016/09/10/warriors-stephen-curry-kevin-durant-show-support-for-49ers-qb-colin-kaepernick/" onclick="trackOutboundLink('http://kron4.com/2016/09/10/warriors-stephen-curry-kevin-durant-show-support-for-49ers-qb-colin-kaepernick/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

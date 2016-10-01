@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>06</b></p>
 					<h3>Getting to know 49ers defensive coordinator Jim O&#39;Neil</h3>
-					<p><p>Like any coach praising a player&rsquo;s upside, new 49ers defensive coordinator Jim O&rsquo;Neil stood at the media podium and commended rookie defensive &hellip;  <a href="http://www.mercurynews.com/49ers/ci_30332987/getting-know-49ers-defensive-coordinator-jim-oneil">more</a>.</p>
+					<p><p>Like any coach praising a player&rsquo;s upside, new 49ers defensive coordinator Jim O&rsquo;Neil stood at the media podium and commended rookie defensive &hellip;  <a href="http://www.mercurynews.com/49ers/ci_30332987/getting-know-49ers-defensive-coordinator-jim-oneil" onclick="trackOutboundLink('http://www.mercurynews.com/49ers/ci_30332987/getting-know-49ers-defensive-coordinator-jim-oneil'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

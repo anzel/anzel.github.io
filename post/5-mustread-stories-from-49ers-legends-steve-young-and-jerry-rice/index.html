@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>01</b></p>
 					<h3>5 Must-read Stories from 49ers Legends Steve Young and Jerry Rice</h3>
-					<p><p>San Francisco 49ers legends Steve Young and Jerry Rice recently co-hosted an event to raise awareness for their philanthropic causes. The pair of &hellip;  <a href="http://www.49ers.com/news/article-2/5-Must-read-Stories-from-49ers-Legends-Steve-Young-and-Jerry-Rice/8b8b272d-49f0-4872-9e2f-4fe976e9887d">more</a>.</p>
+					<p><p>San Francisco 49ers legends Steve Young and Jerry Rice recently co-hosted an event to raise awareness for their philanthropic causes. The pair of &hellip;  <a href="http://www.49ers.com/news/article-2/5-Must-read-Stories-from-49ers-Legends-Steve-Young-and-Jerry-Rice/8b8b272d-49f0-4872-9e2f-4fe976e9887d" onclick="trackOutboundLink('http://www.49ers.com/news/article-2/5-Must-read-Stories-from-49ers-Legends-Steve-Young-and-Jerry-Rice/8b8b272d-49f0-4872-9e2f-4fe976e9887d'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>24</b></p>
 					<h3>Oakland Raiders: A Closer Look At Some Concerning Numbers</h3>
-					<p><p>The Oakland Raiders are in Music City to take on the Tennessee Titans  and hopefully start to get their defensive season turned around. Oakland&rsquo;s &hellip;  <a href="http://goldengatesports.com/2016/09/24/oakland-raiders-closer-look-concerning-numbers/">more</a>.</p>
+					<p><p>The Oakland Raiders are in Music City to take on the Tennessee Titans  and hopefully start to get their defensive season turned around. Oakland&rsquo;s &hellip;  <a href="http://goldengatesports.com/2016/09/24/oakland-raiders-closer-look-concerning-numbers/" onclick="trackOutboundLink('http://goldengatesports.com/2016/09/24/oakland-raiders-closer-look-concerning-numbers/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>49ers vs panthers live str&#43;ea.m Online [NFL]</h3>
-					<p><p>Well.,the.,game.,wasn&rsquo;t.,completely.,wrong..,If.,rounding.,up,.,there.,were .,30.  <a href="http://devpost.com/software/fb-tv-49ers-vs-panthers-live-str-ea-m-online-nfl">more</a>.</p>
+					<p><p>Well.,the.,game.,wasn&rsquo;t.,completely.,wrong..,If.,rounding.,up,.,there.,were .,30.  <a href="http://devpost.com/software/fb-tv-49ers-vs-panthers-live-str-ea-m-online-nfl" onclick="trackOutboundLink('http://devpost.com/software/fb-tv-49ers-vs-panthers-live-str-ea-m-online-nfl'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

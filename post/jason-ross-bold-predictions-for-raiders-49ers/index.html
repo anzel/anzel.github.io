@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>08</b></p>
 					<h3>Jason Ross: Bold Predictions For Raiders, 49ers</h3>
-					<p><p>&hellip; shameless plug, we decided to make three bold predictions for the NFL season involving both the San Francisco 49ers and the Oakland Raiders.  <a href="http://sacramento.cbslocal.com/2016/09/08/jason-ross-bold-predictions-for-raiders-49ers/">more</a>.</p>
+					<p><p>&hellip; shameless plug, we decided to make three bold predictions for the NFL season involving both the San Francisco 49ers and the Oakland Raiders.  <a href="http://sacramento.cbslocal.com/2016/09/08/jason-ross-bold-predictions-for-raiders-49ers/" onclick="trackOutboundLink('http://sacramento.cbslocal.com/2016/09/08/jason-ross-bold-predictions-for-raiders-49ers/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

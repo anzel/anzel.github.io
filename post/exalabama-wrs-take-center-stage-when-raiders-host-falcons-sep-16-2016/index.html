@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>15</b></p>
 					<h3>Ex-Alabama WRs take center stage when Raiders host Falcons (Sep 16, 2016)</h3>
-					<p><p>FILE - In this Sunday, Sept. 11, 2016, file photo, Oakland Raiders wide receiver Amari Cooper (89) pulls in a pass reception in front of New Orleans &hellip;  <a href="http://www.foxsports.com/nfl/story/ex-alabama-wrs-take-center-stage-when-raiders-host-falcons-091616">more</a>.</p>
+					<p><p>FILE - In this Sunday, Sept. 11, 2016, file photo, Oakland Raiders wide receiver Amari Cooper (89) pulls in a pass reception in front of New Orleans &hellip;  <a href="http://www.foxsports.com/nfl/story/ex-alabama-wrs-take-center-stage-when-raiders-host-falcons-091616" onclick="trackOutboundLink('http://www.foxsports.com/nfl/story/ex-alabama-wrs-take-center-stage-when-raiders-host-falcons-091616'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

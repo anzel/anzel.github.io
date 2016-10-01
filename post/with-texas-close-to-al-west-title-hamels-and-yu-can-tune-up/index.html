@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>22</b></p>
 					<h3>With Texas close to AL West title, Hamels and Yu can tune up</h3>
-					<p><p>Texas Rangers starting pitcher Cole Hamels works against the Oakland Athletics in the second inning of a baseball game, Friday, Sept. 16, 2016, in &hellip;  <a href="http://www.reporternews.com/news/394499621.xhtml">more</a>.</p>
+					<p><p>Texas Rangers starting pitcher Cole Hamels works against the Oakland Athletics in the second inning of a baseball game, Friday, Sept. 16, 2016, in &hellip;  <a href="http://www.reporternews.com/news/394499621.xhtml" onclick="trackOutboundLink('http://www.reporternews.com/news/394499621.xhtml'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

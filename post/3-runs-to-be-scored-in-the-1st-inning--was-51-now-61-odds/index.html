@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>17</b></p>
 					<h3>3&#43; runs to be scored in the 1st inning - WAS 5/1 NOW 6/1 Odds</h3>
-					<p><p>3+ runs to be scored in the 1st inning - WAS <sup>5</sup>&frasl;<sub>1</sub> NOW <sup>6</sup>&frasl;<sub>1</sub>. Register and &hellip;  <a href="https://sports.ladbrokes.com/en-ie/betting/daily-price-boosts/daily-price-boosts/mlb-st-louis-cardinals-at-sf-giants-3-runs-to-be-scored-in-the-1st-inning-was-5-1-now-6-1/222630326/">more</a>.</p>
+					<p><p>3+ runs to be scored in the 1st inning - WAS <sup>5</sup>&frasl;<sub>1</sub> NOW <sup>6</sup>&frasl;<sub>1</sub>. Register and &hellip;  <a href="https://sports.ladbrokes.com/en-ie/betting/daily-price-boosts/daily-price-boosts/mlb-st-louis-cardinals-at-sf-giants-3-runs-to-be-scored-in-the-1st-inning-was-5-1-now-6-1/222630326/" onclick="trackOutboundLink('https://sports.ladbrokes.com/en-ie/betting/daily-price-boosts/daily-price-boosts/mlb-st-louis-cardinals-at-sf-giants-3-runs-to-be-scored-in-the-1st-inning-was-5-1-now-6-1/222630326/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

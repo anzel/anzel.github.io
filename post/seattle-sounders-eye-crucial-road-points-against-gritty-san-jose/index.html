@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>09</b></p>
 					<h3>Seattle Sounders eye crucial road points against gritty San Jose</h3>
-					<p><p>SoundersFC.com The Seattle Sounders&rsquo; matchup against the Portland Timbers two weeks ago was always important. But despite its lofty place on the calendar, it was &hellip;  <a href="http://www.soundersfc.com/post/2016/09/09/seattle-sounders-eye-crucial-road-points-against-gritty-san-jose-earthquakes">more</a>.</p>
+					<p><p>SoundersFC.com The Seattle Sounders&rsquo; matchup against the Portland Timbers two weeks ago was always important. But despite its lofty place on the calendar, it was &hellip;  <a href="http://www.soundersfc.com/post/2016/09/09/seattle-sounders-eye-crucial-road-points-against-gritty-san-jose-earthquakes" onclick="trackOutboundLink('http://www.soundersfc.com/post/2016/09/09/seattle-sounders-eye-crucial-road-points-against-gritty-san-jose-earthquakes'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>03</b></p>
 					<h3>Undrafted rookie Darius Latham battles urge to be a hero, showing raw</h3>
-					<p><p>Silver and Black Pride The past two weeks we&rsquo;ve heard the coaches and leaders on this Raiders team preaching gap discipline in the run defense. Insisting the issues &hellip;  <a href="http://www.silverandblackpride.com/2016/9/2/12775564/undrafted-rookie-darius-latham-battles-urge-to-be-a-hero-showing-raw-blend-of-power-discipline">more</a>.</p>
+					<p><p>Silver and Black Pride The past two weeks we&rsquo;ve heard the coaches and leaders on this Raiders team preaching gap discipline in the run defense. Insisting the issues &hellip;  <a href="http://www.silverandblackpride.com/2016/9/2/12775564/undrafted-rookie-darius-latham-battles-urge-to-be-a-hero-showing-raw-blend-of-power-discipline" onclick="trackOutboundLink('http://www.silverandblackpride.com/2016/9/2/12775564/undrafted-rookie-darius-latham-battles-urge-to-be-a-hero-showing-raw-blend-of-power-discipline'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

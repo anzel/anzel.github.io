@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>49ers should aim to be newsworthy on the field,</h3>
-					<p><p>Last season, the 49ers were a cruddy football team to watch on multiple levels. They weren&rsquo;t just bad. They were boring. This season held promise for &hellip;  <a href="http://www.mercurynews.com/2016/09/27/against-the-cowboys-49ers-better-not-have-a-flashback-to-their-bad-boring-selves-of-2015/">more</a>.</p>
+					<p><p>Last season, the 49ers were a cruddy football team to watch on multiple levels. They weren&rsquo;t just bad. They were boring. This season held promise for &hellip;  <a href="http://www.mercurynews.com/2016/09/27/against-the-cowboys-49ers-better-not-have-a-flashback-to-their-bad-boring-selves-of-2015/" onclick="trackOutboundLink('http://www.mercurynews.com/2016/09/27/against-the-cowboys-49ers-better-not-have-a-flashback-to-their-bad-boring-selves-of-2015/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

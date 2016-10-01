@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>Carolina Panthers host San Francisco 49ers - Live NFL updates</h3>
-					<p><p>Carolina Panthers quarterback Cam Newton, right, rushes for yardage as San Francisco 49ers safety Antoine Bethea, left, looks to make the tackle &hellip;  <a href="http://www.charlotteobserver.com/sports/nfl/carolina-panthers/article102146072.html">more</a>.</p>
+					<p><p>Carolina Panthers quarterback Cam Newton, right, rushes for yardage as San Francisco 49ers safety Antoine Bethea, left, looks to make the tackle &hellip;  <a href="http://www.charlotteobserver.com/sports/nfl/carolina-panthers/article102146072.html" onclick="trackOutboundLink('http://www.charlotteobserver.com/sports/nfl/carolina-panthers/article102146072.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

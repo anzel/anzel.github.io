@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>01</b></p>
 					<h3>Barreto&#39;s triple makes noise for Sounds</h3>
-					<p><p>Franklin Barreto may be shy and unassuming, but don&rsquo;t let the quiet persona fool you. Oakland&rsquo;s top prospect carries a big stick, which he used to &hellip;  <a href="http://www.milb.com/news/article.jsp?ymd=20160902&amp;content_id=199090846&amp;fext=.jsp&amp;vkey=news_l112">more</a>.</p>
+					<p><p>Franklin Barreto may be shy and unassuming, but don&rsquo;t let the quiet persona fool you. Oakland&rsquo;s top prospect carries a big stick, which he used to &hellip;  <a href="http://www.milb.com/news/article.jsp?ymd=20160902&content_id=199090846&fext=.jsp&vkey=news_l112" onclick="trackOutboundLink('http://www.milb.com/news/article.jsp?ymd=20160902&content_id=199090846&fext=.jsp&vkey=news_l112'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

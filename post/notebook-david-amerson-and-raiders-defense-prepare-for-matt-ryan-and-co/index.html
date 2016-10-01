@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>Notebook: David Amerson And Raiders Defense Prepare For Matt Ryan And Co.</h3>
-					<p><p>The Oakland Raiders returned to the practice field Wednesday afternoon to begin their on-field preparation for their Week 2 matchup against the &hellip;  <a href="http://www.raiders.com/news/article-1/Notebook-David-Amerson-And-Raiders-Defense-Prepare-For-Matt-Ryan-And-Co/1aa78e65-d817-4ee3-8f44-d976c96c02c6">more</a>.</p>
+					<p><p>The Oakland Raiders returned to the practice field Wednesday afternoon to begin their on-field preparation for their Week 2 matchup against the &hellip;  <a href="http://www.raiders.com/news/article-1/Notebook-David-Amerson-And-Raiders-Defense-Prepare-For-Matt-Ryan-And-Co/1aa78e65-d817-4ee3-8f44-d976c96c02c6" onclick="trackOutboundLink('http://www.raiders.com/news/article-1/Notebook-David-Amerson-And-Raiders-Defense-Prepare-For-Matt-Ryan-And-Co/1aa78e65-d817-4ee3-8f44-d976c96c02c6'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

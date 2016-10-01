@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>15</b></p>
 					<h3>Giants begin &#39;playoff&#39; series, Span dropped from leadoff</h3>
-					<p><p>Welcome to Thursday night&rsquo;s playoff game between the Giants and Cardinals, and let&rsquo;s face it, that&rsquo;s what this series is. Neither team will clinch &hellip;  <a href="http://www.sfgate.com/giants/article/Giants-begin-playoff-series-Span-dropped-9226005.php">more</a>.</p>
+					<p><p>Welcome to Thursday night&rsquo;s playoff game between the Giants and Cardinals, and let&rsquo;s face it, that&rsquo;s what this series is. Neither team will clinch &hellip;  <a href="http://www.sfgate.com/giants/article/Giants-begin-playoff-series-Span-dropped-9226005.php" onclick="trackOutboundLink('http://www.sfgate.com/giants/article/Giants-begin-playoff-series-Span-dropped-9226005.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

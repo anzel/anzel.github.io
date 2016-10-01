@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>22</b></p>
 					<h3>San Jose Sharks Set To Open Camp With A Healthy Mix Of Vets and Youth</h3>
-					<p><p>The summer has been long, hot and very boring. While the World Cup of Hockey has been a bit of a reprieve from the monotony it can&rsquo;t replace the &hellip;  <a href="http://www.hockeybuzz.com/blog/Steve-Palumbo/San-Jose-Sharks-Set-To-Open-Camp-With-A-Healthy-Mix-Of-Vets-and-Youth/166/79380">more</a>.</p>
+					<p><p>The summer has been long, hot and very boring. While the World Cup of Hockey has been a bit of a reprieve from the monotony it can&rsquo;t replace the &hellip;  <a href="http://www.hockeybuzz.com/blog/Steve-Palumbo/San-Jose-Sharks-Set-To-Open-Camp-With-A-Healthy-Mix-Of-Vets-and-Youth/166/79380" onclick="trackOutboundLink('http://www.hockeybuzz.com/blog/Steve-Palumbo/San-Jose-Sharks-Set-To-Open-Camp-With-A-Healthy-Mix-Of-Vets-and-Youth/166/79380'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

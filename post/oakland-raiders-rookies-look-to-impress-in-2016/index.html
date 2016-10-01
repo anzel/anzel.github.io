@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Aug<b>31</b></p>
 					<h3>Oakland Raiders Rookies Look To Impress In 2016</h3>
-					<p><p>The Oakland Raiders are a team on the rise in the AFC. Many experts are predicting that they will make the playoffs for the first time since 2002.  <a href="http://tfdssports.com/_nfl/oakland-raider-rookies-look-to-impress-in-2016.html">more</a>.</p>
+					<p><p>The Oakland Raiders are a team on the rise in the AFC. Many experts are predicting that they will make the playoffs for the first time since 2002.  <a href="http://tfdssports.com/_nfl/oakland-raider-rookies-look-to-impress-in-2016.html" onclick="trackOutboundLink('http://tfdssports.com/_nfl/oakland-raider-rookies-look-to-impress-in-2016.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

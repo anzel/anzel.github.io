@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>06</b></p>
 					<h3>5 Things Saints Need to Do to Beat the Raiders</h3>
-					<p><p>The New Orleans Saints now stand only 5 days away from the start of the 2016 NFL Regular Season, when they host the visiting Oakland Raiders.  <a href="http://bigeasybeliever.com/2016/09/06/5-things-saints-need-beat-raiders/">more</a>.</p>
+					<p><p>The New Orleans Saints now stand only 5 days away from the start of the 2016 NFL Regular Season, when they host the visiting Oakland Raiders.  <a href="http://bigeasybeliever.com/2016/09/06/5-things-saints-need-beat-raiders/" onclick="trackOutboundLink('http://bigeasybeliever.com/2016/09/06/5-things-saints-need-beat-raiders/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

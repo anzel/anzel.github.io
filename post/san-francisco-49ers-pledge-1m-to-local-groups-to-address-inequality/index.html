@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>09</b></p>
 					<h3>San Francisco 49ers pledge $1M to local groups to address inequality</h3>
-					<p><p>groups in an effort to improve relationships between law enforcement and local &hellip;  <a href="http://talk921.com/san-francisco-49ers-pledge-1m-to-local-groups-to-address-inequality/">more</a>.</p>
+					<p><p>groups in an effort to improve relationships between law enforcement and local &hellip;  <a href="http://talk921.com/san-francisco-49ers-pledge-1m-to-local-groups-to-address-inequality/" onclick="trackOutboundLink('http://talk921.com/san-francisco-49ers-pledge-1m-to-local-groups-to-address-inequality/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>18</b></p>
 					<h3>Community Ratings: San Jose Earthquakes at Colorado Rapids, September 17,</h3>
-					<p><p>Burgundy Wave The Rapids tied the San Jose Earthquakes 0-0 in front a good size crowd at Dick&rsquo;s Sporting Goods Park. The Rapids had several chances in the first &hellip;  <a href="http://www.burgundywave.com/2016/9/18/12957278/community-ratings-san-jose-earthquakes-at-colorado-rapids-september-17-2016">more</a>.</p>
+					<p><p>Burgundy Wave The Rapids tied the San Jose Earthquakes 0-0 in front a good size crowd at Dick&rsquo;s Sporting Goods Park. The Rapids had several chances in the first &hellip;  <a href="http://www.burgundywave.com/2016/9/18/12957278/community-ratings-san-jose-earthquakes-at-colorado-rapids-september-17-2016" onclick="trackOutboundLink('http://www.burgundywave.com/2016/9/18/12957278/community-ratings-san-jose-earthquakes-at-colorado-rapids-september-17-2016'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

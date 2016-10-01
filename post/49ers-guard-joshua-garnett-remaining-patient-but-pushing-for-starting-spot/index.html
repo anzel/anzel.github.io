@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>15</b></p>
 					<h3>49ers guard Joshua Garnett remaining patient but pushing for starting spot</h3>
-					<p><p>The San Francisco 49ers&rsquo; first-round guard was a healthy scratch in the team&rsquo;s season opener against the Los Angeles Rams, a unique feeling he&rsquo;d &hellip;  <a href="http://www.espn.com/blog/nfcwest/post/_/id/123708/49ers-guard-joshua-garnett-remaining-patient-but-pushing-for-starting-spot">more</a>.</p>
+					<p><p>The San Francisco 49ers&rsquo; first-round guard was a healthy scratch in the team&rsquo;s season opener against the Los Angeles Rams, a unique feeling he&rsquo;d &hellip;  <a href="http://www.espn.com/blog/nfcwest/post/_/id/123708/49ers-guard-joshua-garnett-remaining-patient-but-pushing-for-starting-spot" onclick="trackOutboundLink('http://www.espn.com/blog/nfcwest/post/_/id/123708/49ers-guard-joshua-garnett-remaining-patient-but-pushing-for-starting-spot'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

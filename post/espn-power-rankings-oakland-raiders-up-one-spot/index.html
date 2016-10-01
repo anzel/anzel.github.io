@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>16</b></p>
 					<h3>ESPN Power Rankings: Oakland Raiders Up One Spot</h3>
-					<p><p>Sep 11, 2016; New Orleans, LA, USA; Oakland Raiders running back Jalen Richard (30) takes off on a 75-yard touchdown run against the New &hellip;  <a href="https://justblogbaby.com/2016/09/15/espn-power-rankings-oakland-raiders-up-one-spot/">more</a>.</p>
+					<p><p>Sep 11, 2016; New Orleans, LA, USA; Oakland Raiders running back Jalen Richard (30) takes off on a 75-yard touchdown run against the New &hellip;  <a href="https://justblogbaby.com/2016/09/15/espn-power-rankings-oakland-raiders-up-one-spot/" onclick="trackOutboundLink('https://justblogbaby.com/2016/09/15/espn-power-rankings-oakland-raiders-up-one-spot/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

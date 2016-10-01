@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>Raiders T Vadal Alexander comes up big</h3>
-					<p><p>ALAMEDA  The NFL debut of Vadal Alexander resulted in a pancake block to help spring Latavius Murray for a 1-yard touchdown run.  <a href="http://www.mercurynews.com/2016/09/27/raiders-t-vadal-alexander-comes-up-big-in-relief-role/">more</a>.</p>
+					<p><p>ALAMEDA  The NFL debut of Vadal Alexander resulted in a pancake block to help spring Latavius Murray for a 1-yard touchdown run.  <a href="http://www.mercurynews.com/2016/09/27/raiders-t-vadal-alexander-comes-up-big-in-relief-role/" onclick="trackOutboundLink('http://www.mercurynews.com/2016/09/27/raiders-t-vadal-alexander-comes-up-big-in-relief-role/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

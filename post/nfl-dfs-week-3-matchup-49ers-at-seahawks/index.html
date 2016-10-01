@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>22</b></p>
 					<h3>NFL DFS Week 3 Matchup: 49ers at Seahawks</h3>
-					<p><p>25.0 points. The 49ers are implied to score 15.5 points  the lowest mark of &hellip;  <a href="http://www.fantasylabs.com/articles/nfl-dfs-week-3-matchup-49ers-seahawks/">more</a>.</p>
+					<p><p>25.0 points. The 49ers are implied to score 15.5 points  the lowest mark of &hellip;  <a href="http://www.fantasylabs.com/articles/nfl-dfs-week-3-matchup-49ers-seahawks/" onclick="trackOutboundLink('http://www.fantasylabs.com/articles/nfl-dfs-week-3-matchup-49ers-seahawks/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

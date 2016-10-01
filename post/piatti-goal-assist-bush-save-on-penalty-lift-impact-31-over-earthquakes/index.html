@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>29</b></p>
 					<h3>Piatti goal, assist, Bush save on penalty lift Impact 3-1 over Earthquakes</h3>
-					<p><p>&hellip; Wondolowski&rsquo;s shot in the 87th minute to preserve the lead in what would become a 3-1 win over the San Jose Earthquakes on Wednesday night.  <a href="http://thechronicleherald.ca/sports/1401048-piatti-goal-assist-bush-save-on-penalty-lift-impact-3-1-over-earthquakes">more</a>.</p>
+					<p><p>&hellip; Wondolowski&rsquo;s shot in the 87th minute to preserve the lead in what would become a 3-1 win over the San Jose Earthquakes on Wednesday night.  <a href="http://thechronicleherald.ca/sports/1401048-piatti-goal-assist-bush-save-on-penalty-lift-impact-3-1-over-earthquakes" onclick="trackOutboundLink('http://thechronicleherald.ca/sports/1401048-piatti-goal-assist-bush-save-on-penalty-lift-impact-3-1-over-earthquakes'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

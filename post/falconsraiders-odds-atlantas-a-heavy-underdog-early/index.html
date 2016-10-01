@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>13</b></p>
 					<h3>Falcons-Raiders odds: Atlanta&#39;s a heavy underdog early</h3>
-					<p><p>The line could move, but Vegas doesn&rsquo;t appear to love the Falcons&rsquo; chances of winning on the road. Tweet Share on Twitter Share Share on &hellip;  <a href="http://www.thefalcoholic.com/2016/9/13/12884072/falcons-raiders-odds-atlanta-touchdown-underdog">more</a>.</p>
+					<p><p>The line could move, but Vegas doesn&rsquo;t appear to love the Falcons&rsquo; chances of winning on the road. Tweet Share on Twitter Share Share on &hellip;  <a href="http://www.thefalcoholic.com/2016/9/13/12884072/falcons-raiders-odds-atlanta-touchdown-underdog" onclick="trackOutboundLink('http://www.thefalcoholic.com/2016/9/13/12884072/falcons-raiders-odds-atlanta-touchdown-underdog'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

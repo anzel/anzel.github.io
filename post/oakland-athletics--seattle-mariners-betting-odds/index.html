@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Oct<b>01</b></p>
 					<h3>Oakland Athletics @ Seattle Mariners betting odds</h3>
-					<p><p>more from William Hill, the online bookmaker.  <a href="http://sports.williamhill.com/bet/en-gb/betting/e/9991194/Oakland+Athletics+@+Seattle+Mariners.html">more</a>.</p>
+					<p><p>more from William Hill, the online bookmaker.  <a href="http://sports.williamhill.com/bet/en-gb/betting/e/9991194/Oakland+Athletics+@+Seattle+Mariners.html" onclick="trackOutboundLink('http://sports.williamhill.com/bet/en-gb/betting/e/9991194/Oakland+Athletics+@+Seattle+Mariners.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>20</b></p>
 					<h3>49ers&#39; Kaepernick discusses death threats; outlines plans to donate $1</h3>
-					<p><p>SFGate On Sunday, some fans yelled at Kaepernick and raised a middle finger as he left the field at halftime of the 49ers&rsquo; 46-27 loss to the Panthers.  <a href="http://www.sfgate.com/49ers/article/49ers-Kaepernick-discusses-death-threats-9235036.php">more</a>.</p>
+					<p><p>SFGate On Sunday, some fans yelled at Kaepernick and raised a middle finger as he left the field at halftime of the 49ers&rsquo; 46-27 loss to the Panthers.  <a href="http://www.sfgate.com/49ers/article/49ers-Kaepernick-discusses-death-threats-9235036.php" onclick="trackOutboundLink('http://www.sfgate.com/49ers/article/49ers-Kaepernick-discusses-death-threats-9235036.php'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

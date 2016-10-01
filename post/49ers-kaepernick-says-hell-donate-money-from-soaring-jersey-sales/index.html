@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>07</b></p>
 					<h3>49ers&#39; Kaepernick says he&#39;ll donate money from soaring jersey sales</h3>
-					<p><p>7 jersey has become the top seller at both the 49ers team store and on NFLShop.com since he explained why he will not stand during the national &hellip;  <a href="http://www.sacbee.com/sports/nfl/san-francisco-49ers/article100363717.html">more</a>.</p>
+					<p><p>7 jersey has become the top seller at both the 49ers team store and on NFLShop.com since he explained why he will not stand during the national &hellip;  <a href="http://www.sacbee.com/sports/nfl/san-francisco-49ers/article100363717.html" onclick="trackOutboundLink('http://www.sacbee.com/sports/nfl/san-francisco-49ers/article100363717.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>19</b></p>
 					<h3>49ers not thinking about a quarterback change</h3>
-					<p><p>Things didn&rsquo;t go as well for the 49ers against the Panthers on Sunday as they did against the Rams on the first Monday night of the season, but they &hellip;  <a href="http://profootballtalk.nbcsports.com/2016/09/19/49ers-not-thinking-about-a-quarterback-change/">more</a>.</p>
+					<p><p>Things didn&rsquo;t go as well for the 49ers against the Panthers on Sunday as they did against the Rams on the first Monday night of the season, but they &hellip;  <a href="http://profootballtalk.nbcsports.com/2016/09/19/49ers-not-thinking-about-a-quarterback-change/" onclick="trackOutboundLink('http://profootballtalk.nbcsports.com/2016/09/19/49ers-not-thinking-about-a-quarterback-change/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

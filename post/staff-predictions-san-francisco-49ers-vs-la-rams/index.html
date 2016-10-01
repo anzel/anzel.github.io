@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>11</b></p>
 					<h3>Staff Predictions: San Francisco 49ers vs LA Rams</h3>
-					<p><p>San Francisco 49ers head coach Chip Kelly prepares for a California showdown against the L.A. Rams on Monday night. Orlando Ramirez USA &hellip;  <a href="http://www.yardbarker.com/nfl/articles/staff_predictions_san_francisco_49ers_vs_la_rams/s1_7899_21800776">more</a>.</p>
+					<p><p>San Francisco 49ers head coach Chip Kelly prepares for a California showdown against the L.A. Rams on Monday night. Orlando Ramirez USA &hellip;  <a href="http://www.yardbarker.com/nfl/articles/staff_predictions_san_francisco_49ers_vs_la_rams/s1_7899_21800776" onclick="trackOutboundLink('http://www.yardbarker.com/nfl/articles/staff_predictions_san_francisco_49ers_vs_la_rams/s1_7899_21800776'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

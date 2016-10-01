@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>17</b></p>
 					<h3>Photos: Yu Darvish&#39;s look sums it all up after Rangers get blown out by</h3>
-					<p><p>Dallas Morning News (blog) Rangers starting pitcher Yu Darvish (11) reacts after giving up a home run to Oakland Athletics&rsquo; Joey Wendle during the first inning at Globe Life Park &hellip;  <a href="http://sportsday.dallasnews.com/texas-rangers/rangers/2016/09/17/photos-yu-darvishs-look-sums-rangers-get-blown-oakland">more</a>.</p>
+					<p><p>Dallas Morning News (blog) Rangers starting pitcher Yu Darvish (11) reacts after giving up a home run to Oakland Athletics&rsquo; Joey Wendle during the first inning at Globe Life Park &hellip;  <a href="http://sportsday.dallasnews.com/texas-rangers/rangers/2016/09/17/photos-yu-darvishs-look-sums-rangers-get-blown-oakland" onclick="trackOutboundLink('http://sportsday.dallasnews.com/texas-rangers/rangers/2016/09/17/photos-yu-darvishs-look-sums-rangers-get-blown-oakland'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>Reading the Defense: Seahawks swoop into Week 2</h3>
-					<p><p>Khalil Mack, DL, Oakland Raiders: Mack put together a pretty nice line last week without even recording a sack against Drew Brees and the Saints.  <a href="http://www.nfl.com/fantasyfootball/story/0ap3000000702102/article/reading-the-defense-seahawks-swoop-into-week-2">more</a>.</p>
+					<p><p>Khalil Mack, DL, Oakland Raiders: Mack put together a pretty nice line last week without even recording a sack against Drew Brees and the Saints.  <a href="http://www.nfl.com/fantasyfootball/story/0ap3000000702102/article/reading-the-defense-seahawks-swoop-into-week-2" onclick="trackOutboundLink('http://www.nfl.com/fantasyfootball/story/0ap3000000702102/article/reading-the-defense-seahawks-swoop-into-week-2'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

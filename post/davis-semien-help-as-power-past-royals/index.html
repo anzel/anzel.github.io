@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>13</b></p>
 					<h3>Davis, Semien help A&#39;s power past Royals</h3>
-					<p><p>Khris Davis and Marcus Semien belted three-run homers as the Oakland Athletics routed the Royals 16-3 on Monday night. The A&rsquo;s set season highs &hellip;  <a href="http://www.reuters.com/article/bbo-athletics-royals-recap-idUSMTZEC9DF9RP1J">more</a>.</p>
+					<p><p>Khris Davis and Marcus Semien belted three-run homers as the Oakland Athletics routed the Royals 16-3 on Monday night. The A&rsquo;s set season highs &hellip;  <a href="http://www.reuters.com/article/bbo-athletics-royals-recap-idUSMTZEC9DF9RP1J" onclick="trackOutboundLink('http://www.reuters.com/article/bbo-athletics-royals-recap-idUSMTZEC9DF9RP1J'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

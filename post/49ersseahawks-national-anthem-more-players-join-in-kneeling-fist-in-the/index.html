@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>25</b></p>
 					<h3>49ers-Seahawks National Anthem: More players join in kneeling, fist in the</h3>
-					<p><p>Niners Nation The San Francisco 49ers and Seattle Seahawks are getting underway, and the National Anthem brought with it more on the protest front. According to &hellip;  <a href="http://www.ninersnation.com/2016/9/25/13050350/49ers-seahawks-national-anthem-colin-kaepernick-eric-reid-eli-harold">more</a>.</p>
+					<p><p>Niners Nation The San Francisco 49ers and Seattle Seahawks are getting underway, and the National Anthem brought with it more on the protest front. According to &hellip;  <a href="http://www.ninersnation.com/2016/9/25/13050350/49ers-seahawks-national-anthem-colin-kaepernick-eric-reid-eli-harold" onclick="trackOutboundLink('http://www.ninersnation.com/2016/9/25/13050350/49ers-seahawks-national-anthem-colin-kaepernick-eric-reid-eli-harold'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

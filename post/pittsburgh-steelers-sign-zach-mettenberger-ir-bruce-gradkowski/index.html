@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Aug<b>31</b></p>
 					<h3>Pittsburgh Steelers sign Zach Mettenberger, IR Bruce Gradkowski</h3>
-					<p><p>Landry Jones has backed up Ben Roethlisberger since Michael Vick injured his hamstring against the Oakland Raiders on Oct. 18 last year.  <a href="http://www.pennlive.com/steelers/index.ssf/2016/08/steelers_gradkowski_mettenberger.html">more</a>.</p>
+					<p><p>Landry Jones has backed up Ben Roethlisberger since Michael Vick injured his hamstring against the Oakland Raiders on Oct. 18 last year.  <a href="http://www.pennlive.com/steelers/index.ssf/2016/08/steelers_gradkowski_mettenberger.html" onclick="trackOutboundLink('http://www.pennlive.com/steelers/index.ssf/2016/08/steelers_gradkowski_mettenberger.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

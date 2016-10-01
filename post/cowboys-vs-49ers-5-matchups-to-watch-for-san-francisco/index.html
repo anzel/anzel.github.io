@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>29</b></p>
 					<h3>Cowboys vs. 49ers: 5 Matchups to Watch for San Francisco</h3>
-					<p><p>The San Francisco 49ers play host to the Dallas Cowboys in Week 4. Niner Noise takes a look at five matchups worth watching in this storied rivalry.  <a href="http://ninernoise.com/2016/09/29/cowboys-vs-49ers-5-matchups-watch-san-francisco/">more</a>.</p>
+					<p><p>The San Francisco 49ers play host to the Dallas Cowboys in Week 4. Niner Noise takes a look at five matchups worth watching in this storied rivalry.  <a href="http://ninernoise.com/2016/09/29/cowboys-vs-49ers-5-matchups-watch-san-francisco/" onclick="trackOutboundLink('http://ninernoise.com/2016/09/29/cowboys-vs-49ers-5-matchups-watch-san-francisco/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

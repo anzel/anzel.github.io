@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>02</b></p>
 					<h3>MLB Magna Coolie Beverage Holder - Oakland Athletics</h3>
-					<p><p>Coolie. Made from durable padded material to prevent scratches, this &hellip;  <a href="http://www.kmart.com/mlb-magna-coolie-beverage-holder-oakland-athletics/p-046W009145963001P">more</a>.</p>
+					<p><p>Coolie. Made from durable padded material to prevent scratches, this &hellip;  <a href="http://www.kmart.com/mlb-magna-coolie-beverage-holder-oakland-athletics/p-046W009145963001P" onclick="trackOutboundLink('http://www.kmart.com/mlb-magna-coolie-beverage-holder-oakland-athletics/p-046W009145963001P'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

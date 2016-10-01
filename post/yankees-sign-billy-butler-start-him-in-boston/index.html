@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>16</b></p>
 					<h3>Yankees sign Billy Butler, start him in Boston</h3>
-					<p><p>Oakland Athletics hitter Billy Butler watches his sacrifice fly against the Boston Red Sox Friday, Sept. 2, 2016, in Oakland, Calif. (AP Photo/Ben Margot) &hellip;  <a href="http://slam.canoe.com/Slam/Baseball/MLB/2016/09/15/22667304.html">more</a>.</p>
+					<p><p>Oakland Athletics hitter Billy Butler watches his sacrifice fly against the Boston Red Sox Friday, Sept. 2, 2016, in Oakland, Calif. (AP Photo/Ben Margot) &hellip;  <a href="http://slam.canoe.com/Slam/Baseball/MLB/2016/09/15/22667304.html" onclick="trackOutboundLink('http://slam.canoe.com/Slam/Baseball/MLB/2016/09/15/22667304.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

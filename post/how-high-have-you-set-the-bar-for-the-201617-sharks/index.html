@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>29</b></p>
 					<h3>How High Have You Set The Bar For The 2016-17 Sharks?</h3>
-					<p><p>The San Jose Sharks have set the bar high for the new NHL season. And how can it not be set high following arguably the best season in franchise &hellip;  <a href="http://www.hockeybuzz.com/blog/Steve-Palumbo/How-High-Have-You-Set-The-Bar-For-The-2016-17-Sharks/166/79541">more</a>.</p>
+					<p><p>The San Jose Sharks have set the bar high for the new NHL season. And how can it not be set high following arguably the best season in franchise &hellip;  <a href="http://www.hockeybuzz.com/blog/Steve-Palumbo/How-High-Have-You-Set-The-Bar-For-The-2016-17-Sharks/166/79541" onclick="trackOutboundLink('http://www.hockeybuzz.com/blog/Steve-Palumbo/How-High-Have-You-Set-The-Bar-For-The-2016-17-Sharks/166/79541'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

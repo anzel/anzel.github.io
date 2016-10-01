@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>03</b></p>
 					<h3>Colin Kaepernick, 49ers teammate kneel during Star Spangled Banner</h3>
-					<p><p>The 49ers&rsquo; quarterback, kneeling this time, as the national anthem played before a preseason finale Thursday night in San Diego. (AP Photo/Chris &hellip;  <a href="http://abc7ny.com/sports/kaepernick-49ers-teammate-kneel-during-national-anthem/1495444/">more</a>.</p>
+					<p><p>The 49ers&rsquo; quarterback, kneeling this time, as the national anthem played before a preseason finale Thursday night in San Diego. (AP Photo/Chris &hellip;  <a href="http://abc7ny.com/sports/kaepernick-49ers-teammate-kneel-during-national-anthem/1495444/" onclick="trackOutboundLink('http://abc7ny.com/sports/kaepernick-49ers-teammate-kneel-during-national-anthem/1495444/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

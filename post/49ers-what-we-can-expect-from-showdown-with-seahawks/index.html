@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>24</b></p>
 					<h3>49ers: What We Can Expect from Showdown with Seahawks</h3>
-					<p><p>In Week 1, the 49ers took the stage for Monday Night Football. Coming out of the gates on fire, demoralizing the Los Angeles Rams in a shutout 28-0.  <a href="http://ninernoise.com/2016/09/23/49ers-expect-showdown-seahawks/">more</a>.</p>
+					<p><p>In Week 1, the 49ers took the stage for Monday Night Football. Coming out of the gates on fire, demoralizing the Los Angeles Rams in a shutout 28-0.  <a href="http://ninernoise.com/2016/09/23/49ers-expect-showdown-seahawks/" onclick="trackOutboundLink('http://ninernoise.com/2016/09/23/49ers-expect-showdown-seahawks/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

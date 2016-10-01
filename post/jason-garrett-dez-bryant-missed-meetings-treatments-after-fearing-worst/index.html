@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>29</b></p>
 					<h3>Jason Garrett: Dez Bryant missed meetings, treatments after fearing worst</h3>
-					<p><p>The Cowboys have been hopeful that Bryant, who did not practice for the third straight day Thursday, could still play against the 49ers on Sunday.  <a href="http://www.espn.com/nfl/story/_/id/17668947/dallas-cowboys-wr-dez-bryant-missed-meetings-treatment-fearing-worst">more</a>.</p>
+					<p><p>The Cowboys have been hopeful that Bryant, who did not practice for the third straight day Thursday, could still play against the 49ers on Sunday.  <a href="http://www.espn.com/nfl/story/_/id/17668947/dallas-cowboys-wr-dez-bryant-missed-meetings-treatment-fearing-worst" onclick="trackOutboundLink('http://www.espn.com/nfl/story/_/id/17668947/dallas-cowboys-wr-dez-bryant-missed-meetings-treatment-fearing-worst'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

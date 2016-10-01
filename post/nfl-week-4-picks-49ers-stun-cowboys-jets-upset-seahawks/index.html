@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>NFL Week 4 picks: 49ers stun Cowboys, Jets upset Seahawks</h3>
-					<p><p>Since the beginning of 2015, the 49ers have won five home games that they went into as underdogs, which should scare the Dallas Cowboys &hellip;  <a href="http://www.cbssports.com/nfl/news/nfl-week-4-picks-49ers-stun-cowboys-jets-upset-seahawks/">more</a>.</p>
+					<p><p>Since the beginning of 2015, the 49ers have won five home games that they went into as underdogs, which should scare the Dallas Cowboys &hellip;  <a href="http://www.cbssports.com/nfl/news/nfl-week-4-picks-49ers-stun-cowboys-jets-upset-seahawks/" onclick="trackOutboundLink('http://www.cbssports.com/nfl/news/nfl-week-4-picks-49ers-stun-cowboys-jets-upset-seahawks/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

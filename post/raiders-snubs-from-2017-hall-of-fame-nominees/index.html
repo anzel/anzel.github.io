@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>14</b></p>
 					<h3>Raiders snubs from 2017 Hall of Fame nominees</h3>
-					<p><p>Six Raiders were among the list of Hall of Fame nominees (see those here). But there is still a backlog of Hall of Fame worthy Raiders who weren&rsquo;t &hellip;  <a href="http://www.silverandblackpride.com/2016/9/14/12924540/oakland-raiders-snubs-from-2017-hall-of-fame-nominees">more</a>.</p>
+					<p><p>Six Raiders were among the list of Hall of Fame nominees (see those here). But there is still a backlog of Hall of Fame worthy Raiders who weren&rsquo;t &hellip;  <a href="http://www.silverandblackpride.com/2016/9/14/12924540/oakland-raiders-snubs-from-2017-hall-of-fame-nominees" onclick="trackOutboundLink('http://www.silverandblackpride.com/2016/9/14/12924540/oakland-raiders-snubs-from-2017-hall-of-fame-nominees'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

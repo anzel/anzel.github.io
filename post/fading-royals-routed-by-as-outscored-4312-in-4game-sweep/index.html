@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>17</b></p>
 					<h3>Fading Royals routed by A&#39;s, outscored 43-12 in 4-game sweep</h3>
-					<p><p>Kansas City Royals starting pitcher Edinson Volquez delivers to an Oakland Athletics batter during the first inning of a baseball game at Kauffman &hellip;  <a href="http://herald-review.com/sports/baseball/professional/fading-royals-routed-by-a-s-outscored---in/article_231a3595-64d5-5288-85bb-ff5efb1c1bd6.html">more</a>.</p>
+					<p><p>Kansas City Royals starting pitcher Edinson Volquez delivers to an Oakland Athletics batter during the first inning of a baseball game at Kauffman &hellip;  <a href="http://herald-review.com/sports/baseball/professional/fading-royals-routed-by-a-s-outscored---in/article_231a3595-64d5-5288-85bb-ff5efb1c1bd6.html" onclick="trackOutboundLink('http://herald-review.com/sports/baseball/professional/fading-royals-routed-by-a-s-outscored---in/article_231a3595-64d5-5288-85bb-ff5efb1c1bd6.html'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

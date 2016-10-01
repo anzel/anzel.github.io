@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>12</b></p>
 					<h3>Oakland Athletics call up Renato Nunez and Matt Olson</h3>
-					<p><p>With the end of AAA Nashville&rsquo;s season last night, the A&rsquo;s took the opportunity to call up two major prospects: Matt Olson and Renato Nunez. #Athletics &hellip;  <a href="http://www.athleticsnation.com/2016/9/12/12889820/oakland-athletics-call-up-renato-nunez-and-matt-olson">more</a>.</p>
+					<p><p>With the end of AAA Nashville&rsquo;s season last night, the A&rsquo;s took the opportunity to call up two major prospects: Matt Olson and Renato Nunez. #Athletics &hellip;  <a href="http://www.athleticsnation.com/2016/9/12/12889820/oakland-athletics-call-up-renato-nunez-and-matt-olson" onclick="trackOutboundLink('http://www.athleticsnation.com/2016/9/12/12889820/oakland-athletics-call-up-renato-nunez-and-matt-olson'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

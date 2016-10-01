@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>09</b></p>
 					<h3>Oakland Raiders: Complete 2016 Offseason Wrap Up</h3>
-					<p><p>We&rsquo;ll take a look at the Oakland Raiders offseason. What did we learn about the trendy AFC West favorite and what can we look forward to?  <a href="http://nflspinzone.com/2016/09/09/oakland-raiders-complete-2016-offseason-wrap/">more</a>.</p>
+					<p><p>We&rsquo;ll take a look at the Oakland Raiders offseason. What did we learn about the trendy AFC West favorite and what can we look forward to?  <a href="http://nflspinzone.com/2016/09/09/oakland-raiders-complete-2016-offseason-wrap/" onclick="trackOutboundLink('http://nflspinzone.com/2016/09/09/oakland-raiders-complete-2016-offseason-wrap/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

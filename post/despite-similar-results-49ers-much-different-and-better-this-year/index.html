@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>Despite similar results, 49ers much different, and better, this year</h3>
-					<p><p>In the two losses last year, the 49ers simply gave up, particularly in the 47-7 loss in Arizona. This year, the team came back to score points in the &hellip;  <a href="http://blog.sfgate.com/49ers/2016/09/27/despite-similar-results-49ers-much-different-and-better-this-year/">more</a>.</p>
+					<p><p>In the two losses last year, the 49ers simply gave up, particularly in the 47-7 loss in Arizona. This year, the team came back to score points in the &hellip;  <a href="http://blog.sfgate.com/49ers/2016/09/27/despite-similar-results-49ers-much-different-and-better-this-year/" onclick="trackOutboundLink('http://blog.sfgate.com/49ers/2016/09/27/despite-similar-results-49ers-much-different-and-better-this-year/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

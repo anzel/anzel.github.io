@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>26</b></p>
 					<h3>Personal feelings aside, it&#39;s time for Colin Kaepernick to start for the</h3>
-					<p><p>USA TODAY That became obvious Sunday when the 49ers lost to the Seattle Seahawks 37-18, dropped to 1-2 on the season and put 49ers coach Chip Kelly in &hellip;  <a href="http://www.usatoday.com/story/sports/nfl/49ers/2016/09/26/colin-kaepernick-san-francisco-49ers-national-anthem-protest/91107390/">more</a>.</p>
+					<p><p>USA TODAY That became obvious Sunday when the 49ers lost to the Seattle Seahawks 37-18, dropped to 1-2 on the season and put 49ers coach Chip Kelly in &hellip;  <a href="http://www.usatoday.com/story/sports/nfl/49ers/2016/09/26/colin-kaepernick-san-francisco-49ers-national-anthem-protest/91107390/" onclick="trackOutboundLink('http://www.usatoday.com/story/sports/nfl/49ers/2016/09/26/colin-kaepernick-san-francisco-49ers-national-anthem-protest/91107390/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

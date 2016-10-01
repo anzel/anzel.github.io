@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>23</b></p>
 					<h3>Is Khalil Mack the new Lawrence Taylor? The Raiders defensive end and</h3>
-					<p><p>The Undefeated London Fletcher couldn&rsquo;t believe he was about to go there. It used to be that if reporters asked the former Pro Bowl linebacker to compare &hellip;  <a href="http://theundefeated.com/features/is-khalil-mack-the-new-lawrence-taylor/">more</a>.</p>
+					<p><p>The Undefeated London Fletcher couldn&rsquo;t believe he was about to go there. It used to be that if reporters asked the former Pro Bowl linebacker to compare &hellip;  <a href="http://theundefeated.com/features/is-khalil-mack-the-new-lawrence-taylor/" onclick="trackOutboundLink('http://theundefeated.com/features/is-khalil-mack-the-new-lawrence-taylor/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>10</b></p>
 					<h3>SOURCE: Anthony Davis is not retiring, just having doubts</h3>
-					<p><p>After a few hours of speculation and rumors, a source close to San Francisco 49ers right guard Anthony Davis has told me that his current plan is to &hellip;  <a href="http://www.ninersnation.com/2016/9/10/12874036/source-anthony-davis-not-retiring-doubts-49ers">more</a>.</p>
+					<p><p>After a few hours of speculation and rumors, a source close to San Francisco 49ers right guard Anthony Davis has told me that his current plan is to &hellip;  <a href="http://www.ninersnation.com/2016/9/10/12874036/source-anthony-davis-not-retiring-doubts-49ers" onclick="trackOutboundLink('http://www.ninersnation.com/2016/9/10/12874036/source-anthony-davis-not-retiring-doubts-49ers'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

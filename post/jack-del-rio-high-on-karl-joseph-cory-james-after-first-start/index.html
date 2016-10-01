@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>27</b></p>
 					<h3>Jack Del Rio high on Karl Joseph, Cory James after first start</h3>
-					<p><p>Safety Karl Joseph and linebacker Cory James, two of the Oakland Raiders&rsquo; 2016 draft picks, both started for the first time in Week 3. Raiders head &hellip;  <a href="http://oak.247sports.com/Bolt/Jack-Del-Rio-high-on-Karl-Joseph-Cory-James-after-first-start-47827257">more</a>.</p>
+					<p><p>Safety Karl Joseph and linebacker Cory James, two of the Oakland Raiders&rsquo; 2016 draft picks, both started for the first time in Week 3. Raiders head &hellip;  <a href="http://oak.247sports.com/Bolt/Jack-Del-Rio-high-on-Karl-Joseph-Cory-James-after-first-start-47827257" onclick="trackOutboundLink('http://oak.247sports.com/Bolt/Jack-Del-Rio-high-on-Karl-Joseph-Cory-James-after-first-start-47827257'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

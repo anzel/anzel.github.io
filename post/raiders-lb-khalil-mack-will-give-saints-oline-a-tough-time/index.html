@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>05</b></p>
 					<h3>Raiders LB Khalil Mack Will Give Saints O-Line a Tough Time</h3>
-					<p><p>As we now enter into Game Week for the Saints&rsquo; Week #1 match-up against the Oakland Raiders in the season opener at the Superdome in 6 days &hellip;  <a href="http://bigeasybeliever.com/2016/09/05/raiders-lb-khalil-mack-will-give-saints-o-line-a-tough-time/">more</a>.</p>
+					<p><p>As we now enter into Game Week for the Saints&rsquo; Week #1 match-up against the Oakland Raiders in the season opener at the Superdome in 6 days &hellip;  <a href="http://bigeasybeliever.com/2016/09/05/raiders-lb-khalil-mack-will-give-saints-o-line-a-tough-time/" onclick="trackOutboundLink('http://bigeasybeliever.com/2016/09/05/raiders-lb-khalil-mack-will-give-saints-o-line-a-tough-time/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

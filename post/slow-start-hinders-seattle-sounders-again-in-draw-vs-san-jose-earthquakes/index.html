@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>11</b></p>
 					<h3>Slow start hinders Seattle Sounders again in draw vs. San Jose Earthquakes</h3>
-					<p><p>That was the message all week in practice from Seattle Sounders interim head coach Brian Schmetzer after the club opened sluggishly in its 4-2 loss &hellip;  <a href="http://www.soundersfc.com/post/2016/09/10/slow-start-hinders-seattle-sounders-again-draw-vs-san-jose-earthquakes-0">more</a>.</p>
+					<p><p>That was the message all week in practice from Seattle Sounders interim head coach Brian Schmetzer after the club opened sluggishly in its 4-2 loss &hellip;  <a href="http://www.soundersfc.com/post/2016/09/10/slow-start-hinders-seattle-sounders-again-draw-vs-san-jose-earthquakes-0" onclick="trackOutboundLink('http://www.soundersfc.com/post/2016/09/10/slow-start-hinders-seattle-sounders-again-draw-vs-san-jose-earthquakes-0'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>

@@ -24,6 +24,15 @@
 
 	ga('create', 'UA-681691-25', 'auto');
 	ga('send', 'pageview');
+
+	
+
+	var trackOutboundLink = function(url) {
+		ga('send', 'event', 'outbound', 'click', url, {
+	        'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+	    });
+	}
 </script>
 
 </head>
@@ -74,7 +83,7 @@
 				<li class="first">
 					<p class="date">Sep<b>05</b></p>
 					<h3>Players give NHL clubs precedent over World Cup</h3>
-					<p><p>KANATA, Ont.  San Jose Sharks winger Tomas Hertl is the latest player to pull out of the World Cup of Hockey with an injury. The 22-year-old &hellip;  <a href="http://www.therecord.com/sports-story/6840753-players-give-nhl-clubs-precedent-over-world-cup/">more</a>.</p>
+					<p><p>KANATA, Ont.  San Jose Sharks winger Tomas Hertl is the latest player to pull out of the World Cup of Hockey with an injury. The 22-year-old &hellip;  <a href="http://www.therecord.com/sports-story/6840753-players-give-nhl-clubs-precedent-over-world-cup/" onclick="trackOutboundLink('http://www.therecord.com/sports-story/6840753-players-give-nhl-clubs-precedent-over-world-cup/'); return false;">more</a>.</p>
 
 <p><a href="http://twitter.com/anzel">@anzel</a></p>
 </p>
